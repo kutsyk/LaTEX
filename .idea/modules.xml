@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/LaTEX.iml" filepath="$PROJECT_DIR$/.idea/LaTEX.iml" />
+      <module fileurl="file://$PROJECT_DIR$/LaTEX.iml" filepath="$PROJECT_DIR$/LaTEX.iml" />
+      <module fileurl="file://$PROJECT_DIR$/target/generated-sources/generated-sources.iml" filepath="$PROJECT_DIR$/target/generated-sources/generated-sources.iml" />
     </modules>
   </component>
 </project>

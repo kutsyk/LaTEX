@@ -1,4 +1,3 @@
-
 public class TextToXML extends LaTEXBaseListener {
 	
 	private StringBuilder text;

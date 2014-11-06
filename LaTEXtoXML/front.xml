@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?><!DOCTYPE doc SYSTEM "http://www.charlesworth-group.com/hch-jnl/hch.dtd"><?xmlspysps http://www.charlesworth-group.com/hch-jnl/hch-jnl.sps?><doc xmlns="urn:hch-jnl-BB4C2D71-E80A-4fe7-B7D8-FDAF121D7AD6"xmlns:tbl="urn:hch:table-470CC8FB-4DFD-4003-9403-2FE04FAB5760"xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"xsi:schemaLocation="urn:hch-jnl-BB4C2D71-E80A-4fe7-B7D8-FDAF121D7AD6http://www.charlesworth-group.com/hch-jnl/hch-journal.xsd"><jnl-info>
+<pub-name>Public Library of Science</pub-name><pub-loc><address>San Francisco, USA</address></pub-loc>
+<jnl-tl>PLOS Computational Biology</jnl-tl>
+<abrv-jnl-tl>PCBI</abrv-jnl-tl>
+<vol>XXX</vol>
+<issue-no>XXX</issue-no>
+<date><year>XXX</year><month>XXX</month></date>
+<issn type="print">1553-734X</issn><issn type="online">1553-7358</issn>
+<medline-jnl-tl>PLoS Comput Biol</medline-jnl-tl></jnl-info>
+<article>
+<unit-info>
+<fpage>000</fpage>
+<lpage>000</lpage>
+<pag-cnt>000</pag-cnt>
+<fig-cnt>6</fig-cnt>
+<equ-cnt>000</equ-cnt>
+<ref-cnt>18</ref-cnt>
+<wrd-cnt>000</wrd-cnt>
+<tbl-cnt>8</tbl-cnt>
+<sici>PCOMPBIOL&hyphen;D&hyphen;</sici>
+<doi>10.1371&sol;journal pcbi 1003539</doi>
+<categ>
+          Research Article
+        </categ>
+<topic id="topic1">&lt;subj&hyphen;groupsubj&hyphen;group&hyphen;type&equals;&quot;Discipline&hyphen;v2&quot;&gt;&lt;subject&gt;Biology and life sciences&lt;&sol;subject&gt;&lt;&sol;subj&hyphen;group&gt;
+&lt;subj&hyphen;group&gt;&lt;subject&gt;Biochemistry&lt;&sol;subject&gt;&lt;&sol;subj&hyphen;group&gt;
+&lt;subj&hyphen;group&gt;&lt;subject&gt;Proteins&lt;&sol;subject&gt;&lt;&sol;subj&hyphen;group&gt;
+&lt;subj&hyphen;group&gt;&lt;subject&gt;Protein structure&lt;&sol;subject&gt;&lt;&sol;subj&hyphen;group&gt;
+&lt;subj&hyphen;group&gt;&lt;subject&gt;Protein folding&lt;&sol;subject&gt;&lt;&sol;subj&hyphen;group&gt;
+&lt;&sol;subj&hyphen;group&gt;
+&lt;&sol;subj&hyphen;group&gt;
+&lt;&sol;subj&hyphen;group&gt;
+&lt;&sol;subj&hyphen;group&gt;
+&lt;subj&hyphen;group&gt;&lt;subject&gt;Biophysics&lt;&sol;subject&gt;&lt;&sol;subj&hyphen;group&gt;
+&lt;&sol;subj&hyphen;group&gt;
+&lt;subj&hyphen;group&gt;&lt;subject&gt;Computational biology&lt;&sol;subject&gt;&lt;&sol;subj&hyphen;group&gt;
+&lt;&sol;subj&hyphen;group&gt;
+&lt;&sol;subj&hyphen;group&gt;</topic>
+<cpyrt><date><year>XXX</year>
+</date>
+<cpyrt-name><org-name>Tang et al.This is an open&hyphen;access article distributed under the	terms of the<?up?><?show +"linkList"tpmkset "web1","description","","*http://creativecommons.org/licenses/by/4.0/",0,0,2$10#?><?show $60#?tbklnk=="web1"$62#><?><url url="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution License</url><?tbklnk?><?down?>, which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited.</org-name>
+</cpyrt-name>
+</cpyrt>
+<unit-id>e1003539</unit-id>
+<rf-recto></rf-recto>
+<rf-verso></rf-verso>
+<rh-recto>Sampling and Structure Prediction of Protein Loops</rh-recto>
+<rh-verso></rh-verso>
+<c-tracker-id>pcbi.1003539</c-tracker-id>
+</unit-info>
+<front>
+<title-grp><title>Fast Protein Loop Sampling and Structure Prediction Using Distance&hyphen;Guided Sequential Chain&hyphen;Growth Monte Carlo Method</title>
+</title-grp>
+<author-grp><author affs="aff1 "><forename>Ke</forename><surname>Tang</surname></author>
+<corresponding-author affs="aff2 "><forename>Jinfeng</forename><surname>Zhang</surname><note type="email">jinfeng&commat;stat fsu edu</note></corresponding-author>
+<corresponding-author affs="aff1 "><forename>Jie  </forename><surname>Liang</surname><note type="email">jliang&commat;uic edu</note></corresponding-author>
+</author-grp>
+<author-grp type="editor"><author affs="e1"><forename>Roland L.</forename><surname>Dunbrack</surname></author>
+<aff id="e1" num="1"><org-name num="" type="">Fox Chase Cancer Center</org-name>
+<address>United States of America</address>
+</aff>
+</author-grp>
+<history><received><date-text>Received</date-text><date><day>29</day>
+<month>08</month>
+<year>2013</year>
+</date>
+</received>
+<accepted><date-text>Accepted</date-text><date><day>01</day>
+<month>02</month>
+<year>2014</year>
+</date>
+</accepted>
+</history>
+<grant id="grant1">This work was supported by NSF DBI 1062328 and DMS&hyphen;0800257 http&sol;&sol;www nsf gov&sol;and by NIH 1 R21GM10155 NIH GM079804 and GM086145 http&sol;&sol;www nih gov&sol;This work was also funded by the Chicago Biomedical Consortium with support from the Searle Funds at The Chicago Community Trust http&sol;&sol;chicagobiomedicalconsortium org&sol;The funders had no role in study design data collection and analysis decision to publish or preparation of the manuscript</grant>
+<abstract><p id="para1">Loops in proteins are flexible regions connecting regular secondary structures They are often involved in protein functions through interacting with other molecules The irregularity and flexibility of loops make their structures difficult to determine experimentally and challenging to model computationally Conformation sampling and energy evaluation are the two key components in loop modeling We have developed a new method for loop conformation sampling and prediction based on a chain growth sequential Monte Carlo sampling strategy called Distance&hyphen;guided Sequential chain&hyphen;Growth Monte Carlo&lpar;DiSGro&rpar;With an energy function designed specifically for loops our method can efficiently generate high quality loop conformations with low energy that are enriched with near&hyphen;native loop structures The average minimum global backbone RMSD for 1 000 conformations of 12&hyphen;residue loops is 1.53 Angstrom with a lowest energy RMSD of 2.99 Angstrom and an average ensemble RMSD of 5.23 Angstrom A novel geometric criterion is applied to speed up calculations The computational cost of generating these conformations is only about 10 cpu minutes for 12&hyphen;residue loops compared to ca 180 cpu minutes using the FALCm method Test results on benchmark datasets show that DiSGro performs comparably or better than previous successful methods while requiring far less computing time DiSGro is especially effective in modeling longer loops 10&hyphen;17 residues</p>
+</abstract>
+</front>

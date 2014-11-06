@@ -1,0 +1,46 @@
+<tbl id="tbl6" num="6"><tbl:title><emph type="bold">Table 6.</emph></tbl:title>Accuracy of modeled loops by {\scDiSGro}D<emph type="smallcaps">i</emph>SG<emph type="smallcaps">ro</emph> using theoriginal Fiser data set of loops with 13  residues. <tr><td></td></tr><tr><td>Target</td><td>PDB</td><td>Start</td><td>End</td><td>Sequence</td><td><equ id="equ78" type="inline">
+<tex>
+$R_{\rmmin}$
+
+</tex></equ>
+</td><td><equ id="equ79" type="inline">
+<tex>
+$R_{\rmen,Ave}$
+
+</tex></equ>
+</td><td><equ id="equ80" type="inline">
+<tex>
+$R_{\rmBkb,Emin}$
+
+</tex></equ>
+</td><td><equ id="equ81" type="inline">
+<tex>
+$R_{\rmAtm,Emin}$
+
+</tex></equ>
+</td></tr><tr><td>1 </td><td>154  l</td><td>21 </td><td>33 </td><td>akpeglsycgvsa</td><td>2.14</td><td>7.08</td><td>2.42</td><td>3.20</td></tr><tr><td>2 </td><td>1  aba</td><td>5 </td><td>17 </td><td>ygydsnihkcgpc</td><td>1.83</td><td>4.37</td><td>5.08</td><td>5.58</td></tr><tr><td>3 </td><td>1  amp</td><td>252 </td><td>264 </td><td>nprihttqdtlan</td><td>2.12</td><td>6.03</td><td>2.88</td><td>4.32</td></tr><tr><td>4 </td><td>1  art</td><td>160 </td><td>172 </td><td>yydaenhtldfda</td><td>2.67</td><td>7.28</td><td>5.62</td><td>6.80</td></tr><tr><td>5 </td><td>1  byb</td><td>139 </td><td>151 </td><td>vdnepifhgrtai</td><td>2.85</td><td>9.42</td><td>3.98</td><td>5.02</td></tr><tr><td>6 </td><td>1  cbn</td><td>32 </td><td>44 </td><td>ciiipgatcpgdy</td><td>1.50</td><td>6.34</td><td>2.12</td><td>3.28</td></tr><tr><td>7 </td><td>1  cgt</td><td>38 </td><td>50 </td><td>aydatcsnlklyc</td><td>2.38</td><td>6.90</td><td>4.47</td><td>4.74</td></tr><tr><td>8 </td><td>1  clc</td><td>258 </td><td>270 </td><td>mqypdgsgrvahk</td><td>2.25</td><td>5.17</td><td>4.45</td><td>5.72</td></tr><tr><td>9 </td><td>1  ctm</td><td>34 </td><td>46 </td><td>evpqavlpdtvfe</td><td>0.92</td><td>4.98</td><td>1.21</td><td>1.98</td></tr><tr><td>10 </td><td>1  fas</td><td>4 </td><td>16 </td><td>yshtttsrailtn</td><td>1.56</td><td>8.21</td><td>1.73</td><td>2.57</td></tr><tr><td>11 </td><td>1  fnd</td><td>47 </td><td>59 </td><td>kitgddapgetwh</td><td>1.41</td><td>10.25</td><td>1.51</td><td>2.02</td></tr><tr><td>12 </td><td>1  frd</td><td>37 </td><td>49 </td><td>lpfschsgscssc</td><td>1.56</td><td>8.78</td><td>5.83</td><td>6.46</td></tr><tr><td>13 </td><td>1  fus</td><td>91 </td><td>103 </td><td>thtgasgnnfvgc</td><td>2.36</td><td>6.61</td><td>3.33</td><td>4.78</td></tr><tr><td>14 </td><td>1  gof</td><td>70 </td><td>82 </td><td>mlprqdgnqngwi</td><td>1.17</td><td>3.21</td><td>2.66</td><td>2.95</td></tr><tr><td>15 </td><td>1  ivd</td><td>429 </td><td>441 </td><td>grkqetrvwwtsn</td><td>2.48</td><td>5.76</td><td>2.82</td><td>5.60</td></tr><tr><td>16 </td><td>1  l58</td><td>50 </td><td>62 </td><td>igrncngvitkde</td><td>1.62</td><td>12.03</td><td>2.13</td><td>3.30</td></tr><tr><td>17 </td><td>1  msc</td><td>33 </td><td>45 </td><td>issnsrsqaykvt</td><td>2.20</td><td>6.74</td><td>5.33</td><td>6.18</td></tr><tr><td>18 </td><td>1  osa</td><td>55 </td><td>67 </td><td>vdadgngtidfpe</td><td>0.82</td><td>10.27</td><td>0.82</td><td>1.35</td></tr><tr><td>19 </td><td>1  pca</td><td>204 </td><td>216 </td><td>ypygyktqspadk</td><td>2.49</td><td>7.25</td><td>5.99</td><td>6.30</td></tr><tr><td>20 </td><td>1  php</td><td>59 </td><td>71 </td><td>hlgrpkgkvveel</td><td>1.40</td><td>8.61</td><td>1.40</td><td>2.16</td></tr><tr><td>21 </td><td>1  prn</td><td>213 </td><td>225 </td><td>ydnglstagdqvt</td><td>1.41</td><td>5.32</td><td>1.55</td><td>1.72</td></tr><tr><td>22 </td><td>1  rec</td><td>159 </td><td>171 </td><td>fgkkdddklteke</td><td>1.18</td><td>9.66</td><td>1.18</td><td>2.35</td></tr><tr><td>23 </td><td>1  srp</td><td>46 </td><td>58 </td><td>wngykvfgqpvkl</td><td>1.02</td><td>7.58</td><td>1.90</td><td>2.24</td></tr><tr><td>24 </td><td>1  thg</td><td>493 </td><td>505 </td><td>dpnvgtnllqwdq</td><td>1.39</td><td>5.42</td><td>2.11</td><td>2.97</td></tr><tr><td>25 </td><td>1  thw</td><td>102 </td><td>114 </td><td>isnikgfnvpmdf</td><td>1.31</td><td>3.75</td><td>1.87</td><td>2.86</td></tr><tr><td>26 </td><td>1  trb</td><td>222 </td><td>234 </td><td>lrdtqnsdniesl</td><td>1.56</td><td>4.42</td><td>1.64</td><td>2.83</td></tr><tr><td>27 </td><td>1  xif</td><td>99 </td><td>111 </td><td>fkdggftandrdv</td><td>1.21</td><td>7.02</td><td>3.23</td><td>4.23</td></tr><tr><td>28 </td><td>2  ctc</td><td>204 </td><td>216 </td><td>ypygyttqsipdk</td><td>2.57</td><td>6.42</td><td>4.28</td><td>4.76</td></tr><tr><td>29 </td><td>3  cyr</td><td>34 </td><td>46 </td><td>hhlvdgkesyakc</td><td>2.18</td><td>5.89</td><td>5.62</td><td>6.17</td></tr><tr><td>30 </td><td>2  exo</td><td>51 </td><td>63 </td><td>tepsqnsfsfgag</td><td>2.64</td><td>7.58</td><td>2.64</td><td>3.98</td></tr><tr><td>31 </td><td>2  pia</td><td>58 </td><td>70 </td><td>slcndsqernryv</td><td>1.29</td><td>3.83</td><td>2.80</td><td>4.12</td></tr><tr><td>32 </td><td>2  por</td><td>170 </td><td>182 </td><td>idspdtalmadme</td><td>1.27</td><td>6.20</td><td>1.60</td><td>2.23</td></tr><tr><td>33 </td><td>2  sil</td><td>86 </td><td>98 </td><td>iyndrvnsklsrv</td><td>1.19</td><td>5.82</td><td>3.37</td><td>4.00</td></tr><tr><td>34 </td><td>3  grs</td><td>129 </td><td>141 </td><td>haaftsdpkptie</td><td>1.61</td><td>9.05</td><td>1.78</td><td>3.03</td></tr><tr><td>35 </td><td>4  icb</td><td>53 </td><td>65 </td><td>ldkngdgevsfee</td><td>1.84</td><td>9.06</td><td>2.01</td><td>2.95</td></tr><tr><td>36 </td><td>5  fx2</td><td>93 </td><td>105 </td><td>cgdssyeyfcgav</td><td>2.27</td><td>5.15</td><td>4.61</td><td>6.57</td></tr><tr><td>37 </td><td>5  p21</td><td>115 </td><td>127 </td><td>gnkcdlaartves</td><td>1.79</td><td>7.09</td><td>2.81</td><td>3.79</td></tr><tr><td>38 </td><td>5  pti</td><td>9 </td><td>21 </td><td>pytgpckariiry</td><td>1.15</td><td>5.66</td><td>1.42</td><td>3.07</td></tr><tr><td>39 </td><td>7  rsa</td><td>86 </td><td>98 </td><td>etgsskypncayk</td><td>1.84</td><td>11.38</td><td>1.84</td><td>2.73</td></tr><tr><td>40 </td><td>8  dfr</td><td>166 </td><td>178 </td><td>padiqeedgiqyk</td><td>1.97</td><td>10.08</td><td>2.21</td><td>2.68</td></tr><tr><td>5  |c| Mean</td><td><emph type="bold">1.76</emph></td><td><emph type="bold">7.04</emph></td><td><emph type="bold">2.91</emph></td><td><emph type="bold">3.84</emph></td></tr><tr><td>5  |c| Median</td><td><emph type="bold">1.61</emph></td><td><emph type="bold">6.82</emph></td><td><emph type="bold">2.53</emph></td><td><emph type="bold">3.29</emph></td></tr><equ id="equ82" type="inline">
+<tex>
+$R_{\rmmin}$
+
+</tex></equ>
+and<equ id="equ83" type="inline">
+<tex>
+$R_{\rmen,Ave}$
+
+</tex></equ>
+are the minimum backbone RMSD andthe average backbone RMSD of the<equ id="equ84" type="inline">
+<tex>
+$1,000$
+
+</tex></equ>
+sampled conformations, respectively. <equ id="equ85" type="inline">
+<tex>
+$R_{\rmBkb,Emin}$
+
+</tex></equ>
+and<equ id="equ86" type="inline">
+<tex>
+$R_{\rmAtm,Emin}$
+
+</tex></equ>
+are the backbone and all heavy atoms RMSD of the lowest energy conformations in the ensemble. </tbl>

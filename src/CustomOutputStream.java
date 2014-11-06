@@ -1,9 +1,7 @@
+import javax.swing.*;
 import java.io.IOException;
 import java.io.OutputStream;
- 
 import java.io.PrintStream;
-
-import javax.swing.JTextArea;
  
 /**
  * This class extends from OutputStream to redirect output to a JTextArrea

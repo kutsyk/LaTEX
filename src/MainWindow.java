@@ -1,31 +1,17 @@
 /*
  * 
  */
-import java.awt.*;
-import java.awt.event.*;
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.OutputStream;
-import java.io.PrintStream;
-import java.io.PrintWriter;
-
-
-import javax.swing.*;
-import javax.swing.text.BadLocationException;
-import javax.swing.text.DefaultHighlighter;
-import javax.swing.text.Document;
-import javax.swing.text.Element;
-import javax.swing.text.Highlighter;
 
 import com.kutsyk.TextEditor.TextLineNumber;
+
+import javax.swing.*;
+import javax.swing.text.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+import java.io.*;
 
 // TODO: Auto-generated Javadoc
 /**
@@ -61,9 +47,7 @@ public class MainWindow extends JFrame {
 				try {
 					UIManager.setLookAndFeel(UIManager
 							.getSystemLookAndFeelClassName());
-				} catch (ClassNotFoundException | InstantiationException
-						| IllegalAccessException
-						| UnsupportedLookAndFeelException e) {
+				} catch (Exception e) {
 					e.printStackTrace();
 				}
 				new MainWindow().setVisible(true);
@@ -142,7 +126,7 @@ public class MainWindow extends JFrame {
 		clearDirectory("bibliography");
 		clearDirectory("figures");
 		clearDirectory("suppFigures");
-		clearDirectory("tables");
+//		clearDirectory("tables");
 		clearDirectory("");
 	}
 

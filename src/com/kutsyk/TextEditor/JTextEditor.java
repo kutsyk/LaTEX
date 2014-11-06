@@ -1,16 +1,8 @@
 package com.kutsyk.TextEditor;
-import java.awt.Color;
-import java.awt.Rectangle;
 
-import javax.swing.JPanel;
-import javax.swing.JScrollBar;
-import javax.swing.JScrollPane;
-import javax.swing.text.BadLocationException;
-import javax.swing.text.DefaultHighlighter;
-import javax.swing.text.Document;
-import javax.swing.text.Element;
-import javax.swing.text.Highlighter;
-import javax.swing.text.JTextComponent;
+import javax.swing.*;
+import javax.swing.text.*;
+import java.awt.*;
 
 public class JTextEditor extends JPanel {
 

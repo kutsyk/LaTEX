@@ -1,0 +1,108 @@
+<fig id="fig3" num="3" type="figure"><caption><emph type="bold">Schematic illustration of placing<equ id="equ1" type="inline">
+<tex>
+$C_i$
+
+</tex></equ>
+and<equ id="equ2" type="inline">
+<tex>
+$N_{i+1}$
+
+</tex></equ>
+atoms.</emph><?FIGTITLE 1?> Atom<equ id="equ3" type="inline">
+<tex>
+$C_{i}$
+
+</tex></equ>
+has to be on thecircle<equ id="equ4" type="inline">
+<tex>
+$\mathbf{C_C}$
+
+</tex></equ>
+.<?FIGTITLE 0?> The position<equ id="equ5" type="inline">
+<tex>
+$\mathbf{x}_{C,i}$
+
+</tex></equ>
+of the<equ id="equ6" type="inline">
+<tex>
+$C_i$
+
+</tex></equ>
+atom of residue<equ id="equ7" type="inline">
+<tex>
+$i$
+
+</tex></equ>
+is determined by<equ id="equ8" type="inline">
+<tex>
+$d_{C_i,C_l}$
+
+</tex></equ>
+, which is basedon known distance<equ id="equ9" type="inline">
+<tex>
+$d_{CA_i,C_l}$
+
+</tex></equ>
+and the conditional distribution of<equ id="equ10" type="inline">
+<tex>
+$\pi(d_{C_i,C_l}|d_{CA_i,C_l})$
+
+</tex></equ>
+.<?FIGTITLE 0?> Once<equ id="equ11" type="inline">
+<tex>
+$d_{C_i,C_l}$
+
+</tex></equ>
+is sampled, <equ id="equ12" type="inline">
+<tex>
+$C_i$
+
+</tex></equ>
+can be placed on two positions with equal probabilities.<?FIGTITLE 0?> Here<equ id="equ13" type="inline">
+<tex>
+$\mathbf{x}_{C,i}$
+
+</tex></equ>
+is the selected position of<equ id="equ14" type="inline">
+<tex>
+$C_i$
+
+</tex></equ>
+.<?FIGTITLE 0?> <equ id="equ15" type="inline">
+<tex>
+$C'_i$
+
+</tex></equ>
+&lpar;yellow ball&rpar;is placed at the position<equ id="equ16" type="inline">
+<tex>
+$\mathbf{x}_{C',i}$
+
+</tex></equ>
+alternative to<equ id="equ17" type="inline">
+<tex>
+$\mathbf{x}_{C,i}$
+
+</tex></equ>
+.<?FIGTITLE 0?> Similarly, the<equ id="equ18" type="inline">
+<tex>
+$N_{i+1}$
+
+</tex></equ>
+atomhas to be on the circle<equ id="equ19" type="inline">
+<tex>
+$\mathbf{C_N}$
+
+</tex></equ>
+and its position<equ id="equ20" type="inline">
+<tex>
+$\mathbf{x}_{N,i+1}$
+
+</tex></equ>
+is determined by<equ id="equ21" type="inline">
+<tex>
+$d_{N_{i+1},C_l}$
+
+</tex></equ>
+in asimilar fashion.<?FIGTITLE 0?> <caption type="doi">10.1371&sol;journal pcbi 1003539.g003
+</caption>
+</caption></fig>

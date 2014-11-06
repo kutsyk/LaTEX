@@ -1,0 +1,295 @@
+\begin{document}
+\begin{figure}[!hp]
+  \caption{{\bf Top five lowest energy loops of length 12 for single-metal-substituted concanavalin A (pdb {\tt 1scs}, residues 199 - 210).}
+   The lowest energy loop after side-chain construction is colored in red, and the native structure is in white.
+  \label{fig:pdb}}
+\end{figure}
+\begin{figure}[!hp]
+  \caption{{\bf The time cost of energy calculations for generating one single loop.}
+  (A) The plot of computing time versus protein size show a large time saving of ``{\sc Redcell}-On''(red solid curve) compared to ``{\sc Redcell}-Off'' (black dashed curve) for 12-residue
+  loops, and (B) The plot of 6-residue loops. (C) Plot of computing time versus protein size show ``{\sc Redcell}-On''(red solid curve) has significantly improved
+computational time cost compared to ``Ellipsoid-Only'' (black dashed
+curve) and ``Cutoff-Only'' (green solid curve).
+  \label{fig:ellipresult}}
+\end{figure}
+\begin{figure}[!hp]
+  \caption{ {\bf Schematic illustration of placing $C_i$ and $N_{i+1}$ atoms.} Atom $C_{i}$ has to be on the
+circle $\mathbf{C_C}$. The position $\mathbf{x}_{C,i}$ of the $C_i$
+atom of residue $i$ is determined by $d_{C_i,C_l}$, which is based
+on known distance $d_{CA_i,C_l}$ and the conditional distribution of
+$\pi(d_{C_i,C_l} | d_{CA_i,C_l})$. Once $d_{C_i, C_l}$ is sampled,
+$C_i$ can be placed on two positions with equal probabilities. Here
+$\mathbf{x}_{C, i}$ is the selected position of $C_i$. $C'_i$
+(yellow ball) is placed at the position $\mathbf{x}_{C', i}$
+alternative to $\mathbf{x}_{C, i}$. Similarly, the $N_{i+1}$ atom
+has to be on the circle $\mathbf{C_N}$ and its position
+$\mathbf{x}_{N, i+1}$ is determined by $d_{N_{i+1},C_l}$ in a
+similar fashion.
+  \label{fig:phi-psi} }
+\end{figure}
+\begin{figure}[!hp]
+  \caption{{\bf Mean of minimum backbone RMSD values for $140$ protein loops.} We generated $5,000$ samples for each loop. The mean value of
+    the minimum RMSD of the $140$ loops ($y$-axis) is plotted against
+    the size of trial samples $n$ ($x$-axis) for different choices of
+    $m$. For control, results obtained without sampling torsion
+    angles ($m=n$, control) are also plotted. The backbone (N, $\mathrm{C_{\alpha}}$,
+    C and O atoms) RMSD in this paper is calculated by fixing the rest of the protein body.
+  \label{fig:statechoose}}
+\end{figure}
+\begin{figure}[!hp]
+  \caption{{\bf Schematic illustration of Ellipsoid Criterion}. (A) Three dimensional view of a point $\mathbf{x}$ locating on the ellipsoid
+  constructed from the total loop length $L$ and the two foci $\mathbf{x}_1$ and $\mathbf{x}_2$. (B) Two dimensional view along through the ${\it x_3}$-axis of the ellipsoid,
+  with $a = L/2$ and $b = c = [(L/2)^2 - (\frac{||\mathbf{x}_1 -
+\mathbf{x}_2||}{2})^2]^{1/2}$ (dark gray). $c$ is along ${\it
+x_3}$-axis, not shown. The maximum side-chain length is denoted as
+$s$ and the distance cut-off of interaction is $k$. The enlarged
+ellipsoid, which has updated $a$ and $b$, is also shown (light
+gray).
+  \label{fig:ellipsoid}}
+\end{figure}
+\begin{suppfigure}
+\begin{flushleft} {\bf{Text S1. Results of modeled loops on Test Set 2 -- 5, calculated
+using {\sc DiSGro}.}} Table 1 -- 3 are tables for Test Set 2. Table
+4 -- 12 are tables for Test Set 3. Table 13 -- 18 are tables for
+Test Set 4. Table 19 -- 22 are tables for Test Set 5.
+\end{flushleft}
+\end{suppfigure}
+\begin{table}[!h]
+\caption{ \bf{Minimum backbone RMSD values of the loops sampled by
+five different algorithms.}}
+\begin{tabular}{|c|c||c|c|c|c||c|}
+\hline
+Length & Loop & CCD & CSJD & SOS & FALCm & {\sc DiSGro}\\
+\hline
+12-res & {\tt 1cruA\_358} & 2.54 & 2.00 & 2.39 & 2.07 & 1.84\\
+     & {\tt 1ctqA\_26} & 2.49 & 1.86 & 2.54 & 1.66 & 1.36\\
+     & {\tt 1d4oA\_88} & 2.33 & 1.60 & 2.44 & 0.82 & 1.50\\
+     & {\tt 1d8wA\_46} & 4.83 & 2.94 & 2.17 & 2.09 & 1.17\\
+     & {\tt 1ds1A\_282} & 3.04 & 3.10 & 2.33 & 2.10 & 1.82\\
+     & {\tt 1dysA\_291} & 2.48 & 3.04 & 2.08 & 1.67 & 1.45\\
+     & {\tt 1eguA\_508} & 2.14 & 2.82 & 2.36 & 1.71 & 2.13\\
+     & {\tt 1f74A\_11} & 2.72 & 1.53 & 2.23 & 1.44 & 1.46\\
+     & {\tt 1qlwA\_31} & 3.38 & 2.32 & 1.73 & 2.20 & 0.79\\
+     & {\tt 1qopA\_178} & 4.57 & 2.18 & 2.21 & 2.36 & 1.77\\
+     \hline
+     & Average & 3.05 & 2.34 & 2.25 & 1.81 & \textbf{1.53}\\
+     \hline
+     \hline
+    8-res & {\tt 1cruA\_85} & 1.75 & 0.99 & 1.48 & 0.62 & 1.34\\
+     & {\tt 1ctqA\_144} & 1.34 & 0.96 & 1.37 & 0.56 & 0.70\\
+     & {\tt 1d8wA\_334} & 1.51 & 0.37 & 1.18 & 0.96 & 0.93\\
+     & {\tt 1ds1A\_20} & 1.58 & 1.30 & 0.93 & 0.73 & 0.62\\
+     & {\tt 1gk8A\_122} & 1.68 & 1.29 & 0.96 & 0.62 & 1.08\\
+     & {\tt 1i0hA\_145} & 1.35 & 0.36 & 1.37 & 0.74 & 0.80\\
+     & {\tt 1ixh\_106} & 1.61 & 2.36 & 1.21 & 0.57 & 0.39\\
+     & {\tt 1lam\_420} & 1.60 & 0.83 & 0.90 & 0.66 & 0.63\\
+     & {\tt 1qopB\_14} & 1.85 & 0.69 & 1.24 & 0.92 & 0.87\\
+     & {\tt 3chbD\_51} & 1.66 & 0.96 & 1.23 & 1.03 & 0.67\\
+     \hline
+     & Average & 1.59 & 1.01 & 1.19 & 0.72 & \textbf{0.80}\\
+    \hline
+    \hline
+    4-res & {\tt 1dvjA\_20} & 0.61 & 0.38 & 0.23 & 0.39 & 0.31\\
+     & {\tt 1dysA\_47} & 0.68 & 0.37 & 0.16 & 0.20 & 0.09\\
+     & {\tt 1eguA\_404} & 0.68 & 0.36 & 0.16 & 0.22 & 0.39\\
+     & {\tt 1ej0A\_74} & 0.34 & 0.21 & 0.16 & 0.15 & 0.09\\
+     & {\tt 1i0hA\_123} & 0.62 & 0.26 & 0.22 & 0.17 & 0.13\\
+     & {\tt 1id0A\_405} & 0.67 & 0.72 & 0.33 & 0.19 & 0.33\\
+     & {\tt 1qnrA\_195} & 0.49 & 0.39 & 0.32 & 0.23 & 0.19\\
+     & {\tt 1qopA\_44} & 0.63 & 0.61 & 0.13 & 0.30 & 0.39\\
+     & {\tt 1tca\_95} & 0.39 & 0.28 & 0.15 & 0.09 & 0.11\\
+     & {\tt 1thfD\_121} & 0.50 & 0.36 & 0.11 & 0.21 & 0.05\\
+     \hline
+     & Average & 0.56 & 0.40 & 0.20 & 0.22 & \textbf{0.21}\\
+     \hline
+\end{tabular}
+\begin{flushleft}Minimum backbone RMSD values of the loops sampled by CCD, CSJD, SOS, FALCm and {\sc DiSGro} for different loop
+structures. CCD result was obtained from Table 2 of
+Ref.~\cite{canutescu2003}. CSJD result was obtained from Table 1 of
+Ref.~\cite{coutsias2004}. SOS result was obtained from Table 1 of
+Ref.~\cite{liu2009}. FALCm result was obtained from Table 2 of
+Ref.~\cite{lee2010}.
+\end{flushleft}
+\label{tab:dunset}
+\end{table}
+\begin{table}[!h]
+\caption{ \bf{Comparison of $R_{\rm min}$ of the loop conformations
+sampled by {\sc DiSGro} and six other methods using Test Set 2 used
+by Ref.~\cite{soto2008}}}
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
+\hline \cline{1-4}
+ & \multicolumn{7}{c|}{Average minimum backbone RMSD ($R_{\rm min}$)} \\
+\hline
+   Length & Random Tweak & CCD & Wriggling & PLOP-build & Direct Tweak  & $\mathrm{LOOPY_{bb}}$ & {\sc DiSGro} \\
+\hline
+     8 & 1.22 & 1.20 & 1.43 & 0.99 & 0.69 & 0.89 & \textbf{0.80}\\
+    11 & 2.22 & 2.11 & 2.24 & 2.18 & 1.20 & 1.51 & \textbf{1.19}\\
+    12 & 2.64 & 2.57 & 2.68 & 2.69 & 1.48 & 1.80 & \textbf{1.28}\\
+\hline
+\end{tabular}
+\begin{flushleft}$R_{\rm min}$ denote the
+average minimum backbone RMSD of the loop ensemble. Random Tweak,
+CCD, Wriggling, PLOP-build, Direct Tweak and $\mathrm{LOOPY_{bb}}$
+results were obtained from Table 2 of Ref.~\cite{soto2008}.
+\end{flushleft}
+\label{tab:sotobuilder}
+\end{table}
+\begin{table}[!h]
+\caption{ \bf{Comparison of $R_{\rm min}$, $R_{\rm ave}$ and
+$R_{Emin}$ of the lowest energy conformations of the loops sampled
+by RAPPER, FALCm4 and {\sc DiSGro} using Test Set $3$.}}
+\begin{tabular}{|c|c| c c c| c c c | c c c|}
+\hline \cline{3-5} \cline{6-8} \cline{9-11}
+Length &  \# of Targets & \multicolumn{3}{c|}{RAPPER} & \multicolumn{3}{c|}{FALCm} & \multicolumn{3}{c|}{{\sc DiSGro}} \\
+\hline
+    & & $R_{\rm min}$ & $R_{\rm ave}$ & $R_{Emin}$ & $R_{\rm min}$ & $R_{\rm ave}$ & $R_{Emin}$ & $R_{\rm min}$ & $R_{\rm ave}$ & $R_{Emin}$\\
+\hline
+    4 & 35 & 0.43 & 1.65 & 0.86 & 0.33 & 0.92 & 0.54 &\textbf{0.21} & \textbf{0.66} & \textbf{0.48}\\
+    5 & 35 & 0.53 & 2.27 & 1.00 & 0.44 & 1.63 & 0.92 &\textbf{0.25} & \textbf{1.11} & \textbf{0.84}\\
+    6 & 36 & 0.69 & 3.06 & 1.85 & 0.47 & 2.34 & 1.36 &\textbf{0.44} & \textbf{1.74} & \textbf{1.22}\\
+    7 & 38 & 0.78 & 3.79 & 1.51 & 0.58 & 2.74 & 1.17 &\textbf{0.55} & \textbf{2.23} & \textbf{1.08}\\
+    8 & 32 & 1.11 & 4.16 & 2.11 & 0.84 & 3.69 & 1.87 &\textbf{0.80} & \textbf{2.87} & \textbf{1.72}\\
+    9 & 37 & 1.29 & 5.00 & 2.58 & 0.95 & 4.21 & 2.08 &\textbf{0.94} & \textbf{3.64} & \textbf{1.82}\\
+    10 & 37 & 1.67 & 5.66 & 3.60 & 1.45 & 5.07 & 3.09 &\textbf{1.15} & \textbf{3.96} & \textbf{2.33}\\
+    11 & 33 & 1.99 & 6.71 & 4.25 & 1.47 & 5.76 & 3.43 &\textbf{1.39} & \textbf{4.96} & \textbf{2.98}\\
+    12 & 34 & 2.21 & 6.96 & 4.32 & 1.74 & 6.31 & 3.84 &\textbf{1.53} & \textbf{5.23} & \textbf{2.99}\\
+\hline
+\end{tabular}
+\begin{flushleft}$R_{\rm min}$, $R_{\rm ave}$ and $R_{Emin}$ denote the
+average minimum backbone RMSD, the average ensemble RMSD and the
+average RMSD of the lowest energy conformations of the 1,000 loop
+ensemble with the same length, respectively.
+\end{flushleft}
+\label{tab:falcm}
+\end{table}
+\begin{table}[!h]
+\caption{ \bf{Comparison of accuracy of modeled loops using the
+original Fiser data set of loops with $10$-$12$ residues.}}
+  \begin{tabular}{|c|c|c|c|c|c|}
+    \cline{3-6}
+    \hline
+    Length &  Targets & \multicolumn{4}{c|}{{\bf {\sc DiSGro}}/LOOPER}\\
+    \hline
+    & & $R_{\rm Bkb,ave}$ & $R_{\rm Bkb,med}$ & $R_{\rm Atm,ave}$ & $R_{\rm Atm,med}$\\
+    \hline
+    10 & 40 & {\bf 2.30}/2.66 & {\bf 2.20}/2.39 & {\bf 3.39}/3.58 & {\bf 3.18}/3.35\\
+    11 & 40 & {\bf 2.63}/3.35 & {\bf 2.25}/2.76 & {\bf 3.58}/4.30 & {\bf 3.30}/3.60\\
+    12 & 40 & {\bf 3.20}/4.08 & {\bf 2.39}/3.80 & {\bf 4.18}/5.22 & {\bf 3.60}/4.96\\
+    \hline
+  \end{tabular}
+  \begin{flushleft} The accuracy achieved by LOOPER and {\sc DiSGro} at different loop length using
+the original Fiser data set of loops with 10--12 residues is listed.
+$R_{\rm Bkb,ave}$, and $R_{\rm Bkb,med}$ denote the mean and median
+of backbone RMSD, while $R_{\rm Atm,ave}$, and $R_{\rm Atm,med}$
+denote the mean and median of all-heavy atoms RMSD of the lowest
+energy conformations with the same loop length.
+\end{flushleft}
+\label{tab:looper}
+\end{table}
+\begin{table}[!h]
+\caption{ \bf{Comparison of $R_{Emin}$ of the loop conformations
+sampled by Loop Builder and {\sc DiSGro} using Test Set 4 taken from
+the Loop Builder study~\cite{soto2008}}}
+\begin{tabular}{|c|c| c | c |}
+\hline \cline{1-4}
+ &   & \multicolumn{2}{c|}{Average prediction accuracy ($R_{Emin}$)}\\
+\hline
+   Length & \# of Targets & LoopBuilder & {\sc DiSGro} \\
+\hline
+      8 & 63 & 1.31 & \textbf{1.59}\\
+      9 & 56 & 1.88 & \textbf{1.83}\\
+     10 & 40 & 1.93 & \textbf{1.83}\\
+     11 & 54 & 2.50 & \textbf{2.38}\\
+     12 & 40 & 2.65 & \textbf{2.62}\\
+     13 & 40 & 3.74 & \textbf{3.26}\\
+\hline
+\end{tabular}
+\begin{flushleft}$R_{Emin}$ denote the
+average RMSD of the lowest energy conformations of the loop
+ensemble.
+Results of LoopBuilder were obtained from Table 5 of
+Ref.~\cite{soto2008}.
+\end{flushleft}
+\label{tab:sotobuilderE}
+\end{table}
+\begin{table}[!h]
+\caption{\bf{Accuracy of modeled loops by {\sc DiSGro} using the
+original Fiser data set of loops with 13 residues.}}
+  \begin{tabular}{|c|l|c|c|c|c|c|c|c|}
+  \hline
+  Target &  PDB & Start & End & Sequence & $R_{\rm min}$ & $R_{\rm en,Ave}$ & $R_{\rm Bkb,Emin}$ & $R_{\rm Atm,Emin}$\\
+  \hline
+  1 & {\tt 154l} & 21 & 33 & {\tt akpeglsycgvsa} & 2.14 & 7.08 & 2.42 & 3.20\\
+  2 & {\tt 1aba} & 5 & 17 & {\tt ygydsnihkcgpc} & 1.83 & 4.37 & 5.08 & 5.58\\
+  3 & {\tt 1amp} & 252 & 264 & {\tt nprihttqdtlan} & 2.12 & 6.03 & 2.88 & 4.32\\
+  4 & {\tt 1art} & 160 & 172 & {\tt yydaenhtldfda} & 2.67 & 7.28 & 5.62 & 6.80\\
+  5 & {\tt 1byb} & 139 & 151 & {\tt vdnepifhgrtai} & 2.85 & 9.42 & 3.98 & 5.02\\
+  6 & {\tt 1cbn} & 32 & 44 & {\tt ciiipgatcpgdy} & 1.50 & 6.34 & 2.12 & 3.28\\
+  7 & {\tt 1cgt} & 38 & 50 & {\tt aydatcsnlklyc} & 2.38 & 6.90 & 4.47 & 4.74\\
+  8 & {\tt 1clc} & 258 & 270 & {\tt mqypdgsgrvahk} & 2.25 & 5.17 & 4.45 & 5.72\\
+  9 & {\tt 1ctm} & 34 & 46 & {\tt evpqavlpdtvfe} & 0.92 & 4.98 & 1.21 & 1.98\\
+  10 & {\tt 1fas} & 4 & 16 & {\tt yshtttsrailtn} & 1.56 & 8.21 & 1.73 & 2.57\\
+  11 & {\tt 1fnd} & 47 & 59 & {\tt kitgddapgetwh} & 1.41 & 10.25 & 1.51 & 2.02\\
+  12 & {\tt 1frd} & 37 & 49 & {\tt lpfschsgscssc} & 1.56 & 8.78 & 5.83 & 6.46\\
+  13 & {\tt 1fus} & 91 & 103 & {\tt thtgasgnnfvgc} & 2.36 & 6.61 & 3.33 & 4.78\\
+  14 & {\tt 1gof} & 70 & 82 & {\tt mlprqdgnqngwi} & 1.17 & 3.21 & 2.66 & 2.95\\
+  15 & {\tt 1ivd} & 429 & 441 & {\tt grkqetrvwwtsn} & 2.48 & 5.76 & 2.82 & 5.60\\
+  16 & {\tt 1l58} & 50 & 62 & {\tt igrncngvitkde} & 1.62 & 12.03 & 2.13 & 3.30\\
+  17 & {\tt 1msc} & 33 & 45 & {\tt issnsrsqaykvt} & 2.20 & 6.74 & 5.33 & 6.18\\
+  18 & {\tt 1osa} & 55 & 67 & {\tt vdadgngtidfpe} & 0.82 & 10.27 & 0.82 & 1.35\\
+  19 & {\tt 1pca} & 204 & 216 & {\tt ypygyktqspadk} & 2.49 & 7.25 & 5.99 & 6.30\\
+  20 & {\tt 1php} & 59 & 71 & {\tt hlgrpkgkvveel} & 1.40 & 8.61 & 1.40 & 2.16\\
+  21 & {\tt 1prn} & 213 & 225 & {\tt ydnglstagdqvt} & 1.41 & 5.32 & 1.55 & 1.72\\
+  22 & {\tt 1rec} & 159 & 171 & {\tt fgkkdddklteke} & 1.18 & 9.66 & 1.18 & 2.35\\
+  23 & {\tt 1srp} & 46 & 58 & {\tt wngykvfgqpvkl} & 1.02 & 7.58 & 1.90 & 2.24\\
+  24 & {\tt 1thg} & 493 & 505 & {\tt dpnvgtnllqwdq} & 1.39 & 5.42 & 2.11 & 2.97\\
+  25 & {\tt 1thw} & 102 & 114 & {\tt isnikgfnvpmdf} & 1.31 & 3.75 & 1.87 & 2.86\\
+  26 & {\tt 1trb} & 222 & 234 & {\tt lrdtqnsdniesl} & 1.56 & 4.42 & 1.64 & 2.83\\
+  27 & {\tt 1xif} & 99 & 111 & {\tt fkdggftandrdv} & 1.21 & 7.02 & 3.23 & 4.23\\
+  28 & {\tt 2ctc} & 204 & 216 & {\tt ypygyttqsipdk} & 2.57 & 6.42 & 4.28 & 4.76\\
+  29 & {\tt 3cyr} & 34 & 46 & {\tt hhlvdgkesyakc} & 2.18 & 5.89 & 5.62 & 6.17\\
+  30 & {\tt 2exo} & 51 & 63 & {\tt tepsqnsfsfgag} & 2.64 & 7.58 & 2.64 & 3.98\\
+  31 & {\tt 2pia} & 58 & 70 & {\tt slcndsqernryv} & 1.29 & 3.83 & 2.80 & 4.12\\
+  32 & {\tt 2por} & 170 & 182 & {\tt idspdtalmadme} & 1.27 & 6.20 & 1.60 & 2.23\\
+  33 & {\tt 2sil} & 86 & 98 & {\tt iyndrvnsklsrv} & 1.19 & 5.82 & 3.37 & 4.00\\
+  34 & {\tt 3grs} & 129 & 141 & {\tt haaftsdpkptie} & 1.61 & 9.05 & 1.78 & 3.03\\
+  35 & {\tt 4icb} & 53 & 65 & {\tt ldkngdgevsfee} & 1.84 & 9.06 & 2.01 & 2.95\\
+  36 & {\tt 5fx2} & 93 & 105 & {\tt cgdssyeyfcgav} & 2.27 & 5.15 & 4.61 & 6.57\\
+  37 & {\tt 5p21} & 115 & 127 & {\tt gnkcdlaartves} & 1.79 & 7.09 & 2.81 & 3.79\\
+  38 & {\tt 5pti} & 9 & 21 & {\tt pytgpckariiry} & 1.15 & 5.66 & 1.42 & 3.07\\
+  39 & {\tt 7rsa} & 86 & 98 & {\tt etgsskypncayk} & 1.84 & 11.38 & 1.84 & 2.73\\
+  40 & {\tt 8dfr} & 166 & 178 & {\tt padiqeedgiqyk} & 1.97 & 10.08 & 2.21 & 2.68\\
+  \hline
+  \multicolumn{5}{|c|}{Mean} & \textbf{1.76} & \textbf{7.04} & \textbf{2.91} & \textbf{3.84}\\
+  \hline
+  \multicolumn{5}{|c|}{Median} & \textbf{1.61} & \textbf{6.82} & \textbf{2.53} & \textbf{3.29}\\
+  \hline
+  \end{tabular}
+  \begin{flushleft}$R_{\rm min}$ and $R_{\rm en,Ave}$ are the minimum backbone RMSD and
+  the average backbone RMSD of the $1,000$ sampled conformations, respectively. $R_{\rm Bkb,Emin}$ and $R_{\rm Atm,Emin}$ are the backbone and all heavy atoms RMSD of the lowest energy conformations in the ensemble.
+\end{flushleft}
+\label{tab:fiser13}
+\end{table}
+\begin{table}[!h]
+\caption{ \bf{Comparison of $R_{\rm min}$, $R_{Emin}$ and $Time$ of
+the loop conformations sampled by PLOP and {\sc DiSGro} using Test
+Set $5$.}}
+\begin{tabular}{|c|c| c c c| c c c |}
+\hline \cline{3-5} \cline{6-8}
+Length &  \# of Targets & \multicolumn{3}{c|}{PLOP} & \multicolumn{3}{c|}{{\sc DiSGro}} \\
+\hline
+    & & $R_{\rm min}$ & $R_{Emin}$ & $Time$ (hours $\mid$ days) & $R_{\rm min}$ & $R_{Emin}$ & $Time$ (hours)\\
+\hline
+    14 & 36 & NA & 1.19 & 216.0 $\mid$ 9.0 &\textbf{1.58} & \textbf{3.73} & \textbf{0.73}\\
+    15 & 30 & NA & 1.55 & 309.6 $\mid$ 12.9 &\textbf{1.80} & \textbf{3.91} & \textbf{0.72}\\
+    16 & 14 & NA & 1.43 & 278.4 $\mid$ 11.6 &\textbf{1.88} & \textbf{4.16} & \textbf{0.81}\\
+    17 &  9 & NA & 2.30 & 408.0 $\mid$ 17.0 &\textbf{2.18} & \textbf{4.46} & \textbf{0.95}\\
+\hline
+\end{tabular}
+\begin{flushleft}$R_{\rm min}$ and $R_{Emin}$ denote the
+average minimum backbone RMSD and the average RMSD of the lowest
+energy conformations of the loop ensemble.
+\end{flushleft}
+\label{tab:zhaoplop}
+\end{table}
+\end{document}
