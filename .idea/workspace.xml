@@ -1,41 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c30c4e4c-3762-4ba1-bc68-3ca05bb4a496" name="Default" comment="">
-      <change type="DELETED" beforePath="D:\LaTEX\LaTEX\src\LaTEXBaseListener.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\LaTEX\LaTEX\src\LaTEXLexer.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\LaTEX\LaTEX\src\LaTEXListener.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\LaTEX\LaTEX\src\LaTEXParser.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\LaTEX\LaTEX\src\LaTEXParser.tokens" afterPath="" />
+    <list default="true" id="c30c4e4c-3762-4ba1-bc68-3ca05bb4a496" name="Default" comment="Add java and g4 files&#10;&#10;# Please enter the commit message for your changes. Lines starting&#10;# with '#' will be ignored, and an empty message aborts the commit.&#10;# On branch master&#10;# Changes to be committed:&#10;#   (use &quot;git reset HEAD &lt;file&gt;...&quot; to unstage)&#10;#&#10;#&#9;new file:   .classpath&#10;#&#9;new file:   .project&#10;#&#9;new file:   .settings/org.eclipse.jdt.core.prefs&#10;#&#9;new file:   LaTEX/.gitattributes&#10;#&#9;new file:   LaTEX/.gitignore&#10;#&#9;new file:   bin/LaTEX.g4&#10;#&#9;new file:   bin/LaTEX.tokens&#10;#&#9;new file:   bin/LaTEXBaseListener.class&#10;#&#9;new file:   bin/LaTEXLexer.class&#10;#&#9;new file:   bin/LaTEXLexer.tokens&#10;#&#9;new file:   bin/LaTEXListener.class&#10;#&#9;new file:   bin/LaTEXParser$ApostropheContext.class&#10;#&#9;new file:   bin/LaTEXParser$BibliographyContext.class&#10;#&#9;new file:   bin/LaTEXParser$BlockContext.class&#10;#&#9;new file:   bin/LaTEXParser$BlockDeclarationContext.class&#10;#&#9;new file:   bin/LaTEXParser$CaptionDeclaratorContext.class&#10;#&#9;new file:   bin/LaTEXParser$ColonContext.class&#10;#&#9;new file:   bin/LaTEXParser$CommaContext.class&#10;#&#9;new file:   bin/LaTEXParser$CompilationUnitContext.class&#10;#&#9;new file:   bin/LaTEXParser$DocumentBodyContext.class&#10;#&#9;new file:   bin/LaTEXParser$DocumentBodyDeclarationContext.class&#10;#&#9;new file:   bin/LaTEXParser$DocumentDeclarationContext.class&#10;#&#9;new file:   bin/LaTEXParser$EquationContext.class&#10;#&#9;new file:   bin/LaTEXParser$FormulaContext.class&#10;#&#9;new file:   bin/LaTEXParser$HyphenContext.class&#10;#&#9;new file:   bin/LaTEXParser$ItalicDollarContext.class&#10;#&#9;new file:   bin/LaTEXParser$ItalicTextDeclarationContext.class&#10;#&#9;new file:   bin/LaTEXParser$ItalictypeDeclarationContext.class&#10;#&#9;new file:   bin/LaTEXParser$ItemContext.class&#10;#&#9;new file:   bin/LaTEXParser$ItemListContext.class&#10;#&#9;new file:   bin/LaTEXParser$ItemsContext.class&#10;#&#9;new file:   bin/LaTEXParser$LeftBraceContext.class&#10;#&#9;new file:   bin/LaTEXParser$MathFormulaContext.class&#10;#&#9;new file:   bin/LaTEXParser$MathSymbolsContext.class&#10;#&#9;new file:   bin/LaTEXParser$MemberContext.class&#10;#&#9;new file:   bin/LaTEXParser$MemberListContext.class&#10;#&#9;new file:   bin/LaTEXParser$NewLineContext.class&#10;#&#9;new file:   bin/LaTEXParser$NewTableLineContext.class&#10;#&#9;new file:   bin/LaTEXParser$NewcommandDeclarationContext.class&#10;#&#9;new file:   bin/LaTEXParser$NumbersContext.class&#10;#&#9;new file:   bin/LaTEXParser$ParagraphContext.class&#10;#&#9;new file:   bin/LaTEXParser$ReferencesContext.class&#10;#&#9;new file:   bin/LaTEXParser$ReferencesListContext.class&#10;#&#9;new file:   bin/LaTEXParser$RightBraceContext.class&#10;#&#9;new file:   bin/LaTEXParser$SectionDeclarationContext.class&#10;#&#9;new file:   bin/LaTEXParser$SimpleTextContext.class&#10;#&#9;new file:   bin/LaTEXParser$SubsectionDeclarationContext.class&#10;#&#9;new file:   bin/LaTEXParser$SubsubsectionDeclarationContext.class&#10;#&#9;new file:   bin/LaTEXParser$TableBodyContext.class&#10;#&#9;new file:   bin/LaTEXParser$TableBodyDeclarationContext.class&#10;#&#9;new file:   bin/LaTEXParser$TableColumnContext.class&#10;#&#9;new file:   bin/LaTEXParser$TableColumnsContext.class&#10;#&#9;new file:   bin/LaTEXParser$TableContext.class&#10;#&#9;new file:   bin/LaTEXParser$TableDeclarationContext.class&#10;#&#9;new file:   bin/LaTEXParser$TableLineContext.class&#10;#&#9;new file:   bin/LaTEXParser$TableLinesContext.class&#10;#&#9;new file:   bin/LaTEXParser$TableOptionsContext.class&#10;#&#9;new file:   bin/LaTEXParser$TableStyleContext.class&#10;#&#9;new file:   bin/LaTEXParser$TextformatingBlockContext.class&#10;#&#9;new file:   bin/LaTEXParser$TexttypeDeclaratorContext.class&#10;#&#9;new file:   bin/LaTEXParser$UpperHeadContext.class&#10;#&#9;new file:   bin/LaTEXParser.class&#10;#&#9;new file:   bin/LaTEXtoXML.class&#10;#&#9;new file:   bin/Test.class&#10;#&#9;new file:   bin/antlr4_parse_tree.png&#10;#&#9;new file:   bin/shouldBe.xml&#10;#&#9;new file:   bin/test.tex&#10;#&#9;new file:   result.xml&#10;#&#9;new file:   src/LaTEX.tokens&#10;#&#9;new file:   src/LaTEXBaseListener.class&#10;#&#9;new file:   src/LaTEXLexer.class&#10;#&#9;new file:   src/LaTEXLexer.tokens&#10;#&#9;new file:   src/LaTEXListener.class&#10;#&#9;new file:   src/LaTEXParser$ApostropheContext.class&#10;#&#9;new file:   src/LaTEXParser$BibliographyContext.class&#10;#&#9;new file:   src/LaTEXParser$BlockContext.class&#10;#&#9;new file:   src/LaTEXParser$BlockDeclarationContext.class&#10;#&#9;new file:   src/LaTEXParser$CaptionDeclaratorContext.class&#10;#&#9;new file:   src/LaTEXParser$ColonContext.class&#10;#&#9;new file:   src/LaTEXParser$CommaContext.class&#10;#&#9;new file:   src/LaTEXParser$CompilationUnitContext.class&#10;#&#9;new file:   src/LaTEXParser$CuteContext.class&#10;#&#9;new file:   src/LaTEXParser$DocumentBodyContext.class&#10;#&#9;new file:   src/LaTEXParser$DocumentBodyDeclarationContext.class&#10;#&#9;new file:   src/LaTEXParser$DocumentDeclarationContext.class&#10;#&#9;new file:   src/LaTEXParser$EquationContext.class&#10;#&#9;new file:   src/LaTEXParser$FormulaContext.class&#10;#&#9;new file:   src/LaTEXParser$HyphenContext.class&#10;#&#9;new file:   src/LaTEXParser$ItalicDollarContext.class&#10;#&#9;new file:   src/LaTEXParser$ItalicTextContext.class&#10;#&#9;new file:   src/LaTEXParser$ItalicTextDeclarationContext.class&#10;#&#9;new file:   src/LaTEXParser$ItalictypeDeclarationContext.class&#10;#&#9;new file:   src/LaTEXParser$ItemContext.class&#10;#&#9;new file:   src/LaTEXParser$ItemListContext.class&#10;#&#9;new file:   src/LaTEXParser$ItemsContext.class&#10;#&#9;new file:   src/LaTEXParser$LeftBraceContext.class&#10;#&#9;new file:   src/LaTEXParser$ListContext.class&#10;#&#9;new file:   src/LaTEXParser$MathFormulaContext.class&#10;#&#9;new file:   src/LaTEXParser$MathSymbolsContext.class&#10;#&#9;new file:   src/LaTEXParser$MemberContext.class&#10;#&#9;new file:   src/LaTEXParser$MemberListContext.class&#10;#&#9;new file:   src/LaTEXParser$NewLineContext.class&#10;#&#9;new file:   src/LaTEXParser$NewTableLineContext.class&#10;#&#9;new file:   src/LaTEXParser$NewcommandDeclarationContext.class&#10;#&#9;new file:   src/LaTEXParser$NumbersContext.class&#10;#&#9;new file:   src/LaTEXParser$ParagraphContext.class&#10;#&#9;new file:   src/LaTEXParser$ReferenceLinkContext.class&#10;#&#9;new file:   src/LaTEXParser$ReferenceListContext.class&#10;#&#9;new file:   src/LaTEXParser$ReferenceOptionsContext.class&#10;#&#9;new file:   src/LaTEXParser$ReferencesContext.class&#10;#&#9;new file:   src/LaTEXParser$ReferencesListContext.class&#10;#&#9;new file:   src/LaTEXParser$RightBraceContext.class&#10;#&#9;new file:   src/LaTEXParser$SectionDeclarationContext.class&#10;#&#9;new file:   src/LaTEXParser$SimpleTextContext.class&#10;#&#9;new file:   src/LaTEXParser$StringContext.class&#10;#&#9;new file:   src/LaTEXParser$SubsectionDeclarationContext.class&#10;#&#9;new file:   src/LaTEXParser$SubsubsectionDeclarationContext.class&#10;#&#9;new file:   src/LaTEXParser$TableBodyContext.class&#10;#&#9;new file:   src/LaTEXParser$TableBodyDeclarationContext.class&#10;#&#9;new file:   src/LaTEXParser$TableColumnContext.class&#10;#&#9;new file:   src/LaTEXParser$TableColumnsContext.class&#10;#&#9;new file:   src/LaTEXParser$TableContext.class&#10;#&#9;new file:   src/LaTEXParser$TableDeclarationContext.class&#10;#&#9;new file:   src/LaTEXParser$TableLineContext.class&#10;#&#9;new file:   src/LaTEXParser$TableLinesContext.class&#10;#&#9;new file:   src/LaTEXParser$TableOptionsContext.class&#10;#&#9;new file:   src/LaTEXParser$TableStyleContext.class&#10;#&#9;new file:   src/LaTEXParser$TabulatorContext.class&#10;#&#9;new file:   src/LaTEXParser$TextformatingBlockContext.class&#10;#&#9;new file:   src/LaTEXParser$TexttypeDeclaratorContext.class&#10;#&#9;new file:   src/LaTEXParser$UpperHeadContext.class&#10;#&#9;new file:   src/LaTEXParser$UpperIndexContext.class&#10;#&#9;new file:   src/LaTEXParser.class&#10;#&#9;new file:   src/LaTEXtoXML.class&#10;#&#9;new file:   src/README.txt&#10;#&#9;new file:   src/Test.java&#10;#&#9;new file:   src/antlr4_parse_tree.png&#10;#&#9;new file:   src/shouldBe.xml&#10;#&#9;new file:   src/test.tex&#10;#&#9;new file:   target/generated-sources/antlr4/Expr.tokens&#10;#&#9;new file:   target/generated-sources/antlr4/ExprBaseListener.java&#10;#&#9;new file:   target/generated-sources/antlr4/ExprLexer.java&#10;#&#9;new file:   target/generated-sources/antlr4/ExprLexer.tokens&#10;#&#9;new file:   target/generated-sources/antlr4/ExprListener.java&#10;#&#9;new file:   target/generated-sources/antlr4/ExprParser.java&#10;#&#9;new file:   target/generated-sources/antlr4/latex.tokens&#10;#&#9;new file:   target/generated-sources/antlr4/latexBaseListener.java&#10;#&#9;new file:   target/generated-sources/antlr4/latexLexer.java&#10;#&#9;new file:   target/generated-sources/antlr4/latexLexer.tokens&#10;#&#9;new file:   target/generated-sources/antlr4/latexListener.java&#10;#&#9;new file:   target/generated-sources/antlr4/latexParser.java&#10;#&#9;new file:   target/generated-sources/antlr4/org/kvn/latex/LaTEX.tokens&#10;#&#9;new file:   target/generated-sources/antlr4/org/kvn/latex/LaTEXBaseListener.java&#10;#&#9;new file:   target/generated-sources/antlr4/org/kvn/latex/LaTEXLexer.java&#10;#&#9;new file:   target/generated-sources/antlr4/org/kvn/latex/LaTEXLexer.tokens&#10;#&#9;new file:   target/generated-sources/antlr4/org/kvn/latex/LaTEXListener.java&#10;#&#9;new file:   target/generated-sources/antlr4/org/kvn/latex/LaTEXParser.java&#10;#&#9;new file:   target/generated-sources/antlr4/org/kvn/latex/commands/Commands.tokens&#10;#&#9;new file:   target/generated-sources/antlr4/org/kvn/latex/commands/CommandsBaseListener.java&#10;#&#9;new file:   target/generated-sources/antlr4/org/kvn/latex/commands/CommandsLexer.java&#10;#&#9;new file:   target/generated-sources/antlr4/org/kvn/latex/commands/CommandsLexer.tokens&#10;#&#9;new file:   target/generated-sources/antlr4/org/kvn/latex/commands/CommandsListener.java&#10;#&#9;new file:   target/generated-sources/antlr4/org/kvn/latex/commands/CommandsParser.java&#10;#&#10;# Changes not staged for commit:&#10;#   (use &quot;git add/rm &lt;file&gt;...&quot; to update what will be committed)&#10;#   (use &quot;git checkout -- &lt;file&gt;...&quot; to discard changes in working directory)&#10;#&#10;#&#9;deleted:    LaTEX/.gitattributes&#10;#&#9;deleted:    LaTEX/.gitignore&#10;#&#9;modified:   bin/LaTEX.g4&#10;#&#9;modified:   bin/LaTEX.tokens&#10;#&#9;modified:   bin/LaTEXBaseListener.class&#10;#&#9;modified:   bin/LaTEXLexer.class&#10;#&#9;modified:   bin/LaTEXLexer.tokens&#10;#&#9;modified:   bin/LaTEXListener.class&#10;#&#9;modified:   bin/LaTEXParser$ApostropheContext.class&#10;#&#9;modified:   bin/LaTEXParser$BibliographyContext.class&#10;#&#9;modified:   bin/LaTEXParser$BlockContext.class&#10;#&#9;modified:   bin/LaTEXParser$BlockDeclarationContext.class&#10;#&#9;modified:   bin/LaTEXParser$CaptionDeclaratorContext.class&#10;#&#9;modified:   bin/LaTEXParser$ColonContext.class&#10;#&#9;modified:   bin/LaTEXParser$CommaContext.class&#10;#&#9;modified:   bin/LaTEXParser$CompilationUnitContext.class&#10;#&#9;modified:   bin/LaTEXParser$DocumentBodyContext.class&#10;#&#9;modified:   bin/LaTEXParser$DocumentBodyDeclarationContext.class&#10;#&#9;modified:   bin/LaTEXParser$DocumentDeclarationContext.class&#10;#&#9;modified:   bin/LaTEXParser$EquationContext.class&#10;#&#9;modified:   bin/LaTEXParser$FormulaContext.class&#10;#&#9;modified:   bin/LaTEXParser$HyphenContext.class&#10;#&#9;modified:   bin/LaTEXParser$ItalicDollarContext.class&#10;#&#9;modified:   bin/LaTEXParser$ItalicTextDeclarationContext.class&#10;#&#9;modified:   bin/LaTEXParser$ItalictypeDeclarationContext.class&#10;#&#9;modified:   bin/LaTEXParser$ItemContext.class&#10;#&#9;modified:   bin/LaTEXParser$ItemListContext.class&#10;#&#9;modified:   bin/LaTEXParser$ItemsContext.class&#10;#&#9;modified:   bin/LaTEXParser$LeftBraceContext.class&#10;#&#9;modified:   bin/LaTEXParser$MathFormulaContext.class&#10;#&#9;modified:   bin/LaTEXParser$MathSymbolsContext.class&#10;#&#9;modified:   bin/LaTEXParser$MemberContext.class&#10;#&#9;modified:   bin/LaTEXParser$MemberListContext.class&#10;#&#9;modified:   bin/LaTEXParser$NewLineContext.class&#10;#&#9;modified:   bin/LaTEXParser$NewTableLineContext.class&#10;#&#9;modified:   bin/LaTEXParser$NewcommandDeclarationContext.class&#10;#&#9;modified:   bin/LaTEXParser$NumbersContext.class&#10;#&#9;modified:   bin/LaTEXParser$ParagraphContext.class&#10;#&#9;modified:   bin/LaTEXParser$ReferencesContext.class&#10;#&#9;modified:   bin/LaTEXParser$ReferencesListContext.class&#10;#&#9;modified:   bin/LaTEXParser$RightBraceContext.class&#10;#&#9;modified:   bin/LaTEXParser$SectionDeclarationContext.class&#10;#&#9;modified:   bin/LaTEXParser$SimpleTextContext.class&#10;#&#9;modified:   bin/LaTEXParser$SubsectionDeclarationContext.class&#10;#&#9;modified:   bin/LaTEXParser$SubsubsectionDeclarationContext.class&#10;#&#9;modified:   bin/LaTEXParser$TableBodyContext.class&#10;#&#9;modified:   bin/LaTEXParser$TableBodyDeclarationContext.class&#10;#&#9;modified:   bin/LaTEXParser$TableColumnContext.class&#10;#&#9;modified:   bin/LaTEXParser$TableColumnsContext.class&#10;#&#9;modified:   bin/LaTEXParser$TableContext.class&#10;#&#9;modified:   bin/LaTEXParser$TableDeclarationContext.class&#10;#&#9;modified:   bin/LaTEXParser$TableLineContext.class&#10;#&#9;modified:   bin/LaTEXParser$TableLinesContext.class&#10;#&#9;modified:   bin/LaTEXParser$TableOptionsContext.class&#10;#&#9;modified:   bin/LaTEXParser$TableStyleContext.class&#10;#&#9;deleted:    bin/LaTEXParser$TextformatingBlockContext.class&#10;#&#9;modified:   bin/LaTEXParser$TexttypeDeclaratorContext.class&#10;#&#9;modified:   bin/LaTEXParser$UpperHeadContext.class&#10;#&#9;modified:   bin/LaTEXParser.class&#10;#&#9;modified:   result.xml&#10;#&#9;modified:   src/LaTEX.g4&#10;#&#9;modified:   src/LaTEX.tokens&#10;#&#9;modified:   src/LaTEXBaseListener.class&#10;#&#9;modified:   src/LaTEXBaseListener.java&#10;#&#9;modified:   src/LaTEXLexer.class&#10;#&#9;modified:   src/LaTEXLexer.java&#10;#&#9;modified:   src/LaTEXLexer.tokens&#10;#&#9;modified:   src/LaTEXListener.class&#10;#&#9;modified:   src/LaTEXListener.java&#10;#&#9;modified:   src/LaTEXParser$ApostropheContext.class&#10;#&#9;modified:   src/LaTEXParser$BibliographyContext.class&#10;#&#9;modified:   src/LaTEXParser$BlockContext.class&#10;#&#9;modified:   src/LaTEXParser$BlockDeclarationContext.class&#10;#&#9;modified:   src/LaTEXParser$CaptionDeclaratorContext.class&#10;#&#9;modified:   src/LaTEXParser$ColonContext.class&#10;#&#9;modified:   src/LaTEXParser$CommaContext.class&#10;#&#9;modified:   src/LaTEXParser$CompilationUnitContext.class&#10;#&#9;modified:   src/LaTEXParser$DocumentBodyContext.class&#10;#&#9;modified:   src/LaTEXParser$DocumentBodyDeclarationContext.class&#10;#&#9;modified:   src/LaTEXParser$DocumentDeclarationContext.class&#10;#&#9;modified:   src/LaTEXParser$EquationContext.class&#10;#&#9;modified:   src/LaTEXParser$FormulaContext.class&#10;#&#9;modified:   src/LaTEXParser$HyphenContext.class&#10;#&#9;modified:   src/LaTEXParser$ItalicDollarContext.class&#10;#&#9;modified:   src/LaTEXParser$ItalicTextDeclarationContext.class&#10;#&#9;modified:   src/LaTEXParser$ItalictypeDeclarationContext.class&#10;#&#9;modified:   src/LaTEXParser$ItemContext.class&#10;#&#9;modified:   src/LaTEXParser$ItemListContext.class&#10;#&#9;modified:   src/LaTEXParser$ItemsContext.class&#10;#&#9;modified:   src/LaTEXParser$LeftBraceContext.class&#10;#&#9;modified:   src/LaTEXParser$MathFormulaContext.class&#10;#&#9;modified:   src/LaTEXParser$MathSymbolsContext.class&#10;#&#9;modified:   src/LaTEXParser$MemberContext.class&#10;#&#9;modified:   src/LaTEXParser$MemberListContext.class&#10;#&#9;modified:   src/LaTEXParser$NewLineContext.class&#10;#&#9;modified:   src/LaTEXParser$NewTableLineContext.class&#10;#&#9;modified:   src/LaTEXParser$NewcommandDeclarationContext.class&#10;#&#9;modified:   src/LaTEXParser$NumbersContext.class&#10;#&#9;modified:   src/LaTEXParser$ParagraphContext.class&#10;#&#9;modified:   src/LaTEXParser$ReferencesContext.class&#10;#&#9;modified:   src/LaTEXParser$ReferencesListContext.class&#10;#&#9;modified:   src/LaTEXParser$RightBraceContext.class&#10;#&#9;modified:   src/LaTEXParser$SectionDeclarationContext.class&#10;#&#9;modified:   src/LaTEXParser$SimpleTextContext.class&#10;#&#9;modified:   src/LaTEXParser$SubsectionDeclarationContext.class&#10;#&#9;modified:   src/LaTEXParser$SubsubsectionDeclarationContext.class&#10;#&#9;modified:   src/LaTEXParser$TableBodyContext.class&#10;#&#9;modified:   src/LaTEXParser$TableBodyDeclarationContext.class&#10;#&#9;modified:   src/LaTEXParser$TableColumnContext.class&#10;#&#9;modified:   src/LaTEXParser$TableColumnsContext.class&#10;#&#9;modified:   src/LaTEXParser$TableContext.class&#10;#&#9;modified:   src/LaTEXParser$TableDeclarationContext.class&#10;#&#9;modified:   src/LaTEXParser$TableLineContext.class&#10;#&#9;modified:   src/LaTEXParser$TableLinesContext.class&#10;#&#9;modified:   src/LaTEXParser$TableOptionsContext.class&#10;#&#9;modified:   src/LaTEXParser$TableStyleContext.class&#10;#&#9;modified:   src/LaTEXParser$TextformatingBlockContext.class&#10;#&#9;modified:   src/LaTEXParser$TexttypeDeclaratorContext.class&#10;#&#9;modified:   src/LaTEXParser$UpperHeadContext.class&#10;#&#9;modified:   src/LaTEXParser.class&#10;#&#9;modified:   src/LaTEXParser.java&#10;#&#9;deleted:    src/README.txt&#10;#&#9;modified:   target/generated-sources/antlr4/latex.tokens&#10;#&#9;modified:   target/generated-sources/antlr4/latexBaseListener.java&#10;#&#9;modified:   target/generated-sources/antlr4/latexLexer.java&#10;#&#9;modified:   target/generated-sources/antlr4/latexLexer.tokens&#10;#&#9;modified:   target/generated-sources/antlr4/latexListener.java&#10;#&#9;modified:   target/generated-sources/antlr4/latexParser.java&#10;#&#10;# Untracked files:&#10;#   (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)&#10;#&#10;#&#9;bin/.gitignore&#10;#&#9;src/.gitignore&#10;&#10;&#10;">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/LaTEXBaseListener.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/LaTEXLexer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/LaTEXListener.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/LaTEXParser.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\LaTEX\LaTEX\LaTEXtoXML\backmatter.tex" afterPath="" />
+      <change type="DELETED" beforePath="D:\LaTEX\LaTEX\LaTEXtoXML\bibliography\1.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\LaTEX\LaTEX\LaTEXtoXML\bibliography\10.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\LaTEX\LaTEX\LaTEXtoXML\bibliography\11.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\LaTEX\LaTEX\LaTEXtoXML\bibliography\12.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\LaTEX\LaTEX\LaTEXtoXML\bibliography\13.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\LaTEX\LaTEX\LaTEXtoXML\bibliography\14.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\LaTEX\LaTEX\LaTEXtoXML\bibliography\15.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\LaTEX\LaTEX\LaTEXtoXML\bibliography\16.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\LaTEX\LaTEX\LaTEXtoXML\bibliography\17.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\LaTEX\LaTEX\LaTEXtoXML\bibliography\18.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\LaTEX\LaTEX\LaTEXtoXML\bibliography\2.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\LaTEX\LaTEX\LaTEXtoXML\bibliography\3.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\LaTEX\LaTEX\LaTEXtoXML\bibliography\4.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\LaTEX\LaTEX\LaTEXtoXML\bibliography\5.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\LaTEX\LaTEX\LaTEXtoXML\bibliography\6.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\LaTEX\LaTEX\LaTEXtoXML\bibliography\7.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\LaTEX\LaTEX\LaTEXtoXML\bibliography\8.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\LaTEX\LaTEX\LaTEXtoXML\bibliography\9.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\LaTEX\LaTEX\LaTEXtoXML\bodyAndBottom.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\LaTEX\LaTEX\LaTEXtoXML\buffer.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\LaTEX\LaTEX\LaTEXtoXML\figures\1.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\LaTEX\LaTEX\LaTEXtoXML\figures\2.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\LaTEX\LaTEX\LaTEXtoXML\figures\3.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\LaTEX\LaTEX\LaTEXtoXML\figures\4.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\LaTEX\LaTEX\LaTEXtoXML\figures\5.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\LaTEX\LaTEX\LaTEXtoXML\figures\6.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\LaTEX\LaTEX\LaTEXtoXML\front.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\LaTEX\LaTEX\LaTEXtoXML\mainFile.tex" afterPath="" />
+      <change type="DELETED" beforePath="D:\LaTEX\LaTEX\LaTEXtoXML\mainFileBad.tex" afterPath="" />
+      <change type="DELETED" beforePath="D:\LaTEX\LaTEX\LaTEXtoXML\newCommands.tex" afterPath="" />
+      <change type="DELETED" beforePath="D:\LaTEX\LaTEX\LaTEXtoXML\result.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\LaTEX\LaTEX\LaTEXtoXML\skipData.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\LaTEX\LaTEX\LaTEXtoXML\suppFigures\Text1.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\LaTEX\LaTEX\LaTEXtoXML\tables\1.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\LaTEX\LaTEX\LaTEXtoXML\tables\2.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\LaTEX\LaTEX\LaTEXtoXML\tables\3.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\LaTEX\LaTEX\LaTEXtoXML\tables\4.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\LaTEX\LaTEX\LaTEXtoXML\tables\5.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\LaTEX\LaTEX\LaTEXtoXML\tables\6.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\LaTEX\LaTEX\LaTEXtoXML\tables\7.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\LaTEX\LaTEX\LaTEXtoXML\tables\tables.xml" afterPath="" />
       <change type="DELETED" beforePath="D:\LaTEX\LaTEX\src\LaTEXtoXML.java" afterPath="" />
       <change type="DELETED" beforePath="D:\LaTEX\LaTEX\src\Test.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/generated-sources/antlr4/BibLexer.java" afterPath="$PROJECT_DIR$/target/generated-sources/antlr4/BibLexer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/generated-sources/antlr4/com/kutsyk/bibliography/BibLexer.java" afterPath="$PROJECT_DIR$/target/generated-sources/antlr4/com/kutsyk/bibliography/BibLexer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/generated-sources/antlr4/BibParser.java" afterPath="$PROJECT_DIR$/target/generated-sources/antlr4/BibParser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/generated-sources/antlr4/com/kutsyk/bibliography/BibParser.java" afterPath="$PROJECT_DIR$/target/generated-sources/antlr4/com/kutsyk/bibliography/BibParser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CustomOutputStream.java" afterPath="$PROJECT_DIR$/src/CustomOutputStream.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/generated-sources/antlr4/ExprLexer.java" afterPath="$PROJECT_DIR$/target/generated-sources/antlr4/ExprLexer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/generated-sources/antlr4/ExprParser.java" afterPath="$PROJECT_DIR$/target/generated-sources/antlr4/ExprParser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/FrontmatterCreator.java" afterPath="$PROJECT_DIR$/src/FrontmatterCreator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/generated-sources/antlr4/ISOENTLexer.java" afterPath="$PROJECT_DIR$/target/generated-sources/antlr4/ISOENTLexer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/generated-sources/antlr4/ISOENTParser.java" afterPath="$PROJECT_DIR$/target/generated-sources/antlr4/ISOENTParser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/kutsyk/TextEditor/JTextEditor.java" afterPath="$PROJECT_DIR$/src/com/kutsyk/TextEditor/JTextEditor.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/LaTEX.g4" afterPath="$PROJECT_DIR$/src/LaTEX.g4" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/LaTEX.tokens" afterPath="$PROJECT_DIR$/src/LaTEX.tokens" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/LaTEXLexer.java" afterPath="$PROJECT_DIR$/src/LaTEXLexer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/LaTEXLexer.tokens" afterPath="$PROJECT_DIR$/src/LaTEXLexer.tokens" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/LaTEXParser.java" afterPath="$PROJECT_DIR$/src/LaTEXParser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/kutsyk/TextEditor/LinePainter.java" afterPath="$PROJECT_DIR$/src/com/kutsyk/TextEditor/LinePainter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MainWindow.java" afterPath="$PROJECT_DIR$/src/MainWindow.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/kutsyk/TextEditor/TextLineNumber.java" afterPath="$PROJECT_DIR$/src/com/kutsyk/TextEditor/TextLineNumber.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TextToXML.java" afterPath="$PROJECT_DIR$/src/TextToXML.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LaTEX.iml" afterPath="$PROJECT_DIR$/LaTEX.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ToXML.java" afterPath="$PROJECT_DIR$/src/ToXML.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Translator.java" afterPath="$PROJECT_DIR$/src/Translator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/kutsyk/TextEditor/UnderlineHighlighter.java" afterPath="$PROJECT_DIR$/src/com/kutsyk/TextEditor/UnderlineHighlighter.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LaTEXbin/archivearticle3.dtd" afterPath="$PROJECT_DIR$/LaTEXbin/archivearticle3.dtd" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/errorLogLaTEX.txt" afterPath="$PROJECT_DIR$/errorLogLaTEX.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="LaTEX.iws" />
@@ -58,18 +79,71 @@
   <component name="DaemonCodeAnalyzer">
     <disable_hints />
   </component>
+  <component name="DebuggerManager">
+    <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
+      <breakpoint>
+        <option name="NOTIFY_CAUGHT" value="true" />
+        <option name="NOTIFY_UNCAUGHT" value="true" />
+        <option name="ENABLED" value="false" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint>
+        <option name="NOTIFY_CAUGHT" value="true" />
+        <option name="NOTIFY_UNCAUGHT" value="true" />
+        <option name="ENABLED" value="false" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </breakpoint_any>
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <breakpoint_rules />
+    <ui_properties />
+  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="LaTEX" />
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="LaTEX.g4" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="LaTEX.g4" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/LaTEX.g4">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.12739965" vertical-offset="3939" max-vertical-offset="32929">
-              <caret line="236" column="23" selection-start-line="236" selection-start-column="23" selection-end-line="236" selection-end-column="23" />
+            <state line="241" column="22" selection-start="2862" selection-end="2862" vertical-scroll-proportion="-6.423077" vertical-offset="3930" max-vertical-offset="32929">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ToXML.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/ToXML.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1397" column="9" selection-start="33900" selection-end="33900" vertical-scroll-proportion="0.2433155" vertical-offset="23658" max-vertical-offset="47804">
+              <folding>
+                <element signature="e#0#66594#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#16362#16371#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -82,15 +156,16 @@
     </FindUsagesManager>
   </component>
   <component name="Git.Settings">
+    <option name="SYNC_SETTING" value="DONT" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/src" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/LaTEX.g4" />
         <option value="$PROJECT_DIR$/src/com/kutsyk/LaTEX/LaTEXBaseListener.java" />
-        <option value="$PROJECT_DIR$/src/ToXML.java" />
         <option value="$PROJECT_DIR$/src/MainWindow.java" />
+        <option value="$PROJECT_DIR$/src/LaTEX.g4" />
+        <option value="$PROJECT_DIR$/src/ToXML.java" />
       </list>
     </option>
   </component>
@@ -100,6 +175,22 @@
     <option name="width" value="1382" />
     <option name="height" value="744" />
   </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>Abstraction issues</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
@@ -107,6 +198,8 @@
     <OptionsSetting value="true" id="Update" />
     <OptionsSetting value="true" id="Status" />
     <OptionsSetting value="true" id="Edit" />
+    <OptionsSetting value="true" id="Undo Check Out" />
+    <OptionsSetting value="true" id="Get Latest Version" />
     <ConfirmationsSetting value="0" id="Add" />
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
@@ -114,7 +207,7 @@
     <option name="STATE" value="0" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
+    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -126,7 +219,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -135,8 +227,33 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LaTEX" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LaTEX" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LaTEX" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LaTEX" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -147,15 +264,15 @@
     <property name="MemberChooser.sorted" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="MemberChooser.copyJavadoc" value="false" />
-    <property name="options.lastSelected" value="appearance" />
+    <property name="recentsLimit" value="5" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="options.lastSelected" value="org.antlr.works.plugin.intellij.PIApplicationComponent" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
-    <property name="recentsLimit" value="5" />
-    <property name="dynamic.classpath" value="false" />
     <property name="FullScreen" value="false" />
     <property name="LayoutCode.rearrangeEntries" value="false" />
-    <property name="LayoutCode.rearrangeEntriesJava" value="false" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -164,12 +281,59 @@
     </key>
   </component>
   <component name="RunManager" selected="Application.LaTEX">
+    <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails" singleton="true">
+      <module name="" />
+      <setting name="vmparams" value="" />
+      <setting name="cmdLine" value="run-app" />
+      <setting name="depsClasspath" value="false" />
+      <setting name="passParentEnv" value="true" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <setting name="launchBrowser" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
+      <module name="" />
+      <option name="TESTING_TYPE" value="0" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <method />
+    </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
       <option name="SERVER_MODE" value="false" />
       <option name="SHMEM_ADDRESS" value="javadebug" />
       <option name="HOST" value="localhost" />
       <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
+      <method />
+    </configuration>
+    <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" appDescriptorForEmulator="Android" class_name="" emulatorAdlOptions="" method_name="" output_log_level="null" package_name="" scope="Class">
+      <option name="BCName" value="" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browserFamily" value="FIREFOX" />
+          <option name="launcherType" value="OSDefault" />
+          <option name="newPlayerInstance" value="false" />
+          <option name="playerPath" value="FlashPlayerDebugger.exe" />
+        </LauncherParameters>
+      </option>
+      <option name="moduleName" value="" />
+      <option name="trusted" value="true" />
       <method />
     </configuration>
     <configuration default="true" type="Applet" factoryName="Applet">
@@ -185,7 +349,55 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="myFilePath" />
+      <option name="GLUE" />
+      <option name="myNameFilter" />
+      <option name="myGeneratedName" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
     <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
@@ -200,6 +412,7 @@
       <method />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
@@ -219,7 +432,62 @@
       <patterns />
       <method />
     </configuration>
+    <configuration default="true" type="FlashRunConfigurationType" factoryName="Flash App">
+      <option name="BCName" value="" />
+      <option name="IOSSimulatorSdkPath" value="" />
+      <option name="adlOptions" value="" />
+      <option name="airProgramParameters" value="" />
+      <option name="appDescriptorForEmulator" value="Android" />
+      <option name="debugTransport" value="USB" />
+      <option name="debuggerSdkRaw" value="BC SDK" />
+      <option name="emulator" value="NexusOne" />
+      <option name="emulatorAdlOptions" value="" />
+      <option name="fastPackaging" value="true" />
+      <option name="fullScreenHeight" value="0" />
+      <option name="fullScreenWidth" value="0" />
+      <option name="launchUrl" value="false" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browserFamily" value="FIREFOX" />
+          <option name="launcherType" value="OSDefault" />
+          <option name="newPlayerInstance" value="false" />
+          <option name="playerPath" value="FlashPlayerDebugger.exe" />
+        </LauncherParameters>
+      </option>
+      <option name="mobileRunTarget" value="Emulator" />
+      <option name="moduleName" value="" />
+      <option name="overriddenMainClass" value="" />
+      <option name="overriddenOutputFileName" value="" />
+      <option name="overrideMainClass" value="false" />
+      <option name="runTrusted" value="true" />
+      <option name="screenDpi" value="0" />
+      <option name="screenHeight" value="0" />
+      <option name="screenWidth" value="0" />
+      <option name="url" value="http://" />
+      <option name="usbDebugPort" value="7936" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
+      <module name="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="DEPLOY" value="true" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <method />
+    </configuration>
     <configuration default="false" name="LaTEX" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="MainWindow" />
       <option name="VM_PARAMETERS" value="" />
       <option name="PROGRAM_PARAMETERS" value="" />
@@ -249,16 +517,45 @@
       <AnalysisUIOptions />
     </option>
   </component>
-  <component name="SvnConfiguration">
-    <configuration>C:\Users\Vasyl\AppData\Roaming\Subversion</configuration>
+  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false" SSL_PROTOCOLS="all">
+    <option name="USER" value="" />
+    <option name="PASSWORD" value="" />
+    <option name="mySSHConnectionTimeout" value="30000" />
+    <option name="mySSHReadTimeout" value="30000" />
+    <option name="LAST_MERGED_REVISION" />
+    <option name="MERGE_DRY_RUN" value="false" />
+    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
+    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
+    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
+    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
+    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
+    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
+    <option name="FORCE_UPDATE" value="false" />
+    <option name="IGNORE_EXTERNALS" value="false" />
+    <configuration useDefault="false">C:\Users\Vasyl\AppData\Roaming\Subversion</configuration>
+    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="c30c4e4c-3762-4ba1-bc68-3ca05bb4a496" name="Default" comment="" />
       <created>1415137562388</created>
       <updated>1415137562388</updated>
+      <workItem from="1415802768605" duration="327000" />
+      <workItem from="1415803139839" duration="194000" />
+      <workItem from="1415803353101" duration="71000" />
+      <workItem from="1415803442135" duration="87000" />
+      <workItem from="1415803546409" duration="9000" />
+      <workItem from="1415805653433" duration="318000" />
+      <workItem from="1415808671857" duration="232000" />
+      <workItem from="1415809567106" duration="368000" />
+      <workItem from="1415809961180" duration="1009000" />
+      <workItem from="1415811139009" duration="621000" />
+      <workItem from="1415811836009" duration="2356000" />
     </task>
     <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="5592000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -281,37 +578,41 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="1" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32899022" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3273906" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.67589575" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32901135" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.44155845" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32626426" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32626426" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Tool Output" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32899022" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32626426" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25945538" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32899022" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Tool Output" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3273906" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32576984" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25906345" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3161876" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952693" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3255287" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3284553" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32899022" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
-    <option name="RECENTLY_FILTERED_USER_GROUPS">
-      <collection />
-    </option>
-    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+    <option name="RECENTLY_FILTERED_USERS">
       <collection />
     </option>
   </component>
@@ -326,186 +627,208 @@
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/LaTEX.g4">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="32929">
-          <caret line="239" column="0" selection-start-line="239" selection-start-column="0" selection-end-line="239" selection-end-column="0" />
+        <state line="7" column="19" selection-start="129" selection-end="129" vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="32929">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/LaTEX.g4">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="317" column="4" selection-start="3819" selection-end="3819" vertical-scroll-proportion="0.0" vertical-offset="5370" max-vertical-offset="32929">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/LaTEX.g4">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="239" column="0" selection-start="2819" selection-end="2819" vertical-scroll-proportion="0.0" vertical-offset="3983" max-vertical-offset="32929">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/LaTEX.g4">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="472" column="0" selection-start="5888" selection-end="5888" vertical-scroll-proportion="0.0" vertical-offset="7931" max-vertical-offset="32929">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/LaTEX.g4">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="472" column="0" selection-start="5888" selection-end="5888" vertical-scroll-proportion="0.0" vertical-offset="7931" max-vertical-offset="32929">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/LaTEX.g4">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="472" column="0" selection-start="5888" selection-end="5888" vertical-scroll-proportion="0.0" vertical-offset="7931" max-vertical-offset="32929">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/LaTEX.g4">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="472" column="0" selection-start="5888" selection-end="5888" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="32929">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/LaTEX.g4">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="19" selection-start="129" selection-end="129" vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="32929">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/LaTEX.g4">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="32929">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/LaTEX.g4">
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="32929">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/LaTEX.g4">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MainWindow.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="18037">
-          <caret line="79" column="27" selection-start-line="79" selection-start-column="27" selection-end-line="79" selection-end-column="27" />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ToXML.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="442" max-vertical-offset="45951">
-          <caret line="28" column="3" selection-start-line="28" selection-start-column="3" selection-end-line="28" selection-end-column="3" />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MainWindow.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="17357">
-          <caret line="39" column="27" selection-start-line="39" selection-start-column="27" selection-end-line="39" selection-end-column="27" />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ToXML.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="289" max-vertical-offset="45798">
-          <caret line="19" column="3" selection-start-line="19" selection-start-column="3" selection-end-line="19" selection-end-column="3" />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MainWindow.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="17357">
-          <caret line="39" column="27" selection-start-line="39" selection-start-column="27" selection-end-line="39" selection-end-column="27" />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ToXML.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="340" max-vertical-offset="45798">
-          <caret line="22" column="27" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="27" />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/LaTEX.g4">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="238" max-vertical-offset="32929">
-          <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/TextToXML.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="527">
-          <caret line="1" column="13" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ToXML.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="68" max-vertical-offset="47566">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MainWindow.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="16813">
-          <caret line="41" column="32" selection-start-line="41" selection-start-column="32" selection-end-line="41" selection-end-column="32" />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MainWindow.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="16813">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MainWindow.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="595" max-vertical-offset="16269">
-          <caret line="70" column="5" selection-start-line="70" selection-start-column="5" selection-end-line="70" selection-end-column="5" />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MainWindow.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="17595">
-          <caret line="63" column="25" selection-start-line="63" selection-start-column="25" selection-end-line="63" selection-end-column="25" />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MainWindow.jfd">
-      <provider selected="true" editor-type-id="JFormDesigner">
-        <state paletteWidth="0" propertiesWidth="0" />
+    <entry file="file://$PROJECT_DIR$/src/MainWindow.jfd" />
+    <entry file="file://$PROJECT_DIR$/src/MainWindow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MainWindow.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="540" max-vertical-offset="17119">
-          <caret line="63" column="25" selection-start-line="63" selection-start-column="25" selection-end-line="63" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MainWindow.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="16881">
-          <caret line="33" column="40" selection-start-line="33" selection-start-column="40" selection-end-line="33" selection-end-column="40" />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/LaTEX.g4">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="32929">
-          <caret line="747" column="0" selection-start-line="747" selection-start-column="0" selection-end-line="747" selection-end-column="0" />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/LaTEX.g4">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="32929">
-          <caret line="379" column="0" selection-start-line="379" selection-start-column="0" selection-end-line="379" selection-end-column="0" />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/LaTEX.g4">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="32929">
-          <caret line="470" column="11" selection-start-line="470" selection-start-column="11" selection-end-line="470" selection-end-column="11" />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/LaTEX.g4">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="32929">
-          <caret line="472" column="0" selection-start-line="472" selection-start-column="0" selection-end-line="472" selection-end-column="0" />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/LaTEX.g4">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="32929">
-          <caret line="204" column="1" selection-start-line="204" selection-start-column="1" selection-end-line="204" selection-end-column="1" />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/LaTEX.g4">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="32929">
-          <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/LaTEX.g4">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="32929">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AlphanumComparator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.18941504" vertical-offset="0" max-vertical-offset="3961">
-          <caret line="31" column="3" selection-start-line="31" selection-start-column="3" selection-end-line="31" selection-end-column="3" />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MainWindow.jfd">
-      <provider selected="true" editor-type-id="JFormDesigner">
-        <state paletteWidth="0" propertiesWidth="0" />
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MainWindow.jfd" />
     <entry file="file://$PROJECT_DIR$/images/green-address-book-icon.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -513,30 +836,48 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/TextToXML.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="493">
-          <caret line="1" column="13" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/LaTEX.g4">
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="241" column="22" selection-start="2862" selection-end="2862" vertical-scroll-proportion="-6.423077" vertical-offset="3930" max-vertical-offset="32929">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ToXML.java">
+    <entry file="file://$PROJECT_DIR$/src/Translator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="34.589878" vertical-offset="5765" max-vertical-offset="45730">
-          <caret line="1540" column="42" selection-start-line="1540" selection-start-column="42" selection-end-line="1540" selection-end-column="42" />
+        <state line="360" column="24" selection-start="9704" selection-end="9704" vertical-scroll-proportion="0.19113573" vertical-offset="5898" max-vertical-offset="10727">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FrontmatterCreator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="174" column="76" selection-start="4621" selection-end="4621" vertical-scroll-proportion="0.33333334" vertical-offset="2621" max-vertical-offset="18564">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MainWindow.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1568" max-vertical-offset="16286">
-          <caret line="129" column="24" selection-start-line="129" selection-start-column="24" selection-end-line="129" selection-end-column="24" />
+        <state line="19" column="13" selection-start="368" selection-end="368" vertical-scroll-proportion="0.31609195" vertical-offset="26" max-vertical-offset="16354">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/LaTEX.g4">
+    <entry file="file://$PROJECT_DIR$/src/ToXML.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.12739965" vertical-offset="3939" max-vertical-offset="32929">
-          <caret line="236" column="23" selection-start-line="236" selection-start-column="23" selection-end-line="236" selection-end-column="23" />
-          <folding />
+        <state line="1397" column="9" selection-start="33900" selection-end="33900" vertical-scroll-proportion="0.2433155" vertical-offset="23658" max-vertical-offset="47804">
+          <folding>
+            <element signature="e#0#66594#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#16362#16371#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
