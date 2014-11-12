@@ -8,12 +8,7 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/src/LaTEXParser.java" afterPath="" />
       <change type="DELETED" beforePath="D:\LaTEX\LaTEX\src\LaTEXtoXML.java" afterPath="" />
       <change type="DELETED" beforePath="D:\LaTEX\LaTEX\src\Test.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/FrontmatterCreator.java" afterPath="$PROJECT_DIR$/src/FrontmatterCreator.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/LaTEX.g4" afterPath="$PROJECT_DIR$/src/LaTEX.g4" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ToXML.java" afterPath="$PROJECT_DIR$/src/ToXML.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Translator.java" afterPath="$PROJECT_DIR$/src/Translator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/errorLogLaTEX.txt" afterPath="$PROJECT_DIR$/errorLogLaTEX.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="LaTEX.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -82,39 +77,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="LaTEX.g4" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="LaTEX.g4" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/LaTEX.g4">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="241" column="22" selection-start="2862" selection-end="2862" vertical-scroll-proportion="-6.423077" vertical-offset="3930" max-vertical-offset="32929">
+            <state line="241" column="22" selection-start="2862" selection-end="2862" vertical-scroll-proportion="0.47988507" vertical-offset="3930" max-vertical-offset="32929">
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ToXML.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ToXML.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1805" column="30" selection-start="44175" selection-end="44175" vertical-scroll-proportion="-6.423077" vertical-offset="30518" max-vertical-offset="47787">
-              <folding>
-                <element signature="e#0#66574#0" expanded="true" />
-                <element signature="imports" expanded="true" />
-                <element signature="e#16362#16371#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MainWindow.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/MainWindow.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="129" column="21" selection-start="3078" selection-end="3078" vertical-scroll-proportion="0.69518715" vertical-offset="1746" max-vertical-offset="16422">
-              <folding>
-                <element signature="e#1065#1317#0" expanded="true" />
-                <element signature="e#1312#1313#0" expanded="true" />
-                <element signature="e#4923#4950#1" expanded="true" />
-                <element signature="e#7316#7343#1" expanded="true" />
-                <element signature="e#18048#18080#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -523,12 +490,12 @@
       <workItem from="1415809567106" duration="368000" />
       <workItem from="1415809961180" duration="1009000" />
       <workItem from="1415811139009" duration="621000" />
-      <workItem from="1415811836009" duration="3358000" />
+      <workItem from="1415811836009" duration="3396000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6594000" />
+    <option name="totallyTimeSpent" value="6632000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -551,7 +518,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -807,16 +774,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/LaTEX.g4">
-      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="241" column="22" selection-start="2862" selection-end="2862" vertical-scroll-proportion="-6.423077" vertical-offset="3930" max-vertical-offset="32929">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/FrontmatterCreator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="299" column="35" selection-start="8029" selection-end="8029" vertical-scroll-proportion="0.2293578" vertical-offset="4787" max-vertical-offset="18547">
@@ -845,9 +802,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/MainWindow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="129" column="21" selection-start="3078" selection-end="3078" vertical-scroll-proportion="0.0" vertical-offset="1746" max-vertical-offset="16422">
+          <folding>
+            <element signature="e#1065#1317#0" expanded="true" />
+            <element signature="e#1312#1313#0" expanded="true" />
+            <element signature="e#4923#4950#1" expanded="true" />
+            <element signature="e#7316#7343#1" expanded="true" />
+            <element signature="e#18048#18080#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/ToXML.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1805" column="30" selection-start="44175" selection-end="44175" vertical-scroll-proportion="-6.423077" vertical-offset="30518" max-vertical-offset="47787">
+        <state line="1847" column="16" selection-start="45165" selection-end="45168" vertical-scroll-proportion="0.33333334" vertical-offset="31283" max-vertical-offset="47787">
           <folding>
             <element signature="e#0#66574#0" expanded="true" />
             <element signature="imports" expanded="true" />
@@ -856,16 +826,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MainWindow.java">
+    <entry file="file://$PROJECT_DIR$/src/LaTEX.g4">
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="129" column="21" selection-start="3078" selection-end="3078" vertical-scroll-proportion="0.69518715" vertical-offset="1746" max-vertical-offset="16422">
-          <folding>
-            <element signature="e#1065#1317#0" expanded="true" />
-            <element signature="e#1312#1313#0" expanded="true" />
-            <element signature="e#4923#4950#1" expanded="true" />
-            <element signature="e#7316#7343#1" expanded="true" />
-            <element signature="e#18048#18080#0" expanded="true" />
-          </folding>
+        <state line="241" column="22" selection-start="2862" selection-end="2862" vertical-scroll-proportion="0.47988507" vertical-offset="3930" max-vertical-offset="32929">
+          <folding />
         </state>
       </provider>
     </entry>
