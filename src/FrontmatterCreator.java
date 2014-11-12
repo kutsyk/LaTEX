@@ -299,7 +299,6 @@ public class FrontmatterCreator {
 					writer.print("&lt;subj&hyphen;groupsubj&hyphen;group&hyphen;type&equals;&quot;Discipline&hyphen;v2&quot;&gt;");
 					getTopicInformation(eElement.getChildNodes());
 					writer.print("&lt;&sol;subj&hyphen;group&gt;");
-					System.out.println(content);
 					writer.print(content);
 				}
 			}

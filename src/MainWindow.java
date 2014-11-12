@@ -126,7 +126,7 @@ public class MainWindow extends JFrame {
 		clearDirectory("bibliography");
 		clearDirectory("figures");
 		clearDirectory("suppFigures");
-//		clearDirectory("tables");
+		clearDirectory("tables");
 		clearDirectory("");
 	}
 
@@ -680,7 +680,8 @@ public class MainWindow extends JFrame {
 	@SuppressWarnings("deprecation")
 	private void closeLogFile()
 	{
-		translationThread.stop();
+        if(translationThread != null)
+            translationThread.stop();
 		if(errorLogFile!=null)
 			errorLogFile.close();
 	}

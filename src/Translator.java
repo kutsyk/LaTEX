@@ -58,9 +58,8 @@ public class Translator {
 			ToXML.writer.close();
 			FrontmatterCreator front = new FrontmatterCreator(metaDataFile);
 			front.run();
-			System.out.println("--- Done");
 		} else {
-			System.out.println("--- Eror see log file");
+			System.out.println("Eror see log file");
 		}
 	}
 
@@ -72,7 +71,6 @@ public class Translator {
 	 * @return the files names
 	 */
 	private void getFilesNames(String dirPath) {
-		System.out.println(dirPath);
 		File directory = new File(dirPath);
 		File[] files = directory.listFiles();
 		String tex = "";
@@ -106,7 +104,6 @@ public class Translator {
 			String[] entity = line.split(",");
 			isoTrie.put(entity[0], entity[1]);
 		}
-		// System.out.println(isoTrie.get("\\'o"));
 		reader.close();
 	}
 
@@ -246,8 +243,7 @@ public class Translator {
 		InputStream is = new FileInputStream(inputFile);
 		File osFile = new File(MainWindow.mainPath
 				+ "/LaTEXtoXML/newCommands.tex");
-		if (osFile.createNewFile())
-			System.out.println("New commands file created");
+		if (osFile.createNewFile());
 
 		PrintWriter os = new PrintWriter(osFile);
 		BufferedReader reader = new BufferedReader(new InputStreamReader(is));

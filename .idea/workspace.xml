@@ -6,57 +6,13 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/src/LaTEXLexer.java" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/src/LaTEXListener.java" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/src/LaTEXParser.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\LaTEX\LaTEX\LaTEXtoXML\backmatter.tex" afterPath="" />
-      <change type="DELETED" beforePath="D:\LaTEX\LaTEX\LaTEXtoXML\bibliography\1.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\LaTEX\LaTEX\LaTEXtoXML\bibliography\10.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\LaTEX\LaTEX\LaTEXtoXML\bibliography\11.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\LaTEX\LaTEX\LaTEXtoXML\bibliography\12.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\LaTEX\LaTEX\LaTEXtoXML\bibliography\13.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\LaTEX\LaTEX\LaTEXtoXML\bibliography\14.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\LaTEX\LaTEX\LaTEXtoXML\bibliography\15.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\LaTEX\LaTEX\LaTEXtoXML\bibliography\16.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\LaTEX\LaTEX\LaTEXtoXML\bibliography\17.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\LaTEX\LaTEX\LaTEXtoXML\bibliography\18.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\LaTEX\LaTEX\LaTEXtoXML\bibliography\2.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\LaTEX\LaTEX\LaTEXtoXML\bibliography\3.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\LaTEX\LaTEX\LaTEXtoXML\bibliography\4.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\LaTEX\LaTEX\LaTEXtoXML\bibliography\5.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\LaTEX\LaTEX\LaTEXtoXML\bibliography\6.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\LaTEX\LaTEX\LaTEXtoXML\bibliography\7.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\LaTEX\LaTEX\LaTEXtoXML\bibliography\8.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\LaTEX\LaTEX\LaTEXtoXML\bibliography\9.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\LaTEX\LaTEX\LaTEXtoXML\bodyAndBottom.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\LaTEX\LaTEX\LaTEXtoXML\buffer.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\LaTEX\LaTEX\LaTEXtoXML\figures\1.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\LaTEX\LaTEX\LaTEXtoXML\figures\2.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\LaTEX\LaTEX\LaTEXtoXML\figures\3.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\LaTEX\LaTEX\LaTEXtoXML\figures\4.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\LaTEX\LaTEX\LaTEXtoXML\figures\5.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\LaTEX\LaTEX\LaTEXtoXML\figures\6.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\LaTEX\LaTEX\LaTEXtoXML\front.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\LaTEX\LaTEX\LaTEXtoXML\mainFile.tex" afterPath="" />
-      <change type="DELETED" beforePath="D:\LaTEX\LaTEX\LaTEXtoXML\mainFileBad.tex" afterPath="" />
-      <change type="DELETED" beforePath="D:\LaTEX\LaTEX\LaTEXtoXML\newCommands.tex" afterPath="" />
-      <change type="DELETED" beforePath="D:\LaTEX\LaTEX\LaTEXtoXML\result.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\LaTEX\LaTEX\LaTEXtoXML\skipData.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\LaTEX\LaTEX\LaTEXtoXML\suppFigures\Text1.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\LaTEX\LaTEX\LaTEXtoXML\tables\1.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\LaTEX\LaTEX\LaTEXtoXML\tables\2.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\LaTEX\LaTEX\LaTEXtoXML\tables\3.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\LaTEX\LaTEX\LaTEXtoXML\tables\4.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\LaTEX\LaTEX\LaTEXtoXML\tables\5.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\LaTEX\LaTEX\LaTEXtoXML\tables\6.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\LaTEX\LaTEX\LaTEXtoXML\tables\7.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\LaTEX\LaTEX\LaTEXtoXML\tables\tables.xml" afterPath="" />
       <change type="DELETED" beforePath="D:\LaTEX\LaTEX\src\LaTEXtoXML.java" afterPath="" />
       <change type="DELETED" beforePath="D:\LaTEX\LaTEX\src\Test.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/FrontmatterCreator.java" afterPath="$PROJECT_DIR$/src/FrontmatterCreator.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/LaTEX.g4" afterPath="$PROJECT_DIR$/src/LaTEX.g4" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LaTEX.iml" afterPath="$PROJECT_DIR$/LaTEX.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ToXML.java" afterPath="$PROJECT_DIR$/src/ToXML.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LaTEXbin/archivearticle3.dtd" afterPath="$PROJECT_DIR$/LaTEXbin/archivearticle3.dtd" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Translator.java" afterPath="$PROJECT_DIR$/src/Translator.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/errorLogLaTEX.txt" afterPath="$PROJECT_DIR$/errorLogLaTEX.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="LaTEX.iws" />
@@ -135,14 +91,29 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ToXML.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="ToXML.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ToXML.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1397" column="9" selection-start="33900" selection-end="33900" vertical-scroll-proportion="0.2433155" vertical-offset="23658" max-vertical-offset="47804">
+            <state line="1805" column="30" selection-start="44175" selection-end="44175" vertical-scroll-proportion="-6.423077" vertical-offset="30518" max-vertical-offset="47787">
               <folding>
-                <element signature="e#0#66594#0" expanded="true" />
+                <element signature="e#0#66574#0" expanded="true" />
                 <element signature="imports" expanded="true" />
                 <element signature="e#16362#16371#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainWindow.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/MainWindow.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="129" column="21" selection-start="3078" selection-end="3078" vertical-scroll-proportion="0.69518715" vertical-offset="1746" max-vertical-offset="16422">
+              <folding>
+                <element signature="e#1065#1317#0" expanded="true" />
+                <element signature="e#1312#1313#0" expanded="true" />
+                <element signature="e#4923#4950#1" expanded="true" />
+                <element signature="e#7316#7343#1" expanded="true" />
+                <element signature="e#18048#18080#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -163,9 +134,11 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/src/com/kutsyk/LaTEX/LaTEXBaseListener.java" />
-        <option value="$PROJECT_DIR$/src/MainWindow.java" />
         <option value="$PROJECT_DIR$/src/LaTEX.g4" />
+        <option value="$PROJECT_DIR$/src/Translator.java" />
+        <option value="$PROJECT_DIR$/src/FrontmatterCreator.java" />
         <option value="$PROJECT_DIR$/src/ToXML.java" />
+        <option value="$PROJECT_DIR$/src/MainWindow.java" />
       </list>
     </option>
   </component>
@@ -550,12 +523,12 @@
       <workItem from="1415809567106" duration="368000" />
       <workItem from="1415809961180" duration="1009000" />
       <workItem from="1415811139009" duration="621000" />
-      <workItem from="1415811836009" duration="2356000" />
+      <workItem from="1415811836009" duration="3358000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5592000" />
+    <option name="totallyTimeSpent" value="6594000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -578,7 +551,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -834,11 +807,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/TextToXML.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/LaTEX.g4">
       <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
         <state />
@@ -849,34 +817,54 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Translator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="360" column="24" selection-start="9704" selection-end="9704" vertical-scroll-proportion="0.19113573" vertical-offset="5898" max-vertical-offset="10727">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/FrontmatterCreator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="174" column="76" selection-start="4621" selection-end="4621" vertical-scroll-proportion="0.33333334" vertical-offset="2621" max-vertical-offset="18564">
+        <state line="299" column="35" selection-start="8029" selection-end="8029" vertical-scroll-proportion="0.2293578" vertical-offset="4787" max-vertical-offset="18547">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MainWindow.java">
+    <entry file="file://$PROJECT_DIR$/src/CustomOutputStream.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="13" selection-start="368" selection-end="368" vertical-scroll-proportion="0.31609195" vertical-offset="26" max-vertical-offset="16354">
+        <state line="10" column="13" selection-start="236" selection-end="236" vertical-scroll-proportion="0.30749354" vertical-offset="0" max-vertical-offset="629">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TextToXML.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.07202216" vertical-offset="26" max-vertical-offset="510">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Translator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="61" column="28" selection-start="1400" selection-end="1416" vertical-scroll-proportion="0.33240998" vertical-offset="764" max-vertical-offset="10659">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ToXML.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1397" column="9" selection-start="33900" selection-end="33900" vertical-scroll-proportion="0.2433155" vertical-offset="23658" max-vertical-offset="47804">
+        <state line="1805" column="30" selection-start="44175" selection-end="44175" vertical-scroll-proportion="-6.423077" vertical-offset="30518" max-vertical-offset="47787">
           <folding>
-            <element signature="e#0#66594#0" expanded="true" />
+            <element signature="e#0#66574#0" expanded="true" />
             <element signature="imports" expanded="true" />
             <element signature="e#16362#16371#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MainWindow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="129" column="21" selection-start="3078" selection-end="3078" vertical-scroll-proportion="0.69518715" vertical-offset="1746" max-vertical-offset="16422">
+          <folding>
+            <element signature="e#1065#1317#0" expanded="true" />
+            <element signature="e#1312#1313#0" expanded="true" />
+            <element signature="e#4923#4950#1" expanded="true" />
+            <element signature="e#7316#7343#1" expanded="true" />
+            <element signature="e#18048#18080#0" expanded="true" />
           </folding>
         </state>
       </provider>

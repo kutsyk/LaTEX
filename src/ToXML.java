@@ -1110,10 +1110,9 @@ public class ToXML extends LaTEXBaseListener {
 		} catch (Exception e) {
 			System.out.println("[ERROR]: Journal reference missing;");
 		}
-		System.out.println(id);
-		writer.println("<caption type=\"doi\">"+FrontmatterCreator.workoutString(id)+".g00"+figureCounter);
-		writer.println("</caption>");
-		writer.print("</caption></fig>");
+        writer.println("</caption>");
+		writer.println("<caption type=\"doi\">"+FrontmatterCreator.workoutString(id)+".g00"+figureCounter+"</caption>");
+		writer.println("</fig>");
 		figureDeclared = false;
 		wasFigureFirstDot = false;
 		shouldTextBeMissed = false;
@@ -1801,6 +1800,7 @@ public class ToXML extends LaTEXBaseListener {
 	
 	public void enterUrlText(LaTEXParser.UrlTextContext ctx) {
 		String url = ctx.getText();
+        url = url.substring(1,url.length()-1);
 		writer.print("<?up?><?show +\"linkList\"tpmkset \"web2\",\"description\",\"\",\"*"
 				+ url
 				+ "\",0,0,2$10#?><?show $60#?tbklnk==\"web2\"$62#?>"
@@ -2534,7 +2534,6 @@ public class ToXML extends LaTEXBaseListener {
 		{
 			result = "<author><surname>" + ctx.authorText(j).getText();
 			result += "</surname>";
-			System.out.println(ctx.authorText(j).getText());
 			result += "<initial>";
 			result += ctx.authorText(j + 1).getText();
 			result += "</initial>";
