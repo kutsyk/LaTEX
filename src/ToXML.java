@@ -2,6 +2,7 @@
  * 
  */
 
+import org.antlr.v4.runtime.misc.NotNull;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
@@ -2534,9 +2535,12 @@ public class ToXML extends LaTEXBaseListener {
 		{
 			result = "<author><surname>" + ctx.authorText(j).getText();
 			result += "</surname>";
-			result += "<initial>";
-			result += ctx.authorText(j + 1).getText();
-			result += "</initial>";
+            if(ctx.authorText(j + 1) != null)
+            {
+			    result += "<initial>";
+			    result += ctx.authorText(j + 1).getText();
+			    result += "</initial>";
+            }
 			result += "</author>";
 		} else
 			result += "<etal/>";
@@ -2665,7 +2669,12 @@ public class ToXML extends LaTEXBaseListener {
 		++algorithmCounter;
 	}
 
-	/* (non-Javadoc)
+    @Override
+    public void enterAmp(@NotNull LaTEXParser.AmpContext ctx) {
+        writer.print("&amp;");
+    }
+
+    /* (non-Javadoc)
 	 * @see LaTEXBaseListener#exitAlgorithmBlock(LaTEXParser.AlgorithmBlockContext)
 	 */
 	

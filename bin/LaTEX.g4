@@ -137,11 +137,11 @@ paragraph:
 ;
 
 text:
-	 textBody textBody*	
+	 textBody textBody*
 ;
 
 textBody:
-	boxBlock | texttypeDeclarator | simpleText | textSymbols | dollarBlock | block | colon | comma | '\n' 
+	boxBlock | texttypeDeclarator | simpleText | textSymbols | dollarBlock | block | colon | comma | amp | '\n'
 ;
 
 textSC:
@@ -618,7 +618,9 @@ arabic:
 ;
 
 bibliographyBlock:
-	'\\begin{thebibliography' thebibmissinfo* bibItemList '\\end{thebibliography}'
+	'\\begin{thebibliography}'
+	thebibmissinfo?
+	bibItemList '\\end{thebibliography}'
 ;
 
 bibItemList :
@@ -626,19 +628,23 @@ bibItemList :
 ;
 
 bibItem:
-	'\\bibitem' curveOptionBlock bibItemBody '\\bibAnnoteFile' newLine* curveOptionBlock*
+	'\\bibitem' curveOptionBlock bibItemBody '\\bibAnnoteFile'? newLine* curveOptionBlock?
 ;
 
 bibItemBody:
-	bibItemAuthorList newLine* '(' bibItemYear ')' newLine* bibItemCittl newLine* bibItemPubTtl newLine* bibItemVol* newLine* bibItemPages newLine* '.'* newLine*
+	'{'? bibItemAuthorList newLine* '(' bibItemYear ')' '}'? newLine* bibItemCittl newLine* '\\newblock'? newLine* bibItemPubTtl colon? newLine* bibItemVol* newLine* bibItemPages* newLine* '.'* newLine*
 ;
 
 bibItemAuthorList:
-	bibItemAuthor (',' bibItemAuthor)*
+	bibItemAuthor (',' (bibItemAuthor | etAlAuthors))*
 ;
 
 bibItemAuthor:
 	authorText authorText*
+;
+
+etAlAuthors:
+	'et' 'al' '.'?
 ;
 
 authorText:
@@ -653,20 +659,25 @@ bibItemYear:
 ;
 
 bibItemCittl:
-	(textRules | newLine)* '\\newblock'
+	(texttypeDeclarator
+	| hat
+	| appos
+	| isoEnt
+	| simpleText
+	| dollarBlock
+	| block
+	| colon
+	| comma
+	| amp
+	| newLine  )* '.'
 ;
 
 bibItemPubTtl:
-	(
-	(pubTitleText colon)
-	|
 	(pubTitleText
 	| pubNumbers
 	| newLine
 	| isoEnt
-	| comma
-	)
-	)*
+	| comma)*
 ;
 
 pubNumbers:
@@ -680,6 +691,7 @@ bibItemVol:
 
 pubTitleText:
 	Text
+	| texttypeDeclarator
 	| Supplementary
 	| 'and'
 	| 'journal'
@@ -696,7 +708,7 @@ bibItemPages:
 ;
 
 thebibmissinfo:
-	'}' '{' (~('\\bibitemmiss'))+ '\\bibitemmiss'
+	'{' (~('}'))+ '}'
 ;
 
 curveOptionBlock:
@@ -1095,7 +1107,7 @@ isoEnt
 	| '\''
 	| '\\lowbar'
 	| '-'
-	| '.'
+	| '/'
 	| '/'
 	| ';'
 	| '?'

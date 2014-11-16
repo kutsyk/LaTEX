@@ -268,6 +268,7 @@ public class Translator {
 	 * @param inputFile
 	 * @throws IOException
 	 */
+    private boolean wasBibItemDeclared = false;
 	private void createMainFile(String inputFile) throws IOException {
 		InputStream is = new FileInputStream(inputFile);
 		String dataFile = MainWindow.mainPath + "/LaTEXtoXML/mainFileBad.tex";
