@@ -302,6 +302,7 @@ public class Translator {
 						|| line.contains("Figures") || line.contains("Tables"))) {
 					skip = true;
 					skipSection = true;
+                    continue;
 				}
 				skip = false;
 				skipSection = false;
@@ -361,6 +362,7 @@ public class Translator {
 			JOptionPane.showMessageDialog(null,
 					"[ERROR]: Bibliography declaration missing");
 
+        os.println("\\end{document}");
 		os.close();
 		is.close();
 		clearMainFile();
@@ -418,7 +420,8 @@ public class Translator {
 				|| line.contains("\\begin{figure}")
 				|| line.contains("\\begin{suppfigure}")
 				|| line.contains("\\begin{suppfigure*}")
-				|| line.contains("\\begin{table}"))
+				|| line.contains("\\begin{table}")
+                || line.contains("\\begin{table*}"))
 			return true;
 		return false;
 	}
@@ -434,7 +437,8 @@ public class Translator {
 		if (line.contains("\\end{figure*}") || line.contains("\\end{figure}")
 				|| line.contains("\\end{suppfigure}")
 				|| line.contains("\\end{suppfigure*}")
-				|| line.contains("\\end{table}"))
+				|| line.contains("\\end{table}")
+                || line.contains("\\end{table*}"))
 			return true;
 		return false;
 	}

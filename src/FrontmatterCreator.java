@@ -172,9 +172,9 @@ public class FrontmatterCreator {
 	private void writeMedlineJnTl() {
 		if (journalTitle.contains("PLoS Computational Biology")
 				|| journalTitle.contains("PLOS Computational Biology"))
-			writer.println("<medline-jnl-tl>PLoS Comput Biol</medline-jnl-tl></jnl-info>");
+			writer.println("<medline-jnl-tl>PLoS Comput Biol</medline-jnl-tl>");
 
-		writer.println("<article>");
+		writer.println("</jnl-info><article>");
 	}
 
 	/**
@@ -626,8 +626,9 @@ public class FrontmatterCreator {
 	 * @param doc the doc
 	 */
 	private void writeAuthors(Document doc) {
-		String authDataList = getAuthordataList();
-		String[] dataList = authDataList.split("@");
+		String authDataList = getAuthordata();
+		String[] dataList = authDataList.split(",\n");
+
 		NodeList nList = doc.getElementsByTagName("contrib");
 		for (int i = 0; i < nList.getLength(); ++i) {
 			Node node = nList.item(i);
@@ -638,6 +639,11 @@ public class FrontmatterCreator {
 								"author"))
 					continue;
 			}
+            if(i>=dataList.length)
+                return;
+            if(dataList[i].indexOf("{")<dataList[i].indexOf("$^{"))
+                dataList[i] = dataList[i].substring(dataList[i].indexOf("{") + 1,
+                        dataList[i].lastIndexOf("}"));
 			dataList[i] = dataList[i].substring(dataList[i].indexOf("$^{") + 3,
 					dataList[i].indexOf("}$"));
 			String[] values = dataList[i].split(",");
@@ -1025,7 +1031,7 @@ public class FrontmatterCreator {
 	 *
 	 * @return the authordata list
 	 */
-	private String getAuthordataList() {
+	private String getAuthordata() {
 		InputStream in;
 		String authors = "";
 		try {
@@ -1035,15 +1041,8 @@ public class FrontmatterCreator {
 			String line = "";
 			boolean beginOfDoc = false;
 			while ((line = reader.readLine()) != null) {
-				if (line.contains("\\begin{document}"))
-					beginOfDoc = true;
-				if (beginOfDoc && line.contains("$^{"))
-					while (line.contains("$^{")) {
-						authors += line.substring(line.indexOf("$^{"),
-								line.indexOf("}$") + 2)
-								+ "@";
-						line = line.substring(line.indexOf("}$") + 2);
-					}
+				if (line.contains("$^{"))
+						authors += line + "\n";
 				if (line.contains("\\begin{abstract}")
 						|| line.contains("\\section{Abstract}")
 						|| line.contains("\\section*{Abstract}"))

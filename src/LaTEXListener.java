@@ -371,6 +371,17 @@ public interface LaTEXListener extends ParseTreeListener {
 	void exitBibVolume(@NotNull LaTEXParser.BibVolumeContext ctx);
 
 	/**
+	 * Enter a parse tree produced by {@link LaTEXParser#rparen}.
+	 * @param ctx the parse tree
+	 */
+	void enterRparen(@NotNull LaTEXParser.RparenContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link LaTEXParser#rparen}.
+	 * @param ctx the parse tree
+	 */
+	void exitRparen(@NotNull LaTEXParser.RparenContext ctx);
+
+	/**
 	 * Enter a parse tree produced by {@link LaTEXParser#textformatingBlockCenter}.
 	 * @param ctx the parse tree
 	 */
@@ -424,6 +435,17 @@ public interface LaTEXListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitItems(@NotNull LaTEXParser.ItemsContext ctx);
+
+	/**
+	 * Enter a parse tree produced by {@link LaTEXParser#etAlAuthors}.
+	 * @param ctx the parse tree
+	 */
+	void enterEtAlAuthors(@NotNull LaTEXParser.EtAlAuthorsContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link LaTEXParser#etAlAuthors}.
+	 * @param ctx the parse tree
+	 */
+	void exitEtAlAuthors(@NotNull LaTEXParser.EtAlAuthorsContext ctx);
 
 	/**
 	 * Enter a parse tree produced by {@link LaTEXParser#algorithmBlock}.
@@ -1249,6 +1271,17 @@ public interface LaTEXListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitTextRules(@NotNull LaTEXParser.TextRulesContext ctx);
+
+	/**
+	 * Enter a parse tree produced by {@link LaTEXParser#lparen}.
+	 * @param ctx the parse tree
+	 */
+	void enterLparen(@NotNull LaTEXParser.LparenContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link LaTEXParser#lparen}.
+	 * @param ctx the parse tree
+	 */
+	void exitLparen(@NotNull LaTEXParser.LparenContext ctx);
 
 	/**
 	 * Enter a parse tree produced by {@link LaTEXParser#bibOther}.

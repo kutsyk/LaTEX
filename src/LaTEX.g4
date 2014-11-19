@@ -22,7 +22,7 @@ newCommandList:
 
 documentBody
 :
-	memberList*
+    memberList*
 ;
 
 memberList
@@ -128,6 +128,8 @@ textSymbols:
 	| hat
 	| appos
 	| isoEnt
+	| lparen
+	| rparen
 ;
 
 paragraph:
@@ -141,7 +143,7 @@ text:
 ;
 
 textBody:
-	boxBlock | texttypeDeclarator | simpleText | textSymbols | dollarBlock | block | colon | comma | amp | '\n'
+	boxBlock | texttypeDeclarator | simpleText | textSymbols | dollarBlock | block | colon | comma | amp | url | '\n'
 ;
 
 textSC:
@@ -391,7 +393,7 @@ citeReferencesList
 ;
 
 citeReference:
-	(simpleText | isoEnt | colon)*
+	(simpleText | isoEnt | lparen | rparen | colon)*
 ;
 
 measures: 
@@ -469,6 +471,8 @@ dot:'.';
 dots:'\\dots';
 appos:'\\\'';
 colon: ':';
+lparen: '(' ;
+rparen: ')' ;
 
 dollarBlock:
 	Dollar (~(Dollar))+ Dollar
@@ -583,6 +587,7 @@ simpleText:
 	| doubleNumbers
 	| numbers
 	| texttypeDeclarator
+	| url
 	| 'and'
 	
 	| 'year'
@@ -598,6 +603,8 @@ simpleText:
 	| 'Table'
 	| 'begin'
 	| 'multicols'
+	| 'et'
+	| 'al'
 ;
 
 interval:
@@ -632,7 +639,7 @@ bibItem:
 ;
 
 bibItemBody:
-	'{'? bibItemAuthorList newLine* '(' bibItemYear ')' '}'? newLine* bibItemCittl newLine* '\\newblock'? newLine* bibItemPubTtl colon? newLine* bibItemVol* newLine* bibItemPages* newLine* '.'* newLine*
+	'{'? bibItemAuthorList newLine* '(' bibItemYear ')' '}'? newLine* '{'? bibItemCittl '}'? newLine* '\\newblock'? newLine* bibItemPubTtl colon? newLine* bibItemVol* newLine* bibItemPages* newLine* '.'* newLine*
 ;
 
 bibItemAuthorList:
@@ -644,7 +651,7 @@ bibItemAuthor:
 ;
 
 etAlAuthors:
-	'et' 'al' '.'?
+	'et' '~'? 'al' '.'?
 ;
 
 authorText:
@@ -663,6 +670,8 @@ bibItemCittl:
 	| hat
 	| appos
 	| isoEnt
+	| lparen
+	| rparen
 	| simpleText
 	| dollarBlock
 	| block
@@ -677,6 +686,9 @@ bibItemPubTtl:
 	| pubNumbers
 	| newLine
 	| isoEnt
+	| lparen
+    | rparen
+	| dot
 	| comma)*
 ;
 
@@ -758,7 +770,7 @@ bibMember:
 ;
 
 bibOther:
-	simpleText (isoEnt simpleText)* '=' block ','?
+	simpleText (isoEnt | lparen | rparen | simpleText)* '=' block ','?
 ;
 
 bibTitle:
@@ -1062,7 +1074,6 @@ isoEnt
 	| '\\pm'
 	| '<�'
 	| '='
-	| '('
 	| ')'
 	| '>�'
 	| '\\div'

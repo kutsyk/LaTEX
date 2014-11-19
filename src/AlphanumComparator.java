@@ -1,35 +1,6 @@
-/*
- * The Alphanum Algorithm is an improved sorting algorithm for strings
- * containing numbers.  Instead of sorting numbers in ASCII order like
- * a standard sort, this algorithm sorts numbers in numeric order.
- *
- * The Alphanum Algorithm is discussed at http://www.DaveKoelle.com
- *
- *
- * This library is free software; you can redistribute it and/or
- * modify it under the terms of the GNU Lesser General Public
- * License as published by the Free Software Foundation; either
- * version 2.1 of the License, or any later version.
- *
- * This library is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
- * Lesser General Public License for more details.
- *
- * You should have received a copy of the GNU Lesser General Public
- * License along with this library; if not, write to the Free Software
- * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
- *
- */
 
-import java.io.File;
 import java.util.Comparator;
-import java.util.function.Function;
-import java.util.function.ToDoubleFunction;
-import java.util.function.ToIntFunction;
-import java.util.function.ToLongFunction;
 
-// TODO: Auto-generated Javadoc
 /**
  * This is an updated version with enhancements made by Daniel Migowski,
  * Andre Bogus, and David Koelle
@@ -43,28 +14,14 @@ import java.util.function.ToLongFunction;
  *   Use the static "sort" method from the java.util.Collections class:
  *   Collections.sort(your list, new AlphanumComparator());
  */
-public class AlphanumComparator implements Comparator<File>
+public class AlphanumComparator implements Comparator
 {
-    
-    /**
-     * Checks if is digit.
-     *
-     * @param ch the ch
-     * @return true, if is digit
-     */
     private final boolean isDigit(char ch)
     {
         return ch >= 48 && ch <= 57;
     }
 
-    /**
-     *  Length of string is passed in for improved efficiency (only need to calculate it once) *.
-     *
-     * @param s the s
-     * @param slength the slength
-     * @param marker the marker
-     * @return the chunk
-     */
+    /** Length of string is passed in for improved efficiency (only need to calculate it once) **/
     private final String getChunk(String s, int slength, int marker)
     {
         StringBuilder chunk = new StringBuilder();
@@ -95,21 +52,14 @@ public class AlphanumComparator implements Comparator<File>
         return chunk.toString();
     }
 
-    /**
-     * Compare.
-     *
-     * @param o1 the o1
-     * @param o2 the o2
-     * @return the int
-     */
-    public int compare(File o1, File o2)
+    public int compare(Object o1, Object o2)
     {
-//        if (!(o1 instanceof String) || !(o2 instanceof String))
-//        {
-//            return 0;
-//        }
-        String s1 = o1.getName();
-        String s2 = o2.getName();
+        if (!(o1 instanceof String) || !(o2 instanceof String))
+        {
+            return 0;
+        }
+        String s1 = (String)o1;
+        String s2 = (String)o2;
 
         int thisMarker = 0;
         int thatMarker = 0;
@@ -154,105 +104,4 @@ public class AlphanumComparator implements Comparator<File>
 
         return s1Length - s2Length;
     }
-
-	
-	public static <T, U extends Comparable<? super U>> Comparator<T> comparing(
-			Function<? super T, ? extends U> arg0) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	public static <T, U> Comparator<T> comparing(
-			Function<? super T, ? extends U> arg0, Comparator<? super U> arg1) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	
-	public static <T> Comparator<T> comparingDouble(
-			ToDoubleFunction<? super T> arg0) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	
-	public static <T> Comparator<T> comparingInt(ToIntFunction<? super T> arg0) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	
-	public static <T> Comparator<T> comparingLong(ToLongFunction<? super T> arg0) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	
-	public static <T extends Comparable<? super T>> Comparator<T> naturalOrder() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	
-	public static <T> Comparator<T> nullsFirst(Comparator<? super T> arg0) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	
-	public static <T> Comparator<T> nullsLast(Comparator<? super T> arg0) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	
-	public static <T extends Comparable<? super T>> Comparator<T> reverseOrder() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	
-	public Comparator<File> reversed() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	
-	public Comparator<File> thenComparing(Comparator<? super File> arg0) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	
-	public <U extends Comparable<? super U>> Comparator<File> thenComparing(
-			Function<? super File, ? extends U> arg0) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	
-	public <U> Comparator<File> thenComparing(
-			Function<? super File, ? extends U> arg0, Comparator<? super U> arg1) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	
-	public Comparator<File> thenComparingDouble(
-			ToDoubleFunction<? super File> arg0) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	
-	public Comparator<File> thenComparingInt(ToIntFunction<? super File> arg0) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	
-	public Comparator<File> thenComparingLong(ToLongFunction<? super File> arg0) {
-		// TODO Auto-generated method stub
-		return null;
-	}
 }

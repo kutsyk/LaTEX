@@ -445,6 +445,19 @@ public class LaTEXBaseListener implements LaTEXListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterRparen(@NotNull LaTEXParser.RparenContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitRparen(@NotNull LaTEXParser.RparenContext ctx) { }
+
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterTextformatingBlockCenter(@NotNull LaTEXParser.TextformatingBlockCenterContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -504,6 +517,19 @@ public class LaTEXBaseListener implements LaTEXListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitItems(@NotNull LaTEXParser.ItemsContext ctx) { }
+
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterEtAlAuthors(@NotNull LaTEXParser.EtAlAuthorsContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitEtAlAuthors(@NotNull LaTEXParser.EtAlAuthorsContext ctx) { }
 
 	/**
 	 * {@inheritDoc}
@@ -1479,6 +1505,19 @@ public class LaTEXBaseListener implements LaTEXListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitTextRules(@NotNull LaTEXParser.TextRulesContext ctx) { }
+
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterLparen(@NotNull LaTEXParser.LparenContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitLparen(@NotNull LaTEXParser.LparenContext ctx) { }
 
 	/**
 	 * {@inheritDoc}

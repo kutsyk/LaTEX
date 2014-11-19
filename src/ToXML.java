@@ -166,6 +166,7 @@ public class ToXML extends LaTEXBaseListener {
 	/** The algorithm counter. */
 	private int algorithmCounter;
 	private boolean wasAuthorSection;
+    private boolean wasBackDeclared;
 	
 	private String id = "";
 	
@@ -258,13 +259,12 @@ public class ToXML extends LaTEXBaseListener {
 	 * Paragraph inserter.
 	 */
 	private void paragraphInserter() {
-		if (shouldTextBeMissed)
+		if (shouldTextBeMissed || bibliographyDeclared)
 			return;
 
 		if (wasSectionDeclared)
-		{	
 			wasParagraphFilled = true;
-		}
+
 
 		if (isParagraphActive)
 			newLineCounter = 0;
@@ -406,6 +406,7 @@ public class ToXML extends LaTEXBaseListener {
 			wasAcknowledgement = true;
 			writer.print("</body>");
 			writer.print("<back>");
+            wasBackDeclared = true;
 			writer.print("<acks>");
 			writer.print("<title>");
 			wasSectionDeclared = false;
@@ -414,6 +415,9 @@ public class ToXML extends LaTEXBaseListener {
 		
 		++sectionId;
 		++sectionCounter;
+
+        if(bibliographyDeclared)
+            wasAppsDeclared = true;
 
 		bibliographyCloser();
 		
@@ -438,22 +442,32 @@ public class ToXML extends LaTEXBaseListener {
 		writer.print("<title>");
 		wasSectionDeclared = false;
 	}
-	
-	/**
+
+    @Override
+    public void exitBibliographyBlock(LaTEXParser.BibliographyBlockContext ctx) {
+        bibliographyInserter();
+        ++appCounter;
+        shouldTextBeMissed = false;
+        writer.print("</refs></back>");
+        wasBackDeclared = false;
+        bibliographyDeclared = false;
+    }
+
+    /**
 	 * Bibliography closer.
 	 */
 	private void bibliographyCloser()
 	{
-		if (bibliographyDeclared) 
-		{
-			bibliographyInserter();
-			++appCounter;
-			wasAppsDeclared = true;
-			shouldTextBeMissed = false;
-			writer.print("</refs></back>");
-			bibliographyDeclared = false;
-		}
-	}
+        if (bibliographyDeclared) {
+            bibliographyInserter();
+            ++appCounter;
+            shouldTextBeMissed = false;
+            writer.print("</refs></back>");
+            wasBackDeclared = false;
+            bibliographyDeclared = false;
+            wasSectionDeclared = false;
+        }
+    }
 	
 	/**
 	 * Bibliography inserter.
@@ -683,7 +697,6 @@ public class ToXML extends LaTEXBaseListener {
 
 		if (wasAcknowledgement) {
 			writer.print("</acks>");
-			startRefs();
 			wasAcknowledgement = false;
 			return;
 		}
@@ -1113,6 +1126,7 @@ public class ToXML extends LaTEXBaseListener {
 		}
         writer.println("</caption>");
 		writer.println("<caption type=\"doi\">"+FrontmatterCreator.workoutString(id)+".g00"+figureCounter+"</caption>");
+        writer.println("<graphic id=\""+id.substring(id.indexOf("/")+1)+".g00"+figureCounter+".tif\"></graphic>");
 		writer.println("</fig>");
 		figureDeclared = false;
 		wasFigureFirstDot = false;
@@ -1192,7 +1206,6 @@ public class ToXML extends LaTEXBaseListener {
 				e.printStackTrace();
 			}
 		}
-		writer.print("</section></body><back><acks>");
 	}
 
 	/** The supp figure id. */
@@ -1475,7 +1488,7 @@ public class ToXML extends LaTEXBaseListener {
 	 * Paragraph closer.
 	 */
 	private void paragraphCloser() {
-		if(bibliographyDeclared)
+		if(bibliographyDeclared || !wasSectionDeclared)
 			return;
 		
 		wasParagraphFilled = false;
@@ -1856,7 +1869,7 @@ public class ToXML extends LaTEXBaseListener {
 			shouldTextBeMissed = true;
 			return;
 		}
-		
+
 		startRefs();
 
 		++bibRefCounter;
@@ -2258,7 +2271,6 @@ public class ToXML extends LaTEXBaseListener {
 		writer.print("</cit-tl>");
 		writer.close();
 		bibCittl = getInfo();
-		shouldTextBeMissed = true;
 	}
 
 	/* (non-Javadoc)
@@ -2291,7 +2303,7 @@ public class ToXML extends LaTEXBaseListener {
 		writer.print("</pub-tl>");
 		writer.close();
 		bibPubtl = getInfo();
-		shouldTextBeMissed = true;
+		shouldTextBeMissed = false;
 	}
 	
 	/* (non-Javadoc)
@@ -2315,7 +2327,7 @@ public class ToXML extends LaTEXBaseListener {
 	{
 		if (!shouldItemBeAddedToXML)
 		{
-			shouldTextBeMissed = true;
+			shouldTextBeMissed = false;
 			return;
 		}
 	}
@@ -2387,13 +2399,8 @@ public class ToXML extends LaTEXBaseListener {
 	 */
 	
 	public void enterOnePage(LaTEXParser.OnePageContext ctx) {
-		if (!shouldItemBeAddedToXML)
-		{
-			shouldTextBeMissed = true;
-			return;
-		}
-		
 		writer.print("<fpage>");
+        shouldTextBeMissed = false;
 	}
 
 	/* (non-Javadoc)
@@ -2401,12 +2408,8 @@ public class ToXML extends LaTEXBaseListener {
 	 */
 	
 	public void exitOnePage(LaTEXParser.OnePageContext ctx) {
-		if (!shouldItemBeAddedToXML)
-		{
-			shouldTextBeMissed = true;
-			return;
-		}
 		writer.print("</fpage>");
+        shouldTextBeMissed = true;
 	}
 
 	/* (non-Javadoc)
@@ -2414,12 +2417,6 @@ public class ToXML extends LaTEXBaseListener {
 	 */
 	
 	public void enterListPages(LaTEXParser.ListPagesContext ctx) {
-		if (!shouldItemBeAddedToXML)
-		{
-			shouldTextBeMissed = true;
-			return;
-		}
-		
 		writer.print("<fpage>" + ctx.simpleText(0).getText()
 				+ "</fpage>&ndash;<lpage>" + ctx.simpleText(1).getText()
 				+ "</lpage>");
@@ -2431,11 +2428,6 @@ public class ToXML extends LaTEXBaseListener {
 	 */
 	
 	public void exitListPages(LaTEXParser.ListPagesContext ctx) {
-		if (!shouldItemBeAddedToXML)
-		{
-			shouldTextBeMissed = true;
-			return;
-		}
 		shouldTextBeMissed = false;
 	}
 
@@ -2481,18 +2473,22 @@ public class ToXML extends LaTEXBaseListener {
 	{
 		shouldTextBeMissed = true;
 	}
-	
-	/* (non-Javadoc)
+
+    @Override
+    public void enterBibliographyBlock(LaTEXParser.BibliographyBlockContext ctx) {
+        startRefs();
+    }
+
+    /* (non-Javadoc)
 	 * @see LaTEXBaseListener#enterBibItem(LaTEXParser.BibItemContext)
 	 */
 	
 	public void enterBibItem(LaTEXParser.BibItemContext ctx) {
-		startRefs();
-
 		++bibRefCounter;
 		writer.print("\n<cit id=\"ref" + bibRefCounter + "\" num=\""
 				+ bibRefCounter + "\" type=\"journal\">");
 		skipData = writer;
+        bibliographyDeclared = true;
 	}
 	
 	/**
@@ -2500,19 +2496,31 @@ public class ToXML extends LaTEXBaseListener {
 	 */
 	private void startRefs()
 	{
-		if (wasAcknowledgement) 
-		{
-			writer.print("</acks>");
-			wasAcknowledgement = false;
-		}
+        if(wasSectionDeclared)
+        {
+            sectionCloser();
+            if(!wasBackDeclared)
+                writer.print("</body><back>");
+        }
 
-		if (bibRefCounter == 0)
-			writer.print("<refs><title>References</title>");
-		
+        if (bibRefCounter == 0)
+            writer.print("<refs><title>References</title>");
+
+
 		shouldTextBeMissed = true;
 	}
 
-	/* (non-Javadoc)
+    @Override
+    public void enterLparen(LaTEXParser.LparenContext ctx) {
+        writer.print("&lpar;");
+    }
+
+    @Override
+    public void enterRparen(LaTEXParser.RparenContext ctx) {
+        writer.print("&rpar;");
+    }
+
+    /* (non-Javadoc)
 	 * @see LaTEXBaseListener#exitBibItem(LaTEXParser.BibItemContext)
 	 */
 	
@@ -2582,6 +2590,7 @@ public class ToXML extends LaTEXBaseListener {
 	
 	public void enterBibItemCittl(LaTEXParser.BibItemCittlContext ctx) {
 		writer.print("<cit-tl>");
+        shouldTextBeMissed = false;
 	}
 
 	/* (non-Javadoc)
@@ -2638,6 +2647,7 @@ public class ToXML extends LaTEXBaseListener {
 	
 	public void enterBibItemPages(LaTEXParser.BibItemPagesContext ctx) {
 		writer.print("<pages>");
+        shouldTextBeMissed = false;
 	}
 
 	/* (non-Javadoc)
