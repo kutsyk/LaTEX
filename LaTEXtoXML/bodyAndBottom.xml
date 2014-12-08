@@ -1,0 +1,592 @@
+<body><section level="1" type="TextBox" id="section1"><section level="2" id="section2"><title>Author Summary</title><p id="para2"> Human cognitive function is thought to be supported by patterns of correlated neural activity. While recent work has shown that such functional correlations are differentially supported by specific properties of anatomical brain connectivity, the extent to which brain anatomy shapes cognition is not understood. In this study, we develop new network&hyphen;based approaches for relating anatomical connectivity, correlations in neural activity&lpar;functional connectivitynull, and behavioral task performance. We use noninvasive neuroimaging techniques to measure whole&hyphen;brain connectivity in 71  subjects across three cognitive states&colon;at rest, during an attention task, and during a memory task. By associating anatomical and functional connectivity with known functional brain networks, we show that the relative strength of inter&hyphen;versus intra&hyphen;network connectivity distinguishes between resting, attention, and memory states. When compared across subjects, we further show that the observed relationship between brain anatomy and function is predictive of individual differences in attention and memory task performance. </p></section></section>
+<section level="1" id="section3"><title>Introduction</title><p id="para3"> The brain is continually active, whether in a state of rest or during the performance of task&hyphen;directed function. Despite predictions that resting&hyphen;state neural activity would be noisy and unconstrained, the human brain has been shown to exhibit patterns of correlated neural activity even in the absence of any task&hyphen;directed function <citref rids="ref1 ref2">1,2</citref>. Such correlations in&ldquo;default mode&rdquo;activity, which have been consistently identified within a diffuse network of brain regions <citref rids="ref3 ref4 ref5 ref6">3&ndash;6</citref>, are thought to support the functional organization of the brain <citref rids="ref2">2</citref>. </p><p id="para4">Signatures of task&hyphen;related function have similarly been identified in task&hyphen;free states based on anticorrelations in spontaneous neural activity between default mode and task&hyphen;related brain regions <citref rids="ref7 ref8 ref9 ref10">7&ndash;10</citref>. Together, these sets of brain regions have widely been associated with two functional networks, denoted task&hyphen;positive and task&hyphen;negative, composed of regions known to become more&lpar;task&hyphen;positivenulland less&lpar;task&hyphen;negativenullactive during the task performance relative to their behavior at rest <citref rids="ref7">7</citref>. Correlations within these networks have been shown to support attention <citref rids="ref11">11</citref>and memory <citref rids="ref12 ref13">12,13</citref>processes, and disruptions to these networks have been implicated in neurological disorders <citref rids="ref14 ref15 ref16 ref17">14&ndash;17</citref>. </p><p id="para5">While such studies have characterized individual functional networks within single task domains, recent studies suggest that interactions between functional networks are important for shaping attention <citref rids="ref18">18</citref>, memory <citref rids="ref19">19</citref>, and motor learning <citref rids="ref20 ref21">20,21</citref>performance. Anatomical studies have additionally shown that structural measures, such as the length and number of white matter tracts linking brain regions, play important roles in distinguishing global task&hyphen;dependent changes in functional correlations <citref rids="ref22">22</citref>. Together, these findings suggest that anatomy may be important for shaping task&hyphen;dependent interactions between functional networks, and these interactions may in turn be important for shaping behavior. Such relationships, however, are not understood. Does functional connectivity between networks vary systematically across across resting and task&hyphen;driven cognitive states? To what extent is such variation differentially supported by underlying anatomical organization? How do such relationships between anatomy and function shape behavior?</p><p id="para6">To address these questions, we examine whether patterns of anatomical connectivity relate to the task&hyphen;dependent strength of correlated neural activity within and between task&hyphen;positive and task&hyphen;negative networks, and we examine the extent to which such relationships are linked to behavioral differences in attention and memory performance. Structural and functional connectivity are estimated in 71  subjects using noninvasive neuroimaging techniques, where functional connectivity is separately estimated in three cognitive states&colon;&lpar;<emph type="italic">i</emph>nullat rest, &lpar;<emph type="italic">ii</emph>nullduring an attention task, and&lpar;<emph type="italic">iii</emph>nullduring a memory task. Behavioral performance is assessed in the same subjects during both the attention and memory tasks. </p><p id="para7">In what follows, we uncover task&hyphen;dependent links between human brain anatomy, function, and behavior both within individual subjects and across groups of subjects. We group brain regions based on their involvement in the task&hyphen;positive and task&hyphen;negative networks defined in <citref rids="ref7">7</citref>, and we show that the strength of anatomical connectivity within versus between these networks differentially supports strong, task&hyphen;dependent functional correlations. The space mapped out by the observed structure&hyphen;function relationships can be used to quantify a measure of separation between cognitive states, and we show that individual variability in this separation is linked to behavioral performance during both attention and memory tasks. Together, these results reveal that cognitive states are differentially supported by specific patterns of anatomical connectivity, and the observed association between anatomy and function is predictive of behavior. </p></section>
+<section level="1" id="section4"><title>Methods</title>
+<section level="2" id="section5"><title> Ethics Statement</title><p id="para8"> Informed written consent was obtained from each subject prior to experimental sessions. All procedures were approved by the University of California, Santa Barbara Human Subjects Committee. </p></section>
+<section level="2" id="section6"><title>Network Models of Brain Connectivity</title><p id="para9"> We consider a complex network description of the human brain in which localized brain regions are represented as nodes, and the strengths of structural or functional connectivity between brain regions are represented as weighted, undirected connections between nodes <citref rids="ref23 ref24">23,24</citref>. </p><p id="para10">A set of 600  cortical and subcortical regions roughly equal in size are chosen by upsampling anatomical regions within the Automated Anatomical Labeling&lpar;AALnullAtlas <citref rids="ref25">25</citref>&lpar;Text S1null. We identify a total of 368  regions in our atlas that overlap wholly or partially with regions in task&hyphen;positive and task&hyphen;negative networks&lpar;Text S1null, and we refer to the remaining regions as&ldquo;other" regions. We focus on three of the six possible couplings between these three region types&colon;couplings between two task&hyphen;positive regions&lpar;<equ id="equ12" type="inline">
+<tex>
+$PP$
+
+</tex></equ>
+null, two task&hyphen;negative regions&lpar;<equ id="equ13" type="inline">
+<tex>
+$NN$
+
+</tex></equ>
+null, and one task&hyphen;positive and one task&hyphen;negative region&lpar;<equ id="equ14" type="inline">
+<tex>
+$PN$
+
+</tex></equ>
+null. We then compare these couplings to the remaining set of couplings between task&hyphen;positive and other regions&lpar;<equ id="equ15" type="inline">
+<tex>
+$PO$
+
+</tex></equ>
+null, between task&hyphen;negative and other regions&lpar;<equ id="equ16" type="inline">
+<tex>
+$NO$
+
+</tex></equ>
+null, and between two other regions&lpar;<equ id="equ17" type="inline">
+<tex>
+$OO$
+
+</tex></equ>
+null. Figure<figref rids="fig1">Figure&#146;1</figref>a shows a schematic of possible couplings. </p><fig id="fig1" num="1" type="figure"><caption><emph type="bold">Identifying Structure&hyphen;Function Relationships in Task&hyphen;Related Networks.</emph><?FIGTITLE 1?> &lpar;anullIn both representative and subject&hyphen;specific brain networks, we identify brain regions that belong to the task&hyphen;positive and task&hyphen;negative network described in <citref rids="ref7">7</citref>, and we label all remaining regions as&ldquo;other&rdquo;regions.<?FIGTITLE 0?> There are six possible types of couplings between these three types of regions.<?FIGTITLE 0?> We focus on three of these couplings&colon;those between two task&hyphen;negative regions&lpar;<equ id="equ1" type="inline"><tex>$NN$</tex></equ>null, between two task&hyphen;positive regions&lpar;<equ id="equ2" type="inline"><tex>$PP$</tex></equ>null, and between a task&hyphen;positive and a task&hyphen;negative region&lpar;<equ id="equ3" type="inline"><tex>$PN$</tex></equ>null.<?FIGTITLE 0?> These couplings are highlighted in the axial view of the representative brain network.<?FIGTITLE 0?> &lpar;bnullWe compute measures of structural&lpar;SCnulland functional&lpar;FCnullconnectivity between each pair of regions by measuring the number of white matter streamlines linking two regions&lpar;SCnulland the task&hyphen;dependent strength of functional correlation between BOLD time series measured within regions&lpar;FCnull.<?FIGTITLE 0?> The pie chart shows the decomposition of all structural connections into those that link two task&hyphen;positive&lpar;<equ id="equ4" type="inline"><tex>$n_{PP}$</tex></equ>null, two task&hyphen;negative&lpar;<equ id="equ5" type="inline"><tex>$n_{NN}$</tex></equ>null, one task&hyphen;positive and one task&hyphen;negative&lpar;<equ id="equ6" type="inline"><tex>$n_{PN}$</tex></equ>null, and all other regions&lpar;<equ id="equ7" type="inline"><tex>$n_{*O}=\{n_{PO},n_{NO},n_{OO}\}$</tex></equ>null.<?FIGTITLE 0?> &lpar;cnullWe assess variations<equ id="equ8" type="inline"><tex>$\Deltan$</tex></equ>in these number densities as we bias toward increasingly strong functional correlations.<?FIGTITLE 0?> This relationship is illustrated here for the representative brain network, where variations<equ id="equ9" type="inline"><tex>$\Deltan_{PP}$</tex></equ>, <equ id="equ10" type="inline"><tex>$\Deltan_{NN}$</tex></equ>, and<equ id="equ11" type="inline"><tex>$\Deltan_{PN}$</tex></equ>are shown as a function of the resting&hyphen;state threshold<equ id="equ12" type="inline"><tex>$\tau_R$</tex></equ>.<?FIGTITLE 0?> This can be understood as computing the change in composition of the pie chart shown in&lpar;bnullwhile incrementally biasing toward strongly&hyphen;correlated region pairs with functional correlations above the threshold value<equ id="equ13" type="inline"><tex>$\tau_R$</tex></equ>.<?FIGTITLE 0?> Inset&colon;complementary cumulative distribution function&lpar;cCDFnullof FC<equ id="equ14" type="inline"><tex>$_R$</tex></equ>computed for<equ id="equ15" type="inline"><tex>$PP$</tex></equ>, <equ id="equ16" type="inline"><tex>$NN$</tex></equ>, and<equ id="equ17" type="inline"><tex>$PN$</tex></equ>couplings, where the<equ id="equ18" type="inline"><tex>$\mathrm{cCDF}(\mathrm{FC}_R$</tex></equ>nullmeasures the probability of finding<equ id="equ19" type="inline"><tex>$\mathrm{FC}>\mathrm{FC}_R$</tex></equ>for every value of<equ id="equ20" type="inline"><tex>$\mathrm{FC}_R$</tex></equ>.<?FIGTITLE 0?> The variable threshold<equ id="equ21" type="inline"><tex>$\tau_R$</tex></equ>selects the subset of connections with<equ id="equ22" type="inline"><tex>$\mathrm{FC}_R>\tau_R$</tex></equ>.<?FIGTITLE 0?> &lpar;dnullThe changes in<equ id="equ23" type="inline"><tex>$PP$</tex></equ>, <equ id="equ24" type="inline"><tex>$NN$</tex></equ>, and<equ id="equ25" type="inline"><tex>$PN$</tex></equ>densities can be compactly represented by comparing the degree of within&hyphen;network coupling, quantified by the relative change in<equ id="equ26" type="inline"><tex>$PP$</tex></equ>versus<equ id="equ27" type="inline"><tex>$NN$</tex></equ>densities&lpar;<equ id="equ28" type="inline"><tex>$\Deltan_{PP}-\Deltan_{NN}$</tex></equ>null, with the degree of between&hyphen;network coupling, quantified by the change in<equ id="equ29" type="inline"><tex>$PN$</tex></equ>density&lpar;<equ id="equ30" type="inline"><tex>$\Deltan_{PN}$</tex></equ>null.<?FIGTITLE 0?> This representation reveals that strong resting&hyphen;state FC is supported by strong local coupling within the task&hyphen;negative network, represented by the increase in<equ id="equ31" type="inline"><tex>$NN$</tex></equ>relative to<equ id="equ32" type="inline"><tex>$PP$</tex></equ>density, and weak coupling between task&hyphen;positive and task&hyphen;negative networks, represented by the decrease in<equ id="equ33" type="inline"><tex>$PN$</tex></equ>density.<?FIGTITLE 0?> </caption><caption type="doi">10.1371&sol;journal pcbi 1003591.g001</caption><graphic id="journal.pcbi.1003591.g001.tif"></graphic></fig><p id="para11">To construct brain networks from this set of regions, we weight connections between regions by measures of structural and functional connectivity. Structural connectivity&lpar;SCnullis obtained from diffusion tensor imaging&lpar;DTInullmeasurements via a tractography algorithm used to identify the number of white matter streamlines linking two regions <citref rids="ref22">22</citref>. Functional connectivity&lpar;FCnullis obtained from functional magnetic resonance imaging&lpar;fMRInullmeasurements by computing Pearson&rsquo;s correlations between regional mean blood oxygen level dependent&lpar;BOLDnulltime series. FC is separately estimated&lpar;<emph type="italic">i</emph>nullat rest&lpar;<equ id="equ18" type="inline">
+<tex>
+$\mathrm{FC}_R$
+
+</tex></equ>
+null, &lpar;<emph type="italic">ii</emph>nullduring the performance of an attention task&lpar;<equ id="equ19" type="inline">
+<tex>
+$\Delta\mathrm{FC}_A$
+
+</tex></equ>
+null, and&lpar;<emph type="italic">iii</emph>nullduring the performance of a memory task&lpar;<equ id="equ20" type="inline">
+<tex>
+$\Delta\mathrm{FC}_M$
+
+</tex></equ>
+null <citref rids="ref26">26</citref>. As task&hyphen;based fluctuations in BOLD signals are small in comparison to resting&hyphen;state values <citref rids="ref27">27</citref>, task&hyphen;based FC is computed in deviations<equ id="equ21" type="inline">
+<tex>
+$\Delta\mathrm{FC}=(\mathrm{FC}-\mathrm{FC}_R$
+
+</tex></equ>
+nullfrom rest <citref rids="ref22">22</citref>. See Text S1 and <citref rids="ref22">22</citref>for details regarding task design, connectivity estimates, and methodological considerations. </p><p id="para12">Each subject is described by a structural and functional brain network whose connections are weighted by subject&hyphen;specific values of SC and FC. Group&hyphen;level properties can similarly be described by a&ldquo;representative&rdquo;brain network that combines information across all subjects. We construct two representative networks, one structural and one functional, by averaging the corresponding sets of connection weights across subject&hyphen;specific networks, such that the representative connection weights correspond to the group mean values of SC and FC, consistent with previous studies <citref rids="ref22 ref28">22,28</citref>. Note that alternative techniques for constructing group&hyphen;based connectivity networks may capture slightly different aspects of subject&hyphen;specific network topology <citref rids="ref29">29</citref>. </p><p id="para13">The assessment of group&hyphen;level properties requires that we consider the degree to which SC is reliably present across subjects. While FC is typically non&hyphen;sparse, SC can be both sparse and variable across subjects <citref rids="ref22 ref30">22,30</citref>. We therefore restrict all subsequent analyses to the subset of region pairs that are consistently linked by one or more white matter streamlines in at least 80 &percnt;of subjects. We confirm that the observed structural and functional properties of the set of thresholded connections are robust to our specific choice of thresholding values&lpar;Text S1null. </p></section></section>
+<section level="1" id="section7"><title>Results</title>
+<section level="2" id="section8"><title> Couplings Between Task&hyphen;Positive and Task&hyphen;Negative Networks Differentiate Cognitive States</title><p id="para14"> Functional correlations within task&hyphen;positive and task&hyphen;negative networks have been separately linked to attention and memory processes, but the integrated function of these networks is, as of yet, unclear. Should we view these networks as distinct modules that compartmentalize function, or as integrated networks that couple together in a task&hyphen;dependent manner to shape cognitive function?</p><p id="para15">To address this question, we examine the extent to which couplings within and between task&hyphen;positive and task&hyphen;negative networks differentially shape task&hyphen;dependent distributions of functional connectivity. We first assess the distributions of resting&hyphen;, attention&hyphen;, and memory&hyphen;state functional connectivity within the sets of<equ id="equ22" type="inline">
+<tex>
+$PP$
+
+</tex></equ>
+, <equ id="equ23" type="inline">
+<tex>
+$NN$
+
+</tex></equ>
+, and<equ id="equ24" type="inline">
+<tex>
+$PN$
+
+</tex></equ>
+couplings. These distributions exhibit features that are consistent with known properties of task&hyphen;positive and task&hyphen;negative networks. In the resting state, both<equ id="equ25" type="inline">
+<tex>
+$PP$
+
+</tex></equ>
+and<equ id="equ26" type="inline">
+<tex>
+$NN$
+
+</tex></equ>
+couplings exhibit stronger correlations than<equ id="equ27" type="inline">
+<tex>
+$PN$
+
+</tex></equ>
+couplings&lpar;inset of Figure<figref rids="fig1">Figure&#146;1</figref>cnull, consistent with the definition of task&hyphen;positive and task&hyphen;negative networks based on strong correlations within each network and anticorrelations between networks <citref rids="ref7">7</citref>&lpar;note that anticorrelations are manifested here as weaker correlations between<equ id="equ28" type="inline">
+<tex>
+$PN$
+
+</tex></equ>
+relative to<equ id="equ29" type="inline">
+<tex>
+$PP$
+
+</tex></equ>
+and<equ id="equ30" type="inline">
+<tex>
+$NN$
+
+</tex></equ>
+region pairsnull. Similarly, in the attention state, <equ id="equ31" type="inline">
+<tex>
+$PP$
+
+</tex></equ>
+and<equ id="equ32" type="inline">
+<tex>
+$NN$
+
+</tex></equ>
+couplings respectively exhibit larger increases and decreases in FC relative to the distribution of<equ id="equ33" type="inline">
+<tex>
+$PN$
+
+</tex></equ>
+couplings&lpar;Text S1null, consistent with known attention&hyphen;driven increases and decreases in task&hyphen;positive versus task&hyphen;negative network activity. </p><p id="para16">Given that strong functional correlations are hypothesized to support state&hyphen;dependent cognitive function, we focus our analysis on the strong values of FC within the leading edges of the resting&hyphen;, attention&hyphen;, and memory&hyphen;state distributions. To isolate strong correlations in each cognitive state, we apply a variable threshold to each distribution of FC. The thresholding process, which selects connections above a specified threshold value of connectivity strength, is common to graph theoretic analyses <citref rids="ref24">24</citref>and can be used to assess network properties at a fixed threshold value&lpar;e. g.  <citref rids="ref28 ref31">28,31</citref>nullor across variations in threshold values&lpar;e. g.  <citref rids="ref30 ref32 ref33">30,32,33</citref>null. Here, we apply a threshold to the distribution of FC, and we examine changes in network connectivity across variations in this threshold value. The use of a variable threshold enables us to isolate structural network properties that support increasingly strong functional correlations. </p><p id="para17">We characterize changes in network connectivity by examining the distribution of<equ id="equ34" type="inline">
+<tex>
+$PP$
+
+</tex></equ>
+, <equ id="equ35" type="inline">
+<tex>
+$NN$
+
+</tex></equ>
+, and<equ id="equ36" type="inline">
+<tex>
+$PN$
+
+</tex></equ>
+couplings that support functional correlations above a variable threshold<equ id="equ37" type="inline">
+<tex>
+$\tau$
+
+</tex></equ>
+. A given threshold value<equ id="equ38" type="inline">
+<tex>
+$\tau^*$
+
+</tex></equ>
+will select the set of region pairs with<equ id="equ39" type="inline">
+<tex>
+$\mathrm{FC}>\tau^*$
+
+</tex></equ>
+. Within this set of region pairs, we measure the fractional number density<equ id="equ40" type="inline">
+<tex>
+$n_{ab}$
+
+</tex></equ>
+of all structural connections that couple a given pair of regions<equ id="equ41" type="inline">
+<tex>
+$a$
+
+</tex></equ>
+and<equ id="equ42" type="inline">
+<tex>
+$b$
+
+</tex></equ>
+, with region labels<equ id="equ43" type="inline">
+<tex>
+$\{a,b\}\in\{P,N,O\}$
+
+</tex></equ>
+. This process can be viewed as assessing the FC&hyphen;dependent connectivity of a weighted structural network in which connections, defined by the reliable presence of SC in 80 &percnt;of subjects, are weighted by the number of fiber tracts linking a given pair of regions. Qualitatively similar results are achieved by analyzing the connectivity of an unweighted structural network. However, we find that weighted networks better distinguish strong FC between different cognitive states than do unweighted networks, suggesting that both the presence and degree of structural connectivity play important roles in supporting strong state&hyphen;dependent FC&lpar;see Text S1 for comparison of weighted and unweighted network analysesnull. </p><p id="para18">We vary the functional threshold<equ id="equ44" type="inline">
+<tex>
+$\tau$
+
+</tex></equ>
+and compute the change<equ id="equ45" type="inline">
+<tex>
+$\Deltan(\tau)$
+
+</tex></equ>
+in number density relative to baseline&lpar;with baseline computed in the absence of any thresholdnull. We find that the relative changes in<equ id="equ46" type="inline">
+<tex>
+$PP$
+
+</tex></equ>
+, <equ id="equ47" type="inline">
+<tex>
+$NN$
+
+</tex></equ>
+, and<equ id="equ48" type="inline">
+<tex>
+$PN$
+
+</tex></equ>
+densities vary systematically across resting, attention, and memory states. In the resting state, for example, we find that strongly&hyphen;correlated region pairs are supported by a high density of<equ id="equ49" type="inline">
+<tex>
+$NN$
+
+</tex></equ>
+connections&lpar;positive<equ id="equ50" type="inline">
+<tex>
+$\Deltan_{NN}$
+
+</tex></equ>
+nulland a low density of<equ id="equ51" type="inline">
+<tex>
+$PP$
+
+</tex></equ>
+connections&lpar;negative<equ id="equ52" type="inline">
+<tex>
+$\Deltan_{PP}$
+
+</tex></equ>
+nullrelative to their baseline values&lpar;Figure<figref rids="fig1">Figure&#146;1</figref>cnull. </p><p id="para19">To compare these relationships across cognitive states, we examine two quantities&colon;the change in<equ id="equ53" type="inline">
+<tex>
+$PN$
+
+</tex></equ>
+density&lpar;<equ id="equ54" type="inline">
+<tex>
+$\Deltan_{PN}$
+
+</tex></equ>
+nulland the relative changes in<equ id="equ55" type="inline">
+<tex>
+$PP$
+
+</tex></equ>
+versus<equ id="equ56" type="inline">
+<tex>
+$NN$
+
+</tex></equ>
+densities&lpar;<equ id="equ57" type="inline">
+<tex>
+$\Deltan_{PP}-\Deltan_{NN}$
+
+</tex></equ>
+null. Both quantities are evaluated as a function of the task&hyphen;dependent thresholds<equ id="equ58" type="inline">
+<tex>
+$\tau_R$
+
+</tex></equ>
+, <equ id="equ59" type="inline">
+<tex>
+$\tau_A$
+
+</tex></equ>
+, and<equ id="equ60" type="inline">
+<tex>
+$\tau_M$
+
+</tex></equ>
+. The quantity<equ id="equ61" type="inline">
+<tex>
+$\Deltan_{PN}$
+
+</tex></equ>
+measures the degree of coupling between task&hyphen;positive and task&hyphen;negative networks, with positive&lpar;negativenullvalues of<equ id="equ62" type="inline">
+<tex>
+$\Deltan_{PN}$
+
+</tex></equ>
+indicating increased&lpar;decreasednullcoupling relative to baseline. In comparison, the quantity<equ id="equ63" type="inline">
+<tex>
+$\Deltan_{PP}-\Deltan_{NN}$
+
+</tex></equ>
+measures the degree of localized coupling within either the task&hyphen;positive or task&hyphen;negative network, with positive&lpar;negativenullvalues indicating localized coupling within the task&hyphen;positive&lpar;task&hyphen;negativenullnetwork. </p><p id="para20">Figure<figref rids="fig1">Figure&#146;1</figref>d illustrates the relationship between these two quantities in the resting state&lpar;note that this is a condensed representation of the information shown in Figure<figref rids="fig1">Figure&#146;1</figref>cnull. We refer to this representation as a&ldquo;state&hyphen;space&rdquo;mapping, as it enables us to isolate the structure&hyphen;function relationships that characterize each cognitive state. </p><p id="para21">Comparison across cognitive states reveals that resting, attention, and memory states occupy distinct regions of this state space, differing from one another in the types of connection densities that support strong functional correlations&lpar;Figure<figref rids="fig2">Figure&#146;2</figref>null. Strong resting&hyphen;state correlations are supported by a decreased density of<equ id="equ64" type="inline">
+<tex>
+$PN$
+
+</tex></equ>
+connections and an increased density of<equ id="equ65" type="inline">
+<tex>
+$NN$
+
+</tex></equ>
+relative to<equ id="equ66" type="inline">
+<tex>
+$PP$
+
+</tex></equ>
+connections, reflecting strong localization within the task&hyphen;negative network and weak coupling between the task&hyphen;positive and task&hyphen;negative networks. Strong attention&hyphen;state correlations, in comparison, are supported by an increased density of<equ id="equ67" type="inline">
+<tex>
+$PN$
+
+</tex></equ>
+connections and an increased density of<equ id="equ68" type="inline">
+<tex>
+$PP$
+
+</tex></equ>
+relative to<equ id="equ69" type="inline">
+<tex>
+$NN$
+
+</tex></equ>
+connections, reflecting strong localization with the task&hyphen;positive network and strong coupling between the task&hyphen;positive and task&hyphen;negative networks. Finally, strong memory&hyphen;state correlations share features of both attention and rest, as they are supported by an increased density of<equ id="equ70" type="inline">
+<tex>
+$NN$
+
+</tex></equ>
+relative to<equ id="equ71" type="inline">
+<tex>
+$PP$
+
+</tex></equ>
+connections and an increased density of<equ id="equ72" type="inline">
+<tex>
+$PN$
+
+</tex></equ>
+connections. </p><fig id="fig2" num="2" type="figure"><caption><emph type="bold">State&hyphen;Space Mapping of Structure&hyphen;Function Relationships.</emph><?FIGTITLE 1?> Density of between&hyphen;network couplings&lpar;<equ id="equ34" type="inline"><tex>$\Deltan_{PN}$</tex></equ>nullversus within&hyphen;network couplings&lpar;<equ id="equ35" type="inline"><tex>$\Deltan_{PP}-\Deltan_{NN}$</tex></equ>nullare shown as a function of the increasing functional threshold<equ id="equ36" type="inline"><tex>$\tau$</tex></equ>in the representative brain network for the resting&lpar;circular markersnull, attention&lpar;square markersnull, and memory&lpar;triangular markersnullstates.<?FIGTITLE 0?> Comparison of these network couplings reveals a large degree of separation between rest, attention, and memory states, with the degree of separation increasing as a function of<equ id="equ37" type="inline"><tex>$\tau$</tex></equ>.<?FIGTITLE 0?> The resting state is characterized by an increased density of<equ id="equ38" type="inline"><tex>$NN$</tex></equ>relative to<equ id="equ39" type="inline"><tex>$PP$</tex></equ>connections and a decreased density of<equ id="equ40" type="inline"><tex>$PN$</tex></equ>contributions.<?FIGTITLE 0?> In comparison, the attention state is characterized by an increased density of<equ id="equ41" type="inline"><tex>$PP$</tex></equ>relative to<equ id="equ42" type="inline"><tex>$NN$</tex></equ>connections.<?FIGTITLE 0?> The memory state shares features of both the resting and attention states, showing an increased density of<equ id="equ43" type="inline"><tex>$PP$</tex></equ>relative to<equ id="equ44" type="inline"><tex>$NN$</tex></equ>connections and an increased density of<equ id="equ45" type="inline"><tex>$PN$</tex></equ>connections.<?FIGTITLE 0?> </caption><caption type="doi">10.1371&sol;journal pcbi 1003591.g002</caption><graphic id="journal.pcbi.1003591.g002.tif"></graphic></fig><p id="para22">These findings are consistent with known properties of task&hyphen;positive and task&hyphen;negative networks. The anticorrelation between the task&hyphen;positive and task&hyphen;negative networks manifests here as a decreased density of<equ id="equ73" type="inline">
+<tex>
+$PN$
+
+</tex></equ>
+connections supporting strong resting&hyphen;state correlations. Similarly, the known importance of task&hyphen;positive brain regions in attention tasks manifests here as an increased density of<equ id="equ74" type="inline">
+<tex>
+$PP$
+
+</tex></equ>
+relative to<equ id="equ75" type="inline">
+<tex>
+$NN$
+
+</tex></equ>
+connections supporting strong attention&hyphen;state correlations. Lastly, memory&hyphen;state functional networks are known to overlap with both resting&hyphen;and attention&hyphen;state functional networks <citref rids="ref13">13</citref>. We similarly find that the types of connection densities that support strong memory&hyphen;state FC are similar to those connection densities that support strong resting&hyphen;and attention&hyphen;state FC. </p><p id="para23">Together, these results show that structural connections between task&hyphen;related functional networks distinguish strong functional correlations measured in different cognitive states. </p></section>
+<section level="2" id="section9"><title>Individuals Can be Grouped Based on Similarities in State&hyphen;Space Relationships</title><p id="para24"> The state&hyphen;space description shown in Figure<figref rids="fig2">Figure&#146;2</figref>reveals that cognitive states differ from one another in the structural features that support strong functional correlations. We investigate whether the observed separation between cognitive states, as quantified by differences in such structure&hyphen;function relationships, is a general feature of subject&hyphen;specific networks. </p><p id="para25">Each subject&hyphen;specific brain network can be remapped onto a state&hyphen;space, analogous to that shown in Figure<figref rids="fig2">Figure&#146;2</figref>, that compares subject&hyphen;specific values<equ id="equ76" type="inline">
+<tex>
+$\Deltan_{PN}$
+
+</tex></equ>
+and<equ id="equ77" type="inline">
+<tex>
+$\Deltan_{PP}-\Deltan_{NN}$
+
+</tex></equ>
+across resting, attention, and memory states. To compare across subjects, we compactly represent each subject by a triad of resting&hyphen;&lpar;<equ id="equ78" type="inline">
+<tex>
+$R$
+
+</tex></equ>
+null, attention&hyphen;&lpar;<equ id="equ79" type="inline">
+<tex>
+$A$
+
+</tex></equ>
+null, and memory&hyphen;state&lpar;<equ id="equ80" type="inline">
+<tex>
+$M$
+
+</tex></equ>
+nulldistribution averages of<equ id="equ81" type="inline">
+<tex>
+$\Deltan_{PN}$
+
+</tex></equ>
+and<equ id="equ82" type="inline">
+<tex>
+$\Deltan_{PP}-\Deltan_{NN}$
+
+</tex></equ>
+&lpar;Figure<figref rids="fig3">Figure&#146;3</figref>anull. The degree of separation between cognitive states can then be quantified by the angular separation<equ id="equ83" type="inline">
+<tex>
+$\Delta\theta$
+
+</tex></equ>
+between distribution averages. </p><fig id="fig3" num="3" type="figure"><caption><emph type="bold">Individual Variability in State&hyphen;Space Relationships.</emph><?FIGTITLE 1?> Subject&hyphen;specific relationships between resting&lpar;<equ id="equ46" type="inline"><tex>$R$</tex></equ>null, attention&lpar;<equ id="equ47" type="inline"><tex>$A$</tex></equ>null, and memory&lpar;<equ id="equ48" type="inline"><tex>$M$</tex></equ>nullstates shown for a single subject&lpar;upper rownulland for the entire set of subjects&lpar;lower rownull.<?FIGTITLE 0?> &lpar;anullSubject&hyphen;specific brain networks can each be described by a state&hyphen;space of network couplings, quantified by<equ id="equ49" type="inline"><tex>$\Deltan_{PN}$</tex></equ>versus<equ id="equ50" type="inline"><tex>$\Deltan_{PP}-\Deltan_{NN}$</tex></equ>, that is analogous to the state space shown in Figure<figref rids="fig2">Figure&#146;2</figref>for the representative brain network.<?FIGTITLE 0?> Each subject can then be compactly described by a triad of points, one each for resting&lpar;circular markernull, attention&lpar;square markernull, and memory&lpar;triangular markernullstates, that marks the distribution averages<equ id="equ51" type="inline"><tex>$\langle\Deltan_{PN}\rangle$</tex></equ>and<equ id="equ52" type="inline"><tex>$\langle\Deltan_{PP}-\Deltan_{NN}\rangle$</tex></equ>for each cognitive state.<?FIGTITLE 0?> &lpar;bnullThe separation between two states can be quantified by the angular separation<equ id="equ53" type="inline"><tex>$\Delta\theta_{ab}$</tex></equ>between distribution averages, with<equ id="equ54" type="inline"><tex>$\{a,b\}\in\{R,A,M\}$</tex></equ>.<?FIGTITLE 0?> &lpar;cnullTo isolate the angular separation between states, we perform a remapping of the state space in which we represent each individual by a triangle whose vertices are defined by cyclical permutations of<equ id="equ55" type="inline"><tex>$(\Delta\theta_{ab},\Delta\theta_{bc})$</tex></equ>.<?FIGTITLE 0?> Each vertex is visually indicated by the superposition of markers that denote the two cognitive states related by<equ id="equ56" type="inline"><tex>$\Delta\theta_{ab}$</tex></equ>&lpar;e.<?FIGTITLE 0?> g.<?FIGTITLE 0?> <equ id="equ57" type="inline"><tex>$\Delta\theta_{RA}$</tex></equ>is denoted by the superposition of a circular&lpar;<equ id="equ58" type="inline"><tex>$R$</tex></equ>nulland square&lpar;<equ id="equ59" type="inline"><tex>$A$</tex></equ>nullmarkernull.<?FIGTITLE 0?> This remapping reveals a high degree of inter&hyphen;subject consistency in the relative separation between states, as noted by the clusters of markers of a given type and the highly overlapping triangles linking these clusters.<?FIGTITLE 0?> &lpar;dnullSubjects can be grouped according to the rank order of angular separations.<?FIGTITLE 0?> This method naturally isolates one primary group of subjects who show the smallest separation between attention and memory states.<?FIGTITLE 0?> The subject shown in the upper row falls into this primary group, as indicated by the proximity of<equ id="equ60" type="inline"><tex>$\Delta\theta_{AM}$</tex></equ>&lpar;superposition of triangular and square markersnullto the vertical dotted line marking<equ id="equ61" type="inline"><tex>$\Delta\theta=0$</tex></equ>.<?FIGTITLE 0?> The remaining two secondary groups show the smallest separation between rest and memory&lpar;<equ id="equ62" type="inline"><tex>$\Delta\theta_{MR}$</tex></equ>closest to<equ id="equ63" type="inline"><tex>$\Delta\theta=0$</tex></equ>nulland between attention and memory&lpar;<equ id="equ64" type="inline"><tex>$\Delta\theta_{RA}$</tex></equ>closest to<equ id="equ65" type="inline"><tex>$\Delta\theta=0$</tex></equ>null.<?FIGTITLE 0?> </caption><caption type="doi">10.1371&sol;journal pcbi 1003591.g003</caption><graphic id="journal.pcbi.1003591.g003.tif"></graphic></fig><p id="para26">To isolate inter&hyphen;subject variations in angular separation, we perform a remapping of the state space in which we represent each individual by a triangle whose vertices are defined by cyclical permutations of<equ id="equ84" type="inline">
+<tex>
+$(\Delta\theta_{ab},\Delta\theta_{bc})$
+
+</tex></equ>
+, where<equ id="equ85" type="inline">
+<tex>
+$\Delta\theta_{ab}$
+
+</tex></equ>
+quantifies the angular separation between states<equ id="equ86" type="inline">
+<tex>
+$a$
+
+</tex></equ>
+and<equ id="equ87" type="inline">
+<tex>
+$b$
+
+</tex></equ>
+<equ id="equ88" type="inline">
+<tex>
+$\in\{R,A,M\}$
+
+</tex></equ>
+&lpar;Figure<figref rids="fig3">Figure&#146;3</figref>bnull. In this representation, the size of a given triangle captures the degree of symmetric separation between cognitive states, with smaller triangles indicating that states are separated from one another by nearly equal angular distances. Similarly, the rotation of a given triangle captures the rank&hyphen;ordering of angular separations. </p><p id="para27">This remapping, shown in Figure<figref rids="fig3">Figure&#146;3</figref>b&hyphen;c, reveals that the degree of separation between cognitive states is highly consistent across subjects. This consistency is illustrated by the clustering of points of the same color, and similarly by the largely overlapping sets of triangles that link these clusters. In a majority of subjects, attention and memory occupy similar regions of state space, as quantified by small values of<equ id="equ89" type="inline">
+<tex>
+$\Delta\theta_{AM}$
+
+</tex></equ>
+and as illustrated by the clustering of green points near the center vertical axis. In these same subjects, rest occupies a distinct region of state space far from both attention and memory, as quantified by large values of<equ id="equ90" type="inline">
+<tex>
+$\Delta\theta_{MR}$
+
+</tex></equ>
+and<equ id="equ91" type="inline">
+<tex>
+$\Delta\theta_{RA}$
+
+</tex></equ>
+and as illustrated by the clustering of blue and red points near the left and right vertical axes. The observed organization is not an artifact of our analysis techniques, as confirmed via comparison with a null model in which&ldquo;task&hyphen;positive, &rdquo;&ldquo;task&hyphen;negative, &rdquo;and&ldquo;other&rdquo;region labels are randomly reassigned&lpar;Text S1null. </p><p id="para28">This representation naturally organizes subjects into three distinct groups based on the relative degree of separation between cognitive states&lpar;Figure<figref rids="fig3">Figure&#146;3</figref>dnull. The primary group&lpar;66 &percnt;of subjectsnullexhibits less separation between the two task states than between task and resting states. These separations indicate that similar structural connections support large changes in both attention and memory FC, and these structural connections differ from those that support strong resting&hyphen;state FC. The remaining subjects comprise two secondary groups, the first exhibiting the least separation between resting and memory states&lpar;23 &percnt;of subjectsnull, and the second exhibiting the least separation between resting and attention states&lpar;11 &percnt;of subjectsnull. Small separations between resting and task states indicate that task&hyphen;dependent changes in FC, measured either during attention or memory tasks, are supported by similar structural connections as those that support strong resting&hyphen;state FC. </p><p id="para29">Importantly, the primary and secondary groups identified here are statistically similar to those groups identified from clustering algorithms&lpar;Text S1null, confirming that the separation between cognitive states captures communities of subjects with similar structure&hyphen;function relationships. However, the methodology developed here differs from such data&hyphen;driven clustering algorithms in that it provides an intuitive framework for understanding relationships between cognitive states based on similarities in the underlying structural features that support these states. </p></section>
+<section level="2" id="section10"><title>State&hyphen;Space Relationships Predict Deviations in Behavioral Performance</title><p id="para30"> The organization of subjects based on the separation between cognitive states raises two important questions about the potential relationships between structure, function, and behavior. First, do primary and secondary groups, as identified by the structure&hyphen;function relationships that distinguish between cognitive states, show absolute differences in attention and memory performance? Second, is the degree of separation between attention and memory states, being the property that distinguishes between primary and secondary groups, indicative of relative differences between attention and memory performance?</p><p id="para31">We address both questions by comparing the behavioral performance of subjects within the primary versus secondary groups. We first assess whether the secondary groups, being outliers in the state&hyphen;space mapping of structure&hyphen;function relationships, are also outliers in absolute measures of attention and memory performance. We then assess whether the secondary groups, showing larger separations between attention and memory states in the state&hyphen;space mapping, also show larger differences in attention versus memory performance. </p><p id="para32">Both the attention and memory tasks were designed to measure subjects&rsquo;ability to flexibly switch between decision strategies based on probabilistic information about the&lpar;<emph type="italic">i</emph>nulllikely position of a visual cue to be identified during the attention task, or&lpar;<emph type="italic">ii</emph>nullthe likelihood that a visual cue had been previously presented during a memory task <citref rids="ref22 ref26">22,26</citref>. </p><p id="para33">Based on the design of these tasks, we focus on three relevant measures of task performance&colon;the criterion switch score&lpar;CSnull, the d&hyphen;prime&lpar;<equ id="equ92" type="inline">
+<tex>
+$d'$
+
+</tex></equ>
+nullscore, and the average reaction time&lpar;RTnull. CS measures strategic flexibility in switching between decision making strategies, with higher values indicating the ability to more readily switch strategies. The measure<equ id="equ93" type="inline">
+<tex>
+$d'$
+
+</tex></equ>
+assesses perceptual&lpar;attention tasknullor mnemonic&lpar;memory tasknullsensitivity as related to accuracy, with higher values indicating higher sensitivity and therefore higher accuracy. Lastly, average RT measures the average time between the appearance of a stimulus and a subject&rsquo;s response&lpar;via a button pressnullto that stimulus. A more detailed discussion of these performance measures can be found in <citref rids="ref26">26</citref>. </p><p id="para34">We assess absolute performance by computing the deviation<equ id="equ94" type="inline">
+<tex>
+$\Deltaq=|q-\bar{q}|$
+
+</tex></equ>
+of a given measure<equ id="equ95" type="inline">
+<tex>
+$q$
+
+</tex></equ>
+from the group average value<equ id="equ96" type="inline">
+<tex>
+$\bar{q}$
+
+</tex></equ>
+. We find that the secondary groups, being outliers by the measure of relative separation between cognitive states, are also outliers in attention and memory RT&lpar;Figure<figref rids="fig4">Figure&#146;4</figref>anull. The observed difference between primary and secondary groups is statistically significant&lpar;a one&hyphen;tailed<equ id="equ97" type="inline">
+<tex>
+$t$
+
+</tex></equ>
+&hyphen;test of<equ id="equ98" type="inline">
+<tex>
+$\Delta{\rmRT}_A+\Delta{\rmRT}_M$
+
+</tex></equ>
+gives<equ id="equ99" type="inline">
+<tex>
+$t=2.07$
+
+</tex></equ>
+, <equ id="equ100" type="inline">
+<tex>
+$p=0.021$
+
+</tex></equ>
+null. We similarly assess relative performance by computing the relative difference<equ id="equ101" type="inline">
+<tex>
+$\Deltaq_{AM}=|q_A-q_M|/(q_A+q_M)$
+
+</tex></equ>
+between a given measure assessed during attention&lpar;<equ id="equ102" type="inline">
+<tex>
+$q_A$
+
+</tex></equ>
+nullversus memory&lpar;<equ id="equ103" type="inline">
+<tex>
+$q_M$
+
+</tex></equ>
+nulltasks. We find that the secondary groups, exhibiting larger separations between attention and memory states, also show larger differences between the values of<equ id="equ104" type="inline">
+<tex>
+$d'$
+
+</tex></equ>
+and CS measured during attention versus memory tasks&lpar;Figure<figref rids="fig4">Figure&#146;4</figref>bnull. The observed difference between primary and secondary groups is again statistically significant&lpar;a one&hyphen;tailed<equ id="equ105" type="inline">
+<tex>
+$t$
+
+</tex></equ>
+&hyphen;test of<equ id="equ106" type="inline">
+<tex>
+$\Deltad'_{AM}+\Delta{\rmCS}_{AM}$
+
+</tex></equ>
+gives<equ id="equ107" type="inline">
+<tex>
+$t=1.75$
+
+</tex></equ>
+, <equ id="equ108" type="inline">
+<tex>
+$p=0.043$
+
+</tex></equ>
+null. Note that<equ id="equ109" type="inline">
+<tex>
+$d'$
+
+</tex></equ>
+and CS have previously been shown to be strongly correlated with one another <citref rids="ref26">26</citref>, such that relative differences in one measure may drive relative differences in the other. A repeated measures analysis of variance&lpar;ANOVA&semi;with two state&hyphen;space groupings, primary and secondary, as categorical measures and with nine behavioral variables&lsqb;<equ id="equ110" type="inline">
+<tex>
+$\Deltaq$
+
+</tex></equ>
+and<equ id="equ111" type="inline">
+<tex>
+$\Deltaq_{AM}$
+
+</tex></equ>
+for<equ id="equ112" type="inline">
+<tex>
+$q\in$
+
+</tex></equ>
+&lcub;RT, CS, <equ id="equ113" type="inline">
+<tex>
+$d'$
+
+</tex></equ>
+&rcub;&rsqb;as repeated measuresnullfurther confirms that the observed differences between primary and secondary groups are statistically significant, with a main effect of grouping of<equ id="equ114" type="inline">
+<tex>
+$F(1)=4.51$
+
+</tex></equ>
+and<equ id="equ115" type="inline">
+<tex>
+$p=0.037$
+
+</tex></equ>
+&lpar;see Text S1 for full table of ANOVA resultsnull. </p><fig id="fig4" num="4" type="figure"><caption><emph type="bold">Behavioral Performance of Primary versus Secondary Groups.</emph><?FIGTITLE 1?> Absolute&lpar;<equ id="equ66" type="inline"><tex>$|q-\bar{q}|$</tex></equ>nulland relative&lpar;<equ id="equ67" type="inline"><tex>$|q_A-q_M|/(q_A+q_M)$</tex></equ>nulldifferences in performance measures<equ id="equ68" type="inline"><tex>$q$</tex></equ>for attention&lpar;<equ id="equ69" type="inline"><tex>$A$</tex></equ>nulland memory&lpar;<equ id="equ70" type="inline"><tex>$M$</tex></equ>nulltasks, where<equ id="equ71" type="inline"><tex>$\bar{q}$</tex></equ>denotes the group average value of<equ id="equ72" type="inline"><tex>$q$</tex></equ>.<?FIGTITLE 0?> Performance differences are reported as means and standard errors for subjects within the primary&lpar;graynulland secondary&lpar;rednullgroups.<?FIGTITLE 0?> &lpar;anullThe secondary groups show larger absolute differences in reaction time&lpar;RTnullfor both attention and memory tasks.<?FIGTITLE 0?> &lpar;bnullThe secondary groups show larger relative differences between attention and memory tasks for both the criterion switch score&lpar;CSnulland the d&hyphen;prime&lpar;<equ id="equ73" type="inline"><tex>$d'$</tex></equ>nullscore.<?FIGTITLE 0?> </caption><caption type="doi">10.1371&sol;journal pcbi 1003591.g004</caption><graphic id="journal.pcbi.1003591.g004.tif"></graphic></fig><p id="para35">These results show that the observed separations between cognitive states, which arise from differences in the patterns of structural connectivity that support strong functional correlations, are linked to both absolute differences in overall performance and relative differences between attention and memory performance. Interestingly, the primary and secondary groups differ from one another in absolute measures of RT but relative measures of<equ id="equ116" type="inline">
+<tex>
+$d'$
+
+</tex></equ>
+and CS. Given that RT is a more general performance measure, while<equ id="equ117" type="inline">
+<tex>
+$d'$
+
+</tex></equ>
+and CS are targeted by the attention and memory tasks under consideration, this suggests that individual differences in the rank&hyphen;ordering of separations between cognitive states are manifested in general measures of performance, while individual differences in the degree of separation between two states are manifested in task&hyphen;specific measures pertaining to those states. </p></section></section>
+<section level="1" id="section11"><title>Discussion</title><p id="para36"> Anatomical connectivity plays an important role in shaping human cognitive function. To systematically probe relationships between neural anatomy, function, and behavior, we examine structural and functional connectivity within and between two functional networks, task&hyphen;positive and task&hyphen;negative, that have been implicated in a wide range of task&hyphen;free and task&hyphen;driven studies of brain function <citref rids="ref7 ref9 ref11 ref12 ref13">7,9,11&ndash;13</citref>. We develop an intuitive framework for understanding how structural connectivity within and between these networks shapes task&hyphen;dependent correlations in neural activity. Within this framework, cognitive states can be characterized by patterns of structural connectivity that support strong functional correlations. When examined across many subjects, differences between cognitive states are linked to differences in behavioral task performance. </p><p id="para37">We find that the relative number of structural connections between task&hyphen;positive and task&hyphen;negative networks differentially supports strong, task&hyphen;dependent functional connectivity, suggesting that task performance modulates interactions within task&hyphen;based networks by altering the strength of the strongest interactions. The finding that strong resting&hyphen;state FC is supported by increased coupling within the task&hyphen;negative network but decreased coupling between the task&hyphen;positive and task&hyphen;negative networks supports the view of default mode function described in a wide range of studies <citref rids="ref2 ref5 ref6 ref7">2,5&ndash;7</citref>. Similarly, the increased coupling within the task&hyphen;positive network during attention and within the task&hyphen;negative network during memory supports previously identified task&hyphen;positive regions important for attention <citref rids="ref7">7</citref>and task&hyphen;negative regions important for memory <citref rids="ref12 ref13">12,13</citref>. It has additionally been suggested that the task&hyphen;positive network can be decomposed into three subnetworks <citref rids="ref10">10</citref>, and separate examination of structural and functional features within these subnetworks may further delineate the structure&hyphen;function relationships that distinguish between different task states. </p><p id="para38">The space mapped out by couplings within and between the task&hyphen;positive and task&hyphen;negative networks can be used to assign a quantitative measure to the separation between resting, attention, and memory states. When compared across subjects, we find a high degree of consistency in the relative separation between states, with a majority of subjects showing small separations between attention and memory states but large separations in these two states from rest. This suggests that, within individual subjects, strong task&hyphen;dependent changes in FC are supported by similar patterns of SC. </p><p id="para39">We do find subjects who deviate from this pattern of organization, exhibiting large separations between attention and memory states. Such large separations indicate that changes in the strength of functional correlations associated with attention versus memory tasks are supported by different patterns of structural connectivity. The deviation of these subjects from the majority, as measured by structural and functional connectivity, has two important consequences for behavioral performance. First, the subjects who differ from the majority in relative separation between cognitive states also differ from the majority in general measures of behavioral performance. Second, the way in which these subjects differ from the majority, namely by exhibiting larger separations between attention and memory states, matches the way in which they differ from the majority in behavioral performance, in that they exhibit larger relative differences in task&hyphen;specific measures of attention and memory performance. These findings suggest that the overall organization of rest and task states is predictive of general performance, while the degree of separation between two task states is predictive of relative differences in performance between the two tasks. </p><p id="para40">These findings build upon known structure&hyphen;function relationships in the human brain. Previous work has shown that structural properties shape global patterns of functional connectivity in a task&hyphen;dependent manner <citref rids="ref22">22</citref>. Our results show that these global changes are modulated by regional changes in connectivity patterns within and between functional networks. These findings are compatible with previous studies of default&hyphen;mode&lpar;task&hyphen;negativenulland fronto&hyphen;parietal&lpar;task&hyphen;positivenullnetworks, which found increases in intra&hyphen;network connectivity during memory tasks relative to rest, and increases in inter&hyphen;network connectivity with memory load <citref rids="ref34">34</citref>. However, our results provide a modified view of the role of network connectivity&colon;within the set of strongest connections, relative differences between inter&hyphen;versus intra&hyphen;network connectivity not only distinguish between cognitive states, but they also predict individual performance differences within and across tasks. A growing number of recent studies have found similar links between dynamic changes in functional connectivity and behavioral performance within single task domains <citref rids="ref18 ref19 ref20 ref21">18&ndash;21</citref>. This study builds on these ideas by examining the degree to which state&hyphen;dependent changes in connectivity, characterized by a measure of separation between cognitive states, is predictive of state&hyphen;dependent behavior. Together, these findings suggest an important role for dynamic reconfiguration of brain networks not only within individual cognitive states, as has been observed previously, but also across different states. </p>
+<section level="2" id="section12"><title>Methodological Considerations</title><p id="para41"> This work examined couplings within and between the task&hyphen;positive and task&hyphen;negative networks identified in <citref rids="ref7">7</citref>. However, a wide range of different functional networks have been identified in the human brain and have been linked to both resting&hyphen;state and task&hyphen;driven neural activity&lpar;e. g.  <citref rids="ref10 ref35 ref36">10,35,36</citref>null. A more detailed comparison of such functional networks could provide further insight into the structure&hyphen;function relationships that distinguish between different cognitive states. Furthermore, interactions within and between these networks have been shown to change throughout development <citref rids="ref37 ref38">37,38</citref>and aging <citref rids="ref39">39</citref>, suggesting that the state&hyphen;space of relationships found here could exhibit different characteristics across subjects of different ages. </p><p id="para42">We demonstrated that patterns of structural connectivity within and between task&hyphen;positive and task&hyphen;negative networks differentially support task&hyphen;dependent FC. The observed separation between cognitive states was measured as a function of the relative number of structural connections linking a given region pair, but qualitatively consistent results were observed when structural connectivity was defined in a binary manner based on the reliable presence of structural connections across a majority of subjects&lpar;Text S1null. Probabilistic tractography algorithms&lpar;e. g.  <citref rids="ref40">40</citref>null, which can identify crossing or branching fibers that would not be identified by the deterministic tractography algorithms used here, could improve estimates of structural connectivity and are therefore expected to further strengthen these results. Recent advances in computational platforms&lpar;e. g.  <citref rids="ref41 ref42 ref43">41&ndash;43</citref>nullprovide additional model&hyphen;based approaches for simulating brain dynamics using subject&hyphen;specific patterns of anatomical connectivity. These platforms enable the identification of spatiotemporal motifs that support cognitive activity, as well as the biophysical parameters that constrain these motifs. Such anatomically&hyphen;informed modeling approaches might help isolate features of structural brain architecture that shape the state&hyphen;space mapping described here, such as transmission delays induced by long fiber tracts, or signal amplification due to large fiber bundles. Furthermore, such approaches might identify additional network motifs that distinguish state&hyphen;dependent cognitive function. In combination with subject&hyphen;specific anatomical constraints, these methods could help elucidate how individual variability in anatomical connectivity constrains functional interactions to ultimately shape behavioral performance. </p><p id="para43">In assessing state&hyphen;space relationships, resting, attention, and memory functional scans were taken to represent individual cognitive states. However, there is evidence of spatial and temporal variability within single functional domains <citref rids="ref44 ref45 ref46 ref47">44&ndash;47</citref>, suggesting an interplay between multiple cognitive states that each become more or less active throughout the duration of a given scan. The framework presented here, when combined with approaches for assessing nonstationary correlational structure <citref rids="ref48">48</citref>, could help uncover structural features that distinguish different dynamical patterns of activity observed within a given functional domain. </p></section>
+<section level="2" id="section13"><title>Final Remarks</title><p id="para44"> The observation that structure&hyphen;function relationships between cognitive states exhibit common state&hyphen;space features suggests that these features may reflect general organizational principles of the brain. The state&hyphen;space representation may therefore be useful for defining normative bounds on large&hyphen;scale patterns of brain organization. When the features of this space are probed using suitably large numbers of subjects, regions of this space not occupied by healthy individuals could be predictive of disrupted structural or functional connectivity. A further characterization of the observed structure&hyphen;function relationships across different behavioral and genetic measures could potentially be used to develop objective diagnostic measures of disrupted functionality. </p></section></section><section level="1" type="SupportingInformation" id="section13"><title>Supporting Information</title><section level="2" type="supplementary-material" id="section14"><p id="para45" type="label">Text S1</p><section level="3" type="caption" id="section25"><p id="para46" type="p"><emph type="bold">Text S1. </emph>We first describe the experimental methods and participants of this study. We then describe the construction of task&hyphen;positive and task&hyphen;negative networks, and we highlight the specific anatomical regions of the brain involved in the task&hyphen;related network couplings<equ id="equ74" type="inline"><tex>$PP$</tex></equ>, <equ id="equ75" type="inline"><tex>$NN$</tex></equ>, <equ id="equ76" type="inline"><tex>$PN$</tex></equ>, and<equ id="equ77" type="inline"><tex>$\{*O\}$</tex></equ>. We then show the distributions of resting&hyphen;&lpar;<equ id="equ78" type="inline"><tex>$\mathrm{FC}_R$</tex></equ>null, attention&hyphen;&lpar;<equ id="equ79" type="inline"><tex>$\Delta\mathrm{FC}_R$</tex></equ>null, and memory&hyphen;state&lpar;<equ id="equ80" type="inline"><tex>$\Delta\mathrm{FC}_R$</tex></equ>nullfunctional correlations between<equ id="equ81" type="inline"><tex>$PP$</tex></equ>, <equ id="equ82" type="inline"><tex>$NN$</tex></equ>, and<equ id="equ83" type="inline"><tex>$PN$</tex></equ>region pairs. By thresholding these distributions of FC, we show the resulting variations<equ id="equ84" type="inline"><tex>$\Deltan_{PP}$</tex></equ>, <equ id="equ85" type="inline"><tex>$\Deltan_{NN}$</tex></equ>, and<equ id="equ86" type="inline"><tex>$\Deltan_{PN}$</tex></equ>in the number density of structural connections linking strongly&hyphen;correlated region pairs. Together, these distributions of<equ id="equ87" type="inline"><tex>$\Deltan$</tex></equ>were used to define the state&hyphen;space mapping of resting, attention, and memory states shown in Figure 2  of the main text. We show the observed separation between cognitive states is robust to the specific choices made in constructing the representative brain network and in thresholding the resulting distributions of FC. When compared across subjects, this state&hyphen;space mapping revealed significant inter&hyphen;subject organization in the relative separations between cognitive states, with subjects naturally organizing into primary and secondary groups&lpar;<figref rids="fig3">Figure&#146;3</figref> of the main textnull. We show that the observed organization into such groups is not an artifact of our specific analysis techniques, and we confirm that the primary and secondary groups are statistically similar to the groups identified by a clustering algorithm. Lastly, these groups were shown to exhibit significant differences in behavioral task performance&lpar;<figref rids="fig4">Figure&#146;4</figref> of the main textnull. We describe the full set of ANOVA results that were used to confirm the statistical significance of these performance differences. Here</p><p id="para47" type="p">&lpar;XXX&rpar;</p></section></section></body><back><acks><title>Acknowledgments</title><p id="para48"> We thank Mason Porter and Peter Mucha for valuable feedback. </p></acks><refs><title>References</title><fpage>277</fpage>&ndash;<lpage>290</lpage><fpage>2035</fpage>&ndash;<lpage>2040</lpage><fpage>e159</fpage><fpage>2233</fpage>&ndash;<lpage>2247</lpage><fpage>2921</fpage>&ndash;<lpage>2928</lpage><fpage>3127</fpage>&ndash;<lpage>3141</lpage><fpage>241</fpage>&ndash;<lpage>250</lpage><fpage>15154</fpage>&ndash;<lpage>15162</lpage><fpage>224</fpage>&ndash;<lpage>227</lpage><fpage>472</fpage>&ndash;<lpage>479</lpage><fpage>527</fpage>&ndash;<lpage>537</lpage><fpage>541</fpage>&ndash;<lpage>549</lpage><fpage>130</fpage>&ndash;<lpage>139</lpage><fpage>101</fpage>&ndash;<lpage>113</lpage><fpage>399</fpage><fpage>1187</fpage>&ndash;<lpage>1194</lpage><fpage>2636</fpage>&ndash;<lpage>2646</lpage><fpage>7641</fpage>&ndash;<lpage>7646</lpage><fpage>858</fpage>&ndash;<lpage>867</lpage><fpage>764</fpage>&ndash;<lpage>772</lpage><fpage>335</fpage>&ndash;<lpage>343</lpage><fpage>42</fpage>&ndash;<lpage>52</lpage><fpage>18578</fpage>&ndash;<lpage>18589</lpage><fpage>121</fpage>&ndash;<lpage>129</lpage><fpage>554</fpage>&ndash;<lpage>561</lpage><fpage>1628</fpage>&ndash;<lpage>1638</lpage><fpage>19518</fpage>&ndash;<lpage>19523</lpage><fpage>050905</fpage><fpage>5958</fpage>&ndash;<lpage>5962</lpage><fpage>1</fpage>&ndash;<lpage>12</lpage><fpage>954</fpage>&ndash;<lpage>956</lpage><fpage>862</fpage>&ndash;<lpage>872</lpage><fpage>1</fpage>&ndash;<lpage>38</lpage><fpage>571</fpage>&ndash;<lpage>585</lpage><fpage>1690</fpage>&ndash;<lpage>1701</lpage><fpage>1432</fpage>&ndash;<lpage>1447</lpage><fpage>821</fpage>&ndash;<lpage>830</lpage><fpage>378</fpage>&ndash;<lpage>390</lpage><fpage>865</fpage>&ndash;<lpage>874</lpage><fpage>543</fpage>&ndash;<lpage>546</lpage>&lpar;<fpage>1828</fpage>&ndash;<lpage>1851</lpage><fpage>163</fpage>&ndash;<lpage>203</lpage><fpage>194</fpage>&ndash;<lpage>201</lpage>&lpar;<fpage>4259</fpage>&ndash;<lpage>4264</lpage><fpage>826</fpage>&ndash;<lpage>835</lpage><fpage>1520</fpage>&ndash;<lpage>1534</lpage><fpage>292</fpage>&ndash;<lpage>297</lpage><fpage>766</fpage>&ndash;<lpage>776</lpage><fpage>239</fpage>&ndash;<lpage>240</lpage><fpage>761</fpage>&ndash;<lpage>773</lpage><fpage>788</fpage>&ndash;<lpage>792</lpage><fpage>56</fpage>&ndash;<lpage>78</lpage><fpage>527</fpage>&ndash;<lpage>537</lpage><fpage>3270</fpage>&ndash;<lpage>3283</lpage><fpage>625</fpage>&ndash;<lpage>637</lpage><fpage>1</fpage>&ndash;<lpage>11</lpage><fpage>17558</fpage>&ndash;<lpage>17563</lpage>
+<cit id="ref1" num="1" type="journal"><author><surname>ERaichle</surname><initial>M</initial></author><author><surname>MMacLeod</surname><initial>A</initial></author><author><surname>ZSnyder</surname><initial>A</initial></author><author><surname>JPowers</surname><initial>W</initial></author><author><surname>AGusnard</surname><initial>D</initial></author><author><surname>LShulman</surname><initial>G</initial></author>&lpar;<date><year>2001</year></date>&rpar;<cit-tl>A default mode of brain function.</cit-tl><pub-tl>Proc. Natl. Acad. Sci. USA</pub-tl><vol>98</vol> &colon;<pages><fpage>676</fpage>&ndash;<lpage>682</lpage></pages>.</cit>
+<cit id="ref10" num="10" type="journal"><author><surname>DPower</surname><initial>J</initial></author><author><surname>LCohen</surname><initial>A</initial></author><author><surname>MNelson</surname><initial>S</initial></author><author><surname>SWig</surname><initial>G</initial></author><author><surname>ABarnes</surname><initial>K</initial></author><author><surname>AChurch</surname><initial>J</initial></author><author><surname>CVogel</surname><initial>A</initial></author><author><surname>OLaumann</surname><initial>T</initial></author><author><surname>MMiezin</surname><initial>F</initial></author><author><surname>LSchlagger</surname><initial>B</initial></author><author><surname>EPeterson</surname><initial>S</initial></author>&lpar;<date><year>2011</year></date>&rpar;<cit-tl>Functional Network Organization of the Human Brain.</cit-tl><pub-tl>Neuron</pub-tl><vol>72</vol> &colon;<pages><fpage>665</fpage>&ndash;<lpage>678</lpage></pages>.</cit>
+<cit id="ref11" num="11" type="journal"><author><surname>Mennes</surname><initial>M</initial></author><author><surname>Kelly</surname><initial>C</initial></author><author><surname>NZuo</surname><initial>X</initial></author><author><surname>DiMartino</surname><initial>A</initial></author><author><surname>BBiswal</surname><initial>B</initial></author><author><surname>XCastellanos</surname><initial>F</initial></author><author><surname>PMilham</surname><initial>M</initial></author>&lpar;<date><year>2011</year></date>&rpar;<cit-tl>Inter&hyphen;individual differences in resting&hyphen;state functional connectivity predict task&hyphen;induced BOLD activity.</cit-tl><pub-tl>NeuroImage</pub-tl><vol>50</vol> &colon;<pages><fpage>1690</fpage>&ndash;<lpage>1701</lpage></pages>.</cit>
+<cit id="ref12" num="12" type="journal"><author><surname>Hampson</surname><initial>M</initial></author><author><surname>RDriesen</surname><initial>N</initial></author><author><surname>KRoth</surname><initial>J</initial></author><author><surname>CGore</surname><initial>J</initial></author><author><surname>ToddConstable</surname><initial>R</initial></author>&lpar;<date><year>2010</year></date>&rpar;<cit-tl>Functional connectivity between task&hyphen;positive and task&hyphen;negative areas and its relation to working memory performance.</cit-tl><pub-tl>Magnetic Resonance Imaging</pub-tl><vol>28</vol> &colon;<pages><fpage>1051</fpage>&ndash;<lpage>1057</lpage></pages>.</cit>
+<cit id="ref13" num="13" type="journal"><author><surname>Kim</surname><initial>H</initial></author><author><surname>MDaselaar</surname><initial>S</initial></author><author><surname>Cabeza</surname><initial>R</initial></author>&lpar;<date><year>2010</year></date>&rpar;<cit-tl>Overlapping brain activity between episodic memory encoding and retrieval&colon;Roles of the task&hyphen;positive and task&hyphen;negative networks.</cit-tl><pub-tl>NeuroImage</pub-tl><vol>49</vol> &colon;<pages><fpage>1045</fpage>&ndash;<lpage>1054</lpage></pages>.</cit>
+<cit id="ref14" num="14" type="journal"><author><surname>DGreicius</surname><initial>M</initial></author><author><surname>Supekar</surname><initial>K</initial></author><author><surname>Menon</surname><initial>V</initial></author><author><surname>FDougherty</surname><initial>R</initial></author>&lpar;<date><year>2009</year></date>&rpar;<cit-tl>Resting&hyphen;State Functional Connectivity Reflects Structural Connectivity in the Default Mode Network.</cit-tl><pub-tl>Cereb. Cortex</pub-tl><vol>19</vol> &colon;<pages><fpage>72</fpage>&ndash;<lpage>78</lpage></pages>.</cit>
+<cit id="ref15" num="15" type="journal"><author><surname>JBroyd</surname><initial>S</initial></author><author><surname>Demanuele</surname><initial>C</initial></author><author><surname>Debener</surname><initial>S</initial></author><author><surname>KHelps</surname><initial>S</initial></author><author><surname>JJames</surname><initial>C</initial></author><author><surname>JSSonugaBarke</surname><initial>E</initial></author>&lpar;<date><year>2009</year></date>&rpar;<cit-tl>Default&hyphen;mode brain dysfunction in mental disorders&colon;A systematic review.</cit-tl><pub-tl>Neurosci, Biobehav. Rev. </pub-tl><vol>33</vol> &colon;<pages><fpage>279</fpage>&ndash;<lpage>296</lpage></pages>.</cit>
+<cit id="ref16" num="16" type="journal"><author><surname>PKennedy</surname><initial>D</initial></author><author><surname>Courchesne</surname><initial>E</initial></author>&lpar;<date><year>2008</year></date>&rpar;<cit-tl>The intrinsic functional organization of the brain is altered in autism.</cit-tl><pub-tl>NeuroImage</pub-tl><vol>39</vol> &colon;<pages><fpage>1877</fpage>&ndash;<lpage>1885</lpage></pages>.</cit>
+<cit id="ref17" num="17" type="journal"><author><surname>Liu</surname><initial>H</initial></author><author><surname>Kaneko</surname><initial>Y</initial></author><author><surname>Ouyang</surname><initial>X</initial></author><author><surname>Li</surname><initial>L</initial></author><author><surname>Hao</surname><initial>Y</initial></author><author><surname>YHChen</surname><initial>E</initial></author><author><surname>Jiang</surname><initial>T</initial></author><author><surname>Zhou</surname><initial>Y</initial></author><author><surname>Liu</surname><initial>Z</initial></author>&lpar;<date><year>2012</year></date>&rpar;<cit-tl>Schizophrenic Patients and Their Unaffected Siblings Share Increased Resting&hyphen;State Connectivity in the Task&hyphen;Negative Network but Not Its Anticorrelated Task&hyphen;Positive Network.</cit-tl><pub-tl>Schizoph. bull</pub-tl><vol>38</vol> &colon;<pages><fpage>285</fpage>&ndash;<lpage>294</lpage></pages>.</cit>
+<cit id="ref18" num="18" type="journal"><author><surname>LDaitch</surname><initial>A</initial></author><author><surname>Sharma</surname><initial>M</initial></author><author><surname>LRoland</surname><initial>J</initial></author><author><surname>VAstafiev</surname><initial>S</initial></author><author><surname>TBundy</surname><initial>D</initial></author><author><surname>MGaona</surname><initial>C</initial></author><author><surname>ZSnyder</surname><initial>A</initial></author><author><surname>LShulman</surname><initial>G</initial></author><author><surname>CLeuthardt</surname><initial>E</initial></author><author><surname>Corbetta</surname><initial>M</initial></author>&lpar;<date><year>2013</year></date>&rpar;<cit-tl>Frequency&hyphen;specific mechanism links human brain networks for spatial attention</cit-tl><pub-tl>Proc. Natl. Acad. Sci. USA. </pub-tl><vol>110 </vol> &colon;<pages><fpage>19585</fpage>&ndash;<lpage>19590</lpage></pages>.</cit>
+<cit id="ref19" num="19" type="journal"><author><surname>Fornito</surname><initial>A</initial></author><author><surname>JHarrison</surname><initial>B</initial></author><author><surname>Zalesky</surname><initial>A</initial></author><author><surname>SSimons</surname><initial>J</initial></author>&lpar;<date><year>2012</year></date>&rpar;<cit-tl>Competitive and cooperative dynamics of large&hyphen;scale brain functional networks supporting recollection.</cit-tl><pub-tl>Proc. Natl. Acad. Sci. USA. </pub-tl><vol>109</vol> &colon;<pages><fpage>12788</fpage>&ndash;<lpage>12793</lpage></pages>.</cit>
+<cit id="ref2" num="2" type="journal"><author><surname>DFox</surname><initial>M</initial></author><author><surname>ERaichle</surname><initial>M</initial></author>&lpar;<date><year>2007</year></date>&rpar;<cit-tl>Spontaneous fluctuations in brain activity observed with functional magnetic resonance imaging.</cit-tl><pub-tl>Nat. Rev. Neurosci. </pub-tl><vol>8</vol> &colon;<pages><fpage>700</fpage>&ndash;<lpage>711</lpage></pages>.</cit>
+<cit id="ref20" num="20" type="journal"><author><surname>Bassett</surname><initial>D</initial><initial>S</initial></author>,<author><surname>Wymbs</surname><initial>N</initial><initial>F</initial></author>,<author><surname>Porter</surname><initial>M</initial><initial>A</initial></author>,<author><surname>Mucha</surname><initial>P</initial><initial>J</initial></author>,<author><surname>Carlson</surname><initial>J</initial><initial>M</initial></author>,<author><surname>Grafton</surname><initial>S</initial><initial>T</initial></author>&lpar;<date><year>2011</year></date>&rpar;<cit-tl>Dynamic reconfiguration of human brain networks during learning.</cit-tl><pub-tl>Proc Natl Acad Sci USA</pub-tl><vol>108</vol> &colon;<pages><fpage>7641</fpage>&ndash;<lpage>7646</lpage></pages>.</cit>
+<cit id="ref21" num="21" type="journal"><author><surname>SBassett</surname><initial>D</initial></author><author><surname>FWymbs</surname><initial>N</initial></author><author><surname>PRombach</surname><initial>M</initial></author><author><surname>APorter</surname><initial>M</initial></author><author><surname>JMucha</surname><initial>P</initial></author><author><surname>TGrafton</surname><initial>S</initial></author>&lpar;<date><year>2013</year></date>&rpar;<cit-tl>Task&hyphen;based core&hyphen;periphery organization of human brain dynamics.</cit-tl><pub-tl>PLoS Comput. Biol. </pub-tl><vol>9</vol> &colon;<pages><fpage>e1003171</fpage></pages>.</cit>
+<cit id="ref22" num="22" type="journal"><author><surname>Hermundstad</surname><initial>A</initial><initial>M</initial></author>,<author><surname>Bassett</surname><initial>D</initial><initial>S</initial></author>,<author><surname>Brown</surname><initial>K</initial><initial>S</initial></author>,<author><surname>Aminoff</surname><initial>E</initial><initial>M</initial></author>,<author><surname>Freeman</surname><initial>S</initial></author>,<author><surname>Clewett</surname><initial>D</initial></author>,<author><surname>Tipper</surname><initial>C</initial><initial>M</initial></author>,<author><surname>Frithsen</surname><initial>A</initial></author>,<author><surname>Johnson</surname><initial>A</initial></author>,<author><surname>Miller</surname><initial>M</initial><initial>B</initial></author>,<author><surname>Grafton</surname><initial>S</initial><initial>T</initial></author>,<author><surname>MCarlson</surname><initial>J</initial></author>&lpar;<date><year>2013</year></date>&rpar;<cit-tl>Structural foundations of resting&hyphen;state and task&hyphen;based neural activity in the human brain.</cit-tl><pub-tl>Proc. Natl. Acad. Sci. USA</pub-tl><vol>49</vol> &colon;<pages><fpage>1045</fpage>&ndash;<lpage>1054</lpage></pages>.</cit>
+<cit id="ref23" num="23" type="journal"><author><surname>Bullmore</surname><initial>E</initial></author><author><surname>Sporns</surname><initial>O</initial></author>&lpar;<date><year>2009</year></date>&rpar;<cit-tl>Complex brain networks&colon;graph theoretical analysis of structural and functional systems.</cit-tl><pub-tl>Nat. Rev. Neurosci. </pub-tl><vol>10</vol> &colon;<pages><fpage>186</fpage>&ndash;<lpage>198</lpage></pages>.</cit>
+<cit id="ref24" num="24" type="journal"><author><surname>Bullmore</surname><initial>E</initial></author><author><surname>SBassett</surname><initial>D</initial></author>&lpar;<date><year>2011</year></date>&rpar;<cit-tl>Brain graphs&colon;graphical models of the human brain connectome.</cit-tl><pub-tl>AR Clinical Psychol. </pub-tl><vol>7</vol> &colon;<pages><fpage>113</fpage>&ndash;<lpage>140</lpage></pages>.</cit>
+<cit id="ref25" num="25" type="journal"><author><surname>Mazoyer</surname><initial>T</initial></author><author><surname>Landeau</surname><initial>B</initial></author><author><surname>Papathanassiou</surname><initial>D</initial></author><author><surname>Crivello</surname><initial>F</initial></author><author><surname>Etard</surname><initial>O</initial></author><author><surname>Delcroix</surname><initial>N</initial></author><author><surname>Mazoyer</surname><initial>B</initial></author><author><surname>Joliot</surname><initial>M</initial></author>&lpar;<date><year>2002</year></date>&rpar;<cit-tl>Automated Anatomical Labeling of Activations in SPM Using a Macroscopic Anatomical Parcellation of the MNI MRI Single&hyphen;Subject Brain.</cit-tl><pub-tl>NeuroImage</pub-tl><vol>15</vol> &colon;<pages><fpage>273</fpage>&ndash;<lpage>289</lpage></pages>.</cit>
+<cit id="ref26" num="26" type="journal"><author><surname>MAminoff</surname><initial>E</initial></author><author><surname>Clewett</surname><initial>D</initial></author><author><surname>Freeman</surname><initial>S</initial></author><author><surname>Frithsen</surname><initial>A</initial></author><author><surname>Tipper</surname><initial>C</initial></author><author><surname>Johnson</surname><initial>A</initial></author><author><surname>TGrafton</surname><initial>S</initial></author><author><surname>BMiller</surname><initial>M</initial></author>&lpar;<date><year>2012</year></date>&rpar;<cit-tl>Individual differences in shifting decision criterion&colon;A recognition memory study.</cit-tl><pub-tl>Mem. Cogn. </pub-tl><vol>40</vol> &colon;<pages><fpage>127</fpage>&ndash;<lpage>134</lpage></pages>.</cit>
+<cit id="ref27" num="27" type="journal"><author><surname>ERaichle</surname><initial>M</initial></author><author><surname>AMinturn</surname><initial>M</initial></author>&lpar;<date><year>2006</year></date>&rpar;<cit-tl>Brain Work and Brain Imaging.</cit-tl><pub-tl>Annu. Rev. Neurosci. </pub-tl><vol>29</vol> &colon;<pages><fpage>449</fpage>&ndash;<lpage>476</lpage></pages>.</cit>
+<cit id="ref28" num="28" type="journal"><author><surname>Achard</surname><initial>S</initial></author>,<author><surname>Salvador</surname><initial>R</initial></author>,<author><surname>Whitcher</surname><initial>B</initial></author>,<author><surname>Suckling</surname><initial>J</initial></author>,<author><surname>Bullmore</surname><initial>E</initial></author>&lpar;<date><year>2006</year></date>&rpar;<cit-tl>A resilient, low&hyphen;frequency, small&hyphen;world human brain functional network with highly connected association cortical hubs.</cit-tl><pub-tl>J. Neurosci. </pub-tl><vol>26</vol> &colon;<pages><fpage>63</fpage>&ndash;<lpage>72</lpage></pages>.</cit>
+<cit id="ref29" num="29" type="journal"><author><surname>Simpson</surname><initial>S</initial><initial>L</initial></author>,<author><surname>Moussa</surname><initial>M</initial><initial>N</initial></author>,<author><surname>Laurienti</surname><initial>P</initial><initial>J</initial></author>&lpar;<date><year>2012</year></date>&rpar;<cit-tl>An exponential random graph modeling approach to creating group&hyphen;based representative connectivity networks.</cit-tl><pub-tl>NeuroImage</pub-tl><vol>60</vol> &colon;<pages><fpage>1117</fpage>&ndash;<lpage>1126</lpage></pages>.</cit>
+<cit id="ref3" num="3" type="journal"><author><surname>Greicius</surname><initial>M</initial><initial>D</initial></author>,<author><surname>Krasnow</surname><initial>B</initial></author>,<author><surname>Reiss</surname><initial>A</initial><initial>L</initial></author>,<author><surname>Menon</surname><initial>V</initial></author>&lpar;<date><year>2003</year></date>&rpar;<cit-tl>Functional connectivity in the resting brain&colon;a network analysis of the default mode hypothesis.</cit-tl><pub-tl>Proc Natl Acad Sci U S A</pub-tl><vol>100</vol> &colon;<pages><fpage>253</fpage>&ndash;<lpage>258</lpage></pages>.</cit>
+<cit id="ref30" num="30" type="journal"><author><surname>SBassett</surname><initial>D</initial></author><author><surname>ABrown</surname><initial>J</initial></author><author><surname>Deshpande</surname><initial>V</initial></author><author><surname>MCarlson</surname><initial>J</initial></author><author><surname>TGrafton</surname><initial>S</initial></author>&lpar;<date><year>2011</year></date>&rpar;<cit-tl>Conserved and variable architecture of human white matter connectivity.</cit-tl><pub-tl>NeuroImage</pub-tl><vol>54</vol> &colon;<pages><fpage>1262</fpage>&ndash;<lpage>1279</lpage></pages>.</cit>
+<cit id="ref31" num="31" type="journal"><author><surname>He</surname><initial>Y</initial></author><author><surname>JChen</surname><initial>Z</initial></author><author><surname>CEvans</surname><initial>A</initial></author>&lpar;<date><year>2007</year></date>&rpar;<cit-tl>Small&hyphen;world anatomical networks in the human brain revealed by cortical thickness from MRI.</cit-tl><pub-tl>Cereb. Cortex</pub-tl><vol>17</vol> &colon;<pages><fpage>2407</fpage>&ndash;<lpage>2419</lpage></pages>.</cit>
+<cit id="ref32" num="32" type="journal"><author><surname>Archard</surname><initial>S</initial></author><author><surname>TBullmore</surname><initial>E</initial></author>&lpar;<date><year>2007</year></date>&rpar;<cit-tl>Efficiency and cost of economical brain functional networks.</cit-tl><pub-tl>PLoS Comput. Biol. </pub-tl><vol>3</vol> &colon;<pages><fpage>e17</fpage></pages>.</cit>
+<cit id="ref33" num="33" type="journal"><author><surname>SBassett</surname><initial>D</initial></author><author><surname>TBullmore</surname><initial>E</initial></author><author><surname>AVerchinski</surname><initial>B</initial></author><author><surname>SMattay</surname><initial>V</initial></author><author><surname>RWeinberger</surname><initial>D</initial></author><author><surname>MeyerLindenberg</surname><initial>A</initial></author>&lpar;<date><year>2008</year></date>&rpar;<cit-tl>Hierarchical organization of human cortical networks in health and schizophrenia.</cit-tl><pub-tl>J. Neurosci. </pub-tl><vol>28</vol> &colon;<pages><fpage>9239</fpage>&ndash;<lpage>9248</lpage></pages>.</cit>
+<cit id="ref34" num="34" type="journal"><author><surname>Repovs</surname><initial>G</initial></author>,<author><surname>Barch</surname><initial>D</initial><initial>M</initial></author>&lpar;<date><year>2009</year></date>&rpar;<cit-tl>Working memory related brain network connectivity in individuals with schizophrenia and their siblings.</cit-tl><pub-tl>Front. Hum. Neurosci. </pub-tl><vol>6</vol> &colon;<pages><fpage>12788</fpage>&ndash;<lpage>12793</lpage></pages>.</cit>
+<cit id="ref35" num="35" type="journal"><author><surname>UFDosenbach</surname><initial>N</initial></author><author><surname>MVisscher</surname><initial>K</initial></author><author><surname>DPalmer</surname><initial>E</initial></author><author><surname>MMiezin</surname><initial>F</initial></author><author><surname>KWenger</surname><initial>K</initial></author><author><surname>CKang</surname><initial>H</initial></author><author><surname>DarcyBurgund</surname><initial>E</initial></author><author><surname>LGrimes</surname><initial>A</initial></author><author><surname>LSchlaggar</surname><initial>B</initial></author><author><surname>EPetersen</surname><initial>S</initial></author>&lpar;<date><year>2006</year></date>&rpar;<cit-tl>A Core System for the Implementation of Task Sets.</cit-tl><pub-tl>Neuron</pub-tl><vol>50</vol> &colon;<pages><fpage>799</fpage>&ndash;<lpage>812</lpage></pages>.</cit>
+<cit id="ref36" num="36" type="journal"><author><surname>UFDosenbach</surname><initial>N</initial></author><author><surname>AFair</surname><initial>D</initial></author><author><surname>MMiezin</surname><initial>F</initial></author><author><surname>LCohen</surname><initial>A</initial></author><author><surname>KWenger</surname><initial>K</initial></author><author><surname>ATDosenbach</surname><initial>R</initial></author><author><surname>DFox</surname><initial>M</initial></author><author><surname>ZSnyder</surname><initial>A</initial></author><author><surname>LVincent</surname><initial>J</initial></author><author><surname>ERaichle</surname><initial>M</initial></author><author><surname>LSchlaggar</surname><initial>B</initial></author><author><surname>EPetersen</surname><initial>S</initial></author>&lpar;<date><year>2007</year></date>&rpar;<cit-tl>Distinct brain networks for adaptive and stable task control in humans.</cit-tl><pub-tl>Proc. Natl. Acad. Sci. USA</pub-tl><vol>104</vol> &colon;<pages><fpage>11073</fpage>&ndash;<lpage>11078</lpage></pages>.</cit>
+<cit id="ref37" num="37" type="journal"><author><surname>AFair</surname><initial>D</initial></author><author><surname>LCohen</surname><initial>A</initial></author><author><surname>DPower</surname><initial>J</initial></author><author><surname>UFDosenbach</surname><initial>N</initial></author><author><surname>AChurch</surname><initial>J</initial></author><author><surname>MMeizin</surname><initial>F</initial></author><author><surname>LSchlagger</surname><initial>B</initial></author><author><surname>EPetersen</surname><initial>S</initial></author>&lpar;<date><year>2009</year></date>&rpar;<cit-tl>Functional Brain Networks Develop from a&ldquo;Local to Distributed" Organization.</cit-tl><pub-tl>PloS Comput. Biol. </pub-tl><vol>5</vol> &colon;<pages><fpage>e1000381</fpage></pages>.</cit>
+<cit id="ref38" num="38" type="journal"><author><surname>Supekar</surname><initial>K</initial></author><author><surname>Musen</surname><initial>M</initial></author><author><surname>Menon</surname><initial>V</initial></author>&lpar;<date><year>2009</year></date>&rpar;<cit-tl>Development of Large&hyphen;Scale Functional Brain Networks in Children.</cit-tl><pub-tl>PloS Biol. </pub-tl><vol>7</vol> &colon;<pages><fpage>e1000157</fpage></pages>.</cit>
+<cit id="ref39" num="39" type="journal"><author><surname>Beason&hyphen;HeldLL</surname><initial>K</initial><initial>M</initial><initial>A</initial></author>&lpar;<date><year>2009</year></date>&rpar;<cit-tl>Stability Of Default&hyphen;Mode Network Activity In The Aging Brain.</cit-tl><pub-tl>Brain Imaging Behav. </pub-tl><vol>3</vol> &colon;<pages><fpage>123</fpage>&ndash;<lpage>131</lpage></pages>.</cit>
+<cit id="ref4" num="4" type="journal"><author><surname>SDamoiseaux</surname><initial>J</initial></author><author><surname>ARBRombouts</surname><initial>S</initial></author><author><surname>Barkhof</surname><initial>F</initial></author><author><surname>Scheltens</surname><initial>P</initial></author><author><surname>JStam</surname><initial>C</initial></author><author><surname>MSmith</surname><initial>S</initial></author><author><surname>FBeckmann</surname><initial>C</initial></author>&lpar;<date><year>2006</year></date>&rpar;<cit-tl>Consistent resting&hyphen;state networks across healthy subjects.</cit-tl><pub-tl>Proc. Natl. Acad. Sci. USA</pub-tl><vol>103</vol> &colon;<pages><fpage>13848</fpage>&ndash;<lpage>13853</lpage></pages>.</cit>
+<cit id="ref40" num="40" type="journal"><author><surname>Parker</surname><initial>G</initial><initial>J</initial></author>,<author><surname>Alexander</surname><initial>D</initial><initial>C</initial></author>&lpar;<date><year>2003</year></date>&rpar;<cit-tl>ProbabilisticMonteCarlo based mapping of cerebral connections utilising whole&hyphen;brain crossing fibre information.</cit-tl><pub-tl>Information Processing in Medical Imaging</pub-tl><vol>18</vol> &colon;<pages><fpage>684</fpage>&ndash;<lpage>695</lpage></pages>.</cit>
+<cit id="ref41" num="41" type="journal"><author><surname>AKnock</surname><initial>S</initial></author><author><surname>RMcIntosh</surname><initial>A</initial></author><author><surname>SpornsRKotter</surname><initial>O</initial></author><author><surname>Hagmann</surname><initial>P</initial></author><author><surname>KJirsa</surname><initial>V</initial></author>&lpar;<date><year>2009</year></date>&rpar;<cit-tl>The effects of physiologically plausible connectivity structure on local and global dynamics in large scale brain models.</cit-tl><pub-tl>J. Neurosci. Methods</pub-tl><vol>183</vol> &colon;<pages><fpage>86</fpage>&ndash;<lpage>94</lpage></pages>.</cit>
+<cit id="ref42" num="42" type="journal"><author><surname>SanzLeon</surname><initial>P</initial></author><author><surname>AKnock</surname><initial>S</initial></author><author><surname>MWoodman</surname><initial>M</initial></author><author><surname>Domide</surname><initial>L</initial></author><author><surname>Mersmann</surname><initial>J</initial></author><author><surname>RMcIntosh</surname><initial>A</initial></author><author><surname>Jirsa</surname><initial>V</initial></author>&lpar;<date><year>2013</year></date>&rpar;<cit-tl>The Virtual Brain&colon;a simulator of primate brain network dynamics.</cit-tl><pub-tl>Front. Neuroinform. </pub-tl><vol>7</vol> &colon;<pages><fpage>1</fpage>&ndash;<lpage>23</lpage></pages>.</cit>
+<cit id="ref43" num="43" type="journal"><author><surname>Ritter</surname><initial>P</initial></author><author><surname>Schirner</surname><initial>M</initial></author><author><surname>RMcIntosh</surname><initial>A</initial></author><author><surname>KJirsa</surname><initial>V</initial></author>&lpar;<date><year>2013</year></date>&rpar;<cit-tl>The Virtual Brain Integrates Computational Modeling and Multimodal Neuroimaging.</cit-tl><pub-tl>Brain Conn. </pub-tl><vol>3</vol> &colon;<pages><fpage>121</fpage>&ndash;<lpage>145</lpage></pages>.</cit>
+<cit id="ref44" num="44" type="journal"><author><surname>Chang</surname><initial>C</initial></author><author><surname>HGlover</surname><initial>G</initial></author>&lpar;<date><year>2010</year></date>&rpar;<cit-tl>Time&hyphen;frequency dynamics of resting&hyphen;state brain connectivity measured with fMRI.</cit-tl><pub-tl>NeuroImage</pub-tl><vol>50</vol> &colon;<pages><fpage>81</fpage>&ndash;<lpage>98</lpage></pages>.</cit>
+<cit id="ref45" num="45" type="journal"><author><surname>Kang</surname><initial>J</initial></author>,<author><surname>Wang</surname><initial>L</initial></author>,<author><surname>Yan</surname><initial>C</initial></author>,<author><surname>Wang</surname><initial>J</initial></author>,<author><surname>Liang</surname><initial>X</initial></author>,<author><surname>He</surname><initial>Y</initial></author>&lpar;<date><year>2011</year></date>&rpar;<cit-tl>Characterizing dynamic functional connectivity in the resting brain using variable parameter regression and Kalman filtering approaches.</cit-tl><pub-tl>NeuroImage</pub-tl><vol>56</vol> &colon;<pages><fpage>1222</fpage>&ndash;<lpage>1234</lpage></pages>.</cit>
+<cit id="ref46" num="46" type="journal"><author><surname>Kiviniemi</surname><initial>V</initial></author>,<author><surname>Vire</surname><initial>T</initial></author>,<author><surname>Remes</surname><initial>J</initial></author>,<author><surname>Elseoud</surname><initial>A</initial><initial>A</initial></author>,<author><surname>Starck</surname><initial>T</initial></author>,<author><surname>Tervonen</surname><initial>O</initial></author>,<author><surname>Nikkinen</surname><initial>J</initial></author>&lpar;<date><year>2011</year></date>&rpar;<cit-tl>A sliding time&hyphen;window ICA reveals spatial variability of the default mode network in time.</cit-tl><pub-tl>Brain Connect. </pub-tl><vol>1</vol> &colon;<pages><fpage>339</fpage>&ndash;<lpage>347</lpage></pages>.</cit>
+<cit id="ref47" num="47" type="journal"><author><surname>AAllen</surname><initial>E</initial></author><author><surname>Damaraju</surname><initial>E</initial></author><author><surname>MPlis</surname><initial>S</initial></author><author><surname>BErhardt</surname><initial>E</initial></author><author><surname>Eichele</surname><initial>T</initial></author><author><surname>DCalhoun</surname><initial>V</initial></author>&lpar;<date><year>2012</year></date>&rpar;<cit-tl>Tracking Whole&hyphen;Brain Connectivity Dynamics in the Resting State.</cit-tl><pub-tl>Cereb. Cortex</pub-tl><vol>3</vol> &colon;<pages><fpage>123</fpage>&ndash;<lpage>131</lpage></pages>.</cit>
+<cit id="ref48" num="48" type="journal"><author><surname>Liu</surname><initial>X</initial></author><author><surname>HDuyn</surname><initial>J</initial></author>&lpar;<date><year>2013</year></date>&rpar;<cit-tl>Time&hyphen;varying functional network information extracted from brief instances of spontaneous brain activity.</cit-tl><pub-tl>Proc. Natl. Acad. Sci. USA</pub-tl><vol>110</vol> &colon;<pages><fpage>4392</fpage>&ndash;<lpage>4397</lpage></pages>.</cit>
+<cit id="ref5" num="5" type="journal"><author><surname>YuLong</surname><initial>X</initial></author><author><surname>NianZuo</surname><initial>X</initial></author><author><surname>Kiviniemi</surname><initial>V</initial></author><author><surname>Yang</surname><initial>Y</initial></author><author><surname>HongZou</surname><initial>Q</initial></author><author><surname>ZheZhu</surname><initial>C</initial></author><author><surname>ZiJiang</surname><initial>T</initial></author><author><surname>Yang</surname><initial>H</initial></author><author><surname>YongGong</surname><initial>Q</initial></author><author><surname>Wang</surname><initial>L</initial></author><author><surname>ChengLi</surname><initial>K</initial></author><author><surname>Xie</surname><initial>S</initial></author><author><surname>FengZang</surname><initial>Y</initial></author>&lpar;<date><year>2009</year></date>&rpar;<cit-tl>Default mode network as revealed with multiple methods for resting&hyphen;statefunctional MRI analysis.</cit-tl><pub-tl>J. Neurosci. Methods</pub-tl><vol>171</vol> &colon;<pages><fpage>349</fpage>&ndash;<lpage>355</lpage></pages>.</cit>
+<cit id="ref6" num="6" type="journal"><author><surname>Shehzad</surname><initial>Z</initial></author><author><surname>MClareKelly</surname><initial>A</initial></author><author><surname>TReiss</surname><initial>P</initial></author><author><surname>GGee</surname><initial>D</initial></author><author><surname>Gotimer</surname><initial>K</initial></author><author><surname>QUddin</surname><initial>L</initial></author><author><surname>HanLee</surname><initial>S</initial></author><author><surname>SMargulies</surname><initial>D</initial></author><author><surname>KrainRoy</surname><initial>A</initial></author><author><surname>BBiswal</surname><initial>B</initial></author><author><surname>Petkova</surname><initial>E</initial></author><author><surname>XavierCastellanos</surname><initial>F</initial></author><author><surname>PMilham</surname><initial>M</initial></author>&lpar;<date><year>2009</year></date>&rpar;<cit-tl>The Resting Brain&colon;Unconstrained yet Reliable.</cit-tl><pub-tl>Cereb. Cortex</pub-tl><vol>19</vol> &colon;<pages><fpage>349</fpage>&ndash;<lpage>355</lpage></pages>.</cit>
+<cit id="ref7" num="7" type="journal"><author><surname>DFox</surname><initial>M</initial></author><author><surname>ZSnyder</surname><initial>A</initial></author><author><surname>LVincent</surname><initial>J</initial></author><author><surname>Corbetta</surname><initial>M</initial></author><author><surname>CVanEssen</surname><initial>D</initial></author><author><surname>ERaichle</surname><initial>M</initial></author>&lpar;<date><year>2005</year></date>&rpar;<cit-tl>The human brain is intrinsically organized into dynamic, anticorrelated functional networks.</cit-tl><pub-tl>Proc. Natl. Acad. Sci. USA. </pub-tl><vol>102</vol> &colon;<pages><fpage>9673</fpage>&ndash;<lpage>9678</lpage></pages>.</cit>
+<cit id="ref8" num="8" type="journal"><author><surname>DFox</surname><initial>M</initial></author><author><surname>Corbetta</surname><initial>M</initial></author><author><surname>ZSnyder</surname><initial>A</initial></author><author><surname>LVincent</surname><initial>J</initial></author><author><surname>ERaichle</surname><initial>M</initial></author>&lpar;<date><year>2006</year></date>&rpar;<cit-tl>Spontaneous neuronal activity distinguishes human dorsal and ventral attention systems.</cit-tl><pub-tl>Proc. Natl. Acad. Sci. USA. </pub-tl><vol>103</vol> &colon;<pages><fpage>10046</fpage>&ndash;<lpage>10051</lpage></pages>.</cit>
+<cit id="ref9" num="9" type="journal"><author><surname>WSeeley</surname><initial>W</initial></author><author><surname>Menon</surname><initial>V</initial></author><author><surname>FSchatzberg</surname><initial>A</initial></author><author><surname>Keller</surname><initial>J</initial></author><author><surname>HGlover</surname><initial>G</initial></author><author><surname>Kenna</surname><initial>H</initial></author><author><surname>LReiss</surname><initial>A</initial></author><author><surname>DGreicius</surname><initial>M</initial></author>&lpar;<date><year>2007</year></date>&rpar;<cit-tl>Dissociable Intrinsic Connectivity Networks for Salience Processing and Executive Control.</cit-tl><pub-tl>J. Neurosci. </pub-tl><vol>27</vol> &colon;<pages><fpage>2349</fpage>&ndash;<lpage>2356</lpage></pages>.</cit>
+</refs></back><apps><app id="app1"><title>Supporting Information Legends</title>
+<section level="1" id="section16"></section></app></article></doc>

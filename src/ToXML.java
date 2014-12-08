@@ -18,10 +18,10 @@ import java.util.*;
  * The Class ToXML.
  */
 public class ToXML extends LaTEXBaseListener {
-	
+
 	/** The writer. */
 	public static PrintWriter writer;
-	
+
 	/** The skip data. */
 	public static PrintWriter skipData;
 
@@ -30,61 +30,61 @@ public class ToXML extends LaTEXBaseListener {
 
 	/** The section counter. */
 	private int sectionCounter;
-	
+
 	/** The section id. */
 	private int sectionId;
-	
+
 	/** The subsection counter. */
 	private int subsectionCounter;
-	
+
 	/** The subsubsection counter. */
 	private int subsubsectionCounter;
-	
+
 	/** The was section counter. */
 	private int wasSectionCounter;
 
 	/** The figure counter. */
 	private int figureCounter;
-	
+
 	/** The figure number. */
 	private int figureNumber;
-	
+
 	/** The figure declared. */
 	private boolean figureDeclared;
-	
+
 	/** The was figure first dot. */
 	private boolean wasFigureFirstDot;
 
 	/** The figure references. */
 	private static HashMap<String, Integer> figureReferences;
-	
+
 	/** The should be inserted figures. */
 	private static HashMap<String, Integer> shouldBeInsertedFigures;
-	
+
 	/** The declared figures. */
 	private static ArrayList<String> declaredFigures;
 
 	/** The table counter. */
 	private int tableCounter;
-	
+
 	/** The table declared. */
 	private boolean tableDeclared;
 
 	/** The table references. */
 	private static HashMap<String, Integer> tableReferences;
-	
+
 	/** The should be inserted tables. */
 	private static HashMap<String, Integer> shouldBeInsertedTables;
-	
+
 	/** The declared tables. */
 	private static ArrayList<String> declaredTables;
 
 	/** The id. */
 	private static int ID;
-	
+
 	/** The new commands. */
 	private HashMap<String, String> newCommands;
-	
+
 	/** The new command name. */
 	private String newCommandName;
 
@@ -93,34 +93,34 @@ public class ToXML extends LaTEXBaseListener {
 
 	/** The was section declared. */
 	private boolean wasSectionDeclared;
-	
+
 	/** The was acknowledgement. */
 	private boolean wasAcknowledgement;
 
 	/** The should text be missed. */
 	private boolean shouldTextBeMissed;
-	
+
 	/** The skip level. */
 	private int skipLevel;
 
 	/** The paragraph counter. */
 	private int paragraphCounter;
-	
+
 	/** The was paragraph filled. */
 	private boolean wasParagraphFilled;
-	
+
 	/** The was space between lines filled. */
 	private boolean wasSpaceBetweenLinesFilled;
-	
+
 	/** The is paragraph active. */
 	private boolean isParagraphActive;
-	
+
 	/** The new line counter. */
 	private int newLineCounter;
-	
+
 	/** The list counter. */
 	private int listCounter;
-	
+
 	/** The item counter. */
 	private int itemCounter;
 
@@ -129,22 +129,22 @@ public class ToXML extends LaTEXBaseListener {
 
 	/** The bibliography declared. */
 	private boolean bibliographyDeclared;
-	
+
 	/** The bib author. */
 	private String bibAuthor;
-	
+
 	/** The bib date. */
 	private String bibDate;
-	
+
 	/** The bib cittl. */
 	private String bibCittl;
-	
+
 	/** The bib pubtl. */
 	private String bibPubtl;
-	
+
 	/** The bib vol. */
 	private String bibVol;
-	
+
 	/** The bib pages. */
 	private String bibPages;
 
@@ -153,25 +153,25 @@ public class ToXML extends LaTEXBaseListener {
 
 	/** The app counter. */
 	private int appCounter;
-	
+
 	/** The was apps declared. */
 	private boolean wasAppsDeclared;
-	
+
 	/** The writing queue. */
 	private static ArrayList<String> writingQueue;
 
 	/** The was algorithm declared. */
 	private boolean wasAlgorithmDeclared;
-	
+
 	/** The algorithm counter. */
 	private int algorithmCounter;
 	private boolean wasAuthorSection;
     private boolean wasBackDeclared;
-	
+
 	private String id = "";
-	
+
 	private int equationCounter;
-	
+
 
 	/**
 	 * Instantiates a new to xml.
@@ -209,39 +209,39 @@ public class ToXML extends LaTEXBaseListener {
 		paragraphCounter = 1;
 	}
 
-	
+
 	public void enterSimpleText(LaTEXParser.SimpleTextContext ctx) {
 		if (shouldTextBeMissed)
 			return;
-		
+
 		if(ctx.getText().startsWith("\\"))
 			return;
 
 		String line = ctx.getText();
 		paragraphInserter();						//Inserts paragraph if needed
-		
+
 		if (figureDeclared && !figureTitleDeclared) {
 			writer.print("<emph type=\"bold\">");
 			writer.print("Figure " + figureCounter + ". ");
 			figureTitleDeclared = true;
 		}
-		
+
 		if (line.contains("supplementary") || line.contains("Supplementary"))
 			line = cutOutSupplementaryLinks(line);
-		
+
 		if (wasPreviousLineWord)
 			writer.print(' ');
-				
+
 		writer.print(line);
 		wasPreviousLineWord = true;
 	}
-	
-	 
-	public void exitTextRules(LaTEXParser.TextRulesContext ctx) 
+
+
+	public void exitTextRules(LaTEXParser.TextRulesContext ctx)
 	{
 		wasPreviousLineWord = false;
 	}
-	
+
 	/**
 	 * Cut out supplementary links.
 	 *
@@ -277,7 +277,7 @@ public class ToXML extends LaTEXBaseListener {
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#enterTextRules(LaTEXParser.TextRulesContext)
 	 */
-	
+
 	public void enterTextRules(LaTEXParser.TextRulesContext ctx) {
 		if (shouldTextBeMissed)
 			return;
@@ -286,7 +286,7 @@ public class ToXML extends LaTEXBaseListener {
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#enterTextSymbols(LaTEXParser.TextSymbolsContext)
 	 */
-	
+
 	public void enterTextSymbols(LaTEXParser.TextSymbolsContext ctx) {
 		if (shouldTextBeMissed)
 			return;
@@ -297,7 +297,7 @@ public class ToXML extends LaTEXBaseListener {
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#enterText(LaTEXParser.TextContext)
 	 */
-	
+
 	public void enterText(LaTEXParser.TextContext ctx) {
 		if (isParagraphActive)
 			newLineCounter = 0;
@@ -306,7 +306,7 @@ public class ToXML extends LaTEXBaseListener {
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#enterTitle(LaTEXParser.TitleContext)
 	 */
-	
+
 	public void enterTitle(LaTEXParser.TitleContext ctx) {
 		shouldTextBeMissed = true;
 	}
@@ -314,7 +314,7 @@ public class ToXML extends LaTEXBaseListener {
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#exitTitle(LaTEXParser.TitleContext)
 	 */
-	
+
 	public void exitTitle(LaTEXParser.TitleContext ctx) {
 		shouldTextBeMissed = false;
 	}
@@ -322,7 +322,7 @@ public class ToXML extends LaTEXBaseListener {
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#enterAbstractBlock(LaTEXParser.AbstractBlockContext)
 	 */
-	
+
 	public void enterAbstractBlock(LaTEXParser.AbstractBlockContext ctx) {
 		shouldTextBeMissed = true;
 		++skipLevel;
@@ -331,7 +331,7 @@ public class ToXML extends LaTEXBaseListener {
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#exitAbstractBlock(LaTEXParser.AbstractBlockContext)
 	 */
-	
+
 	public void exitAbstractBlock(LaTEXParser.AbstractBlockContext ctx) {
 		--skipLevel;
 		if (skipLevel == 0)
@@ -342,7 +342,7 @@ public class ToXML extends LaTEXBaseListener {
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#enterParagraph(LaTEXParser.ParagraphContext)
 	 */
-	
+
 	public void enterParagraph(LaTEXParser.ParagraphContext ctx) {
 		if (wasParagraphFilled)
 			paragraphCloser();
@@ -361,7 +361,7 @@ public class ToXML extends LaTEXBaseListener {
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#exitParagraph(LaTEXParser.ParagraphContext)
 	 */
-	
+
 	public void exitParagraph(LaTEXParser.ParagraphContext ctx) {
 		writer.print("</title>");
 		wasSectionDeclared = true;
@@ -370,7 +370,7 @@ public class ToXML extends LaTEXBaseListener {
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#enterSectionDeclaration(LaTEXParser.SectionDeclarationContext)
 	 */
-	
+
 	public void enterSectionDeclaration(
 			LaTEXParser.SectionDeclarationContext ctx) {
 
@@ -393,15 +393,15 @@ public class ToXML extends LaTEXBaseListener {
 			wasSectionDeclared = false;
 			return;
 		}
-		
+
 		if(title.equals("Tables"))
 		{
 			shouldTextBeMissed = true;
 			return;
 		}
-		
+
 		if (title.equals("Acknowledgements") || title.equals("Acknowledgement")
-				|| title.equals("Acknowledgments")) {			
+				|| title.equals("Acknowledgments")) {
 			supplementaryInformationWriter();
 			wasAcknowledgement = true;
 			writer.print("</body>");
@@ -412,7 +412,7 @@ public class ToXML extends LaTEXBaseListener {
 			wasSectionDeclared = false;
 			return;
 		}
-		
+
 		++sectionId;
 		++sectionCounter;
 
@@ -420,7 +420,7 @@ public class ToXML extends LaTEXBaseListener {
             wasAppsDeclared = true;
 
 		bibliographyCloser();
-		
+
 		if (wasAppsDeclared) {
 			if(appCounter == 1)
 				writer.print("<apps>");
@@ -429,13 +429,13 @@ public class ToXML extends LaTEXBaseListener {
 			wasSectionDeclared = false;
 			return;
 		}
-		
+
 		if(!wasAuthorSection)
 		{
 			writer.print("<body>");
 			wasAuthorSection = true;
 		}
-			
+
 		writer.print("\n<section level=\"1\" id=\"section" + sectionId
 					+ "\">");
 
@@ -468,18 +468,18 @@ public class ToXML extends LaTEXBaseListener {
             wasSectionDeclared = false;
         }
     }
-	
+
 	/**
 	 * Bibliography inserter.
 	 */
 	private void bibliographyInserter(){
 		File bibFiles = new File(MainWindow.mainPath + "/LaTEXtoXML/bibliography");
 		File[] bibFileList = bibFiles.listFiles();
-		
-		
+
+
 		Arrays.sort(bibFileList, new AlphanumComparator());
-		
-		
+
+
 		writer.println();
 		for(File file: bibFileList)
 		{
@@ -496,7 +496,7 @@ public class ToXML extends LaTEXBaseListener {
 			}
 		}
 	}
-	
+
 	/**
 	 * Write author summary.
 	 *
@@ -562,12 +562,12 @@ public class ToXML extends LaTEXBaseListener {
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#exitSectionDeclaration(LaTEXParser.SectionDeclarationContext)
 	 */
-	
-	public void exitSectionDeclaration(LaTEXParser.SectionDeclarationContext ctx) 
+
+	public void exitSectionDeclaration(LaTEXParser.SectionDeclarationContext ctx)
 	{
 		if(shouldTextBeMissed)
 			return;
-		if (wasAppsDeclared) {		
+		if (wasAppsDeclared) {
 			writer.print("</title>");
 			writer.print("\n<section level=\"1\" id=\"section" + sectionId
 					+ "\">");
@@ -582,12 +582,12 @@ public class ToXML extends LaTEXBaseListener {
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#enterSubsectionDeclaration(LaTEXParser.SubsectionDeclarationContext)
 	 */
-	
+
 	public void enterSubsectionDeclaration(
 			LaTEXParser.SubsectionDeclarationContext ctx) {
 		if(suppDataDeclared)
 			return;
-		
+
 		if (wasAppsDeclared) {
 			shouldTextBeMissed = true;
 			return;
@@ -624,12 +624,12 @@ public class ToXML extends LaTEXBaseListener {
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#exitSubsectionDeclaration(LaTEXParser.SubsectionDeclarationContext)
 	 */
-	
+
 	public void exitSubsectionDeclaration(
 			LaTEXParser.SubsectionDeclarationContext ctx) {
 		if(suppDataDeclared)
 			return;
-		
+
 		if (wasAppsDeclared) {
 			shouldTextBeMissed = false;
 			return;
@@ -641,16 +641,16 @@ public class ToXML extends LaTEXBaseListener {
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#enterSubsubsectionDeclaration(LaTEXParser.SubsubsectionDeclarationContext)
 	 */
-	
+
 	public void enterSubsubsectionDeclaration(
 			LaTEXParser.SubsubsectionDeclarationContext ctx) {
 		if(suppDataDeclared)
 			return;
-		
+
 		String title = ctx.text().getText();
 		if (skipAbstractIfExist(title))
 			return;
-		
+
 		startBody();
 
 		shouldTextBeMissed = false;
@@ -678,12 +678,12 @@ public class ToXML extends LaTEXBaseListener {
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#exitSubsubsectionDeclaration(LaTEXParser.SubsubsectionDeclarationContext)
 	 */
-	
+
 	public void exitSubsubsectionDeclaration(
 			LaTEXParser.SubsubsectionDeclarationContext ctx) {
 		if(suppDataDeclared)
 			return;
-		
+
 		writer.print("</title>");
 		wasSectionDeclared = true;
 	}
@@ -723,7 +723,7 @@ public class ToXML extends LaTEXBaseListener {
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#enterCiteReferencesList(LaTEXParser.CiteReferencesListContext)
 	 */
-	
+
 	public void enterCiteReferencesList(
 			LaTEXParser.CiteReferencesListContext ctx) {
 		citeReference(ctx);
@@ -733,7 +733,7 @@ public class ToXML extends LaTEXBaseListener {
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#exitCiteReferences(LaTEXParser.CiteReferencesContext)
 	 */
-	
+
 	public void exitCiteReferences(LaTEXParser.CiteReferencesContext ctx) {
 		shouldTextBeMissed = false;
 	}
@@ -798,7 +798,7 @@ public class ToXML extends LaTEXBaseListener {
 			else
 				writer.print(number + ",");
 		}
-		writer.print("</citref> ");
+		writer.print("</citref>");
 		shouldTextBeMissed = true;
 	}
 
@@ -814,13 +814,13 @@ public class ToXML extends LaTEXBaseListener {
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#enterItalictypeDeclaration(LaTEXParser.ItalictypeDeclarationContext)
 	 */
-	
+
 	public void enterItalictypeDeclaration(
 			LaTEXParser.ItalictypeDeclarationContext ctx) {
 		paragraphInserter();
 		if(shouldTextBeMissed)
 			return;
-		
+
 		writer.print("<emph type=\"italic\">");
 		wasPreviousLineWord = false;
 	}
@@ -828,7 +828,7 @@ public class ToXML extends LaTEXBaseListener {
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#exitItalictypeDeclaration(LaTEXParser.ItalictypeDeclarationContext)
 	 */
-	
+
 	public void exitItalictypeDeclaration(
 			LaTEXParser.ItalictypeDeclarationContext ctx) {
 		if(shouldTextBeMissed)
@@ -842,12 +842,12 @@ public class ToXML extends LaTEXBaseListener {
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#enterBoldTypeDeclaration(LaTEXParser.BoldTypeDeclarationContext)
 	 */
-	
+
 	public void enterBoldTypeDeclaration(
-			LaTEXParser.BoldTypeDeclarationContext ctx) {		
+			LaTEXParser.BoldTypeDeclarationContext ctx) {
 		paragraphInserter();
 		writer.print("<emph type=\"bold\">");
-		
+
 		if (figureDeclared) {
 			shouldTextBeMissed = false;
 			figureTitleDeclared = true;
@@ -858,7 +858,7 @@ public class ToXML extends LaTEXBaseListener {
 	/**
 	 * Close the bold tag
 	 **/
-	
+
 	public void exitBoldTypeDeclaration(
 			LaTEXParser.BoldTypeDeclarationContext ctx) {
 		/*
@@ -866,16 +866,16 @@ public class ToXML extends LaTEXBaseListener {
 		 * because it will close bold tag in the place where
 		 * the first sentence of the figure will finish
 		 */
-		if(figureDeclared)     
+		if(figureDeclared)
 			return;
-		
+
 		writer.print("</emph>");
 	}
 
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#enterMeasures(LaTEXParser.MeasuresContext)
 	 */
-	
+
 	public void enterMeasures(LaTEXParser.MeasuresContext ctx) {
 		String[] tokens = ctx.getText().split(" ");
 		writer.print("&emsp14;" + tokens[1]);
@@ -884,7 +884,7 @@ public class ToXML extends LaTEXBaseListener {
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#enterInterval(LaTEXParser.IntervalContext)
 	 */
-	
+
 	public void enterInterval(LaTEXParser.IntervalContext ctx) {
 		if (shouldTextBeMissed)
 			return;
@@ -897,7 +897,7 @@ public class ToXML extends LaTEXBaseListener {
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#enterComma(LaTEXParser.CommaContext)
 	 */
-	
+
 	public void enterComma(LaTEXParser.CommaContext ctx) {
 		if (shouldTextBeMissed)
 			return;
@@ -908,7 +908,7 @@ public class ToXML extends LaTEXBaseListener {
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#enterDot(LaTEXParser.DotContext)
 	 */
-	
+
 	public void enterDot(LaTEXParser.DotContext ctx) {
 		if (shouldTextBeMissed)
 			return;
@@ -929,7 +929,7 @@ public class ToXML extends LaTEXBaseListener {
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#enterNumbers(LaTEXParser.NumbersContext)
 	 */
-	
+
 	public void enterNumbers(LaTEXParser.NumbersContext ctx) {
 		if(bibYearNumber)
 			return;
@@ -939,7 +939,7 @@ public class ToXML extends LaTEXBaseListener {
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#enterDollarBlock(LaTEXParser.DollarBlockContext)
 	 */
-	
+
 	public void enterDollarBlock(LaTEXParser.DollarBlockContext ctx) {
 		if (shouldTextBeMissed)
 			return;
@@ -955,7 +955,7 @@ public class ToXML extends LaTEXBaseListener {
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#enterEquationBlock(LaTEXParser.EquationBlockContext)
 	 */
-	
+
 	public void enterEquationBlock(LaTEXParser.EquationBlockContext ctx) {
 		if (authorReference)
 			return;
@@ -966,9 +966,9 @@ public class ToXML extends LaTEXBaseListener {
 		writeFormula(ctx.getText());
 		writer.println("</equ>");
 	}
-	
-	 
-	public void enterDisplayEquation(LaTEXParser.DisplayEquationContext ctx) 
+
+
+	public void enterDisplayEquation(LaTEXParser.DisplayEquationContext ctx)
 	{
 		if (authorReference)
 			return;
@@ -983,7 +983,7 @@ public class ToXML extends LaTEXBaseListener {
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#enterEquation(LaTEXParser.EquationContext)
 	 */
-	
+
 	public void enterEquation(LaTEXParser.EquationContext ctx) {
 		newLineCounter = 0;
 		if (authorReference)
@@ -1004,18 +1004,18 @@ public class ToXML extends LaTEXBaseListener {
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#enterFigureBlock(LaTEXParser.FigureBlockContext)
 	 */
-	
+
 	public void enterFigureBlock(LaTEXParser.FigureBlockContext ctx) {
 		if (!workWithBackData)
 			return;
 
-		figureStarts();		
+		figureStarts();
 		changeFileForFigures();
 		writer.print("<fig id=\"fig" + figureCounter + "\" num=\""
 				+ figureCounter + "\" type=\"figure\">");
 		shouldTextBeMissed = true;
 	}
-	
+
 	/**
 	 * Figure starts.
 	 */
@@ -1025,7 +1025,7 @@ public class ToXML extends LaTEXBaseListener {
 		figureTitleDeclared = false;
 		labelDeclared = false;
 	}
-	
+
 	/**
 	 * Change file for figures.
 	 */
@@ -1042,30 +1042,30 @@ public class ToXML extends LaTEXBaseListener {
 
 	/** The supp figure type. */
 	private String suppFigureType = "";
-	
+
 	/** The supp text counter. */
 	private int suppTextCounter = 0;
-	
+
 	/** The supp table counter. */
 	private int suppTableCounter = 0;
-	
+
 	/** The supp data set counter. */
 	private int suppDataSetCounter = 0;
-	
+
 	/** The supp data declared. */
 	private boolean suppDataDeclared = false;
 	
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#enterSupplementaryFigureBlock(LaTEXParser.SupplementaryFigureBlockContext)
 	 */
-	
+
 	public void enterSupplementaryFigureBlock(
 			LaTEXParser.SupplementaryFigureBlockContext ctx) {
 		if (!workWithBackData)
 			return;
-		
+
 		suppDataDeclared = true;
-		suppFigureType = "Figure";		
+		suppFigureType = "Figure";
 		int counter = 0;
 		String data = ctx.getText();
 		if(data.contains("TextS"))
@@ -1099,7 +1099,7 @@ public class ToXML extends LaTEXBaseListener {
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#exitSupplementaryFigureBlock(LaTEXParser.SupplementaryFigureBlockContext)
 	 */
-	
+
 	public void exitSupplementaryFigureBlock(
 			LaTEXParser.SupplementaryFigureBlockContext ctx) {
 		if (!workWithBackData)
@@ -1112,7 +1112,7 @@ public class ToXML extends LaTEXBaseListener {
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#exitFigureBlock(LaTEXParser.FigureBlockContext)
 	 */
-	
+
 	public void exitFigureBlock(LaTEXParser.FigureBlockContext ctx) {
 		if (!workWithBackData)
 			return;
@@ -1135,14 +1135,14 @@ public class ToXML extends LaTEXBaseListener {
 		labelDeclared = false;
 		setNormalWriter();
 	}
-	
+
 	private void getJournalIDInfo() throws Exception
 	{
 		Document doc = openDoc();
 		doc.getDocumentElement().normalize();
 		getInformation(doc);
 	}
-	
+
 	private void getInformation(Document doc)
 	{
 		NodeList nList = doc.getElementsByTagName("article-id");
@@ -1150,12 +1150,12 @@ public class ToXML extends LaTEXBaseListener {
 			Node node = nList.item(i);
 			if (node.getNodeType() == Node.ELEMENT_NODE) {
 				Element eElement = (Element) node;
-				if (eElement.getAttribute("pub-id-type").equals("doi")) 
+				if (eElement.getAttribute("pub-id-type").equals("doi"))
 					id = node.getTextContent();
 			}
 		}
 	}
-	
+
 	private Document openDoc() throws Exception
 	{
 		File metaFile = new File(Translator.metaDataFile);
@@ -1169,7 +1169,7 @@ public class ToXML extends LaTEXBaseListener {
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#enterFigureRefListTypeNumbers(LaTEXParser.FigureRefListTypeNumbersContext)
 	 */
-	
+
 	public void enterFigureRefListTypeNumbers(
 			LaTEXParser.FigureRefListTypeNumbersContext ctx) {
 		List<LaTEXParser.NumbersContext> numbers = ctx.numbers();
@@ -1189,13 +1189,13 @@ public class ToXML extends LaTEXBaseListener {
 	/**
 	 * Supplementary information writer.
 	 */
-	private void supplementaryInformationWriter() 
+	private void supplementaryInformationWriter()
 	{
 		File folder = new File(MainWindow.mainPath + "/LaTEXtoXML/suppFigures");
 		File[] files = folder.listFiles();
 		if(files.length == 0)
 			return;
-		
+
 		writer.print("<section level=\"1\" type=\"SupportingInformation\" id=\"section"
 				+ sectionId + "\"><title>Supporting Information</title>");
 		for (String file: writingQueue)
@@ -1226,7 +1226,7 @@ public class ToXML extends LaTEXBaseListener {
 				number += suppType.charAt(i);
 			else
 				suppFigureType += suppType.charAt(i);
-		
+
 		suppFigureId = Integer.valueOf(number);
 		InputStream is = new FileInputStream(fileName);
 		BufferedReader reader = new BufferedReader(new InputStreamReader(is));
@@ -1252,7 +1252,7 @@ public class ToXML extends LaTEXBaseListener {
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#enterNewcommandDeclaration(LaTEXParser.NewcommandDeclarationContext)
 	 */
-	
+
 	public void enterNewcommandDeclaration(
 			LaTEXParser.NewcommandDeclarationContext ctx) {
 		if (ctx.identificator() == null)
@@ -1264,7 +1264,7 @@ public class ToXML extends LaTEXBaseListener {
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#enterCommandBody(LaTEXParser.CommandBodyContext)
 	 */
-	
+
 	public void enterCommandBody(LaTEXParser.CommandBodyContext ctx) {
 		if (newCommandName != null) {
 			newCommands.put(newCommandName, ctx.getText());
@@ -1275,7 +1275,7 @@ public class ToXML extends LaTEXBaseListener {
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#exitNewcommandDeclaration(LaTEXParser.NewcommandDeclarationContext)
 	 */
-	
+
 	public void exitNewcommandDeclaration(
 			LaTEXParser.NewcommandDeclarationContext ctx) {
 		shouldTextBeMissed = false;
@@ -1284,7 +1284,7 @@ public class ToXML extends LaTEXBaseListener {
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#enterRenewcommandDeclaration(LaTEXParser.RenewcommandDeclarationContext)
 	 */
-	
+
 	public void enterRenewcommandDeclaration(
 			LaTEXParser.RenewcommandDeclarationContext ctx) {
 		shouldTextBeMissed = true;
@@ -1293,7 +1293,7 @@ public class ToXML extends LaTEXBaseListener {
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#exitRenewcommandDeclaration(LaTEXParser.RenewcommandDeclarationContext)
 	 */
-	
+
 	public void exitRenewcommandDeclaration(
 			LaTEXParser.RenewcommandDeclarationContext ctx) {
 		shouldTextBeMissed = false;
@@ -1302,7 +1302,7 @@ public class ToXML extends LaTEXBaseListener {
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#exitRef(LaTEXParser.RefContext)
 	 */
-	
+
 	public void exitRef(LaTEXParser.RefContext ctx) {
 		shouldTextBeMissed = false;
 	}
@@ -1310,7 +1310,7 @@ public class ToXML extends LaTEXBaseListener {
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#enterTable(LaTEXParser.TableContext)
 	 */
-	
+
 	public void enterTable(LaTEXParser.TableContext ctx) {
 		if (!workWithBackData)
 			return;
@@ -1331,7 +1331,7 @@ public class ToXML extends LaTEXBaseListener {
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#exitTable(LaTEXParser.TableContext)
 	 */
-	
+
 	public void exitTable(LaTEXParser.TableContext ctx) {
 		writer.print("</tbl>");
 		setNormalWriter();
@@ -1341,7 +1341,7 @@ public class ToXML extends LaTEXBaseListener {
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#enterTableRow(LaTEXParser.TableRowContext)
 	 */
-	
+
 	public void enterTableRow(LaTEXParser.TableRowContext ctx) {
 		writer.print("<tr>");
 	}
@@ -1349,7 +1349,7 @@ public class ToXML extends LaTEXBaseListener {
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#exitTableRow(LaTEXParser.TableRowContext)
 	 */
-	
+
 	public void exitTableRow(LaTEXParser.TableRowContext ctx) {
 		writer.print("</tr>");
 	}
@@ -1357,7 +1357,7 @@ public class ToXML extends LaTEXBaseListener {
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#enterTableCol(LaTEXParser.TableColContext)
 	 */
-	
+
 	public void enterTableCol(LaTEXParser.TableColContext ctx) {
 		writer.print("<td>");
 	}
@@ -1365,7 +1365,7 @@ public class ToXML extends LaTEXBaseListener {
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#exitTableCol(LaTEXParser.TableColContext)
 	 */
-	
+
 	public void exitTableCol(LaTEXParser.TableColContext ctx) {
 		writer.print("</td>");
 	}
@@ -1373,7 +1373,7 @@ public class ToXML extends LaTEXBaseListener {
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#enterCaptionBlock(LaTEXParser.CaptionBlockContext)
 	 */
-	
+
 	public void enterCaptionBlock(LaTEXParser.CaptionBlockContext ctx) {
 
 		if (tableDeclared) {
@@ -1414,7 +1414,7 @@ public class ToXML extends LaTEXBaseListener {
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#exitCaptionBlock(LaTEXParser.CaptionBlockContext)
 	 */
-	
+
 	public void exitCaptionBlock(LaTEXParser.CaptionBlockContext ctx) {
 		if (wasAlgorithmDeclared)
 			paragraphCloser();
@@ -1423,7 +1423,7 @@ public class ToXML extends LaTEXBaseListener {
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#enterOptions(LaTEXParser.OptionsContext)
 	 */
-	
+
 	public void enterOptions(LaTEXParser.OptionsContext ctx) {
 		shouldTextBeMissed = true;
 	}
@@ -1431,7 +1431,7 @@ public class ToXML extends LaTEXBaseListener {
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#exitOptions(LaTEXParser.OptionsContext)
 	 */
-	
+
 	public void exitOptions(LaTEXParser.OptionsContext ctx) {
 		shouldTextBeMissed = false;
 	}
@@ -1439,7 +1439,7 @@ public class ToXML extends LaTEXBaseListener {
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#enterTableStyle(LaTEXParser.TableStyleContext)
 	 */
-	
+
 	public void enterTableStyle(LaTEXParser.TableStyleContext ctx) {
 		shouldTextBeMissed = true;
 	}
@@ -1447,7 +1447,7 @@ public class ToXML extends LaTEXBaseListener {
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#exitTableStyle(LaTEXParser.TableStyleContext)
 	 */
-	
+
 	public void exitTableStyle(LaTEXParser.TableStyleContext ctx) {
 		shouldTextBeMissed = false;
 	}
@@ -1455,7 +1455,7 @@ public class ToXML extends LaTEXBaseListener {
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#enterNewLine(LaTEXParser.NewLineContext)
 	 */
-	
+
 	public void enterNewLine(LaTEXParser.NewLineContext ctx) {
 		if (!wasSectionDeclared || figureDeclared)
 			return;
@@ -1490,7 +1490,7 @@ public class ToXML extends LaTEXBaseListener {
 	private void paragraphCloser() {
 		if(bibliographyDeclared || !wasSectionDeclared)
 			return;
-		
+
 		wasParagraphFilled = false;
 		isParagraphActive = false;
 		wasSpaceBetweenLinesFilled = false;
@@ -1565,7 +1565,7 @@ public class ToXML extends LaTEXBaseListener {
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#enterReferenceList(LaTEXParser.ReferenceListContext)
 	 */
-	
+
 	public void enterReferenceList(LaTEXParser.ReferenceListContext ctx) {
 		shouldTextBeMissed = true;
 		List<LaTEXParser.RefContext> referenceList = ctx.ref();
@@ -1589,7 +1589,7 @@ public class ToXML extends LaTEXBaseListener {
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#enterLaTEXFigRef(LaTEXParser.LaTEXFigRefContext)
 	 */
-	
+
 	public void enterLaTEXFigRef(LaTEXParser.LaTEXFigRefContext ctx) {
 
 		shouldTextBeMissed = true;
@@ -1607,7 +1607,7 @@ public class ToXML extends LaTEXBaseListener {
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#exitLaTEXFigRef(LaTEXParser.LaTEXFigRefContext)
 	 */
-	
+
 	public void exitLaTEXFigRef(LaTEXParser.LaTEXFigRefContext ctx) {
 		shouldTextBeMissed = false;
 	}
@@ -1642,7 +1642,7 @@ public class ToXML extends LaTEXBaseListener {
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#exitReferenceList(LaTEXParser.ReferenceListContext)
 	 */
-	
+
 	public void exitReferenceList(LaTEXParser.ReferenceListContext ctx) {
 		shouldTextBeMissed = false;
 	}
@@ -1653,7 +1653,7 @@ public class ToXML extends LaTEXBaseListener {
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#enterLabel(LaTEXParser.LabelContext)
 	 */
-	
+
 	public void enterLabel(LaTEXParser.LabelContext ctx) {
 		if (figureDeclared) {
 			String label = ctx.text().getText();
@@ -1671,7 +1671,7 @@ public class ToXML extends LaTEXBaseListener {
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#exitLabel(LaTEXParser.LabelContext)
 	 */
-	
+
 	public void exitLabel(LaTEXParser.LabelContext ctx) {
 		shouldTextBeMissed = false;
 	}
@@ -1679,7 +1679,7 @@ public class ToXML extends LaTEXBaseListener {
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#enterDots(LaTEXParser.DotsContext)
 	 */
-	
+
 	public void enterDots(LaTEXParser.DotsContext ctx) {
 		writer.print("...");
 	}
@@ -1687,7 +1687,7 @@ public class ToXML extends LaTEXBaseListener {
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#enterList(LaTEXParser.ListContext)
 	 */
-	
+
 	public void enterList(LaTEXParser.ListContext ctx) {
 		++listCounter;
 		writer.print("<item-list type=\"Arabic\" id=\"list" + listCounter
@@ -1697,7 +1697,7 @@ public class ToXML extends LaTEXBaseListener {
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#exitList(LaTEXParser.ListContext)
 	 */
-	
+
 	public void exitList(LaTEXParser.ListContext ctx) {
 		writer.print("</item-list>");
 	}
@@ -1705,7 +1705,7 @@ public class ToXML extends LaTEXBaseListener {
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#enterItem(LaTEXParser.ItemContext)
 	 */
-	
+
 	public void enterItem(LaTEXParser.ItemContext ctx) {
 		++itemCounter;
 		writer.print("<item num=\"" + itemCounter + ".\">");
@@ -1716,7 +1716,7 @@ public class ToXML extends LaTEXBaseListener {
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#exitItem(LaTEXParser.ItemContext)
 	 */
-	
+
 	public void exitItem(LaTEXParser.ItemContext ctx) {
 		writer.print("</p></item>");
 	}
@@ -1724,7 +1724,7 @@ public class ToXML extends LaTEXBaseListener {
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#enterIsoEnt(LaTEXParser.IsoEntContext)
 	 */
-	
+
 	public void enterIsoEnt(LaTEXParser.IsoEntContext ctx) {
 		if (shouldTextBeMissed)
 			return;
@@ -1735,7 +1735,7 @@ public class ToXML extends LaTEXBaseListener {
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#enterSmallcapsDeclaration(LaTEXParser.SmallcapsDeclarationContext)
 	 */
-	
+
 	public void enterSmallcapsDeclaration(
 			LaTEXParser.SmallcapsDeclarationContext ctx) {
 
@@ -1774,7 +1774,7 @@ public class ToXML extends LaTEXBaseListener {
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#exitSmallcapsDeclaration(LaTEXParser.SmallcapsDeclarationContext)
 	 */
-	
+
 	public void exitSmallcapsDeclaration(
 			LaTEXParser.SmallcapsDeclarationContext ctx) {
 		shouldTextBeMissed = false;
@@ -1783,7 +1783,7 @@ public class ToXML extends LaTEXBaseListener {
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#enterDescriptionTitle(LaTEXParser.DescriptionTitleContext)
 	 */
-	
+
 	public void enterDescriptionTitle(LaTEXParser.DescriptionTitleContext ctx) {
 		++sectionId;
 		writer.print("\n<section level=\"3\" id=\"section" + sectionId + "\">");
@@ -1794,7 +1794,7 @@ public class ToXML extends LaTEXBaseListener {
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#exitDescriptionTitle(LaTEXParser.DescriptionTitleContext)
 	 */
-	
+
 	public void exitDescriptionTitle(LaTEXParser.DescriptionTitleContext ctx) {
 		writer.print("</title>");
 		wasSectionDeclared = true;
@@ -1803,7 +1803,7 @@ public class ToXML extends LaTEXBaseListener {
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#exitDescriptionItem(LaTEXParser.DescriptionItemContext)
 	 */
-	
+
 	public void exitDescriptionItem(LaTEXParser.DescriptionItemContext ctx) {
 		writer.print("</section>");
 	}
@@ -1811,7 +1811,7 @@ public class ToXML extends LaTEXBaseListener {
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#enterUrlText(LaTEXParser.UrlTextContext)
 	 */
-	
+
 	public void enterUrlText(LaTEXParser.UrlTextContext ctx) {
 		String url = ctx.getText();
         url = url.substring(1,url.length()-1);
@@ -1824,7 +1824,7 @@ public class ToXML extends LaTEXBaseListener {
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#exitUrlText(LaTEXParser.UrlTextContext)
 	 */
-	
+
 	public void exitUrlText(LaTEXParser.UrlTextContext ctx) {
 		writer.print("</url><?tbklnk?><?down?>\"");
 	}
@@ -1835,7 +1835,7 @@ public class ToXML extends LaTEXBaseListener {
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#enterArticle(LaTEXParser.ArticleContext)
 	 */
-	
+
 	public void enterArticle(LaTEXParser.ArticleContext ctx) {
 		enterBibMember(ctx.bibLabel().getText());
 	}
@@ -1843,20 +1843,20 @@ public class ToXML extends LaTEXBaseListener {
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#enterBook(LaTEXParser.BookContext)
 	 */
-	
+
 	public void enterBook(LaTEXParser.BookContext ctx) {
 		enterBibMember(ctx.bibLabel().getText());
 	}
 
 	/** The bib label. */
 	private String bibLabel;
-	
+
 	/**
 	 * Enter bib member.
 	 *
 	 * @param label the label
 	 */
-	private void enterBibMember(String label) 
+	private void enterBibMember(String label)
 	{
 		bibLabel = label = label.substring(0, label.length() - 1);
 		if (Translator.bibReferences.containsKey(label)) {
@@ -1878,7 +1878,7 @@ public class ToXML extends LaTEXBaseListener {
 		shouldTextBeMissed = true;
 		bibliographyDeclared = true;
 	}
-	
+
 	/**
 	 * Exit bib member.
 	 *
@@ -1911,7 +1911,7 @@ public class ToXML extends LaTEXBaseListener {
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#enterOther(LaTEXParser.OtherContext)
 	 */
-	
+
 	public void enterOther(LaTEXParser.OtherContext ctx) {
 		enterBibMember(ctx.bibLabel().getText());
 	}
@@ -1935,7 +1935,7 @@ public class ToXML extends LaTEXBaseListener {
 		writer.close();
 		writer = skipData;
 	}
-	
+
 	/**
 	 * Write into file.
 	 */
@@ -1944,7 +1944,7 @@ public class ToXML extends LaTEXBaseListener {
 		try {
 			writer = new PrintWriter(MainWindow.mainPath + "/LaTEXtoXML/bibliography/"+Translator.bibReferences.get(bibLabel)+".xml");
 		} catch (IOException e) {
-			e.printStackTrace();	
+			e.printStackTrace();
 		}
 	}
 
@@ -1972,7 +1972,7 @@ public class ToXML extends LaTEXBaseListener {
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#exitBook(LaTEXParser.BookContext)
 	 */
-	
+
 	public void exitBook(LaTEXParser.BookContext ctx) {
 		exitBibMember("book");
 	}
@@ -1980,7 +1980,7 @@ public class ToXML extends LaTEXBaseListener {
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#exitArticle(LaTEXParser.ArticleContext)
 	 */
-	
+
 	public void exitArticle(LaTEXParser.ArticleContext ctx) {
 		exitBibMember("journal");
 	}
@@ -1988,7 +1988,7 @@ public class ToXML extends LaTEXBaseListener {
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#exitOther(LaTEXParser.OtherContext)
 	 */
-	
+
 	public void exitOther(LaTEXParser.OtherContext ctx) {
 		exitBibMember("other");
 	}
@@ -1996,7 +1996,7 @@ public class ToXML extends LaTEXBaseListener {
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#enterBibAuthor(LaTEXParser.BibAuthorContext)
 	 */
-	
+
 	public void enterBibAuthor(LaTEXParser.BibAuthorContext ctx) {
 		if (!shouldItemBeAddedToXML)
 		{
@@ -2030,8 +2030,8 @@ public class ToXML extends LaTEXBaseListener {
 			authors = data.split("A N D");
 		else
 			authors = data.split("and ");
-		
-		for (int i = 0; i < authors.length; ++i) 
+
+		for (int i = 0; i < authors.length; ++i)
 		{
 			if (authors[i].split(",").length > 1)
 				getAuthorsSeparetedWithComma(authors[i]);
@@ -2056,10 +2056,10 @@ public class ToXML extends LaTEXBaseListener {
 			result.append(data.substring(0, j));
 			if(!onceAgain)
 				break;
-				
+
 			if(!Character.isLowerCase(data.charAt(j)))
 				result.append(" ");
-			
+
 			data = data.substring(j, data.length());
 			j = data.indexOf("and") + 3;
 			if(j == 2)
@@ -2094,7 +2094,7 @@ public class ToXML extends LaTEXBaseListener {
 	 *
 	 * @param surname the surname
 	 */
-	private void writeSurname(String surname) 
+	private void writeSurname(String surname)
 	{
 		writer.print("<surname>"+ FrontmatterCreator.workoutString(surname) + "</surname>");
 	}
@@ -2119,7 +2119,7 @@ public class ToXML extends LaTEXBaseListener {
 	private void getUnseparetedAuthors(String authorData) {
 		if (wasAuthorBefore)
 			writer.print(',');
-		
+
 		String surname = "";
 		boolean isName = true;
 		int j = findFirstLetterOfName(authorData);
@@ -2163,14 +2163,14 @@ public class ToXML extends LaTEXBaseListener {
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#exitBibAuthor(LaTEXParser.BibAuthorContext)
 	 */
-	
+
 	public void exitBibAuthor(LaTEXParser.BibAuthorContext ctx) {
 		if (!shouldItemBeAddedToXML)
 		{
 			shouldTextBeMissed = true;
 			return;
 		}
-		
+
 		writer.close();
 		bibAuthor = getInfo();
 		shouldTextBeMissed = true;
@@ -2180,7 +2180,7 @@ public class ToXML extends LaTEXBaseListener {
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#enterBibDate(LaTEXParser.BibDateContext)
 	 */
-	
+
 	public void enterBibDate(LaTEXParser.BibDateContext ctx) {
 		if (!shouldItemBeAddedToXML)
 		{
@@ -2195,7 +2195,7 @@ public class ToXML extends LaTEXBaseListener {
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#exitBibDate(LaTEXParser.BibDateContext)
 	 */
-	
+
 	public void exitBibDate(LaTEXParser.BibDateContext ctx) {
 		if (!shouldItemBeAddedToXML)
 		{
@@ -2213,7 +2213,7 @@ public class ToXML extends LaTEXBaseListener {
 	 * @see LaTEXBaseListener#enterBibYear(LaTEXParser.BibYearContext)
 	 */
 	private boolean bibYearNumber = false;
-	
+
 	public void enterBibYear(LaTEXParser.BibYearContext ctx) {
 		if (!shouldItemBeAddedToXML)
 		{
@@ -2228,7 +2228,7 @@ public class ToXML extends LaTEXBaseListener {
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#exitBibYear(LaTEXParser.BibYearContext)
 	 */
-	
+
 	public void exitBibYear(LaTEXParser.BibYearContext ctx) {
 		if (!shouldItemBeAddedToXML)
 		{
@@ -2243,7 +2243,7 @@ public class ToXML extends LaTEXBaseListener {
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#enterBibTitle(LaTEXParser.BibTitleContext)
 	 */
-	
+
 	public void enterBibTitle(LaTEXParser.BibTitleContext ctx) {
 		if (!shouldItemBeAddedToXML)
 		{
@@ -2259,7 +2259,7 @@ public class ToXML extends LaTEXBaseListener {
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#exitBibTitle(LaTEXParser.BibTitleContext)
 	 */
-	
+
 	public void exitBibTitle(LaTEXParser.BibTitleContext ctx) {
 		if (!shouldItemBeAddedToXML)
 		{
@@ -2276,7 +2276,7 @@ public class ToXML extends LaTEXBaseListener {
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#enterBibJournal(LaTEXParser.BibJournalContext)
 	 */
-	
+
 	public void enterBibJournal(LaTEXParser.BibJournalContext ctx) {
 		if (!shouldItemBeAddedToXML)
 		{
@@ -2292,14 +2292,13 @@ public class ToXML extends LaTEXBaseListener {
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#exitBibJournal(LaTEXParser.BibJournalContext)
 	 */
-	
+
 	public void exitBibJournal(LaTEXParser.BibJournalContext ctx) {
 		if (!shouldItemBeAddedToXML)
 		{
 			shouldTextBeMissed = true;
 			return;
 		}
-
 		writer.print("</pub-tl>");
 		writer.close();
 		bibPubtl = getInfo();
@@ -2309,8 +2308,8 @@ public class ToXML extends LaTEXBaseListener {
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#enterBibPublisher(LaTEXParser.BibPublisherContext)
 	 */
-	 
-	public void enterBibPublisher(LaTEXParser.BibPublisherContext ctx) 
+
+	public void enterBibPublisher(LaTEXParser.BibPublisherContext ctx)
 	{
 		if (!shouldItemBeAddedToXML)
 		{
@@ -2322,8 +2321,8 @@ public class ToXML extends LaTEXBaseListener {
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#exitBibPublisher(LaTEXParser.BibPublisherContext)
 	 */
-	 
-	public void exitBibPublisher(LaTEXParser.BibPublisherContext ctx) 
+
+	public void exitBibPublisher(LaTEXParser.BibPublisherContext ctx)
 	{
 		if (!shouldItemBeAddedToXML)
 		{
@@ -2335,7 +2334,7 @@ public class ToXML extends LaTEXBaseListener {
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#enterBibVolume(LaTEXParser.BibVolumeContext)
 	 */
-	
+
 	public void enterBibVolume(LaTEXParser.BibVolumeContext ctx) {
 		if (!shouldItemBeAddedToXML)
 		{
@@ -2350,7 +2349,7 @@ public class ToXML extends LaTEXBaseListener {
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#exitBibVolume(LaTEXParser.BibVolumeContext)
 	 */
-	
+
 	public void exitBibVolume(LaTEXParser.BibVolumeContext ctx) {
 		if (!shouldItemBeAddedToXML)
 		{
@@ -2366,7 +2365,7 @@ public class ToXML extends LaTEXBaseListener {
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#enterBibPages(LaTEXParser.BibPagesContext)
 	 */
-	
+
 	public void enterBibPages(LaTEXParser.BibPagesContext ctx) {
 		if (!shouldItemBeAddedToXML)
 		{
@@ -2381,7 +2380,7 @@ public class ToXML extends LaTEXBaseListener {
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#exitBibPages(LaTEXParser.BibPagesContext)
 	 */
-	
+
 	public void exitBibPages(LaTEXParser.BibPagesContext ctx) {
 		if (!shouldItemBeAddedToXML)
 		{
@@ -2397,7 +2396,7 @@ public class ToXML extends LaTEXBaseListener {
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#enterOnePage(LaTEXParser.OnePageContext)
 	 */
-	
+
 	public void enterOnePage(LaTEXParser.OnePageContext ctx) {
 		writer.print("<fpage>");
         shouldTextBeMissed = false;
@@ -2406,7 +2405,7 @@ public class ToXML extends LaTEXBaseListener {
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#exitOnePage(LaTEXParser.OnePageContext)
 	 */
-	
+
 	public void exitOnePage(LaTEXParser.OnePageContext ctx) {
 		writer.print("</fpage>");
         shouldTextBeMissed = true;
@@ -2415,7 +2414,7 @@ public class ToXML extends LaTEXBaseListener {
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#enterListPages(LaTEXParser.ListPagesContext)
 	 */
-	
+
 	public void enterListPages(LaTEXParser.ListPagesContext ctx) {
 		writer.print("<fpage>" + ctx.simpleText(0).getText()
 				+ "</fpage>&ndash;<lpage>" + ctx.simpleText(1).getText()
@@ -2426,7 +2425,7 @@ public class ToXML extends LaTEXBaseListener {
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#exitListPages(LaTEXParser.ListPagesContext)
 	 */
-	
+
 	public void exitListPages(LaTEXParser.ListPagesContext ctx) {
 		shouldTextBeMissed = false;
 	}
@@ -2434,7 +2433,7 @@ public class ToXML extends LaTEXBaseListener {
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#enterBibLabel(LaTEXParser.BibLabelContext)
 	 */
-	
+
 	public void enterBibLabel(LaTEXParser.BibLabelContext ctx) {
 		if (!shouldItemBeAddedToXML)
 		{
@@ -2447,7 +2446,7 @@ public class ToXML extends LaTEXBaseListener {
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#exitBibLabel(LaTEXParser.BibLabelContext)
 	 */
-	
+
 	public void exitBibLabel(LaTEXParser.BibLabelContext ctx) {
 		if (!shouldItemBeAddedToXML)
 		{
@@ -2460,7 +2459,7 @@ public class ToXML extends LaTEXBaseListener {
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#enterBibOther(LaTEXParser.BibOtherContext)
 	 */
-	
+
 	public void enterBibOther(LaTEXParser.BibOtherContext ctx) {
 		shouldTextBeMissed = true;
 	}
@@ -2468,8 +2467,8 @@ public class ToXML extends LaTEXBaseListener {
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#enterBibBookTiltle(LaTEXParser.BibBookTiltleContext)
 	 */
-	 
-	public void enterBibBookTiltle(LaTEXParser.BibBookTiltleContext ctx) 
+
+	public void enterBibBookTiltle(LaTEXParser.BibBookTiltleContext ctx)
 	{
 		shouldTextBeMissed = true;
 	}
@@ -2482,7 +2481,7 @@ public class ToXML extends LaTEXBaseListener {
     /* (non-Javadoc)
 	 * @see LaTEXBaseListener#enterBibItem(LaTEXParser.BibItemContext)
 	 */
-	
+
 	public void enterBibItem(LaTEXParser.BibItemContext ctx) {
 		++bibRefCounter;
 		writer.print("\n<cit id=\"ref" + bibRefCounter + "\" num=\""
@@ -2490,7 +2489,7 @@ public class ToXML extends LaTEXBaseListener {
 		skipData = writer;
         bibliographyDeclared = true;
 	}
-	
+
 	/**
 	 * Start refs.
 	 */
@@ -2523,7 +2522,7 @@ public class ToXML extends LaTEXBaseListener {
     /* (non-Javadoc)
 	 * @see LaTEXBaseListener#exitBibItem(LaTEXParser.BibItemContext)
 	 */
-	
+
 	public void exitBibItem(LaTEXParser.BibItemContext ctx) {
 		writer.print("</cit>");
 	}
@@ -2531,7 +2530,7 @@ public class ToXML extends LaTEXBaseListener {
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#enterBibItemAuthor(LaTEXParser.BibItemAuthorContext)
 	 */
-	
+
 	public void enterBibItemAuthor(LaTEXParser.BibItemAuthorContext ctx) {
 		String result = "";
 		int j = 0;
@@ -2539,18 +2538,19 @@ public class ToXML extends LaTEXBaseListener {
 			if (ctx.authorText(j).getText().length() >= 2)
 				break;
 
-		if (ctx.authorText().size() > 1) 
+		if (ctx.authorText().size() > 1)
 		{
-			result = "<author><surname>" + ctx.authorText(j).getText();
-			result += "</surname>";
-            if(ctx.authorText(j + 1) != null)
-            {
-			    result += "<initial>";
-			    result += ctx.authorText(j + 1).getText();
-			    result += "</initial>";
+            if (ctx.authorText(j) != null) {
+                result = "<author><surname>" + ctx.authorText(j).getText();
+                result += "</surname>";
+                if (ctx.authorText(j + 1) != null) {
+                    result += "<initial>";
+                    result += ctx.authorText(j + 1).getText();
+                    result += "</initial>";
+                }
+                result += "</author>";
             }
-			result += "</author>";
-		} else
+        } else
 			result += "<etal/>";
 		writer.print(result);
 		shouldTextBeMissed = true;
@@ -2559,14 +2559,14 @@ public class ToXML extends LaTEXBaseListener {
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#exitBibItemAuthor(LaTEXParser.BibItemAuthorContext)
 	 */
-	
+
 	public void exitBibItemAuthor(LaTEXParser.BibItemAuthorContext ctx) {
 	}
 
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#enterBibItemYear(LaTEXParser.BibItemYearContext)
 	 */
-	
+
 	public void enterBibItemYear(LaTEXParser.BibItemYearContext ctx) {
 		writer.print("&lpar;");
 		writer.print("<date>");
@@ -2577,7 +2577,7 @@ public class ToXML extends LaTEXBaseListener {
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#exitBibItemYear(LaTEXParser.BibItemYearContext)
 	 */
-	
+
 	public void exitBibItemYear(LaTEXParser.BibItemYearContext ctx) {
 		writer.print("</year>");
 		writer.print("</date>");
@@ -2587,7 +2587,7 @@ public class ToXML extends LaTEXBaseListener {
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#enterBibItemCittl(LaTEXParser.BibItemCittlContext)
 	 */
-	
+
 	public void enterBibItemCittl(LaTEXParser.BibItemCittlContext ctx) {
 		writer.print("<cit-tl>");
         shouldTextBeMissed = false;
@@ -2596,7 +2596,7 @@ public class ToXML extends LaTEXBaseListener {
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#exitBibItemCittl(LaTEXParser.BibItemCittlContext)
 	 */
-	
+
 	public void exitBibItemCittl(LaTEXParser.BibItemCittlContext ctx) {
 		writer.print("</cit-tl>");
 	}
@@ -2604,7 +2604,7 @@ public class ToXML extends LaTEXBaseListener {
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#enterBibItemPubTtl(LaTEXParser.BibItemPubTtlContext)
 	 */
-	
+
 	public void enterBibItemPubTtl(LaTEXParser.BibItemPubTtlContext ctx) {
 		writer.print("<pub-tl>");
 	}
@@ -2612,23 +2612,27 @@ public class ToXML extends LaTEXBaseListener {
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#enterPubTitleText(LaTEXParser.PubTitleTextContext)
 	 */
-	
+	private boolean wasWordBefore;
 	public void enterPubTitleText(LaTEXParser.PubTitleTextContext ctx) {
+        if(wasWordBefore)
+            writer.print(' ');
 		writer.print(ctx.getText());
+        wasWordBefore = true;
 	}
 
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#exitBibItemPubTtl(LaTEXParser.BibItemPubTtlContext)
 	 */
-	
+
 	public void exitBibItemPubTtl(LaTEXParser.BibItemPubTtlContext ctx) {
+        wasWordBefore = false;
 		writer.print("</pub-tl>");
 	}
 
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#enterBibItemVol(LaTEXParser.BibItemVolContext)
 	 */
-	
+
 	public void enterBibItemVol(LaTEXParser.BibItemVolContext ctx) {
 		writer.print("<vol>");
 	}
@@ -2636,7 +2640,7 @@ public class ToXML extends LaTEXBaseListener {
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#exitBibItemVol(LaTEXParser.BibItemVolContext)
 	 */
-	
+
 	public void exitBibItemVol(LaTEXParser.BibItemVolContext ctx) {
 		writer.print("</vol>");
 	}
@@ -2644,7 +2648,7 @@ public class ToXML extends LaTEXBaseListener {
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#enterBibItemPages(LaTEXParser.BibItemPagesContext)
 	 */
-	
+
 	public void enterBibItemPages(LaTEXParser.BibItemPagesContext ctx) {
 		writer.print("<pages>");
         shouldTextBeMissed = false;
@@ -2653,7 +2657,7 @@ public class ToXML extends LaTEXBaseListener {
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#exitBibItemPages(LaTEXParser.BibItemPagesContext)
 	 */
-	
+
 	public void exitBibItemPages(LaTEXParser.BibItemPagesContext ctx) {
 		writer.print("</pages>");
 		writer.print("&colon;");
@@ -2662,18 +2666,18 @@ public class ToXML extends LaTEXBaseListener {
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#enterColon(LaTEXParser.ColonContext)
 	 */
-	
+
 	public void enterColon(LaTEXParser.ColonContext ctx) {
 		if(shouldTextBeMissed)
 			return;
-		
+
 		writer.print("&colon;");
 	}
 
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#enterAlgorithmBlock(LaTEXParser.AlgorithmBlockContext)
 	 */
-	
+
 	public void enterAlgorithmBlock(LaTEXParser.AlgorithmBlockContext ctx) {
 		wasAlgorithmDeclared = true;
 		++algorithmCounter;
@@ -2687,7 +2691,7 @@ public class ToXML extends LaTEXBaseListener {
     /* (non-Javadoc)
 	 * @see LaTEXBaseListener#exitAlgorithmBlock(LaTEXParser.AlgorithmBlockContext)
 	 */
-	
+
 	public void exitAlgorithmBlock(LaTEXParser.AlgorithmBlockContext ctx) {
 		wasAlgorithmDeclared = false;
 	}
@@ -2695,7 +2699,7 @@ public class ToXML extends LaTEXBaseListener {
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#enterInput(LaTEXParser.InputContext)
 	 */
-	
+
 	public void enterInput(LaTEXParser.InputContext ctx) {
 		paragraphStarter();
 		writer.print("<emph type=\"bold\">Input&colon;</emph>");
@@ -2704,7 +2708,7 @@ public class ToXML extends LaTEXBaseListener {
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#exitInput(LaTEXParser.InputContext)
 	 */
-	
+
 	public void exitInput(LaTEXParser.InputContext ctx) {
 		paragraphCloser();
 	}
@@ -2712,7 +2716,7 @@ public class ToXML extends LaTEXBaseListener {
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#enterOutput(LaTEXParser.OutputContext)
 	 */
-	
+
 	public void enterOutput(LaTEXParser.OutputContext ctx) {
 		paragraphStarter();
 		writer.print("<emph type=\"bold\">Output&colon;</emph>");
@@ -2721,7 +2725,7 @@ public class ToXML extends LaTEXBaseListener {
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#exitOutput(LaTEXParser.OutputContext)
 	 */
-	
+
 	public void exitOutput(LaTEXParser.OutputContext ctx) {
 		paragraphCloser();
 	}
@@ -2729,7 +2733,7 @@ public class ToXML extends LaTEXBaseListener {
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#enterState(LaTEXParser.StateContext)
 	 */
-	
+
 	public void enterState(LaTEXParser.StateContext ctx) {
 		paragraphStarter();
 	}
@@ -2737,7 +2741,7 @@ public class ToXML extends LaTEXBaseListener {
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#exitState(LaTEXParser.StateContext)
 	 */
-	
+
 	public void exitState(LaTEXParser.StateContext ctx) {
 		paragraphCloser();
 	}
@@ -2745,7 +2749,7 @@ public class ToXML extends LaTEXBaseListener {
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#enterForBlock(LaTEXParser.ForBlockContext)
 	 */
-	
+
 	public void enterForBlock(LaTEXParser.ForBlockContext ctx) {
 		paragraphStarter();
 		writer.print("<emph type=\"bold\">for</emph>");
@@ -2754,7 +2758,7 @@ public class ToXML extends LaTEXBaseListener {
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#exitForBlock(LaTEXParser.ForBlockContext)
 	 */
-	
+
 	public void exitForBlock(LaTEXParser.ForBlockContext ctx) {
 		writer.print("<emph type=\"bold\">do</emph>");
 		paragraphCloser();
@@ -2763,7 +2767,7 @@ public class ToXML extends LaTEXBaseListener {
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#enterIfBlock(LaTEXParser.IfBlockContext)
 	 */
-	
+
 	public void enterIfBlock(LaTEXParser.IfBlockContext ctx) {
 		paragraphStarter();
 		writer.print("<emph type=\"bold\">if</emph>");
@@ -2772,7 +2776,7 @@ public class ToXML extends LaTEXBaseListener {
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#exitIfBlock(LaTEXParser.IfBlockContext)
 	 */
-	
+
 	public void exitIfBlock(LaTEXParser.IfBlockContext ctx) {
 		writer.print("<emph type=\"bold\">then</emph>");
 		paragraphCloser();
@@ -2781,7 +2785,7 @@ public class ToXML extends LaTEXBaseListener {
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#enterReturnBlock(LaTEXParser.ReturnBlockContext)
 	 */
-	
+
 	public void enterReturnBlock(LaTEXParser.ReturnBlockContext ctx) {
 		paragraphStarter();
 		writer.print("<emph type=\"bold\">retunr</emph>");
@@ -2790,7 +2794,7 @@ public class ToXML extends LaTEXBaseListener {
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#exitReturnBlock(LaTEXParser.ReturnBlockContext)
 	 */
-	
+
 	public void exitReturnBlock(LaTEXParser.ReturnBlockContext ctx) {
 		paragraphCloser();
 	}
@@ -2798,7 +2802,7 @@ public class ToXML extends LaTEXBaseListener {
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#exitDocumentDeclaration(LaTEXParser.DocumentDeclarationContext)
 	 */
-	
+
 	public void exitDocumentDeclaration(
 			LaTEXParser.DocumentDeclarationContext ctx) {
 		sectionCloser();
@@ -2809,7 +2813,7 @@ public class ToXML extends LaTEXBaseListener {
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#enterIfThenElse(LaTEXParser.IfThenElseContext)
 	 */
-	
+
 	public void enterIfThenElse(LaTEXParser.IfThenElseContext ctx) {
 		shouldTextBeMissed = true;
 	}
@@ -2817,7 +2821,7 @@ public class ToXML extends LaTEXBaseListener {
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#exitIfThenElse(LaTEXParser.IfThenElseContext)
 	 */
-	
+
 	public void exitIfThenElse(LaTEXParser.IfThenElseContext ctx) {
 		shouldTextBeMissed = false;
 	}

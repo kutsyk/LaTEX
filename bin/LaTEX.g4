@@ -143,7 +143,7 @@ text:
 ;
 
 textBody:
-	boxBlock | texttypeDeclarator | simpleText | textSymbols | dollarBlock | block | colon | comma | amp | url | '\n'
+	boxBlock | texttypeDeclarator | simpleText | textSymbols | dollarBlock | block | colon | comma | amp | url  | '\n'
 ;
 
 textSC:
@@ -399,9 +399,7 @@ citeReference:
 measures: 
 	' ms'
 	|' Hz'
-	
 ;
-
 
 figureBlock:
 ('\\begin{figure}' options? memberList*  '\\end{figure}')
@@ -454,12 +452,16 @@ IgnoreAlgorithmKeyWords:
 	) -> skip
 ;
 
+IgnoreUrlPrefix:
+ ( '\\urlprefix' (~'}')+ '}' ) -> skip
+;
+
 url:
-'\\url' urlText
+'\\url' '{' urlText '}'
 ;
 
 urlText:
-	'{' text '}'
+    text
 ;
 
 options:
@@ -639,11 +641,11 @@ bibItem:
 ;
 
 bibItemBody:
-	'{'? bibItemAuthorList newLine* '(' bibItemYear ')' '}'? newLine* '{'? bibItemCittl '}'? newLine* '\\newblock'? newLine* bibItemPubTtl colon? newLine* bibItemVol* newLine* bibItemPages* newLine* '.'* newLine*
+	'{'? bibItemAuthorList newLine* '(' '{'? bibItemYear '}'? ')' '}'? newLine* '{'? bibItemCittl '}'? newLine* '\\newblock'? newLine* '{'? bibItemPubTtl '}'? newLine* bibItemVol* newLine* '{'? bibItemPages* '}'? newLine* '.'* newLine*
 ;
 
 bibItemAuthorList:
-	bibItemAuthor (',' (bibItemAuthor | etAlAuthors))*
+	bibItemAuthor (',' (etAlAuthors | bibItemAuthor))*
 ;
 
 bibItemAuthor:
@@ -651,7 +653,7 @@ bibItemAuthor:
 ;
 
 etAlAuthors:
-	'et' '~'? 'al' '.'?
+	newLine* 'et' '~'? 'al' '.'?
 ;
 
 authorText:
@@ -678,7 +680,7 @@ bibItemCittl:
 	| colon
 	| comma
 	| amp
-	| newLine  )* '.'
+	| newLine  )* '.'?
 ;
 
 bibItemPubTtl:
@@ -688,6 +690,7 @@ bibItemPubTtl:
 	| isoEnt
 	| lparen
     | rparen
+    | (pubTitleText ':')
 	| dot
 	| comma)*
 ;
@@ -698,7 +701,7 @@ pubNumbers:
 ;
 
 bibItemVol:
-	(simpleText) ':'
+ '{'? (Int) '}'? ':'
 ;
 
 pubTitleText:
@@ -1334,6 +1337,7 @@ isoEnt
 	| '\\nexists'
 	| '\\circledS'
 	| '\\hbar'
+	| '\\re'
 	| '\\Re'
 	| '\\smallsetminus'
 	| '{\'}'

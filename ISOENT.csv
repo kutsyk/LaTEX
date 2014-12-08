@@ -360,6 +360,7 @@ f,&fnof;
 \nexists,&nexist;
 \circledS,&oS;
 \hbar,&planck;
+\re,&real;
 \Re,&real;
 \smallsetminus,&sbsol;
 {’},&vprime;

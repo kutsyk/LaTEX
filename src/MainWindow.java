@@ -106,8 +106,8 @@ public class MainWindow extends JFrame {
 
 		};
 
-		System.setOut(new PrintStream(out, true));
-		System.setErr(new PrintStream(out, true));
+//		System.setOut(new PrintStream(out, true));
+//		System.setErr(new PrintStream(out, true));
 	}
 
 	/**

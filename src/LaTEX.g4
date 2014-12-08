@@ -143,7 +143,7 @@ text:
 ;
 
 textBody:
-	boxBlock | texttypeDeclarator | simpleText | textSymbols | dollarBlock | block | colon | comma | amp | url | '\n'
+	boxBlock | texttypeDeclarator | simpleText | textSymbols | dollarBlock | block | colon | comma | amp | url  | '\n'
 ;
 
 textSC:
@@ -399,9 +399,7 @@ citeReference:
 measures: 
 	' ms'
 	|' Hz'
-	
 ;
-
 
 figureBlock:
 ('\\begin{figure}' options? memberList*  '\\end{figure}')
@@ -454,12 +452,16 @@ IgnoreAlgorithmKeyWords:
 	) -> skip
 ;
 
+IgnoreUrlPrefix:
+ ( '\\urlprefix' (~'}')+ '}' ) -> skip
+;
+
 url:
-'\\url' urlText
+'\\url' '{' urlText '}'
 ;
 
 urlText:
-	'{' text '}'
+    text
 ;
 
 options:
@@ -588,14 +590,7 @@ simpleText:
 	| numbers
 	| texttypeDeclarator
 	| url
-	| 'and'
-	
-	| 'year'
-	| 'journal'
-	| 'author'
-	| 'volume'
-	| 'pages'
-	
+
 	| 'number'
 	| 'Figure'
 	| 'Fig.'
@@ -605,6 +600,12 @@ simpleText:
 	| 'multicols'
 	| 'et'
 	| 'al'
+
+	| 'and'
+	| 'journal'
+	| 'author'
+	| 'title'
+	| 'volume'
 ;
 
 interval:
@@ -639,11 +640,11 @@ bibItem:
 ;
 
 bibItemBody:
-	'{'? bibItemAuthorList newLine* '(' bibItemYear ')' '}'? newLine* '{'? bibItemCittl '}'? newLine* '\\newblock'? newLine* bibItemPubTtl colon? newLine* bibItemVol* newLine* bibItemPages* newLine* '.'* newLine*
+	'{'? bibItemAuthorList newLine* '(' '{'? bibItemYear '}'? ')' '}'? newLine* '{'? bibItemCittl '}'? newLine* '\\newblock'? newLine* '{'? bibItemPubTtl '}'? newLine* bibItemVol* newLine* '{'? bibItemPages* '}'? newLine* '.'* newLine*
 ;
 
 bibItemAuthorList:
-	bibItemAuthor (',' (bibItemAuthor | etAlAuthors))*
+	bibItemAuthor (',' (etAlAuthors | bibItemAuthor))*
 ;
 
 bibItemAuthor:
@@ -651,7 +652,7 @@ bibItemAuthor:
 ;
 
 etAlAuthors:
-	'et' '~'? 'al' '.'?
+	newLine* 'et' '~'? 'al' '.'?
 ;
 
 authorText:
@@ -678,7 +679,7 @@ bibItemCittl:
 	| colon
 	| comma
 	| amp
-	| newLine  )* '.'
+	| newLine  )* '.'?
 ;
 
 bibItemPubTtl:
@@ -688,6 +689,7 @@ bibItemPubTtl:
 	| isoEnt
 	| lparen
     | rparen
+    | (pubTitleText ':')
 	| dot
 	| comma)*
 ;
@@ -698,7 +700,7 @@ pubNumbers:
 ;
 
 bibItemVol:
-	(simpleText) ':'
+ '{'? (Int) '}'? ':'
 ;
 
 pubTitleText:
@@ -782,7 +784,29 @@ bibDate:
 ;
 
 bibAuthor:
-	'author' '=' (block | (textRules | newLine)*)
+	'author' '=' '{' (bibTexAuthor ('and' bibTexAuthor)*) '}' ','
+;
+
+bibTexAuthor:
+    (firstTypeOfTexAuthor
+    | secondTypeOfTexAuthor
+    )+
+;
+
+firstTypeOfTexAuthor:
+    (initial '.')+ surname
+;
+
+secondTypeOfTexAuthor:
+    surname ',' (initial)+
+;
+
+initial:
+    Text
+;
+
+surname:
+    simpleText
 ;
 
 bibJournal:
@@ -851,9 +875,9 @@ Int
 	[0-9]+
 ;
 
-Character
-:
-	[a-zA-Z]
+Character:
+	('a'..'z')
+	| 'A'..'Z'
 	| '*'
 	| '"'
 	| '_'
@@ -864,6 +888,10 @@ Character
 	| '|'
 	| '>'
 	| '#'
+;
+
+BigChar:
+    'A'..'Z'
 ;
 
 Dollar
@@ -1334,6 +1362,7 @@ isoEnt
 	| '\\nexists'
 	| '\\circledS'
 	| '\\hbar'
+	| '\\re'
 	| '\\Re'
 	| '\\smallsetminus'
 	| '{\'}'

@@ -809,6 +809,19 @@ public class LaTEXBaseListener implements LaTEXListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterSurname(@NotNull LaTEXParser.SurnameContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitSurname(@NotNull LaTEXParser.SurnameContext ctx) { }
+
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterMember(@NotNull LaTEXParser.MemberContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -848,6 +861,19 @@ public class LaTEXBaseListener implements LaTEXListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterBibTexAuthor(@NotNull LaTEXParser.BibTexAuthorContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitBibTexAuthor(@NotNull LaTEXParser.BibTexAuthorContext ctx) { }
+
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterDots(@NotNull LaTEXParser.DotsContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -855,6 +881,19 @@ public class LaTEXBaseListener implements LaTEXListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitDots(@NotNull LaTEXParser.DotsContext ctx) { }
+
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterInitial(@NotNull LaTEXParser.InitialContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitInitial(@NotNull LaTEXParser.InitialContext ctx) { }
 
 	/**
 	 * {@inheritDoc}

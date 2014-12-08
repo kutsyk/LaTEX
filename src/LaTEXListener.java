@@ -679,6 +679,17 @@ public interface LaTEXListener extends ParseTreeListener {
 	void exitArabic(@NotNull LaTEXParser.ArabicContext ctx);
 
 	/**
+	 * Enter a parse tree produced by {@link LaTEXParser#surname}.
+	 * @param ctx the parse tree
+	 */
+	void enterSurname(@NotNull LaTEXParser.SurnameContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link LaTEXParser#surname}.
+	 * @param ctx the parse tree
+	 */
+	void exitSurname(@NotNull LaTEXParser.SurnameContext ctx);
+
+	/**
 	 * Enter a parse tree produced by {@link LaTEXParser#member}.
 	 * @param ctx the parse tree
 	 */
@@ -712,6 +723,17 @@ public interface LaTEXListener extends ParseTreeListener {
 	void exitNewRow(@NotNull LaTEXParser.NewRowContext ctx);
 
 	/**
+	 * Enter a parse tree produced by {@link LaTEXParser#bibTexAuthor}.
+	 * @param ctx the parse tree
+	 */
+	void enterBibTexAuthor(@NotNull LaTEXParser.BibTexAuthorContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link LaTEXParser#bibTexAuthor}.
+	 * @param ctx the parse tree
+	 */
+	void exitBibTexAuthor(@NotNull LaTEXParser.BibTexAuthorContext ctx);
+
+	/**
 	 * Enter a parse tree produced by {@link LaTEXParser#dots}.
 	 * @param ctx the parse tree
 	 */
@@ -721,6 +743,17 @@ public interface LaTEXListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitDots(@NotNull LaTEXParser.DotsContext ctx);
+
+	/**
+	 * Enter a parse tree produced by {@link LaTEXParser#initial}.
+	 * @param ctx the parse tree
+	 */
+	void enterInitial(@NotNull LaTEXParser.InitialContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link LaTEXParser#initial}.
+	 * @param ctx the parse tree
+	 */
+	void exitInitial(@NotNull LaTEXParser.InitialContext ctx);
 
 	/**
 	 * Enter a parse tree produced by {@link LaTEXParser#ifThenElse}.
