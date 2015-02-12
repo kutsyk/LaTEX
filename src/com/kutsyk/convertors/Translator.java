@@ -1,7 +1,10 @@
-/*
+package com.kutsyk.convertors;/*
  * 
  */
 
+import com.kutsyk.grammar.LaTEX.LaTEXLexer;
+import com.kutsyk.grammar.LaTEX.LaTEXParser;
+import com.kutsyk.windows.MainWindow;
 import org.antlr.v4.runtime.ANTLRInputStream;
 import org.antlr.v4.runtime.CommonTokenStream;
 import org.antlr.v4.runtime.tree.ParseTree;
@@ -59,7 +62,7 @@ public class Translator {
      * @param dirPath the path to the directory with all necessary files
      * @throws Exception the exception
      */
-    Translator(String dirPath) throws Exception {
+    public Translator(String dirPath) throws Exception {
         dir = dirPath;
         getFilesNames(dir);
         writer = new PrintWriter(MainWindow.mainPath

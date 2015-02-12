@@ -1,8 +1,10 @@
-/*
+package com.kutsyk.windows;/*
  * 
  */
 
 import com.kutsyk.TextEditor.TextLineNumber;
+import com.kutsyk.convertors.Translator;
+import com.kutsyk.tools.CustomOutputStream;
 
 import javax.swing.*;
 import javax.swing.text.*;
@@ -216,7 +218,7 @@ public class MainWindow extends JFrame {
 			public void run() {
 				label4.setVisible(true);
 				@SuppressWarnings("unused")
-				Translator translator;
+                Translator translator;
 				try {
 					translator = new Translator(dirPath);
 					createResult();
@@ -303,7 +305,7 @@ public class MainWindow extends JFrame {
 		wasAnyLaTEXProceeded = false;
 		reinitLabels();
 		@SuppressWarnings("serial")
-		JFileChooser chooser = new JFileChooser(new File(".")) {
+		JFileChooser chooser = new JFileChooser(new File("")) {
 			public void approveSelection() {
 				if (getSelectedFile().isFile()) {
 					return;

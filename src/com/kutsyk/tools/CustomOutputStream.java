@@ -1,3 +1,5 @@
+package com.kutsyk.tools;
+
 import javax.swing.*;
 import java.io.IOException;
 import java.io.OutputStream;
