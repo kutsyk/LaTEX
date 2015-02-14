@@ -363,15 +363,16 @@ public class MainWindow extends JFrame {
 				latexFile = fileName;
 				console.append("LaTEX document: " + fileName + "\n");
 				LaTEXLoaderGif.setIcon(done);
-			} else if (type.equals(".xml")) {
-				isXMl = true;
-				XMlWaiting.setText(fileName);
-				console.append("Metadata document: " + fileName + "\n");
-				XMLLoaderGif.setIcon(done);
-			} else if (type.equals(".bib")) {
-				setBibliographyComponents(true);
-				BibWaiting.setText(fileName);
 			}
+//            else if (type.equals(".xml")) {
+//				isXMl = true;
+//				XMlWaiting.setText(fileName);
+//				console.append("Metadata document: " + fileName + "\n");
+//				XMLLoaderGif.setIcon(done);
+//			} else if (type.equals(".bib")) {
+//				setBibliographyComponents(true);
+//				BibWaiting.setText(fileName);
+//			}
 		}
 		if (isTex && isXMl) {
 			dirPath = dir;
