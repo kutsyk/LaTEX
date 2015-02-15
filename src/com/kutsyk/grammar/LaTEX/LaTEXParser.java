@@ -1,13 +1,13 @@
 // Generated from D:/Charlesworth/LaTEX/src/com/kutsyk/grammar/LaTEX\LaTEX.g4 by ANTLR 4.4.1-dev
 package com.kutsyk.grammar.LaTEX;
-
-import org.antlr.v4.runtime.*;
 import org.antlr.v4.runtime.atn.*;
 import org.antlr.v4.runtime.dfa.DFA;
+import org.antlr.v4.runtime.*;
 import org.antlr.v4.runtime.misc.*;
 import org.antlr.v4.runtime.tree.*;
-
 import java.util.List;
+import java.util.Iterator;
+import java.util.ArrayList;
 
 @SuppressWarnings({"all", "warnings", "unchecked", "unused", "cast"})
 public class LaTEXParser extends Parser {
@@ -148,15 +148,9 @@ public class LaTEXParser extends Parser {
 		_interp = new ParserATNSimulator(this,_ATN,_decisionToDFA,_sharedContextCache);
 	}
 	public static class CompilationUnitContext extends ParserRuleContext {
-		public List<NewLineContext> newLine() {
-			return getRuleContexts(NewLineContext.class);
-		}
 		public TerminalNode EOF() { return getToken(LaTEXParser.EOF, 0); }
 		public List<StartingDeclarationContext> startingDeclaration() {
 			return getRuleContexts(StartingDeclarationContext.class);
-		}
-		public NewLineContext newLine(int i) {
-			return getRuleContext(NewLineContext.class,i);
 		}
 		public DocumentDeclarationContext documentDeclaration() {
 			return getRuleContext(DocumentDeclarationContext.class,0);
@@ -198,7 +192,7 @@ public class LaTEXParser extends Parser {
 				if ( _alt==1 ) {
 					{
 					{
-					setState(206); newLine();
+					setState(206); match(T__36);
 					}
 					} 
 				}
@@ -222,10 +216,10 @@ public class LaTEXParser extends Parser {
 			setState(221);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
-			while (_la==T__36 || _la==T__28) {
+			while (_la==T__36) {
 				{
 				{
-				setState(218); newLine();
+				setState(218); match(T__36);
 				}
 				}
 				setState(223);
@@ -236,10 +230,10 @@ public class LaTEXParser extends Parser {
 			setState(228);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
-			while (_la==T__36 || _la==T__28) {
+			while (_la==T__36) {
 				{
 				{
-				setState(225); newLine();
+				setState(225); match(T__36);
 				}
 				}
 				setState(230);
@@ -4266,11 +4260,8 @@ public class LaTEXParser extends Parser {
 	}
 
 	public static class BoldTypeDeclarationContext extends ParserRuleContext {
-		public List<MemberListContext> memberList() {
-			return getRuleContexts(MemberListContext.class);
-		}
-		public MemberListContext memberList(int i) {
-			return getRuleContext(MemberListContext.class,i);
+		public MemberListContext memberList() {
+			return getRuleContext(MemberListContext.class,0);
 		}
 		public BlockContext block() {
 			return getRuleContext(BlockContext.class,0);
@@ -4297,9 +4288,8 @@ public class LaTEXParser extends Parser {
 	public final BoldTypeDeclarationContext boldTypeDeclaration() throws RecognitionException {
 		BoldTypeDeclarationContext _localctx = new BoldTypeDeclarationContext(_ctx, getState());
 		enterRule(_localctx, 102, RULE_boldTypeDeclaration);
-		int _la;
 		try {
-			setState(841);
+			setState(833);
 			switch (_input.LA(1)) {
 			case T__98:
 				enterOuterAlt(_localctx, 1);
@@ -4315,20 +4305,8 @@ public class LaTEXParser extends Parser {
 				{
 				{
 				setState(824); match(T__13);
-				setState(828);
-				_errHandler.sync(this);
-				_la = _input.LA(1);
-				while ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__128) | (1L << T__126) | (1L << T__124) | (1L << T__123) | (1L << T__122) | (1L << T__119) | (1L << T__118) | (1L << T__117) | (1L << T__115) | (1L << T__114) | (1L << T__113) | (1L << T__111) | (1L << T__110) | (1L << T__109) | (1L << T__108) | (1L << T__103) | (1L << T__102) | (1L << T__101) | (1L << T__100) | (1L << T__99) | (1L << T__98) | (1L << T__97) | (1L << T__96) | (1L << T__95) | (1L << T__94) | (1L << T__93) | (1L << T__91) | (1L << T__88) | (1L << T__87) | (1L << T__86) | (1L << T__85) | (1L << T__84) | (1L << T__83) | (1L << T__82) | (1L << T__80) | (1L << T__79) | (1L << T__78) | (1L << T__77) | (1L << T__75) | (1L << T__74) | (1L << T__72) | (1L << T__70) | (1L << T__68) | (1L << T__67) | (1L << T__66))) != 0) || ((((_la - 66)) & ~0x3f) == 0 && ((1L << (_la - 66)) & ((1L << (T__63 - 66)) | (1L << (T__61 - 66)) | (1L << (T__59 - 66)) | (1L << (T__57 - 66)) | (1L << (T__56 - 66)) | (1L << (T__54 - 66)) | (1L << (T__53 - 66)) | (1L << (T__52 - 66)) | (1L << (T__48 - 66)) | (1L << (T__46 - 66)) | (1L << (T__45 - 66)) | (1L << (T__43 - 66)) | (1L << (T__42 - 66)) | (1L << (T__41 - 66)) | (1L << (T__39 - 66)) | (1L << (T__37 - 66)) | (1L << (T__36 - 66)) | (1L << (T__35 - 66)) | (1L << (T__34 - 66)) | (1L << (T__33 - 66)) | (1L << (T__32 - 66)) | (1L << (T__31 - 66)) | (1L << (T__29 - 66)) | (1L << (T__28 - 66)) | (1L << (T__27 - 66)) | (1L << (T__25 - 66)) | (1L << (T__24 - 66)) | (1L << (T__21 - 66)) | (1L << (T__20 - 66)) | (1L << (T__18 - 66)) | (1L << (T__17 - 66)) | (1L << (T__15 - 66)) | (1L << (T__14 - 66)) | (1L << (T__13 - 66)) | (1L << (T__12 - 66)) | (1L << (T__10 - 66)) | (1L << (T__9 - 66)) | (1L << (T__8 - 66)) | (1L << (T__4 - 66)) | (1L << (T__3 - 66)) | (1L << (T__1 - 66)) | (1L << (T__0 - 66)))) != 0) || ((((_la - 132)) & ~0x3f) == 0 && ((1L << (_la - 132)) & ((1L << (String - 132)) | (1L << (Num - 132)) | (1L << (TILDE - 132)) | (1L << (COLON - 132)) | (1L << (SUB - 132)) | (1L << (MUL - 132)) | (1L << (DIV - 132)))) != 0)) {
-					{
-					{
-					setState(825); memberList();
-					}
-					}
-					setState(830);
-					_errHandler.sync(this);
-					_la = _input.LA(1);
-				}
-				setState(831); match(T__120);
+				setState(825); memberList();
+				setState(826); match(T__120);
 				}
 				}
 				break;
@@ -4336,22 +4314,10 @@ public class LaTEXParser extends Parser {
 				enterOuterAlt(_localctx, 3);
 				{
 				{
-				setState(832); match(T__1);
-				setState(833); match(T__29);
-				setState(837);
-				_errHandler.sync(this);
-				_la = _input.LA(1);
-				while ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__128) | (1L << T__126) | (1L << T__124) | (1L << T__123) | (1L << T__122) | (1L << T__119) | (1L << T__118) | (1L << T__117) | (1L << T__115) | (1L << T__114) | (1L << T__113) | (1L << T__111) | (1L << T__110) | (1L << T__109) | (1L << T__108) | (1L << T__103) | (1L << T__102) | (1L << T__101) | (1L << T__100) | (1L << T__99) | (1L << T__98) | (1L << T__97) | (1L << T__96) | (1L << T__95) | (1L << T__94) | (1L << T__93) | (1L << T__91) | (1L << T__88) | (1L << T__87) | (1L << T__86) | (1L << T__85) | (1L << T__84) | (1L << T__83) | (1L << T__82) | (1L << T__80) | (1L << T__79) | (1L << T__78) | (1L << T__77) | (1L << T__75) | (1L << T__74) | (1L << T__72) | (1L << T__70) | (1L << T__68) | (1L << T__67) | (1L << T__66))) != 0) || ((((_la - 66)) & ~0x3f) == 0 && ((1L << (_la - 66)) & ((1L << (T__63 - 66)) | (1L << (T__61 - 66)) | (1L << (T__59 - 66)) | (1L << (T__57 - 66)) | (1L << (T__56 - 66)) | (1L << (T__54 - 66)) | (1L << (T__53 - 66)) | (1L << (T__52 - 66)) | (1L << (T__48 - 66)) | (1L << (T__46 - 66)) | (1L << (T__45 - 66)) | (1L << (T__43 - 66)) | (1L << (T__42 - 66)) | (1L << (T__41 - 66)) | (1L << (T__39 - 66)) | (1L << (T__37 - 66)) | (1L << (T__36 - 66)) | (1L << (T__35 - 66)) | (1L << (T__34 - 66)) | (1L << (T__33 - 66)) | (1L << (T__32 - 66)) | (1L << (T__31 - 66)) | (1L << (T__29 - 66)) | (1L << (T__28 - 66)) | (1L << (T__27 - 66)) | (1L << (T__25 - 66)) | (1L << (T__24 - 66)) | (1L << (T__21 - 66)) | (1L << (T__20 - 66)) | (1L << (T__18 - 66)) | (1L << (T__17 - 66)) | (1L << (T__15 - 66)) | (1L << (T__14 - 66)) | (1L << (T__13 - 66)) | (1L << (T__12 - 66)) | (1L << (T__10 - 66)) | (1L << (T__9 - 66)) | (1L << (T__8 - 66)) | (1L << (T__4 - 66)) | (1L << (T__3 - 66)) | (1L << (T__1 - 66)) | (1L << (T__0 - 66)))) != 0) || ((((_la - 132)) & ~0x3f) == 0 && ((1L << (_la - 132)) & ((1L << (String - 132)) | (1L << (Num - 132)) | (1L << (TILDE - 132)) | (1L << (COLON - 132)) | (1L << (SUB - 132)) | (1L << (MUL - 132)) | (1L << (DIV - 132)))) != 0)) {
-					{
-					{
-					setState(834); memberList();
-					}
-					}
-					setState(839);
-					_errHandler.sync(this);
-					_la = _input.LA(1);
-				}
-				setState(840); match(T__120);
+				setState(828); match(T__1);
+				setState(829); match(T__29);
+				setState(830); memberList();
+				setState(831); match(T__120);
 				}
 				}
 				break;
@@ -4403,21 +4369,21 @@ public class LaTEXParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(843); match(T__66);
-			setState(847);
+			setState(835); match(T__66);
+			setState(839);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__119) | (1L << T__117) | (1L << T__115) | (1L << T__103) | (1L << T__98) | (1L << T__93) | (1L << T__91) | (1L << T__87) | (1L << T__82) | (1L << T__74) | (1L << T__70) | (1L << T__66))) != 0) || ((((_la - 70)) & ~0x3f) == 0 && ((1L << (_la - 70)) & ((1L << (T__59 - 70)) | (1L << (T__52 - 70)) | (1L << (T__50 - 70)) | (1L << (T__36 - 70)) | (1L << (T__35 - 70)) | (1L << (T__34 - 70)) | (1L << (T__29 - 70)) | (1L << (T__17 - 70)) | (1L << (T__14 - 70)) | (1L << (T__13 - 70)) | (1L << (T__12 - 70)) | (1L << (T__1 - 70)) | (1L << (String - 70)) | (1L << (Num - 70)))) != 0) || ((((_la - 141)) & ~0x3f) == 0 && ((1L << (_la - 141)) & ((1L << (COLON - 141)) | (1L << (SUB - 141)) | (1L << (MUL - 141)) | (1L << (DIV - 141)))) != 0)) {
 				{
 				{
-				setState(844); text();
+				setState(836); text();
 				}
 				}
-				setState(849);
+				setState(841);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			}
-			setState(850); match(T__120);
+			setState(842); match(T__120);
 			}
 		}
 		catch (RecognitionException re) {
@@ -4461,20 +4427,20 @@ public class LaTEXParser extends Parser {
 		ItalictypeDeclarationContext _localctx = new ItalictypeDeclarationContext(_ctx, getState());
 		enterRule(_localctx, 106, RULE_italictypeDeclaration);
 		try {
-			setState(854);
+			setState(846);
 			switch (_input.LA(1)) {
 			case T__52:
 			case T__17:
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(852); italicBlock();
+				setState(844); italicBlock();
 				}
 				break;
 			case T__93:
 			case T__74:
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(853); italicOutBlock();
+				setState(845); italicOutBlock();
 				}
 				break;
 			default:
@@ -4523,13 +4489,35 @@ public class LaTEXParser extends Parser {
 		enterRule(_localctx, 108, RULE_italicBlock);
 		int _la;
 		try {
-			setState(875);
+			setState(867);
 			switch (_input.LA(1)) {
 			case T__52:
 				enterOuterAlt(_localctx, 1);
 				{
 				{
-				setState(856); match(T__52);
+				setState(848); match(T__52);
+				setState(852);
+				_errHandler.sync(this);
+				_la = _input.LA(1);
+				while ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__128) | (1L << T__126) | (1L << T__124) | (1L << T__123) | (1L << T__122) | (1L << T__119) | (1L << T__118) | (1L << T__117) | (1L << T__115) | (1L << T__114) | (1L << T__113) | (1L << T__111) | (1L << T__110) | (1L << T__109) | (1L << T__108) | (1L << T__103) | (1L << T__102) | (1L << T__101) | (1L << T__100) | (1L << T__99) | (1L << T__98) | (1L << T__97) | (1L << T__96) | (1L << T__95) | (1L << T__94) | (1L << T__93) | (1L << T__91) | (1L << T__88) | (1L << T__87) | (1L << T__86) | (1L << T__85) | (1L << T__84) | (1L << T__83) | (1L << T__82) | (1L << T__80) | (1L << T__79) | (1L << T__78) | (1L << T__77) | (1L << T__75) | (1L << T__74) | (1L << T__72) | (1L << T__70) | (1L << T__68) | (1L << T__67) | (1L << T__66))) != 0) || ((((_la - 66)) & ~0x3f) == 0 && ((1L << (_la - 66)) & ((1L << (T__63 - 66)) | (1L << (T__61 - 66)) | (1L << (T__59 - 66)) | (1L << (T__57 - 66)) | (1L << (T__56 - 66)) | (1L << (T__54 - 66)) | (1L << (T__53 - 66)) | (1L << (T__52 - 66)) | (1L << (T__48 - 66)) | (1L << (T__46 - 66)) | (1L << (T__45 - 66)) | (1L << (T__43 - 66)) | (1L << (T__42 - 66)) | (1L << (T__41 - 66)) | (1L << (T__39 - 66)) | (1L << (T__37 - 66)) | (1L << (T__36 - 66)) | (1L << (T__35 - 66)) | (1L << (T__34 - 66)) | (1L << (T__33 - 66)) | (1L << (T__32 - 66)) | (1L << (T__31 - 66)) | (1L << (T__29 - 66)) | (1L << (T__28 - 66)) | (1L << (T__27 - 66)) | (1L << (T__25 - 66)) | (1L << (T__24 - 66)) | (1L << (T__21 - 66)) | (1L << (T__20 - 66)) | (1L << (T__18 - 66)) | (1L << (T__17 - 66)) | (1L << (T__15 - 66)) | (1L << (T__14 - 66)) | (1L << (T__13 - 66)) | (1L << (T__12 - 66)) | (1L << (T__10 - 66)) | (1L << (T__9 - 66)) | (1L << (T__8 - 66)) | (1L << (T__4 - 66)) | (1L << (T__3 - 66)) | (1L << (T__1 - 66)) | (1L << (T__0 - 66)))) != 0) || ((((_la - 132)) & ~0x3f) == 0 && ((1L << (_la - 132)) & ((1L << (String - 132)) | (1L << (Num - 132)) | (1L << (TILDE - 132)) | (1L << (COLON - 132)) | (1L << (SUB - 132)) | (1L << (MUL - 132)) | (1L << (DIV - 132)))) != 0)) {
+					{
+					{
+					setState(849); memberList();
+					}
+					}
+					setState(854);
+					_errHandler.sync(this);
+					_la = _input.LA(1);
+				}
+				setState(855); match(T__120);
+				}
+				}
+				break;
+			case T__17:
+				enterOuterAlt(_localctx, 2);
+				{
+				{
+				setState(856); match(T__17);
 				setState(860);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
@@ -4544,33 +4532,11 @@ public class LaTEXParser extends Parser {
 					_la = _input.LA(1);
 				}
 				setState(863); match(T__120);
-				}
-				}
-				break;
-			case T__17:
-				enterOuterAlt(_localctx, 2);
-				{
-				{
-				setState(864); match(T__17);
-				setState(868);
-				_errHandler.sync(this);
-				_la = _input.LA(1);
-				while ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__128) | (1L << T__126) | (1L << T__124) | (1L << T__123) | (1L << T__122) | (1L << T__119) | (1L << T__118) | (1L << T__117) | (1L << T__115) | (1L << T__114) | (1L << T__113) | (1L << T__111) | (1L << T__110) | (1L << T__109) | (1L << T__108) | (1L << T__103) | (1L << T__102) | (1L << T__101) | (1L << T__100) | (1L << T__99) | (1L << T__98) | (1L << T__97) | (1L << T__96) | (1L << T__95) | (1L << T__94) | (1L << T__93) | (1L << T__91) | (1L << T__88) | (1L << T__87) | (1L << T__86) | (1L << T__85) | (1L << T__84) | (1L << T__83) | (1L << T__82) | (1L << T__80) | (1L << T__79) | (1L << T__78) | (1L << T__77) | (1L << T__75) | (1L << T__74) | (1L << T__72) | (1L << T__70) | (1L << T__68) | (1L << T__67) | (1L << T__66))) != 0) || ((((_la - 66)) & ~0x3f) == 0 && ((1L << (_la - 66)) & ((1L << (T__63 - 66)) | (1L << (T__61 - 66)) | (1L << (T__59 - 66)) | (1L << (T__57 - 66)) | (1L << (T__56 - 66)) | (1L << (T__54 - 66)) | (1L << (T__53 - 66)) | (1L << (T__52 - 66)) | (1L << (T__48 - 66)) | (1L << (T__46 - 66)) | (1L << (T__45 - 66)) | (1L << (T__43 - 66)) | (1L << (T__42 - 66)) | (1L << (T__41 - 66)) | (1L << (T__39 - 66)) | (1L << (T__37 - 66)) | (1L << (T__36 - 66)) | (1L << (T__35 - 66)) | (1L << (T__34 - 66)) | (1L << (T__33 - 66)) | (1L << (T__32 - 66)) | (1L << (T__31 - 66)) | (1L << (T__29 - 66)) | (1L << (T__28 - 66)) | (1L << (T__27 - 66)) | (1L << (T__25 - 66)) | (1L << (T__24 - 66)) | (1L << (T__21 - 66)) | (1L << (T__20 - 66)) | (1L << (T__18 - 66)) | (1L << (T__17 - 66)) | (1L << (T__15 - 66)) | (1L << (T__14 - 66)) | (1L << (T__13 - 66)) | (1L << (T__12 - 66)) | (1L << (T__10 - 66)) | (1L << (T__9 - 66)) | (1L << (T__8 - 66)) | (1L << (T__4 - 66)) | (1L << (T__3 - 66)) | (1L << (T__1 - 66)) | (1L << (T__0 - 66)))) != 0) || ((((_la - 132)) & ~0x3f) == 0 && ((1L << (_la - 132)) & ((1L << (String - 132)) | (1L << (Num - 132)) | (1L << (TILDE - 132)) | (1L << (COLON - 132)) | (1L << (SUB - 132)) | (1L << (MUL - 132)) | (1L << (DIV - 132)))) != 0)) {
-					{
-					{
-					setState(865); memberList();
-					}
-					}
-					setState(870);
-					_errHandler.sync(this);
-					_la = _input.LA(1);
-				}
-				setState(871); match(T__120);
-				setState(873);
-				switch ( getInterpreter().adaptivePredict(_input,83,_ctx) ) {
+				setState(865);
+				switch ( getInterpreter().adaptivePredict(_input,81,_ctx) ) {
 				case 1:
 					{
-					setState(872); match(T__110);
+					setState(864); match(T__110);
 					}
 					break;
 				}
@@ -4619,14 +4585,14 @@ public class LaTEXParser extends Parser {
 		ItalicOutBlockContext _localctx = new ItalicOutBlockContext(_ctx, getState());
 		enterRule(_localctx, 110, RULE_italicOutBlock);
 		try {
-			setState(881);
+			setState(873);
 			switch (_input.LA(1)) {
 			case T__93:
 				enterOuterAlt(_localctx, 1);
 				{
 				{
-				setState(877); match(T__93);
-				setState(878); block();
+				setState(869); match(T__93);
+				setState(870); block();
 				}
 				}
 				break;
@@ -4634,8 +4600,8 @@ public class LaTEXParser extends Parser {
 				enterOuterAlt(_localctx, 2);
 				{
 				{
-				setState(879); match(T__74);
-				setState(880); block();
+				setState(871); match(T__74);
+				setState(872); block();
 				}
 				}
 				break;
@@ -4683,9 +4649,9 @@ public class LaTEXParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(883); match(T__0);
-			setState(884); memberList();
-			setState(885); match(T__26);
+			setState(875); match(T__0);
+			setState(876); memberList();
+			setState(877); match(T__26);
 			}
 		}
 		catch (RecognitionException re) {
@@ -4732,21 +4698,21 @@ public class LaTEXParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(887); match(T__72);
-			setState(891);
+			setState(879); match(T__72);
+			setState(883);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__128) | (1L << T__126) | (1L << T__124) | (1L << T__123) | (1L << T__122) | (1L << T__119) | (1L << T__118) | (1L << T__117) | (1L << T__115) | (1L << T__114) | (1L << T__113) | (1L << T__111) | (1L << T__110) | (1L << T__109) | (1L << T__108) | (1L << T__103) | (1L << T__102) | (1L << T__101) | (1L << T__100) | (1L << T__99) | (1L << T__98) | (1L << T__97) | (1L << T__96) | (1L << T__95) | (1L << T__94) | (1L << T__93) | (1L << T__91) | (1L << T__88) | (1L << T__87) | (1L << T__86) | (1L << T__85) | (1L << T__84) | (1L << T__83) | (1L << T__82) | (1L << T__80) | (1L << T__79) | (1L << T__78) | (1L << T__77) | (1L << T__75) | (1L << T__74) | (1L << T__72) | (1L << T__70) | (1L << T__68) | (1L << T__67) | (1L << T__66))) != 0) || ((((_la - 66)) & ~0x3f) == 0 && ((1L << (_la - 66)) & ((1L << (T__63 - 66)) | (1L << (T__61 - 66)) | (1L << (T__59 - 66)) | (1L << (T__57 - 66)) | (1L << (T__56 - 66)) | (1L << (T__54 - 66)) | (1L << (T__53 - 66)) | (1L << (T__52 - 66)) | (1L << (T__48 - 66)) | (1L << (T__46 - 66)) | (1L << (T__45 - 66)) | (1L << (T__43 - 66)) | (1L << (T__42 - 66)) | (1L << (T__41 - 66)) | (1L << (T__39 - 66)) | (1L << (T__37 - 66)) | (1L << (T__36 - 66)) | (1L << (T__35 - 66)) | (1L << (T__34 - 66)) | (1L << (T__33 - 66)) | (1L << (T__32 - 66)) | (1L << (T__31 - 66)) | (1L << (T__29 - 66)) | (1L << (T__28 - 66)) | (1L << (T__27 - 66)) | (1L << (T__25 - 66)) | (1L << (T__24 - 66)) | (1L << (T__21 - 66)) | (1L << (T__20 - 66)) | (1L << (T__18 - 66)) | (1L << (T__17 - 66)) | (1L << (T__15 - 66)) | (1L << (T__14 - 66)) | (1L << (T__13 - 66)) | (1L << (T__12 - 66)) | (1L << (T__10 - 66)) | (1L << (T__9 - 66)) | (1L << (T__8 - 66)) | (1L << (T__4 - 66)) | (1L << (T__3 - 66)) | (1L << (T__1 - 66)) | (1L << (T__0 - 66)))) != 0) || ((((_la - 132)) & ~0x3f) == 0 && ((1L << (_la - 132)) & ((1L << (String - 132)) | (1L << (Num - 132)) | (1L << (TILDE - 132)) | (1L << (COLON - 132)) | (1L << (SUB - 132)) | (1L << (MUL - 132)) | (1L << (DIV - 132)))) != 0)) {
 				{
 				{
-				setState(888); memberList();
+				setState(880); memberList();
 				}
 				}
-				setState(893);
+				setState(885);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			}
-			setState(894); match(T__60);
+			setState(886); match(T__60);
 			}
 		}
 		catch (RecognitionException re) {
@@ -4794,23 +4760,23 @@ public class LaTEXParser extends Parser {
 			enterOuterAlt(_localctx, 1);
 			{
 			{
-			setState(896);
+			setState(888);
 			_la = _input.LA(1);
 			if ( !(_la==T__113 || _la==T__15) ) {
 			_errHandler.recoverInline(this);
 			}
 			consume();
-			setState(897); match(T__29);
-			setState(899);
+			setState(889); match(T__29);
+			setState(891);
 			_la = _input.LA(1);
 			if (_la==T__77) {
 				{
-				setState(898); label();
+				setState(890); label();
 				}
 			}
 
-			setState(901); text();
-			setState(902); match(T__120);
+			setState(893); text();
+			setState(894); match(T__120);
 			}
 			}
 		}
@@ -4859,23 +4825,23 @@ public class LaTEXParser extends Parser {
 			enterOuterAlt(_localctx, 1);
 			{
 			{
-			setState(904);
+			setState(896);
 			_la = _input.LA(1);
 			if ( !(_la==T__67 || _la==T__18) ) {
 			_errHandler.recoverInline(this);
 			}
 			consume();
-			setState(905); match(T__29);
-			setState(907);
+			setState(897); match(T__29);
+			setState(899);
 			_la = _input.LA(1);
 			if (_la==T__77) {
 				{
-				setState(906); label();
+				setState(898); label();
 				}
 			}
 
-			setState(909); text();
-			setState(910); match(T__120);
+			setState(901); text();
+			setState(902); match(T__120);
 			}
 			}
 		}
@@ -4924,23 +4890,23 @@ public class LaTEXParser extends Parser {
 			enterOuterAlt(_localctx, 1);
 			{
 			{
-			setState(912);
+			setState(904);
 			_la = _input.LA(1);
 			if ( !(_la==T__102 || _la==T__45) ) {
 			_errHandler.recoverInline(this);
 			}
 			consume();
-			setState(913); match(T__29);
-			setState(915);
+			setState(905); match(T__29);
+			setState(907);
 			_la = _input.LA(1);
 			if (_la==T__77) {
 				{
-				setState(914); label();
+				setState(906); label();
 				}
 			}
 
-			setState(917); text();
-			setState(918); match(T__120);
+			setState(909); text();
+			setState(910); match(T__120);
 			}
 			}
 		}
@@ -4991,36 +4957,36 @@ public class LaTEXParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(921);
+			setState(913);
 			_la = _input.LA(1);
 			if (_la==TILDE) {
 				{
-				setState(920); match(TILDE);
+				setState(912); match(TILDE);
 				}
 			}
 
-			setState(923);
+			setState(915);
 			_la = _input.LA(1);
 			if ( !(_la==T__122 || ((((_la - 66)) & ~0x3f) == 0 && ((1L << (_la - 66)) & ((1L << (T__63 - 66)) | (1L << (T__48 - 66)) | (1L << (T__32 - 66)))) != 0)) ) {
 			_errHandler.recoverInline(this);
 			}
 			consume();
-			setState(927);
+			setState(919);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			while (_la==T__69) {
 				{
 				{
-				setState(924); options();
+				setState(916); options();
 				}
 				}
-				setState(929);
+				setState(921);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			}
-			setState(930); match(T__29);
-			setState(931); citeReferencesList();
-			setState(932); match(T__120);
+			setState(922); match(T__29);
+			setState(923); citeReferencesList();
+			setState(924); match(T__120);
 			}
 		}
 		catch (RecognitionException re) {
@@ -5068,46 +5034,46 @@ public class LaTEXParser extends Parser {
 			int _alt;
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(934); citeReference();
-			setState(951);
+			setState(926); citeReference();
+			setState(943);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			while (_la==T__103) {
 				{
 				{
-				setState(935); match(T__103);
-				setState(939);
+				setState(927); match(T__103);
+				setState(931);
 				_errHandler.sync(this);
-				_alt = getInterpreter().adaptivePredict(_input,92,_ctx);
+				_alt = getInterpreter().adaptivePredict(_input,90,_ctx);
 				while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER ) {
 					if ( _alt==1 ) {
 						{
 						{
-						setState(936); match(T__36);
+						setState(928); match(T__36);
 						}
 						} 
 					}
-					setState(941);
+					setState(933);
 					_errHandler.sync(this);
-					_alt = getInterpreter().adaptivePredict(_input,92,_ctx);
+					_alt = getInterpreter().adaptivePredict(_input,90,_ctx);
 				}
-				setState(942); citeReference();
-				setState(946);
+				setState(934); citeReference();
+				setState(938);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 				while (_la==T__36) {
 					{
 					{
-					setState(943); match(T__36);
+					setState(935); match(T__36);
 					}
 					}
-					setState(948);
+					setState(940);
 					_errHandler.sync(this);
 					_la = _input.LA(1);
 				}
 				}
 				}
-				setState(953);
+				setState(945);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			}
@@ -5175,39 +5141,39 @@ public class LaTEXParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(960);
+			setState(952);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			while (_la==T__117 || ((((_la - 94)) & ~0x3f) == 0 && ((1L << (_la - 94)) & ((1L << (T__35 - 94)) | (1L << (String - 94)) | (1L << (Num - 94)) | (1L << (COLON - 94)))) != 0)) {
 				{
-				setState(958);
+				setState(950);
 				switch (_input.LA(1)) {
 				case String:
 				case Num:
 					{
-					setState(954); simpleText();
+					setState(946); simpleText();
 					}
 					break;
 				case T__35:
 					{
-					setState(955); lparen();
+					setState(947); lparen();
 					}
 					break;
 				case T__117:
 					{
-					setState(956); rparen();
+					setState(948); rparen();
 					}
 					break;
 				case COLON:
 					{
-					setState(957); colon();
+					setState(949); colon();
 					}
 					break;
 				default:
 					throw new NoViableAltException(this);
 				}
 				}
-				setState(962);
+				setState(954);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			}
@@ -5251,7 +5217,7 @@ public class LaTEXParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(963);
+			setState(955);
 			_la = _input.LA(1);
 			if ( !(_la==T__33 || _la==T__20) ) {
 			_errHandler.recoverInline(this);
@@ -5304,35 +5270,35 @@ public class LaTEXParser extends Parser {
 		enterRule(_localctx, 130, RULE_figureBlock);
 		int _la;
 		try {
-			setState(987);
+			setState(979);
 			switch (_input.LA(1)) {
 			case T__27:
 				enterOuterAlt(_localctx, 1);
 				{
 				{
-				setState(965); match(T__27);
-				setState(967);
+				setState(957); match(T__27);
+				setState(959);
 				_la = _input.LA(1);
 				if (_la==T__69) {
 					{
-					setState(966); options();
+					setState(958); options();
 					}
 				}
 
-				setState(972);
+				setState(964);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 				while ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__128) | (1L << T__126) | (1L << T__124) | (1L << T__123) | (1L << T__122) | (1L << T__119) | (1L << T__118) | (1L << T__117) | (1L << T__115) | (1L << T__114) | (1L << T__113) | (1L << T__111) | (1L << T__110) | (1L << T__109) | (1L << T__108) | (1L << T__103) | (1L << T__102) | (1L << T__101) | (1L << T__100) | (1L << T__99) | (1L << T__98) | (1L << T__97) | (1L << T__96) | (1L << T__95) | (1L << T__94) | (1L << T__93) | (1L << T__91) | (1L << T__88) | (1L << T__87) | (1L << T__86) | (1L << T__85) | (1L << T__84) | (1L << T__83) | (1L << T__82) | (1L << T__80) | (1L << T__79) | (1L << T__78) | (1L << T__77) | (1L << T__75) | (1L << T__74) | (1L << T__72) | (1L << T__70) | (1L << T__68) | (1L << T__67) | (1L << T__66))) != 0) || ((((_la - 66)) & ~0x3f) == 0 && ((1L << (_la - 66)) & ((1L << (T__63 - 66)) | (1L << (T__61 - 66)) | (1L << (T__59 - 66)) | (1L << (T__57 - 66)) | (1L << (T__56 - 66)) | (1L << (T__54 - 66)) | (1L << (T__53 - 66)) | (1L << (T__52 - 66)) | (1L << (T__48 - 66)) | (1L << (T__46 - 66)) | (1L << (T__45 - 66)) | (1L << (T__43 - 66)) | (1L << (T__42 - 66)) | (1L << (T__41 - 66)) | (1L << (T__39 - 66)) | (1L << (T__37 - 66)) | (1L << (T__36 - 66)) | (1L << (T__35 - 66)) | (1L << (T__34 - 66)) | (1L << (T__33 - 66)) | (1L << (T__32 - 66)) | (1L << (T__31 - 66)) | (1L << (T__29 - 66)) | (1L << (T__28 - 66)) | (1L << (T__27 - 66)) | (1L << (T__25 - 66)) | (1L << (T__24 - 66)) | (1L << (T__21 - 66)) | (1L << (T__20 - 66)) | (1L << (T__18 - 66)) | (1L << (T__17 - 66)) | (1L << (T__15 - 66)) | (1L << (T__14 - 66)) | (1L << (T__13 - 66)) | (1L << (T__12 - 66)) | (1L << (T__10 - 66)) | (1L << (T__9 - 66)) | (1L << (T__8 - 66)) | (1L << (T__4 - 66)) | (1L << (T__3 - 66)) | (1L << (T__1 - 66)) | (1L << (T__0 - 66)))) != 0) || ((((_la - 132)) & ~0x3f) == 0 && ((1L << (_la - 132)) & ((1L << (String - 132)) | (1L << (Num - 132)) | (1L << (TILDE - 132)) | (1L << (COLON - 132)) | (1L << (SUB - 132)) | (1L << (MUL - 132)) | (1L << (DIV - 132)))) != 0)) {
 					{
 					{
-					setState(969); memberList();
+					setState(961); memberList();
 					}
 					}
-					setState(974);
+					setState(966);
 					_errHandler.sync(this);
 					_la = _input.LA(1);
 				}
-				setState(975); match(T__47);
+				setState(967); match(T__47);
 				}
 				}
 				break;
@@ -5340,29 +5306,29 @@ public class LaTEXParser extends Parser {
 				enterOuterAlt(_localctx, 2);
 				{
 				{
-				setState(976); match(T__75);
-				setState(978);
+				setState(968); match(T__75);
+				setState(970);
 				_la = _input.LA(1);
 				if (_la==T__69) {
 					{
-					setState(977); options();
+					setState(969); options();
 					}
 				}
 
-				setState(983);
+				setState(975);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 				while ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__128) | (1L << T__126) | (1L << T__124) | (1L << T__123) | (1L << T__122) | (1L << T__119) | (1L << T__118) | (1L << T__117) | (1L << T__115) | (1L << T__114) | (1L << T__113) | (1L << T__111) | (1L << T__110) | (1L << T__109) | (1L << T__108) | (1L << T__103) | (1L << T__102) | (1L << T__101) | (1L << T__100) | (1L << T__99) | (1L << T__98) | (1L << T__97) | (1L << T__96) | (1L << T__95) | (1L << T__94) | (1L << T__93) | (1L << T__91) | (1L << T__88) | (1L << T__87) | (1L << T__86) | (1L << T__85) | (1L << T__84) | (1L << T__83) | (1L << T__82) | (1L << T__80) | (1L << T__79) | (1L << T__78) | (1L << T__77) | (1L << T__75) | (1L << T__74) | (1L << T__72) | (1L << T__70) | (1L << T__68) | (1L << T__67) | (1L << T__66))) != 0) || ((((_la - 66)) & ~0x3f) == 0 && ((1L << (_la - 66)) & ((1L << (T__63 - 66)) | (1L << (T__61 - 66)) | (1L << (T__59 - 66)) | (1L << (T__57 - 66)) | (1L << (T__56 - 66)) | (1L << (T__54 - 66)) | (1L << (T__53 - 66)) | (1L << (T__52 - 66)) | (1L << (T__48 - 66)) | (1L << (T__46 - 66)) | (1L << (T__45 - 66)) | (1L << (T__43 - 66)) | (1L << (T__42 - 66)) | (1L << (T__41 - 66)) | (1L << (T__39 - 66)) | (1L << (T__37 - 66)) | (1L << (T__36 - 66)) | (1L << (T__35 - 66)) | (1L << (T__34 - 66)) | (1L << (T__33 - 66)) | (1L << (T__32 - 66)) | (1L << (T__31 - 66)) | (1L << (T__29 - 66)) | (1L << (T__28 - 66)) | (1L << (T__27 - 66)) | (1L << (T__25 - 66)) | (1L << (T__24 - 66)) | (1L << (T__21 - 66)) | (1L << (T__20 - 66)) | (1L << (T__18 - 66)) | (1L << (T__17 - 66)) | (1L << (T__15 - 66)) | (1L << (T__14 - 66)) | (1L << (T__13 - 66)) | (1L << (T__12 - 66)) | (1L << (T__10 - 66)) | (1L << (T__9 - 66)) | (1L << (T__8 - 66)) | (1L << (T__4 - 66)) | (1L << (T__3 - 66)) | (1L << (T__1 - 66)) | (1L << (T__0 - 66)))) != 0) || ((((_la - 132)) & ~0x3f) == 0 && ((1L << (_la - 132)) & ((1L << (String - 132)) | (1L << (Num - 132)) | (1L << (TILDE - 132)) | (1L << (COLON - 132)) | (1L << (SUB - 132)) | (1L << (MUL - 132)) | (1L << (DIV - 132)))) != 0)) {
 					{
 					{
-					setState(980); memberList();
+					setState(972); memberList();
 					}
 					}
-					setState(985);
+					setState(977);
 					_errHandler.sync(this);
 					_la = _input.LA(1);
 				}
-				setState(986); match(T__104);
+				setState(978); match(T__104);
 				}
 				}
 				break;
@@ -5415,35 +5381,35 @@ public class LaTEXParser extends Parser {
 		enterRule(_localctx, 132, RULE_supplementaryFigureBlock);
 		int _la;
 		try {
-			setState(1011);
+			setState(1003);
 			switch (_input.LA(1)) {
 			case T__94:
 				enterOuterAlt(_localctx, 1);
 				{
 				{
-				setState(989); match(T__94);
-				setState(991);
+				setState(981); match(T__94);
+				setState(983);
 				_la = _input.LA(1);
 				if (_la==T__69) {
 					{
-					setState(990); options();
+					setState(982); options();
 					}
 				}
 
-				setState(996);
+				setState(988);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 				while ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__128) | (1L << T__126) | (1L << T__124) | (1L << T__123) | (1L << T__122) | (1L << T__119) | (1L << T__118) | (1L << T__117) | (1L << T__115) | (1L << T__114) | (1L << T__113) | (1L << T__111) | (1L << T__110) | (1L << T__109) | (1L << T__108) | (1L << T__103) | (1L << T__102) | (1L << T__101) | (1L << T__100) | (1L << T__99) | (1L << T__98) | (1L << T__97) | (1L << T__96) | (1L << T__95) | (1L << T__94) | (1L << T__93) | (1L << T__91) | (1L << T__88) | (1L << T__87) | (1L << T__86) | (1L << T__85) | (1L << T__84) | (1L << T__83) | (1L << T__82) | (1L << T__80) | (1L << T__79) | (1L << T__78) | (1L << T__77) | (1L << T__75) | (1L << T__74) | (1L << T__72) | (1L << T__70) | (1L << T__68) | (1L << T__67) | (1L << T__66))) != 0) || ((((_la - 66)) & ~0x3f) == 0 && ((1L << (_la - 66)) & ((1L << (T__63 - 66)) | (1L << (T__61 - 66)) | (1L << (T__59 - 66)) | (1L << (T__57 - 66)) | (1L << (T__56 - 66)) | (1L << (T__54 - 66)) | (1L << (T__53 - 66)) | (1L << (T__52 - 66)) | (1L << (T__48 - 66)) | (1L << (T__46 - 66)) | (1L << (T__45 - 66)) | (1L << (T__43 - 66)) | (1L << (T__42 - 66)) | (1L << (T__41 - 66)) | (1L << (T__39 - 66)) | (1L << (T__37 - 66)) | (1L << (T__36 - 66)) | (1L << (T__35 - 66)) | (1L << (T__34 - 66)) | (1L << (T__33 - 66)) | (1L << (T__32 - 66)) | (1L << (T__31 - 66)) | (1L << (T__29 - 66)) | (1L << (T__28 - 66)) | (1L << (T__27 - 66)) | (1L << (T__25 - 66)) | (1L << (T__24 - 66)) | (1L << (T__21 - 66)) | (1L << (T__20 - 66)) | (1L << (T__18 - 66)) | (1L << (T__17 - 66)) | (1L << (T__15 - 66)) | (1L << (T__14 - 66)) | (1L << (T__13 - 66)) | (1L << (T__12 - 66)) | (1L << (T__10 - 66)) | (1L << (T__9 - 66)) | (1L << (T__8 - 66)) | (1L << (T__4 - 66)) | (1L << (T__3 - 66)) | (1L << (T__1 - 66)) | (1L << (T__0 - 66)))) != 0) || ((((_la - 132)) & ~0x3f) == 0 && ((1L << (_la - 132)) & ((1L << (String - 132)) | (1L << (Num - 132)) | (1L << (TILDE - 132)) | (1L << (COLON - 132)) | (1L << (SUB - 132)) | (1L << (MUL - 132)) | (1L << (DIV - 132)))) != 0)) {
 					{
 					{
-					setState(993); memberList();
+					setState(985); memberList();
 					}
 					}
-					setState(998);
+					setState(990);
 					_errHandler.sync(this);
 					_la = _input.LA(1);
 				}
-				setState(999); match(T__92);
+				setState(991); match(T__92);
 				}
 				}
 				break;
@@ -5451,29 +5417,29 @@ public class LaTEXParser extends Parser {
 				enterOuterAlt(_localctx, 2);
 				{
 				{
-				setState(1000); match(T__95);
-				setState(1002);
+				setState(992); match(T__95);
+				setState(994);
 				_la = _input.LA(1);
 				if (_la==T__69) {
 					{
-					setState(1001); options();
+					setState(993); options();
 					}
 				}
 
-				setState(1007);
+				setState(999);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 				while ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__128) | (1L << T__126) | (1L << T__124) | (1L << T__123) | (1L << T__122) | (1L << T__119) | (1L << T__118) | (1L << T__117) | (1L << T__115) | (1L << T__114) | (1L << T__113) | (1L << T__111) | (1L << T__110) | (1L << T__109) | (1L << T__108) | (1L << T__103) | (1L << T__102) | (1L << T__101) | (1L << T__100) | (1L << T__99) | (1L << T__98) | (1L << T__97) | (1L << T__96) | (1L << T__95) | (1L << T__94) | (1L << T__93) | (1L << T__91) | (1L << T__88) | (1L << T__87) | (1L << T__86) | (1L << T__85) | (1L << T__84) | (1L << T__83) | (1L << T__82) | (1L << T__80) | (1L << T__79) | (1L << T__78) | (1L << T__77) | (1L << T__75) | (1L << T__74) | (1L << T__72) | (1L << T__70) | (1L << T__68) | (1L << T__67) | (1L << T__66))) != 0) || ((((_la - 66)) & ~0x3f) == 0 && ((1L << (_la - 66)) & ((1L << (T__63 - 66)) | (1L << (T__61 - 66)) | (1L << (T__59 - 66)) | (1L << (T__57 - 66)) | (1L << (T__56 - 66)) | (1L << (T__54 - 66)) | (1L << (T__53 - 66)) | (1L << (T__52 - 66)) | (1L << (T__48 - 66)) | (1L << (T__46 - 66)) | (1L << (T__45 - 66)) | (1L << (T__43 - 66)) | (1L << (T__42 - 66)) | (1L << (T__41 - 66)) | (1L << (T__39 - 66)) | (1L << (T__37 - 66)) | (1L << (T__36 - 66)) | (1L << (T__35 - 66)) | (1L << (T__34 - 66)) | (1L << (T__33 - 66)) | (1L << (T__32 - 66)) | (1L << (T__31 - 66)) | (1L << (T__29 - 66)) | (1L << (T__28 - 66)) | (1L << (T__27 - 66)) | (1L << (T__25 - 66)) | (1L << (T__24 - 66)) | (1L << (T__21 - 66)) | (1L << (T__20 - 66)) | (1L << (T__18 - 66)) | (1L << (T__17 - 66)) | (1L << (T__15 - 66)) | (1L << (T__14 - 66)) | (1L << (T__13 - 66)) | (1L << (T__12 - 66)) | (1L << (T__10 - 66)) | (1L << (T__9 - 66)) | (1L << (T__8 - 66)) | (1L << (T__4 - 66)) | (1L << (T__3 - 66)) | (1L << (T__1 - 66)) | (1L << (T__0 - 66)))) != 0) || ((((_la - 132)) & ~0x3f) == 0 && ((1L << (_la - 132)) & ((1L << (String - 132)) | (1L << (Num - 132)) | (1L << (TILDE - 132)) | (1L << (COLON - 132)) | (1L << (SUB - 132)) | (1L << (MUL - 132)) | (1L << (DIV - 132)))) != 0)) {
 					{
 					{
-					setState(1004); memberList();
+					setState(996); memberList();
 					}
 					}
-					setState(1009);
+					setState(1001);
 					_errHandler.sync(this);
 					_la = _input.LA(1);
 				}
-				setState(1010); match(T__22);
+				setState(1002); match(T__22);
 				}
 				}
 				break;
@@ -5528,29 +5494,29 @@ public class LaTEXParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(1013); match(T__111);
-			setState(1015);
+			setState(1005); match(T__111);
+			setState(1007);
 			_la = _input.LA(1);
 			if (_la==T__69) {
 				{
-				setState(1014); options();
+				setState(1006); options();
 				}
 			}
 
-			setState(1020);
+			setState(1012);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__128) | (1L << T__126) | (1L << T__124) | (1L << T__123) | (1L << T__122) | (1L << T__119) | (1L << T__118) | (1L << T__117) | (1L << T__115) | (1L << T__114) | (1L << T__113) | (1L << T__111) | (1L << T__110) | (1L << T__109) | (1L << T__108) | (1L << T__103) | (1L << T__102) | (1L << T__101) | (1L << T__100) | (1L << T__99) | (1L << T__98) | (1L << T__97) | (1L << T__96) | (1L << T__95) | (1L << T__94) | (1L << T__93) | (1L << T__91) | (1L << T__88) | (1L << T__87) | (1L << T__86) | (1L << T__85) | (1L << T__84) | (1L << T__83) | (1L << T__82) | (1L << T__80) | (1L << T__79) | (1L << T__78) | (1L << T__77) | (1L << T__75) | (1L << T__74) | (1L << T__72) | (1L << T__70) | (1L << T__68) | (1L << T__67) | (1L << T__66))) != 0) || ((((_la - 66)) & ~0x3f) == 0 && ((1L << (_la - 66)) & ((1L << (T__63 - 66)) | (1L << (T__61 - 66)) | (1L << (T__59 - 66)) | (1L << (T__57 - 66)) | (1L << (T__56 - 66)) | (1L << (T__54 - 66)) | (1L << (T__53 - 66)) | (1L << (T__52 - 66)) | (1L << (T__48 - 66)) | (1L << (T__46 - 66)) | (1L << (T__45 - 66)) | (1L << (T__43 - 66)) | (1L << (T__42 - 66)) | (1L << (T__41 - 66)) | (1L << (T__39 - 66)) | (1L << (T__37 - 66)) | (1L << (T__36 - 66)) | (1L << (T__35 - 66)) | (1L << (T__34 - 66)) | (1L << (T__33 - 66)) | (1L << (T__32 - 66)) | (1L << (T__31 - 66)) | (1L << (T__29 - 66)) | (1L << (T__28 - 66)) | (1L << (T__27 - 66)) | (1L << (T__25 - 66)) | (1L << (T__24 - 66)) | (1L << (T__21 - 66)) | (1L << (T__20 - 66)) | (1L << (T__18 - 66)) | (1L << (T__17 - 66)) | (1L << (T__15 - 66)) | (1L << (T__14 - 66)) | (1L << (T__13 - 66)) | (1L << (T__12 - 66)) | (1L << (T__10 - 66)) | (1L << (T__9 - 66)) | (1L << (T__8 - 66)) | (1L << (T__4 - 66)) | (1L << (T__3 - 66)) | (1L << (T__1 - 66)) | (1L << (T__0 - 66)))) != 0) || ((((_la - 132)) & ~0x3f) == 0 && ((1L << (_la - 132)) & ((1L << (String - 132)) | (1L << (Num - 132)) | (1L << (TILDE - 132)) | (1L << (COLON - 132)) | (1L << (SUB - 132)) | (1L << (MUL - 132)) | (1L << (DIV - 132)))) != 0)) {
 				{
 				{
-				setState(1017); memberList();
+				setState(1009); memberList();
 				}
 				}
-				setState(1022);
+				setState(1014);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			}
-			setState(1023); match(T__30);
+			setState(1015); match(T__30);
 			}
 		}
 		catch (RecognitionException re) {
@@ -5600,29 +5566,29 @@ public class LaTEXParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(1025); match(T__53);
-			setState(1027);
+			setState(1017); match(T__53);
+			setState(1019);
 			_la = _input.LA(1);
 			if (_la==T__69) {
 				{
-				setState(1026); options();
+				setState(1018); options();
 				}
 			}
 
-			setState(1032);
+			setState(1024);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__128) | (1L << T__126) | (1L << T__124) | (1L << T__123) | (1L << T__122) | (1L << T__119) | (1L << T__118) | (1L << T__117) | (1L << T__115) | (1L << T__114) | (1L << T__113) | (1L << T__111) | (1L << T__110) | (1L << T__109) | (1L << T__108) | (1L << T__103) | (1L << T__102) | (1L << T__101) | (1L << T__100) | (1L << T__99) | (1L << T__98) | (1L << T__97) | (1L << T__96) | (1L << T__95) | (1L << T__94) | (1L << T__93) | (1L << T__91) | (1L << T__88) | (1L << T__87) | (1L << T__86) | (1L << T__85) | (1L << T__84) | (1L << T__83) | (1L << T__82) | (1L << T__80) | (1L << T__79) | (1L << T__78) | (1L << T__77) | (1L << T__75) | (1L << T__74) | (1L << T__72) | (1L << T__70) | (1L << T__68) | (1L << T__67) | (1L << T__66))) != 0) || ((((_la - 66)) & ~0x3f) == 0 && ((1L << (_la - 66)) & ((1L << (T__63 - 66)) | (1L << (T__61 - 66)) | (1L << (T__59 - 66)) | (1L << (T__57 - 66)) | (1L << (T__56 - 66)) | (1L << (T__54 - 66)) | (1L << (T__53 - 66)) | (1L << (T__52 - 66)) | (1L << (T__48 - 66)) | (1L << (T__46 - 66)) | (1L << (T__45 - 66)) | (1L << (T__43 - 66)) | (1L << (T__42 - 66)) | (1L << (T__41 - 66)) | (1L << (T__39 - 66)) | (1L << (T__37 - 66)) | (1L << (T__36 - 66)) | (1L << (T__35 - 66)) | (1L << (T__34 - 66)) | (1L << (T__33 - 66)) | (1L << (T__32 - 66)) | (1L << (T__31 - 66)) | (1L << (T__29 - 66)) | (1L << (T__28 - 66)) | (1L << (T__27 - 66)) | (1L << (T__25 - 66)) | (1L << (T__24 - 66)) | (1L << (T__21 - 66)) | (1L << (T__20 - 66)) | (1L << (T__18 - 66)) | (1L << (T__17 - 66)) | (1L << (T__15 - 66)) | (1L << (T__14 - 66)) | (1L << (T__13 - 66)) | (1L << (T__12 - 66)) | (1L << (T__10 - 66)) | (1L << (T__9 - 66)) | (1L << (T__8 - 66)) | (1L << (T__4 - 66)) | (1L << (T__3 - 66)) | (1L << (T__1 - 66)) | (1L << (T__0 - 66)))) != 0) || ((((_la - 132)) & ~0x3f) == 0 && ((1L << (_la - 132)) & ((1L << (String - 132)) | (1L << (Num - 132)) | (1L << (TILDE - 132)) | (1L << (COLON - 132)) | (1L << (SUB - 132)) | (1L << (MUL - 132)) | (1L << (DIV - 132)))) != 0)) {
 				{
 				{
-				setState(1029); memberList();
+				setState(1021); memberList();
 				}
 				}
-				setState(1034);
+				setState(1026);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			}
-			setState(1035); match(T__116);
+			setState(1027); match(T__116);
 			}
 		}
 		catch (RecognitionException re) {
@@ -5665,8 +5631,8 @@ public class LaTEXParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(1037); match(T__54);
-			setState(1038); block();
+			setState(1029); match(T__54);
+			setState(1030); block();
 			}
 		}
 		catch (RecognitionException re) {
@@ -5709,8 +5675,8 @@ public class LaTEXParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(1040); match(T__83);
-			setState(1041); block();
+			setState(1032); match(T__83);
+			setState(1033); block();
 			}
 		}
 		catch (RecognitionException re) {
@@ -5760,21 +5726,21 @@ public class LaTEXParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(1043); match(T__97);
-			setState(1047);
+			setState(1035); match(T__97);
+			setState(1039);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__128) | (1L << T__126) | (1L << T__123) | (1L << T__119) | (1L << T__117) | (1L << T__115) | (1L << T__114) | (1L << T__110) | (1L << T__103) | (1L << T__101) | (1L << T__100) | (1L << T__98) | (1L << T__93) | (1L << T__91) | (1L << T__88) | (1L << T__87) | (1L << T__85) | (1L << T__82) | (1L << T__78) | (1L << T__74) | (1L << T__72) | (1L << T__70) | (1L << T__66))) != 0) || ((((_la - 68)) & ~0x3f) == 0 && ((1L << (_la - 68)) & ((1L << (T__61 - 68)) | (1L << (T__56 - 68)) | (1L << (T__52 - 68)) | (1L << (T__46 - 68)) | (1L << (T__41 - 68)) | (1L << (T__35 - 68)) | (1L << (T__34 - 68)) | (1L << (T__33 - 68)) | (1L << (T__31 - 68)) | (1L << (T__29 - 68)) | (1L << (T__24 - 68)) | (1L << (T__21 - 68)) | (1L << (T__20 - 68)) | (1L << (T__17 - 68)) | (1L << (T__14 - 68)) | (1L << (T__13 - 68)) | (1L << (T__12 - 68)) | (1L << (T__10 - 68)) | (1L << (T__8 - 68)) | (1L << (T__3 - 68)) | (1L << (T__1 - 68)) | (1L << (T__0 - 68)))) != 0) || ((((_la - 132)) & ~0x3f) == 0 && ((1L << (_la - 132)) & ((1L << (String - 132)) | (1L << (Num - 132)) | (1L << (COLON - 132)) | (1L << (SUB - 132)) | (1L << (MUL - 132)) | (1L << (DIV - 132)))) != 0)) {
 				{
 				{
-				setState(1044); textRules();
+				setState(1036); textRules();
 				}
 				}
-				setState(1049);
+				setState(1041);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			}
-			setState(1050); newLine();
+			setState(1042); newLine();
 			}
 		}
 		catch (RecognitionException re) {
@@ -5817,8 +5783,8 @@ public class LaTEXParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(1052); match(T__25);
-			setState(1053); block();
+			setState(1044); match(T__25);
+			setState(1045); block();
 			}
 		}
 		catch (RecognitionException re) {
@@ -5861,8 +5827,8 @@ public class LaTEXParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(1055); match(T__99);
-			setState(1056); block();
+			setState(1047); match(T__99);
+			setState(1048); block();
 			}
 		}
 		catch (RecognitionException re) {
@@ -5912,21 +5878,21 @@ public class LaTEXParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(1058); match(T__37);
-			setState(1062);
+			setState(1050); match(T__37);
+			setState(1054);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__128) | (1L << T__126) | (1L << T__123) | (1L << T__119) | (1L << T__117) | (1L << T__115) | (1L << T__114) | (1L << T__110) | (1L << T__103) | (1L << T__101) | (1L << T__100) | (1L << T__98) | (1L << T__93) | (1L << T__91) | (1L << T__88) | (1L << T__87) | (1L << T__85) | (1L << T__82) | (1L << T__78) | (1L << T__74) | (1L << T__72) | (1L << T__70) | (1L << T__66))) != 0) || ((((_la - 68)) & ~0x3f) == 0 && ((1L << (_la - 68)) & ((1L << (T__61 - 68)) | (1L << (T__56 - 68)) | (1L << (T__52 - 68)) | (1L << (T__46 - 68)) | (1L << (T__41 - 68)) | (1L << (T__35 - 68)) | (1L << (T__34 - 68)) | (1L << (T__33 - 68)) | (1L << (T__31 - 68)) | (1L << (T__29 - 68)) | (1L << (T__24 - 68)) | (1L << (T__21 - 68)) | (1L << (T__20 - 68)) | (1L << (T__17 - 68)) | (1L << (T__14 - 68)) | (1L << (T__13 - 68)) | (1L << (T__12 - 68)) | (1L << (T__10 - 68)) | (1L << (T__8 - 68)) | (1L << (T__3 - 68)) | (1L << (T__1 - 68)) | (1L << (T__0 - 68)))) != 0) || ((((_la - 132)) & ~0x3f) == 0 && ((1L << (_la - 132)) & ((1L << (String - 132)) | (1L << (Num - 132)) | (1L << (COLON - 132)) | (1L << (SUB - 132)) | (1L << (MUL - 132)) | (1L << (DIV - 132)))) != 0)) {
 				{
 				{
-				setState(1059); textRules();
+				setState(1051); textRules();
 				}
 				}
-				setState(1064);
+				setState(1056);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			}
-			setState(1065); newLine();
+			setState(1057); newLine();
 			}
 		}
 		catch (RecognitionException re) {
@@ -5969,10 +5935,10 @@ public class LaTEXParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(1067); match(T__59);
-			setState(1068); match(T__29);
-			setState(1069); urlText();
-			setState(1070); match(T__120);
+			setState(1059); match(T__59);
+			setState(1060); match(T__29);
+			setState(1061); urlText();
+			setState(1062); match(T__120);
 			}
 		}
 		catch (RecognitionException re) {
@@ -6015,7 +5981,7 @@ public class LaTEXParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(1072); text();
+			setState(1064); text();
 			}
 		}
 		catch (RecognitionException re) {
@@ -6056,14 +6022,14 @@ public class LaTEXParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(1074); match(T__69);
-			setState(1078);
+			setState(1066); match(T__69);
+			setState(1070);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__128) | (1L << T__127) | (1L << T__126) | (1L << T__125) | (1L << T__124) | (1L << T__123) | (1L << T__122) | (1L << T__121) | (1L << T__120) | (1L << T__119) | (1L << T__118) | (1L << T__117) | (1L << T__116) | (1L << T__115) | (1L << T__114) | (1L << T__113) | (1L << T__112) | (1L << T__111) | (1L << T__110) | (1L << T__109) | (1L << T__108) | (1L << T__107) | (1L << T__106) | (1L << T__105) | (1L << T__104) | (1L << T__103) | (1L << T__102) | (1L << T__101) | (1L << T__100) | (1L << T__99) | (1L << T__98) | (1L << T__97) | (1L << T__96) | (1L << T__95) | (1L << T__94) | (1L << T__93) | (1L << T__92) | (1L << T__91) | (1L << T__90) | (1L << T__89) | (1L << T__88) | (1L << T__87) | (1L << T__86) | (1L << T__85) | (1L << T__84) | (1L << T__83) | (1L << T__82) | (1L << T__81) | (1L << T__80) | (1L << T__79) | (1L << T__78) | (1L << T__77) | (1L << T__76) | (1L << T__75) | (1L << T__74) | (1L << T__73) | (1L << T__72) | (1L << T__71) | (1L << T__70) | (1L << T__69) | (1L << T__68) | (1L << T__67) | (1L << T__66))) != 0) || ((((_la - 64)) & ~0x3f) == 0 && ((1L << (_la - 64)) & ((1L << (T__65 - 64)) | (1L << (T__64 - 64)) | (1L << (T__63 - 64)) | (1L << (T__62 - 64)) | (1L << (T__61 - 64)) | (1L << (T__60 - 64)) | (1L << (T__59 - 64)) | (1L << (T__58 - 64)) | (1L << (T__57 - 64)) | (1L << (T__56 - 64)) | (1L << (T__55 - 64)) | (1L << (T__54 - 64)) | (1L << (T__53 - 64)) | (1L << (T__52 - 64)) | (1L << (T__51 - 64)) | (1L << (T__50 - 64)) | (1L << (T__49 - 64)) | (1L << (T__48 - 64)) | (1L << (T__47 - 64)) | (1L << (T__46 - 64)) | (1L << (T__45 - 64)) | (1L << (T__44 - 64)) | (1L << (T__43 - 64)) | (1L << (T__42 - 64)) | (1L << (T__41 - 64)) | (1L << (T__40 - 64)) | (1L << (T__39 - 64)) | (1L << (T__37 - 64)) | (1L << (T__36 - 64)) | (1L << (T__35 - 64)) | (1L << (T__34 - 64)) | (1L << (T__33 - 64)) | (1L << (T__32 - 64)) | (1L << (T__31 - 64)) | (1L << (T__30 - 64)) | (1L << (T__29 - 64)) | (1L << (T__28 - 64)) | (1L << (T__27 - 64)) | (1L << (T__26 - 64)) | (1L << (T__25 - 64)) | (1L << (T__24 - 64)) | (1L << (T__23 - 64)) | (1L << (T__22 - 64)) | (1L << (T__21 - 64)) | (1L << (T__20 - 64)) | (1L << (T__19 - 64)) | (1L << (T__18 - 64)) | (1L << (T__17 - 64)) | (1L << (T__16 - 64)) | (1L << (T__15 - 64)) | (1L << (T__14 - 64)) | (1L << (T__13 - 64)) | (1L << (T__12 - 64)) | (1L << (T__11 - 64)) | (1L << (T__10 - 64)) | (1L << (T__9 - 64)) | (1L << (T__8 - 64)) | (1L << (T__7 - 64)) | (1L << (T__6 - 64)) | (1L << (T__5 - 64)) | (1L << (T__4 - 64)) | (1L << (T__3 - 64)) | (1L << (T__2 - 64)))) != 0) || ((((_la - 128)) & ~0x3f) == 0 && ((1L << (_la - 128)) & ((1L << (T__1 - 128)) | (1L << (T__0 - 128)) | (1L << (IgnoreAlgorithmKeyWords - 128)) | (1L << (IgnoreUrlPrefix - 128)) | (1L << (String - 128)) | (1L << (Num - 128)) | (1L << (INT - 128)) | (1L << (ASSIGN - 128)) | (1L << (GT - 128)) | (1L << (LT - 128)) | (1L << (BANG - 128)) | (1L << (TILDE - 128)) | (1L << (QUESTION - 128)) | (1L << (COLON - 128)) | (1L << (EQUAL - 128)) | (1L << (LE - 128)) | (1L << (GE - 128)) | (1L << (NOTEQUAL - 128)) | (1L << (AND - 128)) | (1L << (OR - 128)) | (1L << (INC - 128)) | (1L << (DEC - 128)) | (1L << (ADD - 128)) | (1L << (SUB - 128)) | (1L << (MUL - 128)) | (1L << (DIV - 128)) | (1L << (BITAND - 128)) | (1L << (BITOR - 128)) | (1L << (CARET - 128)) | (1L << (MOD - 128)) | (1L << (COMMENT - 128)) | (1L << (LINE_COMMENT - 128)) | (1L << (WS - 128)) | (1L << (WORDS_TO_SKIP - 128)) | (1L << (Skip - 128)) | (1L << (Affil - 128)))) != 0)) {
 				{
 				{
-				setState(1075);
+				setState(1067);
 				_la = _input.LA(1);
 				if ( _la <= 0 || (_la==T__38) ) {
 				_errHandler.recoverInline(this);
@@ -6071,11 +6037,11 @@ public class LaTEXParser extends Parser {
 				consume();
 				}
 				}
-				setState(1080);
+				setState(1072);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			}
-			setState(1081); match(T__38);
+			setState(1073); match(T__38);
 			}
 		}
 		catch (RecognitionException re) {
@@ -6115,7 +6081,7 @@ public class LaTEXParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(1083); match(T__103);
+			setState(1075); match(T__103);
 			}
 		}
 		catch (RecognitionException re) {
@@ -6155,7 +6121,7 @@ public class LaTEXParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(1085); match(T__87);
+			setState(1077); match(T__87);
 			}
 		}
 		catch (RecognitionException re) {
@@ -6195,7 +6161,7 @@ public class LaTEXParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(1087); match(T__56);
+			setState(1079); match(T__56);
 			}
 		}
 		catch (RecognitionException re) {
@@ -6235,7 +6201,7 @@ public class LaTEXParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(1089); match(T__14);
+			setState(1081); match(T__14);
 			}
 		}
 		catch (RecognitionException re) {
@@ -6275,7 +6241,7 @@ public class LaTEXParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(1091); match(COLON);
+			setState(1083); match(COLON);
 			}
 		}
 		catch (RecognitionException re) {
@@ -6315,7 +6281,7 @@ public class LaTEXParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(1093); match(T__35);
+			setState(1085); match(T__35);
 			}
 		}
 		catch (RecognitionException re) {
@@ -6355,7 +6321,7 @@ public class LaTEXParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(1095); match(T__117);
+			setState(1087); match(T__117);
 			}
 		}
 		catch (RecognitionException re) {
@@ -6397,12 +6363,12 @@ public class LaTEXParser extends Parser {
 			enterOuterAlt(_localctx, 1);
 			{
 			{
-			setState(1097); match(T__91);
-			setState(1099);
+			setState(1089); match(T__91);
+			setState(1091);
 			_la = _input.LA(1);
 			if ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__128) | (1L << T__127) | (1L << T__126) | (1L << T__125) | (1L << T__124) | (1L << T__123) | (1L << T__122) | (1L << T__121) | (1L << T__120) | (1L << T__119) | (1L << T__118) | (1L << T__117) | (1L << T__116) | (1L << T__115) | (1L << T__114) | (1L << T__113) | (1L << T__112) | (1L << T__111) | (1L << T__110) | (1L << T__109) | (1L << T__108) | (1L << T__107) | (1L << T__106) | (1L << T__105) | (1L << T__104) | (1L << T__103) | (1L << T__102) | (1L << T__101) | (1L << T__100) | (1L << T__99) | (1L << T__98) | (1L << T__97) | (1L << T__96) | (1L << T__95) | (1L << T__94) | (1L << T__93) | (1L << T__92) | (1L << T__90) | (1L << T__89) | (1L << T__88) | (1L << T__87) | (1L << T__86) | (1L << T__85) | (1L << T__84) | (1L << T__83) | (1L << T__82) | (1L << T__81) | (1L << T__80) | (1L << T__79) | (1L << T__78) | (1L << T__77) | (1L << T__76) | (1L << T__75) | (1L << T__74) | (1L << T__73) | (1L << T__72) | (1L << T__71) | (1L << T__70) | (1L << T__69) | (1L << T__68) | (1L << T__67) | (1L << T__66))) != 0) || ((((_la - 64)) & ~0x3f) == 0 && ((1L << (_la - 64)) & ((1L << (T__65 - 64)) | (1L << (T__64 - 64)) | (1L << (T__63 - 64)) | (1L << (T__62 - 64)) | (1L << (T__61 - 64)) | (1L << (T__60 - 64)) | (1L << (T__59 - 64)) | (1L << (T__58 - 64)) | (1L << (T__57 - 64)) | (1L << (T__56 - 64)) | (1L << (T__55 - 64)) | (1L << (T__54 - 64)) | (1L << (T__53 - 64)) | (1L << (T__52 - 64)) | (1L << (T__51 - 64)) | (1L << (T__50 - 64)) | (1L << (T__49 - 64)) | (1L << (T__48 - 64)) | (1L << (T__47 - 64)) | (1L << (T__46 - 64)) | (1L << (T__45 - 64)) | (1L << (T__44 - 64)) | (1L << (T__43 - 64)) | (1L << (T__42 - 64)) | (1L << (T__41 - 64)) | (1L << (T__40 - 64)) | (1L << (T__39 - 64)) | (1L << (T__38 - 64)) | (1L << (T__37 - 64)) | (1L << (T__36 - 64)) | (1L << (T__35 - 64)) | (1L << (T__34 - 64)) | (1L << (T__33 - 64)) | (1L << (T__32 - 64)) | (1L << (T__31 - 64)) | (1L << (T__30 - 64)) | (1L << (T__29 - 64)) | (1L << (T__28 - 64)) | (1L << (T__27 - 64)) | (1L << (T__26 - 64)) | (1L << (T__25 - 64)) | (1L << (T__24 - 64)) | (1L << (T__23 - 64)) | (1L << (T__22 - 64)) | (1L << (T__21 - 64)) | (1L << (T__20 - 64)) | (1L << (T__19 - 64)) | (1L << (T__18 - 64)) | (1L << (T__17 - 64)) | (1L << (T__16 - 64)) | (1L << (T__15 - 64)) | (1L << (T__14 - 64)) | (1L << (T__13 - 64)) | (1L << (T__12 - 64)) | (1L << (T__11 - 64)) | (1L << (T__10 - 64)) | (1L << (T__9 - 64)) | (1L << (T__8 - 64)) | (1L << (T__7 - 64)) | (1L << (T__6 - 64)) | (1L << (T__5 - 64)) | (1L << (T__4 - 64)) | (1L << (T__3 - 64)) | (1L << (T__2 - 64)))) != 0) || ((((_la - 128)) & ~0x3f) == 0 && ((1L << (_la - 128)) & ((1L << (T__1 - 128)) | (1L << (T__0 - 128)) | (1L << (IgnoreAlgorithmKeyWords - 128)) | (1L << (IgnoreUrlPrefix - 128)) | (1L << (String - 128)) | (1L << (Num - 128)) | (1L << (INT - 128)) | (1L << (ASSIGN - 128)) | (1L << (GT - 128)) | (1L << (LT - 128)) | (1L << (BANG - 128)) | (1L << (TILDE - 128)) | (1L << (QUESTION - 128)) | (1L << (COLON - 128)) | (1L << (EQUAL - 128)) | (1L << (LE - 128)) | (1L << (GE - 128)) | (1L << (NOTEQUAL - 128)) | (1L << (AND - 128)) | (1L << (OR - 128)) | (1L << (INC - 128)) | (1L << (DEC - 128)) | (1L << (ADD - 128)) | (1L << (SUB - 128)) | (1L << (MUL - 128)) | (1L << (DIV - 128)) | (1L << (BITAND - 128)) | (1L << (BITOR - 128)) | (1L << (CARET - 128)) | (1L << (MOD - 128)) | (1L << (COMMENT - 128)) | (1L << (LINE_COMMENT - 128)) | (1L << (WS - 128)) | (1L << (WORDS_TO_SKIP - 128)) | (1L << (Skip - 128)) | (1L << (Affil - 128)))) != 0)) {
 				{
-				setState(1098);
+				setState(1090);
 				_la = _input.LA(1);
 				if ( _la <= 0 || (_la==T__91) ) {
 				_errHandler.recoverInline(this);
@@ -6411,7 +6377,7 @@ public class LaTEXParser extends Parser {
 				}
 			}
 
-			setState(1101); match(T__91);
+			setState(1093); match(T__91);
 			}
 			}
 		}
@@ -6457,13 +6423,46 @@ public class LaTEXParser extends Parser {
 		enterRule(_localctx, 172, RULE_inlineEquation);
 		int _la;
 		try {
-			setState(1140);
+			setState(1132);
 			switch (_input.LA(1)) {
 			case T__128:
 				enterOuterAlt(_localctx, 1);
 				{
 				{
-				setState(1103); match(T__128);
+				setState(1095); match(T__128);
+				setState(1097); 
+				_errHandler.sync(this);
+				_la = _input.LA(1);
+				do {
+					{
+					{
+					setState(1096);
+					_la = _input.LA(1);
+					if ( _la <= 0 || (_la==T__128) ) {
+					_errHandler.recoverInline(this);
+					}
+					consume();
+					}
+					}
+					setState(1099); 
+					_errHandler.sync(this);
+					_la = _input.LA(1);
+				} while ( (((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__127) | (1L << T__126) | (1L << T__125) | (1L << T__124) | (1L << T__123) | (1L << T__122) | (1L << T__121) | (1L << T__120) | (1L << T__119) | (1L << T__118) | (1L << T__117) | (1L << T__116) | (1L << T__115) | (1L << T__114) | (1L << T__113) | (1L << T__112) | (1L << T__111) | (1L << T__110) | (1L << T__109) | (1L << T__108) | (1L << T__107) | (1L << T__106) | (1L << T__105) | (1L << T__104) | (1L << T__103) | (1L << T__102) | (1L << T__101) | (1L << T__100) | (1L << T__99) | (1L << T__98) | (1L << T__97) | (1L << T__96) | (1L << T__95) | (1L << T__94) | (1L << T__93) | (1L << T__92) | (1L << T__91) | (1L << T__90) | (1L << T__89) | (1L << T__88) | (1L << T__87) | (1L << T__86) | (1L << T__85) | (1L << T__84) | (1L << T__83) | (1L << T__82) | (1L << T__81) | (1L << T__80) | (1L << T__79) | (1L << T__78) | (1L << T__77) | (1L << T__76) | (1L << T__75) | (1L << T__74) | (1L << T__73) | (1L << T__72) | (1L << T__71) | (1L << T__70) | (1L << T__69) | (1L << T__68) | (1L << T__67) | (1L << T__66))) != 0) || ((((_la - 64)) & ~0x3f) == 0 && ((1L << (_la - 64)) & ((1L << (T__65 - 64)) | (1L << (T__64 - 64)) | (1L << (T__63 - 64)) | (1L << (T__62 - 64)) | (1L << (T__61 - 64)) | (1L << (T__60 - 64)) | (1L << (T__59 - 64)) | (1L << (T__58 - 64)) | (1L << (T__57 - 64)) | (1L << (T__56 - 64)) | (1L << (T__55 - 64)) | (1L << (T__54 - 64)) | (1L << (T__53 - 64)) | (1L << (T__52 - 64)) | (1L << (T__51 - 64)) | (1L << (T__50 - 64)) | (1L << (T__49 - 64)) | (1L << (T__48 - 64)) | (1L << (T__47 - 64)) | (1L << (T__46 - 64)) | (1L << (T__45 - 64)) | (1L << (T__44 - 64)) | (1L << (T__43 - 64)) | (1L << (T__42 - 64)) | (1L << (T__41 - 64)) | (1L << (T__40 - 64)) | (1L << (T__39 - 64)) | (1L << (T__38 - 64)) | (1L << (T__37 - 64)) | (1L << (T__36 - 64)) | (1L << (T__35 - 64)) | (1L << (T__34 - 64)) | (1L << (T__33 - 64)) | (1L << (T__32 - 64)) | (1L << (T__31 - 64)) | (1L << (T__30 - 64)) | (1L << (T__29 - 64)) | (1L << (T__28 - 64)) | (1L << (T__27 - 64)) | (1L << (T__26 - 64)) | (1L << (T__25 - 64)) | (1L << (T__24 - 64)) | (1L << (T__23 - 64)) | (1L << (T__22 - 64)) | (1L << (T__21 - 64)) | (1L << (T__20 - 64)) | (1L << (T__19 - 64)) | (1L << (T__18 - 64)) | (1L << (T__17 - 64)) | (1L << (T__16 - 64)) | (1L << (T__15 - 64)) | (1L << (T__14 - 64)) | (1L << (T__13 - 64)) | (1L << (T__12 - 64)) | (1L << (T__11 - 64)) | (1L << (T__10 - 64)) | (1L << (T__9 - 64)) | (1L << (T__8 - 64)) | (1L << (T__7 - 64)) | (1L << (T__6 - 64)) | (1L << (T__5 - 64)) | (1L << (T__4 - 64)) | (1L << (T__3 - 64)) | (1L << (T__2 - 64)))) != 0) || ((((_la - 128)) & ~0x3f) == 0 && ((1L << (_la - 128)) & ((1L << (T__1 - 128)) | (1L << (T__0 - 128)) | (1L << (IgnoreAlgorithmKeyWords - 128)) | (1L << (IgnoreUrlPrefix - 128)) | (1L << (String - 128)) | (1L << (Num - 128)) | (1L << (INT - 128)) | (1L << (ASSIGN - 128)) | (1L << (GT - 128)) | (1L << (LT - 128)) | (1L << (BANG - 128)) | (1L << (TILDE - 128)) | (1L << (QUESTION - 128)) | (1L << (COLON - 128)) | (1L << (EQUAL - 128)) | (1L << (LE - 128)) | (1L << (GE - 128)) | (1L << (NOTEQUAL - 128)) | (1L << (AND - 128)) | (1L << (OR - 128)) | (1L << (INC - 128)) | (1L << (DEC - 128)) | (1L << (ADD - 128)) | (1L << (SUB - 128)) | (1L << (MUL - 128)) | (1L << (DIV - 128)) | (1L << (BITAND - 128)) | (1L << (BITOR - 128)) | (1L << (CARET - 128)) | (1L << (MOD - 128)) | (1L << (COMMENT - 128)) | (1L << (LINE_COMMENT - 128)) | (1L << (WS - 128)) | (1L << (WORDS_TO_SKIP - 128)) | (1L << (Skip - 128)) | (1L << (Affil - 128)))) != 0) );
+				setState(1101); match(T__128);
+				}
+				}
+				break;
+			case T__91:
+				enterOuterAlt(_localctx, 2);
+				{
+				setState(1102); dollarBlock();
+				}
+				break;
+			case T__31:
+				enterOuterAlt(_localctx, 3);
+				{
+				{
+				setState(1103); match(T__31);
 				setState(1105); 
 				_errHandler.sync(this);
 				_la = _input.LA(1);
@@ -6472,7 +6471,7 @@ public class LaTEXParser extends Parser {
 					{
 					setState(1104);
 					_la = _input.LA(1);
-					if ( _la <= 0 || (_la==T__128) ) {
+					if ( _la <= 0 || (_la==T__64) ) {
 					_errHandler.recoverInline(this);
 					}
 					consume();
@@ -6481,41 +6480,8 @@ public class LaTEXParser extends Parser {
 					setState(1107); 
 					_errHandler.sync(this);
 					_la = _input.LA(1);
-				} while ( (((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__127) | (1L << T__126) | (1L << T__125) | (1L << T__124) | (1L << T__123) | (1L << T__122) | (1L << T__121) | (1L << T__120) | (1L << T__119) | (1L << T__118) | (1L << T__117) | (1L << T__116) | (1L << T__115) | (1L << T__114) | (1L << T__113) | (1L << T__112) | (1L << T__111) | (1L << T__110) | (1L << T__109) | (1L << T__108) | (1L << T__107) | (1L << T__106) | (1L << T__105) | (1L << T__104) | (1L << T__103) | (1L << T__102) | (1L << T__101) | (1L << T__100) | (1L << T__99) | (1L << T__98) | (1L << T__97) | (1L << T__96) | (1L << T__95) | (1L << T__94) | (1L << T__93) | (1L << T__92) | (1L << T__91) | (1L << T__90) | (1L << T__89) | (1L << T__88) | (1L << T__87) | (1L << T__86) | (1L << T__85) | (1L << T__84) | (1L << T__83) | (1L << T__82) | (1L << T__81) | (1L << T__80) | (1L << T__79) | (1L << T__78) | (1L << T__77) | (1L << T__76) | (1L << T__75) | (1L << T__74) | (1L << T__73) | (1L << T__72) | (1L << T__71) | (1L << T__70) | (1L << T__69) | (1L << T__68) | (1L << T__67) | (1L << T__66))) != 0) || ((((_la - 64)) & ~0x3f) == 0 && ((1L << (_la - 64)) & ((1L << (T__65 - 64)) | (1L << (T__64 - 64)) | (1L << (T__63 - 64)) | (1L << (T__62 - 64)) | (1L << (T__61 - 64)) | (1L << (T__60 - 64)) | (1L << (T__59 - 64)) | (1L << (T__58 - 64)) | (1L << (T__57 - 64)) | (1L << (T__56 - 64)) | (1L << (T__55 - 64)) | (1L << (T__54 - 64)) | (1L << (T__53 - 64)) | (1L << (T__52 - 64)) | (1L << (T__51 - 64)) | (1L << (T__50 - 64)) | (1L << (T__49 - 64)) | (1L << (T__48 - 64)) | (1L << (T__47 - 64)) | (1L << (T__46 - 64)) | (1L << (T__45 - 64)) | (1L << (T__44 - 64)) | (1L << (T__43 - 64)) | (1L << (T__42 - 64)) | (1L << (T__41 - 64)) | (1L << (T__40 - 64)) | (1L << (T__39 - 64)) | (1L << (T__38 - 64)) | (1L << (T__37 - 64)) | (1L << (T__36 - 64)) | (1L << (T__35 - 64)) | (1L << (T__34 - 64)) | (1L << (T__33 - 64)) | (1L << (T__32 - 64)) | (1L << (T__31 - 64)) | (1L << (T__30 - 64)) | (1L << (T__29 - 64)) | (1L << (T__28 - 64)) | (1L << (T__27 - 64)) | (1L << (T__26 - 64)) | (1L << (T__25 - 64)) | (1L << (T__24 - 64)) | (1L << (T__23 - 64)) | (1L << (T__22 - 64)) | (1L << (T__21 - 64)) | (1L << (T__20 - 64)) | (1L << (T__19 - 64)) | (1L << (T__18 - 64)) | (1L << (T__17 - 64)) | (1L << (T__16 - 64)) | (1L << (T__15 - 64)) | (1L << (T__14 - 64)) | (1L << (T__13 - 64)) | (1L << (T__12 - 64)) | (1L << (T__11 - 64)) | (1L << (T__10 - 64)) | (1L << (T__9 - 64)) | (1L << (T__8 - 64)) | (1L << (T__7 - 64)) | (1L << (T__6 - 64)) | (1L << (T__5 - 64)) | (1L << (T__4 - 64)) | (1L << (T__3 - 64)) | (1L << (T__2 - 64)))) != 0) || ((((_la - 128)) & ~0x3f) == 0 && ((1L << (_la - 128)) & ((1L << (T__1 - 128)) | (1L << (T__0 - 128)) | (1L << (IgnoreAlgorithmKeyWords - 128)) | (1L << (IgnoreUrlPrefix - 128)) | (1L << (String - 128)) | (1L << (Num - 128)) | (1L << (INT - 128)) | (1L << (ASSIGN - 128)) | (1L << (GT - 128)) | (1L << (LT - 128)) | (1L << (BANG - 128)) | (1L << (TILDE - 128)) | (1L << (QUESTION - 128)) | (1L << (COLON - 128)) | (1L << (EQUAL - 128)) | (1L << (LE - 128)) | (1L << (GE - 128)) | (1L << (NOTEQUAL - 128)) | (1L << (AND - 128)) | (1L << (OR - 128)) | (1L << (INC - 128)) | (1L << (DEC - 128)) | (1L << (ADD - 128)) | (1L << (SUB - 128)) | (1L << (MUL - 128)) | (1L << (DIV - 128)) | (1L << (BITAND - 128)) | (1L << (BITOR - 128)) | (1L << (CARET - 128)) | (1L << (MOD - 128)) | (1L << (COMMENT - 128)) | (1L << (LINE_COMMENT - 128)) | (1L << (WS - 128)) | (1L << (WORDS_TO_SKIP - 128)) | (1L << (Skip - 128)) | (1L << (Affil - 128)))) != 0) );
-				setState(1109); match(T__128);
-				}
-				}
-				break;
-			case T__91:
-				enterOuterAlt(_localctx, 2);
-				{
-				setState(1110); dollarBlock();
-				}
-				break;
-			case T__31:
-				enterOuterAlt(_localctx, 3);
-				{
-				{
-				setState(1111); match(T__31);
-				setState(1113); 
-				_errHandler.sync(this);
-				_la = _input.LA(1);
-				do {
-					{
-					{
-					setState(1112);
-					_la = _input.LA(1);
-					if ( _la <= 0 || (_la==T__64) ) {
-					_errHandler.recoverInline(this);
-					}
-					consume();
-					}
-					}
-					setState(1115); 
-					_errHandler.sync(this);
-					_la = _input.LA(1);
 				} while ( (((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__128) | (1L << T__127) | (1L << T__126) | (1L << T__125) | (1L << T__124) | (1L << T__123) | (1L << T__122) | (1L << T__121) | (1L << T__120) | (1L << T__119) | (1L << T__118) | (1L << T__117) | (1L << T__116) | (1L << T__115) | (1L << T__114) | (1L << T__113) | (1L << T__112) | (1L << T__111) | (1L << T__110) | (1L << T__109) | (1L << T__108) | (1L << T__107) | (1L << T__106) | (1L << T__105) | (1L << T__104) | (1L << T__103) | (1L << T__102) | (1L << T__101) | (1L << T__100) | (1L << T__99) | (1L << T__98) | (1L << T__97) | (1L << T__96) | (1L << T__95) | (1L << T__94) | (1L << T__93) | (1L << T__92) | (1L << T__91) | (1L << T__90) | (1L << T__89) | (1L << T__88) | (1L << T__87) | (1L << T__86) | (1L << T__85) | (1L << T__84) | (1L << T__83) | (1L << T__82) | (1L << T__81) | (1L << T__80) | (1L << T__79) | (1L << T__78) | (1L << T__77) | (1L << T__76) | (1L << T__75) | (1L << T__74) | (1L << T__73) | (1L << T__72) | (1L << T__71) | (1L << T__70) | (1L << T__69) | (1L << T__68) | (1L << T__67) | (1L << T__66))) != 0) || ((((_la - 64)) & ~0x3f) == 0 && ((1L << (_la - 64)) & ((1L << (T__65 - 64)) | (1L << (T__63 - 64)) | (1L << (T__62 - 64)) | (1L << (T__61 - 64)) | (1L << (T__60 - 64)) | (1L << (T__59 - 64)) | (1L << (T__58 - 64)) | (1L << (T__57 - 64)) | (1L << (T__56 - 64)) | (1L << (T__55 - 64)) | (1L << (T__54 - 64)) | (1L << (T__53 - 64)) | (1L << (T__52 - 64)) | (1L << (T__51 - 64)) | (1L << (T__50 - 64)) | (1L << (T__49 - 64)) | (1L << (T__48 - 64)) | (1L << (T__47 - 64)) | (1L << (T__46 - 64)) | (1L << (T__45 - 64)) | (1L << (T__44 - 64)) | (1L << (T__43 - 64)) | (1L << (T__42 - 64)) | (1L << (T__41 - 64)) | (1L << (T__40 - 64)) | (1L << (T__39 - 64)) | (1L << (T__38 - 64)) | (1L << (T__37 - 64)) | (1L << (T__36 - 64)) | (1L << (T__35 - 64)) | (1L << (T__34 - 64)) | (1L << (T__33 - 64)) | (1L << (T__32 - 64)) | (1L << (T__31 - 64)) | (1L << (T__30 - 64)) | (1L << (T__29 - 64)) | (1L << (T__28 - 64)) | (1L << (T__27 - 64)) | (1L << (T__26 - 64)) | (1L << (T__25 - 64)) | (1L << (T__24 - 64)) | (1L << (T__23 - 64)) | (1L << (T__22 - 64)) | (1L << (T__21 - 64)) | (1L << (T__20 - 64)) | (1L << (T__19 - 64)) | (1L << (T__18 - 64)) | (1L << (T__17 - 64)) | (1L << (T__16 - 64)) | (1L << (T__15 - 64)) | (1L << (T__14 - 64)) | (1L << (T__13 - 64)) | (1L << (T__12 - 64)) | (1L << (T__11 - 64)) | (1L << (T__10 - 64)) | (1L << (T__9 - 64)) | (1L << (T__8 - 64)) | (1L << (T__7 - 64)) | (1L << (T__6 - 64)) | (1L << (T__5 - 64)) | (1L << (T__4 - 64)) | (1L << (T__3 - 64)) | (1L << (T__2 - 64)))) != 0) || ((((_la - 128)) & ~0x3f) == 0 && ((1L << (_la - 128)) & ((1L << (T__1 - 128)) | (1L << (T__0 - 128)) | (1L << (IgnoreAlgorithmKeyWords - 128)) | (1L << (IgnoreUrlPrefix - 128)) | (1L << (String - 128)) | (1L << (Num - 128)) | (1L << (INT - 128)) | (1L << (ASSIGN - 128)) | (1L << (GT - 128)) | (1L << (LT - 128)) | (1L << (BANG - 128)) | (1L << (TILDE - 128)) | (1L << (QUESTION - 128)) | (1L << (COLON - 128)) | (1L << (EQUAL - 128)) | (1L << (LE - 128)) | (1L << (GE - 128)) | (1L << (NOTEQUAL - 128)) | (1L << (AND - 128)) | (1L << (OR - 128)) | (1L << (INC - 128)) | (1L << (DEC - 128)) | (1L << (ADD - 128)) | (1L << (SUB - 128)) | (1L << (MUL - 128)) | (1L << (DIV - 128)) | (1L << (BITAND - 128)) | (1L << (BITOR - 128)) | (1L << (CARET - 128)) | (1L << (MOD - 128)) | (1L << (COMMENT - 128)) | (1L << (LINE_COMMENT - 128)) | (1L << (WS - 128)) | (1L << (WORDS_TO_SKIP - 128)) | (1L << (Skip - 128)) | (1L << (Affil - 128)))) != 0) );
-				setState(1117); match(T__64);
+				setState(1109); match(T__64);
 				}
 				}
 				break;
@@ -6523,14 +6489,14 @@ public class LaTEXParser extends Parser {
 				enterOuterAlt(_localctx, 4);
 				{
 				{
-				setState(1118); match(T__3);
-				setState(1120); 
+				setState(1110); match(T__3);
+				setState(1112); 
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 				do {
 					{
 					{
-					setState(1119);
+					setState(1111);
 					_la = _input.LA(1);
 					if ( _la <= 0 || (_la==T__6) ) {
 					_errHandler.recoverInline(this);
@@ -6538,11 +6504,11 @@ public class LaTEXParser extends Parser {
 					consume();
 					}
 					}
-					setState(1122); 
+					setState(1114); 
 					_errHandler.sync(this);
 					_la = _input.LA(1);
 				} while ( (((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__128) | (1L << T__127) | (1L << T__126) | (1L << T__125) | (1L << T__124) | (1L << T__123) | (1L << T__122) | (1L << T__121) | (1L << T__120) | (1L << T__119) | (1L << T__118) | (1L << T__117) | (1L << T__116) | (1L << T__115) | (1L << T__114) | (1L << T__113) | (1L << T__112) | (1L << T__111) | (1L << T__110) | (1L << T__109) | (1L << T__108) | (1L << T__107) | (1L << T__106) | (1L << T__105) | (1L << T__104) | (1L << T__103) | (1L << T__102) | (1L << T__101) | (1L << T__100) | (1L << T__99) | (1L << T__98) | (1L << T__97) | (1L << T__96) | (1L << T__95) | (1L << T__94) | (1L << T__93) | (1L << T__92) | (1L << T__91) | (1L << T__90) | (1L << T__89) | (1L << T__88) | (1L << T__87) | (1L << T__86) | (1L << T__85) | (1L << T__84) | (1L << T__83) | (1L << T__82) | (1L << T__81) | (1L << T__80) | (1L << T__79) | (1L << T__78) | (1L << T__77) | (1L << T__76) | (1L << T__75) | (1L << T__74) | (1L << T__73) | (1L << T__72) | (1L << T__71) | (1L << T__70) | (1L << T__69) | (1L << T__68) | (1L << T__67) | (1L << T__66))) != 0) || ((((_la - 64)) & ~0x3f) == 0 && ((1L << (_la - 64)) & ((1L << (T__65 - 64)) | (1L << (T__64 - 64)) | (1L << (T__63 - 64)) | (1L << (T__62 - 64)) | (1L << (T__61 - 64)) | (1L << (T__60 - 64)) | (1L << (T__59 - 64)) | (1L << (T__58 - 64)) | (1L << (T__57 - 64)) | (1L << (T__56 - 64)) | (1L << (T__55 - 64)) | (1L << (T__54 - 64)) | (1L << (T__53 - 64)) | (1L << (T__52 - 64)) | (1L << (T__51 - 64)) | (1L << (T__50 - 64)) | (1L << (T__49 - 64)) | (1L << (T__48 - 64)) | (1L << (T__47 - 64)) | (1L << (T__46 - 64)) | (1L << (T__45 - 64)) | (1L << (T__44 - 64)) | (1L << (T__43 - 64)) | (1L << (T__42 - 64)) | (1L << (T__41 - 64)) | (1L << (T__40 - 64)) | (1L << (T__39 - 64)) | (1L << (T__38 - 64)) | (1L << (T__37 - 64)) | (1L << (T__36 - 64)) | (1L << (T__35 - 64)) | (1L << (T__34 - 64)) | (1L << (T__33 - 64)) | (1L << (T__32 - 64)) | (1L << (T__31 - 64)) | (1L << (T__30 - 64)) | (1L << (T__29 - 64)) | (1L << (T__28 - 64)) | (1L << (T__27 - 64)) | (1L << (T__26 - 64)) | (1L << (T__25 - 64)) | (1L << (T__24 - 64)) | (1L << (T__23 - 64)) | (1L << (T__22 - 64)) | (1L << (T__21 - 64)) | (1L << (T__20 - 64)) | (1L << (T__19 - 64)) | (1L << (T__18 - 64)) | (1L << (T__17 - 64)) | (1L << (T__16 - 64)) | (1L << (T__15 - 64)) | (1L << (T__14 - 64)) | (1L << (T__13 - 64)) | (1L << (T__12 - 64)) | (1L << (T__11 - 64)) | (1L << (T__10 - 64)) | (1L << (T__9 - 64)) | (1L << (T__8 - 64)) | (1L << (T__7 - 64)) | (1L << (T__5 - 64)) | (1L << (T__4 - 64)) | (1L << (T__3 - 64)) | (1L << (T__2 - 64)))) != 0) || ((((_la - 128)) & ~0x3f) == 0 && ((1L << (_la - 128)) & ((1L << (T__1 - 128)) | (1L << (T__0 - 128)) | (1L << (IgnoreAlgorithmKeyWords - 128)) | (1L << (IgnoreUrlPrefix - 128)) | (1L << (String - 128)) | (1L << (Num - 128)) | (1L << (INT - 128)) | (1L << (ASSIGN - 128)) | (1L << (GT - 128)) | (1L << (LT - 128)) | (1L << (BANG - 128)) | (1L << (TILDE - 128)) | (1L << (QUESTION - 128)) | (1L << (COLON - 128)) | (1L << (EQUAL - 128)) | (1L << (LE - 128)) | (1L << (GE - 128)) | (1L << (NOTEQUAL - 128)) | (1L << (AND - 128)) | (1L << (OR - 128)) | (1L << (INC - 128)) | (1L << (DEC - 128)) | (1L << (ADD - 128)) | (1L << (SUB - 128)) | (1L << (MUL - 128)) | (1L << (DIV - 128)) | (1L << (BITAND - 128)) | (1L << (BITOR - 128)) | (1L << (CARET - 128)) | (1L << (MOD - 128)) | (1L << (COMMENT - 128)) | (1L << (LINE_COMMENT - 128)) | (1L << (WS - 128)) | (1L << (WORDS_TO_SKIP - 128)) | (1L << (Skip - 128)) | (1L << (Affil - 128)))) != 0) );
-				setState(1124); match(T__6);
+				setState(1116); match(T__6);
 				}
 				}
 				break;
@@ -6550,14 +6516,14 @@ public class LaTEXParser extends Parser {
 				enterOuterAlt(_localctx, 5);
 				{
 				{
-				setState(1125); match(T__78);
-				setState(1127); 
+				setState(1117); match(T__78);
+				setState(1119); 
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 				do {
 					{
 					{
-					setState(1126);
+					setState(1118);
 					_la = _input.LA(1);
 					if ( _la <= 0 || (_la==T__7) ) {
 					_errHandler.recoverInline(this);
@@ -6565,11 +6531,11 @@ public class LaTEXParser extends Parser {
 					consume();
 					}
 					}
-					setState(1129); 
+					setState(1121); 
 					_errHandler.sync(this);
 					_la = _input.LA(1);
 				} while ( (((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__128) | (1L << T__127) | (1L << T__126) | (1L << T__125) | (1L << T__124) | (1L << T__123) | (1L << T__122) | (1L << T__121) | (1L << T__120) | (1L << T__119) | (1L << T__118) | (1L << T__117) | (1L << T__116) | (1L << T__115) | (1L << T__114) | (1L << T__113) | (1L << T__112) | (1L << T__111) | (1L << T__110) | (1L << T__109) | (1L << T__108) | (1L << T__107) | (1L << T__106) | (1L << T__105) | (1L << T__104) | (1L << T__103) | (1L << T__102) | (1L << T__101) | (1L << T__100) | (1L << T__99) | (1L << T__98) | (1L << T__97) | (1L << T__96) | (1L << T__95) | (1L << T__94) | (1L << T__93) | (1L << T__92) | (1L << T__91) | (1L << T__90) | (1L << T__89) | (1L << T__88) | (1L << T__87) | (1L << T__86) | (1L << T__85) | (1L << T__84) | (1L << T__83) | (1L << T__82) | (1L << T__81) | (1L << T__80) | (1L << T__79) | (1L << T__78) | (1L << T__77) | (1L << T__76) | (1L << T__75) | (1L << T__74) | (1L << T__73) | (1L << T__72) | (1L << T__71) | (1L << T__70) | (1L << T__69) | (1L << T__68) | (1L << T__67) | (1L << T__66))) != 0) || ((((_la - 64)) & ~0x3f) == 0 && ((1L << (_la - 64)) & ((1L << (T__65 - 64)) | (1L << (T__64 - 64)) | (1L << (T__63 - 64)) | (1L << (T__62 - 64)) | (1L << (T__61 - 64)) | (1L << (T__60 - 64)) | (1L << (T__59 - 64)) | (1L << (T__58 - 64)) | (1L << (T__57 - 64)) | (1L << (T__56 - 64)) | (1L << (T__55 - 64)) | (1L << (T__54 - 64)) | (1L << (T__53 - 64)) | (1L << (T__52 - 64)) | (1L << (T__51 - 64)) | (1L << (T__50 - 64)) | (1L << (T__49 - 64)) | (1L << (T__48 - 64)) | (1L << (T__47 - 64)) | (1L << (T__46 - 64)) | (1L << (T__45 - 64)) | (1L << (T__44 - 64)) | (1L << (T__43 - 64)) | (1L << (T__42 - 64)) | (1L << (T__41 - 64)) | (1L << (T__40 - 64)) | (1L << (T__39 - 64)) | (1L << (T__38 - 64)) | (1L << (T__37 - 64)) | (1L << (T__36 - 64)) | (1L << (T__35 - 64)) | (1L << (T__34 - 64)) | (1L << (T__33 - 64)) | (1L << (T__32 - 64)) | (1L << (T__31 - 64)) | (1L << (T__30 - 64)) | (1L << (T__29 - 64)) | (1L << (T__28 - 64)) | (1L << (T__27 - 64)) | (1L << (T__26 - 64)) | (1L << (T__25 - 64)) | (1L << (T__24 - 64)) | (1L << (T__23 - 64)) | (1L << (T__22 - 64)) | (1L << (T__21 - 64)) | (1L << (T__20 - 64)) | (1L << (T__19 - 64)) | (1L << (T__18 - 64)) | (1L << (T__17 - 64)) | (1L << (T__16 - 64)) | (1L << (T__15 - 64)) | (1L << (T__14 - 64)) | (1L << (T__13 - 64)) | (1L << (T__12 - 64)) | (1L << (T__11 - 64)) | (1L << (T__10 - 64)) | (1L << (T__9 - 64)) | (1L << (T__8 - 64)) | (1L << (T__6 - 64)) | (1L << (T__5 - 64)) | (1L << (T__4 - 64)) | (1L << (T__3 - 64)) | (1L << (T__2 - 64)))) != 0) || ((((_la - 128)) & ~0x3f) == 0 && ((1L << (_la - 128)) & ((1L << (T__1 - 128)) | (1L << (T__0 - 128)) | (1L << (IgnoreAlgorithmKeyWords - 128)) | (1L << (IgnoreUrlPrefix - 128)) | (1L << (String - 128)) | (1L << (Num - 128)) | (1L << (INT - 128)) | (1L << (ASSIGN - 128)) | (1L << (GT - 128)) | (1L << (LT - 128)) | (1L << (BANG - 128)) | (1L << (TILDE - 128)) | (1L << (QUESTION - 128)) | (1L << (COLON - 128)) | (1L << (EQUAL - 128)) | (1L << (LE - 128)) | (1L << (GE - 128)) | (1L << (NOTEQUAL - 128)) | (1L << (AND - 128)) | (1L << (OR - 128)) | (1L << (INC - 128)) | (1L << (DEC - 128)) | (1L << (ADD - 128)) | (1L << (SUB - 128)) | (1L << (MUL - 128)) | (1L << (DIV - 128)) | (1L << (BITAND - 128)) | (1L << (BITOR - 128)) | (1L << (CARET - 128)) | (1L << (MOD - 128)) | (1L << (COMMENT - 128)) | (1L << (LINE_COMMENT - 128)) | (1L << (WS - 128)) | (1L << (WORDS_TO_SKIP - 128)) | (1L << (Skip - 128)) | (1L << (Affil - 128)))) != 0) );
-				setState(1131); match(T__7);
+				setState(1123); match(T__7);
 				}
 				}
 				break;
@@ -6577,14 +6543,14 @@ public class LaTEXParser extends Parser {
 				enterOuterAlt(_localctx, 6);
 				{
 				{
-				setState(1132); match(T__88);
-				setState(1134); 
+				setState(1124); match(T__88);
+				setState(1126); 
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 				do {
 					{
 					{
-					setState(1133);
+					setState(1125);
 					_la = _input.LA(1);
 					if ( _la <= 0 || (_la==T__73) ) {
 					_errHandler.recoverInline(this);
@@ -6592,11 +6558,11 @@ public class LaTEXParser extends Parser {
 					consume();
 					}
 					}
-					setState(1136); 
+					setState(1128); 
 					_errHandler.sync(this);
 					_la = _input.LA(1);
 				} while ( (((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__128) | (1L << T__127) | (1L << T__126) | (1L << T__125) | (1L << T__124) | (1L << T__123) | (1L << T__122) | (1L << T__121) | (1L << T__120) | (1L << T__119) | (1L << T__118) | (1L << T__117) | (1L << T__116) | (1L << T__115) | (1L << T__114) | (1L << T__113) | (1L << T__112) | (1L << T__111) | (1L << T__110) | (1L << T__109) | (1L << T__108) | (1L << T__107) | (1L << T__106) | (1L << T__105) | (1L << T__104) | (1L << T__103) | (1L << T__102) | (1L << T__101) | (1L << T__100) | (1L << T__99) | (1L << T__98) | (1L << T__97) | (1L << T__96) | (1L << T__95) | (1L << T__94) | (1L << T__93) | (1L << T__92) | (1L << T__91) | (1L << T__90) | (1L << T__89) | (1L << T__88) | (1L << T__87) | (1L << T__86) | (1L << T__85) | (1L << T__84) | (1L << T__83) | (1L << T__82) | (1L << T__81) | (1L << T__80) | (1L << T__79) | (1L << T__78) | (1L << T__77) | (1L << T__76) | (1L << T__75) | (1L << T__74) | (1L << T__72) | (1L << T__71) | (1L << T__70) | (1L << T__69) | (1L << T__68) | (1L << T__67) | (1L << T__66))) != 0) || ((((_la - 64)) & ~0x3f) == 0 && ((1L << (_la - 64)) & ((1L << (T__65 - 64)) | (1L << (T__64 - 64)) | (1L << (T__63 - 64)) | (1L << (T__62 - 64)) | (1L << (T__61 - 64)) | (1L << (T__60 - 64)) | (1L << (T__59 - 64)) | (1L << (T__58 - 64)) | (1L << (T__57 - 64)) | (1L << (T__56 - 64)) | (1L << (T__55 - 64)) | (1L << (T__54 - 64)) | (1L << (T__53 - 64)) | (1L << (T__52 - 64)) | (1L << (T__51 - 64)) | (1L << (T__50 - 64)) | (1L << (T__49 - 64)) | (1L << (T__48 - 64)) | (1L << (T__47 - 64)) | (1L << (T__46 - 64)) | (1L << (T__45 - 64)) | (1L << (T__44 - 64)) | (1L << (T__43 - 64)) | (1L << (T__42 - 64)) | (1L << (T__41 - 64)) | (1L << (T__40 - 64)) | (1L << (T__39 - 64)) | (1L << (T__38 - 64)) | (1L << (T__37 - 64)) | (1L << (T__36 - 64)) | (1L << (T__35 - 64)) | (1L << (T__34 - 64)) | (1L << (T__33 - 64)) | (1L << (T__32 - 64)) | (1L << (T__31 - 64)) | (1L << (T__30 - 64)) | (1L << (T__29 - 64)) | (1L << (T__28 - 64)) | (1L << (T__27 - 64)) | (1L << (T__26 - 64)) | (1L << (T__25 - 64)) | (1L << (T__24 - 64)) | (1L << (T__23 - 64)) | (1L << (T__22 - 64)) | (1L << (T__21 - 64)) | (1L << (T__20 - 64)) | (1L << (T__19 - 64)) | (1L << (T__18 - 64)) | (1L << (T__17 - 64)) | (1L << (T__16 - 64)) | (1L << (T__15 - 64)) | (1L << (T__14 - 64)) | (1L << (T__13 - 64)) | (1L << (T__12 - 64)) | (1L << (T__11 - 64)) | (1L << (T__10 - 64)) | (1L << (T__9 - 64)) | (1L << (T__8 - 64)) | (1L << (T__7 - 64)) | (1L << (T__6 - 64)) | (1L << (T__5 - 64)) | (1L << (T__4 - 64)) | (1L << (T__3 - 64)) | (1L << (T__2 - 64)))) != 0) || ((((_la - 128)) & ~0x3f) == 0 && ((1L << (_la - 128)) & ((1L << (T__1 - 128)) | (1L << (T__0 - 128)) | (1L << (IgnoreAlgorithmKeyWords - 128)) | (1L << (IgnoreUrlPrefix - 128)) | (1L << (String - 128)) | (1L << (Num - 128)) | (1L << (INT - 128)) | (1L << (ASSIGN - 128)) | (1L << (GT - 128)) | (1L << (LT - 128)) | (1L << (BANG - 128)) | (1L << (TILDE - 128)) | (1L << (QUESTION - 128)) | (1L << (COLON - 128)) | (1L << (EQUAL - 128)) | (1L << (LE - 128)) | (1L << (GE - 128)) | (1L << (NOTEQUAL - 128)) | (1L << (AND - 128)) | (1L << (OR - 128)) | (1L << (INC - 128)) | (1L << (DEC - 128)) | (1L << (ADD - 128)) | (1L << (SUB - 128)) | (1L << (MUL - 128)) | (1L << (DIV - 128)) | (1L << (BITAND - 128)) | (1L << (BITOR - 128)) | (1L << (CARET - 128)) | (1L << (MOD - 128)) | (1L << (COMMENT - 128)) | (1L << (LINE_COMMENT - 128)) | (1L << (WS - 128)) | (1L << (WORDS_TO_SKIP - 128)) | (1L << (Skip - 128)) | (1L << (Affil - 128)))) != 0) );
-				setState(1138); match(T__73);
+				setState(1130); match(T__73);
 				}
 				}
 				break;
@@ -6604,7 +6570,7 @@ public class LaTEXParser extends Parser {
 			case T__21:
 				enterOuterAlt(_localctx, 7);
 				{
-				setState(1139); eqnArray();
+				setState(1131); eqnArray();
 				}
 				break;
 			default:
@@ -6650,21 +6616,21 @@ public class LaTEXParser extends Parser {
 		enterRule(_localctx, 174, RULE_equationBlock);
 		int _la;
 		try {
-			setState(1160);
+			setState(1152);
 			switch (_input.LA(1)) {
 			case T__10:
 				enterOuterAlt(_localctx, 1);
 				{
 				{
-				setState(1142); match(T__10);
-				setState(1143); label();
-				setState(1145); 
+				setState(1134); match(T__10);
+				setState(1135); label();
+				setState(1137); 
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 				do {
 					{
 					{
-					setState(1144);
+					setState(1136);
 					_la = _input.LA(1);
 					if ( _la <= 0 || (_la==T__65) ) {
 					_errHandler.recoverInline(this);
@@ -6672,11 +6638,11 @@ public class LaTEXParser extends Parser {
 					consume();
 					}
 					}
-					setState(1147); 
+					setState(1139); 
 					_errHandler.sync(this);
 					_la = _input.LA(1);
 				} while ( (((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__128) | (1L << T__127) | (1L << T__126) | (1L << T__125) | (1L << T__124) | (1L << T__123) | (1L << T__122) | (1L << T__121) | (1L << T__120) | (1L << T__119) | (1L << T__118) | (1L << T__117) | (1L << T__116) | (1L << T__115) | (1L << T__114) | (1L << T__113) | (1L << T__112) | (1L << T__111) | (1L << T__110) | (1L << T__109) | (1L << T__108) | (1L << T__107) | (1L << T__106) | (1L << T__105) | (1L << T__104) | (1L << T__103) | (1L << T__102) | (1L << T__101) | (1L << T__100) | (1L << T__99) | (1L << T__98) | (1L << T__97) | (1L << T__96) | (1L << T__95) | (1L << T__94) | (1L << T__93) | (1L << T__92) | (1L << T__91) | (1L << T__90) | (1L << T__89) | (1L << T__88) | (1L << T__87) | (1L << T__86) | (1L << T__85) | (1L << T__84) | (1L << T__83) | (1L << T__82) | (1L << T__81) | (1L << T__80) | (1L << T__79) | (1L << T__78) | (1L << T__77) | (1L << T__76) | (1L << T__75) | (1L << T__74) | (1L << T__73) | (1L << T__72) | (1L << T__71) | (1L << T__70) | (1L << T__69) | (1L << T__68) | (1L << T__67) | (1L << T__66))) != 0) || ((((_la - 65)) & ~0x3f) == 0 && ((1L << (_la - 65)) & ((1L << (T__64 - 65)) | (1L << (T__63 - 65)) | (1L << (T__62 - 65)) | (1L << (T__61 - 65)) | (1L << (T__60 - 65)) | (1L << (T__59 - 65)) | (1L << (T__58 - 65)) | (1L << (T__57 - 65)) | (1L << (T__56 - 65)) | (1L << (T__55 - 65)) | (1L << (T__54 - 65)) | (1L << (T__53 - 65)) | (1L << (T__52 - 65)) | (1L << (T__51 - 65)) | (1L << (T__50 - 65)) | (1L << (T__49 - 65)) | (1L << (T__48 - 65)) | (1L << (T__47 - 65)) | (1L << (T__46 - 65)) | (1L << (T__45 - 65)) | (1L << (T__44 - 65)) | (1L << (T__43 - 65)) | (1L << (T__42 - 65)) | (1L << (T__41 - 65)) | (1L << (T__40 - 65)) | (1L << (T__39 - 65)) | (1L << (T__38 - 65)) | (1L << (T__37 - 65)) | (1L << (T__36 - 65)) | (1L << (T__35 - 65)) | (1L << (T__34 - 65)) | (1L << (T__33 - 65)) | (1L << (T__32 - 65)) | (1L << (T__31 - 65)) | (1L << (T__30 - 65)) | (1L << (T__29 - 65)) | (1L << (T__28 - 65)) | (1L << (T__27 - 65)) | (1L << (T__26 - 65)) | (1L << (T__25 - 65)) | (1L << (T__24 - 65)) | (1L << (T__23 - 65)) | (1L << (T__22 - 65)) | (1L << (T__21 - 65)) | (1L << (T__20 - 65)) | (1L << (T__19 - 65)) | (1L << (T__18 - 65)) | (1L << (T__17 - 65)) | (1L << (T__16 - 65)) | (1L << (T__15 - 65)) | (1L << (T__14 - 65)) | (1L << (T__13 - 65)) | (1L << (T__12 - 65)) | (1L << (T__11 - 65)) | (1L << (T__10 - 65)) | (1L << (T__9 - 65)) | (1L << (T__8 - 65)) | (1L << (T__7 - 65)) | (1L << (T__6 - 65)) | (1L << (T__5 - 65)) | (1L << (T__4 - 65)) | (1L << (T__3 - 65)) | (1L << (T__2 - 65)) | (1L << (T__1 - 65)))) != 0) || ((((_la - 129)) & ~0x3f) == 0 && ((1L << (_la - 129)) & ((1L << (T__0 - 129)) | (1L << (IgnoreAlgorithmKeyWords - 129)) | (1L << (IgnoreUrlPrefix - 129)) | (1L << (String - 129)) | (1L << (Num - 129)) | (1L << (INT - 129)) | (1L << (ASSIGN - 129)) | (1L << (GT - 129)) | (1L << (LT - 129)) | (1L << (BANG - 129)) | (1L << (TILDE - 129)) | (1L << (QUESTION - 129)) | (1L << (COLON - 129)) | (1L << (EQUAL - 129)) | (1L << (LE - 129)) | (1L << (GE - 129)) | (1L << (NOTEQUAL - 129)) | (1L << (AND - 129)) | (1L << (OR - 129)) | (1L << (INC - 129)) | (1L << (DEC - 129)) | (1L << (ADD - 129)) | (1L << (SUB - 129)) | (1L << (MUL - 129)) | (1L << (DIV - 129)) | (1L << (BITAND - 129)) | (1L << (BITOR - 129)) | (1L << (CARET - 129)) | (1L << (MOD - 129)) | (1L << (COMMENT - 129)) | (1L << (LINE_COMMENT - 129)) | (1L << (WS - 129)) | (1L << (WORDS_TO_SKIP - 129)) | (1L << (Skip - 129)) | (1L << (Affil - 129)))) != 0) );
-				setState(1149); match(T__65);
+				setState(1141); match(T__65);
 				}
 				}
 				break;
@@ -6684,15 +6650,15 @@ public class LaTEXParser extends Parser {
 				enterOuterAlt(_localctx, 2);
 				{
 				{
-				setState(1151); match(T__123);
-				setState(1152); label();
-				setState(1154); 
+				setState(1143); match(T__123);
+				setState(1144); label();
+				setState(1146); 
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 				do {
 					{
 					{
-					setState(1153);
+					setState(1145);
 					_la = _input.LA(1);
 					if ( _la <= 0 || (_la==T__49) ) {
 					_errHandler.recoverInline(this);
@@ -6700,11 +6666,11 @@ public class LaTEXParser extends Parser {
 					consume();
 					}
 					}
-					setState(1156); 
+					setState(1148); 
 					_errHandler.sync(this);
 					_la = _input.LA(1);
 				} while ( (((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__128) | (1L << T__127) | (1L << T__126) | (1L << T__125) | (1L << T__124) | (1L << T__123) | (1L << T__122) | (1L << T__121) | (1L << T__120) | (1L << T__119) | (1L << T__118) | (1L << T__117) | (1L << T__116) | (1L << T__115) | (1L << T__114) | (1L << T__113) | (1L << T__112) | (1L << T__111) | (1L << T__110) | (1L << T__109) | (1L << T__108) | (1L << T__107) | (1L << T__106) | (1L << T__105) | (1L << T__104) | (1L << T__103) | (1L << T__102) | (1L << T__101) | (1L << T__100) | (1L << T__99) | (1L << T__98) | (1L << T__97) | (1L << T__96) | (1L << T__95) | (1L << T__94) | (1L << T__93) | (1L << T__92) | (1L << T__91) | (1L << T__90) | (1L << T__89) | (1L << T__88) | (1L << T__87) | (1L << T__86) | (1L << T__85) | (1L << T__84) | (1L << T__83) | (1L << T__82) | (1L << T__81) | (1L << T__80) | (1L << T__79) | (1L << T__78) | (1L << T__77) | (1L << T__76) | (1L << T__75) | (1L << T__74) | (1L << T__73) | (1L << T__72) | (1L << T__71) | (1L << T__70) | (1L << T__69) | (1L << T__68) | (1L << T__67) | (1L << T__66))) != 0) || ((((_la - 64)) & ~0x3f) == 0 && ((1L << (_la - 64)) & ((1L << (T__65 - 64)) | (1L << (T__64 - 64)) | (1L << (T__63 - 64)) | (1L << (T__62 - 64)) | (1L << (T__61 - 64)) | (1L << (T__60 - 64)) | (1L << (T__59 - 64)) | (1L << (T__58 - 64)) | (1L << (T__57 - 64)) | (1L << (T__56 - 64)) | (1L << (T__55 - 64)) | (1L << (T__54 - 64)) | (1L << (T__53 - 64)) | (1L << (T__52 - 64)) | (1L << (T__51 - 64)) | (1L << (T__50 - 64)) | (1L << (T__48 - 64)) | (1L << (T__47 - 64)) | (1L << (T__46 - 64)) | (1L << (T__45 - 64)) | (1L << (T__44 - 64)) | (1L << (T__43 - 64)) | (1L << (T__42 - 64)) | (1L << (T__41 - 64)) | (1L << (T__40 - 64)) | (1L << (T__39 - 64)) | (1L << (T__38 - 64)) | (1L << (T__37 - 64)) | (1L << (T__36 - 64)) | (1L << (T__35 - 64)) | (1L << (T__34 - 64)) | (1L << (T__33 - 64)) | (1L << (T__32 - 64)) | (1L << (T__31 - 64)) | (1L << (T__30 - 64)) | (1L << (T__29 - 64)) | (1L << (T__28 - 64)) | (1L << (T__27 - 64)) | (1L << (T__26 - 64)) | (1L << (T__25 - 64)) | (1L << (T__24 - 64)) | (1L << (T__23 - 64)) | (1L << (T__22 - 64)) | (1L << (T__21 - 64)) | (1L << (T__20 - 64)) | (1L << (T__19 - 64)) | (1L << (T__18 - 64)) | (1L << (T__17 - 64)) | (1L << (T__16 - 64)) | (1L << (T__15 - 64)) | (1L << (T__14 - 64)) | (1L << (T__13 - 64)) | (1L << (T__12 - 64)) | (1L << (T__11 - 64)) | (1L << (T__10 - 64)) | (1L << (T__9 - 64)) | (1L << (T__8 - 64)) | (1L << (T__7 - 64)) | (1L << (T__6 - 64)) | (1L << (T__5 - 64)) | (1L << (T__4 - 64)) | (1L << (T__3 - 64)) | (1L << (T__2 - 64)))) != 0) || ((((_la - 128)) & ~0x3f) == 0 && ((1L << (_la - 128)) & ((1L << (T__1 - 128)) | (1L << (T__0 - 128)) | (1L << (IgnoreAlgorithmKeyWords - 128)) | (1L << (IgnoreUrlPrefix - 128)) | (1L << (String - 128)) | (1L << (Num - 128)) | (1L << (INT - 128)) | (1L << (ASSIGN - 128)) | (1L << (GT - 128)) | (1L << (LT - 128)) | (1L << (BANG - 128)) | (1L << (TILDE - 128)) | (1L << (QUESTION - 128)) | (1L << (COLON - 128)) | (1L << (EQUAL - 128)) | (1L << (LE - 128)) | (1L << (GE - 128)) | (1L << (NOTEQUAL - 128)) | (1L << (AND - 128)) | (1L << (OR - 128)) | (1L << (INC - 128)) | (1L << (DEC - 128)) | (1L << (ADD - 128)) | (1L << (SUB - 128)) | (1L << (MUL - 128)) | (1L << (DIV - 128)) | (1L << (BITAND - 128)) | (1L << (BITOR - 128)) | (1L << (CARET - 128)) | (1L << (MOD - 128)) | (1L << (COMMENT - 128)) | (1L << (LINE_COMMENT - 128)) | (1L << (WS - 128)) | (1L << (WORDS_TO_SKIP - 128)) | (1L << (Skip - 128)) | (1L << (Affil - 128)))) != 0) );
-				setState(1158); match(T__49);
+				setState(1150); match(T__49);
 				}
 				}
 				break;
@@ -6751,14 +6717,14 @@ public class LaTEXParser extends Parser {
 			enterOuterAlt(_localctx, 1);
 			{
 			{
-			setState(1162); match(T__41);
-			setState(1164); 
+			setState(1154); match(T__41);
+			setState(1156); 
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			do {
 				{
 				{
-				setState(1163);
+				setState(1155);
 				_la = _input.LA(1);
 				if ( _la <= 0 || (_la==T__81) ) {
 				_errHandler.recoverInline(this);
@@ -6766,11 +6732,11 @@ public class LaTEXParser extends Parser {
 				consume();
 				}
 				}
-				setState(1166); 
+				setState(1158); 
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			} while ( (((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__128) | (1L << T__127) | (1L << T__126) | (1L << T__125) | (1L << T__124) | (1L << T__123) | (1L << T__122) | (1L << T__121) | (1L << T__120) | (1L << T__119) | (1L << T__118) | (1L << T__117) | (1L << T__116) | (1L << T__115) | (1L << T__114) | (1L << T__113) | (1L << T__112) | (1L << T__111) | (1L << T__110) | (1L << T__109) | (1L << T__108) | (1L << T__107) | (1L << T__106) | (1L << T__105) | (1L << T__104) | (1L << T__103) | (1L << T__102) | (1L << T__101) | (1L << T__100) | (1L << T__99) | (1L << T__98) | (1L << T__97) | (1L << T__96) | (1L << T__95) | (1L << T__94) | (1L << T__93) | (1L << T__92) | (1L << T__91) | (1L << T__90) | (1L << T__89) | (1L << T__88) | (1L << T__87) | (1L << T__86) | (1L << T__85) | (1L << T__84) | (1L << T__83) | (1L << T__82) | (1L << T__80) | (1L << T__79) | (1L << T__78) | (1L << T__77) | (1L << T__76) | (1L << T__75) | (1L << T__74) | (1L << T__73) | (1L << T__72) | (1L << T__71) | (1L << T__70) | (1L << T__69) | (1L << T__68) | (1L << T__67) | (1L << T__66))) != 0) || ((((_la - 64)) & ~0x3f) == 0 && ((1L << (_la - 64)) & ((1L << (T__65 - 64)) | (1L << (T__64 - 64)) | (1L << (T__63 - 64)) | (1L << (T__62 - 64)) | (1L << (T__61 - 64)) | (1L << (T__60 - 64)) | (1L << (T__59 - 64)) | (1L << (T__58 - 64)) | (1L << (T__57 - 64)) | (1L << (T__56 - 64)) | (1L << (T__55 - 64)) | (1L << (T__54 - 64)) | (1L << (T__53 - 64)) | (1L << (T__52 - 64)) | (1L << (T__51 - 64)) | (1L << (T__50 - 64)) | (1L << (T__49 - 64)) | (1L << (T__48 - 64)) | (1L << (T__47 - 64)) | (1L << (T__46 - 64)) | (1L << (T__45 - 64)) | (1L << (T__44 - 64)) | (1L << (T__43 - 64)) | (1L << (T__42 - 64)) | (1L << (T__41 - 64)) | (1L << (T__40 - 64)) | (1L << (T__39 - 64)) | (1L << (T__38 - 64)) | (1L << (T__37 - 64)) | (1L << (T__36 - 64)) | (1L << (T__35 - 64)) | (1L << (T__34 - 64)) | (1L << (T__33 - 64)) | (1L << (T__32 - 64)) | (1L << (T__31 - 64)) | (1L << (T__30 - 64)) | (1L << (T__29 - 64)) | (1L << (T__28 - 64)) | (1L << (T__27 - 64)) | (1L << (T__26 - 64)) | (1L << (T__25 - 64)) | (1L << (T__24 - 64)) | (1L << (T__23 - 64)) | (1L << (T__22 - 64)) | (1L << (T__21 - 64)) | (1L << (T__20 - 64)) | (1L << (T__19 - 64)) | (1L << (T__18 - 64)) | (1L << (T__17 - 64)) | (1L << (T__16 - 64)) | (1L << (T__15 - 64)) | (1L << (T__14 - 64)) | (1L << (T__13 - 64)) | (1L << (T__12 - 64)) | (1L << (T__11 - 64)) | (1L << (T__10 - 64)) | (1L << (T__9 - 64)) | (1L << (T__8 - 64)) | (1L << (T__7 - 64)) | (1L << (T__6 - 64)) | (1L << (T__5 - 64)) | (1L << (T__4 - 64)) | (1L << (T__3 - 64)) | (1L << (T__2 - 64)))) != 0) || ((((_la - 128)) & ~0x3f) == 0 && ((1L << (_la - 128)) & ((1L << (T__1 - 128)) | (1L << (T__0 - 128)) | (1L << (IgnoreAlgorithmKeyWords - 128)) | (1L << (IgnoreUrlPrefix - 128)) | (1L << (String - 128)) | (1L << (Num - 128)) | (1L << (INT - 128)) | (1L << (ASSIGN - 128)) | (1L << (GT - 128)) | (1L << (LT - 128)) | (1L << (BANG - 128)) | (1L << (TILDE - 128)) | (1L << (QUESTION - 128)) | (1L << (COLON - 128)) | (1L << (EQUAL - 128)) | (1L << (LE - 128)) | (1L << (GE - 128)) | (1L << (NOTEQUAL - 128)) | (1L << (AND - 128)) | (1L << (OR - 128)) | (1L << (INC - 128)) | (1L << (DEC - 128)) | (1L << (ADD - 128)) | (1L << (SUB - 128)) | (1L << (MUL - 128)) | (1L << (DIV - 128)) | (1L << (BITAND - 128)) | (1L << (BITOR - 128)) | (1L << (CARET - 128)) | (1L << (MOD - 128)) | (1L << (COMMENT - 128)) | (1L << (LINE_COMMENT - 128)) | (1L << (WS - 128)) | (1L << (WORDS_TO_SKIP - 128)) | (1L << (Skip - 128)) | (1L << (Affil - 128)))) != 0) );
-			setState(1168); match(T__81);
+			setState(1160); match(T__81);
 			}
 			}
 		}
@@ -6810,20 +6776,20 @@ public class LaTEXParser extends Parser {
 		enterRule(_localctx, 178, RULE_eqnArray);
 		int _la;
 		try {
-			setState(1184);
+			setState(1176);
 			switch (_input.LA(1)) {
 			case T__100:
 				enterOuterAlt(_localctx, 1);
 				{
 				{
-				setState(1170); match(T__100);
-				setState(1172); 
+				setState(1162); match(T__100);
+				setState(1164); 
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 				do {
 					{
 					{
-					setState(1171);
+					setState(1163);
 					_la = _input.LA(1);
 					if ( _la <= 0 || (_la==T__44) ) {
 					_errHandler.recoverInline(this);
@@ -6831,11 +6797,11 @@ public class LaTEXParser extends Parser {
 					consume();
 					}
 					}
-					setState(1174); 
+					setState(1166); 
 					_errHandler.sync(this);
 					_la = _input.LA(1);
 				} while ( (((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__128) | (1L << T__127) | (1L << T__126) | (1L << T__125) | (1L << T__124) | (1L << T__123) | (1L << T__122) | (1L << T__121) | (1L << T__120) | (1L << T__119) | (1L << T__118) | (1L << T__117) | (1L << T__116) | (1L << T__115) | (1L << T__114) | (1L << T__113) | (1L << T__112) | (1L << T__111) | (1L << T__110) | (1L << T__109) | (1L << T__108) | (1L << T__107) | (1L << T__106) | (1L << T__105) | (1L << T__104) | (1L << T__103) | (1L << T__102) | (1L << T__101) | (1L << T__100) | (1L << T__99) | (1L << T__98) | (1L << T__97) | (1L << T__96) | (1L << T__95) | (1L << T__94) | (1L << T__93) | (1L << T__92) | (1L << T__91) | (1L << T__90) | (1L << T__89) | (1L << T__88) | (1L << T__87) | (1L << T__86) | (1L << T__85) | (1L << T__84) | (1L << T__83) | (1L << T__82) | (1L << T__81) | (1L << T__80) | (1L << T__79) | (1L << T__78) | (1L << T__77) | (1L << T__76) | (1L << T__75) | (1L << T__74) | (1L << T__73) | (1L << T__72) | (1L << T__71) | (1L << T__70) | (1L << T__69) | (1L << T__68) | (1L << T__67) | (1L << T__66))) != 0) || ((((_la - 64)) & ~0x3f) == 0 && ((1L << (_la - 64)) & ((1L << (T__65 - 64)) | (1L << (T__64 - 64)) | (1L << (T__63 - 64)) | (1L << (T__62 - 64)) | (1L << (T__61 - 64)) | (1L << (T__60 - 64)) | (1L << (T__59 - 64)) | (1L << (T__58 - 64)) | (1L << (T__57 - 64)) | (1L << (T__56 - 64)) | (1L << (T__55 - 64)) | (1L << (T__54 - 64)) | (1L << (T__53 - 64)) | (1L << (T__52 - 64)) | (1L << (T__51 - 64)) | (1L << (T__50 - 64)) | (1L << (T__49 - 64)) | (1L << (T__48 - 64)) | (1L << (T__47 - 64)) | (1L << (T__46 - 64)) | (1L << (T__45 - 64)) | (1L << (T__43 - 64)) | (1L << (T__42 - 64)) | (1L << (T__41 - 64)) | (1L << (T__40 - 64)) | (1L << (T__39 - 64)) | (1L << (T__38 - 64)) | (1L << (T__37 - 64)) | (1L << (T__36 - 64)) | (1L << (T__35 - 64)) | (1L << (T__34 - 64)) | (1L << (T__33 - 64)) | (1L << (T__32 - 64)) | (1L << (T__31 - 64)) | (1L << (T__30 - 64)) | (1L << (T__29 - 64)) | (1L << (T__28 - 64)) | (1L << (T__27 - 64)) | (1L << (T__26 - 64)) | (1L << (T__25 - 64)) | (1L << (T__24 - 64)) | (1L << (T__23 - 64)) | (1L << (T__22 - 64)) | (1L << (T__21 - 64)) | (1L << (T__20 - 64)) | (1L << (T__19 - 64)) | (1L << (T__18 - 64)) | (1L << (T__17 - 64)) | (1L << (T__16 - 64)) | (1L << (T__15 - 64)) | (1L << (T__14 - 64)) | (1L << (T__13 - 64)) | (1L << (T__12 - 64)) | (1L << (T__11 - 64)) | (1L << (T__10 - 64)) | (1L << (T__9 - 64)) | (1L << (T__8 - 64)) | (1L << (T__7 - 64)) | (1L << (T__6 - 64)) | (1L << (T__5 - 64)) | (1L << (T__4 - 64)) | (1L << (T__3 - 64)) | (1L << (T__2 - 64)))) != 0) || ((((_la - 128)) & ~0x3f) == 0 && ((1L << (_la - 128)) & ((1L << (T__1 - 128)) | (1L << (T__0 - 128)) | (1L << (IgnoreAlgorithmKeyWords - 128)) | (1L << (IgnoreUrlPrefix - 128)) | (1L << (String - 128)) | (1L << (Num - 128)) | (1L << (INT - 128)) | (1L << (ASSIGN - 128)) | (1L << (GT - 128)) | (1L << (LT - 128)) | (1L << (BANG - 128)) | (1L << (TILDE - 128)) | (1L << (QUESTION - 128)) | (1L << (COLON - 128)) | (1L << (EQUAL - 128)) | (1L << (LE - 128)) | (1L << (GE - 128)) | (1L << (NOTEQUAL - 128)) | (1L << (AND - 128)) | (1L << (OR - 128)) | (1L << (INC - 128)) | (1L << (DEC - 128)) | (1L << (ADD - 128)) | (1L << (SUB - 128)) | (1L << (MUL - 128)) | (1L << (DIV - 128)) | (1L << (BITAND - 128)) | (1L << (BITOR - 128)) | (1L << (CARET - 128)) | (1L << (MOD - 128)) | (1L << (COMMENT - 128)) | (1L << (LINE_COMMENT - 128)) | (1L << (WS - 128)) | (1L << (WORDS_TO_SKIP - 128)) | (1L << (Skip - 128)) | (1L << (Affil - 128)))) != 0) );
-				setState(1176); match(T__44);
+				setState(1168); match(T__44);
 				}
 				}
 				break;
@@ -6843,14 +6809,14 @@ public class LaTEXParser extends Parser {
 				enterOuterAlt(_localctx, 2);
 				{
 				{
-				setState(1177); match(T__21);
-				setState(1179); 
+				setState(1169); match(T__21);
+				setState(1171); 
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 				do {
 					{
 					{
-					setState(1178);
+					setState(1170);
 					_la = _input.LA(1);
 					if ( _la <= 0 || (_la==T__76) ) {
 					_errHandler.recoverInline(this);
@@ -6858,11 +6824,11 @@ public class LaTEXParser extends Parser {
 					consume();
 					}
 					}
-					setState(1181); 
+					setState(1173); 
 					_errHandler.sync(this);
 					_la = _input.LA(1);
 				} while ( (((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__128) | (1L << T__127) | (1L << T__126) | (1L << T__125) | (1L << T__124) | (1L << T__123) | (1L << T__122) | (1L << T__121) | (1L << T__120) | (1L << T__119) | (1L << T__118) | (1L << T__117) | (1L << T__116) | (1L << T__115) | (1L << T__114) | (1L << T__113) | (1L << T__112) | (1L << T__111) | (1L << T__110) | (1L << T__109) | (1L << T__108) | (1L << T__107) | (1L << T__106) | (1L << T__105) | (1L << T__104) | (1L << T__103) | (1L << T__102) | (1L << T__101) | (1L << T__100) | (1L << T__99) | (1L << T__98) | (1L << T__97) | (1L << T__96) | (1L << T__95) | (1L << T__94) | (1L << T__93) | (1L << T__92) | (1L << T__91) | (1L << T__90) | (1L << T__89) | (1L << T__88) | (1L << T__87) | (1L << T__86) | (1L << T__85) | (1L << T__84) | (1L << T__83) | (1L << T__82) | (1L << T__81) | (1L << T__80) | (1L << T__79) | (1L << T__78) | (1L << T__77) | (1L << T__75) | (1L << T__74) | (1L << T__73) | (1L << T__72) | (1L << T__71) | (1L << T__70) | (1L << T__69) | (1L << T__68) | (1L << T__67) | (1L << T__66))) != 0) || ((((_la - 64)) & ~0x3f) == 0 && ((1L << (_la - 64)) & ((1L << (T__65 - 64)) | (1L << (T__64 - 64)) | (1L << (T__63 - 64)) | (1L << (T__62 - 64)) | (1L << (T__61 - 64)) | (1L << (T__60 - 64)) | (1L << (T__59 - 64)) | (1L << (T__58 - 64)) | (1L << (T__57 - 64)) | (1L << (T__56 - 64)) | (1L << (T__55 - 64)) | (1L << (T__54 - 64)) | (1L << (T__53 - 64)) | (1L << (T__52 - 64)) | (1L << (T__51 - 64)) | (1L << (T__50 - 64)) | (1L << (T__49 - 64)) | (1L << (T__48 - 64)) | (1L << (T__47 - 64)) | (1L << (T__46 - 64)) | (1L << (T__45 - 64)) | (1L << (T__44 - 64)) | (1L << (T__43 - 64)) | (1L << (T__42 - 64)) | (1L << (T__41 - 64)) | (1L << (T__40 - 64)) | (1L << (T__39 - 64)) | (1L << (T__38 - 64)) | (1L << (T__37 - 64)) | (1L << (T__36 - 64)) | (1L << (T__35 - 64)) | (1L << (T__34 - 64)) | (1L << (T__33 - 64)) | (1L << (T__32 - 64)) | (1L << (T__31 - 64)) | (1L << (T__30 - 64)) | (1L << (T__29 - 64)) | (1L << (T__28 - 64)) | (1L << (T__27 - 64)) | (1L << (T__26 - 64)) | (1L << (T__25 - 64)) | (1L << (T__24 - 64)) | (1L << (T__23 - 64)) | (1L << (T__22 - 64)) | (1L << (T__21 - 64)) | (1L << (T__20 - 64)) | (1L << (T__19 - 64)) | (1L << (T__18 - 64)) | (1L << (T__17 - 64)) | (1L << (T__16 - 64)) | (1L << (T__15 - 64)) | (1L << (T__14 - 64)) | (1L << (T__13 - 64)) | (1L << (T__12 - 64)) | (1L << (T__11 - 64)) | (1L << (T__10 - 64)) | (1L << (T__9 - 64)) | (1L << (T__8 - 64)) | (1L << (T__7 - 64)) | (1L << (T__6 - 64)) | (1L << (T__5 - 64)) | (1L << (T__4 - 64)) | (1L << (T__3 - 64)) | (1L << (T__2 - 64)))) != 0) || ((((_la - 128)) & ~0x3f) == 0 && ((1L << (_la - 128)) & ((1L << (T__1 - 128)) | (1L << (T__0 - 128)) | (1L << (IgnoreAlgorithmKeyWords - 128)) | (1L << (IgnoreUrlPrefix - 128)) | (1L << (String - 128)) | (1L << (Num - 128)) | (1L << (INT - 128)) | (1L << (ASSIGN - 128)) | (1L << (GT - 128)) | (1L << (LT - 128)) | (1L << (BANG - 128)) | (1L << (TILDE - 128)) | (1L << (QUESTION - 128)) | (1L << (COLON - 128)) | (1L << (EQUAL - 128)) | (1L << (LE - 128)) | (1L << (GE - 128)) | (1L << (NOTEQUAL - 128)) | (1L << (AND - 128)) | (1L << (OR - 128)) | (1L << (INC - 128)) | (1L << (DEC - 128)) | (1L << (ADD - 128)) | (1L << (SUB - 128)) | (1L << (MUL - 128)) | (1L << (DIV - 128)) | (1L << (BITAND - 128)) | (1L << (BITOR - 128)) | (1L << (CARET - 128)) | (1L << (MOD - 128)) | (1L << (COMMENT - 128)) | (1L << (LINE_COMMENT - 128)) | (1L << (WS - 128)) | (1L << (WORDS_TO_SKIP - 128)) | (1L << (Skip - 128)) | (1L << (Affil - 128)))) != 0) );
-				setState(1183); match(T__76);
+				setState(1175); match(T__76);
 				}
 				}
 				break;
@@ -6914,12 +6880,12 @@ public class LaTEXParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(1190);
+			setState(1182);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__128) | (1L << T__127) | (1L << T__126) | (1L << T__125) | (1L << T__124) | (1L << T__123) | (1L << T__122) | (1L << T__121) | (1L << T__120) | (1L << T__119) | (1L << T__118) | (1L << T__117) | (1L << T__116) | (1L << T__115) | (1L << T__114) | (1L << T__113) | (1L << T__112) | (1L << T__111) | (1L << T__110) | (1L << T__109) | (1L << T__108) | (1L << T__107) | (1L << T__106) | (1L << T__105) | (1L << T__104) | (1L << T__103) | (1L << T__102) | (1L << T__101) | (1L << T__100) | (1L << T__99) | (1L << T__98) | (1L << T__97) | (1L << T__96) | (1L << T__95) | (1L << T__94) | (1L << T__93) | (1L << T__92) | (1L << T__91) | (1L << T__90) | (1L << T__89) | (1L << T__88) | (1L << T__87) | (1L << T__86) | (1L << T__85) | (1L << T__84) | (1L << T__83) | (1L << T__82) | (1L << T__81) | (1L << T__80) | (1L << T__79) | (1L << T__78) | (1L << T__77) | (1L << T__75) | (1L << T__74) | (1L << T__73) | (1L << T__72) | (1L << T__71) | (1L << T__70) | (1L << T__69) | (1L << T__68) | (1L << T__67) | (1L << T__66))) != 0) || ((((_la - 64)) & ~0x3f) == 0 && ((1L << (_la - 64)) & ((1L << (T__65 - 64)) | (1L << (T__64 - 64)) | (1L << (T__63 - 64)) | (1L << (T__62 - 64)) | (1L << (T__61 - 64)) | (1L << (T__60 - 64)) | (1L << (T__59 - 64)) | (1L << (T__58 - 64)) | (1L << (T__57 - 64)) | (1L << (T__56 - 64)) | (1L << (T__55 - 64)) | (1L << (T__54 - 64)) | (1L << (T__53 - 64)) | (1L << (T__52 - 64)) | (1L << (T__51 - 64)) | (1L << (T__50 - 64)) | (1L << (T__49 - 64)) | (1L << (T__48 - 64)) | (1L << (T__47 - 64)) | (1L << (T__46 - 64)) | (1L << (T__45 - 64)) | (1L << (T__43 - 64)) | (1L << (T__42 - 64)) | (1L << (T__41 - 64)) | (1L << (T__40 - 64)) | (1L << (T__39 - 64)) | (1L << (T__38 - 64)) | (1L << (T__37 - 64)) | (1L << (T__36 - 64)) | (1L << (T__35 - 64)) | (1L << (T__34 - 64)) | (1L << (T__33 - 64)) | (1L << (T__32 - 64)) | (1L << (T__31 - 64)) | (1L << (T__30 - 64)) | (1L << (T__29 - 64)) | (1L << (T__28 - 64)) | (1L << (T__27 - 64)) | (1L << (T__26 - 64)) | (1L << (T__25 - 64)) | (1L << (T__24 - 64)) | (1L << (T__23 - 64)) | (1L << (T__22 - 64)) | (1L << (T__21 - 64)) | (1L << (T__20 - 64)) | (1L << (T__19 - 64)) | (1L << (T__18 - 64)) | (1L << (T__17 - 64)) | (1L << (T__16 - 64)) | (1L << (T__15 - 64)) | (1L << (T__14 - 64)) | (1L << (T__13 - 64)) | (1L << (T__12 - 64)) | (1L << (T__11 - 64)) | (1L << (T__10 - 64)) | (1L << (T__9 - 64)) | (1L << (T__8 - 64)) | (1L << (T__7 - 64)) | (1L << (T__6 - 64)) | (1L << (T__5 - 64)) | (1L << (T__4 - 64)) | (1L << (T__3 - 64)) | (1L << (T__2 - 64)))) != 0) || ((((_la - 128)) & ~0x3f) == 0 && ((1L << (_la - 128)) & ((1L << (T__1 - 128)) | (1L << (T__0 - 128)) | (1L << (IgnoreAlgorithmKeyWords - 128)) | (1L << (IgnoreUrlPrefix - 128)) | (1L << (String - 128)) | (1L << (Num - 128)) | (1L << (INT - 128)) | (1L << (ASSIGN - 128)) | (1L << (GT - 128)) | (1L << (LT - 128)) | (1L << (BANG - 128)) | (1L << (TILDE - 128)) | (1L << (QUESTION - 128)) | (1L << (COLON - 128)) | (1L << (EQUAL - 128)) | (1L << (LE - 128)) | (1L << (GE - 128)) | (1L << (NOTEQUAL - 128)) | (1L << (AND - 128)) | (1L << (OR - 128)) | (1L << (INC - 128)) | (1L << (DEC - 128)) | (1L << (ADD - 128)) | (1L << (SUB - 128)) | (1L << (MUL - 128)) | (1L << (DIV - 128)) | (1L << (BITAND - 128)) | (1L << (BITOR - 128)) | (1L << (CARET - 128)) | (1L << (MOD - 128)) | (1L << (COMMENT - 128)) | (1L << (LINE_COMMENT - 128)) | (1L << (WS - 128)) | (1L << (WORDS_TO_SKIP - 128)) | (1L << (Skip - 128)) | (1L << (Affil - 128)))) != 0)) {
 				{
-				setState(1188);
+				setState(1180);
 				switch (_input.LA(1)) {
 				case T__128:
 				case T__127:
@@ -7082,19 +7048,19 @@ public class LaTEXParser extends Parser {
 				case Skip:
 				case Affil:
 					{
-					setState(1186); eqnEquation();
+					setState(1178); eqnEquation();
 					}
 					break;
 				case BITAND:
 					{
-					setState(1187); match(BITAND);
+					setState(1179); match(BITAND);
 					}
 					break;
 				default:
 					throw new NoViableAltException(this);
 				}
 				}
-				setState(1192);
+				setState(1184);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			}
@@ -7139,7 +7105,7 @@ public class LaTEXParser extends Parser {
 			int _alt;
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(1194); 
+			setState(1186); 
 			_errHandler.sync(this);
 			_alt = 1;
 			do {
@@ -7147,7 +7113,7 @@ public class LaTEXParser extends Parser {
 				case 1:
 					{
 					{
-					setState(1193);
+					setState(1185);
 					_la = _input.LA(1);
 					if ( _la <= 0 || (_la==T__76 || _la==T__44 || _la==BITAND) ) {
 					_errHandler.recoverInline(this);
@@ -7159,9 +7125,9 @@ public class LaTEXParser extends Parser {
 				default:
 					throw new NoViableAltException(this);
 				}
-				setState(1196); 
+				setState(1188); 
 				_errHandler.sync(this);
-				_alt = getInterpreter().adaptivePredict(_input,130,_ctx);
+				_alt = getInterpreter().adaptivePredict(_input,128,_ctx);
 			} while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER );
 			}
 		}
@@ -7203,18 +7169,18 @@ public class LaTEXParser extends Parser {
 		NewLineContext _localctx = new NewLineContext(_ctx, getState());
 		enterRule(_localctx, 184, RULE_newLine);
 		try {
-			setState(1200);
+			setState(1192);
 			switch (_input.LA(1)) {
 			case T__36:
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(1198); match(T__36);
+				setState(1190); match(T__36);
 				}
 				break;
 			case T__28:
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(1199); doubleSlash();
+				setState(1191); doubleSlash();
 				}
 				break;
 			default:
@@ -7258,7 +7224,7 @@ public class LaTEXParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(1202); match(T__28);
+			setState(1194); match(T__28);
 			}
 		}
 		catch (RecognitionException re) {
@@ -7302,23 +7268,23 @@ public class LaTEXParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(1204); match(TILDE);
-			setState(1206);
+			setState(1196); match(TILDE);
+			setState(1198);
 			_la = _input.LA(1);
 			if (_la==T__35) {
 				{
-				setState(1205); match(T__35);
+				setState(1197); match(T__35);
 				}
 			}
 
-			setState(1208); match(T__40);
-			setState(1209); text();
-			setState(1210); match(T__120);
-			setState(1212);
-			switch ( getInterpreter().adaptivePredict(_input,133,_ctx) ) {
+			setState(1200); match(T__40);
+			setState(1201); text();
+			setState(1202); match(T__120);
+			setState(1204);
+			switch ( getInterpreter().adaptivePredict(_input,131,_ctx) ) {
 			case 1:
 				{
-				setState(1211); match(T__117);
+				setState(1203); match(T__117);
 				}
 				break;
 			}
@@ -7363,18 +7329,18 @@ public class LaTEXParser extends Parser {
 		SimpleTextContext _localctx = new SimpleTextContext(_ctx, getState());
 		enterRule(_localctx, 190, RULE_simpleText);
 		try {
-			setState(1216);
+			setState(1208);
 			switch (_input.LA(1)) {
 			case String:
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(1214); match(String);
+				setState(1206); match(String);
 				}
 				break;
 			case Num:
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(1215); numbers();
+				setState(1207); numbers();
 				}
 				break;
 			default:
@@ -7424,9 +7390,9 @@ public class LaTEXParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(1218); numbers();
-			setState(1219); match(SUB);
-			setState(1220); numbers();
+			setState(1210); numbers();
+			setState(1211); match(SUB);
+			setState(1212); numbers();
 			}
 		}
 		catch (RecognitionException re) {
@@ -7467,7 +7433,7 @@ public class LaTEXParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(1222); match(Num);
+			setState(1214); match(Num);
 			}
 		}
 		catch (RecognitionException re) {
@@ -7507,7 +7473,7 @@ public class LaTEXParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(1224); match(T__24);
+			setState(1216); match(T__24);
 			}
 		}
 		catch (RecognitionException re) {
@@ -7548,7 +7514,7 @@ public class LaTEXParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(1226);
+			setState(1218);
 			_la = _input.LA(1);
 			if ( !(_la==T__109 || _la==T__108 || ((((_la - 72)) & ~0x3f) == 0 && ((1L << (_la - 72)) & ((1L << (T__57 - 72)) | (1L << (T__39 - 72)) | (1L << (T__9 - 72)) | (1L << (T__4 - 72)))) != 0)) ) {
 			_errHandler.recoverInline(this);
@@ -7599,10 +7565,10 @@ public class LaTEXParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(1228); match(T__43);
-			setState(1229); block();
-			setState(1230); block();
-			setState(1231); block();
+			setState(1220); match(T__43);
+			setState(1221); block();
+			setState(1222); block();
+			setState(1223); block();
 			}
 		}
 		catch (RecognitionException re) {
@@ -7649,39 +7615,39 @@ public class LaTEXParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(1239);
+			setState(1231);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			while (_la==T__120 || _la==T__110 || ((((_la - 100)) & ~0x3f) == 0 && ((1L << (_la - 100)) & ((1L << (T__29 - 100)) | (1L << (String - 100)) | (1L << (Num - 100)))) != 0)) {
 				{
-				setState(1237);
+				setState(1229);
 				switch (_input.LA(1)) {
 				case String:
 				case Num:
 					{
-					setState(1233); simpleText();
+					setState(1225); simpleText();
 					}
 					break;
 				case T__110:
 					{
-					setState(1234); match(T__110);
+					setState(1226); match(T__110);
 					}
 					break;
 				case T__29:
 					{
-					setState(1235); match(T__29);
+					setState(1227); match(T__29);
 					}
 					break;
 				case T__120:
 					{
-					setState(1236); match(T__120);
+					setState(1228); match(T__120);
 					}
 					break;
 				default:
 					throw new NoViableAltException(this);
 				}
 				}
-				setState(1241);
+				setState(1233);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			}
@@ -7735,21 +7701,21 @@ public class LaTEXParser extends Parser {
 			enterOuterAlt(_localctx, 1);
 			{
 			{
-			setState(1242); match(T__84);
-			setState(1246);
+			setState(1234); match(T__84);
+			setState(1238);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			while (_la==T__69) {
 				{
 				{
-				setState(1243); options();
+				setState(1235); options();
 				}
 				}
-				setState(1248);
+				setState(1240);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			}
-			setState(1249); block();
+			setState(1241); block();
 			}
 			}
 		}
@@ -7765,7 +7731,7 @@ public class LaTEXParser extends Parser {
 	}
 
 	public static final String _serializedATN =
-		"\3\u0430\ud6d1\u8206\uad2d\u4417\uaef1\u8d80\uaadd\3\u00a5\u04e6\4\2\t"+
+		"\3\u0430\ud6d1\u8206\uad2d\u4417\uaef1\u8d80\uaadd\3\u00a5\u04de\4\2\t"+
 		"\2\4\3\t\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7\4\b\t\b\4\t\t\t\4\n\t\n\4\13"+
 		"\t\13\4\f\t\f\4\r\t\r\4\16\t\16\4\17\t\17\4\20\t\20\4\21\t\21\4\22\t\22"+
 		"\4\23\t\23\4\24\t\24\4\25\t\25\4\26\t\26\4\27\t\27\4\30\t\30\4\31\t\31"+
@@ -7825,35 +7791,34 @@ public class LaTEXParser extends Parser {
 		"\3\60\5\60\u0318\n\60\3\61\3\61\3\61\7\61\u031d\n\61\f\61\16\61\u0320"+
 		"\13\61\3\62\5\62\u0323\n\62\3\62\3\62\5\62\u0327\n\62\3\63\3\63\3\63\3"+
 		"\63\3\63\5\63\u032e\n\63\3\64\3\64\7\64\u0332\n\64\f\64\16\64\u0335\13"+
-		"\64\3\64\3\64\3\65\3\65\3\65\3\65\7\65\u033d\n\65\f\65\16\65\u0340\13"+
-		"\65\3\65\3\65\3\65\3\65\7\65\u0346\n\65\f\65\16\65\u0349\13\65\3\65\5"+
-		"\65\u034c\n\65\3\66\3\66\7\66\u0350\n\66\f\66\16\66\u0353\13\66\3\66\3"+
-		"\66\3\67\3\67\5\67\u0359\n\67\38\38\78\u035d\n8\f8\168\u0360\138\38\3"+
-		"8\38\78\u0365\n8\f8\168\u0368\138\38\38\58\u036c\n8\58\u036e\n8\39\39"+
-		"\39\39\59\u0374\n9\3:\3:\3:\3:\3;\3;\7;\u037c\n;\f;\16;\u037f\13;\3;\3"+
-		";\3<\3<\3<\5<\u0386\n<\3<\3<\3<\3=\3=\3=\5=\u038e\n=\3=\3=\3=\3>\3>\3"+
-		">\5>\u0396\n>\3>\3>\3>\3?\5?\u039c\n?\3?\3?\7?\u03a0\n?\f?\16?\u03a3\13"+
-		"?\3?\3?\3?\3?\3@\3@\3@\7@\u03ac\n@\f@\16@\u03af\13@\3@\3@\7@\u03b3\n@"+
-		"\f@\16@\u03b6\13@\7@\u03b8\n@\f@\16@\u03bb\13@\3A\3A\3A\3A\7A\u03c1\n"+
-		"A\fA\16A\u03c4\13A\3B\3B\3C\3C\5C\u03ca\nC\3C\7C\u03cd\nC\fC\16C\u03d0"+
-		"\13C\3C\3C\3C\5C\u03d5\nC\3C\7C\u03d8\nC\fC\16C\u03db\13C\3C\5C\u03de"+
-		"\nC\3D\3D\5D\u03e2\nD\3D\7D\u03e5\nD\fD\16D\u03e8\13D\3D\3D\3D\5D\u03ed"+
-		"\nD\3D\7D\u03f0\nD\fD\16D\u03f3\13D\3D\5D\u03f6\nD\3E\3E\5E\u03fa\nE\3"+
-		"E\7E\u03fd\nE\fE\16E\u0400\13E\3E\3E\3F\3F\5F\u0406\nF\3F\7F\u0409\nF"+
-		"\fF\16F\u040c\13F\3F\3F\3G\3G\3G\3H\3H\3H\3I\3I\7I\u0418\nI\fI\16I\u041b"+
-		"\13I\3I\3I\3J\3J\3J\3K\3K\3K\3L\3L\7L\u0427\nL\fL\16L\u042a\13L\3L\3L"+
-		"\3M\3M\3M\3M\3M\3N\3N\3O\3O\7O\u0437\nO\fO\16O\u043a\13O\3O\3O\3P\3P\3"+
-		"Q\3Q\3R\3R\3S\3S\3T\3T\3U\3U\3V\3V\3W\3W\5W\u044e\nW\3W\3W\3X\3X\6X\u0454"+
-		"\nX\rX\16X\u0455\3X\3X\3X\3X\6X\u045c\nX\rX\16X\u045d\3X\3X\3X\6X\u0463"+
-		"\nX\rX\16X\u0464\3X\3X\3X\6X\u046a\nX\rX\16X\u046b\3X\3X\3X\6X\u0471\n"+
-		"X\rX\16X\u0472\3X\3X\5X\u0477\nX\3Y\3Y\3Y\6Y\u047c\nY\rY\16Y\u047d\3Y"+
-		"\3Y\3Y\3Y\3Y\6Y\u0485\nY\rY\16Y\u0486\3Y\3Y\5Y\u048b\nY\3Z\3Z\6Z\u048f"+
-		"\nZ\rZ\16Z\u0490\3Z\3Z\3[\3[\6[\u0497\n[\r[\16[\u0498\3[\3[\3[\6[\u049e"+
-		"\n[\r[\16[\u049f\3[\5[\u04a3\n[\3\\\3\\\7\\\u04a7\n\\\f\\\16\\\u04aa\13"+
-		"\\\3]\6]\u04ad\n]\r]\16]\u04ae\3^\3^\5^\u04b3\n^\3_\3_\3`\3`\5`\u04b9"+
-		"\n`\3`\3`\3`\3`\5`\u04bf\n`\3a\3a\5a\u04c3\na\3b\3b\3b\3b\3c\3c\3d\3d"+
-		"\3e\3e\3f\3f\3f\3f\3f\3g\3g\3g\3g\7g\u04d8\ng\fg\16g\u04db\13g\3h\3h\7"+
-		"h\u04df\nh\fh\16h\u04e2\13h\3h\3h\3h\2\2i\2\4\6\b\n\f\16\20\22\24\26\30"+
+		"\64\3\64\3\64\3\65\3\65\3\65\3\65\3\65\3\65\3\65\3\65\3\65\3\65\3\65\5"+
+		"\65\u0344\n\65\3\66\3\66\7\66\u0348\n\66\f\66\16\66\u034b\13\66\3\66\3"+
+		"\66\3\67\3\67\5\67\u0351\n\67\38\38\78\u0355\n8\f8\168\u0358\138\38\3"+
+		"8\38\78\u035d\n8\f8\168\u0360\138\38\38\58\u0364\n8\58\u0366\n8\39\39"+
+		"\39\39\59\u036c\n9\3:\3:\3:\3:\3;\3;\7;\u0374\n;\f;\16;\u0377\13;\3;\3"+
+		";\3<\3<\3<\5<\u037e\n<\3<\3<\3<\3=\3=\3=\5=\u0386\n=\3=\3=\3=\3>\3>\3"+
+		">\5>\u038e\n>\3>\3>\3>\3?\5?\u0394\n?\3?\3?\7?\u0398\n?\f?\16?\u039b\13"+
+		"?\3?\3?\3?\3?\3@\3@\3@\7@\u03a4\n@\f@\16@\u03a7\13@\3@\3@\7@\u03ab\n@"+
+		"\f@\16@\u03ae\13@\7@\u03b0\n@\f@\16@\u03b3\13@\3A\3A\3A\3A\7A\u03b9\n"+
+		"A\fA\16A\u03bc\13A\3B\3B\3C\3C\5C\u03c2\nC\3C\7C\u03c5\nC\fC\16C\u03c8"+
+		"\13C\3C\3C\3C\5C\u03cd\nC\3C\7C\u03d0\nC\fC\16C\u03d3\13C\3C\5C\u03d6"+
+		"\nC\3D\3D\5D\u03da\nD\3D\7D\u03dd\nD\fD\16D\u03e0\13D\3D\3D\3D\5D\u03e5"+
+		"\nD\3D\7D\u03e8\nD\fD\16D\u03eb\13D\3D\5D\u03ee\nD\3E\3E\5E\u03f2\nE\3"+
+		"E\7E\u03f5\nE\fE\16E\u03f8\13E\3E\3E\3F\3F\5F\u03fe\nF\3F\7F\u0401\nF"+
+		"\fF\16F\u0404\13F\3F\3F\3G\3G\3G\3H\3H\3H\3I\3I\7I\u0410\nI\fI\16I\u0413"+
+		"\13I\3I\3I\3J\3J\3J\3K\3K\3K\3L\3L\7L\u041f\nL\fL\16L\u0422\13L\3L\3L"+
+		"\3M\3M\3M\3M\3M\3N\3N\3O\3O\7O\u042f\nO\fO\16O\u0432\13O\3O\3O\3P\3P\3"+
+		"Q\3Q\3R\3R\3S\3S\3T\3T\3U\3U\3V\3V\3W\3W\5W\u0446\nW\3W\3W\3X\3X\6X\u044c"+
+		"\nX\rX\16X\u044d\3X\3X\3X\3X\6X\u0454\nX\rX\16X\u0455\3X\3X\3X\6X\u045b"+
+		"\nX\rX\16X\u045c\3X\3X\3X\6X\u0462\nX\rX\16X\u0463\3X\3X\3X\6X\u0469\n"+
+		"X\rX\16X\u046a\3X\3X\5X\u046f\nX\3Y\3Y\3Y\6Y\u0474\nY\rY\16Y\u0475\3Y"+
+		"\3Y\3Y\3Y\3Y\6Y\u047d\nY\rY\16Y\u047e\3Y\3Y\5Y\u0483\nY\3Z\3Z\6Z\u0487"+
+		"\nZ\rZ\16Z\u0488\3Z\3Z\3[\3[\6[\u048f\n[\r[\16[\u0490\3[\3[\3[\6[\u0496"+
+		"\n[\r[\16[\u0497\3[\5[\u049b\n[\3\\\3\\\7\\\u049f\n\\\f\\\16\\\u04a2\13"+
+		"\\\3]\6]\u04a5\n]\r]\16]\u04a6\3^\3^\5^\u04ab\n^\3_\3_\3`\3`\5`\u04b1"+
+		"\n`\3`\3`\3`\3`\5`\u04b7\n`\3a\3a\5a\u04bb\na\3b\3b\3b\3b\3c\3c\3d\3d"+
+		"\3e\3e\3f\3f\3f\3f\3f\3g\3g\3g\3g\7g\u04d0\ng\fg\16g\u04d3\13g\3h\3h\7"+
+		"h\u04d7\nh\fh\16h\u04da\13h\3h\3h\3h\2\2i\2\4\6\b\n\f\16\20\22\24\26\30"+
 		"\32\34\36 \"$&(*,.\60\62\64\668:<>@BDFHJLNPRTVXZ\\^`bdfhjlnprtvxz|~\u0080"+
 		"\u0082\u0084\u0086\u0088\u008a\u008c\u008e\u0090\u0092\u0094\u0096\u0098"+
 		"\u009a\u009c\u009e\u00a0\u00a2\u00a4\u00a6\u00a8\u00aa\u00ac\u00ae\u00b0"+
@@ -7861,7 +7826,7 @@ public class LaTEXParser extends Parser {
 		"\u00ca\u00cc\u00ce\2\30\3\2__\3\2\13\13\5\2\f\f\61\61ww\4\2\22\22tt\4"+
 		"\2@@qq\4\2\35\35VV\6\2\t\tDDSScc\4\2bboo\3\2]]\3\2((\3\2\3\3\3\2CC\3\2"+
 		"}}\3\2||\3\2::\3\2BB\3\2RR\3\2\62\62\3\2WW\3\2\67\67\5\2\67\67WW\u009c"+
-		"\u009c\7\2\26\27JJ\\\\zz\177\177\u0555\2\u00d3\3\2\2\2\4\u00eb\3\2\2\2"+
+		"\u009c\7\2\26\27JJ\\\\zz\177\177\u054b\2\u00d3\3\2\2\2\4\u00eb\3\2\2\2"+
 		"\6\u00ef\3\2\2\2\b\u00f3\3\2\2\2\n\u0100\3\2\2\2\f\u010c\3\2\2\2\16\u011c"+
 		"\3\2\2\2\20\u0131\3\2\2\2\22\u0156\3\2\2\2\24\u0167\3\2\2\2\26\u016b\3"+
 		"\2\2\2\30\u0176\3\2\2\2\32\u0178\3\2\2\2\34\u0187\3\2\2\2\36\u018a\3\2"+
@@ -7872,28 +7837,28 @@ public class LaTEXParser extends Parser {
 		"\u0269\3\2\2\2F\u026e\3\2\2\2H\u0274\3\2\2\2J\u027e\3\2\2\2L\u0285\3\2"+
 		"\2\2N\u028b\3\2\2\2P\u0296\3\2\2\2R\u029f\3\2\2\2T\u02ab\3\2\2\2V\u02eb"+
 		"\3\2\2\2X\u02ee\3\2\2\2Z\u0307\3\2\2\2\\\u030f\3\2\2\2^\u0313\3\2\2\2"+
-		"`\u0319\3\2\2\2b\u0322\3\2\2\2d\u032d\3\2\2\2f\u032f\3\2\2\2h\u034b\3"+
-		"\2\2\2j\u034d\3\2\2\2l\u0358\3\2\2\2n\u036d\3\2\2\2p\u0373\3\2\2\2r\u0375"+
-		"\3\2\2\2t\u0379\3\2\2\2v\u0382\3\2\2\2x\u038a\3\2\2\2z\u0392\3\2\2\2|"+
-		"\u039b\3\2\2\2~\u03a8\3\2\2\2\u0080\u03c2\3\2\2\2\u0082\u03c5\3\2\2\2"+
-		"\u0084\u03dd\3\2\2\2\u0086\u03f5\3\2\2\2\u0088\u03f7\3\2\2\2\u008a\u0403"+
-		"\3\2\2\2\u008c\u040f\3\2\2\2\u008e\u0412\3\2\2\2\u0090\u0415\3\2\2\2\u0092"+
-		"\u041e\3\2\2\2\u0094\u0421\3\2\2\2\u0096\u0424\3\2\2\2\u0098\u042d\3\2"+
-		"\2\2\u009a\u0432\3\2\2\2\u009c\u0434\3\2\2\2\u009e\u043d\3\2\2\2\u00a0"+
-		"\u043f\3\2\2\2\u00a2\u0441\3\2\2\2\u00a4\u0443\3\2\2\2\u00a6\u0445\3\2"+
-		"\2\2\u00a8\u0447\3\2\2\2\u00aa\u0449\3\2\2\2\u00ac\u044b\3\2\2\2\u00ae"+
-		"\u0476\3\2\2\2\u00b0\u048a\3\2\2\2\u00b2\u048c\3\2\2\2\u00b4\u04a2\3\2"+
-		"\2\2\u00b6\u04a8\3\2\2\2\u00b8\u04ac\3\2\2\2\u00ba\u04b2\3\2\2\2\u00bc"+
-		"\u04b4\3\2\2\2\u00be\u04b6\3\2\2\2\u00c0\u04c2\3\2\2\2\u00c2\u04c4\3\2"+
-		"\2\2\u00c4\u04c8\3\2\2\2\u00c6\u04ca\3\2\2\2\u00c8\u04cc\3\2\2\2\u00ca"+
-		"\u04ce\3\2\2\2\u00cc\u04d9\3\2\2\2\u00ce\u04dc\3\2\2\2\u00d0\u00d2\5\u00ba"+
-		"^\2\u00d1\u00d0\3\2\2\2\u00d2\u00d5\3\2\2\2\u00d3\u00d1\3\2\2\2\u00d3"+
+		"`\u0319\3\2\2\2b\u0322\3\2\2\2d\u032d\3\2\2\2f\u032f\3\2\2\2h\u0343\3"+
+		"\2\2\2j\u0345\3\2\2\2l\u0350\3\2\2\2n\u0365\3\2\2\2p\u036b\3\2\2\2r\u036d"+
+		"\3\2\2\2t\u0371\3\2\2\2v\u037a\3\2\2\2x\u0382\3\2\2\2z\u038a\3\2\2\2|"+
+		"\u0393\3\2\2\2~\u03a0\3\2\2\2\u0080\u03ba\3\2\2\2\u0082\u03bd\3\2\2\2"+
+		"\u0084\u03d5\3\2\2\2\u0086\u03ed\3\2\2\2\u0088\u03ef\3\2\2\2\u008a\u03fb"+
+		"\3\2\2\2\u008c\u0407\3\2\2\2\u008e\u040a\3\2\2\2\u0090\u040d\3\2\2\2\u0092"+
+		"\u0416\3\2\2\2\u0094\u0419\3\2\2\2\u0096\u041c\3\2\2\2\u0098\u0425\3\2"+
+		"\2\2\u009a\u042a\3\2\2\2\u009c\u042c\3\2\2\2\u009e\u0435\3\2\2\2\u00a0"+
+		"\u0437\3\2\2\2\u00a2\u0439\3\2\2\2\u00a4\u043b\3\2\2\2\u00a6\u043d\3\2"+
+		"\2\2\u00a8\u043f\3\2\2\2\u00aa\u0441\3\2\2\2\u00ac\u0443\3\2\2\2\u00ae"+
+		"\u046e\3\2\2\2\u00b0\u0482\3\2\2\2\u00b2\u0484\3\2\2\2\u00b4\u049a\3\2"+
+		"\2\2\u00b6\u04a0\3\2\2\2\u00b8\u04a4\3\2\2\2\u00ba\u04aa\3\2\2\2\u00bc"+
+		"\u04ac\3\2\2\2\u00be\u04ae\3\2\2\2\u00c0\u04ba\3\2\2\2\u00c2\u04bc\3\2"+
+		"\2\2\u00c4\u04c0\3\2\2\2\u00c6\u04c2\3\2\2\2\u00c8\u04c4\3\2\2\2\u00ca"+
+		"\u04c6\3\2\2\2\u00cc\u04d1\3\2\2\2\u00ce\u04d4\3\2\2\2\u00d0\u00d2\7_"+
+		"\2\2\u00d1\u00d0\3\2\2\2\u00d2\u00d5\3\2\2\2\u00d3\u00d1\3\2\2\2\u00d3"+
 		"\u00d4\3\2\2\2\u00d4\u00d9\3\2\2\2\u00d5\u00d3\3\2\2\2\u00d6\u00d8\5\6"+
 		"\4\2\u00d7\u00d6\3\2\2\2\u00d8\u00db\3\2\2\2\u00d9\u00d7\3\2\2\2\u00d9"+
-		"\u00da\3\2\2\2\u00da\u00df\3\2\2\2\u00db\u00d9\3\2\2\2\u00dc\u00de\5\u00ba"+
-		"^\2\u00dd\u00dc\3\2\2\2\u00de\u00e1\3\2\2\2\u00df\u00dd\3\2\2\2\u00df"+
+		"\u00da\3\2\2\2\u00da\u00df\3\2\2\2\u00db\u00d9\3\2\2\2\u00dc\u00de\7_"+
+		"\2\2\u00dd\u00dc\3\2\2\2\u00de\u00e1\3\2\2\2\u00df\u00dd\3\2\2\2\u00df"+
 		"\u00e0\3\2\2\2\u00e0\u00e2\3\2\2\2\u00e1\u00df\3\2\2\2\u00e2\u00e6\5\4"+
-		"\3\2\u00e3\u00e5\5\u00ba^\2\u00e4\u00e3\3\2\2\2\u00e5\u00e8\3\2\2\2\u00e6"+
+		"\3\2\u00e3\u00e5\7_\2\2\u00e4\u00e3\3\2\2\2\u00e5\u00e8\3\2\2\2\u00e6"+
 		"\u00e4\3\2\2\2\u00e6\u00e7\3\2\2\2\u00e7\u00e9\3\2\2\2\u00e8\u00e6\3\2"+
 		"\2\2\u00e9\u00ea\7\2\2\3\u00ea\3\3\2\2\2\u00eb\u00ec\7s\2\2\u00ec\u00ed"+
 		"\5\n\6\2\u00ed\u00ee\7\23\2\2\u00ee\5\3\2\2\2\u00ef\u00f0\5\b\5\2\u00f0"+
@@ -8100,160 +8065,157 @@ public class LaTEXParser extends Parser {
 		"e\3\2\2\2\u032f\u0333\7=\2\2\u0330\u0332\5\36\20\2\u0331\u0330\3\2\2\2"+
 		"\u0332\u0335\3\2\2\2\u0333\u0331\3\2\2\2\u0333\u0334\3\2\2\2\u0334\u0336"+
 		"\3\2\2\2\u0335\u0333\3\2\2\2\u0336\u0337\7\13\2\2\u0337g\3\2\2\2\u0338"+
-		"\u0339\7!\2\2\u0339\u034c\5@!\2\u033a\u033e\7v\2\2\u033b\u033d\5\36\20"+
-		"\2\u033c\u033b\3\2\2\2\u033d\u0340\3\2\2\2\u033e\u033c\3\2\2\2\u033e\u033f"+
-		"\3\2\2\2\u033f\u0341\3\2\2\2\u0340\u033e\3\2\2\2\u0341\u034c\7\13\2\2"+
-		"\u0342\u0343\7\u0082\2\2\u0343\u0347\7f\2\2\u0344\u0346\5\36\20\2\u0345"+
-		"\u0344\3\2\2\2\u0346\u0349\3\2\2\2\u0347\u0345\3\2\2\2\u0347\u0348\3\2"+
-		"\2\2\u0348\u034a\3\2\2\2\u0349\u0347\3\2\2\2\u034a\u034c\7\13\2\2\u034b"+
-		"\u0338\3\2\2\2\u034b\u033a\3\2\2\2\u034b\u0342\3\2\2\2\u034ci\3\2\2\2"+
-		"\u034d\u0351\7A\2\2\u034e\u0350\5*\26\2\u034f\u034e\3\2\2\2\u0350\u0353"+
-		"\3\2\2\2\u0351\u034f\3\2\2\2\u0351\u0352\3\2\2\2\u0352\u0354\3\2\2\2\u0353"+
-		"\u0351\3\2\2\2\u0354\u0355\7\13\2\2\u0355k\3\2\2\2\u0356\u0359\5n8\2\u0357"+
-		"\u0359\5p9\2\u0358\u0356\3\2\2\2\u0358\u0357\3\2\2\2\u0359m\3\2\2\2\u035a"+
-		"\u035e\7O\2\2\u035b\u035d\5\36\20\2\u035c\u035b\3\2\2\2\u035d\u0360\3"+
-		"\2\2\2\u035e\u035c\3\2\2\2\u035e\u035f\3\2\2\2\u035f\u0361\3\2\2\2\u0360"+
-		"\u035e\3\2\2\2\u0361\u036e\7\13\2\2\u0362\u0366\7r\2\2\u0363\u0365\5\36"+
-		"\20\2\u0364\u0363\3\2\2\2\u0365\u0368\3\2\2\2\u0366\u0364\3\2\2\2\u0366"+
-		"\u0367\3\2\2\2\u0367\u0369\3\2\2\2\u0368\u0366\3\2\2\2\u0369\u036b\7\13"+
-		"\2\2\u036a\u036c\7\25\2\2\u036b\u036a\3\2\2\2\u036b\u036c\3\2\2\2\u036c"+
-		"\u036e\3\2\2\2\u036d\u035a\3\2\2\2\u036d\u0362\3\2\2\2\u036eo\3\2\2\2"+
-		"\u036f\u0370\7&\2\2\u0370\u0374\5@!\2\u0371\u0372\79\2\2\u0372\u0374\5"+
-		"@!\2\u0373\u036f\3\2\2\2\u0373\u0371\3\2\2\2\u0374q\3\2\2\2\u0375\u0376"+
-		"\7\u0083\2\2\u0376\u0377\5\36\20\2\u0377\u0378\7i\2\2\u0378s\3\2\2\2\u0379"+
-		"\u037d\7;\2\2\u037a\u037c\5\36\20\2\u037b\u037a\3\2\2\2\u037c\u037f\3"+
-		"\2\2\2\u037d\u037b\3\2\2\2\u037d\u037e\3\2\2\2\u037e\u0380\3\2\2\2\u037f"+
-		"\u037d\3\2\2\2\u0380\u0381\7G\2\2\u0381u\3\2\2\2\u0382\u0383\t\5\2\2\u0383"+
-		"\u0385\7f\2\2\u0384\u0386\5\60\31\2\u0385\u0384\3\2\2\2\u0385\u0386\3"+
-		"\2\2\2\u0386\u0387\3\2\2\2\u0387\u0388\5*\26\2\u0388\u0389\7\13\2\2\u0389"+
-		"w\3\2\2\2\u038a\u038b\t\6\2\2\u038b\u038d\7f\2\2\u038c\u038e\5\60\31\2"+
-		"\u038d\u038c\3\2\2\2\u038d\u038e\3\2\2\2\u038e\u038f\3\2\2\2\u038f\u0390"+
-		"\5*\26\2\u0390\u0391\7\13\2\2\u0391y\3\2\2\2\u0392\u0393\t\7\2\2\u0393"+
-		"\u0395\7f\2\2\u0394\u0396\5\60\31\2\u0395\u0394\3\2\2\2\u0395\u0396\3"+
-		"\2\2\2\u0396\u0397\3\2\2\2\u0397\u0398\5*\26\2\u0398\u0399\7\13\2\2\u0399"+
-		"{\3\2\2\2\u039a\u039c\7\u008d\2\2\u039b\u039a\3\2\2\2\u039b\u039c\3\2"+
-		"\2\2\u039c\u039d\3\2\2\2\u039d\u03a1\t\b\2\2\u039e\u03a0\5\u009cO\2\u039f"+
-		"\u039e\3\2\2\2\u03a0\u03a3\3\2\2\2\u03a1\u039f\3\2\2\2\u03a1\u03a2\3\2"+
-		"\2\2\u03a2\u03a4\3\2\2\2\u03a3\u03a1\3\2\2\2\u03a4\u03a5\7f\2\2\u03a5"+
-		"\u03a6\5~@\2\u03a6\u03a7\7\13\2\2\u03a7}\3\2\2\2\u03a8\u03b9\5\u0080A"+
-		"\2\u03a9\u03ad\7\34\2\2\u03aa\u03ac\7_\2\2\u03ab\u03aa\3\2\2\2\u03ac\u03af"+
-		"\3\2\2\2\u03ad\u03ab\3\2\2\2\u03ad\u03ae\3\2\2\2\u03ae\u03b0\3\2\2\2\u03af"+
-		"\u03ad\3\2\2\2\u03b0\u03b4\5\u0080A\2\u03b1\u03b3\7_\2\2\u03b2\u03b1\3"+
-		"\2\2\2\u03b3\u03b6\3\2\2\2\u03b4\u03b2\3\2\2\2\u03b4\u03b5\3\2\2\2\u03b5"+
-		"\u03b8\3\2\2\2\u03b6\u03b4\3\2\2\2\u03b7\u03a9\3\2\2\2\u03b8\u03bb\3\2"+
-		"\2\2\u03b9\u03b7\3\2\2\2\u03b9\u03ba\3\2\2\2\u03ba\177\3\2\2\2\u03bb\u03b9"+
-		"\3\2\2\2\u03bc\u03c1\5\u00c0a\2\u03bd\u03c1\5\u00a8U\2\u03be\u03c1\5\u00aa"+
-		"V\2\u03bf\u03c1\5\u00a6T\2\u03c0\u03bc\3\2\2\2\u03c0\u03bd\3\2\2\2\u03c0"+
-		"\u03be\3\2\2\2\u03c0\u03bf\3\2\2\2\u03c1\u03c4\3\2\2\2\u03c2\u03c0\3\2"+
-		"\2\2\u03c2\u03c3\3\2\2\2\u03c3\u0081\3\2\2\2\u03c4\u03c2\3\2\2\2\u03c5"+
-		"\u03c6\t\t\2\2\u03c6\u0083\3\2\2\2\u03c7\u03c9\7h\2\2\u03c8\u03ca\5\u009c"+
-		"O\2\u03c9\u03c8\3\2\2\2\u03c9\u03ca\3\2\2\2\u03ca\u03ce\3\2\2\2\u03cb"+
-		"\u03cd\5\36\20\2\u03cc\u03cb\3\2\2\2\u03cd\u03d0\3\2\2\2\u03ce\u03cc\3"+
-		"\2\2\2\u03ce\u03cf\3\2\2\2\u03cf\u03d1\3\2\2\2\u03d0\u03ce\3\2\2\2\u03d1"+
-		"\u03de\7T\2\2\u03d2\u03d4\78\2\2\u03d3\u03d5\5\u009cO\2\u03d4\u03d3\3"+
-		"\2\2\2\u03d4\u03d5\3\2\2\2\u03d5\u03d9\3\2\2\2\u03d6\u03d8\5\36\20\2\u03d7"+
-		"\u03d6\3\2\2\2\u03d8\u03db\3\2\2\2\u03d9\u03d7\3\2\2\2\u03d9\u03da\3\2"+
-		"\2\2\u03da\u03dc\3\2\2\2\u03db\u03d9\3\2\2\2\u03dc\u03de\7\33\2\2\u03dd"+
-		"\u03c7\3\2\2\2\u03dd\u03d2\3\2\2\2\u03de\u0085\3\2\2\2\u03df\u03e1\7%"+
-		"\2\2\u03e0\u03e2\5\u009cO\2\u03e1\u03e0\3\2\2\2\u03e1\u03e2\3\2\2\2\u03e2"+
-		"\u03e6\3\2\2\2\u03e3\u03e5\5\36\20\2\u03e4\u03e3\3\2\2\2\u03e5\u03e8\3"+
-		"\2\2\2\u03e6\u03e4\3\2\2\2\u03e6\u03e7\3\2\2\2\u03e7\u03e9\3\2\2\2\u03e8"+
-		"\u03e6\3\2\2\2\u03e9\u03f6\7\'\2\2\u03ea\u03ec\7$\2\2\u03eb\u03ed\5\u009c"+
-		"O\2\u03ec\u03eb\3\2\2\2\u03ec\u03ed\3\2\2\2\u03ed\u03f1\3\2\2\2\u03ee"+
-		"\u03f0\5\36\20\2\u03ef\u03ee\3\2\2\2\u03f0\u03f3\3\2\2\2\u03f1\u03ef\3"+
-		"\2\2\2\u03f1\u03f2\3\2\2\2\u03f2\u03f4\3\2\2\2\u03f3\u03f1\3\2\2\2\u03f4"+
-		"\u03f6\7m\2\2\u03f5\u03df\3\2\2\2\u03f5\u03ea\3\2\2\2\u03f6\u0087\3\2"+
-		"\2\2\u03f7\u03f9\7\24\2\2\u03f8\u03fa\5\u009cO\2\u03f9\u03f8\3\2\2\2\u03f9"+
-		"\u03fa\3\2\2\2\u03fa\u03fe\3\2\2\2\u03fb\u03fd\5\36\20\2\u03fc\u03fb\3"+
-		"\2\2\2\u03fd\u0400\3\2\2\2\u03fe\u03fc\3\2\2\2\u03fe\u03ff\3\2\2\2\u03ff"+
-		"\u0401\3\2\2\2\u0400\u03fe\3\2\2\2\u0401\u0402\7e\2\2\u0402\u0089\3\2"+
-		"\2\2\u0403\u0405\7N\2\2\u0404\u0406\5\u009cO\2\u0405\u0404\3\2\2\2\u0405"+
-		"\u0406\3\2\2\2\u0406\u040a\3\2\2\2\u0407\u0409\5\36\20\2\u0408\u0407\3"+
-		"\2\2\2\u0409\u040c\3\2\2\2\u040a\u0408\3\2\2\2\u040a\u040b\3\2\2\2\u040b"+
-		"\u040d\3\2\2\2\u040c\u040a\3\2\2\2\u040d\u040e\7\17\2\2\u040e\u008b\3"+
-		"\2\2\2\u040f\u0410\7M\2\2\u0410\u0411\5@!\2\u0411\u008d\3\2\2\2\u0412"+
-		"\u0413\7\60\2\2\u0413\u0414\5@!\2\u0414\u008f\3\2\2\2\u0415\u0419\7\""+
-		"\2\2\u0416\u0418\5$\23\2\u0417\u0416\3\2\2\2\u0418\u041b\3\2\2\2\u0419"+
-		"\u0417\3\2\2\2\u0419\u041a\3\2\2\2\u041a\u041c\3\2\2\2\u041b\u0419\3\2"+
-		"\2\2\u041c\u041d\5\u00ba^\2\u041d\u0091\3\2\2\2\u041e\u041f\7j\2\2\u041f"+
-		"\u0420\5@!\2\u0420\u0093\3\2\2\2\u0421\u0422\7 \2\2\u0422\u0423\5@!\2"+
-		"\u0423\u0095\3\2\2\2\u0424\u0428\7^\2\2\u0425\u0427\5$\23\2\u0426\u0425"+
-		"\3\2\2\2\u0427\u042a\3\2\2\2\u0428\u0426\3\2\2\2\u0428\u0429\3\2\2\2\u0429"+
-		"\u042b\3\2\2\2\u042a\u0428\3\2\2\2\u042b\u042c\5\u00ba^\2\u042c\u0097"+
-		"\3\2\2\2\u042d\u042e\7H\2\2\u042e\u042f\7f\2\2\u042f\u0430\5\u009aN\2"+
-		"\u0430\u0431\7\13\2\2\u0431\u0099\3\2\2\2\u0432\u0433\5*\26\2\u0433\u009b"+
-		"\3\2\2\2\u0434\u0438\7>\2\2\u0435\u0437\n\n\2\2\u0436\u0435\3\2\2\2\u0437"+
-		"\u043a\3\2\2\2\u0438\u0436\3\2\2\2\u0438\u0439\3\2\2\2\u0439\u043b\3\2"+
-		"\2\2\u043a\u0438\3\2\2\2\u043b\u043c\7]\2\2\u043c\u009d\3\2\2\2\u043d"+
-		"\u043e\7\34\2\2\u043e\u009f\3\2\2\2\u043f\u0440\7,\2\2\u0440\u00a1\3\2"+
-		"\2\2\u0441\u0442\7K\2\2\u0442\u00a3\3\2\2\2\u0443\u0444\7u\2\2\u0444\u00a5"+
-		"\3\2\2\2\u0445\u0446\7\u008f\2\2\u0446\u00a7\3\2\2\2\u0447\u0448\7`\2"+
-		"\2\u0448\u00a9\3\2\2\2\u0449\u044a\7\16\2\2\u044a\u00ab\3\2\2\2\u044b"+
-		"\u044d\7(\2\2\u044c\u044e\n\13\2\2\u044d\u044c\3\2\2\2\u044d\u044e\3\2"+
-		"\2\2\u044e\u044f\3\2\2\2\u044f\u0450\7(\2\2\u0450\u00ad\3\2\2\2\u0451"+
-		"\u0453\7\3\2\2\u0452\u0454\n\f\2\2\u0453\u0452\3\2\2\2\u0454\u0455\3\2"+
-		"\2\2\u0455\u0453\3\2\2\2\u0455\u0456\3\2\2\2\u0456\u0457\3\2\2\2\u0457"+
-		"\u0477\7\3\2\2\u0458\u0477\5\u00acW\2\u0459\u045b\7d\2\2\u045a\u045c\n"+
-		"\r\2\2\u045b\u045a\3\2\2\2\u045c\u045d\3\2\2\2\u045d\u045b\3\2\2\2\u045d"+
-		"\u045e\3\2\2\2\u045e\u045f\3\2\2\2\u045f\u0477\7C\2\2\u0460\u0462\7\u0080"+
-		"\2\2\u0461\u0463\n\16\2\2\u0462\u0461\3\2\2\2\u0463\u0464\3\2\2\2\u0464"+
-		"\u0462\3\2\2\2\u0464\u0465\3\2\2\2\u0465\u0466\3\2\2\2\u0466\u0477\7}"+
-		"\2\2\u0467\u0469\7\65\2\2\u0468\u046a\n\17\2\2\u0469\u0468\3\2\2\2\u046a"+
-		"\u046b\3\2\2\2\u046b\u0469\3\2\2\2\u046b\u046c\3\2\2\2\u046c\u046d\3\2"+
-		"\2\2\u046d\u0477\7|\2\2\u046e\u0470\7+\2\2\u046f\u0471\n\20\2\2\u0470"+
-		"\u046f\3\2\2\2\u0471\u0472\3\2\2\2\u0472\u0470\3\2\2\2\u0472\u0473\3\2"+
-		"\2\2\u0473\u0474\3\2\2\2\u0474\u0477\7:\2\2\u0475\u0477\5\u00b4[\2\u0476"+
-		"\u0451\3\2\2\2\u0476\u0458\3\2\2\2\u0476\u0459\3\2\2\2\u0476\u0460\3\2"+
-		"\2\2\u0476\u0467\3\2\2\2\u0476\u046e\3\2\2\2\u0476\u0475\3\2\2\2\u0477"+
-		"\u00af\3\2\2\2\u0478\u0479\7y\2\2\u0479\u047b\5\60\31\2\u047a\u047c\n"+
-		"\21\2\2\u047b\u047a\3\2\2\2\u047c\u047d\3\2\2\2\u047d\u047b\3\2\2\2\u047d"+
-		"\u047e\3\2\2\2\u047e\u047f\3\2\2\2\u047f\u0480\7B\2\2\u0480\u048b\3\2"+
-		"\2\2\u0481\u0482\7\b\2\2\u0482\u0484\5\60\31\2\u0483\u0485\n\22\2\2\u0484"+
-		"\u0483\3\2\2\2\u0485\u0486\3\2\2\2\u0486\u0484\3\2\2\2\u0486\u0487\3\2"+
-		"\2\2\u0487\u0488\3\2\2\2\u0488\u0489\7R\2\2\u0489\u048b\3\2\2\2\u048a"+
-		"\u0478\3\2\2\2\u048a\u0481\3\2\2\2\u048b\u00b1\3\2\2\2\u048c\u048e\7Z"+
-		"\2\2\u048d\u048f\n\23\2\2\u048e\u048d\3\2\2\2\u048f\u0490\3\2\2\2\u0490"+
-		"\u048e\3\2\2\2\u0490\u0491\3\2\2\2\u0491\u0492\3\2\2\2\u0492\u0493\7\62"+
-		"\2\2\u0493\u00b3\3\2\2\2\u0494\u0496\7\37\2\2\u0495\u0497\n\24\2\2\u0496"+
-		"\u0495\3\2\2\2\u0497\u0498\3\2\2\2\u0498\u0496\3\2\2\2\u0498\u0499\3\2"+
-		"\2\2\u0499\u049a\3\2\2\2\u049a\u04a3\7W\2\2\u049b\u049d\7n\2\2\u049c\u049e"+
-		"\n\25\2\2\u049d\u049c\3\2\2\2\u049e\u049f\3\2\2\2\u049f\u049d\3\2\2\2"+
-		"\u049f\u04a0\3\2\2\2\u04a0\u04a1\3\2\2\2\u04a1\u04a3\7\67\2\2\u04a2\u0494"+
-		"\3\2\2\2\u04a2\u049b\3\2\2\2\u04a3\u00b5\3\2\2\2\u04a4\u04a7\5\u00b8]"+
-		"\2\u04a5\u04a7\7\u009c\2\2\u04a6\u04a4\3\2\2\2\u04a6\u04a5\3\2\2\2\u04a7"+
-		"\u04aa\3\2\2\2\u04a8\u04a6\3\2\2\2\u04a8\u04a9\3\2\2\2\u04a9\u00b7\3\2"+
-		"\2\2\u04aa\u04a8\3\2\2\2\u04ab\u04ad\n\26\2\2\u04ac\u04ab\3\2\2\2\u04ad"+
-		"\u04ae\3\2\2\2\u04ae\u04ac\3\2\2\2\u04ae\u04af\3\2\2\2\u04af\u00b9\3\2"+
-		"\2\2\u04b0\u04b3\7_\2\2\u04b1\u04b3\5\u00bc_\2\u04b2\u04b0\3\2\2\2\u04b2"+
-		"\u04b1\3\2\2\2\u04b3\u00bb\3\2\2\2\u04b4\u04b5\7g\2\2\u04b5\u00bd\3\2"+
-		"\2\2\u04b6\u04b8\7\u008d\2\2\u04b7\u04b9\7`\2\2\u04b8\u04b7\3\2\2\2\u04b8"+
-		"\u04b9\3\2\2\2\u04b9\u04ba\3\2\2\2\u04ba\u04bb\7[\2\2\u04bb\u04bc\5*\26"+
-		"\2\u04bc\u04be\7\13\2\2\u04bd\u04bf\7\16\2\2\u04be\u04bd\3\2\2\2\u04be"+
-		"\u04bf\3\2\2\2\u04bf\u00bf\3\2\2\2\u04c0\u04c3\7\u0086\2\2\u04c1\u04c3"+
-		"\5\u00c4c\2\u04c2\u04c0\3\2\2\2\u04c2\u04c1\3\2\2\2\u04c3\u00c1\3\2\2"+
-		"\2\u04c4\u04c5\5\u00c4c\2\u04c5\u04c6\7\u0099\2\2\u04c6\u04c7\5\u00c4"+
-		"c\2\u04c7\u00c3\3\2\2\2\u04c8\u04c9\7\u0087\2\2\u04c9\u00c5\3\2\2\2\u04ca"+
-		"\u04cb\7k\2\2\u04cb\u00c7\3\2\2\2\u04cc\u04cd\t\27\2\2\u04cd\u00c9\3\2"+
-		"\2\2\u04ce\u04cf\7X\2\2\u04cf\u04d0\5@!\2\u04d0\u04d1\5@!\2\u04d1\u04d2"+
-		"\5@!\2\u04d2\u00cb\3\2\2\2\u04d3\u04d8\5\u00c0a\2\u04d4\u04d8\7\25\2\2"+
-		"\u04d5\u04d8\7f\2\2\u04d6\u04d8\7\13\2\2\u04d7\u04d3\3\2\2\2\u04d7\u04d4"+
-		"\3\2\2\2\u04d7\u04d5\3\2\2\2\u04d7\u04d6\3\2\2\2\u04d8\u04db\3\2\2\2\u04d9"+
-		"\u04d7\3\2\2\2\u04d9\u04da\3\2\2\2\u04da\u00cd\3\2\2\2\u04db\u04d9\3\2"+
-		"\2\2\u04dc\u04e0\7/\2\2\u04dd\u04df\5\u009cO\2\u04de\u04dd\3\2\2\2\u04df"+
-		"\u04e2\3\2\2\2\u04e0\u04de\3\2\2\2\u04e0\u04e1\3\2\2\2\u04e1\u04e3\3\2"+
-		"\2\2\u04e2\u04e0\3\2\2\2\u04e3\u04e4\5@!\2\u04e4\u00cf\3\2\2\2\u008c\u00d3"+
+		"\u0339\7!\2\2\u0339\u0344\5@!\2\u033a\u033b\7v\2\2\u033b\u033c\5\36\20"+
+		"\2\u033c\u033d\7\13\2\2\u033d\u0344\3\2\2\2\u033e\u033f\7\u0082\2\2\u033f"+
+		"\u0340\7f\2\2\u0340\u0341\5\36\20\2\u0341\u0342\7\13\2\2\u0342\u0344\3"+
+		"\2\2\2\u0343\u0338\3\2\2\2\u0343\u033a\3\2\2\2\u0343\u033e\3\2\2\2\u0344"+
+		"i\3\2\2\2\u0345\u0349\7A\2\2\u0346\u0348\5*\26\2\u0347\u0346\3\2\2\2\u0348"+
+		"\u034b\3\2\2\2\u0349\u0347\3\2\2\2\u0349\u034a\3\2\2\2\u034a\u034c\3\2"+
+		"\2\2\u034b\u0349\3\2\2\2\u034c\u034d\7\13\2\2\u034dk\3\2\2\2\u034e\u0351"+
+		"\5n8\2\u034f\u0351\5p9\2\u0350\u034e\3\2\2\2\u0350\u034f\3\2\2\2\u0351"+
+		"m\3\2\2\2\u0352\u0356\7O\2\2\u0353\u0355\5\36\20\2\u0354\u0353\3\2\2\2"+
+		"\u0355\u0358\3\2\2\2\u0356\u0354\3\2\2\2\u0356\u0357\3\2\2\2\u0357\u0359"+
+		"\3\2\2\2\u0358\u0356\3\2\2\2\u0359\u0366\7\13\2\2\u035a\u035e\7r\2\2\u035b"+
+		"\u035d\5\36\20\2\u035c\u035b\3\2\2\2\u035d\u0360\3\2\2\2\u035e\u035c\3"+
+		"\2\2\2\u035e\u035f\3\2\2\2\u035f\u0361\3\2\2\2\u0360\u035e\3\2\2\2\u0361"+
+		"\u0363\7\13\2\2\u0362\u0364\7\25\2\2\u0363\u0362\3\2\2\2\u0363\u0364\3"+
+		"\2\2\2\u0364\u0366\3\2\2\2\u0365\u0352\3\2\2\2\u0365\u035a\3\2\2\2\u0366"+
+		"o\3\2\2\2\u0367\u0368\7&\2\2\u0368\u036c\5@!\2\u0369\u036a\79\2\2\u036a"+
+		"\u036c\5@!\2\u036b\u0367\3\2\2\2\u036b\u0369\3\2\2\2\u036cq\3\2\2\2\u036d"+
+		"\u036e\7\u0083\2\2\u036e\u036f\5\36\20\2\u036f\u0370\7i\2\2\u0370s\3\2"+
+		"\2\2\u0371\u0375\7;\2\2\u0372\u0374\5\36\20\2\u0373\u0372\3\2\2\2\u0374"+
+		"\u0377\3\2\2\2\u0375\u0373\3\2\2\2\u0375\u0376\3\2\2\2\u0376\u0378\3\2"+
+		"\2\2\u0377\u0375\3\2\2\2\u0378\u0379\7G\2\2\u0379u\3\2\2\2\u037a\u037b"+
+		"\t\5\2\2\u037b\u037d\7f\2\2\u037c\u037e\5\60\31\2\u037d\u037c\3\2\2\2"+
+		"\u037d\u037e\3\2\2\2\u037e\u037f\3\2\2\2\u037f\u0380\5*\26\2\u0380\u0381"+
+		"\7\13\2\2\u0381w\3\2\2\2\u0382\u0383\t\6\2\2\u0383\u0385\7f\2\2\u0384"+
+		"\u0386\5\60\31\2\u0385\u0384\3\2\2\2\u0385\u0386\3\2\2\2\u0386\u0387\3"+
+		"\2\2\2\u0387\u0388\5*\26\2\u0388\u0389\7\13\2\2\u0389y\3\2\2\2\u038a\u038b"+
+		"\t\7\2\2\u038b\u038d\7f\2\2\u038c\u038e\5\60\31\2\u038d\u038c\3\2\2\2"+
+		"\u038d\u038e\3\2\2\2\u038e\u038f\3\2\2\2\u038f\u0390\5*\26\2\u0390\u0391"+
+		"\7\13\2\2\u0391{\3\2\2\2\u0392\u0394\7\u008d\2\2\u0393\u0392\3\2\2\2\u0393"+
+		"\u0394\3\2\2\2\u0394\u0395\3\2\2\2\u0395\u0399\t\b\2\2\u0396\u0398\5\u009c"+
+		"O\2\u0397\u0396\3\2\2\2\u0398\u039b\3\2\2\2\u0399\u0397\3\2\2\2\u0399"+
+		"\u039a\3\2\2\2\u039a\u039c\3\2\2\2\u039b\u0399\3\2\2\2\u039c\u039d\7f"+
+		"\2\2\u039d\u039e\5~@\2\u039e\u039f\7\13\2\2\u039f}\3\2\2\2\u03a0\u03b1"+
+		"\5\u0080A\2\u03a1\u03a5\7\34\2\2\u03a2\u03a4\7_\2\2\u03a3\u03a2\3\2\2"+
+		"\2\u03a4\u03a7\3\2\2\2\u03a5\u03a3\3\2\2\2\u03a5\u03a6\3\2\2\2\u03a6\u03a8"+
+		"\3\2\2\2\u03a7\u03a5\3\2\2\2\u03a8\u03ac\5\u0080A\2\u03a9\u03ab\7_\2\2"+
+		"\u03aa\u03a9\3\2\2\2\u03ab\u03ae\3\2\2\2\u03ac\u03aa\3\2\2\2\u03ac\u03ad"+
+		"\3\2\2\2\u03ad\u03b0\3\2\2\2\u03ae\u03ac\3\2\2\2\u03af\u03a1\3\2\2\2\u03b0"+
+		"\u03b3\3\2\2\2\u03b1\u03af\3\2\2\2\u03b1\u03b2\3\2\2\2\u03b2\177\3\2\2"+
+		"\2\u03b3\u03b1\3\2\2\2\u03b4\u03b9\5\u00c0a\2\u03b5\u03b9\5\u00a8U\2\u03b6"+
+		"\u03b9\5\u00aaV\2\u03b7\u03b9\5\u00a6T\2\u03b8\u03b4\3\2\2\2\u03b8\u03b5"+
+		"\3\2\2\2\u03b8\u03b6\3\2\2\2\u03b8\u03b7\3\2\2\2\u03b9\u03bc\3\2\2\2\u03ba"+
+		"\u03b8\3\2\2\2\u03ba\u03bb\3\2\2\2\u03bb\u0081\3\2\2\2\u03bc\u03ba\3\2"+
+		"\2\2\u03bd\u03be\t\t\2\2\u03be\u0083\3\2\2\2\u03bf\u03c1\7h\2\2\u03c0"+
+		"\u03c2\5\u009cO\2\u03c1\u03c0\3\2\2\2\u03c1\u03c2\3\2\2\2\u03c2\u03c6"+
+		"\3\2\2\2\u03c3\u03c5\5\36\20\2\u03c4\u03c3\3\2\2\2\u03c5\u03c8\3\2\2\2"+
+		"\u03c6\u03c4\3\2\2\2\u03c6\u03c7\3\2\2\2\u03c7\u03c9\3\2\2\2\u03c8\u03c6"+
+		"\3\2\2\2\u03c9\u03d6\7T\2\2\u03ca\u03cc\78\2\2\u03cb\u03cd\5\u009cO\2"+
+		"\u03cc\u03cb\3\2\2\2\u03cc\u03cd\3\2\2\2\u03cd\u03d1\3\2\2\2\u03ce\u03d0"+
+		"\5\36\20\2\u03cf\u03ce\3\2\2\2\u03d0\u03d3\3\2\2\2\u03d1\u03cf\3\2\2\2"+
+		"\u03d1\u03d2\3\2\2\2\u03d2\u03d4\3\2\2\2\u03d3\u03d1\3\2\2\2\u03d4\u03d6"+
+		"\7\33\2\2\u03d5\u03bf\3\2\2\2\u03d5\u03ca\3\2\2\2\u03d6\u0085\3\2\2\2"+
+		"\u03d7\u03d9\7%\2\2\u03d8\u03da\5\u009cO\2\u03d9\u03d8\3\2\2\2\u03d9\u03da"+
+		"\3\2\2\2\u03da\u03de\3\2\2\2\u03db\u03dd\5\36\20\2\u03dc\u03db\3\2\2\2"+
+		"\u03dd\u03e0\3\2\2\2\u03de\u03dc\3\2\2\2\u03de\u03df\3\2\2\2\u03df\u03e1"+
+		"\3\2\2\2\u03e0\u03de\3\2\2\2\u03e1\u03ee\7\'\2\2\u03e2\u03e4\7$\2\2\u03e3"+
+		"\u03e5\5\u009cO\2\u03e4\u03e3\3\2\2\2\u03e4\u03e5\3\2\2\2\u03e5\u03e9"+
+		"\3\2\2\2\u03e6\u03e8\5\36\20\2\u03e7\u03e6\3\2\2\2\u03e8\u03eb\3\2\2\2"+
+		"\u03e9\u03e7\3\2\2\2\u03e9\u03ea\3\2\2\2\u03ea\u03ec\3\2\2\2\u03eb\u03e9"+
+		"\3\2\2\2\u03ec\u03ee\7m\2\2\u03ed\u03d7\3\2\2\2\u03ed\u03e2\3\2\2\2\u03ee"+
+		"\u0087\3\2\2\2\u03ef\u03f1\7\24\2\2\u03f0\u03f2\5\u009cO\2\u03f1\u03f0"+
+		"\3\2\2\2\u03f1\u03f2\3\2\2\2\u03f2\u03f6\3\2\2\2\u03f3\u03f5\5\36\20\2"+
+		"\u03f4\u03f3\3\2\2\2\u03f5\u03f8\3\2\2\2\u03f6\u03f4\3\2\2\2\u03f6\u03f7"+
+		"\3\2\2\2\u03f7\u03f9\3\2\2\2\u03f8\u03f6\3\2\2\2\u03f9\u03fa\7e\2\2\u03fa"+
+		"\u0089\3\2\2\2\u03fb\u03fd\7N\2\2\u03fc\u03fe\5\u009cO\2\u03fd\u03fc\3"+
+		"\2\2\2\u03fd\u03fe\3\2\2\2\u03fe\u0402\3\2\2\2\u03ff\u0401\5\36\20\2\u0400"+
+		"\u03ff\3\2\2\2\u0401\u0404\3\2\2\2\u0402\u0400\3\2\2\2\u0402\u0403\3\2"+
+		"\2\2\u0403\u0405\3\2\2\2\u0404\u0402\3\2\2\2\u0405\u0406\7\17\2\2\u0406"+
+		"\u008b\3\2\2\2\u0407\u0408\7M\2\2\u0408\u0409\5@!\2\u0409\u008d\3\2\2"+
+		"\2\u040a\u040b\7\60\2\2\u040b\u040c\5@!\2\u040c\u008f\3\2\2\2\u040d\u0411"+
+		"\7\"\2\2\u040e\u0410\5$\23\2\u040f\u040e\3\2\2\2\u0410\u0413\3\2\2\2\u0411"+
+		"\u040f\3\2\2\2\u0411\u0412\3\2\2\2\u0412\u0414\3\2\2\2\u0413\u0411\3\2"+
+		"\2\2\u0414\u0415\5\u00ba^\2\u0415\u0091\3\2\2\2\u0416\u0417\7j\2\2\u0417"+
+		"\u0418\5@!\2\u0418\u0093\3\2\2\2\u0419\u041a\7 \2\2\u041a\u041b\5@!\2"+
+		"\u041b\u0095\3\2\2\2\u041c\u0420\7^\2\2\u041d\u041f\5$\23\2\u041e\u041d"+
+		"\3\2\2\2\u041f\u0422\3\2\2\2\u0420\u041e\3\2\2\2\u0420\u0421\3\2\2\2\u0421"+
+		"\u0423\3\2\2\2\u0422\u0420\3\2\2\2\u0423\u0424\5\u00ba^\2\u0424\u0097"+
+		"\3\2\2\2\u0425\u0426\7H\2\2\u0426\u0427\7f\2\2\u0427\u0428\5\u009aN\2"+
+		"\u0428\u0429\7\13\2\2\u0429\u0099\3\2\2\2\u042a\u042b\5*\26\2\u042b\u009b"+
+		"\3\2\2\2\u042c\u0430\7>\2\2\u042d\u042f\n\n\2\2\u042e\u042d\3\2\2\2\u042f"+
+		"\u0432\3\2\2\2\u0430\u042e\3\2\2\2\u0430\u0431\3\2\2\2\u0431\u0433\3\2"+
+		"\2\2\u0432\u0430\3\2\2\2\u0433\u0434\7]\2\2\u0434\u009d\3\2\2\2\u0435"+
+		"\u0436\7\34\2\2\u0436\u009f\3\2\2\2\u0437\u0438\7,\2\2\u0438\u00a1\3\2"+
+		"\2\2\u0439\u043a\7K\2\2\u043a\u00a3\3\2\2\2\u043b\u043c\7u\2\2\u043c\u00a5"+
+		"\3\2\2\2\u043d\u043e\7\u008f\2\2\u043e\u00a7\3\2\2\2\u043f\u0440\7`\2"+
+		"\2\u0440\u00a9\3\2\2\2\u0441\u0442\7\16\2\2\u0442\u00ab\3\2\2\2\u0443"+
+		"\u0445\7(\2\2\u0444\u0446\n\13\2\2\u0445\u0444\3\2\2\2\u0445\u0446\3\2"+
+		"\2\2\u0446\u0447\3\2\2\2\u0447\u0448\7(\2\2\u0448\u00ad\3\2\2\2\u0449"+
+		"\u044b\7\3\2\2\u044a\u044c\n\f\2\2\u044b\u044a\3\2\2\2\u044c\u044d\3\2"+
+		"\2\2\u044d\u044b\3\2\2\2\u044d\u044e\3\2\2\2\u044e\u044f\3\2\2\2\u044f"+
+		"\u046f\7\3\2\2\u0450\u046f\5\u00acW\2\u0451\u0453\7d\2\2\u0452\u0454\n"+
+		"\r\2\2\u0453\u0452\3\2\2\2\u0454\u0455\3\2\2\2\u0455\u0453\3\2\2\2\u0455"+
+		"\u0456\3\2\2\2\u0456\u0457\3\2\2\2\u0457\u046f\7C\2\2\u0458\u045a\7\u0080"+
+		"\2\2\u0459\u045b\n\16\2\2\u045a\u0459\3\2\2\2\u045b\u045c\3\2\2\2\u045c"+
+		"\u045a\3\2\2\2\u045c\u045d\3\2\2\2\u045d\u045e\3\2\2\2\u045e\u046f\7}"+
+		"\2\2\u045f\u0461\7\65\2\2\u0460\u0462\n\17\2\2\u0461\u0460\3\2\2\2\u0462"+
+		"\u0463\3\2\2\2\u0463\u0461\3\2\2\2\u0463\u0464\3\2\2\2\u0464\u0465\3\2"+
+		"\2\2\u0465\u046f\7|\2\2\u0466\u0468\7+\2\2\u0467\u0469\n\20\2\2\u0468"+
+		"\u0467\3\2\2\2\u0469\u046a\3\2\2\2\u046a\u0468\3\2\2\2\u046a\u046b\3\2"+
+		"\2\2\u046b\u046c\3\2\2\2\u046c\u046f\7:\2\2\u046d\u046f\5\u00b4[\2\u046e"+
+		"\u0449\3\2\2\2\u046e\u0450\3\2\2\2\u046e\u0451\3\2\2\2\u046e\u0458\3\2"+
+		"\2\2\u046e\u045f\3\2\2\2\u046e\u0466\3\2\2\2\u046e\u046d\3\2\2\2\u046f"+
+		"\u00af\3\2\2\2\u0470\u0471\7y\2\2\u0471\u0473\5\60\31\2\u0472\u0474\n"+
+		"\21\2\2\u0473\u0472\3\2\2\2\u0474\u0475\3\2\2\2\u0475\u0473\3\2\2\2\u0475"+
+		"\u0476\3\2\2\2\u0476\u0477\3\2\2\2\u0477\u0478\7B\2\2\u0478\u0483\3\2"+
+		"\2\2\u0479\u047a\7\b\2\2\u047a\u047c\5\60\31\2\u047b\u047d\n\22\2\2\u047c"+
+		"\u047b\3\2\2\2\u047d\u047e\3\2\2\2\u047e\u047c\3\2\2\2\u047e\u047f\3\2"+
+		"\2\2\u047f\u0480\3\2\2\2\u0480\u0481\7R\2\2\u0481\u0483\3\2\2\2\u0482"+
+		"\u0470\3\2\2\2\u0482\u0479\3\2\2\2\u0483\u00b1\3\2\2\2\u0484\u0486\7Z"+
+		"\2\2\u0485\u0487\n\23\2\2\u0486\u0485\3\2\2\2\u0487\u0488\3\2\2\2\u0488"+
+		"\u0486\3\2\2\2\u0488\u0489\3\2\2\2\u0489\u048a\3\2\2\2\u048a\u048b\7\62"+
+		"\2\2\u048b\u00b3\3\2\2\2\u048c\u048e\7\37\2\2\u048d\u048f\n\24\2\2\u048e"+
+		"\u048d\3\2\2\2\u048f\u0490\3\2\2\2\u0490\u048e\3\2\2\2\u0490\u0491\3\2"+
+		"\2\2\u0491\u0492\3\2\2\2\u0492\u049b\7W\2\2\u0493\u0495\7n\2\2\u0494\u0496"+
+		"\n\25\2\2\u0495\u0494\3\2\2\2\u0496\u0497\3\2\2\2\u0497\u0495\3\2\2\2"+
+		"\u0497\u0498\3\2\2\2\u0498\u0499\3\2\2\2\u0499\u049b\7\67\2\2\u049a\u048c"+
+		"\3\2\2\2\u049a\u0493\3\2\2\2\u049b\u00b5\3\2\2\2\u049c\u049f\5\u00b8]"+
+		"\2\u049d\u049f\7\u009c\2\2\u049e\u049c\3\2\2\2\u049e\u049d\3\2\2\2\u049f"+
+		"\u04a2\3\2\2\2\u04a0\u049e\3\2\2\2\u04a0\u04a1\3\2\2\2\u04a1\u00b7\3\2"+
+		"\2\2\u04a2\u04a0\3\2\2\2\u04a3\u04a5\n\26\2\2\u04a4\u04a3\3\2\2\2\u04a5"+
+		"\u04a6\3\2\2\2\u04a6\u04a4\3\2\2\2\u04a6\u04a7\3\2\2\2\u04a7\u00b9\3\2"+
+		"\2\2\u04a8\u04ab\7_\2\2\u04a9\u04ab\5\u00bc_\2\u04aa\u04a8\3\2\2\2\u04aa"+
+		"\u04a9\3\2\2\2\u04ab\u00bb\3\2\2\2\u04ac\u04ad\7g\2\2\u04ad\u00bd\3\2"+
+		"\2\2\u04ae\u04b0\7\u008d\2\2\u04af\u04b1\7`\2\2\u04b0\u04af\3\2\2\2\u04b0"+
+		"\u04b1\3\2\2\2\u04b1\u04b2\3\2\2\2\u04b2\u04b3\7[\2\2\u04b3\u04b4\5*\26"+
+		"\2\u04b4\u04b6\7\13\2\2\u04b5\u04b7\7\16\2\2\u04b6\u04b5\3\2\2\2\u04b6"+
+		"\u04b7\3\2\2\2\u04b7\u00bf\3\2\2\2\u04b8\u04bb\7\u0086\2\2\u04b9\u04bb"+
+		"\5\u00c4c\2\u04ba\u04b8\3\2\2\2\u04ba\u04b9\3\2\2\2\u04bb\u00c1\3\2\2"+
+		"\2\u04bc\u04bd\5\u00c4c\2\u04bd\u04be\7\u0099\2\2\u04be\u04bf\5\u00c4"+
+		"c\2\u04bf\u00c3\3\2\2\2\u04c0\u04c1\7\u0087\2\2\u04c1\u00c5\3\2\2\2\u04c2"+
+		"\u04c3\7k\2\2\u04c3\u00c7\3\2\2\2\u04c4\u04c5\t\27\2\2\u04c5\u00c9\3\2"+
+		"\2\2\u04c6\u04c7\7X\2\2\u04c7\u04c8\5@!\2\u04c8\u04c9\5@!\2\u04c9\u04ca"+
+		"\5@!\2\u04ca\u00cb\3\2\2\2\u04cb\u04d0\5\u00c0a\2\u04cc\u04d0\7\25\2\2"+
+		"\u04cd\u04d0\7f\2\2\u04ce\u04d0\7\13\2\2\u04cf\u04cb\3\2\2\2\u04cf\u04cc"+
+		"\3\2\2\2\u04cf\u04cd\3\2\2\2\u04cf\u04ce\3\2\2\2\u04d0\u04d3\3\2\2\2\u04d1"+
+		"\u04cf\3\2\2\2\u04d1\u04d2\3\2\2\2\u04d2\u00cd\3\2\2\2\u04d3\u04d1\3\2"+
+		"\2\2\u04d4\u04d8\7/\2\2\u04d5\u04d7\5\u009cO\2\u04d6\u04d5\3\2\2\2\u04d7"+
+		"\u04da\3\2\2\2\u04d8\u04d6\3\2\2\2\u04d8\u04d9\3\2\2\2\u04d9\u04db\3\2"+
+		"\2\2\u04da\u04d8\3\2\2\2\u04db\u04dc\5@!\2\u04dc\u00cf\3\2\2\2\u008a\u00d3"+
 		"\u00d9\u00df\u00e6\u00f3\u00f8\u00fa\u0100\u0107\u0110\u0117\u0120\u0127"+
 		"\u012d\u0136\u013d\u0141\u0149\u0150\u0154\u015c\u0162\u0170\u0172\u0181"+
 		"\u0187\u018e\u01ae\u01c6\u01ce\u01d8\u01df\u01e8\u01ec\u01f2\u01ff\u0210"+
 		"\u0216\u0222\u022a\u0235\u0241\u0249\u024d\u0256\u025f\u0269\u026e\u0274"+
 		"\u027b\u0285\u028b\u0293\u029a\u02a1\u02a6\u02ad\u02b2\u02b8\u02be\u02c5"+
 		"\u02cc\u02d3\u02da\u02e0\u02e6\u02f3\u02fa\u0303\u030b\u0317\u031e\u0322"+
-		"\u0326\u032d\u0333\u033e\u0347\u034b\u0351\u0358\u035e\u0366\u036b\u036d"+
-		"\u0373\u037d\u0385\u038d\u0395\u039b\u03a1\u03ad\u03b4\u03b9\u03c0\u03c2"+
-		"\u03c9\u03ce\u03d4\u03d9\u03dd\u03e1\u03e6\u03ec\u03f1\u03f5\u03f9\u03fe"+
-		"\u0405\u040a\u0419\u0428\u0438\u044d\u0455\u045d\u0464\u046b\u0472\u0476"+
-		"\u047d\u0486\u048a\u0490\u0498\u049f\u04a2\u04a6\u04a8\u04ae\u04b2\u04b8"+
-		"\u04be\u04c2\u04d7\u04d9\u04e0";
+		"\u0326\u032d\u0333\u0343\u0349\u0350\u0356\u035e\u0363\u0365\u036b\u0375"+
+		"\u037d\u0385\u038d\u0393\u0399\u03a5\u03ac\u03b1\u03b8\u03ba\u03c1\u03c6"+
+		"\u03cc\u03d1\u03d5\u03d9\u03de\u03e4\u03e9\u03ed\u03f1\u03f6\u03fd\u0402"+
+		"\u0411\u0420\u0430\u0445\u044d\u0455\u045c\u0463\u046a\u046e\u0475\u047e"+
+		"\u0482\u0488\u0490\u0497\u049a\u049e\u04a0\u04a6\u04aa\u04b0\u04b6\u04ba"+
+		"\u04cf\u04d1\u04d8";
 	public static final ATN _ATN =
 		new ATNDeserializer().deserialize(_serializedATN.toCharArray());
 	static {

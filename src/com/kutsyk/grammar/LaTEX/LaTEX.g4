@@ -2,7 +2,7 @@ grammar LaTEX;
 
 compilationUnit
 :
-	newLine* startingDeclaration* newLine* documentDeclaration newLine* EOF
+	'\n'* startingDeclaration* '\n'* documentDeclaration '\n'* EOF
 ;
 
 documentDeclaration
@@ -356,8 +356,8 @@ ttStyle:
 
 boldTypeDeclaration:
 	('\\textbf' block)
-	| ('{\\bf' memberList* '}')
-	| ('\\bf' '{' memberList* '}')
+	| ('{\\bf' memberList '}')
+	| ('\\bf' '{' memberList '}')
 ;
 
 smallcapsDeclaration:

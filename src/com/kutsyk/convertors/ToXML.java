@@ -1240,20 +1240,7 @@ public class ToXML extends LaTEXBaseListener {
 	 */
 
 	public void enterTable(LaTEXParser.TableContext ctx) {
-		if (!workWithBackData)
-			return;
-
-		tableCounter++;
-		tableDeclared = true;
-
-		try {
-			skipData = writer;
-            writer = new PrintWriter(new File(MainWindow.mainPath + "/LaTEXtoXML/skipData.xml"));
-//			writer = new PrintWriter(new File(MainWindow.mainPath + "/LaTEXtoXML/tables/" + tableCounter
-//					+ ".xml"));
-		} catch (IOException e) {
-			System.out.println("Couldn't create table file");
-		}
+        writer.print("<tbl>");
 	}
 
 	/* (non-Javadoc)
@@ -1261,9 +1248,7 @@ public class ToXML extends LaTEXBaseListener {
 	 */
 
 	public void exitTable(LaTEXParser.TableContext ctx) {
-		writer.print("</tbl>");
-		setNormalWriter();
-		tableDeclared = false;
+        writer.print("</tbl>");
 	}
 
 	/* (non-Javadoc)

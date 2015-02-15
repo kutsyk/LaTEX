@@ -195,7 +195,7 @@ public class MainWindow extends JFrame {
 	 */
 	private static void createFiles() {
 		String[] files = { "result.xml", "front.xml", "bodyAndBottom.xml",
-				"buffer.xml", "skipData.xml", "mainFile.tex", "backmatter.tex",
+				"buffer.xml", "skipData.xml", "mainFile.tex", "bibliography.tex",
 				"newCommands.tex" };
 		for (int i = 0; i < files.length; ++i) {
 			dir = new File(mainPath + "/LaTEXtoXML/" + files[i]);
@@ -213,7 +213,7 @@ public class MainWindow extends JFrame {
 	 */
 	private void translateAction() {
 		clear();
-		
+
 		translationThread = new Thread(new Runnable() {
 			public void run() {
 				label4.setVisible(true);
@@ -346,14 +346,12 @@ public class MainWindow extends JFrame {
 		console.append("Directory document: " + dir + "\n");
 		if (files == null)
 			return false;
-
 		boolean isTex = false;
-		boolean isXMl = false;
 		ImageIcon done = new ImageIcon(mainPath+"/LaTEXbin/images/green-ok-icon.png");
 		for (File file : files) {
 			String fileName = file.getName();
 			if (fileName.length() < 4)
-				break;
+				continue;
 
 			String type = fileName.substring(fileName.length() - 4,
 					fileName.length());
@@ -374,7 +372,7 @@ public class MainWindow extends JFrame {
 //				BibWaiting.setText(fileName);
 //			}
 		}
-		if (isTex && isXMl) {
+		if (isTex) {
 			dirPath = dir;
 			writeDocumentToPane(latexFile);
 			return true;
@@ -405,7 +403,7 @@ public class MainWindow extends JFrame {
 		}
 
 		try {
-			if (hasRightStructure(dirPath + "/" + latexFile))
+//			if (hasRightStructure(dirPath + "/" + latexFile))
 				translateAction();
 		} catch (Exception e1) {
 			e1.printStackTrace();

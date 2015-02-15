@@ -1,9 +1,10 @@
 // Generated from D:/Charlesworth/LaTEX/src/com/kutsyk/grammar/LaTEX\LaTEX.g4 by ANTLR 4.4.1-dev
 package com.kutsyk.grammar.LaTEX;
-
-import org.antlr.v4.runtime.*;
-import org.antlr.v4.runtime.CharStream;
 import org.antlr.v4.runtime.Lexer;
+import org.antlr.v4.runtime.CharStream;
+import org.antlr.v4.runtime.Token;
+import org.antlr.v4.runtime.TokenStream;
+import org.antlr.v4.runtime.*;
 import org.antlr.v4.runtime.atn.*;
 import org.antlr.v4.runtime.dfa.DFA;
 import org.antlr.v4.runtime.misc.*;

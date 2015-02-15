@@ -7,7 +7,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e2b187e4-9aa6-4834-8342-4783480434ef" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/kutsyk/grammar/LaTEX/LaTEX.g4" afterPath="$PROJECT_DIR$/src/com/kutsyk/grammar/LaTEX/LaTEX.g4" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LaTEX.iml" afterPath="$PROJECT_DIR$/LaTEX.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/kutsyk/grammar/LaTEX/LaTEXLexer.java" afterPath="$PROJECT_DIR$/src/com/kutsyk/grammar/LaTEX/LaTEXLexer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/kutsyk/grammar/LaTEX/LaTEXParser.java" afterPath="$PROJECT_DIR$/src/com/kutsyk/grammar/LaTEX/LaTEXParser.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/kutsyk/windows/MainWindow.java" afterPath="$PROJECT_DIR$/src/com/kutsyk/windows/MainWindow.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/kutsyk/convertors/ToXML.java" afterPath="$PROJECT_DIR$/src/com/kutsyk/convertors/ToXML.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/kutsyk/convertors/Translator.java" afterPath="$PROJECT_DIR$/src/com/kutsyk/convertors/Translator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="LaTEX.iws" />
@@ -76,7 +83,44 @@
     <favorites_list name="LaTEX" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="Translator.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/kutsyk/convertors/Translator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="263" column="25" selection-start="8134" selection-end="8134" vertical-scroll-proportion="0.51150894" vertical-offset="4118" max-vertical-offset="5321">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainWindow.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/kutsyk/windows/MainWindow.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="197" column="75" selection-start="4599" selection-end="4611" vertical-scroll-proportion="0.0" vertical-offset="3349" max-vertical-offset="17391">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ToXML.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/kutsyk/convertors/ToXML.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="25" column="0" selection-start="581" selection-end="581" vertical-scroll-proportion="0.0" vertical-offset="3594" max-vertical-offset="30498">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LaTEX.g4" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/kutsyk/grammar/LaTEX/LaTEX.g4">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="407" column="14" selection-start="5090" selection-end="5090" vertical-scroll-proportion="0.0" vertical-offset="6681" max-vertical-offset="13243">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -113,9 +157,11 @@
         <option value="$PROJECT_DIR$/src/com/kutsyk/grammar/LaTEX/LaTEXBaseListener.java" />
         <option value="$PROJECT_DIR$/src/com/kutsyk/convertors/TextToXML.java" />
         <option value="$PROJECT_DIR$/src/com/kutsyk/convertors/FrontmatterCreator.java" />
+        <option value="$USER_HOME$/Desktop/plos_template.tex - final.xml" />
         <option value="$PROJECT_DIR$/src/com/kutsyk/convertors/ToXML.java" />
-        <option value="$PROJECT_DIR$/src/com/kutsyk/convertors/Translator.java" />
+        <option value="$PROJECT_DIR$/src/com/kutsyk/grammar/LaTEX/LaTEX.g4" />
         <option value="$PROJECT_DIR$/src/com/kutsyk/windows/MainWindow.java" />
+        <option value="$PROJECT_DIR$/src/com/kutsyk/convertors/Translator.java" />
       </list>
     </option>
   </component>
@@ -172,7 +218,7 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -266,10 +312,6 @@
               <option name="myItemId" value="grammar" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LaTEX" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -289,13 +331,13 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="grammar" />
+              <option name="myItemId" value="convertors" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -306,7 +348,7 @@
     <property name="MemberChooser.showClasses" value="true" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="options.lastSelected" value="fileTemplates" />
+    <property name="options.lastSelected" value="appearance" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
@@ -321,7 +363,7 @@
     <property name="LayoutCode.rearrangeEntriesJava" value="false" />
     <property name="LayoutCode.rearrangeEntriesANTLRv4" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../plos_template/main.tex" />
-    <property name="SearchEverywhereHistory" value="q" />
+    <property name="SearchEverywhereHistory" value="&#10;q" />
     <property name="$PROJECT_DIR$/src/LaTEX.g4::/auto-gen" value="false" />
     <property name="$PROJECT_DIR$/src/LaTEX.g4::/output-dir" value="D:\Charlesworth\LaTEX\src\com\kutsyk\grammar" />
     <property name="$PROJECT_DIR$/src/LaTEX.g4::/lib-dir" value="D:\Charlesworth\LaTEX\src" />
@@ -661,14 +703,22 @@
       <workItem from="1423760813511" duration="2018000" />
       <workItem from="1423816437966" duration="865000" />
       <workItem from="1423829324150" duration="66000" />
+      <workItem from="1423918451059" duration="327000" />
+      <workItem from="1423931784389" duration="605000" />
+      <workItem from="1423940410796" duration="242000" />
+      <workItem from="1423944524002" duration="4592000" />
+      <workItem from="1423949461615" duration="2723000" />
+      <workItem from="1424000963168" duration="2432000" />
+      <workItem from="1424005346101" duration="11000" />
+      <workItem from="1424005375407" duration="857000" />
     </task>
     <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="106844000" />
+    <option name="totallyTimeSpent" value="118633000" />
   </component>
-  <component name="TodoView" selected-index="3">
+  <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
       <are-packages-shown value="false" />
       <are-modules-shown value="false" />
@@ -689,67 +739,69 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <editor active="true" />
     <layout>
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952693" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3284553" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35447153" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32626426" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6247961" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32930514" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39967373" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24773414" sideWeight="0.500813" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5804878" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24773414" sideWeight="0.5008157" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5350734" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32930514" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Tool Output" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32463294" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3219512" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24773414" sideWeight="0.49756098" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32300162" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Tool Output" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32463294" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3213703" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24773414" sideWeight="0.49755302" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32930514" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24169184" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32300162" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24169184" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3219512" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952693" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32300162" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952693" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952693" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32930514" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5804878" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
-      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3219512" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5350734" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
+      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32930514" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3213703" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24169184" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32357723" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32300162" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35562807" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3284553" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39314845" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32626426" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952693" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39967373" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24773414" sideWeight="0.50136983" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32357723" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Tool Output" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32463294" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24773414" sideWeight="0.49863014" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952693" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39967373" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24773414" sideWeight="0.5008157" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32300162" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Tool Output" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32463294" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24773414" sideWeight="0.49755302" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32930514" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952693" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -785,16 +837,11 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/kutsyk/windows/MainWindow.java">
+    <entry file="file://$PROJECT_DIR$/src/com/kutsyk/grammar/LaTEX/LaTEX.g4">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="195" column="16" selection-start="4455" selection-end="4456" vertical-scroll-proportion="0.0" vertical-offset="3315" max-vertical-offset="17408">
+        <state line="407" column="14" selection-start="5090" selection-end="5090" vertical-scroll-proportion="0.0" vertical-offset="6681" max-vertical-offset="13243">
           <folding />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/kutsyk/convertors/Translator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="64" column="11" selection-start="1278" selection-end="1278" vertical-scroll-proportion="0.0" vertical-offset="1088" max-vertical-offset="10472" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/kutsyk/grammar/LaTEX/LaTEX.g4">
@@ -1007,11 +1054,6 @@
         <state line="805" column="9" selection-start="17371" selection-end="17371" vertical-scroll-proportion="0.75227684" vertical-offset="13272" max-vertical-offset="15300" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/kutsyk/grammar/BibTex/BibTex.g4">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="18" selection-start="919" selection-end="919" vertical-scroll-proportion="0.72325975" vertical-offset="254" max-vertical-offset="2040" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/kutsyk/grammar/LaTEX/LaTEXLexer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="13" selection-start="471" selection-end="471" vertical-scroll-proportion="0.12099644" vertical-offset="0" max-vertical-offset="16099" />
@@ -1027,36 +1069,52 @@
         <state line="96" column="34" selection-start="3403" selection-end="3410" vertical-scroll-proportion="0.15124555" vertical-offset="1530" max-vertical-offset="10812" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/kutsyk/grammar/LaTEX/LaTEXBaseVisitor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="13" selection-start="549" selection-end="549" vertical-scroll-proportion="0.34790528" vertical-offset="13" max-vertical-offset="12580" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/kutsyk/convertors/FrontmatterCreator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1077" column="33" selection-start="27857" selection-end="27857" vertical-scroll-proportion="1.0309654" vertical-offset="17505" max-vertical-offset="18513" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/kutsyk/convertors/ToXML.java">
+    <entry file="file://$PROJECT_DIR$/src/com/kutsyk/grammar/BibTex/BibTex.g4">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1803" column="1" selection-start="43924" selection-end="43924" vertical-scroll-proportion="1.7259786" vertical-offset="29681" max-vertical-offset="30753" />
+        <state line="22" column="5" selection-start="327" selection-end="327" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2040" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/kutsyk/convertors/Translator.java">
+    <entry file="file://$PROJECT_DIR$/src/com/kutsyk/grammar/LaTEX/LaTEXBaseVisitor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="64" column="11" selection-start="1278" selection-end="1278" vertical-scroll-proportion="0.0" vertical-offset="1088" max-vertical-offset="10472" />
+        <state line="76" column="23" selection-start="2909" selection-end="2909" vertical-scroll-proportion="2.2212543" vertical-offset="0" max-vertical-offset="12580" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/kutsyk/windows/MainWindow.java">
+    <entry file="file://$PROJECT_DIR$/src/com/kutsyk/grammar/LaTEX/LaTEX.tokens">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="366" column="0" selection-start="9290" selection-end="9609" vertical-scroll-proportion="0.5862069" vertical-offset="5627" max-vertical-offset="16422">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5457" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/kutsyk/grammar/LaTEX/LaTEX.g4">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="354" column="1" selection-start="4324" selection-end="4324" vertical-scroll-proportion="-0.2156197" vertical-offset="6145" max-vertical-offset="13243" />
+        <state line="407" column="14" selection-start="5090" selection-end="5090" vertical-scroll-proportion="0.0" vertical-offset="6681" max-vertical-offset="13243">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/kutsyk/convertors/ToXML.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="0" selection-start="581" selection-end="581" vertical-scroll-proportion="0.0" vertical-offset="4359" max-vertical-offset="30498">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/kutsyk/windows/MainWindow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="197" column="75" selection-start="4599" selection-end="4611" vertical-scroll-proportion="0.0" vertical-offset="3349" max-vertical-offset="17391">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/kutsyk/convertors/Translator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="263" column="25" selection-start="8134" selection-end="8134" vertical-scroll-proportion="0.51150894" vertical-offset="4118" max-vertical-offset="5321">
+          <folding />
+        </state>
       </provider>
     </entry>
   </component>
@@ -1130,6 +1188,7 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>
