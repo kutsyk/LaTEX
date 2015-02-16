@@ -480,7 +480,7 @@ public class MainWindow extends JFrame {
 	}
 
 	private void initLineTextEditor() {
-		documentText = new JTextPane();
+		documentText = new JTextPane(Doc.DOCUMENT);
 		lineNumber = new TextLineNumber(documentText);
 
 		scrollPane = new JScrollPane(documentText);
