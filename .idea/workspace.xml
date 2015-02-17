@@ -5,17 +5,265 @@
       <artifact name="LaTEX:jar" />
     </artifacts-to-build>
   </component>
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/src/com/kutsyk/convertors/Translator.java" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="e2b187e4-9aa6-4834-8342-4783480434ef" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/kutsyk/grammar/LaTEX/LaTEX.g4" afterPath="$PROJECT_DIR$/src/com/kutsyk/grammar/LaTEX/LaTEX.g4" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\.classpath" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\.idea\libraries\lib.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\.project" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\.settings\org.eclipse.jdt.core.prefs" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\ISOENT.csv" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\META-INF\MANIFEST.MF" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\archivearticle3.dtd" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\ChooseFolderWithFiles.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\Choosefile.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\ChoseFolder.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\Document.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\Exit.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\Figuredeclarationmissing.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\GettingStarted.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\Gettinghelp.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\Help.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\HowTo.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\Howtouse.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\Introduction.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\LaTEX.hnd" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\MainWindow.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\SaveDocument.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\SaveXMLResult.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\Savedocument.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\SupportingSectionError.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\Supportingdatadeclaration.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\Translate.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\Translate.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\Welcome.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\base.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\chm\0.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\chm\1.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\chm\10.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\chm\11.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\chm\12.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\chm\13.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\chm\14.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\chm\15.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\chm\16.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\chm\17.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\chm\18.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\chm\19.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\chm\2.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\chm\20.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\chm\21.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\chm\22.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\chm\23.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\chm\24.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\chm\25.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\chm\26.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\chm\27.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\chm\28.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\chm\29.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\chm\3.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\chm\30.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\chm\31.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\chm\32.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\chm\33.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\chm\34.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\chm\35.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\chm\36.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\chm\37.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\chm\38.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\chm\39.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\chm\4.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\chm\40.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\chm\41.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\chm\5.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\chm\6.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\chm\7.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\chm\8.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\chm\9.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\chm\icons.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\chm\loading.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\chm\ui.dynatree.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\chm\vline.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\folder\0.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\folder\1.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\folder\10.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\folder\11.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\folder\12.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\folder\13.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\folder\14.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\folder\15.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\folder\16.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\folder\17.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\folder\18.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\folder\19.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\folder\2.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\folder\20.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\folder\21.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\folder\22.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\folder\23.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\folder\24.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\folder\25.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\folder\26.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\folder\27.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\folder\28.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\folder\29.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\folder\3.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\folder\30.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\folder\31.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\folder\32.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\folder\33.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\folder\34.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\folder\35.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\folder\36.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\folder\37.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\folder\38.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\folder\39.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\folder\4.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\folder\40.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\folder\41.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\folder\5.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\folder\6.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\folder\7.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\folder\8.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\folder\9.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\folder\icons.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\folder\loading.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\folder\ui.dynatree.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\folder\vline.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\vista\0.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\vista\1.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\vista\10.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\vista\11.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\vista\12.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\vista\13.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\vista\14.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\vista\15.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\vista\16.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\vista\17.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\vista\18.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\vista\19.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\vista\2.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\vista\20.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\vista\21.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\vista\22.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\vista\23.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\vista\24.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\vista\25.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\vista\26.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\vista\27.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\vista\28.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\vista\29.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\vista\3.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\vista\30.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\vista\31.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\vista\32.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\vista\33.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\vista\34.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\vista\35.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\vista\36.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\vista\37.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\vista\38.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\vista\39.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\vista\4.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\vista\40.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\vista\41.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\vista\5.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\vista\6.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\vista\7.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\vista\8.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\vista\9.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\vista\icons.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\vista\loading.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\dynatree\vista\ui.dynatree.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\hnd.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\ielte8.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\reset.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\silver-theme\images\ui-bg_flat_0_aaaaaa_40x100.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\silver-theme\images\ui-bg_flat_75_ffffff_40x100.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\silver-theme\images\ui-bg_glass_55_fbf9ee_1x400.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\silver-theme\images\ui-bg_glass_65_ffffff_1x400.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\silver-theme\images\ui-bg_glass_75_dadada_1x400.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\silver-theme\images\ui-bg_glass_75_e6e6e6_1x400.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\silver-theme\images\ui-bg_glass_95_fef1ec_1x400.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\silver-theme\images\ui-bg_highlight-soft_75_cccccc_1x100.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\silver-theme\images\ui-bg_inset-soft_95_fef1ec_1x100.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\silver-theme\images\ui-icons_222222_256x240.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\silver-theme\images\ui-icons_2e83ff_256x240.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\silver-theme\images\ui-icons_454545_256x240.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\silver-theme\images\ui-icons_888888_256x240.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\silver-theme\images\ui-icons_cd0a0a_256x240.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\silver-theme\jquery-ui-1.8.12.custom.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\css\toc.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\figureDeclarationMissing.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\img\arrow_left.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\img\arrow_right.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\img\arrow_up.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\img\book-closed.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\img\book.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\img\footer-bg.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\img\header-bg.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\img\topic.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\index.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\js\hnd.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\js\hndjsse.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\js\hndsd.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\js\jquery-ui-1.8.17.custom.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\js\jquery.cookie.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\js\jquery.dynatree.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\js\jquery.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\lib\ChooseFolderWithFiles.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\lib\ChoseFolder.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\lib\HowTo.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\lib\MainWindow2.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\lib\SaveDocument.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\lib\SupportingSectionError.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\lib\Translate.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\lib\figureDeclarationMissing.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\documentation\toc.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\images\done.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\images\green-address-book-icon.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\images\green-balloon-icon.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\images\green-cross-icon.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\images\green-disk-icon.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\images\green-document-cross-icon.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\images\green-document-download-icon.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\images\green-document-plus-icon.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\images\green-folder-icon.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\images\green-home-icon.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\images\green-notes-icon.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\images\green-ok-icon.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\images\loader.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\bin\images\loading-bar.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\gen\LaTEX.tokens" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\gen\LaTEXBaseListener.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\gen\LaTEXBaseVisitor.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\gen\LaTEXLexer.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\gen\LaTEXLexer.tokens" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\gen\LaTEXListener.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\gen\LaTEXParser.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\gen\LaTEXVisitor.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\src\com\kutsyk\grammar\BibTex\BibTex.g4" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\src\com\kutsyk\grammar\LaTEX\LaTEX.tokens" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\src\com\kutsyk\grammar\LaTEX\LaTEXBaseListener.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\src\com\kutsyk\grammar\LaTEX\LaTEXBaseVisitor.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\src\com\kutsyk\grammar\LaTEX\LaTEXLexer.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\src\com\kutsyk\grammar\LaTEX\LaTEXLexer.tokens" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\src\com\kutsyk\grammar\LaTEX\LaTEXListener.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\src\com\kutsyk\grammar\LaTEX\LaTEXParser.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\src\com\kutsyk\grammar\LaTEX\LaTEXVisitor.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/kutsyk/windows/Doc.java" afterPath="$PROJECT_DIR$/src/com/kutsyk/windows/Doc.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/kutsyk/convertors/FrontmatterCreator.java" afterPath="$PROJECT_DIR$/src/com/kutsyk/convertors/FrontmatterCreator.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LaTEX.iml" afterPath="$PROJECT_DIR$/LaTEX.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/kutsyk/grammar/LaTEX/LaTEXLexer.java" afterPath="$PROJECT_DIR$/src/com/kutsyk/grammar/LaTEX/LaTEXLexer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/kutsyk/grammar/LaTEX/LaTEXParser.java" afterPath="$PROJECT_DIR$/src/com/kutsyk/grammar/LaTEX/LaTEXParser.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/LaTEX_jar.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/LaTEX_jar.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/kutsyk/windows/MainWindow.java" afterPath="$PROJECT_DIR$/src/com/kutsyk/windows/MainWindow.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/kutsyk/convertors/ToXML.java" afterPath="$PROJECT_DIR$/src/com/kutsyk/convertors/ToXML.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/kutsyk/convertors/Translator.java" afterPath="$PROJECT_DIR$/src/com/kutsyk/convertors/Translator.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MOVED" beforePath="D:\Charlesworth\LaTEX\src\com\kutsyk\grammar\LaTEX\LaTEX.g4" afterPath="$PROJECT_DIR$/src/com/kutsyk/grammar/LaTEX.g4" />
     </list>
     <ignored path="LaTEX.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -53,8 +301,8 @@
         <option name="CONDITION_ENABLED" value="true" />
         <option name="CLASS_FILTERS_ENABLED" value="false" />
         <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
+        <option name="CONDITION" value="&#13;&#13;JAVA" />
+        <option name="LOG_MESSAGE" value="&#13;&#13;JAVA" />
       </breakpoint>
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -70,8 +318,8 @@
         <option name="CONDITION_ENABLED" value="true" />
         <option name="CLASS_FILTERS_ENABLED" value="false" />
         <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
+        <option name="CONDITION" value="&#13;&#13;JAVA" />
+        <option name="LOG_MESSAGE" value="&#13;&#13;JAVA" />
       </breakpoint>
     </breakpoint_any>
     <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
@@ -83,44 +331,7 @@
     <favorites_list name="LaTEX" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="Translator.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/kutsyk/convertors/Translator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="263" column="25" selection-start="8134" selection-end="8134" vertical-scroll-proportion="0.51150894" vertical-offset="4118" max-vertical-offset="5321">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MainWindow.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/kutsyk/windows/MainWindow.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="197" column="75" selection-start="4599" selection-end="4611" vertical-scroll-proportion="0.0" vertical-offset="3349" max-vertical-offset="17391">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ToXML.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/kutsyk/convertors/ToXML.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="0" selection-start="581" selection-end="581" vertical-scroll-proportion="0.0" vertical-offset="3594" max-vertical-offset="30498">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LaTEX.g4" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/kutsyk/grammar/LaTEX/LaTEX.g4">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="407" column="14" selection-start="5090" selection-end="5090" vertical-scroll-proportion="0.0" vertical-offset="6681" max-vertical-offset="13243">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -143,24 +354,30 @@
         <option value="$PROJECT_DIR$/errorLogLaTEX.txt" />
         <option value="$PROJECT_DIR$/LaTEXtoXML/bodyAndBottom.xml" />
         <option value="$USER_HOME$/Desktop/PLOSONE2014source.tex - final.xml" />
-        <option value="$PROJECT_DIR$/src/FrontmatterCreator.java" />
-        <option value="$PROJECT_DIR$/src/MainWindow.java" />
         <option value="$PROJECT_DIR$/LaTEXtoXML/result.xml" />
         <option value="$USER_HOME$/Desktop/manuscript.tex - final.xml" />
-        <option value="$PROJECT_DIR$/src/Translator.java" />
         <option value="$USER_HOME$/Desktop/transmission_traits.tex - final.xml" />
         <option value="$USER_HOME$/Desktop/TPTN_plosMS_26Mar14.tex - final.xml" />
         <option value="$USER_HOME$/Desktop/testing6 relevant files/pcbi.1003591/TPTN_plosMS_26Mar14.tex - final.xml" />
-        <option value="$PROJECT_DIR$/src/LaTEX.g4" />
         <option value="$PROJECT_DIR$/src/BibTex.g4" />
-        <option value="$PROJECT_DIR$/src/ToXML.java" />
-        <option value="$PROJECT_DIR$/src/com/kutsyk/grammar/LaTEX/LaTEXBaseListener.java" />
         <option value="$PROJECT_DIR$/src/com/kutsyk/convertors/TextToXML.java" />
+        <option value="$PROJECT_DIR$/src/com/kutsyk/grammar/BibTex/BibTex.g4" />
+        <option value="$PROJECT_DIR$/src/com/kutsyk/grammar/LaTEX/LaTEXParser.java" />
+        <option value="$PROJECT_DIR$/src/com/kutsyk/grammar/LaTEX/LaTEXListener.java" />
+        <option value="$PROJECT_DIR$/src/com/kutsyk/grammar/LaTEX/LaTEXLexer.java" />
+        <option value="$PROJECT_DIR$/src/com/kutsyk/grammar/LaTEX/LaTEXBaseListener.java" />
+        <option value="$PROJECT_DIR$/src/com/kutsyk/grammar/LaTEX/LaTEX.g4" />
+        <option value="$PROJECT_DIR$/src/FrontmatterCreator.java" />
+        <option value="$PROJECT_DIR$/src/Doc.java" />
+        <option value="$PROJECT_DIR$/src/MainWindow.java" />
+        <option value="$PROJECT_DIR$/src/Translator.java" />
+        <option value="$PROJECT_DIR$/src/LaTEX.g4" />
+        <option value="$PROJECT_DIR$/src/ToXML.java" />
         <option value="$PROJECT_DIR$/src/com/kutsyk/convertors/FrontmatterCreator.java" />
         <option value="$USER_HOME$/Desktop/plos_template.tex - final.xml" />
-        <option value="$PROJECT_DIR$/src/com/kutsyk/convertors/ToXML.java" />
-        <option value="$PROJECT_DIR$/src/com/kutsyk/grammar/LaTEX/LaTEX.g4" />
+        <option value="$PROJECT_DIR$/src/com/kutsyk/grammar/LaTEX.g4" />
         <option value="$PROJECT_DIR$/src/com/kutsyk/windows/MainWindow.java" />
+        <option value="$PROJECT_DIR$/src/com/kutsyk/convertors/ToXML.java" />
         <option value="$PROJECT_DIR$/src/com/kutsyk/convertors/Translator.java" />
       </list>
     </option>
@@ -218,7 +435,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -237,106 +453,9 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LaTEX" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LaTEX" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LaTEX" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LaTEX" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="kutsyk" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="windows" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LaTEX" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LaTEX" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="kutsyk" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LaTEX" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LaTEX" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="kutsyk" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="grammar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LaTEX" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LaTEX" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="kutsyk" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="convertors" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -348,12 +467,12 @@
     <property name="MemberChooser.showClasses" value="true" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="options.lastSelected" value="appearance" />
+    <property name="options.lastSelected" value="preferences.pluginManager" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
     <property name="recentsLimit" value="5" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="true" />
@@ -362,11 +481,9 @@
     <property name="LayoutCode.rearrangeEntriesXML" value="false" />
     <property name="LayoutCode.rearrangeEntriesJava" value="false" />
     <property name="LayoutCode.rearrangeEntriesANTLRv4" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../plos_template/main.tex" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
     <property name="SearchEverywhereHistory" value="&#10;q" />
-    <property name="$PROJECT_DIR$/src/LaTEX.g4::/auto-gen" value="false" />
-    <property name="$PROJECT_DIR$/src/LaTEX.g4::/output-dir" value="D:\Charlesworth\LaTEX\src\com\kutsyk\grammar" />
-    <property name="$PROJECT_DIR$/src/LaTEX.g4::/lib-dir" value="D:\Charlesworth\LaTEX\src" />
+    <property name="$PROJECT_DIR$/src/LaTEX.g4::/auto-gen" value="true" />
     <property name="$PROJECT_DIR$/src/LaTEX.g4::/gen-listener" value="true" />
     <property name="$PROJECT_DIR$/src/LaTEX.g4::/gen-visitor" value="false" />
     <property name="LayoutCode.rearrangeEntries" value="false" />
@@ -377,13 +494,25 @@
     <property name="$PROJECT_DIR$/src/com/kutsyk/grammar/LaTEX/LaTEX.g4::/lib-dir" value="D:\Charlesworth\LaTEX\src\com\kutsyk\grammar\LaTEX" />
     <property name="$PROJECT_DIR$/src/com/kutsyk/grammar/LaTEX/LaTEX.g4::/package" value="com.kutsyk.grammar.LaTEX" />
     <property name="$PROJECT_DIR$/src/com/kutsyk/grammar/LaTEX/LaTEX.g4::/language" value="Java" />
+    <property name="$PROJECT_DIR$/src/com/kutsyk/grammar/BibTex/BibTex.g4::/auto-gen" value="true" />
+    <property name="$PROJECT_DIR$/src/com/kutsyk/grammar/BibTex/BibTex.g4::/output-dir" value="D:\Charlesworth\LaTEX\src\" />
+    <property name="$PROJECT_DIR$/src/com/kutsyk/grammar/BibTex/BibTex.g4::/package" value="com.kutsyk.grammar.BibTex" />
+    <property name="$PROJECT_DIR$/src/com/kutsyk/grammar/BibTex/BibTex.g4::/gen-listener" value="true" />
+    <property name="$PROJECT_DIR$/src/com/kutsyk/grammar/BibTex/BibTex.g4::/gen-visitor" value="false" />
+    <property name="$PROJECT_DIR$/src/LaTEX.g4::/output-dir" value="D:\Charlesworth\LaTEX\out\production\LaTEX" />
+    <property name="$PROJECT_DIR$/src/com/kutsyk/grammar/LaTEX.g4::/auto-gen" value="true" />
+    <property name="$PROJECT_DIR$/src/com/kutsyk/grammar/LaTEX.g4::/output-dir" value="D:\Charlesworth\LaTEX\src" />
+    <property name="$PROJECT_DIR$/src/com/kutsyk/grammar/LaTEX.g4::/package" value="com.kutsyk.grammar" />
+    <property name="$PROJECT_DIR$/src/com/kutsyk/grammar/LaTEX.g4::/gen-listener" value="true" />
+    <property name="$PROJECT_DIR$/src/com/kutsyk/grammar/LaTEX.g4::/gen-visitor" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Charlesworth\LaTEX\src\com\kutsyk\windows" />
+      <recent name="D:\Charlesworth\LaTEX\src\com\kutsyk\convertor" />
+      <recent name="D:\Charlesworth\LaTEX\src\com\kutsyk\grammar" />
+      <recent name="D:\Charlesworth\LaTEX\src" />
       <recent name="D:\Charlesworth\LaTEX\src\com\kutsyk\grammar\LaTEX" />
-      <recent name="D:\Charlesworth\LaTEX\src\com\kutsyk\grammar\BibTex" />
-      <recent name="D:\LaTEX\LaTEX\src\com\kutsyk\LaTEX\grammar" />
     </key>
   </component>
   <component name="RunManager" selected="Application.LaTEX">
@@ -710,13 +839,29 @@
       <workItem from="1423949461615" duration="2723000" />
       <workItem from="1424000963168" duration="2432000" />
       <workItem from="1424005346101" duration="11000" />
-      <workItem from="1424005375407" duration="857000" />
+      <workItem from="1424005375407" duration="2211000" />
+      <workItem from="1424009787186" duration="1942000" />
+      <workItem from="1424075734724" duration="1454000" />
+      <workItem from="1424090536981" duration="81000" />
+      <workItem from="1424099666608" duration="62000" />
+      <workItem from="1424102503597" duration="825000" />
+      <workItem from="1424105038393" duration="4248000" />
+      <workItem from="1424109370732" duration="876000" />
+      <workItem from="1424114716924" duration="443000" />
+      <workItem from="1424115174993" duration="1422000" />
+      <workItem from="1424160187936" duration="1248000" />
+      <workItem from="1424161463662" duration="772000" />
+      <workItem from="1424162266323" duration="232000" />
+      <workItem from="1424162519873" duration="2968000" />
+      <workItem from="1424166463125" duration="1032000" />
+      <workItem from="1424175549905" duration="6000" />
+      <workItem from="1424175783802" duration="7301000" />
     </task>
     <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="118633000" />
+    <option name="totallyTimeSpent" value="144899000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -740,31 +885,31 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952693" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32626426" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6247961" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37030995" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32930514" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39967373" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24773414" sideWeight="0.5008157" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5350734" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5334421" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32930514" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32300162" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Tool Output" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32463294" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3213703" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Tool Output" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32357723" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3213703" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24773414" sideWeight="0.49755302" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32930514" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24169184" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3219512" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24169184" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.64763457" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -773,35 +918,35 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952693" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952693" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32930514" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5350734" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32930514" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3213703" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3213703" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24169184" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3213703" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32300162" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39314845" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40946168" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32626426" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952693" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39967373" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24773414" sideWeight="0.5008157" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952693" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39967373" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24773414" sideWeight="0.5008157" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32300162" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Tool Output" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32463294" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24773414" sideWeight="0.49755302" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24773414" sideWeight="0.49755302" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32930514" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952693" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952693" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -818,7 +963,11 @@
     </option>
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <breakpoints-dialog>
+        <breakpoints-dialog />
+      </breakpoints-dialog>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <PATH>
@@ -837,21 +986,36 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/kutsyk/grammar/LaTEX/LaTEX.g4">
+    <entry file="file://$PROJECT_DIR$/src/com/kutsyk/windows/MainWindow.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="407" column="14" selection-start="5090" selection-end="5090" vertical-scroll-proportion="0.0" vertical-offset="6681" max-vertical-offset="13243">
-          <folding />
+        <state line="217" column="40" selection-start="5042" selection-end="5042" vertical-scroll-proportion="0.0" vertical-offset="3689" max-vertical-offset="16354">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#7414#7441#1" expanded="true" />
+            <element signature="e#18145#18177#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/kutsyk/grammar/LaTEX/LaTEX.g4">
+    <entry file="file://$PROJECT_DIR$/src/com/kutsyk/convertors/ToXML.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="171" column="1" selection-start="1998" selection-end="1998" vertical-scroll-proportion="0.0" vertical-offset="2526" max-vertical-offset="33422" />
+        <state line="236" column="43" selection-start="4277" selection-end="4277" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="31314" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/kutsyk/grammar/LaTEX/LaTEX.g4">
+    <entry file="file://$PROJECT_DIR$/src/com/kutsyk/convertors/Translator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="152" column="1" selection-start="1811" selection-end="1811" vertical-scroll-proportion="0.0" vertical-offset="2526" max-vertical-offset="33422" />
+        <state line="58" column="36" selection-start="1206" selection-end="1206" vertical-scroll-proportion="0.0" vertical-offset="986" max-vertical-offset="5389" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/kutsyk/windows/MainWindow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="227" column="40" selection-start="5396" selection-end="5396" vertical-scroll-proportion="0.0" vertical-offset="3859" max-vertical-offset="16354">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#7414#7441#1" expanded="true" />
+            <element signature="e#18145#18177#0" expanded="true" />
+          </folding>
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ISOENT.csv">
@@ -882,7 +1046,7 @@
         <state line="109" column="50" selection-start="2638" selection-end="2638" vertical-scroll-proportion="0.0" vertical-offset="1853" max-vertical-offset="16371" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/kutsyk/grammar/LaTEX/LaTEX.g4">
+    <entry file="file://$PROJECT_DIR$/src/com/kutsyk/grammar/LaTEX.g4">
       <provider selected="true" editor-type-id="text-editor">
         <state line="808" column="13" selection-start="10239" selection-end="10248" vertical-scroll-proportion="0.0" vertical-offset="13594" max-vertical-offset="33320" />
       </provider>
@@ -907,7 +1071,7 @@
         <state line="82" column="41" selection-start="1899" selection-end="1899" vertical-scroll-proportion="0.0" vertical-offset="1394" max-vertical-offset="17374" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/kutsyk/grammar/LaTEX/LaTEX.g4">
+    <entry file="file://$PROJECT_DIR$/src/com/kutsyk/grammar/LaTEX.g4">
       <provider selected="true" editor-type-id="text-editor">
         <state line="24" column="4" selection-start="381" selection-end="381" vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="33371" />
       </provider>
@@ -960,7 +1124,7 @@
         <state line="380" column="19" selection-start="8807" selection-end="8807" vertical-scroll-proportion="0.0" vertical-offset="6460" max-vertical-offset="48416" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/kutsyk/grammar/LaTEX/LaTEX.g4">
+    <entry file="file://$PROJECT_DIR$/src/com/kutsyk/grammar/LaTEX.g4">
       <provider selected="true" editor-type-id="text-editor">
         <state line="53" column="22" selection-start="1042" selection-end="1042" vertical-scroll-proportion="0.0" vertical-offset="493" max-vertical-offset="33932" />
       </provider>
@@ -993,16 +1157,6 @@
     <entry file="file://$PROJECT_DIR$/src/com/kutsyk/tools/AlphanumComparator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="159" column="20" selection-start="4958" selection-end="4958" vertical-scroll-proportion="0.0" vertical-offset="2703" max-vertical-offset="4097" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/kutsyk/tools/AlphanumComparator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="36" selection-start="461" selection-end="461" vertical-scroll-proportion="0.3622951" vertical-offset="0" max-vertical-offset="1904" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/kutsyk/tools/CustomOutputStream.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="13" selection-start="236" selection-end="236" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="629" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ISOENT.csv">
@@ -1054,65 +1208,82 @@
         <state line="805" column="9" selection-start="17371" selection-end="17371" vertical-scroll-proportion="0.75227684" vertical-offset="13272" max-vertical-offset="15300" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/kutsyk/grammar/LaTEX/LaTEXLexer.java">
+    <entry file="jar://$PROJECT_DIR$/lib/antlr-4.5-complete.jar!/org/antlr/v4/runtime/tree/ParseTreeWalker.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="13" selection-start="471" selection-end="471" vertical-scroll-proportion="0.12099644" vertical-offset="0" max-vertical-offset="16099" />
+        <state line="11" column="16" selection-start="332" selection-end="332" vertical-scroll-proportion="0.46710527" vertical-offset="28" max-vertical-offset="357" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/kutsyk/grammar/LaTEX/LaTEXBaseListener.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.7.0_72/jre/lib/ext/access-bridge-64.jar!/com/sun/java/accessibility/util/Translator.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="3" selection-start="504" selection-end="504" vertical-scroll-proportion="0.27224198" vertical-offset="0" max-vertical-offset="21726" />
+        <state line="15" column="11" selection-start="629" selection-end="629" vertical-scroll-proportion="0.63129973" vertical-offset="0" max-vertical-offset="1853" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/kutsyk/grammar/LaTEX/LaTEXVisitor.java">
+    <entry file="file://$PROJECT_DIR$/src/com/kutsyk/windows/Doc.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="96" column="34" selection-start="3403" selection-end="3410" vertical-scroll-proportion="0.15124555" vertical-offset="1530" max-vertical-offset="10812" />
+        <state line="2" column="0" selection-start="46" selection-end="46" vertical-scroll-proportion="0.08717949" vertical-offset="0" max-vertical-offset="2703" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/kutsyk/convertors/FrontmatterCreator.java">
+    <entry file="file://$USER_HOME$/Desktop/plos_template.tex - final.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1077" column="33" selection-start="27857" selection-end="27857" vertical-scroll-proportion="1.0309654" vertical-offset="17505" max-vertical-offset="18513" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/kutsyk/grammar/BibTex/BibTex.g4">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="5" selection-start="327" selection-end="327" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2040" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/kutsyk/grammar/LaTEX/LaTEXBaseVisitor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="76" column="23" selection-start="2909" selection-end="2909" vertical-scroll-proportion="2.2212543" vertical-offset="0" max-vertical-offset="12580" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/kutsyk/grammar/LaTEX/LaTEX.tokens">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5457" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/kutsyk/grammar/LaTEX/LaTEX.g4">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="407" column="14" selection-start="5090" selection-end="5090" vertical-scroll-proportion="0.0" vertical-offset="6681" max-vertical-offset="13243">
+        <state line="4" column="26" selection-start="89" selection-end="89" vertical-scroll-proportion="-2.7853107" vertical-offset="561" max-vertical-offset="4556">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/kutsyk/convertors/ToXML.java">
+    <entry file="file://$PROJECT_DIR$/src/com/kutsyk/tools/AlphanumComparator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="0" selection-start="581" selection-end="581" vertical-scroll-proportion="0.0" vertical-offset="4359" max-vertical-offset="30498">
+        <state line="13" column="21" selection-start="431" selection-end="450" vertical-scroll-proportion="0.0" vertical-offset="8" max-vertical-offset="1921">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/kutsyk/tools/CustomOutputStream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="3" selection-start="218" selection-end="242" vertical-scroll-proportion="0.1737649" vertical-offset="0" max-vertical-offset="663">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/kutsyk/grammar/LaTEX.g4">
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="30" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="12801">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/kutsyk/windows/MainWindow.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="197" column="75" selection-start="4599" selection-end="4611" vertical-scroll-proportion="0.0" vertical-offset="3349" max-vertical-offset="17391">
+        <state line="16" column="3" selection-start="398" selection-end="419" vertical-scroll-proportion="0.4738676" vertical-offset="0" max-vertical-offset="16473">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#7414#7441#1" expanded="true" />
+            <element signature="e#18145#18177#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/kutsyk/convertors/ToXML.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="24" selection-start="562" selection-end="562" vertical-scroll-proportion="0.20272572" vertical-offset="0" max-vertical-offset="30294">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/kutsyk/convertors/Translator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="263" column="25" selection-start="8134" selection-end="8134" vertical-scroll-proportion="0.51150894" vertical-offset="4118" max-vertical-offset="5321">
+        <state line="14" column="24" selection-start="407" selection-end="407" vertical-scroll-proportion="0.40545145" vertical-offset="0" max-vertical-offset="5542">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/kutsyk/convertors/FrontmatterCreator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="2" selection-start="627" selection-end="627" vertical-scroll-proportion="0.20731707" vertical-offset="0" max-vertical-offset="18479">
           <folding />
         </state>
       </provider>

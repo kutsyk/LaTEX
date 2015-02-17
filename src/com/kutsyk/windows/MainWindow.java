@@ -1,6 +1,4 @@
-package com.kutsyk.windows;/*
- * 
- */
+package com.kutsyk.windows;
 
 import com.kutsyk.TextEditor.TextLineNumber;
 import com.kutsyk.convertors.Translator;
@@ -15,15 +13,15 @@ import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.io.*;
 
-// TODO: Auto-generated Javadoc
-/**
+/*
+ *  @author Kutsyk Vasyl
  * The Class MainWindow.
  */
 public class MainWindow extends JFrame {
 
-	/** The dir path. */
+    public static String mainPath = "";
+    /** The dir path. */
 	private static String dirPath = "";
-	public static String mainPath = "";
 	private static PrintWriter errorLogFile = null;
 
 	/** The dir. */
@@ -213,14 +211,12 @@ public class MainWindow extends JFrame {
 	 */
 	private void translateAction() {
 		clear();
-
 		translationThread = new Thread(new Runnable() {
 			public void run() {
 				label4.setVisible(true);
-				@SuppressWarnings("unused")
                 Translator translator;
 				try {
-					translator = new Translator(dirPath);
+                    translator = new Translator(dirPath);
 					createResult();
 					wasAnyLaTEXProceeded = true;
 					File result = new File(mainPath + "/LaTEXtoXML/result.xml");
@@ -384,10 +380,10 @@ public class MainWindow extends JFrame {
 		try {
 			BufferedReader reader = new BufferedReader(new InputStreamReader(
 					new FileInputStream(dirPath + "/" + fileName)));
-			String line = "";
+			String line;
 			StringBuilder content = new StringBuilder();
 			while ((line = reader.readLine()) != null)
-				content.append(line + "\n");
+				content.append(line).append("\n");
 			reader.close();
 			documentText.setText(content.toString());
 			documentText.setCaretPosition(0);
@@ -489,16 +485,14 @@ public class MainWindow extends JFrame {
 	}
 
 	private static boolean uselessLine(String line) {
-		if (line.replace(" ", "").startsWith("%")
-				|| line.replace(" ", "").isEmpty())
-			return true;
-		return false;
-	}
+        return line.replace(" ", "").startsWith("%")
+                || line.replace(" ", "").isEmpty();
+    }
 
 	private static boolean hasRightStructure(String inputFile) throws Exception {
 		InputStream is = new FileInputStream(inputFile);
 		BufferedReader reader = new BufferedReader(new InputStreamReader(is));
-		String line = "";
+		String line;
 
 		boolean figureSection = false;
 		boolean supportingSection = false;

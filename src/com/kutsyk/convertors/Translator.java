@@ -1,9 +1,7 @@
-package com.kutsyk.convertors;/*
- * 
- */
+package com.kutsyk.convertors;
 
-import com.kutsyk.grammar.LaTEX.LaTEXLexer;
-import com.kutsyk.grammar.LaTEX.LaTEXParser;
+import com.kutsyk.grammar.LaTEXLexer;
+import com.kutsyk.grammar.LaTEXParser;
 import com.kutsyk.windows.MainWindow;
 import org.antlr.v4.runtime.ANTLRInputStream;
 import org.antlr.v4.runtime.CommonTokenStream;
@@ -13,9 +11,8 @@ import org.antlr.v4.runtime.tree.ParseTreeWalker;
 import java.io.*;
 import java.util.HashMap;
 
-// TODO: Auto-generated Javadoc
-
-/**
+/*
+ *  @author Kutsyk Vasyl
  * The Class Translator.
  */
 public class Translator {
@@ -58,9 +55,17 @@ public class Translator {
     /**
      * Instantiates a new translator.
      *
-     * @param dirPath the path to the directory with all necessary files
      * @throws Exception the exception
      */
+//
+//    public static void main(String[] args) {
+//        try {
+//            Translator tr = new Translator("D:\\Charlesworth\\plos_template");
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
+//    }
+
     public Translator(String dirPath) throws Exception {
         dir = dirPath;
         getFilesNames(dir);
@@ -69,7 +74,7 @@ public class Translator {
 //        createIsoTree();
         getBibReferences(texFile);
         if (changeMainFile(texFile)) {
-            ToXML.skipData.close();
+//            ToXML.skipData.close();
             ToXML.writer.close();
         }
     }
@@ -221,7 +226,6 @@ public class Translator {
         String dataFile = MainWindow.mainPath + "/LaTEXtoXML/mainFile.tex";
         File file = new File(inputFile);
         PrintWriter os = new PrintWriter(dataFile);
-
         FileInputStream fin = new FileInputStream(file);
         byte fileContent[] = new byte[(int) file.length()];
         fin.read(fileContent);
@@ -307,7 +311,7 @@ public class Translator {
 
         writer = new PrintWriter(MainWindow.mainPath
                 + "/LaTEXtoXML/bodyAndBottom.xml");
-        ToXML translator = new ToXML(writer, false, null);
+        ToXML translator = new ToXML(writer);
         walker.walk(translator, mainTree); // initiate walk of tree with
         // listener
         writer.close();
