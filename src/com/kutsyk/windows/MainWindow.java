@@ -2,7 +2,6 @@ package com.kutsyk.windows;
 
 import com.kutsyk.TextEditor.TextLineNumber;
 import com.kutsyk.convertors.Translator;
-import com.kutsyk.tools.CustomOutputStream;
 
 import javax.swing.*;
 import javax.swing.text.*;
@@ -14,7 +13,7 @@ import java.awt.event.WindowEvent;
 import java.io.*;
 
 /*
- *  @author Kutsyk Vasyl
+ * @author Kutsyk Vasyl
  * The Class MainWindow.
  */
 public class MainWindow extends JFrame {
@@ -29,7 +28,6 @@ public class MainWindow extends JFrame {
 	private static JTextPane documentText;
 	private static boolean wasAnyLaTEXProceeded = false;
 	private static String latexFile = "";
-	private static CustomOutputStream os;
 	private static JTextArea console;
 	private static Thread translationThread;
 
@@ -106,8 +104,8 @@ public class MainWindow extends JFrame {
 
 		};
 
-//		System.setOut(new PrintStream(out, true));
-//		System.setErr(new PrintStream(out, true));
+		System.setOut(new PrintStream(out, true));
+		System.setErr(new PrintStream(out, true));
 	}
 
 	/**
@@ -672,7 +670,6 @@ public class MainWindow extends JFrame {
 		clear();
 	}
 	
-	@SuppressWarnings("deprecation")
 	private void closeLogFile()
 	{
         if(translationThread != null)

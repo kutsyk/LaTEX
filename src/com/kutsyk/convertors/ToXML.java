@@ -243,6 +243,7 @@ public class ToXML extends LaTEXBaseListener {
      * @throws IOException Signals that an I/O exception has occurred.
      */
     ToXML(PrintWriter writer) throws IOException {
+        System.out.println("ToXML translator");
         this.writer = writer;
 //		skipData = writer;
         paragraphCounter = 1;
@@ -536,7 +537,7 @@ public class ToXML extends LaTEXBaseListener {
     /**
      * Write author summary.
      *
-     * @param title the title
+     * @ param title the title
      * @return true, if successful
      */
 //    private boolean writeAuthorSummary(String title) {

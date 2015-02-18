@@ -52,20 +52,6 @@ public class Translator {
      */
     protected static String metaDataFile;
 
-    /**
-     * Instantiates a new translator.
-     *
-     * @throws Exception the exception
-     */
-//
-//    public static void main(String[] args) {
-//        try {
-//            Translator tr = new Translator("D:\\Charlesworth\\plos_template");
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
-//    }
-
     public Translator(String dirPath) throws Exception {
         dir = dirPath;
         getFilesNames(dir);
