@@ -1,7 +1,7 @@
 package com.kutsyk.convertors;
 
-import com.kutsyk.grammar.LaTEXBaseListener;
-import com.kutsyk.grammar.LaTEXParser;
+import com.kutsyk.grammar.LaTEX.LaTEXBaseListener;
+import com.kutsyk.grammar.LaTEX.LaTEXParser;
 import com.kutsyk.windows.MainWindow;
 import org.antlr.v4.runtime.misc.NotNull;
 import org.w3c.dom.Document;

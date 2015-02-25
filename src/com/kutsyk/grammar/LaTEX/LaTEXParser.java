@@ -1,13 +1,18 @@
-// Generated from D:/Charlesworth/LaTEX/src/com/kutsyk/grammar\LaTEX.g4 by ANTLR 4.5
-package com.kutsyk.grammar;
-import org.antlr.v4.runtime.atn.*;
-import org.antlr.v4.runtime.dfa.DFA;
+// Generated from D:/Charlesworth/LaTEX/src/com/kutsyk/grammar/LaTEX\LaTEX.g4 by ANTLR 4.5
+package com.kutsyk.grammar.LaTEX;
+
 import org.antlr.v4.runtime.*;
-import org.antlr.v4.runtime.misc.*;
-import org.antlr.v4.runtime.tree.*;
+import org.antlr.v4.runtime.atn.ATN;
+import org.antlr.v4.runtime.atn.ATNDeserializer;
+import org.antlr.v4.runtime.atn.ParserATNSimulator;
+import org.antlr.v4.runtime.atn.PredictionContextCache;
+import org.antlr.v4.runtime.dfa.DFA;
+import org.antlr.v4.runtime.misc.NotNull;
+import org.antlr.v4.runtime.tree.ParseTreeListener;
+import org.antlr.v4.runtime.tree.ParseTreeVisitor;
+import org.antlr.v4.runtime.tree.TerminalNode;
+
 import java.util.List;
-import java.util.Iterator;
-import java.util.ArrayList;
 
 @SuppressWarnings({"all", "warnings", "unchecked", "unused", "cast"})
 public class LaTEXParser extends Parser {
@@ -210,6 +215,11 @@ public class LaTEXParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof LaTEXListener ) ((LaTEXListener)listener).exitCompilationUnit(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof LaTEXVisitor ) return ((LaTEXVisitor<? extends T>)visitor).visitCompilationUnit(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final CompilationUnitContext compilationUnit() throws RecognitionException {
@@ -282,6 +292,11 @@ public class LaTEXParser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof LaTEXListener ) ((LaTEXListener)listener).exitDocumentDeclaration(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof LaTEXVisitor ) return ((LaTEXVisitor<? extends T>)visitor).visitDocumentDeclaration(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -360,6 +375,11 @@ public class LaTEXParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof LaTEXListener ) ((LaTEXListener)listener).exitDocumentBody(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof LaTEXVisitor ) return ((LaTEXVisitor<? extends T>)visitor).visitDocumentBody(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final DocumentBodyContext documentBody() throws RecognitionException {
@@ -404,6 +424,11 @@ public class LaTEXParser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof LaTEXListener ) ((LaTEXListener)listener).exitFrontPart(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof LaTEXVisitor ) return ((LaTEXVisitor<? extends T>)visitor).visitFrontPart(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -471,6 +496,11 @@ public class LaTEXParser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof LaTEXListener ) ((LaTEXListener)listener).exitFrontBody(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof LaTEXVisitor ) return ((LaTEXVisitor<? extends T>)visitor).visitFrontBody(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -576,6 +606,11 @@ public class LaTEXParser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof LaTEXListener ) ((LaTEXListener)listener).exitMainTitle(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof LaTEXVisitor ) return ((LaTEXVisitor<? extends T>)visitor).visitMainTitle(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -709,6 +744,11 @@ public class LaTEXParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof LaTEXListener ) ((LaTEXListener)listener).exitAuthorList(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof LaTEXVisitor ) return ((LaTEXVisitor<? extends T>)visitor).visitAuthorList(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final AuthorListContext authorList() throws RecognitionException {
@@ -786,6 +826,11 @@ public class LaTEXParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof LaTEXListener ) ((LaTEXListener)listener).exitAuthor(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof LaTEXVisitor ) return ((LaTEXVisitor<? extends T>)visitor).visitAuthor(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final AuthorContext author() throws RecognitionException {
@@ -837,6 +882,11 @@ public class LaTEXParser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof LaTEXListener ) ((LaTEXListener)listener).exitTextsuperscriptBlock(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof LaTEXVisitor ) return ((LaTEXVisitor<? extends T>)visitor).visitTextsuperscriptBlock(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -924,6 +974,11 @@ public class LaTEXParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof LaTEXListener ) ((LaTEXListener)listener).exitAuthorName(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof LaTEXVisitor ) return ((LaTEXVisitor<? extends T>)visitor).visitAuthorName(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final AuthorNameContext authorName() throws RecognitionException {
@@ -965,6 +1020,11 @@ public class LaTEXParser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof LaTEXListener ) ((LaTEXListener)listener).exitAddress(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof LaTEXVisitor ) return ((LaTEXVisitor<? extends T>)visitor).visitAddress(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -1035,6 +1095,11 @@ public class LaTEXParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof LaTEXListener ) ((LaTEXListener)listener).exitBodyPart(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof LaTEXVisitor ) return ((LaTEXVisitor<? extends T>)visitor).visitBodyPart(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final BodyPartContext bodyPart() throws RecognitionException {
@@ -1089,6 +1154,11 @@ public class LaTEXParser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof LaTEXListener ) ((LaTEXListener)listener).exitMemberList(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof LaTEXVisitor ) return ((LaTEXVisitor<? extends T>)visitor).visitMemberList(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -1226,6 +1296,11 @@ public class LaTEXParser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof LaTEXListener ) ((LaTEXListener)listener).exitMember(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof LaTEXVisitor ) return ((LaTEXVisitor<? extends T>)visitor).visitMember(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -1460,6 +1535,11 @@ public class LaTEXParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof LaTEXListener ) ((LaTEXListener)listener).exitLandScapeBlock(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof LaTEXVisitor ) return ((LaTEXVisitor<? extends T>)visitor).visitLandScapeBlock(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final LandScapeBlockContext landScapeBlock() throws RecognitionException {
@@ -1565,6 +1645,11 @@ public class LaTEXParser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof LaTEXListener ) ((LaTEXListener)listener).exitTextRules(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof LaTEXVisitor ) return ((LaTEXVisitor<? extends T>)visitor).visitTextRules(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -1778,6 +1863,11 @@ public class LaTEXParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof LaTEXListener ) ((LaTEXListener)listener).exitTextSymbols(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof LaTEXVisitor ) return ((LaTEXVisitor<? extends T>)visitor).visitTextSymbols(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final TextSymbolsContext textSymbols() throws RecognitionException {
@@ -1876,6 +1966,11 @@ public class LaTEXParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof LaTEXListener ) ((LaTEXListener)listener).exitParagraph(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof LaTEXVisitor ) return ((LaTEXVisitor<? extends T>)visitor).visitParagraph(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final ParagraphContext paragraph() throws RecognitionException {
@@ -1973,6 +2068,11 @@ public class LaTEXParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof LaTEXListener ) ((LaTEXListener)listener).exitText(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof LaTEXVisitor ) return ((LaTEXVisitor<? extends T>)visitor).visitText(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final TextContext text() throws RecognitionException {
@@ -2049,6 +2149,11 @@ public class LaTEXParser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof LaTEXListener ) ((LaTEXListener)listener).exitTextBody(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof LaTEXVisitor ) return ((LaTEXVisitor<? extends T>)visitor).visitTextBody(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -2172,6 +2277,11 @@ public class LaTEXParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof LaTEXListener ) ((LaTEXListener)listener).exitTextSC(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof LaTEXVisitor ) return ((LaTEXVisitor<? extends T>)visitor).visitTextSC(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final TextSCContext textSC() throws RecognitionException {
@@ -2212,6 +2322,11 @@ public class LaTEXParser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof LaTEXListener ) ((LaTEXListener)listener).exitLabel(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof LaTEXVisitor ) return ((LaTEXVisitor<? extends T>)visitor).visitLabel(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -2257,6 +2372,11 @@ public class LaTEXParser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof LaTEXListener ) ((LaTEXListener)listener).exitBoxBlock(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof LaTEXVisitor ) return ((LaTEXVisitor<? extends T>)visitor).visitBoxBlock(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -2304,6 +2424,11 @@ public class LaTEXParser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof LaTEXListener ) ((LaTEXListener)listener).exitAbstractBlock(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof LaTEXVisitor ) return ((LaTEXVisitor<? extends T>)visitor).visitAbstractBlock(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -2381,6 +2506,11 @@ public class LaTEXParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof LaTEXListener ) ((LaTEXListener)listener).exitTitle(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof LaTEXVisitor ) return ((LaTEXVisitor<? extends T>)visitor).visitTitle(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final TitleContext title() throws RecognitionException {
@@ -2430,6 +2560,11 @@ public class LaTEXParser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof LaTEXListener ) ((LaTEXListener)listener).exitNewcommandDeclaration(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof LaTEXVisitor ) return ((LaTEXVisitor<? extends T>)visitor).visitNewcommandDeclaration(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -2491,6 +2626,11 @@ public class LaTEXParser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof LaTEXListener ) ((LaTEXListener)listener).exitCommandBody(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof LaTEXVisitor ) return ((LaTEXVisitor<? extends T>)visitor).visitCommandBody(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -2559,6 +2699,11 @@ public class LaTEXParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof LaTEXListener ) ((LaTEXListener)listener).exitRenewcommandDeclaration(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof LaTEXVisitor ) return ((LaTEXVisitor<? extends T>)visitor).visitRenewcommandDeclaration(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final RenewcommandDeclarationContext renewcommandDeclaration() throws RecognitionException {
@@ -2623,6 +2768,11 @@ public class LaTEXParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof LaTEXListener ) ((LaTEXListener)listener).exitIdentificator(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof LaTEXVisitor ) return ((LaTEXVisitor<? extends T>)visitor).visitIdentificator(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final IdentificatorContext identificator() throws RecognitionException {
@@ -2666,6 +2816,11 @@ public class LaTEXParser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof LaTEXListener ) ((LaTEXListener)listener).exitBlock(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof LaTEXVisitor ) return ((LaTEXVisitor<? extends T>)visitor).visitBlock(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -2761,6 +2916,11 @@ public class LaTEXParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof LaTEXListener ) ((LaTEXListener)listener).exitMulticolsBlock(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof LaTEXVisitor ) return ((LaTEXVisitor<? extends T>)visitor).visitMulticolsBlock(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final MulticolsBlockContext multicolsBlock() throws RecognitionException {
@@ -2828,6 +2988,11 @@ public class LaTEXParser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof LaTEXListener ) ((LaTEXListener)listener).exitList(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof LaTEXVisitor ) return ((LaTEXVisitor<? extends T>)visitor).visitList(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -2912,6 +3077,11 @@ public class LaTEXParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof LaTEXListener ) ((LaTEXListener)listener).exitItems(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof LaTEXVisitor ) return ((LaTEXVisitor<? extends T>)visitor).visitItems(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final ItemsContext items() throws RecognitionException {
@@ -2966,6 +3136,11 @@ public class LaTEXParser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof LaTEXListener ) ((LaTEXListener)listener).exitItem(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof LaTEXVisitor ) return ((LaTEXVisitor<? extends T>)visitor).visitItem(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -3038,6 +3213,11 @@ public class LaTEXParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof LaTEXListener ) ((LaTEXListener)listener).exitDescriptionList(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof LaTEXVisitor ) return ((LaTEXVisitor<? extends T>)visitor).visitDescriptionList(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final DescriptionListContext descriptionList() throws RecognitionException {
@@ -3085,6 +3265,11 @@ public class LaTEXParser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof LaTEXListener ) ((LaTEXListener)listener).exitDescriptionItems(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof LaTEXVisitor ) return ((LaTEXVisitor<? extends T>)visitor).visitDescriptionItems(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -3143,6 +3328,11 @@ public class LaTEXParser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof LaTEXListener ) ((LaTEXListener)listener).exitDescriptionItem(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof LaTEXVisitor ) return ((LaTEXVisitor<? extends T>)visitor).visitDescriptionItem(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -3220,6 +3410,11 @@ public class LaTEXParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof LaTEXListener ) ((LaTEXListener)listener).exitDescriptionTitle(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof LaTEXVisitor ) return ((LaTEXVisitor<? extends T>)visitor).visitDescriptionTitle(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final DescriptionTitleContext descriptionTitle() throws RecognitionException {
@@ -3284,6 +3479,11 @@ public class LaTEXParser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof LaTEXListener ) ((LaTEXListener)listener).exitCaptionBlock(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof LaTEXVisitor ) return ((LaTEXVisitor<? extends T>)visitor).visitCaptionBlock(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -3361,6 +3561,11 @@ public class LaTEXParser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof LaTEXListener ) ((LaTEXListener)listener).exitTable(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof LaTEXVisitor ) return ((LaTEXVisitor<? extends T>)visitor).visitTable(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -3552,6 +3757,11 @@ public class LaTEXParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof LaTEXListener ) ((LaTEXListener)listener).exitTableCaption(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof LaTEXVisitor ) return ((LaTEXVisitor<? extends T>)visitor).visitTableCaption(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final TableCaptionContext tableCaption() throws RecognitionException {
@@ -3598,6 +3808,11 @@ public class LaTEXParser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof LaTEXListener ) ((LaTEXListener)listener).exitTabular(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof LaTEXVisitor ) return ((LaTEXVisitor<? extends T>)visitor).visitTabular(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -3698,6 +3913,11 @@ public class LaTEXParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof LaTEXListener ) ((LaTEXListener)listener).exitTableSkipBlock(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof LaTEXVisitor ) return ((LaTEXVisitor<? extends T>)visitor).visitTableSkipBlock(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final TableSkipBlockContext tableSkipBlock() throws RecognitionException {
@@ -3758,6 +3978,11 @@ public class LaTEXParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof LaTEXListener ) ((LaTEXListener)listener).exitTableDefinition(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof LaTEXVisitor ) return ((LaTEXVisitor<? extends T>)visitor).visitTableDefinition(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final TableDefinitionContext tableDefinition() throws RecognitionException {
@@ -3806,6 +4031,11 @@ public class LaTEXParser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof LaTEXListener ) ((LaTEXListener)listener).exitMulticolumn(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof LaTEXVisitor ) return ((LaTEXVisitor<? extends T>)visitor).visitMulticolumn(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -3862,6 +4092,11 @@ public class LaTEXParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof LaTEXListener ) ((LaTEXListener)listener).exitTableRow(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof LaTEXVisitor ) return ((LaTEXVisitor<? extends T>)visitor).visitTableRow(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final TableRowContext tableRow() throws RecognitionException {
@@ -3917,6 +4152,11 @@ public class LaTEXParser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof LaTEXListener ) ((LaTEXListener)listener).exitTableCell(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof LaTEXVisitor ) return ((LaTEXVisitor<? extends T>)visitor).visitTableCell(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -3984,6 +4224,11 @@ public class LaTEXParser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof LaTEXListener ) ((LaTEXListener)listener).exitTexttypeDeclarator(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof LaTEXVisitor ) return ((LaTEXVisitor<? extends T>)visitor).visitTexttypeDeclarator(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -4074,6 +4319,11 @@ public class LaTEXParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof LaTEXListener ) ((LaTEXListener)listener).exitTtStyle(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof LaTEXVisitor ) return ((LaTEXVisitor<? extends T>)visitor).visitTtStyle(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final TtStyleContext ttStyle() throws RecognitionException {
@@ -4132,6 +4382,11 @@ public class LaTEXParser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof LaTEXListener ) ((LaTEXListener)listener).exitBoldTypeDeclaration(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof LaTEXVisitor ) return ((LaTEXVisitor<? extends T>)visitor).visitBoldTypeDeclaration(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -4214,6 +4469,11 @@ public class LaTEXParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof LaTEXListener ) ((LaTEXListener)listener).exitSmallcapsDeclaration(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof LaTEXVisitor ) return ((LaTEXVisitor<? extends T>)visitor).visitSmallcapsDeclaration(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final SmallcapsDeclarationContext smallcapsDeclaration() throws RecognitionException {
@@ -4273,6 +4533,11 @@ public class LaTEXParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof LaTEXListener ) ((LaTEXListener)listener).exitItalictypeDeclaration(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof LaTEXVisitor ) return ((LaTEXVisitor<? extends T>)visitor).visitItalictypeDeclaration(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final ItalictypeDeclarationContext italictypeDeclaration() throws RecognitionException {
@@ -4330,6 +4595,11 @@ public class LaTEXParser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof LaTEXListener ) ((LaTEXListener)listener).exitItalicBlock(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof LaTEXVisitor ) return ((LaTEXVisitor<? extends T>)visitor).visitItalicBlock(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -4430,6 +4700,11 @@ public class LaTEXParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof LaTEXListener ) ((LaTEXListener)listener).exitItalicOutBlock(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof LaTEXVisitor ) return ((LaTEXVisitor<? extends T>)visitor).visitItalicOutBlock(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final ItalicOutBlockContext italicOutBlock() throws RecognitionException {
@@ -4491,6 +4766,11 @@ public class LaTEXParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof LaTEXListener ) ((LaTEXListener)listener).exitTextformatingBlockFlushLeft(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof LaTEXVisitor ) return ((LaTEXVisitor<? extends T>)visitor).visitTextformatingBlockFlushLeft(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final TextformatingBlockFlushLeftContext textformatingBlockFlushLeft() throws RecognitionException {
@@ -4536,6 +4816,11 @@ public class LaTEXParser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof LaTEXListener ) ((LaTEXListener)listener).exitTextformatingBlockCenter(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof LaTEXVisitor ) return ((LaTEXVisitor<? extends T>)visitor).visitTextformatingBlockCenter(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -4595,6 +4880,11 @@ public class LaTEXParser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof LaTEXListener ) ((LaTEXListener)listener).exitSectionDeclaration(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof LaTEXVisitor ) return ((LaTEXVisitor<? extends T>)visitor).visitSectionDeclaration(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -4660,6 +4950,11 @@ public class LaTEXParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof LaTEXListener ) ((LaTEXListener)listener).exitSubsectionDeclaration(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof LaTEXVisitor ) return ((LaTEXVisitor<? extends T>)visitor).visitSubsectionDeclaration(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final SubsectionDeclarationContext subsectionDeclaration() throws RecognitionException {
@@ -4723,6 +5018,11 @@ public class LaTEXParser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof LaTEXListener ) ((LaTEXListener)listener).exitSubsubsectionDeclaration(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof LaTEXVisitor ) return ((LaTEXVisitor<? extends T>)visitor).visitSubsubsectionDeclaration(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -4790,6 +5090,11 @@ public class LaTEXParser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof LaTEXListener ) ((LaTEXListener)listener).exitCiteReferences(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof LaTEXVisitor ) return ((LaTEXVisitor<? extends T>)visitor).visitCiteReferences(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -4866,6 +5171,11 @@ public class LaTEXParser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof LaTEXListener ) ((LaTEXListener)listener).exitCiteReferencesList(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof LaTEXVisitor ) return ((LaTEXVisitor<? extends T>)visitor).visitCiteReferencesList(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -4969,6 +5279,11 @@ public class LaTEXParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof LaTEXListener ) ((LaTEXListener)listener).exitCiteReference(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof LaTEXVisitor ) return ((LaTEXVisitor<? extends T>)visitor).visitCiteReference(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final CiteReferenceContext citeReference() throws RecognitionException {
@@ -5038,6 +5353,11 @@ public class LaTEXParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof LaTEXListener ) ((LaTEXListener)listener).exitMeasures(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof LaTEXVisitor ) return ((LaTEXVisitor<? extends T>)visitor).visitMeasures(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final MeasuresContext measures() throws RecognitionException {
@@ -5087,6 +5407,11 @@ public class LaTEXParser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof LaTEXListener ) ((LaTEXListener)listener).exitFigureBlock(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof LaTEXVisitor ) return ((LaTEXVisitor<? extends T>)visitor).visitFigureBlock(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -5202,6 +5527,11 @@ public class LaTEXParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof LaTEXListener ) ((LaTEXListener)listener).exitSupplementaryFigureBlock(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof LaTEXVisitor ) return ((LaTEXVisitor<? extends T>)visitor).visitSupplementaryFigureBlock(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final SupplementaryFigureBlockContext supplementaryFigureBlock() throws RecognitionException {
@@ -5316,6 +5646,11 @@ public class LaTEXParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof LaTEXListener ) ((LaTEXListener)listener).exitAlgorithmBlock(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof LaTEXVisitor ) return ((LaTEXVisitor<? extends T>)visitor).visitAlgorithmBlock(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final AlgorithmBlockContext algorithmBlock() throws RecognitionException {
@@ -5387,6 +5722,11 @@ public class LaTEXParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof LaTEXListener ) ((LaTEXListener)listener).exitAlgorithmicBlock(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof LaTEXVisitor ) return ((LaTEXVisitor<? extends T>)visitor).visitAlgorithmicBlock(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final AlgorithmicBlockContext algorithmicBlock() throws RecognitionException {
@@ -5452,6 +5792,11 @@ public class LaTEXParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof LaTEXListener ) ((LaTEXListener)listener).exitInput(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof LaTEXVisitor ) return ((LaTEXVisitor<? extends T>)visitor).visitInput(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final InputContext input() throws RecognitionException {
@@ -5492,6 +5837,11 @@ public class LaTEXParser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof LaTEXListener ) ((LaTEXListener)listener).exitOutput(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof LaTEXVisitor ) return ((LaTEXVisitor<? extends T>)visitor).visitOutput(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -5539,6 +5889,11 @@ public class LaTEXParser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof LaTEXListener ) ((LaTEXListener)listener).exitState(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof LaTEXVisitor ) return ((LaTEXVisitor<? extends T>)visitor).visitState(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -5596,6 +5951,11 @@ public class LaTEXParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof LaTEXListener ) ((LaTEXListener)listener).exitForBlock(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof LaTEXVisitor ) return ((LaTEXVisitor<? extends T>)visitor).visitForBlock(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final ForBlockContext forBlock() throws RecognitionException {
@@ -5636,6 +5996,11 @@ public class LaTEXParser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof LaTEXListener ) ((LaTEXListener)listener).exitIfBlock(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof LaTEXVisitor ) return ((LaTEXVisitor<? extends T>)visitor).visitIfBlock(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -5683,6 +6048,11 @@ public class LaTEXParser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof LaTEXListener ) ((LaTEXListener)listener).exitReturnBlock(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof LaTEXVisitor ) return ((LaTEXVisitor<? extends T>)visitor).visitReturnBlock(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -5740,6 +6110,11 @@ public class LaTEXParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof LaTEXListener ) ((LaTEXListener)listener).exitUrl(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof LaTEXVisitor ) return ((LaTEXVisitor<? extends T>)visitor).visitUrl(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final UrlContext url() throws RecognitionException {
@@ -5785,6 +6160,11 @@ public class LaTEXParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof LaTEXListener ) ((LaTEXListener)listener).exitUrlText(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof LaTEXVisitor ) return ((LaTEXVisitor<? extends T>)visitor).visitUrlText(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final UrlTextContext urlText() throws RecognitionException {
@@ -5820,6 +6200,11 @@ public class LaTEXParser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof LaTEXListener ) ((LaTEXListener)listener).exitOptions(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof LaTEXVisitor ) return ((LaTEXVisitor<? extends T>)visitor).visitOptions(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -5878,6 +6263,11 @@ public class LaTEXParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof LaTEXListener ) ((LaTEXListener)listener).exitComma(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof LaTEXVisitor ) return ((LaTEXVisitor<? extends T>)visitor).visitComma(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final CommaContext comma() throws RecognitionException {
@@ -5913,6 +6303,11 @@ public class LaTEXParser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof LaTEXListener ) ((LaTEXListener)listener).exitDot(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof LaTEXVisitor ) return ((LaTEXVisitor<? extends T>)visitor).visitDot(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -5950,6 +6345,11 @@ public class LaTEXParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof LaTEXListener ) ((LaTEXListener)listener).exitDots(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof LaTEXVisitor ) return ((LaTEXVisitor<? extends T>)visitor).visitDots(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final DotsContext dots() throws RecognitionException {
@@ -5985,6 +6385,11 @@ public class LaTEXParser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof LaTEXListener ) ((LaTEXListener)listener).exitAppos(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof LaTEXVisitor ) return ((LaTEXVisitor<? extends T>)visitor).visitAppos(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -6022,6 +6427,11 @@ public class LaTEXParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof LaTEXListener ) ((LaTEXListener)listener).exitLparen(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof LaTEXVisitor ) return ((LaTEXVisitor<? extends T>)visitor).visitLparen(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final LparenContext lparen() throws RecognitionException {
@@ -6058,6 +6468,11 @@ public class LaTEXParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof LaTEXListener ) ((LaTEXListener)listener).exitRparen(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof LaTEXVisitor ) return ((LaTEXVisitor<? extends T>)visitor).visitRparen(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final RparenContext rparen() throws RecognitionException {
@@ -6093,6 +6508,11 @@ public class LaTEXParser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof LaTEXListener ) ((LaTEXListener)listener).exitDollarBlock(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof LaTEXVisitor ) return ((LaTEXVisitor<? extends T>)visitor).visitDollarBlock(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -6153,6 +6573,11 @@ public class LaTEXParser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof LaTEXListener ) ((LaTEXListener)listener).exitInlineEquation(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof LaTEXVisitor ) return ((LaTEXVisitor<? extends T>)visitor).visitInlineEquation(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -6354,6 +6779,11 @@ public class LaTEXParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof LaTEXListener ) ((LaTEXListener)listener).exitEquationBlock(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof LaTEXVisitor ) return ((LaTEXVisitor<? extends T>)visitor).visitEquationBlock(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final EquationBlockContext equationBlock() throws RecognitionException {
@@ -6453,6 +6883,11 @@ public class LaTEXParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof LaTEXListener ) ((LaTEXListener)listener).exitDisplayEquation(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof LaTEXVisitor ) return ((LaTEXVisitor<? extends T>)visitor).visitDisplayEquation(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final DisplayEquationContext displayEquation() throws RecognitionException {
@@ -6511,6 +6946,11 @@ public class LaTEXParser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof LaTEXListener ) ((LaTEXListener)listener).exitEqnArray(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof LaTEXVisitor ) return ((LaTEXVisitor<? extends T>)visitor).visitEqnArray(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -6612,6 +7052,11 @@ public class LaTEXParser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof LaTEXListener ) ((LaTEXListener)listener).exitEqnArrayBody(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof LaTEXVisitor ) return ((LaTEXVisitor<? extends T>)visitor).visitEqnArrayBody(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -6835,6 +7280,11 @@ public class LaTEXParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof LaTEXListener ) ((LaTEXListener)listener).exitEqnEquation(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof LaTEXVisitor ) return ((LaTEXVisitor<? extends T>)visitor).visitEqnEquation(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final EqnEquationContext eqnEquation() throws RecognitionException {
@@ -6898,6 +7348,11 @@ public class LaTEXParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof LaTEXListener ) ((LaTEXListener)listener).exitNewLine(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof LaTEXVisitor ) return ((LaTEXVisitor<? extends T>)visitor).visitNewLine(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final NewLineContext newLine() throws RecognitionException {
@@ -6948,6 +7403,11 @@ public class LaTEXParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof LaTEXListener ) ((LaTEXListener)listener).exitDoubleSlash(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof LaTEXVisitor ) return ((LaTEXVisitor<? extends T>)visitor).visitDoubleSlash(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final DoubleSlashContext doubleSlash() throws RecognitionException {
@@ -6986,6 +7446,11 @@ public class LaTEXParser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof LaTEXListener ) ((LaTEXListener)listener).exitRef(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof LaTEXVisitor ) return ((LaTEXVisitor<? extends T>)visitor).visitRef(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -7052,6 +7517,11 @@ public class LaTEXParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof LaTEXListener ) ((LaTEXListener)listener).exitSimpleText(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof LaTEXVisitor ) return ((LaTEXVisitor<? extends T>)visitor).visitSimpleText(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final SimpleTextContext simpleText() throws RecognitionException {
@@ -7108,6 +7578,11 @@ public class LaTEXParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof LaTEXListener ) ((LaTEXListener)listener).exitInterval(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof LaTEXVisitor ) return ((LaTEXVisitor<? extends T>)visitor).visitInterval(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final IntervalContext interval() throws RecognitionException {
@@ -7149,6 +7624,11 @@ public class LaTEXParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof LaTEXListener ) ((LaTEXListener)listener).exitNumbers(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof LaTEXVisitor ) return ((LaTEXVisitor<? extends T>)visitor).visitNumbers(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final NumbersContext numbers() throws RecognitionException {
@@ -7185,6 +7665,11 @@ public class LaTEXParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof LaTEXListener ) ((LaTEXListener)listener).exitArabic(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof LaTEXVisitor ) return ((LaTEXVisitor<? extends T>)visitor).visitArabic(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final ArabicContext arabic() throws RecognitionException {
@@ -7220,6 +7705,11 @@ public class LaTEXParser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof LaTEXListener ) ((LaTEXListener)listener).exitSpecialCharacters(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof LaTEXVisitor ) return ((LaTEXVisitor<? extends T>)visitor).visitSpecialCharacters(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -7268,6 +7758,11 @@ public class LaTEXParser extends Parser {
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof LaTEXListener ) ((LaTEXListener)listener).exitIfThenElse(this);
 		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof LaTEXVisitor ) return ((LaTEXVisitor<? extends T>)visitor).visitIfThenElse(this);
+			else return visitor.visitChildren(this);
+		}
 	}
 
 	public final IfThenElseContext ifThenElse() throws RecognitionException {
@@ -7315,6 +7810,11 @@ public class LaTEXParser extends Parser {
 		@Override
 		public void exitRule(ParseTreeListener listener) {
 			if ( listener instanceof LaTEXListener ) ((LaTEXListener)listener).exitIfThenText(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof LaTEXVisitor ) return ((LaTEXVisitor<? extends T>)visitor).visitIfThenText(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 

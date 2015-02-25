@@ -1,5 +1,5 @@
-// Generated from D:/Charlesworth/LaTEX/src/com/kutsyk/grammar\LaTEX.g4 by ANTLR 4.5
-package com.kutsyk.grammar;
+// Generated from D:/Charlesworth/LaTEX/src/com/kutsyk/grammar/LaTEX\LaTEX.g4 by ANTLR 4.5
+package com.kutsyk.grammar.LaTEX;
 import org.antlr.v4.runtime.misc.NotNull;
 import org.antlr.v4.runtime.tree.ParseTreeListener;
 
