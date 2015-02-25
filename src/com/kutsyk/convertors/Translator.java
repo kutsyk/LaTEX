@@ -220,7 +220,7 @@ public class Translator {
         for (String line : content) {
             if(line.contains("\\begin{document}"))
                 skip = false;
-            if(line.contains("\\begin{thebibliography}"))
+            if(line.toLowerCase().contains("\\section") && line.toLowerCase().contains("acknowledgments"))
                 skip = true;
             if(line.contains("\\end{thebibliography}")){
                 skip = false;
@@ -235,7 +235,7 @@ public class Translator {
 
 
     private void cutBibliographyFromFile(String inputFile) throws IOException {
-        String dataFile = MainWindow.mainPath + "/LaTEXtoXML/bibliography.tex";
+        String dataFile = MainWindow.mainPath + "/LaTEXtoXML/back.tex";
         System.out.println(inputFile);
         File file = new File(inputFile);
         PrintWriter os = new PrintWriter(dataFile);
@@ -250,7 +250,7 @@ public class Translator {
         for (String line : content) {
             if(line.startsWith("%"))
                 continue;
-            if(line.contains("\\begin{thebibliography}"))
+            if(line.toLowerCase().contains("\\section") && line.toLowerCase().contains("acknowledgments"))
                 skip = false;
             if(!skip)
                 os.print(replaceCommandIfFound(line));

@@ -113,12 +113,9 @@ public class MainWindow extends JFrame {
 	 */
 	private static void clear() {
 		deleteFile("result.xml");
-		deleteFile("front.xml");
 		deleteFile("bodyAndBottom.xml");
-		deleteFile("buffer.xml");
-		deleteFile("skipData.xml");
 		deleteFile("mainFile.tex");
-		deleteFile("backmatter.tex");
+		deleteFile("back.tex");
 		deleteFile("newCommands.tex");
 
 		clearDirectory("bibliography");
@@ -174,24 +171,22 @@ public class MainWindow extends JFrame {
 		if (dir.mkdir())
 			;
 
-		String[] folders = { "bibliography", "figures", "suppFigures", "tables" };
+		String[] folders = { "bibliography"};
 		File dir = new File(mainPath + "/LaTEXtoXML/");
 		if (dir.mkdir())
 			;
-		for (int i = 0; i < 4; ++i) {
+		for (int i = 0; i < folders.length; ++i) {
 			dir = new File(mainPath + "/LaTEXtoXML/" + folders[i]);
 			if (dir.mkdir())
 				;
 		}
-
 	}
 
 	/**
 	 * Creates the files.
 	 */
 	private static void createFiles() {
-		String[] files = { "result.xml", "front.xml", "bodyAndBottom.xml",
-				"buffer.xml", "skipData.xml", "mainFile.tex", "bibliography.tex",
+		String[] files = { "result.xml", "bodyAndBottom.xml", "mainFile.tex", "back.tex",
 				"newCommands.tex" };
 		for (int i = 0; i < files.length; ++i) {
 			dir = new File(mainPath + "/LaTEXtoXML/" + files[i]);
@@ -266,7 +261,6 @@ public class MainWindow extends JFrame {
 		PrintWriter resultXml = new PrintWriter(mainPath
 				+ "/LaTEXtoXML/result.xml");
 		InputStream in = null;
-		writePartToResult(resultXml, in, "front");
 		writePartToResult(resultXml, in, "bodyAndBottom");
 		resultXml.close();
 	}

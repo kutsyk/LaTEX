@@ -19,6 +19,26 @@ public interface plosBIBListener extends ParseTreeListener {
 	 */
 	void exitCompilationUnit(@NotNull plosBIBParser.CompilationUnitContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link plosBIBParser#acknowledgment}.
+	 * @param ctx the parse tree
+	 */
+	void enterAcknowledgment(@NotNull plosBIBParser.AcknowledgmentContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link plosBIBParser#acknowledgment}.
+	 * @param ctx the parse tree
+	 */
+	void exitAcknowledgment(@NotNull plosBIBParser.AcknowledgmentContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link plosBIBParser#refs}.
+	 * @param ctx the parse tree
+	 */
+	void enterRefs(@NotNull plosBIBParser.RefsContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link plosBIBParser#refs}.
+	 * @param ctx the parse tree
+	 */
+	void exitRefs(@NotNull plosBIBParser.RefsContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link plosBIBParser#bibItem}.
 	 * @param ctx the parse tree
 	 */

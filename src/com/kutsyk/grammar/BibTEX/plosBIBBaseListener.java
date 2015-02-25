@@ -29,6 +29,30 @@ public class plosBIBBaseListener implements plosBIBListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterAcknowledgment(@NotNull plosBIBParser.AcknowledgmentContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitAcknowledgment(@NotNull plosBIBParser.AcknowledgmentContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterRefs(@NotNull plosBIBParser.RefsContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitRefs(@NotNull plosBIBParser.RefsContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterBibItem(@NotNull plosBIBParser.BibItemContext ctx) { }
 	/**
 	 * {@inheritDoc}

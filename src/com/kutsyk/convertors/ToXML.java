@@ -443,6 +443,7 @@ public class ToXML extends LaTEXBaseListener {
             LaTEXParser.SectionDeclarationContext ctx) {
 
         String title = ctx.text().getText();
+
         //If title is abstract
         String titleCopy = title.toLowerCase();
         wasAbstractDeclared = (titleCopy.length() == abstractString.length() ||
@@ -463,14 +464,8 @@ public class ToXML extends LaTEXBaseListener {
         }
         sectionCloser();
 
-//        if (writeAuthorSummary(title)) {
-//            writer.print("<title>");
-//            wasSectionDeclared = false;
-//            return;
-//        }
         if (title.equals("Acknowledgements") || title.equals("Acknowledgement")
                 || title.equals("Acknowledgments")) {
-//            supplementaryInformationWriter();
             wasAcknowledgement = true;
             wasAcknowledgement = true;
             writer.append("</body><back><acks><title>");
@@ -496,66 +491,6 @@ public class ToXML extends LaTEXBaseListener {
         writer.print("<title>");
         wasSectionDeclared = false;
     }
-
-    /**
-     * Bibliography closer.
-     */
-    private void bibliographyCloser() {
-        if (bibliographyDeclared) {
-            bibliographyInserter();
-            ++appCounter;
-            shouldTextBeMissed = false;
-            writer.print("</refs></back>");
-            bibliographyDeclared = false;
-            wasSectionDeclared = false;
-        }
-    }
-
-    /**
-     * Bibliography inserter.
-     */
-    private void bibliographyInserter() {
-        File bibFiles = new File(MainWindow.mainPath + "/LaTEXtoXML/bibliography");
-        File[] bibFileList = bibFiles.listFiles();
-
-        writer.println();
-        if (bibFileList != null) for (File file : bibFileList) {
-            InputStream in;
-            try {
-                in = new FileInputStream(file);
-                BufferedReader reader = new BufferedReader(new InputStreamReader(in));
-                String line;
-                while ((line = reader.readLine()) != null)
-                    writer.println(line);
-                reader.close();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
-    }
-
-    /**
-     * Write author summary.
-     *
-     * @ param title the title
-     * @return true, if successful
-     */
-//    private boolean writeAuthorSummary(String title) {
-//        if (title.contains("Authorsummary") || title.contains("AuthorSummary")) {
-//            ++sectionId;
-//            ++sectionCounter;
-//            writer.print("<body>");
-//            writer.print("<section level=\"1\" type=\"TextBox\" id=\"section"
-//                    + sectionId + "\">");
-//            ++sectionId;
-//            ++sectionCounter;
-//            writer.print("<section level=\"2\" id=\"section2\">");
-//            shouldTextBeMissed = false;
-//            wasAuthorSection = true;
-//            return true;
-//        }
-//        return false;
-//    }
 
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#exitSectionDeclaration(LaTEXParser.SectionDeclarationContext)
@@ -779,15 +714,6 @@ public class ToXML extends LaTEXBaseListener {
         }
         writer.print("</citref>");
         shouldTextBeMissed = true;
-    }
-
-    /* (non-Javadoc)
-     * @see LaTEXBaseListener#enterDocumentDeclaration(LaTEXParser.DocumentDeclarationContext)
-     */
-    public void enterDocumentDeclaration(
-            LaTEXParser.DocumentDeclarationContext ctx) {
-        writer.print("<doc>");
-        writer.print("<article>");
     }
 
 	/* (non-Javadoc)
@@ -1769,8 +1695,6 @@ public class ToXML extends LaTEXBaseListener {
     public void exitDocumentDeclaration(
             LaTEXParser.DocumentDeclarationContext ctx) {
         sectionCloser();
-        bibliographyCloser();
-        writer.print("</back></article></doc>");
     }
 
 	/* (non-Javadoc)

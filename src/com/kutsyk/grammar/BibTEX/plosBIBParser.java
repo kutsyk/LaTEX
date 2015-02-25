@@ -17,34 +17,35 @@ public class plosBIBParser extends Parser {
 	protected static final PredictionContextCache _sharedContextCache =
 		new PredictionContextCache();
 	public static final int
-		T__0=1, T__1=2, T__2=3, Text=4, String=5, Number=6, INT=7, DOUBLE=8, NameChar=9, 
-		NameStartChar=10, ASSIGN=11, GT=12, LT=13, BANG=14, TILDE=15, QUESTION=16, 
-		COLON=17, EQUAL=18, LE=19, GE=20, NOTEQUAL=21, AND=22, OR=23, INC=24, 
-		DEC=25, ADD=26, SUB=27, MUL=28, BITAND=29, BITOR=30, CARET=31, LPAREN=32, 
-		RPAREN=33, LBRACE=34, RBRACE=35, LBRACK=36, RBRACK=37, SEMI=38, COMMA=39, 
-		DOT=40, WS=41, LINE_COMMENT=42;
+		T__0=1, T__1=2, T__2=3, T__3=4, Text=5, String=6, Number=7, INT=8, DOUBLE=9, 
+		NameChar=10, NameStartChar=11, ASSIGN=12, GT=13, LT=14, BANG=15, TILDE=16, 
+		QUESTION=17, COLON=18, EQUAL=19, LE=20, GE=21, NOTEQUAL=22, AND=23, OR=24, 
+		INC=25, DEC=26, ADD=27, SUB=28, MUL=29, BITAND=30, BITOR=31, CARET=32, 
+		LPAREN=33, RPAREN=34, LBRACE=35, RBRACE=36, LBRACK=37, RBRACK=38, SEMI=39, 
+		COMMA=40, DOT=41, WS=42, LINE_COMMENT=43;
 	public static final int
-		RULE_compilationUnit = 0, RULE_bibItem = 1, RULE_authorList = 2, RULE_author = 3, 
-		RULE_bibLabel = 4, RULE_bibYear = 5, RULE_title = 6, RULE_address = 7, 
-		RULE_publishing = 8;
+		RULE_compilationUnit = 0, RULE_acknowledgment = 1, RULE_refs = 2, RULE_bibItem = 3, 
+		RULE_authorList = 4, RULE_author = 5, RULE_bibLabel = 6, RULE_bibYear = 7, 
+		RULE_title = 8, RULE_address = 9, RULE_publishing = 10;
 	public static final String[] ruleNames = {
-		"compilationUnit", "bibItem", "authorList", "author", "bibLabel", "bibYear", 
-		"title", "address", "publishing"
+		"compilationUnit", "acknowledgment", "refs", "bibItem", "authorList", 
+		"author", "bibLabel", "bibYear", "title", "address", "publishing"
 	};
 
 	private static final String[] _LITERAL_NAMES = {
-		null, "'\\begin{thebibliography}{'", "'\\end{thebibliography}'", "'\\bibitem'", 
-		null, null, null, null, null, null, null, "'='", "'>'", "'<'", "'!'", 
-		"'~'", "'?'", "':'", "'=='", "'<='", "'>='", "'!='", "'&&'", "'||'", "'++'", 
-		"'--'", "'+'", "'-'", "'*'", "'&'", "'|'", "'^'", "'('", "')'", "'{'", 
-		"'}'", "'['", "']'", "';'", "','", "'.'"
+		null, "'\\section*{Acknowledgments}'", "'\\begin{thebibliography}{'", 
+		"'\\end{thebibliography}'", "'\\bibitem'", null, null, null, null, null, 
+		null, null, "'='", "'>'", "'<'", "'!'", "'~'", "'?'", "':'", "'=='", "'<='", 
+		"'>='", "'!='", "'&&'", "'||'", "'++'", "'--'", "'+'", "'-'", "'*'", "'&'", 
+		"'|'", "'^'", "'('", "')'", "'{'", "'}'", "'['", "']'", "';'", "','", 
+		"'.'"
 	};
 	private static final String[] _SYMBOLIC_NAMES = {
-		null, null, null, null, "Text", "String", "Number", "INT", "DOUBLE", "NameChar", 
-		"NameStartChar", "ASSIGN", "GT", "LT", "BANG", "TILDE", "QUESTION", "COLON", 
-		"EQUAL", "LE", "GE", "NOTEQUAL", "AND", "OR", "INC", "DEC", "ADD", "SUB", 
-		"MUL", "BITAND", "BITOR", "CARET", "LPAREN", "RPAREN", "LBRACE", "RBRACE", 
-		"LBRACK", "RBRACK", "SEMI", "COMMA", "DOT", "WS", "LINE_COMMENT"
+		null, null, null, null, null, "Text", "String", "Number", "INT", "DOUBLE", 
+		"NameChar", "NameStartChar", "ASSIGN", "GT", "LT", "BANG", "TILDE", "QUESTION", 
+		"COLON", "EQUAL", "LE", "GE", "NOTEQUAL", "AND", "OR", "INC", "DEC", "ADD", 
+		"SUB", "MUL", "BITAND", "BITOR", "CARET", "LPAREN", "RPAREN", "LBRACE", 
+		"RBRACE", "LBRACK", "RBRACK", "SEMI", "COMMA", "DOT", "WS", "LINE_COMMENT"
 	};
 	public static final Vocabulary VOCABULARY = new VocabularyImpl(_LITERAL_NAMES, _SYMBOLIC_NAMES);
 
@@ -96,12 +97,11 @@ public class plosBIBParser extends Parser {
 		_interp = new ParserATNSimulator(this,_ATN,_decisionToDFA,_sharedContextCache);
 	}
 	public static class CompilationUnitContext extends ParserRuleContext {
-		public TerminalNode Text() { return getToken(plosBIBParser.Text, 0); }
-		public List<BibItemContext> bibItem() {
-			return getRuleContexts(BibItemContext.class);
+		public AcknowledgmentContext acknowledgment() {
+			return getRuleContext(AcknowledgmentContext.class,0);
 		}
-		public BibItemContext bibItem(int i) {
-			return getRuleContext(BibItemContext.class,i);
+		public RefsContext refs() {
+			return getRuleContext(RefsContext.class,0);
 		}
 		public CompilationUnitContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -120,32 +120,113 @@ public class plosBIBParser extends Parser {
 	public final CompilationUnitContext compilationUnit() throws RecognitionException {
 		CompilationUnitContext _localctx = new CompilationUnitContext(_ctx, getState());
 		enterRule(_localctx, 0, RULE_compilationUnit);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(22); 
+			acknowledgment();
+			setState(23); 
+			refs();
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	public static class AcknowledgmentContext extends ParserRuleContext {
+		public AcknowledgmentContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_acknowledgment; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof plosBIBListener ) ((plosBIBListener)listener).enterAcknowledgment(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof plosBIBListener ) ((plosBIBListener)listener).exitAcknowledgment(this);
+		}
+	}
+
+	public final AcknowledgmentContext acknowledgment() throws RecognitionException {
+		AcknowledgmentContext _localctx = new AcknowledgmentContext(_ctx, getState());
+		enterRule(_localctx, 2, RULE_acknowledgment);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(25); 
+			match(T__0);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	public static class RefsContext extends ParserRuleContext {
+		public TerminalNode Text() { return getToken(plosBIBParser.Text, 0); }
+		public List<BibItemContext> bibItem() {
+			return getRuleContexts(BibItemContext.class);
+		}
+		public BibItemContext bibItem(int i) {
+			return getRuleContext(BibItemContext.class,i);
+		}
+		public RefsContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_refs; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof plosBIBListener ) ((plosBIBListener)listener).enterRefs(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof plosBIBListener ) ((plosBIBListener)listener).exitRefs(this);
+		}
+	}
+
+	public final RefsContext refs() throws RecognitionException {
+		RefsContext _localctx = new RefsContext(_ctx, getState());
+		enterRule(_localctx, 4, RULE_refs);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(18); 
-			match(T__0);
-			setState(19); 
+			setState(27); 
+			match(T__1);
+			setState(28); 
 			match(Text);
-			setState(20); 
+			setState(29); 
 			match(RBRACE);
-			setState(22); 
+			setState(31); 
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			do {
 				{
 				{
-				setState(21); 
+				setState(30); 
 				bibItem();
 				}
 				}
-				setState(24); 
+				setState(33); 
 				_errHandler.sync(this);
 				_la = _input.LA(1);
-			} while ( _la==T__2 );
-			setState(26); 
-			match(T__1);
+			} while ( _la==T__3 );
+			setState(35); 
+			match(T__2);
 			}
 		}
 		catch (RecognitionException re) {
@@ -198,31 +279,31 @@ public class plosBIBParser extends Parser {
 
 	public final BibItemContext bibItem() throws RecognitionException {
 		BibItemContext _localctx = new BibItemContext(_ctx, getState());
-		enterRule(_localctx, 2, RULE_bibItem);
+		enterRule(_localctx, 6, RULE_bibItem);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(28); 
-			match(T__2);
-			setState(29); 
-			match(LBRACE);
-			setState(30); 
-			bibLabel();
-			setState(31); 
-			match(RBRACE);
-			setState(32); 
-			authorList();
-			setState(33); 
-			match(LPAREN);
-			setState(34); 
-			bibYear();
-			setState(35); 
-			match(RPAREN);
-			setState(36); 
-			title();
 			setState(37); 
-			address();
+			match(T__3);
 			setState(38); 
+			match(LBRACE);
+			setState(39); 
+			bibLabel();
+			setState(40); 
+			match(RBRACE);
+			setState(41); 
+			authorList();
+			setState(42); 
+			match(LPAREN);
+			setState(43); 
+			bibYear();
+			setState(44); 
+			match(RPAREN);
+			setState(45); 
+			title();
+			setState(46); 
+			address();
+			setState(47); 
 			publishing();
 			}
 		}
@@ -264,26 +345,26 @@ public class plosBIBParser extends Parser {
 
 	public final AuthorListContext authorList() throws RecognitionException {
 		AuthorListContext _localctx = new AuthorListContext(_ctx, getState());
-		enterRule(_localctx, 4, RULE_authorList);
+		enterRule(_localctx, 8, RULE_authorList);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(40); 
+			setState(49); 
 			author();
-			setState(45);
+			setState(54);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			while (_la==COMMA) {
 				{
 				{
-				setState(41); 
+				setState(50); 
 				match(COMMA);
-				setState(42); 
+				setState(51); 
 				author();
 				}
 				}
-				setState(47);
+				setState(56);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			}
@@ -321,22 +402,22 @@ public class plosBIBParser extends Parser {
 
 	public final AuthorContext author() throws RecognitionException {
 		AuthorContext _localctx = new AuthorContext(_ctx, getState());
-		enterRule(_localctx, 6, RULE_author);
+		enterRule(_localctx, 10, RULE_author);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(49); 
+			setState(58); 
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			do {
 				{
 				{
-				setState(48); 
+				setState(57); 
 				match(Text);
 				}
 				}
-				setState(51); 
+				setState(60); 
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			} while ( _la==Text );
@@ -371,11 +452,11 @@ public class plosBIBParser extends Parser {
 
 	public final BibLabelContext bibLabel() throws RecognitionException {
 		BibLabelContext _localctx = new BibLabelContext(_ctx, getState());
-		enterRule(_localctx, 8, RULE_bibLabel);
+		enterRule(_localctx, 12, RULE_bibLabel);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(53); 
+			setState(62); 
 			match(Text);
 			}
 		}
@@ -408,11 +489,11 @@ public class plosBIBParser extends Parser {
 
 	public final BibYearContext bibYear() throws RecognitionException {
 		BibYearContext _localctx = new BibYearContext(_ctx, getState());
-		enterRule(_localctx, 10, RULE_bibYear);
+		enterRule(_localctx, 14, RULE_bibYear);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(55); 
+			setState(64); 
 			match(Text);
 			}
 		}
@@ -449,26 +530,26 @@ public class plosBIBParser extends Parser {
 
 	public final TitleContext title() throws RecognitionException {
 		TitleContext _localctx = new TitleContext(_ctx, getState());
-		enterRule(_localctx, 12, RULE_title);
+		enterRule(_localctx, 16, RULE_title);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(60);
+			setState(69);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			while (_la==Text) {
 				{
 				{
-				setState(57); 
+				setState(66); 
 				match(Text);
 				}
 				}
-				setState(62);
+				setState(71);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			}
-			setState(63); 
+			setState(72); 
 			match(DOT);
 			}
 		}
@@ -505,43 +586,43 @@ public class plosBIBParser extends Parser {
 
 	public final AddressContext address() throws RecognitionException {
 		AddressContext _localctx = new AddressContext(_ctx, getState());
-		enterRule(_localctx, 14, RULE_address);
+		enterRule(_localctx, 18, RULE_address);
 		int _la;
 		try {
 			int _alt;
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(68);
+			setState(77);
 			_errHandler.sync(this);
 			_alt = getInterpreter().adaptivePredict(_input,4,_ctx);
 			while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER ) {
 				if ( _alt==1 ) {
 					{
 					{
-					setState(65); 
+					setState(74); 
 					match(Text);
 					}
 					} 
 				}
-				setState(70);
+				setState(79);
 				_errHandler.sync(this);
 				_alt = getInterpreter().adaptivePredict(_input,4,_ctx);
 			}
-			setState(74);
+			setState(83);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			while (_la==Text) {
 				{
 				{
-				setState(71); 
+				setState(80); 
 				match(Text);
 				}
 				}
-				setState(76);
+				setState(85);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			}
-			setState(77); 
+			setState(86); 
 			match(COMMA);
 			}
 		}
@@ -578,26 +659,26 @@ public class plosBIBParser extends Parser {
 
 	public final PublishingContext publishing() throws RecognitionException {
 		PublishingContext _localctx = new PublishingContext(_ctx, getState());
-		enterRule(_localctx, 16, RULE_publishing);
+		enterRule(_localctx, 20, RULE_publishing);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(82);
+			setState(91);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			while (_la==Text) {
 				{
 				{
-				setState(79); 
+				setState(88); 
 				match(Text);
 				}
 				}
-				setState(84);
+				setState(93);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			}
-			setState(85); 
+			setState(94); 
 			match(DOT);
 			}
 		}
@@ -613,27 +694,29 @@ public class plosBIBParser extends Parser {
 	}
 
 	public static final String _serializedATN =
-		"\3\u0430\ud6d1\u8206\uad2d\u4417\uaef1\u8d80\uaadd\3,Z\4\2\t\2\4\3\t\3"+
-		"\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7\4\b\t\b\4\t\t\t\4\n\t\n\3\2\3\2\3\2\3"+
-		"\2\6\2\31\n\2\r\2\16\2\32\3\2\3\2\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3"+
-		"\3\3\3\3\3\3\3\4\3\4\3\4\7\4.\n\4\f\4\16\4\61\13\4\3\5\6\5\64\n\5\r\5"+
-		"\16\5\65\3\6\3\6\3\7\3\7\3\b\7\b=\n\b\f\b\16\b@\13\b\3\b\3\b\3\t\7\tE"+
-		"\n\t\f\t\16\tH\13\t\3\t\7\tK\n\t\f\t\16\tN\13\t\3\t\3\t\3\n\7\nS\n\n\f"+
-		"\n\16\nV\13\n\3\n\3\n\3\n\2\2\13\2\4\6\b\n\f\16\20\22\2\2W\2\24\3\2\2"+
-		"\2\4\36\3\2\2\2\6*\3\2\2\2\b\63\3\2\2\2\n\67\3\2\2\2\f9\3\2\2\2\16>\3"+
-		"\2\2\2\20F\3\2\2\2\22T\3\2\2\2\24\25\7\3\2\2\25\26\7\6\2\2\26\30\7%\2"+
-		"\2\27\31\5\4\3\2\30\27\3\2\2\2\31\32\3\2\2\2\32\30\3\2\2\2\32\33\3\2\2"+
-		"\2\33\34\3\2\2\2\34\35\7\4\2\2\35\3\3\2\2\2\36\37\7\5\2\2\37 \7$\2\2 "+
-		"!\5\n\6\2!\"\7%\2\2\"#\5\6\4\2#$\7\"\2\2$%\5\f\7\2%&\7#\2\2&\'\5\16\b"+
-		"\2\'(\5\20\t\2()\5\22\n\2)\5\3\2\2\2*/\5\b\5\2+,\7)\2\2,.\5\b\5\2-+\3"+
-		"\2\2\2.\61\3\2\2\2/-\3\2\2\2/\60\3\2\2\2\60\7\3\2\2\2\61/\3\2\2\2\62\64"+
-		"\7\6\2\2\63\62\3\2\2\2\64\65\3\2\2\2\65\63\3\2\2\2\65\66\3\2\2\2\66\t"+
-		"\3\2\2\2\678\7\6\2\28\13\3\2\2\29:\7\6\2\2:\r\3\2\2\2;=\7\6\2\2<;\3\2"+
-		"\2\2=@\3\2\2\2><\3\2\2\2>?\3\2\2\2?A\3\2\2\2@>\3\2\2\2AB\7*\2\2B\17\3"+
-		"\2\2\2CE\7\6\2\2DC\3\2\2\2EH\3\2\2\2FD\3\2\2\2FG\3\2\2\2GL\3\2\2\2HF\3"+
-		"\2\2\2IK\7\6\2\2JI\3\2\2\2KN\3\2\2\2LJ\3\2\2\2LM\3\2\2\2MO\3\2\2\2NL\3"+
-		"\2\2\2OP\7)\2\2P\21\3\2\2\2QS\7\6\2\2RQ\3\2\2\2SV\3\2\2\2TR\3\2\2\2TU"+
-		"\3\2\2\2UW\3\2\2\2VT\3\2\2\2WX\7*\2\2X\23\3\2\2\2\t\32/\65>FLT";
+		"\3\u0430\ud6d1\u8206\uad2d\u4417\uaef1\u8d80\uaadd\3-c\4\2\t\2\4\3\t\3"+
+		"\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7\4\b\t\b\4\t\t\t\4\n\t\n\4\13\t\13\4\f"+
+		"\t\f\3\2\3\2\3\2\3\3\3\3\3\4\3\4\3\4\3\4\6\4\"\n\4\r\4\16\4#\3\4\3\4\3"+
+		"\5\3\5\3\5\3\5\3\5\3\5\3\5\3\5\3\5\3\5\3\5\3\5\3\6\3\6\3\6\7\6\67\n\6"+
+		"\f\6\16\6:\13\6\3\7\6\7=\n\7\r\7\16\7>\3\b\3\b\3\t\3\t\3\n\7\nF\n\n\f"+
+		"\n\16\nI\13\n\3\n\3\n\3\13\7\13N\n\13\f\13\16\13Q\13\13\3\13\7\13T\n\13"+
+		"\f\13\16\13W\13\13\3\13\3\13\3\f\7\f\\\n\f\f\f\16\f_\13\f\3\f\3\f\3\f"+
+		"\2\2\r\2\4\6\b\n\f\16\20\22\24\26\2\2^\2\30\3\2\2\2\4\33\3\2\2\2\6\35"+
+		"\3\2\2\2\b\'\3\2\2\2\n\63\3\2\2\2\f<\3\2\2\2\16@\3\2\2\2\20B\3\2\2\2\22"+
+		"G\3\2\2\2\24O\3\2\2\2\26]\3\2\2\2\30\31\5\4\3\2\31\32\5\6\4\2\32\3\3\2"+
+		"\2\2\33\34\7\3\2\2\34\5\3\2\2\2\35\36\7\4\2\2\36\37\7\7\2\2\37!\7&\2\2"+
+		" \"\5\b\5\2! \3\2\2\2\"#\3\2\2\2#!\3\2\2\2#$\3\2\2\2$%\3\2\2\2%&\7\5\2"+
+		"\2&\7\3\2\2\2\'(\7\6\2\2()\7%\2\2)*\5\16\b\2*+\7&\2\2+,\5\n\6\2,-\7#\2"+
+		"\2-.\5\20\t\2./\7$\2\2/\60\5\22\n\2\60\61\5\24\13\2\61\62\5\26\f\2\62"+
+		"\t\3\2\2\2\638\5\f\7\2\64\65\7*\2\2\65\67\5\f\7\2\66\64\3\2\2\2\67:\3"+
+		"\2\2\28\66\3\2\2\289\3\2\2\29\13\3\2\2\2:8\3\2\2\2;=\7\7\2\2<;\3\2\2\2"+
+		"=>\3\2\2\2><\3\2\2\2>?\3\2\2\2?\r\3\2\2\2@A\7\7\2\2A\17\3\2\2\2BC\7\7"+
+		"\2\2C\21\3\2\2\2DF\7\7\2\2ED\3\2\2\2FI\3\2\2\2GE\3\2\2\2GH\3\2\2\2HJ\3"+
+		"\2\2\2IG\3\2\2\2JK\7+\2\2K\23\3\2\2\2LN\7\7\2\2ML\3\2\2\2NQ\3\2\2\2OM"+
+		"\3\2\2\2OP\3\2\2\2PU\3\2\2\2QO\3\2\2\2RT\7\7\2\2SR\3\2\2\2TW\3\2\2\2U"+
+		"S\3\2\2\2UV\3\2\2\2VX\3\2\2\2WU\3\2\2\2XY\7*\2\2Y\25\3\2\2\2Z\\\7\7\2"+
+		"\2[Z\3\2\2\2\\_\3\2\2\2][\3\2\2\2]^\3\2\2\2^`\3\2\2\2_]\3\2\2\2`a\7+\2"+
+		"\2a\27\3\2\2\2\t#8>GOU]";
 	public static final ATN _ATN =
 		new ATNDeserializer().deserialize(_serializedATN.toCharArray());
 	static {
