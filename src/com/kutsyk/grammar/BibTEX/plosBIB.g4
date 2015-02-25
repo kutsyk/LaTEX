@@ -16,7 +16,7 @@ authorList:
 ;
 
 author:
-    Text NameStartChar*
+    Text+
 ;
 
 bibLabel:

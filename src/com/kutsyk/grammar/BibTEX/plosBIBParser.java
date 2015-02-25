@@ -301,10 +301,9 @@ public class plosBIBParser extends Parser {
 	}
 
 	public static class AuthorContext extends ParserRuleContext {
-		public TerminalNode Text() { return getToken(plosBIBParser.Text, 0); }
-		public List<TerminalNode> NameStartChar() { return getTokens(plosBIBParser.NameStartChar); }
-		public TerminalNode NameStartChar(int i) {
-			return getToken(plosBIBParser.NameStartChar, i);
+		public List<TerminalNode> Text() { return getTokens(plosBIBParser.Text); }
+		public TerminalNode Text(int i) {
+			return getToken(plosBIBParser.Text, i);
 		}
 		public AuthorContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -327,22 +326,20 @@ public class plosBIBParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(48); 
-			match(Text);
-			setState(52);
+			setState(49); 
 			_errHandler.sync(this);
 			_la = _input.LA(1);
-			while (_la==NameStartChar) {
+			do {
 				{
 				{
-				setState(49); 
-				match(NameStartChar);
+				setState(48); 
+				match(Text);
 				}
 				}
-				setState(54);
+				setState(51); 
 				_errHandler.sync(this);
 				_la = _input.LA(1);
-			}
+			} while ( _la==Text );
 			}
 		}
 		catch (RecognitionException re) {
@@ -378,7 +375,7 @@ public class plosBIBParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(55); 
+			setState(53); 
 			match(Text);
 			}
 		}
@@ -415,7 +412,7 @@ public class plosBIBParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(57); 
+			setState(55); 
 			match(Text);
 			}
 		}
@@ -457,21 +454,21 @@ public class plosBIBParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(62);
+			setState(60);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			while (_la==Text) {
 				{
 				{
-				setState(59); 
+				setState(57); 
 				match(Text);
 				}
 				}
-				setState(64);
+				setState(62);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			}
-			setState(65); 
+			setState(63); 
 			match(DOT);
 			}
 		}
@@ -514,37 +511,37 @@ public class plosBIBParser extends Parser {
 			int _alt;
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(70);
+			setState(68);
 			_errHandler.sync(this);
 			_alt = getInterpreter().adaptivePredict(_input,4,_ctx);
 			while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER ) {
 				if ( _alt==1 ) {
 					{
 					{
-					setState(67); 
+					setState(65); 
 					match(Text);
 					}
 					} 
 				}
-				setState(72);
+				setState(70);
 				_errHandler.sync(this);
 				_alt = getInterpreter().adaptivePredict(_input,4,_ctx);
 			}
-			setState(76);
+			setState(74);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			while (_la==Text) {
 				{
 				{
-				setState(73); 
+				setState(71); 
 				match(Text);
 				}
 				}
-				setState(78);
+				setState(76);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			}
-			setState(79); 
+			setState(77); 
 			match(COMMA);
 			}
 		}
@@ -586,21 +583,21 @@ public class plosBIBParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(84);
+			setState(82);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			while (_la==Text) {
 				{
 				{
-				setState(81); 
+				setState(79); 
 				match(Text);
 				}
 				}
-				setState(86);
+				setState(84);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			}
-			setState(87); 
+			setState(85); 
 			match(DOT);
 			}
 		}
@@ -616,28 +613,27 @@ public class plosBIBParser extends Parser {
 	}
 
 	public static final String _serializedATN =
-		"\3\u0430\ud6d1\u8206\uad2d\u4417\uaef1\u8d80\uaadd\3,\\\4\2\t\2\4\3\t"+
-		"\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7\4\b\t\b\4\t\t\t\4\n\t\n\3\2\3\2\3\2"+
-		"\3\2\6\2\31\n\2\r\2\16\2\32\3\2\3\2\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3"+
-		"\3\3\3\3\3\3\3\3\4\3\4\3\4\7\4.\n\4\f\4\16\4\61\13\4\3\5\3\5\7\5\65\n"+
-		"\5\f\5\16\58\13\5\3\6\3\6\3\7\3\7\3\b\7\b?\n\b\f\b\16\bB\13\b\3\b\3\b"+
-		"\3\t\7\tG\n\t\f\t\16\tJ\13\t\3\t\7\tM\n\t\f\t\16\tP\13\t\3\t\3\t\3\n\7"+
-		"\nU\n\n\f\n\16\nX\13\n\3\n\3\n\3\n\2\2\13\2\4\6\b\n\f\16\20\22\2\2Y\2"+
-		"\24\3\2\2\2\4\36\3\2\2\2\6*\3\2\2\2\b\62\3\2\2\2\n9\3\2\2\2\f;\3\2\2\2"+
-		"\16@\3\2\2\2\20H\3\2\2\2\22V\3\2\2\2\24\25\7\3\2\2\25\26\7\6\2\2\26\30"+
-		"\7%\2\2\27\31\5\4\3\2\30\27\3\2\2\2\31\32\3\2\2\2\32\30\3\2\2\2\32\33"+
-		"\3\2\2\2\33\34\3\2\2\2\34\35\7\4\2\2\35\3\3\2\2\2\36\37\7\5\2\2\37 \7"+
-		"$\2\2 !\5\n\6\2!\"\7%\2\2\"#\5\6\4\2#$\7\"\2\2$%\5\f\7\2%&\7#\2\2&\'\5"+
-		"\16\b\2\'(\5\20\t\2()\5\22\n\2)\5\3\2\2\2*/\5\b\5\2+,\7)\2\2,.\5\b\5\2"+
-		"-+\3\2\2\2.\61\3\2\2\2/-\3\2\2\2/\60\3\2\2\2\60\7\3\2\2\2\61/\3\2\2\2"+
-		"\62\66\7\6\2\2\63\65\7\f\2\2\64\63\3\2\2\2\658\3\2\2\2\66\64\3\2\2\2\66"+
-		"\67\3\2\2\2\67\t\3\2\2\28\66\3\2\2\29:\7\6\2\2:\13\3\2\2\2;<\7\6\2\2<"+
-		"\r\3\2\2\2=?\7\6\2\2>=\3\2\2\2?B\3\2\2\2@>\3\2\2\2@A\3\2\2\2AC\3\2\2\2"+
-		"B@\3\2\2\2CD\7*\2\2D\17\3\2\2\2EG\7\6\2\2FE\3\2\2\2GJ\3\2\2\2HF\3\2\2"+
-		"\2HI\3\2\2\2IN\3\2\2\2JH\3\2\2\2KM\7\6\2\2LK\3\2\2\2MP\3\2\2\2NL\3\2\2"+
-		"\2NO\3\2\2\2OQ\3\2\2\2PN\3\2\2\2QR\7)\2\2R\21\3\2\2\2SU\7\6\2\2TS\3\2"+
-		"\2\2UX\3\2\2\2VT\3\2\2\2VW\3\2\2\2WY\3\2\2\2XV\3\2\2\2YZ\7*\2\2Z\23\3"+
-		"\2\2\2\t\32/\66@HNV";
+		"\3\u0430\ud6d1\u8206\uad2d\u4417\uaef1\u8d80\uaadd\3,Z\4\2\t\2\4\3\t\3"+
+		"\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7\4\b\t\b\4\t\t\t\4\n\t\n\3\2\3\2\3\2\3"+
+		"\2\6\2\31\n\2\r\2\16\2\32\3\2\3\2\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3"+
+		"\3\3\3\3\3\3\3\4\3\4\3\4\7\4.\n\4\f\4\16\4\61\13\4\3\5\6\5\64\n\5\r\5"+
+		"\16\5\65\3\6\3\6\3\7\3\7\3\b\7\b=\n\b\f\b\16\b@\13\b\3\b\3\b\3\t\7\tE"+
+		"\n\t\f\t\16\tH\13\t\3\t\7\tK\n\t\f\t\16\tN\13\t\3\t\3\t\3\n\7\nS\n\n\f"+
+		"\n\16\nV\13\n\3\n\3\n\3\n\2\2\13\2\4\6\b\n\f\16\20\22\2\2W\2\24\3\2\2"+
+		"\2\4\36\3\2\2\2\6*\3\2\2\2\b\63\3\2\2\2\n\67\3\2\2\2\f9\3\2\2\2\16>\3"+
+		"\2\2\2\20F\3\2\2\2\22T\3\2\2\2\24\25\7\3\2\2\25\26\7\6\2\2\26\30\7%\2"+
+		"\2\27\31\5\4\3\2\30\27\3\2\2\2\31\32\3\2\2\2\32\30\3\2\2\2\32\33\3\2\2"+
+		"\2\33\34\3\2\2\2\34\35\7\4\2\2\35\3\3\2\2\2\36\37\7\5\2\2\37 \7$\2\2 "+
+		"!\5\n\6\2!\"\7%\2\2\"#\5\6\4\2#$\7\"\2\2$%\5\f\7\2%&\7#\2\2&\'\5\16\b"+
+		"\2\'(\5\20\t\2()\5\22\n\2)\5\3\2\2\2*/\5\b\5\2+,\7)\2\2,.\5\b\5\2-+\3"+
+		"\2\2\2.\61\3\2\2\2/-\3\2\2\2/\60\3\2\2\2\60\7\3\2\2\2\61/\3\2\2\2\62\64"+
+		"\7\6\2\2\63\62\3\2\2\2\64\65\3\2\2\2\65\63\3\2\2\2\65\66\3\2\2\2\66\t"+
+		"\3\2\2\2\678\7\6\2\28\13\3\2\2\29:\7\6\2\2:\r\3\2\2\2;=\7\6\2\2<;\3\2"+
+		"\2\2=@\3\2\2\2><\3\2\2\2>?\3\2\2\2?A\3\2\2\2@>\3\2\2\2AB\7*\2\2B\17\3"+
+		"\2\2\2CE\7\6\2\2DC\3\2\2\2EH\3\2\2\2FD\3\2\2\2FG\3\2\2\2GL\3\2\2\2HF\3"+
+		"\2\2\2IK\7\6\2\2JI\3\2\2\2KN\3\2\2\2LJ\3\2\2\2LM\3\2\2\2MO\3\2\2\2NL\3"+
+		"\2\2\2OP\7)\2\2P\21\3\2\2\2QS\7\6\2\2RQ\3\2\2\2SV\3\2\2\2TR\3\2\2\2TU"+
+		"\3\2\2\2UW\3\2\2\2VT\3\2\2\2WX\7*\2\2X\23\3\2\2\2\t\32/\65>FLT";
 	public static final ATN _ATN =
 		new ATNDeserializer().deserialize(_serializedATN.toCharArray());
 	static {
