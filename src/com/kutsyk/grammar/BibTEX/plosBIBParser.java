@@ -22,7 +22,7 @@ public class plosBIBParser extends Parser {
 		QUESTION=17, COLON=18, EQUAL=19, LE=20, GE=21, NOTEQUAL=22, AND=23, OR=24, 
 		INC=25, DEC=26, ADD=27, SUB=28, MUL=29, BITAND=30, BITOR=31, CARET=32, 
 		LPAREN=33, RPAREN=34, LBRACE=35, RBRACE=36, LBRACK=37, RBRACK=38, SEMI=39, 
-		COMMA=40, DOT=41, WS=42, LINE_COMMENT=43;
+		COMMA=40, DOT=41, WS=42, LINE_COMMENT=43, SkipString=44;
 	public static final int
 		RULE_compilationUnit = 0, RULE_acknowledgment = 1, RULE_refs = 2, RULE_bibItem = 3, 
 		RULE_authorList = 4, RULE_author = 5, RULE_bibLabel = 6, RULE_bibYear = 7, 
@@ -45,7 +45,8 @@ public class plosBIBParser extends Parser {
 		"NameChar", "NameStartChar", "ASSIGN", "GT", "LT", "BANG", "TILDE", "QUESTION", 
 		"COLON", "EQUAL", "LE", "GE", "NOTEQUAL", "AND", "OR", "INC", "DEC", "ADD", 
 		"SUB", "MUL", "BITAND", "BITOR", "CARET", "LPAREN", "RPAREN", "LBRACE", 
-		"RBRACE", "LBRACK", "RBRACK", "SEMI", "COMMA", "DOT", "WS", "LINE_COMMENT"
+		"RBRACE", "LBRACK", "RBRACK", "SEMI", "COMMA", "DOT", "WS", "LINE_COMMENT", 
+		"SkipString"
 	};
 	public static final Vocabulary VOCABULARY = new VocabularyImpl(_LITERAL_NAMES, _SYMBOLIC_NAMES);
 
@@ -141,6 +142,18 @@ public class plosBIBParser extends Parser {
 	}
 
 	public static class AcknowledgmentContext extends ParserRuleContext {
+		public List<TerminalNode> Text() { return getTokens(plosBIBParser.Text); }
+		public TerminalNode Text(int i) {
+			return getToken(plosBIBParser.Text, i);
+		}
+		public List<TerminalNode> COMMA() { return getTokens(plosBIBParser.COMMA); }
+		public TerminalNode COMMA(int i) {
+			return getToken(plosBIBParser.COMMA, i);
+		}
+		public List<TerminalNode> DOT() { return getTokens(plosBIBParser.DOT); }
+		public TerminalNode DOT(int i) {
+			return getToken(plosBIBParser.DOT, i);
+		}
 		public AcknowledgmentContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
@@ -158,11 +171,30 @@ public class plosBIBParser extends Parser {
 	public final AcknowledgmentContext acknowledgment() throws RecognitionException {
 		AcknowledgmentContext _localctx = new AcknowledgmentContext(_ctx, getState());
 		enterRule(_localctx, 2, RULE_acknowledgment);
+		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
 			setState(25); 
 			match(T__0);
+			setState(27); 
+			_errHandler.sync(this);
+			_la = _input.LA(1);
+			do {
+				{
+				{
+				setState(26);
+				_la = _input.LA(1);
+				if ( !((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << Text) | (1L << COMMA) | (1L << DOT))) != 0)) ) {
+				_errHandler.recoverInline(this);
+				}
+				consume();
+				}
+				}
+				setState(29); 
+				_errHandler.sync(this);
+				_la = _input.LA(1);
+			} while ( (((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << Text) | (1L << COMMA) | (1L << DOT))) != 0) );
 			}
 		}
 		catch (RecognitionException re) {
@@ -205,27 +237,27 @@ public class plosBIBParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(27); 
-			match(T__1);
-			setState(28); 
-			match(Text);
-			setState(29); 
-			match(RBRACE);
 			setState(31); 
+			match(T__1);
+			setState(32); 
+			match(Text);
+			setState(33); 
+			match(RBRACE);
+			setState(35); 
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			do {
 				{
 				{
-				setState(30); 
+				setState(34); 
 				bibItem();
 				}
 				}
-				setState(33); 
+				setState(37); 
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			} while ( _la==T__3 );
-			setState(35); 
+			setState(39); 
 			match(T__2);
 			}
 		}
@@ -283,27 +315,27 @@ public class plosBIBParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(37); 
-			match(T__3);
-			setState(38); 
-			match(LBRACE);
-			setState(39); 
-			bibLabel();
-			setState(40); 
-			match(RBRACE);
 			setState(41); 
-			authorList();
+			match(T__3);
 			setState(42); 
-			match(LPAREN);
+			match(LBRACE);
 			setState(43); 
-			bibYear();
+			bibLabel();
 			setState(44); 
-			match(RPAREN);
+			match(RBRACE);
 			setState(45); 
-			title();
+			authorList();
 			setState(46); 
-			address();
+			match(LPAREN);
 			setState(47); 
+			bibYear();
+			setState(48); 
+			match(RPAREN);
+			setState(49); 
+			title();
+			setState(50); 
+			address();
+			setState(51); 
 			publishing();
 			}
 		}
@@ -350,21 +382,21 @@ public class plosBIBParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(49); 
+			setState(53); 
 			author();
-			setState(54);
+			setState(58);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			while (_la==COMMA) {
 				{
 				{
-				setState(50); 
+				setState(54); 
 				match(COMMA);
-				setState(51); 
+				setState(55); 
 				author();
 				}
 				}
-				setState(56);
+				setState(60);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			}
@@ -407,17 +439,17 @@ public class plosBIBParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(58); 
+			setState(62); 
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			do {
 				{
 				{
-				setState(57); 
+				setState(61); 
 				match(Text);
 				}
 				}
-				setState(60); 
+				setState(64); 
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			} while ( _la==Text );
@@ -456,7 +488,7 @@ public class plosBIBParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(62); 
+			setState(66); 
 			match(Text);
 			}
 		}
@@ -493,7 +525,7 @@ public class plosBIBParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(64); 
+			setState(68); 
 			match(Text);
 			}
 		}
@@ -535,21 +567,21 @@ public class plosBIBParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(69);
+			setState(73);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			while (_la==Text) {
 				{
 				{
-				setState(66); 
+				setState(70); 
 				match(Text);
 				}
 				}
-				setState(71);
+				setState(75);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			}
-			setState(72); 
+			setState(76); 
 			match(DOT);
 			}
 		}
@@ -592,37 +624,37 @@ public class plosBIBParser extends Parser {
 			int _alt;
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(77);
+			setState(81);
 			_errHandler.sync(this);
-			_alt = getInterpreter().adaptivePredict(_input,4,_ctx);
+			_alt = getInterpreter().adaptivePredict(_input,5,_ctx);
 			while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER ) {
 				if ( _alt==1 ) {
 					{
 					{
-					setState(74); 
+					setState(78); 
 					match(Text);
 					}
 					} 
 				}
-				setState(79);
+				setState(83);
 				_errHandler.sync(this);
-				_alt = getInterpreter().adaptivePredict(_input,4,_ctx);
+				_alt = getInterpreter().adaptivePredict(_input,5,_ctx);
 			}
-			setState(83);
+			setState(87);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			while (_la==Text) {
 				{
 				{
-				setState(80); 
+				setState(84); 
 				match(Text);
 				}
 				}
-				setState(85);
+				setState(89);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			}
-			setState(86); 
+			setState(90); 
 			match(COMMA);
 			}
 		}
@@ -664,21 +696,21 @@ public class plosBIBParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(91);
+			setState(95);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			while (_la==Text) {
 				{
 				{
-				setState(88); 
+				setState(92); 
 				match(Text);
 				}
 				}
-				setState(93);
+				setState(97);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			}
-			setState(94); 
+			setState(98); 
 			match(DOT);
 			}
 		}
@@ -694,29 +726,30 @@ public class plosBIBParser extends Parser {
 	}
 
 	public static final String _serializedATN =
-		"\3\u0430\ud6d1\u8206\uad2d\u4417\uaef1\u8d80\uaadd\3-c\4\2\t\2\4\3\t\3"+
+		"\3\u0430\ud6d1\u8206\uad2d\u4417\uaef1\u8d80\uaadd\3.g\4\2\t\2\4\3\t\3"+
 		"\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7\4\b\t\b\4\t\t\t\4\n\t\n\4\13\t\13\4\f"+
-		"\t\f\3\2\3\2\3\2\3\3\3\3\3\4\3\4\3\4\3\4\6\4\"\n\4\r\4\16\4#\3\4\3\4\3"+
-		"\5\3\5\3\5\3\5\3\5\3\5\3\5\3\5\3\5\3\5\3\5\3\5\3\6\3\6\3\6\7\6\67\n\6"+
-		"\f\6\16\6:\13\6\3\7\6\7=\n\7\r\7\16\7>\3\b\3\b\3\t\3\t\3\n\7\nF\n\n\f"+
-		"\n\16\nI\13\n\3\n\3\n\3\13\7\13N\n\13\f\13\16\13Q\13\13\3\13\7\13T\n\13"+
-		"\f\13\16\13W\13\13\3\13\3\13\3\f\7\f\\\n\f\f\f\16\f_\13\f\3\f\3\f\3\f"+
-		"\2\2\r\2\4\6\b\n\f\16\20\22\24\26\2\2^\2\30\3\2\2\2\4\33\3\2\2\2\6\35"+
-		"\3\2\2\2\b\'\3\2\2\2\n\63\3\2\2\2\f<\3\2\2\2\16@\3\2\2\2\20B\3\2\2\2\22"+
-		"G\3\2\2\2\24O\3\2\2\2\26]\3\2\2\2\30\31\5\4\3\2\31\32\5\6\4\2\32\3\3\2"+
-		"\2\2\33\34\7\3\2\2\34\5\3\2\2\2\35\36\7\4\2\2\36\37\7\7\2\2\37!\7&\2\2"+
-		" \"\5\b\5\2! \3\2\2\2\"#\3\2\2\2#!\3\2\2\2#$\3\2\2\2$%\3\2\2\2%&\7\5\2"+
-		"\2&\7\3\2\2\2\'(\7\6\2\2()\7%\2\2)*\5\16\b\2*+\7&\2\2+,\5\n\6\2,-\7#\2"+
-		"\2-.\5\20\t\2./\7$\2\2/\60\5\22\n\2\60\61\5\24\13\2\61\62\5\26\f\2\62"+
-		"\t\3\2\2\2\638\5\f\7\2\64\65\7*\2\2\65\67\5\f\7\2\66\64\3\2\2\2\67:\3"+
-		"\2\2\28\66\3\2\2\289\3\2\2\29\13\3\2\2\2:8\3\2\2\2;=\7\7\2\2<;\3\2\2\2"+
-		"=>\3\2\2\2><\3\2\2\2>?\3\2\2\2?\r\3\2\2\2@A\7\7\2\2A\17\3\2\2\2BC\7\7"+
-		"\2\2C\21\3\2\2\2DF\7\7\2\2ED\3\2\2\2FI\3\2\2\2GE\3\2\2\2GH\3\2\2\2HJ\3"+
-		"\2\2\2IG\3\2\2\2JK\7+\2\2K\23\3\2\2\2LN\7\7\2\2ML\3\2\2\2NQ\3\2\2\2OM"+
-		"\3\2\2\2OP\3\2\2\2PU\3\2\2\2QO\3\2\2\2RT\7\7\2\2SR\3\2\2\2TW\3\2\2\2U"+
-		"S\3\2\2\2UV\3\2\2\2VX\3\2\2\2WU\3\2\2\2XY\7*\2\2Y\25\3\2\2\2Z\\\7\7\2"+
-		"\2[Z\3\2\2\2\\_\3\2\2\2][\3\2\2\2]^\3\2\2\2^`\3\2\2\2_]\3\2\2\2`a\7+\2"+
-		"\2a\27\3\2\2\2\t#8>GOU]";
+		"\t\f\3\2\3\2\3\2\3\3\3\3\6\3\36\n\3\r\3\16\3\37\3\4\3\4\3\4\3\4\6\4&\n"+
+		"\4\r\4\16\4\'\3\4\3\4\3\5\3\5\3\5\3\5\3\5\3\5\3\5\3\5\3\5\3\5\3\5\3\5"+
+		"\3\6\3\6\3\6\7\6;\n\6\f\6\16\6>\13\6\3\7\6\7A\n\7\r\7\16\7B\3\b\3\b\3"+
+		"\t\3\t\3\n\7\nJ\n\n\f\n\16\nM\13\n\3\n\3\n\3\13\7\13R\n\13\f\13\16\13"+
+		"U\13\13\3\13\7\13X\n\13\f\13\16\13[\13\13\3\13\3\13\3\f\7\f`\n\f\f\f\16"+
+		"\fc\13\f\3\f\3\f\3\f\2\2\r\2\4\6\b\n\f\16\20\22\24\26\2\3\4\2\7\7*+c\2"+
+		"\30\3\2\2\2\4\33\3\2\2\2\6!\3\2\2\2\b+\3\2\2\2\n\67\3\2\2\2\f@\3\2\2\2"+
+		"\16D\3\2\2\2\20F\3\2\2\2\22K\3\2\2\2\24S\3\2\2\2\26a\3\2\2\2\30\31\5\4"+
+		"\3\2\31\32\5\6\4\2\32\3\3\2\2\2\33\35\7\3\2\2\34\36\t\2\2\2\35\34\3\2"+
+		"\2\2\36\37\3\2\2\2\37\35\3\2\2\2\37 \3\2\2\2 \5\3\2\2\2!\"\7\4\2\2\"#"+
+		"\7\7\2\2#%\7&\2\2$&\5\b\5\2%$\3\2\2\2&\'\3\2\2\2\'%\3\2\2\2\'(\3\2\2\2"+
+		"()\3\2\2\2)*\7\5\2\2*\7\3\2\2\2+,\7\6\2\2,-\7%\2\2-.\5\16\b\2./\7&\2\2"+
+		"/\60\5\n\6\2\60\61\7#\2\2\61\62\5\20\t\2\62\63\7$\2\2\63\64\5\22\n\2\64"+
+		"\65\5\24\13\2\65\66\5\26\f\2\66\t\3\2\2\2\67<\5\f\7\289\7*\2\29;\5\f\7"+
+		"\2:8\3\2\2\2;>\3\2\2\2<:\3\2\2\2<=\3\2\2\2=\13\3\2\2\2><\3\2\2\2?A\7\7"+
+		"\2\2@?\3\2\2\2AB\3\2\2\2B@\3\2\2\2BC\3\2\2\2C\r\3\2\2\2DE\7\7\2\2E\17"+
+		"\3\2\2\2FG\7\7\2\2G\21\3\2\2\2HJ\7\7\2\2IH\3\2\2\2JM\3\2\2\2KI\3\2\2\2"+
+		"KL\3\2\2\2LN\3\2\2\2MK\3\2\2\2NO\7+\2\2O\23\3\2\2\2PR\7\7\2\2QP\3\2\2"+
+		"\2RU\3\2\2\2SQ\3\2\2\2ST\3\2\2\2TY\3\2\2\2US\3\2\2\2VX\7\7\2\2WV\3\2\2"+
+		"\2X[\3\2\2\2YW\3\2\2\2YZ\3\2\2\2Z\\\3\2\2\2[Y\3\2\2\2\\]\7*\2\2]\25\3"+
+		"\2\2\2^`\7\7\2\2_^\3\2\2\2`c\3\2\2\2a_\3\2\2\2ab\3\2\2\2bd\3\2\2\2ca\3"+
+		"\2\2\2de\7+\2\2e\27\3\2\2\2\n\37\'<BKSYa";
 	public static final ATN _ATN =
 		new ATNDeserializer().deserialize(_serializedATN.toCharArray());
 	static {

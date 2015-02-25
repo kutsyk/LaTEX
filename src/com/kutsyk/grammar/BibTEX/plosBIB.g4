@@ -7,7 +7,7 @@ compilationUnit:
 
 acknowledgment:
   '\\section*{Acknowledgments}'
-
+    (Text | COMMA | DOT)+
 ;
 
 refs:
@@ -137,4 +137,8 @@ WS  :  [ \t\r\n\u000C]+ -> skip;
 
 LINE_COMMENT:
 	'%' ~[\r\n]* ('\r' | '\n') -> skip
+;
+
+SkipString:
+    '\\nolinenumbers' ~[\r\n]* ('\r' | '\n') -> skip
 ;

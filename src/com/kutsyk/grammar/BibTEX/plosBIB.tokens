@@ -41,6 +41,7 @@ COMMA=40
 DOT=41
 WS=42
 LINE_COMMENT=43
+SkipString=44
 '\\section*{Acknowledgments}'=1
 '\\begin{thebibliography}{'=2
 '\\end{thebibliography}'=3

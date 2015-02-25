@@ -10,17 +10,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e2b187e4-9aa6-4834-8342-4783480434ef" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/kutsyk/convertors/FrontmatterCreator.java" afterPath="$PROJECT_DIR$/src/com/kutsyk/convertors/FrontmatterCreator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/kutsyk/windows/MainWindow.java" afterPath="$PROJECT_DIR$/src/com/kutsyk/windows/MainWindow.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/kutsyk/convertors/ToXML.java" afterPath="$PROJECT_DIR$/src/com/kutsyk/convertors/ToXML.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/kutsyk/convertors/Translator.java" afterPath="$PROJECT_DIR$/src/com/kutsyk/convertors/Translator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LaTEXtoXML/bodyAndBottom.xml" afterPath="$PROJECT_DIR$/LaTEXtoXML/bodyAndBottom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/kutsyk/grammar/BibTEX/plosBIB.g4" afterPath="$PROJECT_DIR$/src/com/kutsyk/grammar/BibTEX/plosBIB.g4" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/kutsyk/grammar/BibTEX/plosBIB.tokens" afterPath="$PROJECT_DIR$/src/com/kutsyk/grammar/BibTEX/plosBIB.tokens" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/kutsyk/grammar/BibTEX/plosBIBBaseListener.java" afterPath="$PROJECT_DIR$/src/com/kutsyk/grammar/BibTEX/plosBIBBaseListener.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/kutsyk/grammar/BibTEX/plosBIBLexer.java" afterPath="$PROJECT_DIR$/src/com/kutsyk/grammar/BibTEX/plosBIBLexer.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/kutsyk/grammar/BibTEX/plosBIBLexer.tokens" afterPath="$PROJECT_DIR$/src/com/kutsyk/grammar/BibTEX/plosBIBLexer.tokens" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/kutsyk/grammar/BibTEX/plosBIBListener.java" afterPath="$PROJECT_DIR$/src/com/kutsyk/grammar/BibTEX/plosBIBListener.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/kutsyk/grammar/BibTEX/plosBIBParser.java" afterPath="$PROJECT_DIR$/src/com/kutsyk/grammar/BibTEX/plosBIBParser.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -91,10 +84,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="plosBIB.g4" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="plosBIB.g4" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/kutsyk/grammar/BibTEX/plosBIB.g4">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="0" selection-start="114" selection-end="114" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2465">
+            <state line="8" column="31" selection-start="113" selection-end="113" vertical-scroll-proportion="0.46735394" vertical-offset="0" max-vertical-offset="2533">
               <folding />
             </state>
           </provider>
@@ -111,10 +104,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MainWindow.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="MainWindow.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/kutsyk/windows/MainWindow.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="120" column="33" selection-start="2891" selection-end="2891" vertical-scroll-proportion="1.7757576" vertical-offset="1526" max-vertical-offset="16150">
+            <state line="120" column="33" selection-start="2891" selection-end="2891" vertical-scroll-proportion="0.0" vertical-offset="965" max-vertical-offset="16150">
               <folding>
                 <element signature="e#7110#7137#1" expanded="true" />
               </folding>
@@ -175,12 +168,12 @@
         <option value="$PROJECT_DIR$/src/ToXML.java" />
         <option value="$PROJECT_DIR$/src/com/kutsyk/grammar/LaTEX.g4" />
         <option value="$PROJECT_DIR$/src/com/kutsyk/grammar/BibTEX/BibTEX.g4" />
-        <option value="$PROJECT_DIR$/src/com/kutsyk/grammar/BibTEX/plosBIB.g4" />
         <option value="$PROJECT_DIR$/src/com/kutsyk/convertors/FrontmatterCreator.java" />
         <option value="$PROJECT_DIR$/src/com/kutsyk/convertors/ToXML.java" />
         <option value="$USER_HOME$/Desktop/plos_template.tex - final.xml" />
         <option value="$PROJECT_DIR$/src/com/kutsyk/convertors/Translator.java" />
         <option value="$PROJECT_DIR$/src/com/kutsyk/windows/MainWindow.java" />
+        <option value="$PROJECT_DIR$/src/com/kutsyk/grammar/BibTEX/plosBIB.g4" />
       </list>
     </option>
   </component>
@@ -792,13 +785,13 @@
       <workItem from="1424248815842" duration="184000" />
       <workItem from="1424459439002" duration="691000" />
       <workItem from="1424462048357" duration="77000" />
-      <workItem from="1424878154338" duration="8725000" />
+      <workItem from="1424878154338" duration="10447000" />
     </task>
     <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="156871000" />
+    <option name="totallyTimeSpent" value="158593000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -822,14 +815,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952693" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32626426" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.48287112" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.48287112" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32930514" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39967373" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -846,7 +839,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32930514" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.244713" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.66721046" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.66721046" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1177,13 +1170,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/kutsyk/grammar/BibTEX/plosBIB.g4">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="0" selection-start="114" selection-end="114" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2465">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/kutsyk/convertors/ToXML.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="717" column="0" selection-start="18072" selection-end="18072" vertical-scroll-proportion="0.18739353" vertical-offset="12079" max-vertical-offset="29257">
@@ -1211,10 +1197,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/kutsyk/windows/MainWindow.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="120" column="33" selection-start="2891" selection-end="2891" vertical-scroll-proportion="1.7757576" vertical-offset="1526" max-vertical-offset="16150">
+        <state line="120" column="33" selection-start="2891" selection-end="2891" vertical-scroll-proportion="0.0" vertical-offset="965" max-vertical-offset="16150">
           <folding>
             <element signature="e#7110#7137#1" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/kutsyk/grammar/BibTEX/plosBIB.g4">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="31" selection-start="113" selection-end="113" vertical-scroll-proportion="0.46735394" vertical-offset="0" max-vertical-offset="2533">
+          <folding />
         </state>
       </provider>
     </entry>
