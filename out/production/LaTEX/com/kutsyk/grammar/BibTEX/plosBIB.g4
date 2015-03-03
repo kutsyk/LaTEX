@@ -7,7 +7,7 @@ compilationUnit:
 
 acknowledgment:
   '\\section*{Acknowledgments}'
-    Text* '\n' '\n'
+    (Text | COMMA | DOT)+
 ;
 
 refs:

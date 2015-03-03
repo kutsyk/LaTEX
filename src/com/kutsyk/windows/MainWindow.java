@@ -1,5 +1,7 @@
 package com.kutsyk.windows;
 
+import com.kurpiak.styling.*;
+import com.kurpiak.styling.StyledDocument;
 import com.kutsyk.TextEditor.TextLineNumber;
 import com.kutsyk.convertors.Translator;
 
@@ -468,7 +470,7 @@ public class MainWindow extends JFrame {
 	}
 
 	private void initLineTextEditor() {
-		documentText = new JTextPane(Doc.DOCUMENT);
+		documentText = new JTextPane(StyledDocument.STYLED_CODUMENT);
 		lineNumber = new TextLineNumber(documentText);
 
 		scrollPane = new JScrollPane(documentText);
