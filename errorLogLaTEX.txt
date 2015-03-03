@@ -1,6 +1,1270 @@
-D:\Charlesworth\plos_template\plos_template.tex
+Exception in thread "AWT-EventQueue-0" 
+java.lang.StringIndexOutOfBoundsException: String index out of range: 28
 
 
-ToXML translator
+	at java.lang.String.charAt(String.java:658)
+
+
+	at com.kurpiak.styling.StyledDocument$1.indexOfNewlineCharacterBeforeCaretPosition(StyledDocument.java:104)
+
+
+	at com.kurpiak.styling.StyledDocument$1.highlight(StyledDocument.java:36)
+
+
+	at com.kurpiak.styling.StyledDocument$1.remove(StyledDocument.java:29)
+
+
+	at javax.swing.text.DefaultEditorKit$DeletePrevCharAction.actionPerformed(DefaultEditorKit.java:1071)
+
+
+	at javax.swing.SwingUtilities.notifyAction(SwingUtilities.java:1662)
+
+
+	at javax.swing.JComponent.processKeyBinding(JComponent.java:2878)
+
+
+	at javax.swing.JComponent.processKeyBindings(JComponent.java:2925)
+
+
+	at javax.swing.JComponent.processKeyEvent(JComponent.java:2841)
+
+
+	at java.awt.Component.processEvent(Component.java:6293)
+
+
+	at java.awt.Container.processEvent(Container.java:2229)
+
+
+	at java.awt.Component.dispatchEventImpl(Component.java:4872)
+
+
+	at java.awt.Container.dispatchEventImpl(Container.java:2287)
+
+
+	at java.awt.Component.dispatchEvent(Component.java:4698)
+
+
+	at java.awt.KeyboardFocusManager.redispatchEvent(KeyboardFocusManager.java:1887)
+
+
+	at java.awt.DefaultKeyboardFocusManager.dispatchKeyEvent(DefaultKeyboardFocusManager.java:762)
+
+
+	at java.awt.DefaultKeyboardFocusManager.preDispatchKeyEvent(DefaultKeyboardFocusManager.java:1027)
+
+
+	at java.awt.DefaultKeyboardFocusManager.typeAheadAssertions(DefaultKeyboardFocusManager.java:899)
+
+
+	at java.awt.DefaultKeyboardFocusManager.dispatchEvent(DefaultKeyboardFocusManager.java:727)
+
+
+	at java.awt.Component.dispatchEventImpl(Component.java:4742)
+
+
+	at java.awt.Container.dispatchEventImpl(Container.java:2287)
+
+
+	at java.awt.Window.dispatchEventImpl(Window.java:2719)
+
+
+	at java.awt.Component.dispatchEvent(Component.java:4698)
+
+
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:735)
+
+
+	at java.awt.EventQueue.access$200(EventQueue.java:103)
+
+
+	at java.awt.EventQueue$3.run(EventQueue.java:694)
+
+
+	at java.awt.EventQueue$3.run(EventQueue.java:692)
+
+
+	at java.security.AccessController.doPrivileged(Native Method)
+
+
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+
+
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:87)
+
+
+	at java.awt.EventQueue$4.run(EventQueue.java:708)
+
+
+	at java.awt.EventQueue$4.run(EventQueue.java:706)
+
+
+	at java.security.AccessController.doPrivileged(Native Method)
+
+
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+
+
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:705)
+
+
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:242)
+
+
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:161)
+
+
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:150)
+
+
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:146)
+
+
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:138)
+
+
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:91)
+
+
+Exception in thread "AWT-EventQueue-0" 
+java.lang.StringIndexOutOfBoundsException: String index out of range: 27
+
+
+	at java.lang.String.charAt(String.java:658)
+
+
+	at com.kurpiak.styling.StyledDocument$1.indexOfNewlineCharacterBeforeCaretPosition(StyledDocument.java:104)
+
+
+	at com.kurpiak.styling.StyledDocument$1.highlight(StyledDocument.java:36)
+
+
+	at com.kurpiak.styling.StyledDocument$1.remove(StyledDocument.java:29)
+
+
+	at javax.swing.text.DefaultEditorKit$DeletePrevCharAction.actionPerformed(DefaultEditorKit.java:1071)
+
+
+	at javax.swing.SwingUtilities.notifyAction(SwingUtilities.java:1662)
+
+
+	at javax.swing.JComponent.processKeyBinding(JComponent.java:2878)
+
+
+	at javax.swing.JComponent.processKeyBindings(JComponent.java:2925)
+
+
+	at javax.swing.JComponent.processKeyEvent(JComponent.java:2841)
+
+
+	at java.awt.Component.processEvent(Component.java:6293)
+
+
+	at java.awt.Container.processEvent(Container.java:2229)
+
+
+	at java.awt.Component.dispatchEventImpl(Component.java:4872)
+
+
+	at java.awt.Container.dispatchEventImpl(Container.java:2287)
+
+
+	at java.awt.Component.dispatchEvent(Component.java:4698)
+
+
+	at java.awt.KeyboardFocusManager.redispatchEvent(KeyboardFocusManager.java:1887)
+
+
+	at java.awt.DefaultKeyboardFocusManager.dispatchKeyEvent(DefaultKeyboardFocusManager.java:762)
+
+
+	at java.awt.DefaultKeyboardFocusManager.preDispatchKeyEvent(DefaultKeyboardFocusManager.java:1027)
+
+
+	at java.awt.DefaultKeyboardFocusManager.typeAheadAssertions(DefaultKeyboardFocusManager.java:899)
+
+
+	at java.awt.DefaultKeyboardFocusManager.dispatchEvent(DefaultKeyboardFocusManager.java:727)
+
+
+	at java.awt.Component.dispatchEventImpl(Component.java:4742)
+
+
+	at java.awt.Container.dispatchEventImpl(Container.java:2287)
+
+
+	at java.awt.Window.dispatchEventImpl(Window.java:2719)
+
+
+	at java.awt.Component.dispatchEvent(Component.java:4698)
+
+
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:735)
+
+
+	at java.awt.EventQueue.access$200(EventQueue.java:103)
+
+
+	at java.awt.EventQueue$3.run(EventQueue.java:694)
+
+
+	at java.awt.EventQueue$3.run(EventQueue.java:692)
+
+
+	at java.security.AccessController.doPrivileged(Native Method)
+
+
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+
+
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:87)
+
+
+	at java.awt.EventQueue$4.run(EventQueue.java:708)
+
+
+	at java.awt.EventQueue$4.run(EventQueue.java:706)
+
+
+	at java.security.AccessController.doPrivileged(Native Method)
+
+
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+
+
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:705)
+
+
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:242)
+
+
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:161)
+
+
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:150)
+
+
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:146)
+
+
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:138)
+
+
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:91)
+
+
+Exception in thread "AWT-EventQueue-0" 
+java.lang.StringIndexOutOfBoundsException: String index out of range: 26
+
+
+	at java.lang.String.charAt(String.java:658)
+
+
+	at com.kurpiak.styling.StyledDocument$1.indexOfNewlineCharacterBeforeCaretPosition(StyledDocument.java:104)
+
+
+	at com.kurpiak.styling.StyledDocument$1.highlight(StyledDocument.java:36)
+
+
+	at com.kurpiak.styling.StyledDocument$1.remove(StyledDocument.java:29)
+
+
+	at javax.swing.text.DefaultEditorKit$DeletePrevCharAction.actionPerformed(DefaultEditorKit.java:1071)
+
+
+	at javax.swing.SwingUtilities.notifyAction(SwingUtilities.java:1662)
+
+
+	at javax.swing.JComponent.processKeyBinding(JComponent.java:2878)
+
+
+	at javax.swing.JComponent.processKeyBindings(JComponent.java:2925)
+
+
+	at javax.swing.JComponent.processKeyEvent(JComponent.java:2841)
+
+
+	at java.awt.Component.processEvent(Component.java:6293)
+
+
+	at java.awt.Container.processEvent(Container.java:2229)
+
+
+	at java.awt.Component.dispatchEventImpl(Component.java:4872)
+
+
+	at java.awt.Container.dispatchEventImpl(Container.java:2287)
+
+
+	at java.awt.Component.dispatchEvent(Component.java:4698)
+
+
+	at java.awt.KeyboardFocusManager.redispatchEvent(KeyboardFocusManager.java:1887)
+
+
+	at java.awt.DefaultKeyboardFocusManager.dispatchKeyEvent(DefaultKeyboardFocusManager.java:762)
+
+
+	at java.awt.DefaultKeyboardFocusManager.preDispatchKeyEvent(DefaultKeyboardFocusManager.java:1027)
+
+
+	at java.awt.DefaultKeyboardFocusManager.typeAheadAssertions(DefaultKeyboardFocusManager.java:899)
+
+
+	at java.awt.DefaultKeyboardFocusManager.dispatchEvent(DefaultKeyboardFocusManager.java:727)
+
+
+	at java.awt.Component.dispatchEventImpl(Component.java:4742)
+
+
+	at java.awt.Container.dispatchEventImpl(Container.java:2287)
+
+
+	at java.awt.Window.dispatchEventImpl(Window.java:2719)
+
+
+	at java.awt.Component.dispatchEvent(Component.java:4698)
+
+
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:735)
+
+
+	at java.awt.EventQueue.access$200(EventQueue.java:103)
+
+
+	at java.awt.EventQueue$3.run(EventQueue.java:694)
+
+
+	at java.awt.EventQueue$3.run(EventQueue.java:692)
+
+
+	at java.security.AccessController.doPrivileged(Native Method)
+
+
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+
+
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:87)
+
+
+	at java.awt.EventQueue$4.run(EventQueue.java:708)
+
+
+	at java.awt.EventQueue$4.run(EventQueue.java:706)
+
+
+	at java.security.AccessController.doPrivileged(Native Method)
+
+
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+
+
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:705)
+
+
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:242)
+
+
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:161)
+
+
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:150)
+
+
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:146)
+
+
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:138)
+
+
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:91)
+
+
+Exception in thread "AWT-EventQueue-0" 
+java.lang.StringIndexOutOfBoundsException: String index out of range: 25
+
+
+	at java.lang.String.charAt(String.java:658)
+
+
+	at com.kurpiak.styling.StyledDocument$1.indexOfNewlineCharacterBeforeCaretPosition(StyledDocument.java:104)
+
+
+	at com.kurpiak.styling.StyledDocument$1.highlight(StyledDocument.java:36)
+
+
+	at com.kurpiak.styling.StyledDocument$1.remove(StyledDocument.java:29)
+
+
+	at javax.swing.text.DefaultEditorKit$DeletePrevCharAction.actionPerformed(DefaultEditorKit.java:1071)
+
+
+	at javax.swing.SwingUtilities.notifyAction(SwingUtilities.java:1662)
+
+
+	at javax.swing.JComponent.processKeyBinding(JComponent.java:2878)
+
+
+	at javax.swing.JComponent.processKeyBindings(JComponent.java:2925)
+
+
+	at javax.swing.JComponent.processKeyEvent(JComponent.java:2841)
+
+
+	at java.awt.Component.processEvent(Component.java:6293)
+
+
+	at java.awt.Container.processEvent(Container.java:2229)
+
+
+	at java.awt.Component.dispatchEventImpl(Component.java:4872)
+
+
+	at java.awt.Container.dispatchEventImpl(Container.java:2287)
+
+
+	at java.awt.Component.dispatchEvent(Component.java:4698)
+
+
+	at java.awt.KeyboardFocusManager.redispatchEvent(KeyboardFocusManager.java:1887)
+
+
+	at java.awt.DefaultKeyboardFocusManager.dispatchKeyEvent(DefaultKeyboardFocusManager.java:762)
+
+
+	at java.awt.DefaultKeyboardFocusManager.preDispatchKeyEvent(DefaultKeyboardFocusManager.java:1027)
+
+
+	at java.awt.DefaultKeyboardFocusManager.typeAheadAssertions(DefaultKeyboardFocusManager.java:899)
+
+
+	at java.awt.DefaultKeyboardFocusManager.dispatchEvent(DefaultKeyboardFocusManager.java:727)
+
+
+	at java.awt.Component.dispatchEventImpl(Component.java:4742)
+
+
+	at java.awt.Container.dispatchEventImpl(Container.java:2287)
+
+
+	at java.awt.Window.dispatchEventImpl(Window.java:2719)
+
+
+	at java.awt.Component.dispatchEvent(Component.java:4698)
+
+
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:735)
+
+
+	at java.awt.EventQueue.access$200(EventQueue.java:103)
+
+
+	at java.awt.EventQueue$3.run(EventQueue.java:694)
+
+
+	at java.awt.EventQueue$3.run(EventQueue.java:692)
+
+
+	at java.security.AccessController.doPrivileged(Native Method)
+
+
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+
+
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:87)
+
+
+	at java.awt.EventQueue$4.run(EventQueue.java:708)
+
+
+	at java.awt.EventQueue$4.run(EventQueue.java:706)
+
+
+	at java.security.AccessController.doPrivileged(Native Method)
+
+
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+
+
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:705)
+
+
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:242)
+
+
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:161)
+
+
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:150)
+
+
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:146)
+
+
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:138)
+
+
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:91)
+
+
+Exception in thread "AWT-EventQueue-0" 
+java.lang.StringIndexOutOfBoundsException: String index out of range: 24
+
+
+	at java.lang.String.charAt(String.java:658)
+
+
+	at com.kurpiak.styling.StyledDocument$1.indexOfNewlineCharacterBeforeCaretPosition(StyledDocument.java:104)
+
+
+	at com.kurpiak.styling.StyledDocument$1.highlight(StyledDocument.java:36)
+
+
+	at com.kurpiak.styling.StyledDocument$1.remove(StyledDocument.java:29)
+
+
+	at javax.swing.text.DefaultEditorKit$DeletePrevCharAction.actionPerformed(DefaultEditorKit.java:1071)
+
+
+	at javax.swing.SwingUtilities.notifyAction(SwingUtilities.java:1662)
+
+
+	at javax.swing.JComponent.processKeyBinding(JComponent.java:2878)
+
+
+	at javax.swing.JComponent.processKeyBindings(JComponent.java:2925)
+
+
+	at javax.swing.JComponent.processKeyEvent(JComponent.java:2841)
+
+
+	at java.awt.Component.processEvent(Component.java:6293)
+
+
+	at java.awt.Container.processEvent(Container.java:2229)
+
+
+	at java.awt.Component.dispatchEventImpl(Component.java:4872)
+
+
+	at java.awt.Container.dispatchEventImpl(Container.java:2287)
+
+
+	at java.awt.Component.dispatchEvent(Component.java:4698)
+
+
+	at java.awt.KeyboardFocusManager.redispatchEvent(KeyboardFocusManager.java:1887)
+
+
+	at java.awt.DefaultKeyboardFocusManager.dispatchKeyEvent(DefaultKeyboardFocusManager.java:762)
+
+
+	at java.awt.DefaultKeyboardFocusManager.preDispatchKeyEvent(DefaultKeyboardFocusManager.java:1027)
+
+
+	at java.awt.DefaultKeyboardFocusManager.typeAheadAssertions(DefaultKeyboardFocusManager.java:899)
+
+
+	at java.awt.DefaultKeyboardFocusManager.dispatchEvent(DefaultKeyboardFocusManager.java:727)
+
+
+	at java.awt.Component.dispatchEventImpl(Component.java:4742)
+
+
+	at java.awt.Container.dispatchEventImpl(Container.java:2287)
+
+
+	at java.awt.Window.dispatchEventImpl(Window.java:2719)
+
+
+	at java.awt.Component.dispatchEvent(Component.java:4698)
+
+
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:735)
+
+
+	at java.awt.EventQueue.access$200(EventQueue.java:103)
+
+
+	at java.awt.EventQueue$3.run(EventQueue.java:694)
+
+
+	at java.awt.EventQueue$3.run(EventQueue.java:692)
+
+
+	at java.security.AccessController.doPrivileged(Native Method)
+
+
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+
+
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:87)
+
+
+	at java.awt.EventQueue$4.run(EventQueue.java:708)
+
+
+	at java.awt.EventQueue$4.run(EventQueue.java:706)
+
+
+	at java.security.AccessController.doPrivileged(Native Method)
+
+
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+
+
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:705)
+
+
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:242)
+
+
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:161)
+
+
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:150)
+
+
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:146)
+
+
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:138)
+
+
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:91)
+
+
+Exception in thread "AWT-EventQueue-0" 
+java.lang.StringIndexOutOfBoundsException: String index out of range: 23
+
+
+	at java.lang.String.charAt(String.java:658)
+
+
+	at com.kurpiak.styling.StyledDocument$1.indexOfNewlineCharacterBeforeCaretPosition(StyledDocument.java:104)
+
+
+	at com.kurpiak.styling.StyledDocument$1.highlight(StyledDocument.java:36)
+
+
+	at com.kurpiak.styling.StyledDocument$1.remove(StyledDocument.java:29)
+
+
+	at javax.swing.text.DefaultEditorKit$DeletePrevCharAction.actionPerformed(DefaultEditorKit.java:1071)
+
+
+	at javax.swing.SwingUtilities.notifyAction(SwingUtilities.java:1662)
+
+
+	at javax.swing.JComponent.processKeyBinding(JComponent.java:2878)
+
+
+	at javax.swing.JComponent.processKeyBindings(JComponent.java:2925)
+
+
+	at javax.swing.JComponent.processKeyEvent(JComponent.java:2841)
+
+
+	at java.awt.Component.processEvent(Component.java:6293)
+
+
+	at java.awt.Container.processEvent(Container.java:2229)
+
+
+	at java.awt.Component.dispatchEventImpl(Component.java:4872)
+
+
+	at java.awt.Container.dispatchEventImpl(Container.java:2287)
+
+
+	at java.awt.Component.dispatchEvent(Component.java:4698)
+
+
+	at java.awt.KeyboardFocusManager.redispatchEvent(KeyboardFocusManager.java:1887)
+
+
+	at java.awt.DefaultKeyboardFocusManager.dispatchKeyEvent(DefaultKeyboardFocusManager.java:762)
+
+
+	at java.awt.DefaultKeyboardFocusManager.preDispatchKeyEvent(DefaultKeyboardFocusManager.java:1027)
+
+
+	at java.awt.DefaultKeyboardFocusManager.typeAheadAssertions(DefaultKeyboardFocusManager.java:899)
+
+
+	at java.awt.DefaultKeyboardFocusManager.dispatchEvent(DefaultKeyboardFocusManager.java:727)
+
+
+	at java.awt.Component.dispatchEventImpl(Component.java:4742)
+
+
+	at java.awt.Container.dispatchEventImpl(Container.java:2287)
+
+
+	at java.awt.Window.dispatchEventImpl(Window.java:2719)
+
+
+	at java.awt.Component.dispatchEvent(Component.java:4698)
+
+
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:735)
+
+
+	at java.awt.EventQueue.access$200(EventQueue.java:103)
+
+
+	at java.awt.EventQueue$3.run(EventQueue.java:694)
+
+
+	at java.awt.EventQueue$3.run(EventQueue.java:692)
+
+
+	at java.security.AccessController.doPrivileged(Native Method)
+
+
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+
+
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:87)
+
+
+	at java.awt.EventQueue$4.run(EventQueue.java:708)
+
+
+	at java.awt.EventQueue$4.run(EventQueue.java:706)
+
+
+	at java.security.AccessController.doPrivileged(Native Method)
+
+
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+
+
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:705)
+
+
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:242)
+
+
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:161)
+
+
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:150)
+
+
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:146)
+
+
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:138)
+
+
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:91)
+
+
+Exception in thread "AWT-EventQueue-0" 
+java.lang.StringIndexOutOfBoundsException: String index out of range: 22
+
+
+	at java.lang.String.charAt(String.java:658)
+
+
+	at com.kurpiak.styling.StyledDocument$1.indexOfNewlineCharacterBeforeCaretPosition(StyledDocument.java:104)
+
+
+	at com.kurpiak.styling.StyledDocument$1.highlight(StyledDocument.java:36)
+
+
+	at com.kurpiak.styling.StyledDocument$1.remove(StyledDocument.java:29)
+
+
+	at javax.swing.text.DefaultEditorKit$DeletePrevCharAction.actionPerformed(DefaultEditorKit.java:1071)
+
+
+	at javax.swing.SwingUtilities.notifyAction(SwingUtilities.java:1662)
+
+
+	at javax.swing.JComponent.processKeyBinding(JComponent.java:2878)
+
+
+	at javax.swing.JComponent.processKeyBindings(JComponent.java:2925)
+
+
+	at javax.swing.JComponent.processKeyEvent(JComponent.java:2841)
+
+
+	at java.awt.Component.processEvent(Component.java:6293)
+
+
+	at java.awt.Container.processEvent(Container.java:2229)
+
+
+	at java.awt.Component.dispatchEventImpl(Component.java:4872)
+
+
+	at java.awt.Container.dispatchEventImpl(Container.java:2287)
+
+
+	at java.awt.Component.dispatchEvent(Component.java:4698)
+
+
+	at java.awt.KeyboardFocusManager.redispatchEvent(KeyboardFocusManager.java:1887)
+
+
+	at java.awt.DefaultKeyboardFocusManager.dispatchKeyEvent(DefaultKeyboardFocusManager.java:762)
+
+
+	at java.awt.DefaultKeyboardFocusManager.preDispatchKeyEvent(DefaultKeyboardFocusManager.java:1027)
+
+
+	at java.awt.DefaultKeyboardFocusManager.typeAheadAssertions(DefaultKeyboardFocusManager.java:899)
+
+
+	at java.awt.DefaultKeyboardFocusManager.dispatchEvent(DefaultKeyboardFocusManager.java:727)
+
+
+	at java.awt.Component.dispatchEventImpl(Component.java:4742)
+
+
+	at java.awt.Container.dispatchEventImpl(Container.java:2287)
+
+
+	at java.awt.Window.dispatchEventImpl(Window.java:2719)
+
+
+	at java.awt.Component.dispatchEvent(Component.java:4698)
+
+
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:735)
+
+
+	at java.awt.EventQueue.access$200(EventQueue.java:103)
+
+
+	at java.awt.EventQueue$3.run(EventQueue.java:694)
+
+
+	at java.awt.EventQueue$3.run(EventQueue.java:692)
+
+
+	at java.security.AccessController.doPrivileged(Native Method)
+
+
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+
+
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:87)
+
+
+	at java.awt.EventQueue$4.run(EventQueue.java:708)
+
+
+	at java.awt.EventQueue$4.run(EventQueue.java:706)
+
+
+	at java.security.AccessController.doPrivileged(Native Method)
+
+
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+
+
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:705)
+
+
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:242)
+
+
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:161)
+
+
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:150)
+
+
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:146)
+
+
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:138)
+
+
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:91)
+
+
+Exception in thread "AWT-EventQueue-0" 
+java.lang.StringIndexOutOfBoundsException: String index out of range: 21
+
+
+	at java.lang.String.charAt(String.java:658)
+
+
+	at com.kurpiak.styling.StyledDocument$1.indexOfNewlineCharacterBeforeCaretPosition(StyledDocument.java:104)
+
+
+	at com.kurpiak.styling.StyledDocument$1.highlight(StyledDocument.java:36)
+
+
+	at com.kurpiak.styling.StyledDocument$1.remove(StyledDocument.java:29)
+
+
+	at javax.swing.text.DefaultEditorKit$DeletePrevCharAction.actionPerformed(DefaultEditorKit.java:1071)
+
+
+	at javax.swing.SwingUtilities.notifyAction(SwingUtilities.java:1662)
+
+
+	at javax.swing.JComponent.processKeyBinding(JComponent.java:2878)
+
+
+	at javax.swing.JComponent.processKeyBindings(JComponent.java:2925)
+
+
+	at javax.swing.JComponent.processKeyEvent(JComponent.java:2841)
+
+
+	at java.awt.Component.processEvent(Component.java:6293)
+
+
+	at java.awt.Container.processEvent(Container.java:2229)
+
+
+	at java.awt.Component.dispatchEventImpl(Component.java:4872)
+
+
+	at java.awt.Container.dispatchEventImpl(Container.java:2287)
+
+
+	at java.awt.Component.dispatchEvent(Component.java:4698)
+
+
+	at java.awt.KeyboardFocusManager.redispatchEvent(KeyboardFocusManager.java:1887)
+
+
+	at java.awt.DefaultKeyboardFocusManager.dispatchKeyEvent(DefaultKeyboardFocusManager.java:762)
+
+
+	at java.awt.DefaultKeyboardFocusManager.preDispatchKeyEvent(DefaultKeyboardFocusManager.java:1027)
+
+
+	at java.awt.DefaultKeyboardFocusManager.typeAheadAssertions(DefaultKeyboardFocusManager.java:899)
+
+
+	at java.awt.DefaultKeyboardFocusManager.dispatchEvent(DefaultKeyboardFocusManager.java:727)
+
+
+	at java.awt.Component.dispatchEventImpl(Component.java:4742)
+
+
+	at java.awt.Container.dispatchEventImpl(Container.java:2287)
+
+
+	at java.awt.Window.dispatchEventImpl(Window.java:2719)
+
+
+	at java.awt.Component.dispatchEvent(Component.java:4698)
+
+
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:735)
+
+
+	at java.awt.EventQueue.access$200(EventQueue.java:103)
+
+
+	at java.awt.EventQueue$3.run(EventQueue.java:694)
+
+
+	at java.awt.EventQueue$3.run(EventQueue.java:692)
+
+
+	at java.security.AccessController.doPrivileged(Native Method)
+
+
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+
+
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:87)
+
+
+	at java.awt.EventQueue$4.run(EventQueue.java:708)
+
+
+	at java.awt.EventQueue$4.run(EventQueue.java:706)
+
+
+	at java.security.AccessController.doPrivileged(Native Method)
+
+
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+
+
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:705)
+
+
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:242)
+
+
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:161)
+
+
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:150)
+
+
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:146)
+
+
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:138)
+
+
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:91)
+
+
+Exception in thread "AWT-EventQueue-0" 
+java.lang.StringIndexOutOfBoundsException: String index out of range: 20
+
+
+	at java.lang.String.charAt(String.java:658)
+
+
+	at com.kurpiak.styling.StyledDocument$1.indexOfNewlineCharacterBeforeCaretPosition(StyledDocument.java:104)
+
+
+	at com.kurpiak.styling.StyledDocument$1.highlight(StyledDocument.java:36)
+
+
+	at com.kurpiak.styling.StyledDocument$1.remove(StyledDocument.java:29)
+
+
+	at javax.swing.text.DefaultEditorKit$DeletePrevCharAction.actionPerformed(DefaultEditorKit.java:1071)
+
+
+	at javax.swing.SwingUtilities.notifyAction(SwingUtilities.java:1662)
+
+
+	at javax.swing.JComponent.processKeyBinding(JComponent.java:2878)
+
+
+	at javax.swing.JComponent.processKeyBindings(JComponent.java:2925)
+
+
+	at javax.swing.JComponent.processKeyEvent(JComponent.java:2841)
+
+
+	at java.awt.Component.processEvent(Component.java:6293)
+
+
+	at java.awt.Container.processEvent(Container.java:2229)
+
+
+	at java.awt.Component.dispatchEventImpl(Component.java:4872)
+
+
+	at java.awt.Container.dispatchEventImpl(Container.java:2287)
+
+
+	at java.awt.Component.dispatchEvent(Component.java:4698)
+
+
+	at java.awt.KeyboardFocusManager.redispatchEvent(KeyboardFocusManager.java:1887)
+
+
+	at java.awt.DefaultKeyboardFocusManager.dispatchKeyEvent(DefaultKeyboardFocusManager.java:762)
+
+
+	at java.awt.DefaultKeyboardFocusManager.preDispatchKeyEvent(DefaultKeyboardFocusManager.java:1027)
+
+
+	at java.awt.DefaultKeyboardFocusManager.typeAheadAssertions(DefaultKeyboardFocusManager.java:899)
+
+
+	at java.awt.DefaultKeyboardFocusManager.dispatchEvent(DefaultKeyboardFocusManager.java:727)
+
+
+	at java.awt.Component.dispatchEventImpl(Component.java:4742)
+
+
+	at java.awt.Container.dispatchEventImpl(Container.java:2287)
+
+
+	at java.awt.Window.dispatchEventImpl(Window.java:2719)
+
+
+	at java.awt.Component.dispatchEvent(Component.java:4698)
+
+
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:735)
+
+
+	at java.awt.EventQueue.access$200(EventQueue.java:103)
+
+
+	at java.awt.EventQueue$3.run(EventQueue.java:694)
+
+
+	at java.awt.EventQueue$3.run(EventQueue.java:692)
+
+
+	at java.security.AccessController.doPrivileged(Native Method)
+
+
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+
+
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:87)
+
+
+	at java.awt.EventQueue$4.run(EventQueue.java:708)
+
+
+	at java.awt.EventQueue$4.run(EventQueue.java:706)
+
+
+	at java.security.AccessController.doPrivileged(Native Method)
+
+
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+
+
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:705)
+
+
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:242)
+
+
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:161)
+
+
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:150)
+
+
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:146)
+
+
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:138)
+
+
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:91)
+
+
+Exception in thread "AWT-EventQueue-0" 
+java.lang.StringIndexOutOfBoundsException: String index out of range: 19
+
+
+	at java.lang.String.charAt(String.java:658)
+
+
+	at com.kurpiak.styling.StyledDocument$1.indexOfNewlineCharacterBeforeCaretPosition(StyledDocument.java:104)
+
+
+	at com.kurpiak.styling.StyledDocument$1.highlight(StyledDocument.java:36)
+
+
+	at com.kurpiak.styling.StyledDocument$1.remove(StyledDocument.java:29)
+
+
+	at javax.swing.text.DefaultEditorKit$DeletePrevCharAction.actionPerformed(DefaultEditorKit.java:1071)
+
+
+	at javax.swing.SwingUtilities.notifyAction(SwingUtilities.java:1662)
+
+
+	at javax.swing.JComponent.processKeyBinding(JComponent.java:2878)
+
+
+	at javax.swing.JComponent.processKeyBindings(JComponent.java:2925)
+
+
+	at javax.swing.JComponent.processKeyEvent(JComponent.java:2841)
+
+
+	at java.awt.Component.processEvent(Component.java:6293)
+
+
+	at java.awt.Container.processEvent(Container.java:2229)
+
+
+	at java.awt.Component.dispatchEventImpl(Component.java:4872)
+
+
+	at java.awt.Container.dispatchEventImpl(Container.java:2287)
+
+
+	at java.awt.Component.dispatchEvent(Component.java:4698)
+
+
+	at java.awt.KeyboardFocusManager.redispatchEvent(KeyboardFocusManager.java:1887)
+
+
+	at java.awt.DefaultKeyboardFocusManager.dispatchKeyEvent(DefaultKeyboardFocusManager.java:762)
+
+
+	at java.awt.DefaultKeyboardFocusManager.preDispatchKeyEvent(DefaultKeyboardFocusManager.java:1027)
+
+
+	at java.awt.DefaultKeyboardFocusManager.typeAheadAssertions(DefaultKeyboardFocusManager.java:899)
+
+
+	at java.awt.DefaultKeyboardFocusManager.dispatchEvent(DefaultKeyboardFocusManager.java:727)
+
+
+	at java.awt.Component.dispatchEventImpl(Component.java:4742)
+
+
+	at java.awt.Container.dispatchEventImpl(Container.java:2287)
+
+
+	at java.awt.Window.dispatchEventImpl(Window.java:2719)
+
+
+	at java.awt.Component.dispatchEvent(Component.java:4698)
+
+
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:735)
+
+
+	at java.awt.EventQueue.access$200(EventQueue.java:103)
+
+
+	at java.awt.EventQueue$3.run(EventQueue.java:694)
+
+
+	at java.awt.EventQueue$3.run(EventQueue.java:692)
+
+
+	at java.security.AccessController.doPrivileged(Native Method)
+
+
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+
+
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:87)
+
+
+	at java.awt.EventQueue$4.run(EventQueue.java:708)
+
+
+	at java.awt.EventQueue$4.run(EventQueue.java:706)
+
+
+	at java.security.AccessController.doPrivileged(Native Method)
+
+
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+
+
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:705)
+
+
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:242)
+
+
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:161)
+
+
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:150)
+
+
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:146)
+
+
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:138)
+
+
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:91)
 
 
