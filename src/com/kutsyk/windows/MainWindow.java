@@ -1,11 +1,11 @@
 package com.kutsyk.windows;
 
-import com.kurpiak.styling.*;
 import com.kurpiak.styling.StyledDocument;
 import com.kutsyk.TextEditor.TextLineNumber;
 import com.kutsyk.convertors.Translator;
 
 import javax.swing.*;
+import javax.swing.filechooser.FileNameExtensionFilter;
 import javax.swing.text.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -22,14 +22,13 @@ public class MainWindow extends JFrame {
 
     public static String mainPath = "";
     /** The dir path. */
-	private static String dirPath = "";
+	private static String fileName = "";
 	private static PrintWriter errorLogFile = null;
 
 	/** The dir. */
 	private static File dir = new File(mainPath + "/LaTEXtoXML");
 	private static JTextPane documentText;
 	private static boolean wasAnyLaTEXProceeded = false;
-	private static String latexFile = "";
 	private static JTextArea console;
 	private static Thread translationThread;
 
@@ -103,11 +102,9 @@ public class MainWindow extends JFrame {
 			public void write(byte[] b, int off, int len) throws IOException {
 				errorLogFile.println(new String(b, off, len));
 			}
-
 		};
-
-		System.setOut(new PrintStream(out, true));
-		System.setErr(new PrintStream(out, true));
+//		System.setOut(new PrintStream(out, true));
+//		System.setErr(new PrintStream(out, true));
 	}
 
 	/**
@@ -124,7 +121,6 @@ public class MainWindow extends JFrame {
 		clearDirectory("figures");
 		clearDirectory("suppFigures");
 		clearDirectory("tables");
-		clearDirectory("");
 	}
 
 	/**
@@ -159,11 +155,6 @@ public class MainWindow extends JFrame {
 	private static void createFoldersAndFilesIfNeed() {
 		createFolders();
 		createFiles();
-		try {
-			copyDtdToForlder();
-		} catch (IOException e2) {
-			e2.printStackTrace();
-		}
 	}
 
 	/**
@@ -190,15 +181,15 @@ public class MainWindow extends JFrame {
 	private static void createFiles() {
 		String[] files = { "result.xml", "bodyAndBottom.xml", "mainFile.tex", "back.tex",
 				"newCommands.tex" };
-		for (int i = 0; i < files.length; ++i) {
-			dir = new File(mainPath + "/LaTEXtoXML/" + files[i]);
-			try {
-				if (dir.createNewFile())
-					;
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
-		}
+        for (String file : files) {
+            dir = new File(mainPath + "/LaTEXtoXML/" + file);
+            try {
+                if (dir.createNewFile())
+                    ;
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
 	}
 
 	/**
@@ -211,7 +202,7 @@ public class MainWindow extends JFrame {
 				label4.setVisible(true);
                 Translator translator;
 				try {
-                    translator = new Translator(dirPath);
+                    translator = new Translator(fileName);
 					createResult();
 					wasAnyLaTEXProceeded = true;
 					File result = new File(mainPath + "/LaTEXtoXML/result.xml");
@@ -226,31 +217,6 @@ public class MainWindow extends JFrame {
 			}
 		});
 		translationThread.start();
-	}
-
-	/**
-	 * Copy dtd to forlder.
-	 *
-	 * @throws IOException
-	 *             Signals that an I/O exception has occurred.
-	 */
-	private static void copyDtdToForlder() throws IOException {
-		InputStream inStream = null;
-		OutputStream outStream = null;
-
-		File inputFile = new File(dirPath + "/archivearticle3.dtd");
-		inputFile.createNewFile();
-		File outputFile = new File(mainPath + "/LaTEXbin/archivearticle3.dtd");
-
-		inStream = new FileInputStream(inputFile);
-		outStream = new FileOutputStream(outputFile);
-
-		byte[] buffer = new byte[1024];
-		int fileLength;
-		while ((fileLength = inStream.read(buffer)) > 0)
-			outStream.write(buffer, 0, fileLength);
-		inStream.close();
-		outStream.close();
 	}
 
 	/**
@@ -294,86 +260,45 @@ public class MainWindow extends JFrame {
 	private void FileChooseButtonActionPerformed(ActionEvent e) {
 		wasAnyLaTEXProceeded = false;
 		reinitLabels();
+        FileNameExtensionFilter filter = new FileNameExtensionFilter("TEX file", "tex", "tex");
 		@SuppressWarnings("serial")
-		JFileChooser chooser = new JFileChooser(new File("")) {
+		JFileChooser chooser = new JFileChooser(new File("D:\\Charlesworth\\plos_template")) {
 			public void approveSelection() {
-				if (getSelectedFile().isFile()) {
-					return;
-				} else
 					super.approveSelection();
 			}
 		};
-		chooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
+		chooser.setFileSelectionMode(JFileChooser.FILES_ONLY);
+        chooser.addChoosableFileFilter(filter);
+        chooser.setFileFilter(filter);
 		int returnVal = chooser.showOpenDialog(this);
 		if (returnVal == JFileChooser.APPROVE_OPTION) {
 			console.setText("");
-			directoryChoosed(chooser.getSelectedFile().getAbsolutePath());
+            directoryChoosed(chooser.getSelectedFile().getAbsolutePath());
 		}
-		directoryChoosed(dirPath);
+//		directoryChoosed(dirPath);
 		splitPaneWithConsole.setAutoscrolls(true);
 	}
 
-	private void directoryChoosed(String dir) {
-		BibLabel.setVisible(false);
-		BibWaiting.setVisible(false);
-		BibLoaderGif.setVisible(false);
-		boolean canBeProcced = containtAllNecessaryFiles(dir);
-		if (!canBeProcced) {
-			System.err
-					.println("[ERROR] : Choose folder that contains all necessary files");
-			JOptionPane
-					.showMessageDialog(
-							null,
-							"You choosed directory that doesn't contain all necessary files.",
-							"Folder warning", JOptionPane.WARNING_MESSAGE);
-		}
-		createFoldersAndFilesIfNeed();
-	}
-
-	private boolean containtAllNecessaryFiles(String dir) {
-		File directory = new File(dir);
-		File[] files = directory.listFiles();
-		console.append("Directory document: " + dir + "\n");
-		if (files == null)
-			return false;
-		boolean isTex = false;
-		ImageIcon done = new ImageIcon(mainPath+"/LaTEXbin/images/green-ok-icon.png");
-		for (File file : files) {
-			String fileName = file.getName();
-			if (fileName.length() < 4)
-				continue;
-
-			String type = fileName.substring(fileName.length() - 4,
-					fileName.length());
-			if (type.equals(".tex")) {
-				isTex = true;
-				LaTEXWaiting.setText(fileName);
-				latexFile = fileName;
-				console.append("LaTEX document: " + fileName + "\n");
-				LaTEXLoaderGif.setIcon(done);
-			}
-//            else if (type.equals(".xml")) {
-//				isXMl = true;
-//				XMlWaiting.setText(fileName);
-//				console.append("Metadata document: " + fileName + "\n");
-//				XMLLoaderGif.setIcon(done);
-//			} else if (type.equals(".bib")) {
-//				setBibliographyComponents(true);
-//				BibWaiting.setText(fileName);
-//			}
-		}
-		if (isTex) {
-			dirPath = dir;
-			writeDocumentToPane(latexFile);
-			return true;
-		} else
-			return false;
-	}
+    private void directoryChoosed(String fileName) {
+        boolean canBeProcced = fileName.endsWith(".tex");
+        if (!canBeProcced) {
+            System.err
+                    .println("[ERROR] : Choose folder that contains all necessary files");
+            JOptionPane
+                    .showMessageDialog(
+                            null,
+                            "You choosed directory that doesn't contain all necessary files.",
+                            "Folder warning", JOptionPane.WARNING_MESSAGE);
+        }
+        this.fileName = fileName;
+        createFoldersAndFilesIfNeed();
+        writeDocumentToPane(fileName);
+    }
 
 	private void writeDocumentToPane(String fileName) {
 		try {
 			BufferedReader reader = new BufferedReader(new InputStreamReader(
-					new FileInputStream(dirPath + "/" + fileName)));
+					new FileInputStream(fileName)));
 			String line;
 			StringBuilder content = new StringBuilder();
 			while ((line = reader.readLine()) != null)
@@ -387,13 +312,11 @@ public class MainWindow extends JFrame {
 	}
 
 	private void translateButtonActionPerformed(ActionEvent e) {
-		if (latexFile.isEmpty()) {
+		if (fileName.isEmpty()) {
 			JOptionPane.showMessageDialog(null, "Choose neccesary files");
 			return;
 		}
-
 		try {
-//			if (hasRightStructure(dirPath + "/" + latexFile))
 				translateAction();
 		} catch (Exception e1) {
 			e1.printStackTrace();
@@ -642,10 +565,9 @@ public class MainWindow extends JFrame {
 
 	private void SaveButtonActionPerformed(ActionEvent e) {
 		try {
-			BufferedWriter fileOut = new BufferedWriter(new FileWriter(dirPath
-					+ "/" + latexFile));
+			BufferedWriter fileOut = new BufferedWriter(new FileWriter(fileName));
 			documentText.write(fileOut);
-			writeDocumentToPane(latexFile);
+			writeDocumentToPane(fileName);
 		} catch (IOException e1) {
 			e1.printStackTrace();
 		}
@@ -675,8 +597,6 @@ public class MainWindow extends JFrame {
 	}
 
 	private void initComponents() {
-		// JFormDesigner - Component initialization - DO NOT MODIFY
-		// //GEN-BEGIN:initComponents
 		toolBar1 = new JToolBar();
 		FileChooseButtonFromPanel = new JButton();
 		translateButton = new JButton();
@@ -1000,5 +920,5 @@ public class MainWindow extends JFrame {
 	private JScrollPane scrollPane1;
 	private JTabbedPane helpPane;
 	private JTabbedPane documentTab;
-	// JFormDesigner - End of variables declaration //GEN-END:variables
+
 }

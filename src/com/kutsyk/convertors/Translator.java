@@ -37,27 +37,15 @@ public class Translator {
      */
     public static HashMap<String, Integer> bibReferences;
 
-    /**
-     * The dir.
-     */
-    private String dir;
-
     /*
      * The tex file.
      */
     protected static String texFile;
 
-    /**
-     * The meta data file.
-     */
-    protected static String metaDataFile;
-
-    public Translator(String dirPath) throws Exception {
-        dir = dirPath;
-        getFilesNames(dir);
+    public Translator(String fileName) throws Exception {
+        texFile = fileName;
         writer = new PrintWriter(MainWindow.mainPath
                 + "/LaTEXtoXML/bodyAndBottom.xml");
-//        createIsoTree();
         getBibReferences(texFile);
         if (changeMainFile(texFile))
             ToXML.writer.close();
@@ -73,7 +61,6 @@ public class Translator {
         File directory = new File(dirPath);
         File[] files = directory.listFiles();
         String tex = "";
-        metaDataFile = "";
         for (File file : files) {
             String fileName = file.getName();
             String type = fileName.substring(fileName.length() - 4,

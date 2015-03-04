@@ -9,8 +9,6 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -517,9 +515,6 @@ public class ToXML extends LaTEXBaseListener {
 
     public void enterSubsectionDeclaration(
             LaTEXParser.SubsectionDeclarationContext ctx) {
-        if (suppDataDeclared)
-            return;
-
         if (wasAppsDeclared) {
             shouldTextBeMissed = true;
             return;
@@ -547,9 +542,6 @@ public class ToXML extends LaTEXBaseListener {
 
     public void exitSubsectionDeclaration(
             LaTEXParser.SubsectionDeclarationContext ctx) {
-        if (suppDataDeclared)
-            return;
-
         if (wasAppsDeclared) {
             shouldTextBeMissed = false;
             return;
@@ -564,9 +556,6 @@ public class ToXML extends LaTEXBaseListener {
 
     public void enterSubsubsectionDeclaration(
             LaTEXParser.SubsubsectionDeclarationContext ctx) {
-        if (suppDataDeclared)
-            return;
-
         shouldTextBeMissed = false;
         if (wasParagraphFilled)
             paragraphCloser();
@@ -589,9 +578,6 @@ public class ToXML extends LaTEXBaseListener {
 
     public void exitSubsubsectionDeclaration(
             LaTEXParser.SubsubsectionDeclarationContext ctx) {
-        if (suppDataDeclared)
-            return;
-
         writer.print("</title>");
         wasSectionDeclared = true;
     }
@@ -789,19 +775,6 @@ public class ToXML extends LaTEXBaseListener {
     }
 
 	/* (non-Javadoc)
-	 * @see LaTEXBaseListener#enterInterval(LaTEXParser.IntervalContext)
-	 */
-
-    public void enterInterval(LaTEXParser.IntervalContext ctx) {
-        if (shouldTextBeMissed)
-            return;
-
-        writer.print(ctx.numbers(0).getText());
-        writer.print("&ndash;");
-        writer.print(ctx.numbers(1).getText());
-    }
-
-	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#enterComma(LaTEXParser.CommaContext)
 	 */
 
@@ -904,7 +877,6 @@ public class ToXML extends LaTEXBaseListener {
             return;
 
         figureStarts();
-//		changeFileForFigures();
         writer.print("<fig id=\"fig" + figureCounter + "\" num=\""
                 + figureCounter + "\" type=\"figure\">");
         shouldTextBeMissed = true;
@@ -919,97 +891,13 @@ public class ToXML extends LaTEXBaseListener {
         figureTitleDeclared = false;
     }
 
-    /**
-     * Change file for figures.
-     */
-//	private void changeFileForFigures()
-//	{
-//		try {
-//			skipData = writer;
-//			writer = new PrintWriter(new File(MainWindow.mainPath + "/LaTEXtoXML/figures/" + figureCounter
-//					+ ".xml"));
-//		} catch (IOException e) {
-//			System.out.println("Couldn't create figure file");
-//		}
-//	}
-
-    /**
-     * The supp figure type.
-     */
-    private String suppFigureType = "";
-
-    /**
-     * The supp data declared.
-     */
-    private boolean suppDataDeclared = false;
-	
-	/* (non-Javadoc)
-	 * @see LaTEXBaseListener#enterSupplementaryFigureBlock(LaTEXParser.SupplementaryFigureBlockContext)
-	 */
-
-//	public void enterSupplementaryFigureBlock(
-//			LaTEXParser.SupplementaryFigureBlockContext ctx) {
-//		if (!workWithBackData)
-//			return;
-//
-//		suppDataDeclared = true;
-//		suppFigureType = "Figure";
-//		int counter = 0;
-//		String data = ctx.getText();
-//		if(data.contains("TextS"))
-//		{
-//			suppFigureType = "Text";
-//			++suppTextCounter;
-//			counter = suppTextCounter;
-//		}
-//		else if(data.contains("TableS"))
-//		{
-//			suppFigureType = "Table";
-//			++suppTableCounter;
-//			counter = suppTableCounter;
-//		}else if(data.contains("DatasetS"))
-//		{
-//			suppFigureType = "Dataset";
-//			++suppDataSetCounter;
-//			counter = suppDataSetCounter;
-//		}
-//		String path = MainWindow.mainPath + "/LaTEXtoXML/suppFigures/"+suppFigureType + counter + ".xml";
-//		writingQueue.add(suppFigureType+ counter);
-//		try {
-//			skipData = writer;
-//			writer = new PrintWriter(new File(path));
-//			shouldTextBeMissed = false;
-//		} catch (IOException e) {
-//			System.out.println("Couldn't create supplementary figure file");
-//		}
-//	}
-
-	/* (non-Javadoc)
-	 * @see LaTEXBaseListener#exitSupplementaryFigureBlock(LaTEXParser.SupplementaryFigureBlockContext)
-	 */
-
-    public void exitSupplementaryFigureBlock(
-            LaTEXParser.SupplementaryFigureBlockContext ctx) {
-        if (!workWithBackData)
-            return;
-        suppDataDeclared = false;
-//		writer.println("Here");
-//		setNormalWriter();
-    }
-
 	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#exitFigureBlock(LaTEXParser.FigureBlockContext)
 	 */
-
     public void exitFigureBlock(LaTEXParser.FigureBlockContext ctx) {
         if (!workWithBackData)
             return;
 
-        try {
-            getJournalIDInfo();
-        } catch (Exception e) {
-            System.out.println("[ERROR]: Journal reference missing;");
-        }
         writer.println("</caption>");
         writer.println("<caption type=\"doi\">" + FrontmatterCreator.workoutString(id) + ".g00" + figureCounter + "</caption>");
         writer.println("<graphic id=\"" + id.substring(id.indexOf("/") + 1) + ".g00" + figureCounter + ".tif\"></graphic>");
@@ -1018,13 +906,6 @@ public class ToXML extends LaTEXBaseListener {
         wasFigureFirstDot = false;
         shouldTextBeMissed = false;
         figureTitleDeclared = false;
-//		setNormalWriter();
-    }
-
-    private void getJournalIDInfo() throws Exception {
-        Document doc = openDoc();
-        doc.getDocumentElement().normalize();
-        getInformation(doc);
     }
 
     private void getInformation(Document doc) {
@@ -1039,79 +920,7 @@ public class ToXML extends LaTEXBaseListener {
         }
     }
 
-    private Document openDoc() throws Exception {
-        File metaFile = new File(Translator.metaDataFile);
-        DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
-        DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
-        Document doc = dBuilder.parse(metaFile);
-        doc.getDocumentElement().normalize();
-        return dBuilder.parse(metaFile);
-    }
-
-    /**
-     * Supplementary information writer.
-     */
-//    private void supplementaryInformationWriter() {
-//        File folder = new File(MainWindow.mainPath + "/LaTEXtoXML/suppFigures");
-//        File[] files = folder.listFiles();
-//        if (files.length == 0)
-//            return;
-//
-//        writer.print("<section level=\"1\" type=\"SupportingInformation\" id=\"section"
-//                + sectionId + "\"><title>Supporting Information</title>");
-//        for (String file : writingQueue) {
-//            try {
-//                writeSuppMaterial(MainWindow.mainPath + "/LaTEXtoXML/suppFigures/" + file + ".xml", file);
-//            } catch (IOException e) {
-//                e.printStackTrace();
-//            }
-//        }
-//    }
-
-    /**
-     * The supp figure id.
-     */
-    private int suppFigureId = 0;
-
-    /**
-     * Write supp material.
-     *
-     * @param fileName the file name
-     * @param suppType the supp type
-     * @throws IOException Signals that an I/O exception has occurred.
-     */
-    private void writeSuppMaterial(String fileName, String suppType) throws IOException {
-        suppFigureType = "";
-        String number = "";
-        for (int i = 0; i < suppType.length(); ++i)
-            if (Character.isDigit(suppType.charAt(i)))
-                number += suppType.charAt(i);
-            else
-                suppFigureType += suppType.charAt(i);
-
-        suppFigureId = Integer.valueOf(number);
-        InputStream is = new FileInputStream(fileName);
-        BufferedReader reader = new BufferedReader(new InputStreamReader(is));
-        String line = "";
-        ++sectionId;
-        writer.print("<section level=\"2\" type=\"supplementary-material\" id=\"section"
-                + sectionId + "\">");
-        ++paragraphCounter;
-        writer.print("<p id=\"para" + paragraphCounter
-                + "\" type=\"label\">" + suppFigureType + " S" + suppFigureId + "</p>");
-        ++sectionId;
-        ++paragraphCounter;
-        writer.print("<section level=\"3\" type=\"caption\" id=\"section25\"><p id=\"para"
-                + paragraphCounter + "\" type=\"p\">");
-        while ((line = reader.readLine()) != null)
-            writer.print(line);
-        is.close();
-        ++paragraphCounter;
-        writer.print("</p><p id=\"para" + paragraphCounter
-                + "\" type=\"p\">&lpar;XXX&rpar;</p></section></section>");
-    }
-
-	/* (non-Javadoc)
+  	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#enterNewcommandDeclaration(LaTEXParser.NewcommandDeclarationContext)
 	 */
 
@@ -1210,47 +1019,6 @@ public class ToXML extends LaTEXBaseListener {
     }
 
 	/* (non-Javadoc)
-	 * @see LaTEXBaseListener#enterCaptionBlock(LaTEXParser.CaptionBlockContext)
-	 */
-
-    public void enterCaptionBlock(LaTEXParser.CaptionBlockContext ctx) {
-//
-//		if (tableDeclared) {
-//            writer.close();
-//            try{
-//                writer = new PrintWriter(new File(MainWindow.mainPath + "/LaTEXtoXML/tables/" + tableCounter+ ".xml"));
-//            }catch(IOException e)
-//            {
-//                e.printStackTrace();
-//            }
-//            writer.print("<tbl id=\"tbl" + tableCounter + "\" num=\""
-//                    + tableCounter + "\">");
-//			writer.print("<tbl:title>");
-//			writer.print("<emph type=\"bold\">Table " + tableCounter
-//					+ ".</emph>");
-//			writer.print("</tbl:title>");
-//            try{
-//                BufferedReader reader = new BufferedReader(
-//                        new InputStreamReader(
-//                                new FileInputStream(MainWindow.mainPath + "/LaTEXtoXML/tables/skipData.xml")));
-//                String line = "";
-//                while((line = reader.readLine())!=null)
-//                    writer.println(line);
-//                reader.close();
-//            }catch(IOException e)
-//            {};
-//			return;
-//		} else if (figureDeclared) {
-//			shouldTextBeMissed = false;
-//			writer.print("<caption>");
-//		} else if (wasAlgorithmDeclared) {
-//			paragraphStarter();
-//			writer.print("<emph type=\"bold\">Algorithm " + algorithmCounter
-//					+ ".</emph>");
-//		}
-    }
-
-	/* (non-Javadoc)
 	 * @see LaTEXBaseListener#exitCaptionBlock(LaTEXParser.CaptionBlockContext)
 	 */
 
@@ -1319,11 +1087,6 @@ public class ToXML extends LaTEXBaseListener {
         wasSpaceBetweenLinesFilled = false;
         newLineCounter = 0;
         writer.print("</p>");
-//        if (shouldBeInsertedFigures.size() > 0)
-//            figuresInserter();
-//
-//        if (shouldBeInsertedTables.size() > 0)
-//            tablesInserter();
     }
 
     /**
@@ -1548,24 +1311,6 @@ public class ToXML extends LaTEXBaseListener {
 
     public void exitUrlText(LaTEXParser.UrlTextContext ctx) {
         writer.print("</url><?tbklnk?><?down?>\"");
-    }
-
-
-    /**
-     * Sets the normal writer.
-     */
-//	private void setNormalWriter() {
-//		writer.close();
-//		writer = skipData;
-//	}
-    @Override
-    public void enterLparen(LaTEXParser.LparenContext ctx) {
-        writer.print("&lpar;");
-    }
-
-    @Override
-    public void enterRparen(LaTEXParser.RparenContext ctx) {
-        writer.print("&rpar;");
     }
 
 	/* (non-Javadoc)
