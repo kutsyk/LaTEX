@@ -470,7 +470,7 @@ public class MainWindow extends JFrame {
 	}
 
 	private void initLineTextEditor() {
-		documentText = new JTextPane(StyledDocument.STYLED_CODUMENT);
+		documentText = new JTextPane(StyledDocument.getInstance());
 		lineNumber = new TextLineNumber(documentText);
 
 		scrollPane = new JScrollPane(documentText);
