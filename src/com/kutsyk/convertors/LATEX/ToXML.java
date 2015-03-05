@@ -3,7 +3,6 @@ package com.kutsyk.convertors.LATEX;
 import com.kutsyk.convertors.Translator;
 import com.kutsyk.grammar.LaTEX.LaTEXBaseListener;
 import com.kutsyk.grammar.LaTEX.LaTEXParser;
-import com.kutsyk.windows.MainWindow;
 import org.antlr.v4.runtime.misc.NotNull;
 
 import java.io.*;
@@ -59,11 +58,9 @@ public class ToXML extends LaTEXBaseListener {
      */
     private int figureNumber;
 
-    /**
-     * The figure declared.
-     */
     private boolean figureDeclared;
     private boolean listDeclared;
+    private boolean tableDeclared;
 
     /**
      * The was figure first dot.
@@ -311,6 +308,11 @@ public class ToXML extends LaTEXBaseListener {
      * Paragraph inserter.
      */
     private void paragraphInserter() {
+        if(figureDeclared || listDeclared || tableDeclared){
+            paragraphCounter = 0;
+            wasParagraphFilled = false;
+            return;
+        }
         if (shouldTextBeMissed || bibliographyDeclared)
             return;
 
@@ -321,9 +323,8 @@ public class ToXML extends LaTEXBaseListener {
         if (isParagraphActive)
             newLineCounter = 0;
 
-        if (wasParagraphFilled && !isParagraphActive && !figureDeclared)
+        if (wasParagraphFilled && !isParagraphActive)
             paragraphStarter();
-
     }
 
 	/* (non-Javadoc)
@@ -435,15 +436,13 @@ public class ToXML extends LaTEXBaseListener {
 
         shouldTextBeMissed = false;
 
-        if (wasParagraphFilled)
-            paragraphCloser();
-
         if(wasAbstractDeclared){
             writer.append("<abstract>");
             writer.print("<title>");
             wasSectionDeclared = false;
             return;
         }
+
         sectionCloser();
 
         if (title.equals("Acknowledgements") || title.equals("Acknowledgement")
@@ -505,6 +504,7 @@ public class ToXML extends LaTEXBaseListener {
         }
 
         shouldTextBeMissed = false;
+
         if (wasParagraphFilled)
             paragraphCloser();
 
@@ -953,6 +953,8 @@ public class ToXML extends LaTEXBaseListener {
 	 */
 
     public void enterTable(LaTEXParser.TableContext ctx) {
+        paragraphCloser();
+        tableDeclared = true;
         writer.print("<tbl>");
     }
 
@@ -962,6 +964,7 @@ public class ToXML extends LaTEXBaseListener {
 
     public void exitTable(LaTEXParser.TableContext ctx) {
         writer.print("</tbl>");
+        tableDeclared = false;
     }
 
 	/* (non-Javadoc)
@@ -1057,50 +1060,6 @@ public class ToXML extends LaTEXBaseListener {
         wasSpaceBetweenLinesFilled = false;
         newLineCounter = 0;
         writer.print("</p>");
-    }
-
-    /**
-     * Tables inserter.
-     */
-    private void tablesInserter() {
-        for (String key : shouldBeInsertedTables.keySet()) {
-            if (!declaredTables.contains(key))
-                declaredTables.add(key);
-            else
-                continue;
-
-            int tableFileNumber = shouldBeInsertedTables.get(key);
-            try {
-                rewriteFigureFromFile(MainWindow.mainPath + "/LaTEXtoXML/tables/" + tableFileNumber
-                        + ".xml");
-            } catch (Exception e) {
-                System.out.println("Table file number: " + tableFileNumber
-                        + " not found!!!");
-            }
-        }
-        shouldBeInsertedTables.clear();
-    }
-
-    /**
-     * Figures inserter.
-     */
-    private void figuresInserter() {
-        for (String key : shouldBeInsertedFigures.keySet()) {
-            if (!declaredFigures.contains(key))
-                declaredFigures.add(key);
-            else
-                continue;
-
-            int figureFileNumber = shouldBeInsertedFigures.get(key);
-            try {
-                rewriteFigureFromFile(MainWindow.mainPath + "/LaTEXtoXML/figures/" + figureFileNumber
-                        + ".xml");
-            } catch (Exception e) {
-                System.out.println("Figure file number: " + figureFileNumber
-                        + " not found!!!");
-            }
-        }
-        shouldBeInsertedFigures.clear();
     }
 
     /**
