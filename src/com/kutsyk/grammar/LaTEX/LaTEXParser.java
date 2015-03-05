@@ -1,18 +1,13 @@
 // Generated from D:/Charlesworth/LaTEX/src/com/kutsyk/grammar/LaTEX\LaTEX.g4 by ANTLR 4.5
 package com.kutsyk.grammar.LaTEX;
-
-import org.antlr.v4.runtime.*;
-import org.antlr.v4.runtime.atn.ATN;
-import org.antlr.v4.runtime.atn.ATNDeserializer;
-import org.antlr.v4.runtime.atn.ParserATNSimulator;
-import org.antlr.v4.runtime.atn.PredictionContextCache;
+import org.antlr.v4.runtime.atn.*;
 import org.antlr.v4.runtime.dfa.DFA;
-import org.antlr.v4.runtime.misc.NotNull;
-import org.antlr.v4.runtime.tree.ParseTreeListener;
-import org.antlr.v4.runtime.tree.ParseTreeVisitor;
-import org.antlr.v4.runtime.tree.TerminalNode;
-
+import org.antlr.v4.runtime.*;
+import org.antlr.v4.runtime.misc.*;
+import org.antlr.v4.runtime.tree.*;
 import java.util.List;
+import java.util.Iterator;
+import java.util.ArrayList;
 
 @SuppressWarnings({"all", "warnings", "unchecked", "unused", "cast"})
 public class LaTEXParser extends Parser {
@@ -72,7 +67,7 @@ public class LaTEXParser extends Parser {
 		RULE_comma = 76, RULE_dot = 77, RULE_dots = 78, RULE_appos = 79, RULE_lparen = 80, 
 		RULE_rparen = 81, RULE_dollarBlock = 82, RULE_inlineEquation = 83, RULE_equationBlock = 84, 
 		RULE_displayEquation = 85, RULE_eqnArray = 86, RULE_eqnArrayBody = 87, 
-		RULE_eqnEquation = 88, RULE_newLine = 89, RULE_doubleSlash = 90, RULE_ref = 91, 
+		RULE_eqnEquation = 88, RULE_newLine = 89, RULE_doubleSlash = 90, RULE_reference = 91, 
 		RULE_simpleText = 92, RULE_interval = 93, RULE_numbers = 94, RULE_arabic = 95, 
 		RULE_specialCharacters = 96, RULE_ifThenElse = 97, RULE_ifThenText = 98;
 	public static final String[] ruleNames = {
@@ -94,8 +89,8 @@ public class LaTEXParser extends Parser {
 		"returnBlock", "url", "urlText", "options", "comma", "dot", "dots", "appos", 
 		"lparen", "rparen", "dollarBlock", "inlineEquation", "equationBlock", 
 		"displayEquation", "eqnArray", "eqnArrayBody", "eqnEquation", "newLine", 
-		"doubleSlash", "ref", "simpleText", "interval", "numbers", "arabic", "specialCharacters", 
-		"ifThenElse", "ifThenText"
+		"doubleSlash", "reference", "simpleText", "interval", "numbers", "arabic", 
+		"specialCharacters", "ifThenElse", "ifThenText"
 	};
 
 	private static final String[] _LITERAL_NAMES = {
@@ -1273,8 +1268,8 @@ public class LaTEXParser extends Parser {
 		public CiteReferencesContext citeReferences() {
 			return getRuleContext(CiteReferencesContext.class,0);
 		}
-		public RefContext ref() {
-			return getRuleContext(RefContext.class,0);
+		public ReferenceContext reference() {
+			return getRuleContext(ReferenceContext.class,0);
 		}
 		public NewLineContext newLine() {
 			return getRuleContext(NewLineContext.class,0);
@@ -1482,7 +1477,7 @@ public class LaTEXParser extends Parser {
 				enterOuterAlt(_localctx, 25);
 				{
 				setState(387); 
-				ref();
+				reference();
 				}
 				break;
 			case 26:
@@ -7431,32 +7426,32 @@ public class LaTEXParser extends Parser {
 		return _localctx;
 	}
 
-	public static class RefContext extends ParserRuleContext {
+	public static class ReferenceContext extends ParserRuleContext {
 		public TextContext text() {
 			return getRuleContext(TextContext.class,0);
 		}
-		public RefContext(ParserRuleContext parent, int invokingState) {
+		public ReferenceContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_ref; }
+		@Override public int getRuleIndex() { return RULE_reference; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof LaTEXListener ) ((LaTEXListener)listener).enterRef(this);
+			if ( listener instanceof LaTEXListener ) ((LaTEXListener)listener).enterReference(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof LaTEXListener ) ((LaTEXListener)listener).exitRef(this);
+			if ( listener instanceof LaTEXListener ) ((LaTEXListener)listener).exitReference(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof LaTEXVisitor ) return ((LaTEXVisitor<? extends T>)visitor).visitRef(this);
+			if ( visitor instanceof LaTEXVisitor ) return ((LaTEXVisitor<? extends T>)visitor).visitReference(this);
 			else return visitor.visitChildren(this);
 		}
 	}
 
-	public final RefContext ref() throws RecognitionException {
-		RefContext _localctx = new RefContext(_ctx, getState());
-		enterRule(_localctx, 182, RULE_ref);
+	public final ReferenceContext reference() throws RecognitionException {
+		ReferenceContext _localctx = new ReferenceContext(_ctx, getState());
+		enterRule(_localctx, 182, RULE_reference);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);

@@ -655,7 +655,7 @@ public class LaTEXBaseVisitor<T> extends AbstractParseTreeVisitor<T> implements 
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitRef(@NotNull LaTEXParser.RefContext ctx) { return visitChildren(ctx); }
+	@Override public T visitReference(@NotNull LaTEXParser.ReferenceContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *

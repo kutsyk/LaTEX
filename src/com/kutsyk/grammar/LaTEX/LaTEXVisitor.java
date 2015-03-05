@@ -558,11 +558,11 @@ public interface LaTEXVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitDoubleSlash(@NotNull LaTEXParser.DoubleSlashContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link LaTEXParser#ref}.
+	 * Visit a parse tree produced by {@link LaTEXParser#reference}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitRef(@NotNull LaTEXParser.RefContext ctx);
+	T visitReference(@NotNull LaTEXParser.ReferenceContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link LaTEXParser#simpleText}.
 	 * @param ctx the parse tree

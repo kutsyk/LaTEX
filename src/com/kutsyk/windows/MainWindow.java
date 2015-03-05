@@ -567,6 +567,7 @@ public class MainWindow extends JFrame {
 		try {
 			BufferedWriter fileOut = new BufferedWriter(new FileWriter(fileName));
 			documentText.write(fileOut);
+            fileOut.close();
 			writeDocumentToPane(fileName);
 		} catch (IOException e1) {
 			e1.printStackTrace();

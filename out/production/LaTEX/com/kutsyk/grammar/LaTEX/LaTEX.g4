@@ -111,7 +111,7 @@ member
 	| renewcommandDeclaration
 
 	| citeReferences
-	| ref
+	| reference
 
 	| newLine
 	| url
@@ -246,8 +246,7 @@ list:
 ;
 
 items:
-	item*
-;
+	item*;
 
 item:
 	'\n'* '\\item' memberList*
@@ -541,7 +540,7 @@ doubleSlash:
 	'\\\\'
 ;
 
-ref:
+reference:
 	'~' '('? '\\ref{' text '}' ')'?
 ;
 

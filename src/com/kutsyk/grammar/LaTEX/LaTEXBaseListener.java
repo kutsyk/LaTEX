@@ -1109,13 +1109,13 @@ public class LaTEXBaseListener implements LaTEXListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterRef(@NotNull LaTEXParser.RefContext ctx) { }
+	@Override public void enterReference(@NotNull LaTEXParser.ReferenceContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitRef(@NotNull LaTEXParser.RefContext ctx) { }
+	@Override public void exitReference(@NotNull LaTEXParser.ReferenceContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *

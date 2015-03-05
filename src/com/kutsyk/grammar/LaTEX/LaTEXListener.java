@@ -919,15 +919,15 @@ public interface LaTEXListener extends ParseTreeListener {
 	 */
 	void exitDoubleSlash(@NotNull LaTEXParser.DoubleSlashContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link LaTEXParser#ref}.
+	 * Enter a parse tree produced by {@link LaTEXParser#reference}.
 	 * @param ctx the parse tree
 	 */
-	void enterRef(@NotNull LaTEXParser.RefContext ctx);
+	void enterReference(@NotNull LaTEXParser.ReferenceContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link LaTEXParser#ref}.
+	 * Exit a parse tree produced by {@link LaTEXParser#reference}.
 	 * @param ctx the parse tree
 	 */
-	void exitRef(@NotNull LaTEXParser.RefContext ctx);
+	void exitReference(@NotNull LaTEXParser.ReferenceContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link LaTEXParser#simpleText}.
 	 * @param ctx the parse tree

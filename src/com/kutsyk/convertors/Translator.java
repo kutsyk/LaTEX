@@ -1,5 +1,6 @@
 package com.kutsyk.convertors;
 
+import com.kutsyk.convertors.LATEX.ToXML;
 import com.kutsyk.grammar.LaTEX.LaTEXLexer;
 import com.kutsyk.grammar.LaTEX.LaTEXParser;
 import com.kutsyk.windows.MainWindow;
