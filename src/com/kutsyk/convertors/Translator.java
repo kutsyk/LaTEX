@@ -1,6 +1,9 @@
 package com.kutsyk.convertors;
 
+import com.kutsyk.convertors.BibTEX.BibXML;
 import com.kutsyk.convertors.LATEX.ToXML;
+import com.kutsyk.grammar.BibTEX.BibPlosLexer;
+import com.kutsyk.grammar.BibTEX.BibPlosParser;
 import com.kutsyk.grammar.LaTEX.LaTEXLexer;
 import com.kutsyk.grammar.LaTEX.LaTEXParser;
 import com.kutsyk.windows.MainWindow;
@@ -168,6 +171,7 @@ public class Translator {
         createMainFile(inputFile);
         cutBibliographyFromFile(inputFile);
         bodyProcessing(MainWindow.mainPath + "/LaTEXtoXML/mainFile.tex");
+        backProcessing(MainWindow.mainPath + "/LaTEXtoXML/back.tex");
         return true;
     }
 
@@ -284,6 +288,29 @@ public class Translator {
         writer = new PrintWriter(MainWindow.mainPath
                 + "/LaTEXtoXML/bodyAndBottom.xml");
         ToXML translator = new ToXML(writer);
+        walker.walk(translator, mainTree); // initiate walk of tree with
+        // listener
+        writer.close();
+    }
+
+    /**
+     * Back processing.
+     *
+     * @param inputFile the input file
+     * @throws Exception the exception
+     */
+    private void backProcessing(String inputFile) throws Exception {
+        InputStream is = new FileInputStream(inputFile);
+        ANTLRInputStream mainInput = new ANTLRInputStream(is);
+        BibPlosLexer mainLexer = new BibPlosLexer(mainInput);
+        CommonTokenStream mainTokens = new CommonTokenStream(mainLexer);
+        BibPlosParser mainParser = new BibPlosParser(mainTokens);
+        ParseTree mainTree = mainParser.compilationUnit();// parse
+        ParseTreeWalker walker = new ParseTreeWalker(); // create standard
+
+        writer = new PrintWriter(MainWindow.mainPath
+                + "/LaTEXtoXML/back.xml");
+        BibXML translator = new BibXML(writer);
         walker.walk(translator, mainTree); // initiate walk of tree with
         // listener
         writer.close();

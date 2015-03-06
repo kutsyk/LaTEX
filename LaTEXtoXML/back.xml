@@ -1,0 +1,38 @@
+<ref-list>
+<ref id="bib1">
+    bib1
+    <person-group person-group-type="author">
+        <name>
+            Lorem M
+        </name>
+        <name>
+            Ipsum VE
+        </name>
+    </person-group>
+    <year>
+        1990
+    </year>
+    <article-title>
+        Rank Correlation Methods
+    </article-title>
+    New York: Oxford University Press 5th edition
+</ref>
+<ref id="bib2">
+    bib2
+    <person-group person-group-type="author">
+        <name>
+            Ipsum M
+        </name>
+        <name>
+            Ipsum JD
+        </name>
+    </person-group>
+    <year>
+        1990
+    </year>
+    <article-title>
+        Rank Correlation Methods
+    </article-title>
+    New York: Oxford University Press 5th edition
+</ref>
+</ref-list>

@@ -207,11 +207,7 @@ public class ToXML extends LaTEXBaseListener {
      */
     private boolean wasAlgorithmDeclared;
 
-    /**
-     * The algorithm counter.
-     */
     private int algorithmCounter;
-    private boolean wasAuthorSection;
 
     private int equationCounter;
     private boolean wasAbstractDeclared = false;
