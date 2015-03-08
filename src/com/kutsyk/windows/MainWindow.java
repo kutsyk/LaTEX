@@ -302,7 +302,7 @@ public class MainWindow extends JFrame {
 			String line;
 			StringBuilder content = new StringBuilder();
 			while ((line = reader.readLine()) != null)
-				content.append(line).append("\n");
+				content.append(line).append('\n');
 			reader.close();
 			documentText.setText(content.toString());
 			documentText.setCaretPosition(0);
@@ -563,16 +563,25 @@ public class MainWindow extends JFrame {
 		});
 	}
 
-	private void SaveButtonActionPerformed(ActionEvent e) {
-		try {
-			BufferedWriter fileOut = new BufferedWriter(new FileWriter(fileName));
-			documentText.write(fileOut);
-            fileOut.close();
-			writeDocumentToPane(fileName);
-		} catch (IOException e1) {
-			e1.printStackTrace();
-		}
-	}
+    private void SaveButtonActionPerformed(ActionEvent e) {
+        try {
+            String content = documentText.getText();
+            content = content.replaceAll("(?!\\r)\\n", "\r\n");
+
+            File file = new File(fileName);
+            // if file doesnt exists, then create it
+            if (!file.exists()) {
+                file.createNewFile();
+            }
+            FileWriter fw = new FileWriter(file.getAbsoluteFile());
+            BufferedWriter bw = new BufferedWriter(fw);
+            bw.write(content);
+            bw.close();
+
+        } catch (IOException e1) {
+            e1.printStackTrace();
+        }
+    }
 
 	private void HowToUseButtonActionPerformed(ActionEvent e) {
 		try {

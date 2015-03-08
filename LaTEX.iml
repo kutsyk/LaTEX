@@ -16,7 +16,6 @@
     </content>
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="inheritedJdk" />
-    <orderEntry type="library" name="jsoup-1.8.1" level="application" />
     <orderEntry type="library" name="antlr-4.2.2-complete" level="project" />
   </component>
   <component name="POM File Configuration" pomFile="" />

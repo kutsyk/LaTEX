@@ -1,6 +1,5 @@
 package com.kutsyk.convertors.BibTEX;
 
-
 import com.kutsyk.grammar.BibTEX.BibPlosBaseListener;
 import com.kutsyk.grammar.BibTEX.BibPlosParser;
 import org.antlr.v4.runtime.misc.NotNull;
@@ -25,8 +24,6 @@ public class BibXML extends BibPlosBaseListener {
     @Override
     public void enterSimpleText(@NotNull BibPlosParser.SimpleTextContext ctx) {
         String line = ctx.getText();
-        System.out.println(wasPreviousLineWord);
-        System.out.println(line);
         if (wasPreviousLineWord){
             writer.print(' ');
         }

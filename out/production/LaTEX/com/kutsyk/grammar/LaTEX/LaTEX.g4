@@ -5,11 +5,11 @@
 grammar LaTEX;
 
 compilationUnit:
-    '\n'* documentDeclaration '\n'* EOF
+    ('\r' | '\n')* documentDeclaration ('\r' | '\n')* EOF
 ;
 
 documentDeclaration:
-	'\\begin{document}' '\n'* frontPart '\n'* documentBody '\\end{document}'
+	'\\begin{document}' ('\r' | '\n')* frontPart ('\r' | '\n')* documentBody '\\end{document}'
 ;
 
 documentBody:
@@ -24,29 +24,29 @@ frontPart:
 ;
 
 frontBody:
-    '\n'*
+    ('\r' | '\n')*
     mainTitle
-    '\n'*
+    ('\r' | '\n')*
     authorList
-    '\n'*
+    ('\r' | '\n')*
     address+
 ;
 
 mainTitle:
     '{'
-    '\\Large' '\n'*
-    '\\textbf' '\n'*
+    '\\Large' ('\r' | '\n')*
+    '\\textbf' ('\r' | '\n')*
     '\\newline'?
-    '{' text '}' '\n'*
+    '{' text '}' ('\r' | '\n')*
     '}'
-    '\n'*
+    ('\r' | '\n')*
     '\\newline'?
 ;
 
 authorList:
 '\\\\'
     author (',' author)*
-    '\n'*
+    ('\r' | '\n')*
  '\\\\'
 ;
 author:
@@ -63,7 +63,7 @@ authorName:
 
 address:
     '\\bf' '{' numbers '}' text
-    '\\\\' '\n'*
+    '\\\\' ('\r' | '\n')*
 ;
 
 bodyPart:
@@ -178,7 +178,7 @@ text:
 ;
 
 textBody:
-	boxBlock | texttypeDeclarator | simpleText | textSymbols | dollarBlock | block | comma | url  | '\n'
+	boxBlock | texttypeDeclarator | simpleText | textSymbols | dollarBlock | block | comma | url  | ( '\n' | '\r')
 ;
 
 textSC:
@@ -213,7 +213,7 @@ newcommandDeclaration
 
 commandBody
 :
-	(~('\n'))+ '\n'
+	(~('\r' | '\n'))+ ( '\n' | '\r')
 ;
 
 renewcommandDeclaration
@@ -249,7 +249,7 @@ items:
 	item*;
 
 item:
-	'\n'* '\\item' memberList*
+	( '\n' | '\r')* '\\item' memberList*
 ;
 
 descriptionList:
@@ -261,7 +261,7 @@ descriptionItems:
 ;
 
 descriptionItem:
-	'\n'* '\\item' descriptionTitle memberList*
+	( '\n' | '\r')* '\\item' descriptionTitle memberList*
 ;
 
 descriptionTitle:
@@ -275,19 +275,19 @@ captionBlock:
 
 table:
     '\\begin{table}' options?
-    '\n'*
+    ( '\n' | '\r')*
     '\\begin{adjustwidth}{-2.25in}{0in}'*
-    '\n'*
+    ( '\n' | '\r')*
     tableCaption
-    '\n'*
+    ( '\n' | '\r')*
     tabular
-    '\n'*
+    ( '\n' | '\r')*
     tableDefinition
-    '\n'*
+    ( '\n' | '\r')*
     label
-    '\n'*
+    ( '\n' | '\r')*
     '\\end{adjustwidth}'*
-    '\n'*
+    ( '\n' | '\r')*
     '\\end{table}'
 ;
 
@@ -297,10 +297,10 @@ tableCaption:
 
 tabular:
     '\\begin{tabular}' tableSkipBlock
-    '\n'*
+    ( '\n' | '\r')*
     '\\hline'
-    '\n'*
-    (tableRow '\\\\ \\hline' '\n'?)+
+    ( '\n' | '\r')*
+    (tableRow '\\\\ \\hline' ( '\n' | '\r')?)+
     '\\end{tabular}'
 ;
 
@@ -399,7 +399,7 @@ citeReferencesList
 :
 	citeReference
 	(
-		',' '\n'* citeReference '\n'* 
+		',' ( '\n' | '\r')* citeReference ( '\n' | '\r')*
 	)*
 ;
 
@@ -532,7 +532,7 @@ eqnEquation:
 
 newLine
 :
-	'\n'
+	( '\n' | '\r')
 	| doubleSlash	
 ;
 
