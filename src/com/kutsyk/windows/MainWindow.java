@@ -112,8 +112,9 @@ public class MainWindow extends JFrame {
 	 */
 	private static void clear() {
 		deleteFile("result.xml");
-		deleteFile("bodyAndBottom.xml");
 		deleteFile("mainFile.tex");
+        deleteFile("bodyAndBottom.xml");
+        deleteFile("back.xml");
 		deleteFile("back.tex");
 		deleteFile("newCommands.tex");
 
@@ -147,6 +148,7 @@ public class MainWindow extends JFrame {
 			for (int i = 0; i < files.length; ++i)
 				files[i].deleteOnExit();
 		}
+        dir.deleteOnExit();
 	}
 
 	/**
