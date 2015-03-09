@@ -229,7 +229,12 @@ public class MainWindow extends JFrame {
 		PrintWriter resultXml = new PrintWriter(mainPath
 				+ "/LaTEXtoXML/result.xml");
 		InputStream in = null;
+        resultXml.append("<article>");
 		writePartToResult(resultXml, in, "bodyAndBottom");
+        resultXml.append("</body><back>");
+        writePartToResult(resultXml, in, "back");
+        resultXml.append("</back>");
+        resultXml.append("</article>");
 		resultXml.close();
 	}
 
@@ -343,7 +348,7 @@ public class MainWindow extends JFrame {
 		if (save == JOptionPane.YES_OPTION) {
 			JFileChooser fileChooser = new JFileChooser();
 			fileChooser.setFileSelectionMode(JFileChooser.FILES_ONLY);
-			fileChooser.setSelectedFile(new File(LaTEXWaiting.getText()
+			fileChooser.setSelectedFile(new File(fileName
 					+ " - final.xml"));
 			fileChooser.showSaveDialog(this);
 			File file = fileChooser.getSelectedFile();
