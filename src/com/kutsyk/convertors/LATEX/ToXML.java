@@ -1212,10 +1212,8 @@ public class ToXML extends LaTEXBaseListener {
     public void enterUrlText(LaTEXParser.UrlTextContext ctx) {
         String url = ctx.getText();
         url = url.substring(1, url.length() - 1);
-        writer.print("<?up?><?show +\"linkList\"tpmkset \"web2\",\"description\",\"\",\"*"
-                + url
-                + "\",0,0,2$10#?><?show $60#?tbklnk==\"web2\"$62#?>"
-                + "<url url=\"" + url + "\">");
+        writer.print("<url url=\"" + url + "\">");
+        shouldTextBeMissed = true;
     }
 
 	/* (non-Javadoc)
@@ -1223,7 +1221,8 @@ public class ToXML extends LaTEXBaseListener {
 	 */
 
     public void exitUrlText(LaTEXParser.UrlTextContext ctx) {
-        writer.print("</url><?tbklnk?><?down?>\"");
+        shouldTextBeMissed = false;
+        writer.print("</url>");
     }
 
 	/* (non-Javadoc)

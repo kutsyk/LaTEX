@@ -705,4 +705,11 @@ public class LaTEXBaseVisitor<T> extends AbstractParseTreeVisitor<T> implements 
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
 	@Override public T visitIfThenText(@NotNull LaTEXParser.IfThenTextContext ctx) { return visitChildren(ctx); }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
+	@Override public T visitIsoEnt(@NotNull LaTEXParser.IsoEntContext ctx) { return visitChildren(ctx); }
 }

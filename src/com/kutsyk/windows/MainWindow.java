@@ -269,7 +269,7 @@ public class MainWindow extends JFrame {
 		reinitLabels();
         FileNameExtensionFilter filter = new FileNameExtensionFilter("TEX file", "tex", "tex");
 		@SuppressWarnings("serial")
-		JFileChooser chooser = new JFileChooser(new File("D:\\Charlesworth\\plos_template")) {
+		JFileChooser chooser = new JFileChooser(new File("D:\\Charlesworth\\Testing documents\\latex\\latex")) {
 			public void approveSelection() {
 					super.approveSelection();
 			}

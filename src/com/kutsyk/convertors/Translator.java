@@ -219,7 +219,7 @@ public class Translator {
                 continue;
             }
             if(!skip)
-                os.print(replaceCommandIfFound(line));
+                os.println(replaceCommandIfFound(line));
         }
         fin.close();
         os.close();

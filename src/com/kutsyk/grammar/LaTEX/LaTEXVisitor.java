@@ -605,4 +605,10 @@ public interface LaTEXVisitor<T> extends ParseTreeVisitor<T> {
 	 * @return the visitor result
 	 */
 	T visitIfThenText(@NotNull LaTEXParser.IfThenTextContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link LaTEXParser#isoEnt}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitIsoEnt(@NotNull LaTEXParser.IsoEntContext ctx);
 }

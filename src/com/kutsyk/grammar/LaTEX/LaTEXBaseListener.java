@@ -1200,6 +1200,18 @@ public class LaTEXBaseListener implements LaTEXListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitIfThenText(@NotNull LaTEXParser.IfThenTextContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterIsoEnt(@NotNull LaTEXParser.IsoEntContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitIsoEnt(@NotNull LaTEXParser.IsoEntContext ctx) { }
 
 	/**
 	 * {@inheritDoc}

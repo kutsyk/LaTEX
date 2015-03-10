@@ -998,4 +998,14 @@ public interface LaTEXListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitIfThenText(@NotNull LaTEXParser.IfThenTextContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link LaTEXParser#isoEnt}.
+	 * @param ctx the parse tree
+	 */
+	void enterIsoEnt(@NotNull LaTEXParser.IsoEntContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link LaTEXParser#isoEnt}.
+	 * @param ctx the parse tree
+	 */
+	void exitIsoEnt(@NotNull LaTEXParser.IsoEntContext ctx);
 }

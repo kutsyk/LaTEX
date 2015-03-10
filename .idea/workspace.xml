@@ -10,12 +10,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e2b187e4-9aa6-4834-8342-4783480434ef" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/kutsyk/gui/GUI.form" afterPath="$PROJECT_DIR$/src/com/kutsyk/gui/GUI.form" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/kutsyk/gui/GUI.java" afterPath="$PROJECT_DIR$/src/com/kutsyk/gui/GUI.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="DELETED" beforePath="D:\Charlesworth\LaTEX\LaTEXtoXML\back.xml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ISOENT.csv" afterPath="$PROJECT_DIR$/ISOENT.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/kutsyk/grammar/LaTEX/LaTEX.g4" afterPath="$PROJECT_DIR$/src/com/kutsyk/grammar/LaTEX/LaTEX.g4" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/kutsyk/grammar/LaTEX/LaTEX.tokens" afterPath="$PROJECT_DIR$/src/com/kutsyk/grammar/LaTEX/LaTEX.tokens" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/kutsyk/grammar/LaTEX/LaTEXBaseListener.java" afterPath="$PROJECT_DIR$/src/com/kutsyk/grammar/LaTEX/LaTEXBaseListener.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/kutsyk/grammar/LaTEX/LaTEXBaseVisitor.java" afterPath="$PROJECT_DIR$/src/com/kutsyk/grammar/LaTEX/LaTEXBaseVisitor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/kutsyk/grammar/LaTEX/LaTEXLexer.java" afterPath="$PROJECT_DIR$/src/com/kutsyk/grammar/LaTEX/LaTEXLexer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/kutsyk/grammar/LaTEX/LaTEXLexer.tokens" afterPath="$PROJECT_DIR$/src/com/kutsyk/grammar/LaTEX/LaTEXLexer.tokens" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/kutsyk/grammar/LaTEX/LaTEXListener.java" afterPath="$PROJECT_DIR$/src/com/kutsyk/grammar/LaTEX/LaTEXListener.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/kutsyk/grammar/LaTEX/LaTEXParser.java" afterPath="$PROJECT_DIR$/src/com/kutsyk/grammar/LaTEX/LaTEXParser.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/kutsyk/grammar/LaTEX/LaTEXVisitor.java" afterPath="$PROJECT_DIR$/src/com/kutsyk/grammar/LaTEX/LaTEXVisitor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/kutsyk/windows/MainWindow.java" afterPath="$PROJECT_DIR$/src/com/kutsyk/windows/MainWindow.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/kutsyk/convertors/LATEX/ToXML.java" afterPath="$PROJECT_DIR$/src/com/kutsyk/convertors/LATEX/ToXML.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/kutsyk/convertors/Translator.java" afterPath="$PROJECT_DIR$/src/com/kutsyk/convertors/Translator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LaTEXtoXML/bodyAndBottom.xml" afterPath="$PROJECT_DIR$/LaTEXtoXML/bodyAndBottom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="LaTEX.iws" />
@@ -135,14 +144,17 @@
         <option value="$PROJECT_DIR$/src/com/kutsyk/convertors/ToXML.java" />
         <option value="$USER_HOME$/Desktop/...waiting... - final.xml" />
         <option value="$PROJECT_DIR$/src/com/kutsyk/grammar/BibTEX/plosBIB.g4" />
-        <option value="$PROJECT_DIR$/src/com/kutsyk/convertors/LATEX/ToXML.java" />
-        <option value="$PROJECT_DIR$/src/com/kutsyk/convertors/Translator.java" />
         <option value="$PROJECT_DIR$/src/com/kutsyk/grammar/BibTEX/BibPlos.g4" />
         <option value="$PROJECT_DIR$/LaTEXtoXML/back.xml" />
         <option value="$PROJECT_DIR$/src/com/kutsyk/convertors/BibTEX/BibXML.java" />
-        <option value="$PROJECT_DIR$/src/com/kutsyk/grammar/LaTEX/LaTEX.g4" />
-        <option value="$PROJECT_DIR$/src/com/kutsyk/windows/MainWindow.java" />
         <option value="$PROJECT_DIR$/src/com/kutsyk/gui/GUI.form" />
+        <option value="$PROJECT_DIR$/../plos_template/plos_template.tex" />
+        <option value="$PROJECT_DIR$/src/com/kutsyk/windows/MainWindow.java" />
+        <option value="$PROJECT_DIR$/src/com/kutsyk/convertors/Translator.java" />
+        <option value="$PROJECT_DIR$/src/com/kutsyk/convertors/LATEX/ToXML.java" />
+        <option value="$USER_HOME$/Desktop/3DAtlas_PlosCompBiol_v5.tex - final.xml" />
+        <option value="$PROJECT_DIR$/ISOENT.csv" />
+        <option value="$PROJECT_DIR$/src/com/kutsyk/grammar/LaTEX/LaTEX.g4" />
       </list>
     </option>
   </component>
@@ -218,6 +230,38 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LaTEX" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LaTEX" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LaTEX" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LaTEX" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -279,6 +323,7 @@
     <property name="$PROJECT_DIR$/src/com/kutsyk/grammar/BibTEX/BibPlos.g4::/package" value="com.kutsyk.grammar.BibTEX" />
     <property name="$PROJECT_DIR$/src/com/kutsyk/grammar/BibTEX/BibPlos.g4::/gen-listener" value="true" />
     <property name="$PROJECT_DIR$/src/com/kutsyk/grammar/BibTEX/BibPlos.g4::/gen-visitor" value="false" />
+    <property name="LayoutCode.rearrangeEntriesLaTeX" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -647,12 +692,14 @@
       <workItem from="1425915606512" duration="85000" />
       <workItem from="1425915710153" duration="27000" />
       <workItem from="1425991049387" duration="145000" />
+      <workItem from="1425997994298" duration="4399000" />
+      <workItem from="1426008637140" duration="1938000" />
     </task>
     <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="207255000" />
+    <option name="totallyTimeSpent" value="213592000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -683,13 +730,13 @@
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32930514" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32626426" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5187602" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5742251" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32930514" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39967373" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24773414" sideWeight="0.5008157" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.73735726" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3213703" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32930514" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Tool Output" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3213703" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -698,15 +745,15 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32930514" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2960725" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2960725" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5986949" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23640484" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3284553" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3179318" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31647635" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952693" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -780,14 +827,11 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/kutsyk/convertors/LATEX/ToXML.java">
+    <entry file="file://$PROJECT_DIR$/src/com/kutsyk/grammar/LaTEX/LaTEX.g4">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/kutsyk/convertors/Translator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
+        <state line="746" column="1" selection-start="9965" selection-end="9965" vertical-scroll-proportion="0.0" vertical-offset="12163" max-vertical-offset="12784">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/kutsyk/windows/MainWindow.java">
@@ -796,11 +840,11 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ISOENT.csv">
-      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
+      </provider>
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/kutsyk/windows/MainWindow.java">
@@ -859,11 +903,11 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/errorLogLaTEX.txt">
-      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
+      </provider>
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/kutsyk/windows/MainWindow.java">
@@ -937,27 +981,19 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ISOENT.csv">
-      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
+      </provider>
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/errorLogLaTEX.txt">
-      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ISOENT.csv">
       <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
         <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
       </provider>
     </entry>
     <entry file="jar://$PROJECT_DIR$/lib/antlr-4.5-complete.jar!/org/antlr/v4/runtime/tree/ParseTreeWalker.class">
@@ -995,21 +1031,6 @@
         <state line="164" column="28" selection-start="4717" selection-end="4730" vertical-scroll-proportion="0.62350935" vertical-offset="2371" max-vertical-offset="2958" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/LaTEXtoXML/back.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="748" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/kutsyk/convertors/LATEX/ToXML.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="8" selection-start="329" selection-end="329" vertical-scroll-proportion="0.11584327" vertical-offset="0" max-vertical-offset="23307" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/kutsyk/convertors/Translator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="308" column="21" selection-start="10395" selection-end="10395" vertical-scroll-proportion="0.54684836" vertical-offset="4694" max-vertical-offset="5304" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/kurpiak/styling/StyledDocument.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="108" column="36" selection-start="3743" selection-end="3743" vertical-scroll-proportion="0.17850637" vertical-offset="1670" max-vertical-offset="2618" />
@@ -1023,14 +1044,6 @@
     <entry file="file://$PROJECT_DIR$/src/com/kutsyk/convertors/BibTEX/BibXML.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="25" column="36" selection-start="686" selection-end="686" vertical-scroll-proportion="0.0" vertical-offset="145" max-vertical-offset="1938" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/kutsyk/grammar/LaTEX/LaTEX.g4">
-      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="14" selection-start="46" selection-end="46" vertical-scroll-proportion="0.0" vertical-offset="11177" max-vertical-offset="12784" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/kutsyk/gui/GUI.java">
@@ -1051,9 +1064,47 @@
         <state line="62" column="30" selection-start="2265" selection-end="2265" vertical-scroll-proportion="-15.358834" vertical-offset="9486" max-vertical-offset="11509" />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../plos_template/plos_template.tex">
+      <provider selected="true" editor-type-id="LaTeXFileEditor">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/kutsyk/windows/MainWindow.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="924" column="18" selection-start="28652" selection-end="28654" vertical-scroll-proportion="0.38020834" vertical-offset="14673" max-vertical-offset="15283" />
+        <state line="578" column="43" selection-start="16134" selection-end="16140" vertical-scroll-proportion="0.36236933" vertical-offset="9278" max-vertical-offset="15079" />
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/3DAtlas_PlosCompBiol_v5.tex - final.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="0" selection-start="10" selection-end="10" vertical-scroll-proportion="0.028960818" vertical-offset="0" max-vertical-offset="1020" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/kutsyk/convertors/LATEX/ToXML.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1203" column="35" selection-start="31582" selection-end="31582" vertical-scroll-proportion="0.01362862" vertical-offset="20307" max-vertical-offset="23290" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/kutsyk/convertors/Translator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="177" column="7" selection-start="5469" selection-end="5469" vertical-scroll-proportion="0.0" vertical-offset="2771" max-vertical-offset="5304" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ISOENT.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="634" column="0" selection-start="11147" selection-end="11147" vertical-scroll-proportion="0.2700186" vertical-offset="10633" max-vertical-offset="16762" />
+      </provider>
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/kutsyk/grammar/LaTEX/LaTEX.g4">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1168" column="10" selection-start="17186" selection-end="17186" vertical-scroll-proportion="4.301533" vertical-offset="17331" max-vertical-offset="29495">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
       </provider>
     </entry>
   </component>
