@@ -56,3 +56,6 @@ $RECYCLE.BIN/
 *.msi
 *.msm
 *.msp
+
+# XML files
+*.xml

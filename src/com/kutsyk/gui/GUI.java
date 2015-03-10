@@ -15,6 +15,8 @@ public class GUI extends JFrame{
     private JButton saveXMLFileButton;
     private JButton helpButton;
     private JButton exitButton;
+    private JTextPane documentText;
+    private JButton button1;
 
     public static void main(String[] args) {
         EventQueue.invokeLater(new Runnable() {
