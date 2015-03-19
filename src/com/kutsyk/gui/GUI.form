@@ -26,7 +26,11 @@
             <constraints>
               <splitpane position="right"/>
             </constraints>
-            <properties/>
+            <properties>
+              <enabled value="false"/>
+              <font name="Arial" size="14"/>
+              <text value=""/>
+            </properties>
           </component>
           <grid id="9212f" layout-manager="FormLayout">
             <rowspec value="center:max(d;4px):noGrow"/>

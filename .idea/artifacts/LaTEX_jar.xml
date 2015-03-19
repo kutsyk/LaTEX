@@ -1,8 +1,7 @@
 <component name="ArtifactManager">
   <artifact type="jar" build-on-make="true" name="LaTEX:jar">
     <output-path>$PROJECT_DIR$/out/artifacts/LaTEX_jar</output-path>
-    <root id="archive" name="LaTEX_jar.jar">
-      <element id="library" level="project" name="antlr-4.2.2-complete" />
+    <root id="archive" name="LaTEX.jar">
       <element id="module-output" name="LaTEX" />
       <element id="extracted-dir" path="$PROJECT_DIR$/lib/antlr-4.5-complete.jar" path-in-jar="/" />
     </root>

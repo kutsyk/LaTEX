@@ -486,24 +486,6 @@ public interface LaTEXVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitDots(@NotNull LaTEXParser.DotsContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link LaTEXParser#appos}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitAppos(@NotNull LaTEXParser.ApposContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link LaTEXParser#lparen}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitLparen(@NotNull LaTEXParser.LparenContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link LaTEXParser#rparen}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitRparen(@NotNull LaTEXParser.RparenContext ctx);
-	/**
 	 * Visit a parse tree produced by {@link LaTEXParser#dollarBlock}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
@@ -587,12 +569,6 @@ public interface LaTEXVisitor<T> extends ParseTreeVisitor<T> {
 	 * @return the visitor result
 	 */
 	T visitArabic(@NotNull LaTEXParser.ArabicContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link LaTEXParser#specialCharacters}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitSpecialCharacters(@NotNull LaTEXParser.SpecialCharactersContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link LaTEXParser#ifThenElse}.
 	 * @param ctx the parse tree

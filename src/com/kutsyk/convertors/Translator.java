@@ -221,6 +221,7 @@ public class Translator {
             if(!skip)
                 os.println(replaceCommandIfFound(line));
         }
+        os.println("\\end{document}");
         fin.close();
         os.close();
     }
@@ -245,8 +246,9 @@ public class Translator {
             if(line.toLowerCase().contains("\\section") && line.toLowerCase().contains("acknowledgments"))
                 skip = false;
             if(!skip)
-                os.print(replaceCommandIfFound(line));
-            if(line.contains("\\end{thebibliography}"))
+                os.println(replaceCommandIfFound(line));
+            if(line.contains("\\end{thebibliography}")
+                    || line.contains("\\end{document}"))
                 break;
         }
         fin.close();

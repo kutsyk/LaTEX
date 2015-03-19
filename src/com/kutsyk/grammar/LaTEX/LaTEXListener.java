@@ -799,36 +799,6 @@ public interface LaTEXListener extends ParseTreeListener {
 	 */
 	void exitDots(@NotNull LaTEXParser.DotsContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link LaTEXParser#appos}.
-	 * @param ctx the parse tree
-	 */
-	void enterAppos(@NotNull LaTEXParser.ApposContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link LaTEXParser#appos}.
-	 * @param ctx the parse tree
-	 */
-	void exitAppos(@NotNull LaTEXParser.ApposContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link LaTEXParser#lparen}.
-	 * @param ctx the parse tree
-	 */
-	void enterLparen(@NotNull LaTEXParser.LparenContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link LaTEXParser#lparen}.
-	 * @param ctx the parse tree
-	 */
-	void exitLparen(@NotNull LaTEXParser.LparenContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link LaTEXParser#rparen}.
-	 * @param ctx the parse tree
-	 */
-	void enterRparen(@NotNull LaTEXParser.RparenContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link LaTEXParser#rparen}.
-	 * @param ctx the parse tree
-	 */
-	void exitRparen(@NotNull LaTEXParser.RparenContext ctx);
-	/**
 	 * Enter a parse tree produced by {@link LaTEXParser#dollarBlock}.
 	 * @param ctx the parse tree
 	 */
@@ -968,16 +938,6 @@ public interface LaTEXListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitArabic(@NotNull LaTEXParser.ArabicContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link LaTEXParser#specialCharacters}.
-	 * @param ctx the parse tree
-	 */
-	void enterSpecialCharacters(@NotNull LaTEXParser.SpecialCharactersContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link LaTEXParser#specialCharacters}.
-	 * @param ctx the parse tree
-	 */
-	void exitSpecialCharacters(@NotNull LaTEXParser.SpecialCharactersContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link LaTEXParser#ifThenElse}.
 	 * @param ctx the parse tree

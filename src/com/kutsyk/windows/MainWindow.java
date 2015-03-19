@@ -257,7 +257,7 @@ public class MainWindow extends JFrame {
 		in = new FileInputStream(new File(mainPath + "/LaTEXtoXML/" + part
 				+ ".xml"));
 		BufferedReader reader = new BufferedReader(new InputStreamReader(in));
-		String line = "";
+		String line;
 		while ((line = reader.readLine()) != null)
 			resultXml.print(line);
 		in.close();
@@ -269,6 +269,7 @@ public class MainWindow extends JFrame {
 		reinitLabels();
         FileNameExtensionFilter filter = new FileNameExtensionFilter("TEX file", "tex", "tex");
 		@SuppressWarnings("serial")
+//		JFileChooser chooser = new JFileChooser(new File("D:\\Charlesworth\\plos_template")) {
 		JFileChooser chooser = new JFileChooser(new File("D:\\Charlesworth\\Testing documents\\latex\\latex")) {
 			public void approveSelection() {
 					super.approveSelection();
@@ -360,7 +361,7 @@ public class MainWindow extends JFrame {
 						+ "/LaTEXtoXML/result.xml");
 				BufferedReader reader = new BufferedReader(
 						new InputStreamReader(in));
-				String line = "";
+				String line;
 				while ((line = reader.readLine()) != null)
 					writer.print(line);
 
@@ -401,6 +402,7 @@ public class MainWindow extends JFrame {
 
 	private void initLineTextEditor() {
 		documentText = new JTextPane(StyledDocument.getInstance());
+        documentText.setFont(new Font("Arial",14,14));
 		lineNumber = new TextLineNumber(documentText);
 
 		scrollPane = new JScrollPane(documentText);
