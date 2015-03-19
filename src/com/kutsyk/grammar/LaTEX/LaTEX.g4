@@ -84,6 +84,7 @@ member
 
     | block
     | reference
+    | href
 
     | label
     | citeReferences
@@ -161,6 +162,10 @@ textSymbols:
 	| isoEnt
 	| Lparen
 	| Rparen
+
+	| COLON
+	| QUOTATION
+	| SEMICOLON
 
 	| '-'
 	| '/'
@@ -488,7 +493,7 @@ Rparen: ')' ;
 
 
 dollarBlock:
-	('$' (~('$'))? '$')
+	('$' (~('$'))+ '$')
 ;
 
 
@@ -542,7 +547,19 @@ doubleSlash:
 ;
 
 reference:
-	'~' simpleText? '('? '\\ref{' text '}' ')'?
+	'~'? simpleText? '('? '\\ref{' text '}' ')'?
+;
+
+href:
+    '\\href' hrefUrl hrefName
+;
+
+hrefUrl:
+    '{' (~'}')+ '}'
+;
+
+hrefName:
+    '{' (~'}')+ '}'
 ;
 
 simpleText:
@@ -585,7 +602,6 @@ NameChar
 	:   NameStartChar
 	|   '0'..'9'
 	|   '_'
-	|   COLON
 	|   '\u00B7'
 	|   '\u0300'..'\u036F'
 	|   '\u203F'..'\u2040'
@@ -614,6 +630,8 @@ BANG            : '!';
 TILDE           : '~';
 QUESTION        : '?';
 COLON           : ':';
+SEMICOLON       : ';';
+QUOTATION       : '"';
 EQUAL           : '==';
 LE              : '<=';
 GE              : '>=';
@@ -857,7 +875,6 @@ isoEnt:
 '","' |
 '\\lowbar' |
 '/' |
-':' |
 '?' |
 '?\'' |
 '\\guillemotleft' |

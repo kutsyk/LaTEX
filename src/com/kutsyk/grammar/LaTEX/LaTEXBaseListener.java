@@ -1085,6 +1085,42 @@ public class LaTEXBaseListener implements LaTEXListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterHref(@NotNull LaTEXParser.HrefContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitHref(@NotNull LaTEXParser.HrefContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterHrefUrl(@NotNull LaTEXParser.HrefUrlContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitHrefUrl(@NotNull LaTEXParser.HrefUrlContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterHrefName(@NotNull LaTEXParser.HrefNameContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitHrefName(@NotNull LaTEXParser.HrefNameContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterSimpleText(@NotNull LaTEXParser.SimpleTextContext ctx) { }
 	/**
 	 * {@inheritDoc}

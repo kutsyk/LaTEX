@@ -899,6 +899,36 @@ public interface LaTEXListener extends ParseTreeListener {
 	 */
 	void exitReference(@NotNull LaTEXParser.ReferenceContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link LaTEXParser#href}.
+	 * @param ctx the parse tree
+	 */
+	void enterHref(@NotNull LaTEXParser.HrefContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link LaTEXParser#href}.
+	 * @param ctx the parse tree
+	 */
+	void exitHref(@NotNull LaTEXParser.HrefContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link LaTEXParser#hrefUrl}.
+	 * @param ctx the parse tree
+	 */
+	void enterHrefUrl(@NotNull LaTEXParser.HrefUrlContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link LaTEXParser#hrefUrl}.
+	 * @param ctx the parse tree
+	 */
+	void exitHrefUrl(@NotNull LaTEXParser.HrefUrlContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link LaTEXParser#hrefName}.
+	 * @param ctx the parse tree
+	 */
+	void enterHrefName(@NotNull LaTEXParser.HrefNameContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link LaTEXParser#hrefName}.
+	 * @param ctx the parse tree
+	 */
+	void exitHrefName(@NotNull LaTEXParser.HrefNameContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link LaTEXParser#simpleText}.
 	 * @param ctx the parse tree
 	 */

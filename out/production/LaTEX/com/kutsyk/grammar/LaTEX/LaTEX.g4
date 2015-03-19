@@ -81,27 +81,35 @@ member
     title
 	| table
 	| abstractBlock
-	
+
+    | block
+    | reference
+    | href
+
+    | label
+    | citeReferences
+    | reference
+    | newLine
 	| textRules
-	
+
 	| figureBlock
 	| supplementaryFigureBlock
-	
+
+	| captionBlock
+
 	| algorithmBlock
 	| algorithmicBlock
-	
+
 	| input
 	| output
 	| state
 	| forBlock
 	| ifBlock
 	| returnBlock
-	
-	| captionBlock
+
+
 	| multicolsBlock
 
-	| label
-	
 	| descriptionList
 
 	| sectionDeclaration
@@ -109,13 +117,8 @@ member
 	| subsubsectionDeclaration
 
 	| renewcommandDeclaration
-
-	| citeReferences
-	| reference
-
-	| newLine
 	| url
-	
+
 	//---to skip
 	| ifThenElse
 ;
@@ -128,24 +131,23 @@ landScapeBlock:
 
 textRules:
 	dollarBlock
+	| block
+	| texttypeDeclarator
 	| textSymbols
+
 	| landScapeBlock
 	| inlineEquation
 	| equationBlock
 	| displayEquation
-	
+
 	| paragraph
-	
+
 	| list
 	| textformatingBlockFlushLeft
 	| textformatingBlockCenter
 	| textSC
-	
-	| block
-	
-	| texttypeDeclarator
 
-	| interval	
+	| interval
 	| measures
 	| simpleText+
 
@@ -154,12 +156,17 @@ textRules:
 	| dots
 	| comma
 ;
-	
+
 textSymbols:
 	dot
 	| isoEnt
-	| lparen
-	| rparen
+	| Lparen
+	| Rparen
+
+	| COLON
+	| QUOTATION
+	| SEMICOLON
+
 	| '-'
 	| '/'
 	| '*'
@@ -198,7 +205,7 @@ abstractBlock:
 	'\\end{abstract}'
 	)
 	|
-	( '\\Abstract' block ) 
+	( '\\Abstract' block )
 ;
 
 title:
@@ -208,7 +215,7 @@ title:
 newcommandDeclaration
 :
 	'\\newcommand' '{' identificator '}' options* commandBody
-; 
+;
 
 commandBody
 :
@@ -403,10 +410,10 @@ citeReferencesList
 ;
 
 citeReference:
-	(simpleText | lparen | rparen)*
+	(simpleText | Lparen | Rparen)*
 ;
 
-measures: 
+measures:
 	' ms'
 	|' Hz'
 ;
@@ -414,7 +421,7 @@ measures:
 figureBlock:
 ('\\begin{figure}' options? memberList*  '\\end{figure}')
 |
-('\\begin{figure*}'  options? memberList* '\\end{figure*}') 
+('\\begin{figure*}'  options? memberList* '\\end{figure*}')
 ;
 
 supplementaryFigureBlock:
@@ -481,13 +488,12 @@ options:
 comma:',';
 dot:'.';
 dots:'\\dots';
-lparen: '(' ;
-rparen: ')' ;
-lcurveparen: '{' ;
-rcurveparen: '}' ;
+Lparen: '(' ;
+Rparen: ')' ;
+
 
 dollarBlock:
-	('$' (~('$'))? '$')
+	('$' (~('$'))+ '$')
 ;
 
 
@@ -533,7 +539,7 @@ eqnEquation:
 newLine
 :
 	( '\n' | '\r')
-	| doubleSlash	
+	| doubleSlash
 ;
 
 doubleSlash:
@@ -541,10 +547,22 @@ doubleSlash:
 ;
 
 reference:
-	'~' '('? '\\ref{' text '}' ')'?
+	'~'? simpleText? '('? '\\ref{' text '}' ')'?
 ;
 
-simpleText:	
+href:
+    '\\href' hrefUrl hrefName
+;
+
+hrefUrl:
+    '{' (~'}')+ '}'
+;
+
+hrefName:
+    '{' (~'}')+ '}'
+;
+
+simpleText:
 	String
 	| numbers
 ;
@@ -584,7 +602,6 @@ NameChar
 	:   NameStartChar
 	|   '0'..'9'
 	|   '_'
-	|   COLON
 	|   '\u00B7'
 	|   '\u0300'..'\u036F'
 	|   '\u203F'..'\u2040'
@@ -613,6 +630,8 @@ BANG            : '!';
 TILDE           : '~';
 QUESTION        : '?';
 COLON           : ':';
+SEMICOLON       : ';';
+QUOTATION       : '"';
 EQUAL           : '==';
 LE              : '<=';
 GE              : '>=';
@@ -693,7 +712,7 @@ Skip
 	| '\\toprule'
 	| '\\medskip'
 	| '\\smallskip'
-	
+
 	| '\\bibliographymain'
 	| '\\refstepcounter'
 	| '\\toprule'
@@ -856,7 +875,6 @@ isoEnt:
 '","' |
 '\\lowbar' |
 '/' |
-':' |
 '?' |
 '?\'' |
 '\\guillemotleft' |

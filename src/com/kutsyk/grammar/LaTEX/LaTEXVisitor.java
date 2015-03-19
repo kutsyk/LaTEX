@@ -546,6 +546,24 @@ public interface LaTEXVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitReference(@NotNull LaTEXParser.ReferenceContext ctx);
 	/**
+	 * Visit a parse tree produced by {@link LaTEXParser#href}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitHref(@NotNull LaTEXParser.HrefContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link LaTEXParser#hrefUrl}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitHrefUrl(@NotNull LaTEXParser.HrefUrlContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link LaTEXParser#hrefName}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitHrefName(@NotNull LaTEXParser.HrefNameContext ctx);
+	/**
 	 * Visit a parse tree produced by {@link LaTEXParser#simpleText}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
