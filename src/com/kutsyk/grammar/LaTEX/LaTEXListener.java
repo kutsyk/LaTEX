@@ -799,6 +799,26 @@ public interface LaTEXListener extends ParseTreeListener {
 	 */
 	void exitDots(@NotNull LaTEXParser.DotsContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link LaTEXParser#lparen}.
+	 * @param ctx the parse tree
+	 */
+	void enterLparen(@NotNull LaTEXParser.LparenContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link LaTEXParser#lparen}.
+	 * @param ctx the parse tree
+	 */
+	void exitLparen(@NotNull LaTEXParser.LparenContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link LaTEXParser#rparen}.
+	 * @param ctx the parse tree
+	 */
+	void enterRparen(@NotNull LaTEXParser.RparenContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link LaTEXParser#rparen}.
+	 * @param ctx the parse tree
+	 */
+	void exitRparen(@NotNull LaTEXParser.RparenContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link LaTEXParser#dollarBlock}.
 	 * @param ctx the parse tree
 	 */

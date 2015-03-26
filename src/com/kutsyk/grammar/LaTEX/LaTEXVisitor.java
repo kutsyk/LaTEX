@@ -486,6 +486,18 @@ public interface LaTEXVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitDots(@NotNull LaTEXParser.DotsContext ctx);
 	/**
+	 * Visit a parse tree produced by {@link LaTEXParser#lparen}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitLparen(@NotNull LaTEXParser.LparenContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link LaTEXParser#rparen}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitRparen(@NotNull LaTEXParser.RparenContext ctx);
+	/**
 	 * Visit a parse tree produced by {@link LaTEXParser#dollarBlock}.
 	 * @param ctx the parse tree
 	 * @return the visitor result

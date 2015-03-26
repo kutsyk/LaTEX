@@ -1,7 +1,6 @@
 /*
     @author Kutsyk Vasyl
 */
-
 grammar LaTEX;
 
 compilationUnit:
@@ -160,8 +159,8 @@ textRules:
 textSymbols:
 	dot
 	| isoEnt
-	| Lparen
-	| Rparen
+	| lparen
+	| rparen
 
 	| COLON
 	| QUOTATION
@@ -410,7 +409,7 @@ citeReferencesList
 ;
 
 citeReference:
-	(simpleText | Lparen | Rparen)*
+	(simpleText | lparen | rparen)*
 ;
 
 measures:
@@ -488,8 +487,8 @@ options:
 comma:',';
 dot:'.';
 dots:'\\dots';
-Lparen: '(' ;
-Rparen: ')' ;
+lparen: '(' ;
+rparen: ')' ;
 
 
 dollarBlock:

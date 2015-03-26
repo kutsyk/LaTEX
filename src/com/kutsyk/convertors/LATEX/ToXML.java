@@ -755,12 +755,11 @@ public class ToXML extends LaTEXBaseListener {
             LaTEXParser.BoldTypeDeclarationContext ctx) {
         paragraphInserter();
         writer.print("<emph type=\"bold\">");
-
-        if (figureDeclared) {
-            shouldTextBeMissed = false;
-            figureTitleDeclared = true;
-            return;
-        }
+//        if (figureDeclared)
+//        {
+//            shouldTextBeMissed = false;
+//            figureTitleDeclared = true;
+//        }
     }
 
     /**
@@ -774,8 +773,8 @@ public class ToXML extends LaTEXBaseListener {
 		 * because it will close bold tag in the place where
 		 * the first sentence of the figure will finish
 		 */
-        if (figureDeclared)
-            return;
+//        if (figureDeclared)
+//            return;
 
         writer.print("</emph>");
     }
@@ -912,7 +911,6 @@ public class ToXML extends LaTEXBaseListener {
             LaTEXParser.NewcommandDeclarationContext ctx) {
         if (ctx.identificator() == null)
             return;
-
         newCommandName = ctx.identificator().getText();
     }
 
@@ -962,6 +960,16 @@ public class ToXML extends LaTEXBaseListener {
     public void exitTable(LaTEXParser.TableContext ctx) {
         writer.print("</tbl>");
         tableDeclared = false;
+    }
+
+    @Override
+    public void enterLparen(@NotNull LaTEXParser.LparenContext ctx) {
+        writer.print('(');
+    }
+
+    @Override
+    public void enterRparen(@NotNull LaTEXParser.RparenContext ctx) {
+        writer.print(')');
     }
 
     @Override

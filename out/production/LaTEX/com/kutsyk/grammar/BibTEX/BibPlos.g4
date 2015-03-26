@@ -79,6 +79,7 @@ NameChar
 	:   NameStartChar
 	|   '0'..'9'
 	|   '_'
+	|   '-'
 	|   COLON
 	|   '\u00B7'
 	|   '\u0300'..'\u036F'

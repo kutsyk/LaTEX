@@ -245,6 +245,8 @@ public class Translator {
                 continue;
             if(line.toLowerCase().contains("\\section") && line.toLowerCase().contains("acknowledgments"))
                 skip = false;
+            if(line.contains("\\end{document}"))
+                break;
             if(!skip)
                 os.println(replaceCommandIfFound(line));
             if(line.contains("\\end{thebibliography}")
