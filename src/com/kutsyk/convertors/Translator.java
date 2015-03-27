@@ -32,11 +32,6 @@ public class Translator {
     public static PrintWriter writer;
 
     /**
-     * The iso trie.
-     */
-    protected static HashMap<String, String> isoTrie;
-
-    /**
      * The bib references.
      */
     public static HashMap<String, Integer> bibReferences;
@@ -55,44 +50,8 @@ public class Translator {
             ToXML.writer.close();
     }
 
-    /**
-     * Gets the files names.
-     *
-     * @param dirPath the dir path
-     * @return the files names
-     */
-    private void getFilesNames(String dirPath) {
-        File directory = new File(dirPath);
-        File[] files = directory.listFiles();
-        String tex = "";
-        for (File file : files) {
-            String fileName = file.getName();
-            String type = fileName.substring(fileName.length() - 4,
-                    fileName.length());
-            if (type.equals(".tex")) {
-                tex = file.getPath();
-            }
-        }
-        texFile = tex;
-    }
 
-    /**
-     * Creates the iso - xml map trie.
-     *
-     * @throws Exception the exception
-     */
-    private void createIsoTree() throws Exception {
-        isoTrie = new HashMap<String, String>();
-        InputStream is = getClass().getResourceAsStream("ISOENT.csv");
-        InputStreamReader isr = new InputStreamReader(is);
-        BufferedReader reader = new BufferedReader(isr);
-        String line = "";
-        while ((line = reader.readLine()) != null) {
-            String[] entity = line.split(",");
-            isoTrie.put(entity[0], entity[1]);
-        }
-        reader.close();
-    }
+
 
     /**
      * Gets the bib references.

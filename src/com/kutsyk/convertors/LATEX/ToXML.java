@@ -3,6 +3,7 @@ package com.kutsyk.convertors.LATEX;
 import com.kutsyk.convertors.Translator;
 import com.kutsyk.grammar.LaTEX.LaTEXBaseListener;
 import com.kutsyk.grammar.LaTEX.LaTEXParser;
+import com.kutsyk.windows.MainWindow;
 import org.antlr.v4.runtime.misc.NotNull;
 
 import java.io.*;
@@ -974,7 +975,10 @@ public class ToXML extends LaTEXBaseListener {
 
     @Override
     public void enterIsoEnt(@NotNull LaTEXParser.IsoEntContext ctx) {
+        if (shouldTextBeMissed)
+            return;
 
+        writer.print(MainWindow.getIsoTrie().get(ctx.getText().toString()));
     }
 
     /* (non-Javadoc)
