@@ -8,9 +8,7 @@ import javax.swing.*;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import javax.swing.text.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.WindowAdapter;
-import java.awt.event.WindowEvent;
+import java.awt.event.*;
 import java.io.*;
 import java.util.HashMap;
 
@@ -67,6 +65,7 @@ public class MainWindow extends JFrame {
         });
     }
 
+
     public MainWindow() {
         initComponents();
         initLineTextEditor();
@@ -74,6 +73,14 @@ public class MainWindow extends JFrame {
         initProgressBar();
         redirectSystemStreams();
         createIsoTree();
+
+        initStyling();
+
+    }
+
+    private void initStyling(){
+        spliPaneWithDoc.setDividerLocation(0.5);
+        progressBar.setVisible(false);
     }
 
     private void initProgressBar() {
@@ -400,7 +407,6 @@ public class MainWindow extends JFrame {
     }
 
     public TextLineNumber lineNumber;
-    private static JScrollPane scrollPane;
     private static Highlighter highlighter;
 
     private void initLabels() {
@@ -412,14 +418,17 @@ public class MainWindow extends JFrame {
         documentText.setStyledDocument(StyledDocument.getInstance());
         documentText.setFont(new Font("Arial", 14, 14));
         lineNumber = new TextLineNumber(documentText);
+
+//        scrollPane = new JScrollPane(documentText);
+        scrollPane.setRowHeaderView(lineNumber);
     }
 
-    private static boolean uselessLine(String line) {
+    private boolean uselessLine(String line) {
         return line.replace(" ", "").startsWith("%")
                 || line.replace(" ", "").isEmpty();
     }
 
-    private static boolean hasRightStructure(String inputFile) throws Exception {
+    private boolean hasRightStructure(String inputFile) throws Exception {
         InputStream is = new FileInputStream(inputFile);
         BufferedReader reader = new BufferedReader(new InputStreamReader(is));
         String line;
@@ -528,7 +537,7 @@ public class MainWindow extends JFrame {
         return true;
     }
 
-    private static void highlightError(int line, int errorType) {
+    private void highlightError(int line, int errorType) {
         Document doc = documentText.getDocument();
         Element map = doc.getDefaultRootElement();
         Element startLine = map.getElement(line - 1);
@@ -553,7 +562,7 @@ public class MainWindow extends JFrame {
         }
     }
 
-    private static void scrollToLine(final int line) {
+    private void scrollToLine(final int line) {
         javax.swing.SwingUtilities.invokeLater(new Runnable() {
             public void run() {
                 JScrollBar verticalBar = scrollPane.getVerticalScrollBar();
@@ -618,6 +627,47 @@ public class MainWindow extends JFrame {
             errorLogFile.close();
     }
 
+	private void exitItemActionPerformed(ActionEvent e) {
+        closeLogFile();
+        clear();
+        System.exit(0);
+	}
+
+	private void helpItemActionPerformed(ActionEvent e) {
+        try {
+            File sourceFolder = new File(mainPath
+                    + "/LaTEXbin/documentation/index.html");
+            Desktop.getDesktop().open(sourceFolder);
+        } catch (IOException e1) {
+            e1.printStackTrace();
+        }
+	}
+
+	private void chooseFileMenuActionPerformed(ActionEvent e) {
+        wasAnyLaTEXProceeded = false;
+        FileNameExtensionFilter filter = new FileNameExtensionFilter("TEX file", "tex", "tex");
+        @SuppressWarnings("serial")
+//		JFileChooser chooser = new JFileChooser(new File("D:\\Charlesworth\\plos_template")) {
+                JFileChooser chooser = new JFileChooser(new File("D:\\Charlesworth\\Testing documents\\latex\\latex")) {
+            public void approveSelection() {
+                super.approveSelection();
+            }
+        };
+        chooser.setFileSelectionMode(JFileChooser.FILES_ONLY);
+        chooser.addChoosableFileFilter(filter);
+        chooser.setFileFilter(filter);
+        int returnVal = chooser.showOpenDialog(this);
+        if (returnVal == JFileChooser.APPROVE_OPTION) {
+            console.setText("");
+            directoryChoosed(chooser.getSelectedFile().getAbsolutePath());
+        }
+	}
+
+	private void MainWindowResized(ComponentEvent e) {
+        spliPaneWithDoc.setDividerLocation(0.5);
+        settingsSplitPane.setDividerLocation(0.5);
+	}
+
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY
         // //GEN-BEGIN:initComponents
@@ -629,7 +679,7 @@ public class MainWindow extends JFrame {
 		spliPaneWithDoc = new JSplitPane();
 		documentTab = new JTabbedPane();
 		panel7 = new JPanel();
-		scrollPane3 = new JScrollPane();
+		scrollPane = new JScrollPane();
 		documentText = new JTextPane();
 		xmlPane = new JTabbedPane();
 		panel6 = new JPanel();
@@ -640,8 +690,9 @@ public class MainWindow extends JFrame {
 		translateButton = new JButton();
 		saveDocumentButton = new JButton();
 		progressBar = new JLabel();
+		saveDocumentButton2 = new JButton();
 		panel2 = new JPanel();
-		splitPane1 = new JSplitPane();
+		settingsSplitPane = new JSplitPane();
 		panel3 = new JPanel();
 		button1 = new JButton();
 		xmlFileName = new JTextField();
@@ -663,6 +714,12 @@ public class MainWindow extends JFrame {
 				thisWindowClosing(e);
 			}
 		});
+		addComponentListener(new ComponentAdapter() {
+			@Override
+			public void componentResized(ComponentEvent e) {
+				MainWindowResized(e);
+			}
+		});
 		Container contentPane = getContentPane();
 
 		//======== menuBar1 ========
@@ -676,17 +733,37 @@ public class MainWindow extends JFrame {
 				//---- chooseFileMenu ----
 				chooseFileMenu.setText("Choose file");
 				chooseFileMenu.setFont(new Font("Calibri", Font.PLAIN, 14));
+				chooseFileMenu.addActionListener(new ActionListener() {
+					@Override
+					public void actionPerformed(ActionEvent e) {
+						chooseFileMenuActionPerformed(e);
+					}
+				});
 				MainMenu.add(chooseFileMenu);
 				MainMenu.addSeparator();
 
 				//---- helpItem ----
 				helpItem.setText("Help");
 				helpItem.setFont(new Font("Calibri", Font.PLAIN, 14));
+				helpItem.addActionListener(new ActionListener() {
+					@Override
+					public void actionPerformed(ActionEvent e) {
+						helpItemActionPerformed(e);
+						helpItemActionPerformed(e);
+					}
+				});
 				MainMenu.add(helpItem);
 
 				//---- exitItem ----
 				exitItem.setText("Exit");
 				exitItem.setFont(new Font("Calibri", Font.PLAIN, 14));
+				exitItem.addActionListener(new ActionListener() {
+					@Override
+					public void actionPerformed(ActionEvent e) {
+						exitItemActionPerformed(e);
+						exitItemActionPerformed(e);
+					}
+				});
 				MainMenu.add(exitItem);
 			}
 			menuBar1.add(MainMenu);
@@ -704,11 +781,11 @@ public class MainWindow extends JFrame {
 				{
 					panel7.setLayout(new BoxLayout(panel7, BoxLayout.X_AXIS));
 
-					//======== scrollPane3 ========
+					//======== scrollPane ========
 					{
-						scrollPane3.setViewportView(documentText);
+						scrollPane.setViewportView(documentText);
 					}
-					panel7.add(scrollPane3);
+					panel7.add(scrollPane);
 				}
 				documentTab.addTab("Document:", panel7);
 
@@ -751,6 +828,11 @@ public class MainWindow extends JFrame {
 				saveDocumentButton.setFont(new Font("Calibri", Font.PLAIN, 14));
 				saveDocumentButton.setIcon(new ImageIcon(getClass().getResource("/images/blue-disk-icon.png")));
 
+				//---- saveDocumentButton2 ----
+				saveDocumentButton2.setText("Save xml result");
+				saveDocumentButton2.setFont(new Font("Calibri", Font.PLAIN, 14));
+				saveDocumentButton2.setIcon(new ImageIcon(getClass().getResource("/images/blue-disk-icon.png")));
+
 				GroupLayout panel1Layout = new GroupLayout(panel1);
 				panel1.setLayout(panel1Layout);
 				panel1Layout.setHorizontalGroup(
@@ -761,17 +843,20 @@ public class MainWindow extends JFrame {
 							.addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
 							.addComponent(saveDocumentButton)
 							.addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-							.addComponent(progressBar)
-							.addContainerGap(457, Short.MAX_VALUE))
+							.addComponent(saveDocumentButton2)
+							.addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+							.addComponent(progressBar, GroupLayout.PREFERRED_SIZE, 251, GroupLayout.PREFERRED_SIZE)
+							.addContainerGap(55, Short.MAX_VALUE))
 				);
 				panel1Layout.setVerticalGroup(
 					panel1Layout.createParallelGroup()
 						.addGroup(panel1Layout.createSequentialGroup()
 							.addContainerGap()
-							.addGroup(panel1Layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
-								.addComponent(translateButton)
-								.addComponent(saveDocumentButton)
-								.addComponent(progressBar))
+							.addGroup(panel1Layout.createParallelGroup(GroupLayout.Alignment.TRAILING, false)
+								.addComponent(progressBar, GroupLayout.Alignment.LEADING, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+								.addComponent(translateButton, GroupLayout.Alignment.LEADING, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+								.addComponent(saveDocumentButton, GroupLayout.Alignment.LEADING, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+								.addComponent(saveDocumentButton2, GroupLayout.Alignment.LEADING, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
 							.addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
 				);
 			}
@@ -781,14 +866,14 @@ public class MainWindow extends JFrame {
 			//======== panel2 ========
 			{
 
-				//======== splitPane1 ========
+				//======== settingsSplitPane ========
 				{
 
 					//======== panel3 ========
 					{
 
 						//---- button1 ----
-						button1.setText("Set XML file name");
+						button1.setText("Set name");
 						button1.setFont(new Font("Calibri", Font.PLAIN, 14));
 
 						//---- xmlFileName ----
@@ -822,7 +907,7 @@ public class MainWindow extends JFrame {
 									.addGap(25, 25, 25))
 						);
 					}
-					splitPane1.setLeftComponent(panel3);
+					settingsSplitPane.setLeftComponent(panel3);
 
 					//======== panel4 ========
 					{
@@ -848,19 +933,19 @@ public class MainWindow extends JFrame {
 									.addContainerGap(16, Short.MAX_VALUE))
 						);
 					}
-					splitPane1.setRightComponent(panel4);
+					settingsSplitPane.setRightComponent(panel4);
 				}
 
 				GroupLayout panel2Layout = new GroupLayout(panel2);
 				panel2.setLayout(panel2Layout);
 				panel2Layout.setHorizontalGroup(
 					panel2Layout.createParallelGroup()
-						.addComponent(splitPane1, GroupLayout.DEFAULT_SIZE, 737, Short.MAX_VALUE)
+						.addComponent(settingsSplitPane, GroupLayout.DEFAULT_SIZE, 737, Short.MAX_VALUE)
 				);
 				panel2Layout.setVerticalGroup(
 					panel2Layout.createParallelGroup()
 						.addGroup(panel2Layout.createSequentialGroup()
-							.addComponent(splitPane1, GroupLayout.PREFERRED_SIZE, 50, GroupLayout.PREFERRED_SIZE)
+							.addComponent(settingsSplitPane, GroupLayout.PREFERRED_SIZE, 50, GroupLayout.PREFERRED_SIZE)
 							.addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
 				);
 			}
@@ -899,7 +984,7 @@ public class MainWindow extends JFrame {
 	private JSplitPane spliPaneWithDoc;
 	private JTabbedPane documentTab;
 	private JPanel panel7;
-	private JScrollPane scrollPane3;
+	private JScrollPane scrollPane;
 	private JTextPane documentText;
 	private JTabbedPane xmlPane;
 	private JPanel panel6;
@@ -910,8 +995,9 @@ public class MainWindow extends JFrame {
 	private JButton translateButton;
 	private JButton saveDocumentButton;
 	private JLabel progressBar;
+	private JButton saveDocumentButton2;
 	private JPanel panel2;
-	private JSplitPane splitPane1;
+	private JSplitPane settingsSplitPane;
 	private JPanel panel3;
 	private JButton button1;
 	private JTextField xmlFileName;
