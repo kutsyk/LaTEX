@@ -9,7 +9,6 @@ import javax.swing.filechooser.FileNameExtensionFilter;
 import javax.swing.text.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.io.*;
@@ -17,6 +16,12 @@ import java.util.HashMap;
 
 /*
  * @author Kutsyk Vasyl
+ * The Class MainWindow.
+ */
+
+
+// TODO: Auto-generated Javadoc
+/**
  * The Class MainWindow.
  */
 public class MainWindow extends JFrame {
@@ -32,7 +37,6 @@ public class MainWindow extends JFrame {
      * The dir.
      */
     private static File dir = new File(mainPath + "/LaTEXtoXML");
-    private static JTextPane documentText;
     private static boolean wasAnyLaTEXProceeded = false;
     private static JTextArea console;
     private static Thread translationThread;
@@ -61,7 +65,6 @@ public class MainWindow extends JFrame {
                 new MainWindow().setVisible(true);
             }
         });
-
     }
 
     public MainWindow() {
@@ -69,23 +72,15 @@ public class MainWindow extends JFrame {
         initLineTextEditor();
         initLabels();
         initProgressBar();
-        setBibliographyComponents(false);
         redirectSystemStreams();
         createIsoTree();
     }
 
     private void initProgressBar() {
         ImageIcon prog = new ImageIcon(mainPath + "/LaTEXbin/images/pleasewait.gif");
-        label4.setIcon(prog);
-        label4.setVisible(false);
+        progressBar.setIcon(prog);
+        progressBar.setIcon(prog);
     }
-
-    private void setBibliographyComponents(boolean flag) {
-        BibLabel.setVisible(flag);
-        BibLoaderGif.setVisible(flag);
-        BibWaiting.setVisible(flag);
-    }
-
 
     private void redirectSystemStreams() {
         try {
@@ -100,7 +95,6 @@ public class MainWindow extends JFrame {
         console.setWrapStyleWord(true);
         console.setDragEnabled(true);
         console.setAutoscrolls(true);
-        helpPane.add("Help: ", console);
 
         OutputStream out = new OutputStream() {
             @Override
@@ -170,8 +164,6 @@ public class MainWindow extends JFrame {
         try {
             isoTrie = new HashMap<String, String>();
             System.out.println("Here: " + mainPath);
-//        InputStream is = getClass().getResourceAsStream(mainPath + "/LaTEXbin/ISOENT.csv");
-//        InputStreamReader isr = new InputStreamReader(is);
             reader = new BufferedReader(new InputStreamReader(new FileInputStream(new File(mainPath + "/LaTEXbin/ISOENT.csv"))));
             String line;
             while ((line = reader.readLine()) != null) {
@@ -244,7 +236,6 @@ public class MainWindow extends JFrame {
         clear();
         translationThread = new Thread(new Runnable() {
             public void run() {
-                label4.setVisible(true);
                 Translator translator;
                 try {
                     translator = new Translator(fileName);
@@ -257,7 +248,6 @@ public class MainWindow extends JFrame {
                 } catch (Exception e1) {
                     e1.printStackTrace();
                 }
-                label4.setVisible(false);
                 JOptionPane.showMessageDialog(null, "Translated");
             }
         });
@@ -304,7 +294,6 @@ public class MainWindow extends JFrame {
 
     private void FileChooseButtonActionPerformed(ActionEvent e) {
         wasAnyLaTEXProceeded = false;
-        reinitLabels();
         FileNameExtensionFilter filter = new FileNameExtensionFilter("TEX file", "tex", "tex");
         @SuppressWarnings("serial")
 //		JFileChooser chooser = new JFileChooser(new File("D:\\Charlesworth\\plos_template")) {
@@ -322,7 +311,6 @@ public class MainWindow extends JFrame {
             directoryChoosed(chooser.getSelectedFile().getAbsolutePath());
         }
 //		directoryChoosed(dirPath);
-        splitPaneWithConsole.setAutoscrolls(true);
     }
 
     private void directoryChoosed(String fileName) {
@@ -416,36 +404,14 @@ public class MainWindow extends JFrame {
     private static Highlighter highlighter;
 
     private void initLabels() {
-        Dimension to5 = new Dimension(80, 15);
-        LaTEXWaiting.setMinimumSize(to5);
-        LaTEXWaiting.setPreferredSize(to5);
-        LaTEXWaiting.setMaximumSize(to5);
-
-        XMlWaiting.setMinimumSize(to5);
-        XMlWaiting.setPreferredSize(to5);
-        XMlWaiting.setMaximumSize(to5);
-
-        BibWaiting.setMinimumSize(to5);
-        BibWaiting.setPreferredSize(to5);
-        BibWaiting.setMaximumSize(to5);
-    }
-
-    private void reinitLabels() {
-        ImageIcon undone = new ImageIcon(mainPath + "/LaTEXBin/images/green-cross-icon.png");
-        LaTEXLoaderGif.setIcon(undone);
-        LaTEXWaiting.setText("...waiting...");
-        XMlWaiting.setText("...waiting...");
-        BibWaiting.setText("...waiting...");
+        Dimension minDim = new Dimension(350, 150);
+        documentTab.setMinimumSize(minDim);
     }
 
     private void initLineTextEditor() {
-        documentText = new JTextPane(StyledDocument.getInstance());
+        documentText.setStyledDocument(StyledDocument.getInstance());
         documentText.setFont(new Font("Arial", 14, 14));
         lineNumber = new TextLineNumber(documentText);
-
-        scrollPane = new JScrollPane(documentText);
-        scrollPane.setRowHeaderView(lineNumber);
-        documentTab.add("Document: ", scrollPane);
     }
 
     private static boolean uselessLine(String line) {
@@ -653,328 +619,304 @@ public class MainWindow extends JFrame {
     }
 
     private void initComponents() {
-        toolBar1 = new JToolBar();
-        FileChooseButtonFromPanel = new JButton();
-        translateButton = new JButton();
-        SaveButton = new JButton();
-        SaveXmlResult = new JButton();
-        label4 = new JLabel();
-        toolBar2 = new JToolBar();
-        HowToUseButton = new JButton();
-        ExitButton = new JButton();
-        spliPaneWithDoc = new JSplitPane();
-        splitPaneWithConsole = new JSplitPane();
-        infoPanel = new JPanel();
-        FileChooseButton = new JButton();
-        label1 = new JLabel();
-        label2 = new JLabel();
-        LaTEXWaiting = new JLabel();
-        XMLLoaderGif = new JLabel();
-        XMlWaiting = new JLabel();
-        label3 = new JLabel();
-        BibLabel = new JLabel();
-        BibWaiting = new JLabel();
-        BibLoaderGif = new JLabel();
-        LaTEXLoaderGif = new JLabel();
-        scrollPane1 = new JScrollPane();
-        helpPane = new JTabbedPane();
-        documentTab = new JTabbedPane();
+        // JFormDesigner - Component initialization - DO NOT MODIFY
+        // //GEN-BEGIN:initComponents
+		menuBar1 = new JMenuBar();
+		MainMenu = new JMenu();
+		chooseFileMenu = new JMenuItem();
+		helpItem = new JMenuItem();
+		exitItem = new JMenuItem();
+		spliPaneWithDoc = new JSplitPane();
+		documentTab = new JTabbedPane();
+		panel7 = new JPanel();
+		scrollPane3 = new JScrollPane();
+		documentText = new JTextPane();
+		xmlPane = new JTabbedPane();
+		panel6 = new JPanel();
+		scrollPane2 = new JScrollPane();
+		xmlDocument = new JTextPane();
+		tabbedPane1 = new JTabbedPane();
+		panel1 = new JPanel();
+		translateButton = new JButton();
+		saveDocumentButton = new JButton();
+		progressBar = new JLabel();
+		panel2 = new JPanel();
+		splitPane1 = new JSplitPane();
+		panel3 = new JPanel();
+		button1 = new JButton();
+		xmlFileName = new JTextField();
+		label1 = new JLabel();
+		panel4 = new JPanel();
+		checkBox1 = new JCheckBox();
 
-        //======== this ========
-        setTitle("LaTEX > XML");
-        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        setFocusable(false);
-        setBackground(Color.white);
-        setIconImage(new ImageIcon(getClass().getResource("/images/green-home-icon.png")).getImage());
-        setForeground(Color.white);
-        addWindowListener(new WindowAdapter() {
-            @Override
-            public void windowClosing(WindowEvent e) {
-                thisWindowClosing(e);
-            }
-        });
-        Container contentPane = getContentPane();
+		//======== this ========
+		setTitle("LaTEX > XML");
+		setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+		setFocusable(false);
+		setBackground(Color.white);
+		setIconImage(new ImageIcon(getClass().getResource("/images/blue-home-icon.png")).getImage());
+		setForeground(Color.white);
+		setFont(new Font("Calibri", Font.PLAIN, 14));
+		addWindowListener(new WindowAdapter() {
+			@Override
+			public void windowClosing(WindowEvent e) {
+				thisWindowClosing(e);
+			}
+		});
+		Container contentPane = getContentPane();
 
-        //======== toolBar1 ========
-        {
-            toolBar1.setFloatable(false);
+		//======== menuBar1 ========
+		{
 
-            //---- FileChooseButtonFromPanel ----
-            FileChooseButtonFromPanel.setText("Choose folder");
-            FileChooseButtonFromPanel.setFont(new Font("Arial", Font.PLAIN, 14));
-            FileChooseButtonFromPanel.setIcon(new ImageIcon(getClass().getResource("/images/green-folder-icon.png")));
-            FileChooseButtonFromPanel.addActionListener(new ActionListener() {
-                @Override
-                public void actionPerformed(ActionEvent e) {
-                    FileChooseButtonActionPerformed(e);
-                }
-            });
-            toolBar1.add(FileChooseButtonFromPanel);
+			//======== MainMenu ========
+			{
+				MainMenu.setText("File");
+				MainMenu.setFont(new Font("Calibri", Font.PLAIN, 14));
 
-            //---- translateButton ----
-            translateButton.setText("Translate to XML");
-            translateButton.setFont(new Font("Arial", Font.PLAIN, 14));
-            translateButton.setIcon(new ImageIcon(getClass().getResource("/images/green-address-book-icon.png")));
-            translateButton.addActionListener(new ActionListener() {
-                @Override
-                public void actionPerformed(ActionEvent e) {
-                    translateButtonActionPerformed(e);
-                }
-            });
-            toolBar1.add(translateButton);
+				//---- chooseFileMenu ----
+				chooseFileMenu.setText("Choose file");
+				chooseFileMenu.setFont(new Font("Calibri", Font.PLAIN, 14));
+				MainMenu.add(chooseFileMenu);
+				MainMenu.addSeparator();
 
-            //---- SaveButton ----
-            SaveButton.setText("Save document");
-            SaveButton.setIcon(new ImageIcon(getClass().getResource("/images/green-disk-icon.png")));
-            SaveButton.setFont(new Font("Arial", Font.PLAIN, 14));
-            SaveButton.addActionListener(new ActionListener() {
-                @Override
-                public void actionPerformed(ActionEvent e) {
-                    SaveButtonActionPerformed(e);
-                }
-            });
-            toolBar1.add(SaveButton);
+				//---- helpItem ----
+				helpItem.setText("Help");
+				helpItem.setFont(new Font("Calibri", Font.PLAIN, 14));
+				MainMenu.add(helpItem);
 
-            //---- SaveXmlResult ----
-            SaveXmlResult.setText("Save XML result");
-            SaveXmlResult.setFont(new Font("Arial", Font.PLAIN, 14));
-            SaveXmlResult.setIcon(new ImageIcon(getClass().getResource("/images/green-document-download-icon.png")));
-            SaveXmlResult.addActionListener(new ActionListener() {
-                @Override
-                public void actionPerformed(ActionEvent e) {
-                    SaveXmlResultActionPerformed(e);
-                }
-            });
-            toolBar1.add(SaveXmlResult);
-            toolBar1.add(label4);
-        }
+				//---- exitItem ----
+				exitItem.setText("Exit");
+				exitItem.setFont(new Font("Calibri", Font.PLAIN, 14));
+				MainMenu.add(exitItem);
+			}
+			menuBar1.add(MainMenu);
+		}
+		setJMenuBar(menuBar1);
 
-        //======== toolBar2 ========
-        {
-            toolBar2.setFloatable(false);
+		//======== spliPaneWithDoc ========
+		{
+			spliPaneWithDoc.setOneTouchExpandable(true);
 
-            //---- HowToUseButton ----
-            HowToUseButton.setText("How to use?");
-            HowToUseButton.setFont(new Font("Arial", Font.PLAIN, 14));
-            HowToUseButton.setIcon(new ImageIcon(getClass().getResource("/images/green-notes-icon.png")));
-            HowToUseButton.addActionListener(new ActionListener() {
-                @Override
-                public void actionPerformed(ActionEvent e) {
-                    HowToUseButtonActionPerformed(e);
-                }
-            });
-            toolBar2.add(HowToUseButton);
+			//======== documentTab ========
+			{
 
-            //---- ExitButton ----
-            ExitButton.setText("Exit");
-            ExitButton.setFont(new Font("Arial", Font.PLAIN, 14));
-            ExitButton.setIcon(new ImageIcon(getClass().getResource("/images/green-cross-icon.png")));
-            ExitButton.addActionListener(new ActionListener() {
-                @Override
-                public void actionPerformed(ActionEvent e) {
-                    ExitButtonActionPerformed(e);
-                }
-            });
-            toolBar2.add(ExitButton);
-        }
+				//======== panel7 ========
+				{
+					panel7.setLayout(new BoxLayout(panel7, BoxLayout.X_AXIS));
 
-        //======== spliPaneWithDoc ========
-        {
+					//======== scrollPane3 ========
+					{
+						scrollPane3.setViewportView(documentText);
+					}
+					panel7.add(scrollPane3);
+				}
+				documentTab.addTab("Document:", panel7);
 
-            //======== splitPaneWithConsole ========
-            {
-                splitPaneWithConsole.setOrientation(JSplitPane.VERTICAL_SPLIT);
+			}
+			spliPaneWithDoc.setLeftComponent(documentTab);
 
-                //======== infoPanel ========
-                {
+			//======== xmlPane ========
+			{
 
-                    //---- FileChooseButton ----
-                    FileChooseButton.setText("Choose folder");
-                    FileChooseButton.setFont(new Font("Arial", Font.PLAIN, 14));
-                    FileChooseButton.setIcon(new ImageIcon(getClass().getResource("/images/green-folder-icon.png")));
-                    FileChooseButton.addActionListener(new ActionListener() {
-                        @Override
-                        public void actionPerformed(ActionEvent e) {
-                            FileChooseButtonActionPerformed(e);
-                        }
-                    });
+				//======== panel6 ========
+				{
+					panel6.setLayout(new BorderLayout());
 
-                    //---- label1 ----
-                    label1.setText("Choose folder with all necessary files:");
-                    label1.setFont(new Font("Arial", Font.PLAIN, 14));
+					//======== scrollPane2 ========
+					{
+						scrollPane2.setViewportView(xmlDocument);
+					}
+					panel6.add(scrollPane2, BorderLayout.CENTER);
+				}
+				xmlPane.addTab("XML:", panel6);
 
-                    //---- label2 ----
-                    label2.setText("LaTEX:");
-                    label2.setFont(new Font("Arial", Font.PLAIN, 14));
+			}
+			spliPaneWithDoc.setRightComponent(xmlPane);
+		}
 
-                    //---- LaTEXWaiting ----
-                    LaTEXWaiting.setText("...waiting...");
-                    LaTEXWaiting.setFont(new Font("Arial", Font.PLAIN, 14));
+		//======== tabbedPane1 ========
+		{
+			tabbedPane1.setFont(new Font("Calibri", Font.PLAIN, 14));
 
-                    //---- XMLLoaderGif ----
-                    XMLLoaderGif.setIcon(new ImageIcon(getClass().getResource("/images/green-document-cross-icon.png")));
+			//======== panel1 ========
+			{
 
-                    //---- XMlWaiting ----
-                    XMlWaiting.setText("...waiting...");
-                    XMlWaiting.setFont(new Font("Arial", Font.PLAIN, 14));
+				//---- translateButton ----
+				translateButton.setText("Translate");
+				translateButton.setFont(new Font("Calibri", Font.PLAIN, 14));
+				translateButton.setIcon(new ImageIcon(getClass().getResource("/images/blue-document-plus-icon.png")));
 
-                    //---- label3 ----
-                    label3.setText("Frontmatter XML:");
-                    label3.setFont(new Font("Arial", Font.PLAIN, 14));
+				//---- saveDocumentButton ----
+				saveDocumentButton.setText("Save document");
+				saveDocumentButton.setFont(new Font("Calibri", Font.PLAIN, 14));
+				saveDocumentButton.setIcon(new ImageIcon(getClass().getResource("/images/blue-disk-icon.png")));
 
-                    //---- BibLabel ----
-                    BibLabel.setText("Bibliography:");
-                    BibLabel.setFont(new Font("Arial", Font.PLAIN, 14));
+				GroupLayout panel1Layout = new GroupLayout(panel1);
+				panel1.setLayout(panel1Layout);
+				panel1Layout.setHorizontalGroup(
+					panel1Layout.createParallelGroup()
+						.addGroup(panel1Layout.createSequentialGroup()
+							.addContainerGap()
+							.addComponent(translateButton)
+							.addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+							.addComponent(saveDocumentButton)
+							.addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+							.addComponent(progressBar)
+							.addContainerGap(457, Short.MAX_VALUE))
+				);
+				panel1Layout.setVerticalGroup(
+					panel1Layout.createParallelGroup()
+						.addGroup(panel1Layout.createSequentialGroup()
+							.addContainerGap()
+							.addGroup(panel1Layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+								.addComponent(translateButton)
+								.addComponent(saveDocumentButton)
+								.addComponent(progressBar))
+							.addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+				);
+			}
+			tabbedPane1.addTab("Main", panel1);
 
-                    //---- BibWaiting ----
-                    BibWaiting.setText("...waiting...");
-                    BibWaiting.setFont(new Font("Arial", Font.PLAIN, 14));
 
-                    //---- BibLoaderGif ----
-                    BibLoaderGif.setIcon(new ImageIcon(getClass().getResource("/images/green-ok-icon.png")));
+			//======== panel2 ========
+			{
 
-                    //---- LaTEXLoaderGif ----
-                    LaTEXLoaderGif.setIcon(new ImageIcon(getClass().getResource("/images/green-document-cross-icon.png")));
+				//======== splitPane1 ========
+				{
 
-                    GroupLayout infoPanelLayout = new GroupLayout(infoPanel);
-                    infoPanel.setLayout(infoPanelLayout);
-                    infoPanelLayout.setHorizontalGroup(
-                            infoPanelLayout.createParallelGroup()
-                                    .addGroup(infoPanelLayout.createSequentialGroup()
-                                            .addContainerGap()
-                                            .addGroup(infoPanelLayout.createParallelGroup()
-                                                    .addGroup(infoPanelLayout.createSequentialGroup()
-                                                            .addComponent(label1)
-                                                            .addGap(10, 10, 10)
-                                                            .addComponent(FileChooseButton))
-                                                    .addGroup(GroupLayout.Alignment.TRAILING, infoPanelLayout.createSequentialGroup()
-                                                            .addGroup(infoPanelLayout.createParallelGroup()
-                                                                    .addComponent(label2)
-                                                                    .addComponent(label3)
-                                                                    .addComponent(BibLabel))
-                                                            .addGap(39, 39, 39)
-                                                            .addGroup(infoPanelLayout.createParallelGroup()
-                                                                    .addGroup(infoPanelLayout.createParallelGroup(GroupLayout.Alignment.LEADING, false)
-                                                                            .addComponent(XMlWaiting, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                                            .addComponent(LaTEXWaiting))
-                                                                    .addComponent(BibWaiting))
-                                                            .addGap(51, 51, 51)
-                                                            .addGroup(infoPanelLayout.createParallelGroup(GroupLayout.Alignment.TRAILING, false)
-                                                                    .addGroup(infoPanelLayout.createParallelGroup(GroupLayout.Alignment.LEADING, false)
-                                                                            .addComponent(LaTEXLoaderGif)
-                                                                            .addComponent(XMLLoaderGif))
-                                                                    .addComponent(BibLoaderGif))
-                                                            .addGap(98, 98, 98)))
-                                            .addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    );
-                    infoPanelLayout.setVerticalGroup(
-                            infoPanelLayout.createParallelGroup()
-                                    .addGroup(GroupLayout.Alignment.TRAILING, infoPanelLayout.createSequentialGroup()
-                                            .addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                            .addGroup(infoPanelLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
-                                                    .addComponent(FileChooseButton)
-                                                    .addComponent(label1))
-                                            .addGap(18, 18, 18)
-                                            .addGroup(infoPanelLayout.createParallelGroup(GroupLayout.Alignment.TRAILING)
-                                                    .addGroup(infoPanelLayout.createParallelGroup()
-                                                            .addComponent(label2)
-                                                            .addComponent(LaTEXWaiting))
-                                                    .addComponent(LaTEXLoaderGif))
-                                            .addGap(18, 18, 18)
-                                            .addGroup(infoPanelLayout.createParallelGroup(GroupLayout.Alignment.TRAILING)
-                                                    .addGroup(infoPanelLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
-                                                            .addComponent(label3)
-                                                            .addComponent(XMlWaiting))
-                                                    .addComponent(XMLLoaderGif))
-                                            .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                                            .addGroup(infoPanelLayout.createParallelGroup(GroupLayout.Alignment.TRAILING)
-                                                    .addGroup(infoPanelLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
-                                                            .addComponent(BibLabel)
-                                                            .addComponent(BibWaiting))
-                                                    .addComponent(BibLoaderGif))
-                                            .addContainerGap())
-                    );
-                }
-                splitPaneWithConsole.setTopComponent(infoPanel);
+					//======== panel3 ========
+					{
 
-                //======== scrollPane1 ========
-                {
+						//---- button1 ----
+						button1.setText("Set XML file name");
+						button1.setFont(new Font("Calibri", Font.PLAIN, 14));
 
-                    //======== helpPane ========
-                    {
-                        helpPane.setFont(new Font("Arial", Font.PLAIN, 14));
-                    }
-                    scrollPane1.setViewportView(helpPane);
-                }
-                splitPaneWithConsole.setBottomComponent(scrollPane1);
-            }
-            spliPaneWithDoc.setLeftComponent(splitPaneWithConsole);
+						//---- xmlFileName ----
+						xmlFileName.setFont(new Font("Calibri", xmlFileName.getFont().getStyle(), 14));
 
-            //======== documentTab ========
-            {
-                documentTab.setFont(new Font("Arial", Font.PLAIN, 14));
-            }
-            spliPaneWithDoc.setRightComponent(documentTab);
-        }
+						//---- label1 ----
+						label1.setText("XML result file name:");
+						label1.setFont(new Font("Calibri", label1.getFont().getStyle(), 14));
 
-        GroupLayout contentPaneLayout = new GroupLayout(contentPane);
-        contentPane.setLayout(contentPaneLayout);
-        contentPaneLayout.setHorizontalGroup(
-                contentPaneLayout.createParallelGroup()
-                        .addGroup(GroupLayout.Alignment.TRAILING, contentPaneLayout.createSequentialGroup()
-                                .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.TRAILING)
-                                        .addGroup(contentPaneLayout.createSequentialGroup()
-                                                .addContainerGap()
-                                                .addComponent(spliPaneWithDoc, GroupLayout.DEFAULT_SIZE, 917, Short.MAX_VALUE)
-                                                .addGap(10, 10, 10))
-                                        .addGroup(contentPaneLayout.createSequentialGroup()
-                                                .addComponent(toolBar1, GroupLayout.DEFAULT_SIZE, 761, Short.MAX_VALUE)
-                                                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(toolBar2, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)))
-                                .addGap(0, 0, 0))
-        );
-        contentPaneLayout.setVerticalGroup(
-                contentPaneLayout.createParallelGroup()
-                        .addGroup(contentPaneLayout.createSequentialGroup()
-                                .addGroup(contentPaneLayout.createParallelGroup()
-                                        .addComponent(toolBar2, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(toolBar1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(spliPaneWithDoc, GroupLayout.DEFAULT_SIZE, 383, Short.MAX_VALUE)
-                                .addContainerGap())
-        );
-        setSize(945, 460);
-        setLocationRelativeTo(getOwner());
+						GroupLayout panel3Layout = new GroupLayout(panel3);
+						panel3.setLayout(panel3Layout);
+						panel3Layout.setHorizontalGroup(
+							panel3Layout.createParallelGroup()
+								.addGroup(panel3Layout.createSequentialGroup()
+									.addContainerGap()
+									.addComponent(label1)
+									.addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+									.addComponent(xmlFileName, GroupLayout.PREFERRED_SIZE, 191, GroupLayout.PREFERRED_SIZE)
+									.addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+									.addComponent(button1)
+									.addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+						);
+						panel3Layout.setVerticalGroup(
+							panel3Layout.createParallelGroup()
+								.addGroup(panel3Layout.createSequentialGroup()
+									.addContainerGap()
+									.addGroup(panel3Layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+										.addComponent(label1)
+										.addComponent(xmlFileName, GroupLayout.DEFAULT_SIZE, 27, Short.MAX_VALUE)
+										.addComponent(button1))
+									.addGap(25, 25, 25))
+						);
+					}
+					splitPane1.setLeftComponent(panel3);
+
+					//======== panel4 ========
+					{
+
+						//---- checkBox1 ----
+						checkBox1.setText("Replace symbol using ISO standarts");
+						checkBox1.setFont(new Font("Calibri", Font.PLAIN, 14));
+
+						GroupLayout panel4Layout = new GroupLayout(panel4);
+						panel4.setLayout(panel4Layout);
+						panel4Layout.setHorizontalGroup(
+							panel4Layout.createParallelGroup()
+								.addGroup(panel4Layout.createSequentialGroup()
+									.addContainerGap()
+									.addComponent(checkBox1)
+									.addContainerGap(28, Short.MAX_VALUE))
+						);
+						panel4Layout.setVerticalGroup(
+							panel4Layout.createParallelGroup()
+								.addGroup(panel4Layout.createSequentialGroup()
+									.addContainerGap()
+									.addComponent(checkBox1)
+									.addContainerGap(16, Short.MAX_VALUE))
+						);
+					}
+					splitPane1.setRightComponent(panel4);
+				}
+
+				GroupLayout panel2Layout = new GroupLayout(panel2);
+				panel2.setLayout(panel2Layout);
+				panel2Layout.setHorizontalGroup(
+					panel2Layout.createParallelGroup()
+						.addComponent(splitPane1, GroupLayout.DEFAULT_SIZE, 737, Short.MAX_VALUE)
+				);
+				panel2Layout.setVerticalGroup(
+					panel2Layout.createParallelGroup()
+						.addGroup(panel2Layout.createSequentialGroup()
+							.addComponent(splitPane1, GroupLayout.PREFERRED_SIZE, 50, GroupLayout.PREFERRED_SIZE)
+							.addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+				);
+			}
+			tabbedPane1.addTab("Settings", panel2);
+
+		}
+
+		GroupLayout contentPaneLayout = new GroupLayout(contentPane);
+		contentPane.setLayout(contentPaneLayout);
+		contentPaneLayout.setHorizontalGroup(
+			contentPaneLayout.createParallelGroup()
+				.addComponent(tabbedPane1, GroupLayout.DEFAULT_SIZE, 742, Short.MAX_VALUE)
+				.addGroup(contentPaneLayout.createSequentialGroup()
+					.addComponent(spliPaneWithDoc, GroupLayout.DEFAULT_SIZE, 732, Short.MAX_VALUE)
+					.addContainerGap())
+		);
+		contentPaneLayout.setVerticalGroup(
+			contentPaneLayout.createParallelGroup()
+				.addGroup(contentPaneLayout.createSequentialGroup()
+					.addComponent(tabbedPane1, GroupLayout.PREFERRED_SIZE, 85, GroupLayout.PREFERRED_SIZE)
+					.addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+					.addComponent(spliPaneWithDoc, GroupLayout.DEFAULT_SIZE, 316, Short.MAX_VALUE))
+		);
+		setSize(750, 455);
+		setLocationRelativeTo(getOwner());
         // //GEN-END:initComponents
     }
 
     // JFormDesigner - Variables declaration - DO NOT MODIFY
     // //GEN-BEGIN:variables
-    private JToolBar toolBar1;
-    private JButton FileChooseButtonFromPanel;
-    private JButton translateButton;
-    private JButton SaveButton;
-    private JButton SaveXmlResult;
-    private JLabel label4;
-    private JToolBar toolBar2;
-    private JButton HowToUseButton;
-    private JButton ExitButton;
-    private JSplitPane spliPaneWithDoc;
-    private JSplitPane splitPaneWithConsole;
-    private JPanel infoPanel;
-    private JButton FileChooseButton;
-    private JLabel label1;
-    private JLabel label2;
-    private JLabel LaTEXWaiting;
-    private JLabel XMLLoaderGif;
-    private JLabel XMlWaiting;
-    private JLabel label3;
-    private JLabel BibLabel;
-    private JLabel BibWaiting;
-    private JLabel BibLoaderGif;
-    private JLabel LaTEXLoaderGif;
-    private JScrollPane scrollPane1;
-    private JTabbedPane helpPane;
-    private JTabbedPane documentTab;
-
+	private JMenuBar menuBar1;
+	private JMenu MainMenu;
+	private JMenuItem chooseFileMenu;
+	private JMenuItem helpItem;
+	private JMenuItem exitItem;
+	private JSplitPane spliPaneWithDoc;
+	private JTabbedPane documentTab;
+	private JPanel panel7;
+	private JScrollPane scrollPane3;
+	private JTextPane documentText;
+	private JTabbedPane xmlPane;
+	private JPanel panel6;
+	private JScrollPane scrollPane2;
+	private JTextPane xmlDocument;
+	private JTabbedPane tabbedPane1;
+	private JPanel panel1;
+	private JButton translateButton;
+	private JButton saveDocumentButton;
+	private JLabel progressBar;
+	private JPanel panel2;
+	private JSplitPane splitPane1;
+	private JPanel panel3;
+	private JButton button1;
+	private JTextField xmlFileName;
+	private JLabel label1;
+	private JPanel panel4;
+	private JCheckBox checkBox1;
+    // JFormDesigner - End of variables declaration //GEN-END:variables
 }

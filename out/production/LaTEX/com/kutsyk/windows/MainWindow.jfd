@@ -1,671 +1,544 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<java version="1.8.0_05" class="java.beans.XMLDecoder">
- <object class="com.jformdesigner.model.FormModel">
-  <void property="contentType">
-   <string>form/swing</string>
-  </void>
-  <void property="root">
-   <object class="com.jformdesigner.model.FormRoot">
-    <void method="add">
-     <object class="com.jformdesigner.model.FormWindow">
-      <string>javax.swing.JFrame</string>
-      <object class="com.jformdesigner.model.FormLayoutManager">
-       <class>org.jdesktop.layout.GroupLayout</class>
-       <void method="setProperty">
-        <string>$horizontalGroup</string>
-        <string>par l {seq t {par t {seq t {space :::p, comp spliPaneWithDoc::::917:x, space :10:10:10}, seq t {comp toolBar1::::761:x, space :::p, comp toolBar2:::p::p}}, space :p:0:p}}</string>
-       </void>
-       <void method="setProperty">
-        <string>$verticalGroup</string>
-        <string>par l {seq {par l {comp toolBar2:::p::p, comp toolBar1:::p::p}, space :::p, comp spliPaneWithDoc::::383:x, space :::p}}</string>
-       </void>
-      </object>
-      <void method="setProperty">
-       <string>title</string>
-       <string>LaTEX &gt; XML</string>
-      </void>
-      <void method="setProperty">
-       <string>defaultCloseOperation</string>
-       <int>3</int>
-      </void>
-      <void method="setProperty">
-       <string>focusable</string>
-       <boolean>false</boolean>
-      </void>
-      <void method="setProperty">
-       <string>background</string>
-       <object class="java.awt.Color">
-        <int>255</int>
-        <int>255</int>
-        <int>255</int>
-        <int>255</int>
-       </object>
-      </void>
-      <void method="setProperty">
-       <string>iconImage</string>
-       <object class="com.jformdesigner.model.SwingIcon">
-        <int>0</int>
-        <string>/images/green-home-icon.png</string>
-       </object>
-      </void>
-      <void method="setProperty">
-       <string>$locationPolicy</string>
-       <int>0</int>
-      </void>
-      <void method="setProperty">
-       <string>$sizePolicy</string>
-       <int>1</int>
-      </void>
-      <void method="setProperty">
-       <string>foreground</string>
-       <object class="java.awt.Color" field="white"/>
-      </void>
-      <void method="addEvent">
-       <object class="com.jformdesigner.model.FormEvent">
-        <string>java.awt.event.WindowListener</string>
-        <string>windowClosing</string>
-        <string>thisWindowClosing</string>
-        <boolean>true</boolean>
-       </object>
-      </void>
-      <void method="add">
-       <object class="com.jformdesigner.model.FormContainer">
-        <string>javax.swing.JToolBar</string>
-        <object class="com.jformdesigner.model.FormLayoutManager">
-         <class>javax.swing.JToolBar</class>
-        </object>
-        <void method="setProperty">
-         <string>floatable</string>
-         <boolean>false</boolean>
-        </void>
-        <void property="name">
-         <string>toolBar1</string>
-        </void>
-        <void method="add">
-         <object class="com.jformdesigner.model.FormComponent">
-          <string>javax.swing.JButton</string>
-          <void method="setProperty">
-           <string>text</string>
-           <string>Choose folder</string>
-          </void>
-          <void method="setProperty">
-           <string>font</string>
-           <object class="java.awt.Font" id="Font0">
-            <string>Arial</string>
-            <int>0</int>
-            <int>14</int>
-           </object>
-          </void>
-          <void method="setProperty">
-           <string>icon</string>
-           <object class="com.jformdesigner.model.SwingIcon" id="SwingIcon0">
-            <int>0</int>
-            <string>/images/green-folder-icon.png</string>
-           </object>
-          </void>
-          <void property="name">
-           <string>FileChooseButtonFromPanel</string>
-          </void>
-          <void method="addEvent">
-           <object class="com.jformdesigner.model.FormEvent">
-            <string>java.awt.event.ActionListener</string>
-            <string>actionPerformed</string>
-            <string>FileChooseButtonActionPerformed</string>
-            <boolean>true</boolean>
-           </object>
-          </void>
-         </object>
-        </void>
-        <void method="add">
-         <object class="com.jformdesigner.model.FormComponent">
-          <string>javax.swing.JButton</string>
-          <void method="setProperty">
-           <string>text</string>
-           <string>Translate to XML</string>
-          </void>
-          <void method="setProperty">
-           <string>font</string>
-           <object idref="Font0"/>
-          </void>
-          <void method="setProperty">
-           <string>icon</string>
-           <object class="com.jformdesigner.model.SwingIcon">
-            <int>0</int>
-            <string>/images/green-address-book-icon.png</string>
-           </object>
-          </void>
-          <void property="name">
-           <string>translateButton</string>
-          </void>
-          <void method="addEvent">
-           <object class="com.jformdesigner.model.FormEvent">
-            <string>java.awt.event.ActionListener</string>
-            <string>actionPerformed</string>
-            <string>translateButtonActionPerformed</string>
-            <boolean>true</boolean>
-           </object>
-          </void>
-         </object>
-        </void>
-        <void method="add">
-         <object class="com.jformdesigner.model.FormComponent">
-          <string>javax.swing.JButton</string>
-          <void method="setProperty">
-           <string>text</string>
-           <string>Save document</string>
-          </void>
-          <void method="setProperty">
-           <string>icon</string>
-           <object class="com.jformdesigner.model.SwingIcon">
-            <int>0</int>
-            <string>/images/green-disk-icon.png</string>
-           </object>
-          </void>
-          <void method="setProperty">
-           <string>font</string>
-           <object class="java.awt.Font">
-            <string>Arial</string>
-            <int>0</int>
-            <int>14</int>
-           </object>
-          </void>
-          <void property="name">
-           <string>SaveButton</string>
-          </void>
-          <void method="addEvent">
-           <object class="com.jformdesigner.model.FormEvent">
-            <string>java.awt.event.ActionListener</string>
-            <string>actionPerformed</string>
-            <string>SaveButtonActionPerformed</string>
-            <boolean>true</boolean>
-           </object>
-          </void>
-         </object>
-        </void>
-        <void method="add">
-         <object class="com.jformdesigner.model.FormComponent">
-          <string>javax.swing.JButton</string>
-          <void method="setProperty">
-           <string>text</string>
-           <string>Save XML result</string>
-          </void>
-          <void method="setProperty">
-           <string>font</string>
-           <object class="java.awt.Font">
-            <string>Arial</string>
-            <int>0</int>
-            <int>14</int>
-           </object>
-          </void>
-          <void method="setProperty">
-           <string>icon</string>
-           <object class="com.jformdesigner.model.SwingIcon">
-            <int>0</int>
-            <string>/images/green-document-download-icon.png</string>
-           </object>
-          </void>
-          <void property="name">
-           <string>SaveXmlResult</string>
-          </void>
-          <void method="addEvent">
-           <object class="com.jformdesigner.model.FormEvent">
-            <string>java.awt.event.ActionListener</string>
-            <string>actionPerformed</string>
-            <string>SaveXmlResultActionPerformed</string>
-            <boolean>true</boolean>
-           </object>
-          </void>
-         </object>
-        </void>
-        <void method="add">
-         <object class="com.jformdesigner.model.FormComponent">
-          <string>javax.swing.JLabel</string>
-          <void property="name">
-           <string>label4</string>
-          </void>
-         </object>
-        </void>
-       </object>
-      </void>
-      <void method="add">
-       <object class="com.jformdesigner.model.FormContainer">
-        <string>javax.swing.JToolBar</string>
-        <object class="com.jformdesigner.model.FormLayoutManager">
-         <class>javax.swing.JToolBar</class>
-        </object>
-        <void method="setProperty">
-         <string>floatable</string>
-         <boolean>false</boolean>
-        </void>
-        <void property="name">
-         <string>toolBar2</string>
-        </void>
-        <void method="add">
-         <object class="com.jformdesigner.model.FormComponent">
-          <string>javax.swing.JButton</string>
-          <void method="setProperty">
-           <string>text</string>
-           <string>How to use?</string>
-          </void>
-          <void method="setProperty">
-           <string>font</string>
-           <object class="java.awt.Font">
-            <string>Arial</string>
-            <int>0</int>
-            <int>14</int>
-           </object>
-          </void>
-          <void method="setProperty">
-           <string>icon</string>
-           <object class="com.jformdesigner.model.SwingIcon">
-            <int>0</int>
-            <string>/images/green-notes-icon.png</string>
-           </object>
-          </void>
-          <void property="name">
-           <string>HowToUseButton</string>
-          </void>
-          <void method="addEvent">
-           <object class="com.jformdesigner.model.FormEvent">
-            <string>java.awt.event.ActionListener</string>
-            <string>actionPerformed</string>
-            <string>HowToUseButtonActionPerformed</string>
-            <boolean>true</boolean>
-           </object>
-          </void>
-         </object>
-        </void>
-        <void method="add">
-         <object class="com.jformdesigner.model.FormComponent">
-          <string>javax.swing.JButton</string>
-          <void method="setProperty">
-           <string>text</string>
-           <string>Exit</string>
-          </void>
-          <void method="setProperty">
-           <string>font</string>
-           <object idref="Font0"/>
-          </void>
-          <void method="setProperty">
-           <string>icon</string>
-           <object class="com.jformdesigner.model.SwingIcon">
-            <int>0</int>
-            <string>/images/green-cross-icon.png</string>
-           </object>
-          </void>
-          <void property="name">
-           <string>ExitButton</string>
-          </void>
-          <void method="addEvent">
-           <object class="com.jformdesigner.model.FormEvent">
-            <string>java.awt.event.ActionListener</string>
-            <string>actionPerformed</string>
-            <string>ExitButtonActionPerformed</string>
-            <boolean>true</boolean>
-           </object>
-          </void>
-         </object>
-        </void>
-       </object>
-      </void>
-      <void method="add">
-       <object class="com.jformdesigner.model.FormContainer">
-        <string>javax.swing.JSplitPane</string>
-        <object class="com.jformdesigner.model.FormLayoutManager">
-         <class>javax.swing.JSplitPane</class>
-        </object>
-        <void property="name">
-         <string>spliPaneWithDoc</string>
-        </void>
-        <void method="add">
-         <object class="com.jformdesigner.model.FormContainer">
-          <string>javax.swing.JSplitPane</string>
-          <object class="com.jformdesigner.model.FormLayoutManager">
-           <class>javax.swing.JSplitPane</class>
-          </object>
-          <void method="setProperty">
-           <string>orientation</string>
-           <int>0</int>
-          </void>
-          <void property="name">
-           <string>splitPaneWithConsole</string>
-          </void>
-          <void method="add">
-           <object class="com.jformdesigner.model.FormContainer">
-            <string>javax.swing.JPanel</string>
-            <object class="com.jformdesigner.model.FormLayoutManager">
-             <class>org.jdesktop.layout.GroupLayout</class>
-             <void method="setProperty">
-              <string>$horizontalGroup</string>
-              <string>par l {seq l {space :::p, par l {seq l {comp label1:::p::p, space :p:10:p, comp FileChooseButton:::p::p}, seq t::p {par l {comp label2::l:p::p, comp label3::l:p::p, comp BibLabel::l:p::p}, space :p:39:p, par l {par l:l::p {comp XMlWaiting:::::x:1, comp LaTEXWaiting::l:p::p:1}, comp BibWaiting::l:p::p:1}, space :p:51:p, par t:::p {par l:t::p {comp LaTEXLoaderGif:::p::p, comp XMLLoaderGif:::p::p}, comp BibLoaderGif:::p::p}, space :98:98:98}}, space :::x}}</string>
-             </void>
-             <void method="setProperty">
-              <string>$verticalGroup</string>
-              <string>par l {seq t {space :::x, par b {comp FileChooseButton::b:p::p, comp label1::b:p::p}, space s:p::p, par t {par l:t {comp label2:::p::p, comp LaTEXWaiting:::p::p}, comp LaTEXLoaderGif:::p::p}, space s:p::p, par t {par b:t {comp label3::b:p::p, comp XMlWaiting::b:p::p}, comp XMLLoaderGif:::p::p}, space :::p, par t {par b:t {comp BibLabel::b:p::p, comp BibWaiting::b:p::p}, comp BibLoaderGif:::p::p}, space :::p}}</string>
-             </void>
-            </object>
-            <void property="name">
-             <string>infoPanel</string>
-            </void>
-            <void method="add">
-             <object class="com.jformdesigner.model.FormComponent">
-              <string>javax.swing.JButton</string>
-              <void method="setProperty">
-               <string>text</string>
-               <string>Choose folder</string>
-              </void>
-              <void method="setProperty">
-               <string>font</string>
-               <object idref="Font0"/>
-              </void>
-              <void method="setProperty">
-               <string>icon</string>
-               <object idref="SwingIcon0"/>
-              </void>
-              <void property="name">
-               <string>FileChooseButton</string>
-              </void>
-              <void method="addEvent">
-               <object class="com.jformdesigner.model.FormEvent">
-                <string>java.awt.event.ActionListener</string>
-                <string>actionPerformed</string>
-                <string>FileChooseButtonActionPerformed</string>
-                <boolean>true</boolean>
-               </object>
-              </void>
-             </object>
-            </void>
-            <void method="add">
-             <object class="com.jformdesigner.model.FormComponent">
-              <string>javax.swing.JLabel</string>
-              <void method="setProperty">
-               <string>text</string>
-               <string>Choose folder with all necessary files:</string>
-              </void>
-              <void method="setProperty">
-               <string>font</string>
-               <object class="java.awt.Font">
-                <string>Arial</string>
-                <int>0</int>
-                <int>14</int>
-               </object>
-              </void>
-              <void property="name">
-               <string>label1</string>
-              </void>
-             </object>
-            </void>
-            <void method="add">
-             <object class="com.jformdesigner.model.FormComponent">
-              <string>javax.swing.JLabel</string>
-              <void method="setProperty">
-               <string>text</string>
-               <string>LaTEX:</string>
-              </void>
-              <void method="setProperty">
-               <string>font</string>
-               <object idref="Font0"/>
-              </void>
-              <void property="name">
-               <string>label2</string>
-              </void>
-             </object>
-            </void>
-            <void method="add">
-             <object class="com.jformdesigner.model.FormComponent">
-              <string>javax.swing.JLabel</string>
-              <void method="setProperty">
-               <string>text</string>
-               <string>...waiting...</string>
-              </void>
-              <void method="setProperty">
-               <string>font</string>
-               <object idref="Font0"/>
-              </void>
-              <void property="name">
-               <string>LaTEXWaiting</string>
-              </void>
-             </object>
-            </void>
-            <void method="add">
-             <object class="com.jformdesigner.model.FormComponent">
-              <string>javax.swing.JLabel</string>
-              <void method="setProperty">
-               <string>icon</string>
-               <object class="com.jformdesigner.model.SwingIcon">
-                <int>0</int>
-                <string>/images/green-document-cross-icon.png</string>
-               </object>
-              </void>
-              <void property="name">
-               <string>XMLLoaderGif</string>
-              </void>
-             </object>
-            </void>
-            <void method="add">
-             <object class="com.jformdesigner.model.FormComponent">
-              <string>javax.swing.JLabel</string>
-              <void method="setProperty">
-               <string>text</string>
-               <string>...waiting...</string>
-              </void>
-              <void method="setProperty">
-               <string>font</string>
-               <object idref="Font0"/>
-              </void>
-              <void property="name">
-               <string>XMlWaiting</string>
-              </void>
-             </object>
-            </void>
-            <void method="add">
-             <object class="com.jformdesigner.model.FormComponent">
-              <string>javax.swing.JLabel</string>
-              <void method="setProperty">
-               <string>text</string>
-               <string>Frontmatter XML:</string>
-              </void>
-              <void method="setProperty">
-               <string>font</string>
-               <object idref="Font0"/>
-              </void>
-              <void property="name">
-               <string>label3</string>
-              </void>
-             </object>
-            </void>
-            <void method="add">
-             <object class="com.jformdesigner.model.FormComponent">
-              <string>javax.swing.JLabel</string>
-              <void method="setProperty">
-               <string>text</string>
-               <string>Bibliography:</string>
-              </void>
-              <void method="setProperty">
-               <string>font</string>
-               <object idref="Font0"/>
-              </void>
-              <void property="name">
-               <string>BibLabel</string>
-              </void>
-             </object>
-            </void>
-            <void method="add">
-             <object class="com.jformdesigner.model.FormComponent">
-              <string>javax.swing.JLabel</string>
-              <void method="setProperty">
-               <string>text</string>
-               <string>...waiting...</string>
-              </void>
-              <void method="setProperty">
-               <string>font</string>
-               <object idref="Font0"/>
-              </void>
-              <void property="name">
-               <string>BibWaiting</string>
-              </void>
-             </object>
-            </void>
-            <void method="add">
-             <object class="com.jformdesigner.model.FormComponent">
-              <string>javax.swing.JLabel</string>
-              <void method="setProperty">
-               <string>icon</string>
-               <object class="com.jformdesigner.model.SwingIcon">
-                <int>0</int>
-                <string>/images/green-ok-icon.png</string>
-               </object>
-              </void>
-              <void property="name">
-               <string>BibLoaderGif</string>
-              </void>
-             </object>
-            </void>
-            <void method="add">
-             <object class="com.jformdesigner.model.FormComponent">
-              <string>javax.swing.JLabel</string>
-              <void method="setProperty">
-               <string>icon</string>
-               <object class="com.jformdesigner.model.SwingIcon">
-                <int>0</int>
-                <string>/images/green-document-cross-icon.png</string>
-               </object>
-              </void>
-              <void property="name">
-               <string>LaTEXLoaderGif</string>
-              </void>
-             </object>
-            </void>
-           </object>
-           <object class="com.jformdesigner.model.FormLayoutConstraints">
-            <class>java.lang.String</class>
-            <void method="setProperty">
-             <string>value</string>
-             <string>left</string>
-            </void>
-           </object>
-          </void>
-          <void method="add">
-           <object class="com.jformdesigner.model.FormContainer">
-            <string>javax.swing.JScrollPane</string>
-            <object class="com.jformdesigner.model.FormLayoutManager">
-             <class>javax.swing.JScrollPane</class>
-            </object>
-            <void property="name">
-             <string>scrollPane1</string>
-            </void>
-            <void method="add">
-             <object class="com.jformdesigner.model.FormContainer">
-              <string>javax.swing.JTabbedPane</string>
-              <object class="com.jformdesigner.model.FormLayoutManager">
-               <class>javax.swing.JTabbedPane</class>
-              </object>
-              <void method="setProperty">
-               <string>font</string>
-               <object class="java.awt.Font">
-                <string>Arial</string>
-                <int>0</int>
-                <int>14</int>
-               </object>
-              </void>
-              <void property="name">
-               <string>helpPane</string>
-              </void>
-             </object>
-            </void>
-           </object>
-           <object class="com.jformdesigner.model.FormLayoutConstraints">
-            <class>java.lang.String</class>
-            <void method="setProperty">
-             <string>value</string>
-             <string>right</string>
-            </void>
-           </object>
-          </void>
-         </object>
-         <object class="com.jformdesigner.model.FormLayoutConstraints">
-          <class>java.lang.String</class>
-          <void method="setProperty">
-           <string>value</string>
-           <string>left</string>
-          </void>
-         </object>
-        </void>
-        <void method="add">
-         <object class="com.jformdesigner.model.FormContainer">
-          <string>javax.swing.JTabbedPane</string>
-          <object class="com.jformdesigner.model.FormLayoutManager">
-           <class>javax.swing.JTabbedPane</class>
-          </object>
-          <void method="setProperty">
-           <string>font</string>
-           <object class="java.awt.Font">
-            <string>Arial</string>
-            <int>0</int>
-            <int>14</int>
-           </object>
-          </void>
-          <void property="name">
-           <string>documentTab</string>
-          </void>
-         </object>
-         <object class="com.jformdesigner.model.FormLayoutConstraints">
-          <class>java.lang.String</class>
-          <void method="setProperty">
-           <string>value</string>
-           <string>right</string>
-          </void>
-         </object>
-        </void>
-       </object>
-      </void>
-      <void property="name">
-       <string>this</string>
-      </void>
-     </object>
-     <object class="com.jformdesigner.model.FormLayoutConstraints">
-      <null/>
-      <void method="setProperty">
-       <string>location</string>
-       <object class="java.awt.Point" id="Point0">
-        <void class="java.awt.Point" method="getField">
-         <string>x</string>
-         <void method="set">
-          <object idref="Point0"/>
-          <int>5</int>
-         </void>
-        </void>
-        <void class="java.awt.Point" method="getField">
-         <string>y</string>
-         <void method="set">
-          <object idref="Point0"/>
-          <int>5</int>
-         </void>
-        </void>
-       </object>
-      </void>
-      <void method="setProperty">
-       <string>size</string>
-       <object class="java.awt.Dimension" id="Dimension0">
-        <void class="java.awt.Dimension" method="getField">
-         <string>width</string>
-         <void method="set">
-          <object idref="Dimension0"/>
-          <int>945</int>
-         </void>
-        </void>
-        <void class="java.awt.Dimension" method="getField">
-         <string>height</string>
-         <void method="set">
-          <object idref="Dimension0"/>
-          <int>460</int>
-         </void>
-        </void>
-       </object>
-      </void>
-     </object>
-    </void>
-   </object>
-  </void>
- </object>
-</java>
+<?xml version="1.0" encoding="UTF-8"?> 
+<java version="1.6.0_24" class="java.beans.XMLDecoder"> 
+ <object class="com.jformdesigner.model.FormModel"> 
+  <void property="contentType"> 
+   <string>form/swing</string> 
+  </void> 
+  <void property="root"> 
+   <object class="com.jformdesigner.model.FormRoot"> 
+    <void method="add"> 
+     <object class="com.jformdesigner.model.FormWindow"> 
+      <string>javax.swing.JFrame</string> 
+      <object class="com.jformdesigner.model.FormLayoutManager"> 
+       <class>org.jdesktop.layout.GroupLayout</class> 
+       <void method="setProperty"> 
+        <string>$horizontalGroup</string> 
+        <string>par l {comp tabbedPane1::l::937:x, comp spliPaneWithDoc::t::937:x}</string> 
+       </void> 
+       <void method="setProperty"> 
+        <string>$verticalGroup</string> 
+        <string>par l {seq l {comp tabbedPane1:::p:85:p, space :::p, comp spliPaneWithDoc::::359:x}}</string> 
+       </void> 
+      </object> 
+      <void method="setProperty"> 
+       <string>title</string> 
+       <string>LaTEX &gt; XML</string> 
+      </void> 
+      <void method="setProperty"> 
+       <string>defaultCloseOperation</string> 
+       <int>3</int> 
+      </void> 
+      <void method="setProperty"> 
+       <string>focusable</string> 
+       <boolean>false</boolean> 
+      </void> 
+      <void method="setProperty"> 
+       <string>background</string> 
+       <object class="java.awt.Color"> 
+        <int>255</int> 
+        <int>255</int> 
+        <int>255</int> 
+        <int>255</int> 
+       </object> 
+      </void> 
+      <void method="setProperty"> 
+       <string>iconImage</string> 
+       <object class="com.jformdesigner.model.SwingIcon"> 
+        <int>0</int> 
+        <string>/images/blue-home-icon.png</string> 
+       </object> 
+      </void> 
+      <void method="setProperty"> 
+       <string>$locationPolicy</string> 
+       <int>0</int> 
+      </void> 
+      <void method="setProperty"> 
+       <string>$sizePolicy</string> 
+       <int>1</int> 
+      </void> 
+      <void method="setProperty"> 
+       <string>foreground</string> 
+       <object class="java.awt.Color" field="white"/> 
+      </void> 
+      <void method="setProperty"> 
+       <string>font</string> 
+       <object class="java.awt.Font"> 
+        <string>Calibri</string> 
+        <int>0</int> 
+        <int>14</int> 
+       </object> 
+      </void> 
+      <void method="addEvent"> 
+       <object class="com.jformdesigner.model.FormEvent"> 
+        <string>java.awt.event.WindowListener</string> 
+        <string>windowClosing</string> 
+        <string>thisWindowClosing</string> 
+        <boolean>true</boolean> 
+       </object> 
+      </void> 
+      <void method="add"> 
+       <object class="com.jformdesigner.model.FormContainer"> 
+        <string>javax.swing.JSplitPane</string> 
+        <object class="com.jformdesigner.model.FormLayoutManager"> 
+         <class>javax.swing.JSplitPane</class> 
+        </object> 
+        <void property="name"> 
+         <string>spliPaneWithDoc</string> 
+        </void> 
+        <void method="add"> 
+         <object class="com.jformdesigner.model.FormContainer"> 
+          <string>javax.swing.JTabbedPane</string> 
+          <object class="com.jformdesigner.model.FormLayoutManager"> 
+           <class>javax.swing.JTabbedPane</class> 
+          </object> 
+          <void property="name"> 
+           <string>documentTab</string> 
+          </void> 
+         </object> 
+         <object class="com.jformdesigner.model.FormLayoutConstraints"> 
+          <class>java.lang.String</class> 
+          <void method="setProperty"> 
+           <string>value</string> 
+           <string>left</string> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="com.jformdesigner.model.FormContainer"> 
+          <string>javax.swing.JPanel</string> 
+          <object class="com.jformdesigner.model.FormLayoutManager"> 
+           <class>java.awt.BorderLayout</class> 
+          </object> 
+          <void property="name"> 
+           <string>panel5</string> 
+          </void> 
+          <void method="add"> 
+           <object class="com.jformdesigner.model.FormContainer"> 
+            <string>javax.swing.JScrollPane</string> 
+            <object class="com.jformdesigner.model.FormLayoutManager"> 
+             <class>javax.swing.JScrollPane</class> 
+            </object> 
+            <void property="name"> 
+             <string>scrollPane2</string> 
+            </void> 
+            <void method="add"> 
+             <object class="com.jformdesigner.model.FormComponent"> 
+              <string>javax.swing.JTextPane</string> 
+              <void method="setProperty"> 
+               <string>font</string> 
+               <object class="java.awt.Font"> 
+                <string>Calibri</string> 
+                <int>0</int> 
+                <int>14</int> 
+               </object> 
+              </void> 
+              <void property="name"> 
+               <string>xmlPane</string> 
+              </void> 
+             </object> 
+            </void> 
+           </object> 
+           <object class="com.jformdesigner.model.FormLayoutConstraints"> 
+            <class>java.lang.String</class> 
+            <void method="setProperty"> 
+             <string>value</string> 
+             <string>Center</string> 
+            </void> 
+           </object> 
+          </void> 
+         </object> 
+         <object class="com.jformdesigner.model.FormLayoutConstraints"> 
+          <class>java.lang.String</class> 
+          <void method="setProperty"> 
+           <string>value</string> 
+           <string>right</string> 
+          </void> 
+         </object> 
+        </void> 
+       </object> 
+      </void> 
+      <void method="add"> 
+       <object class="com.jformdesigner.model.FormContainer"> 
+        <string>javax.swing.JTabbedPane</string> 
+        <object class="com.jformdesigner.model.FormLayoutManager"> 
+         <class>javax.swing.JTabbedPane</class> 
+        </object> 
+        <void method="setProperty"> 
+         <string>font</string> 
+         <object class="java.awt.Font"> 
+          <string>Calibri</string> 
+          <int>0</int> 
+          <int>14</int> 
+         </object> 
+        </void> 
+        <void property="name"> 
+         <string>tabbedPane1</string> 
+        </void> 
+        <void method="add"> 
+         <object class="com.jformdesigner.model.FormContainer"> 
+          <string>javax.swing.JPanel</string> 
+          <object class="com.jformdesigner.model.FormLayoutManager"> 
+           <class>org.jdesktop.layout.GroupLayout</class> 
+           <void method="setProperty"> 
+            <string>$horizontalGroup</string> 
+            <string>par l {seq l {space :::p, comp translateButton:::p::p, space :::p, comp saveDocumentButton:::p::p, space :::p, comp progressBar:::p::p, space ::632:x}}</string> 
+           </void> 
+           <void method="setProperty"> 
+            <string>$verticalGroup</string> 
+            <string>par l {seq l {space :::p, par b {comp translateButton::b:p::p, comp saveDocumentButton::b:p::p, comp progressBar::b:p::p}, space :::x}}</string> 
+           </void> 
+          </object> 
+          <void property="name"> 
+           <string>panel1</string> 
+          </void> 
+          <void method="add"> 
+           <object class="com.jformdesigner.model.FormComponent"> 
+            <string>javax.swing.JButton</string> 
+            <void method="setProperty"> 
+             <string>text</string> 
+             <string>Translate</string> 
+            </void> 
+            <void method="setProperty"> 
+             <string>font</string> 
+             <object id="Font0" class="java.awt.Font"> 
+              <string>Calibri</string> 
+              <int>0</int> 
+              <int>14</int> 
+             </object> 
+            </void> 
+            <void method="setProperty"> 
+             <string>icon</string> 
+             <object class="com.jformdesigner.model.SwingIcon"> 
+              <int>0</int> 
+              <string>/images/blue-document-plus-icon.png</string> 
+             </object> 
+            </void> 
+            <void property="name"> 
+             <string>translateButton</string> 
+            </void> 
+           </object> 
+          </void> 
+          <void method="add"> 
+           <object class="com.jformdesigner.model.FormComponent"> 
+            <string>javax.swing.JButton</string> 
+            <void method="setProperty"> 
+             <string>text</string> 
+             <string>Save document</string> 
+            </void> 
+            <void method="setProperty"> 
+             <string>font</string> 
+             <object class="java.awt.Font"> 
+              <string>Calibri</string> 
+              <int>0</int> 
+              <int>14</int> 
+             </object> 
+            </void> 
+            <void method="setProperty"> 
+             <string>icon</string> 
+             <object class="com.jformdesigner.model.SwingIcon"> 
+              <int>0</int> 
+              <string>/images/blue-disk-icon.png</string> 
+             </object> 
+            </void> 
+            <void property="name"> 
+             <string>saveDocumentButton</string> 
+            </void> 
+           </object> 
+          </void> 
+          <void method="add"> 
+           <object class="com.jformdesigner.model.FormComponent"> 
+            <string>javax.swing.JLabel</string> 
+            <void property="name"> 
+             <string>progressBar</string> 
+            </void> 
+           </object> 
+          </void> 
+         </object> 
+         <object class="com.jformdesigner.model.FormLayoutConstraints"> 
+          <null/> 
+          <void method="setProperty"> 
+           <string>title</string> 
+           <string>Main</string> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object class="com.jformdesigner.model.FormContainer"> 
+          <string>javax.swing.JPanel</string> 
+          <object class="com.jformdesigner.model.FormLayoutManager"> 
+           <class>org.jdesktop.layout.GroupLayout</class> 
+           <void method="setProperty"> 
+            <string>$horizontalGroup</string> 
+            <string>par l {comp splitPane1::l::932:x}</string> 
+           </void> 
+           <void method="setProperty"> 
+            <string>$verticalGroup</string> 
+            <string>par l {seq l {comp splitPane1:::p:50:p, space :::x}}</string> 
+           </void> 
+          </object> 
+          <void property="name"> 
+           <string>panel2</string> 
+          </void> 
+          <void method="add"> 
+           <object class="com.jformdesigner.model.FormContainer"> 
+            <string>javax.swing.JSplitPane</string> 
+            <object class="com.jformdesigner.model.FormLayoutManager"> 
+             <class>javax.swing.JSplitPane</class> 
+            </object> 
+            <void property="name"> 
+             <string>splitPane1</string> 
+            </void> 
+            <void method="add"> 
+             <object class="com.jformdesigner.model.FormContainer"> 
+              <string>javax.swing.JPanel</string> 
+              <object class="com.jformdesigner.model.FormLayoutManager"> 
+               <class>org.jdesktop.layout.GroupLayout</class> 
+               <void method="setProperty"> 
+                <string>$horizontalGroup</string> 
+                <string>par l {seq l {space :::p, comp label1:::p::p, space :::p, comp xmlFileName:::p:191:p, space :::p, comp button1:::p::p, space :::x}}</string> 
+               </void> 
+               <void method="setProperty"> 
+                <string>$verticalGroup</string> 
+                <string>par l {seq l {space :::p, par b {comp label1::b:p::p, comp xmlFileName::b::27:x, comp button1::b:p::p}, space :p:25:p}}</string> 
+               </void> 
+              </object> 
+              <void property="name"> 
+               <string>panel3</string> 
+              </void> 
+              <void method="add"> 
+               <object class="com.jformdesigner.model.FormComponent"> 
+                <string>javax.swing.JButton</string> 
+                <void method="setProperty"> 
+                 <string>text</string> 
+                 <string>Set XML file name</string> 
+                </void> 
+                <void method="setProperty"> 
+                 <string>font</string> 
+                 <object class="java.awt.Font"> 
+                  <string>Calibri</string> 
+                  <int>0</int> 
+                  <int>14</int> 
+                 </object> 
+                </void> 
+                <void property="name"> 
+                 <string>button1</string> 
+                </void> 
+               </object> 
+              </void> 
+              <void method="add"> 
+               <object class="com.jformdesigner.model.FormComponent"> 
+                <string>javax.swing.JTextField</string> 
+                <void method="setProperty"> 
+                 <string>font</string> 
+                 <object id="SwingDerivedFont0" class="com.jformdesigner.model.SwingDerivedFont"> 
+                  <string>Calibri</string> 
+                  <int>0</int> 
+                  <int>14</int> 
+                  <boolean>true</boolean> 
+                 </object> 
+                </void> 
+                <void property="name"> 
+                 <string>xmlFileName</string> 
+                </void> 
+               </object> 
+              </void> 
+              <void method="add"> 
+               <object class="com.jformdesigner.model.FormComponent"> 
+                <string>javax.swing.JLabel</string> 
+                <void method="setProperty"> 
+                 <string>text</string> 
+                 <string>XML result file name:</string> 
+                </void> 
+                <void method="setProperty"> 
+                 <string>font</string> 
+                 <object idref="SwingDerivedFont0"/> 
+                </void> 
+                <void property="name"> 
+                 <string>label1</string> 
+                </void> 
+               </object> 
+              </void> 
+             </object> 
+             <object class="com.jformdesigner.model.FormLayoutConstraints"> 
+              <class>java.lang.String</class> 
+              <void method="setProperty"> 
+               <string>value</string> 
+               <string>left</string> 
+              </void> 
+             </object> 
+            </void> 
+            <void method="add"> 
+             <object class="com.jformdesigner.model.FormContainer"> 
+              <string>javax.swing.JPanel</string> 
+              <object class="com.jformdesigner.model.FormLayoutManager"> 
+               <class>org.jdesktop.layout.GroupLayout</class> 
+               <void method="setProperty"> 
+                <string>$horizontalGroup</string> 
+                <string>par l {seq l {space :::p, comp checkBox1:::p::p, space ::223:x}}</string> 
+               </void> 
+               <void method="setProperty"> 
+                <string>$verticalGroup</string> 
+                <string>par l {seq l {space :::p, comp checkBox1:::p::p, space ::16:x}}</string> 
+               </void> 
+              </object> 
+              <void property="name"> 
+               <string>panel4</string> 
+              </void> 
+              <void method="add"> 
+               <object class="com.jformdesigner.model.FormComponent"> 
+                <string>javax.swing.JCheckBox</string> 
+                <void method="setProperty"> 
+                 <string>text</string> 
+                 <string>Replace symbol using ISO standarts</string> 
+                </void> 
+                <void method="setProperty"> 
+                 <string>font</string> 
+                 <object class="java.awt.Font"> 
+                  <string>Calibri</string> 
+                  <int>0</int> 
+                  <int>14</int> 
+                 </object> 
+                </void> 
+                <void property="name"> 
+                 <string>checkBox1</string> 
+                </void> 
+               </object> 
+              </void> 
+             </object> 
+             <object class="com.jformdesigner.model.FormLayoutConstraints"> 
+              <class>java.lang.String</class> 
+              <void method="setProperty"> 
+               <string>value</string> 
+               <string>right</string> 
+              </void> 
+             </object> 
+            </void> 
+           </object> 
+          </void> 
+         </object> 
+         <object class="com.jformdesigner.model.FormLayoutConstraints"> 
+          <null/> 
+          <void method="setProperty"> 
+           <string>title</string> 
+           <string>Settings</string> 
+          </void> 
+         </object> 
+        </void> 
+       </object> 
+      </void> 
+      <void property="menuBar"> 
+       <object class="com.jformdesigner.model.FormContainer"> 
+        <string>javax.swing.JMenuBar</string> 
+        <object class="com.jformdesigner.model.FormLayoutManager"> 
+         <class>javax.swing.JMenuBar</class> 
+        </object> 
+        <void property="name"> 
+         <string>menuBar1</string> 
+        </void> 
+        <void method="add"> 
+         <object class="com.jformdesigner.model.FormContainer"> 
+          <string>javax.swing.JMenu</string> 
+          <object class="com.jformdesigner.model.FormLayoutManager"> 
+           <class>javax.swing.JMenu</class> 
+          </object> 
+          <void method="setProperty"> 
+           <string>text</string> 
+           <string>File</string> 
+          </void> 
+          <void method="setProperty"> 
+           <string>font</string> 
+           <object idref="Font0"/> 
+          </void> 
+          <void property="name"> 
+           <string>MainMenu</string> 
+          </void> 
+          <void method="add"> 
+           <object class="com.jformdesigner.model.FormComponent"> 
+            <string>javax.swing.JMenuItem</string> 
+            <void method="setProperty"> 
+             <string>text</string> 
+             <string>Choose file</string> 
+            </void> 
+            <void method="setProperty"> 
+             <string>font</string> 
+             <object idref="Font0"/> 
+            </void> 
+            <void property="name"> 
+             <string>chooseFileMenu</string> 
+            </void> 
+           </object> 
+          </void> 
+          <void method="add"> 
+           <object class="com.jformdesigner.model.FormComponent"> 
+            <string>javax.swing.JPopupMenu$Separator</string> 
+            <void property="name"> 
+             <string>separator1</string> 
+            </void> 
+           </object> 
+          </void> 
+          <void method="add"> 
+           <object class="com.jformdesigner.model.FormComponent"> 
+            <string>javax.swing.JMenuItem</string> 
+            <void method="setProperty"> 
+             <string>text</string> 
+             <string>Help</string> 
+            </void> 
+            <void method="setProperty"> 
+             <string>font</string> 
+             <object id="Font1" class="java.awt.Font"> 
+              <string>Calibri</string> 
+              <int>0</int> 
+              <int>14</int> 
+             </object> 
+            </void> 
+            <void property="name"> 
+             <string>helpItem</string> 
+            </void> 
+           </object> 
+          </void> 
+          <void method="add"> 
+           <object class="com.jformdesigner.model.FormComponent"> 
+            <string>javax.swing.JMenuItem</string> 
+            <void method="setProperty"> 
+             <string>text</string> 
+             <string>Exit</string> 
+            </void> 
+            <void method="setProperty"> 
+             <string>font</string> 
+             <object idref="Font1"/> 
+            </void> 
+            <void property="name"> 
+             <string>exitItem</string> 
+            </void> 
+           </object> 
+          </void> 
+         </object> 
+        </void> 
+       </object> 
+      </void> 
+      <void property="name"> 
+       <string>this</string> 
+      </void> 
+     </object> 
+     <object class="com.jformdesigner.model.FormLayoutConstraints"> 
+      <null/> 
+      <void method="setProperty"> 
+       <string>location</string> 
+       <object class="java.awt.Point"> 
+        <int>5</int> 
+        <int>5</int> 
+       </object> 
+      </void> 
+      <void method="setProperty"> 
+       <string>size</string> 
+       <object class="java.awt.Dimension"> 
+        <int>945</int> 
+        <int>490</int> 
+       </object> 
+      </void> 
+     </object> 
+    </void> 
+   </object> 
+  </void> 
+ </object> 
+</java> 
