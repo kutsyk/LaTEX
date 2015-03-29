@@ -3,7 +3,11 @@ package com.kutsyk.windows;
 import com.kurpiak.styling.StyledDocument;
 import com.kutsyk.TextEditor.TextLineNumber;
 import com.kutsyk.convertors.Translator;
+import org.bounce.text.LineNumberMargin;
+import org.bounce.text.ScrollableEditorPanel;
 import org.bounce.text.xml.XMLEditorKit;
+import org.bounce.text.xml.XMLFoldingMargin;
+import org.bounce.text.xml.XMLStyleConstants;
 import org.w3c.dom.Node;
 import org.w3c.dom.bootstrap.DOMImplementationRegistry;
 import org.w3c.dom.ls.DOMImplementationLS;
@@ -196,7 +200,6 @@ public class MainWindow extends JFrame {
                 reader.close();
             } catch (Exception e) {
             }
-            ;
         }
     }
 
@@ -234,7 +237,7 @@ public class MainWindow extends JFrame {
      * Creates the files.
      */
     private static void createFiles() {
-        String[] files = {"result.xml", "bodyAndBottom.xml", "mainFile.tex", "back.tex",
+        String[] files = {"result.xml", "back.xml", "bodyAndBottom.xml", "mainFile.tex", "back.tex",
                 "newCommands.tex"};
         for (String file : files) {
             dir = new File(mainPath + "/LaTEXtoXML/" + file);
@@ -262,7 +265,6 @@ public class MainWindow extends JFrame {
                     File result = new File(mainPath + "/LaTEXtoXML/result.xml");
                     result.deleteOnExit();
                     if (result.exists()) {
-//                        makeXMLStructured(result);
                         displayXMlTOPane(result);
                         progressBar.setVisible(false);
                     }
@@ -277,57 +279,61 @@ public class MainWindow extends JFrame {
 
     private void displayXMlTOPane(File result) {
         try {
-//            xmlEditor = new JEditorPane();
-//            // Instantiate a XMLEditorKit
-//            XMLEditorKit kit = new XMLEditorKit();
-//            xmlEditor.setEditorKit(kit);
-//            xmlEditor.read(new FileReader(result), result);
-//            // Set the font style.
-//            xmlEditor.setFont(new Font("Calibri", Font.PLAIN, 14));
-//            // Set the tab size
-//            xmlEditor.getDocument().putProperty(PlainDocument.tabSizeAttribute,
-//                    new Integer(4));
-//            // Enable auto indentation.
-//            kit.setAutoIndentation(true);
-//            // Enable tag completion.
-//            kit.setTagCompletion(true);
-//
-//            // Enable error highlighting.
-//            xmlEditor.getDocument().putProperty(XMLEditorKit.ERROR_HIGHLIGHTING_ATTRIBUTE, new Boolean(true));
-//            // Set a style
-//            kit.setStyle(XMLStyleConstants.ATTRIBUTE_NAME, new Color(255, 0, 0),
-//                    Font.BOLD);
-//
-//            // Put the editor in a panel that will force it to resize, when a different
-//            // view is choosen.
-//            ScrollableEditorPanel editorPanel = new ScrollableEditorPanel(xmlEditor);
-//
-//            JScrollPane scroller = new JScrollPane(editorPanel);
-//
-//            // Add the number margin and folding margin as a Row Header View
-//            JPanel rowHeader = new JPanel(new BorderLayout());
-//            rowHeader.add(new XMLFoldingMargin(xmlEditor), BorderLayout.EAST);
-//            rowHeader.add(new LineNumberMargin(xmlEditor), BorderLayout.WEST);
-//            scroller.setRowHeaderView(rowHeader);
-//            xmlScrollPane.add(scroller);
+            xmlEditor = new JEditorPane();
+            // Instantiate a XMLEditorKit
+            XMLEditorKit kit = new XMLEditorKit();
+            xmlEditor.setEditorKit( kit);
 
-            xmlEditor=new JEditorPane();
-            xmlEditor.setFont(new Font("Calibri", Font.PLAIN, 14));
-            xmlEditor.setEditorKit(new XMLEditorKit());
-//            xmlEditor.read(new FileInputStream(result), result);
-//            or
             BufferedReader reader = new BufferedReader(new FileReader(result));
             StringBuilder xmlString = new StringBuilder();
             String line;
             while((line = reader.readLine())!=null)
                 xmlString.append(line);
-//            some code to init the string
+
             String xml = makeXMLStructured(xmlString.toString());
-            xmlEditor.setText(xml);
-            jXmlPane.add(xmlEditor);
+            PrintWriter writer = new PrintWriter(mainPath+"/LaTEXtoXML/remaked.xml");
+            writer.append(xml);
+            writer.close();
+
+            File file = new File(mainPath+"/LaTEXtoXML/remaked.xml");
+            xmlEditor.read(new FileReader(file), file);
+
+            // Set the font style.
+            xmlEditor.setFont(new Font("Courier", Font.PLAIN, 14));
+
+            // Set the tab size
+            xmlEditor.getDocument().putProperty(PlainDocument.tabSizeAttribute,
+                    new Integer(4));
+
+            // Enable auto indentation.
+            kit.setAutoIndentation(true);
+
+            // Enable tag completion.
+            kit.setTagCompletion(true);
+
+            // Enable error highlighting.
+            xmlEditor.getDocument().putProperty(XMLEditorKit.ERROR_HIGHLIGHTING_ATTRIBUTE, new Boolean(true));
+
+            // Set a style
+            kit.setStyle(XMLStyleConstants.ATTRIBUTE_NAME, new Color(255, 0, 0),
+                    Font.BOLD);
+
+            // Put the editor in a panel that will force it to resize, when a different
+            // view is choosen.
+            ScrollableEditorPanel editorPanel = new ScrollableEditorPanel(xmlEditor);
+
+            JScrollPane scroller = new JScrollPane( editorPanel);
+
+            // Add the number margin and folding margin as a Row Header View
+            JPanel rowHeader = new JPanel(new BorderLayout());
+            rowHeader.add(new XMLFoldingMargin(xmlEditor), BorderLayout.EAST);
+            rowHeader.add(new LineNumberMargin(xmlEditor), BorderLayout.WEST);
+            scroller.setRowHeaderView(rowHeader);
+
+            xmlDocumentPane.add(scroller, BorderLayout.CENTER);
         } catch (Throwable e) {
             e.printStackTrace();
-            System.exit(1);
+//            System.exit( 1);
         }
     }
 
@@ -337,9 +343,8 @@ public class MainWindow extends JFrame {
             final Node document = DocumentBuilderFactory.newInstance().newDocumentBuilder().parse(src).getDocumentElement();
             final Boolean keepDeclaration = Boolean.valueOf(xml.startsWith("<?xml"));
 
-            //May need this: System.setProperty(DOMImplementationRegistry.PROPERTY,"com.sun.org.apache.xerces.internal.dom.DOMImplementationSourceImpl");
-
-
+//            May need this:
+            System.setProperty(DOMImplementationRegistry.PROPERTY,"com.sun.org.apache.xerces.internal.dom.DOMImplementationSourceImpl");
             final DOMImplementationRegistry registry = DOMImplementationRegistry.newInstance();
             final DOMImplementationLS impl = (DOMImplementationLS) registry.getDOMImplementation("LS");
             final LSSerializer writer = impl.createLSSerializer();
@@ -449,6 +454,9 @@ public class MainWindow extends JFrame {
     private void initLineTextEditor() {
         documentText.setStyledDocument(StyledDocument.getInstance());
         documentText.setFont(new Font("Arial", 14, 14));
+        lineNumber = new TextLineNumber(documentText);
+        scrollPane.setRowHeaderView(lineNumber);
+
         lineNumber = new TextLineNumber(documentText);
         scrollPane.setRowHeaderView(lineNumber);
     }
@@ -732,13 +740,10 @@ public class MainWindow extends JFrame {
 		exitItem = new JMenuItem();
 		spliPaneWithDoc = new JSplitPane();
 		documentTab = new JTabbedPane();
-		panel7 = new JPanel();
 		scrollPane = new JScrollPane();
 		documentText = new JTextPane();
 		xmlPane = new JTabbedPane();
-		paneWIthXMLDocument = new JPanel();
-		xmlScrollPane = new JScrollPane();
-		jXmlPane = new JPanel();
+		xmlDocumentPane = new JPanel();
 		tabbedPane1 = new JTabbedPane();
 		panel1 = new JPanel();
 		translateButton = new JButton();
@@ -830,44 +835,29 @@ public class MainWindow extends JFrame {
 
 			//======== documentTab ========
 			{
+				documentTab.setFont(new Font("Calibri", Font.PLAIN, 14));
 
-				//======== panel7 ========
+				//======== scrollPane ========
 				{
-					panel7.setLayout(new BoxLayout(panel7, BoxLayout.X_AXIS));
 
-					//======== scrollPane ========
-					{
-
-						//---- documentText ----
-						documentText.setFont(new Font("Calibri", Font.PLAIN, 14));
-						scrollPane.setViewportView(documentText);
-					}
-					panel7.add(scrollPane);
+					//---- documentText ----
+					documentText.setFont(new Font("Calibri", Font.PLAIN, 14));
+					scrollPane.setViewportView(documentText);
 				}
-				documentTab.addTab("Document:", panel7);
+				documentTab.addTab("Document", scrollPane);
 
 			}
 			spliPaneWithDoc.setLeftComponent(documentTab);
 
 			//======== xmlPane ========
 			{
+				xmlPane.setFont(new Font("Calibri", Font.PLAIN, 14));
 
-				//======== paneWIthXMLDocument ========
+				//======== xmlDocumentPane ========
 				{
-					paneWIthXMLDocument.setLayout(new BorderLayout());
-
-					//======== xmlScrollPane ========
-					{
-
-						//======== jXmlPane ========
-						{
-							jXmlPane.setLayout(new BoxLayout(jXmlPane, BoxLayout.X_AXIS));
-						}
-						xmlScrollPane.setViewportView(jXmlPane);
-					}
-					paneWIthXMLDocument.add(xmlScrollPane, BorderLayout.CENTER);
+					xmlDocumentPane.setLayout(new BoxLayout(xmlDocumentPane, BoxLayout.X_AXIS));
 				}
-				xmlPane.addTab("XML:", paneWIthXMLDocument);
+				xmlPane.addTab("XML", xmlDocumentPane);
 
 			}
 			spliPaneWithDoc.setRightComponent(xmlPane);
@@ -1063,13 +1053,10 @@ public class MainWindow extends JFrame {
 	private JMenuItem exitItem;
 	private JSplitPane spliPaneWithDoc;
 	private JTabbedPane documentTab;
-	private JPanel panel7;
 	private JScrollPane scrollPane;
 	private JTextPane documentText;
 	private JTabbedPane xmlPane;
-	private JPanel paneWIthXMLDocument;
-	private JScrollPane xmlScrollPane;
-	private JPanel jXmlPane;
+	private JPanel xmlDocumentPane;
 	private JTabbedPane tabbedPane1;
 	private JPanel panel1;
 	private JButton translateButton;

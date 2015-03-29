@@ -103,46 +103,39 @@
           <object class="com.jformdesigner.model.FormLayoutManager"> 
            <class>javax.swing.JTabbedPane</class> 
           </object> 
+          <void method="setProperty"> 
+           <string>font</string> 
+           <object class="java.awt.Font"> 
+            <string>Calibri</string> 
+            <int>0</int> 
+            <int>14</int> 
+           </object> 
+          </void> 
           <void property="name"> 
            <string>documentTab</string> 
           </void> 
           <void method="add"> 
            <object class="com.jformdesigner.model.FormContainer"> 
-            <string>javax.swing.JPanel</string> 
+            <string>javax.swing.JScrollPane</string> 
             <object class="com.jformdesigner.model.FormLayoutManager"> 
-             <class>javax.swing.BoxLayout</class> 
-             <void method="setProperty"> 
-              <string>axis</string> 
-              <int>0</int> 
-             </void> 
+             <class>javax.swing.JScrollPane</class> 
             </object> 
             <void property="name"> 
-             <string>panel7</string> 
+             <string>scrollPane</string> 
             </void> 
             <void method="add"> 
-             <object class="com.jformdesigner.model.FormContainer"> 
-              <string>javax.swing.JScrollPane</string> 
-              <object class="com.jformdesigner.model.FormLayoutManager"> 
-               <class>javax.swing.JScrollPane</class> 
-              </object> 
-              <void property="name"> 
-               <string>scrollPane</string> 
-              </void> 
-              <void method="add"> 
-               <object class="com.jformdesigner.model.FormComponent"> 
-                <string>javax.swing.JTextPane</string> 
-                <void method="setProperty"> 
-                 <string>font</string> 
-                 <object class="java.awt.Font"> 
-                  <string>Calibri</string> 
-                  <int>0</int> 
-                  <int>14</int> 
-                 </object> 
-                </void> 
-                <void property="name"> 
-                 <string>documentText</string> 
-                </void> 
+             <object class="com.jformdesigner.model.FormComponent"> 
+              <string>javax.swing.JTextPane</string> 
+              <void method="setProperty"> 
+               <string>font</string> 
+               <object class="java.awt.Font"> 
+                <string>Calibri</string> 
+                <int>0</int> 
+                <int>14</int> 
                </object> 
+              </void> 
+              <void property="name"> 
+               <string>documentText</string> 
               </void> 
              </object> 
             </void> 
@@ -151,7 +144,7 @@
             <null/> 
             <void method="setProperty"> 
              <string>title</string> 
-             <string>Document:</string> 
+             <string>Document</string> 
             </void> 
            </object> 
           </void> 
@@ -170,6 +163,14 @@
           <object class="com.jformdesigner.model.FormLayoutManager"> 
            <class>javax.swing.JTabbedPane</class> 
           </object> 
+          <void method="setProperty"> 
+           <string>font</string> 
+           <object class="java.awt.Font"> 
+            <string>Calibri</string> 
+            <int>0</int> 
+            <int>14</int> 
+           </object> 
+          </void> 
           <void property="name"> 
            <string>xmlPane</string> 
           </void> 
@@ -177,50 +178,21 @@
            <object class="com.jformdesigner.model.FormContainer"> 
             <string>javax.swing.JPanel</string> 
             <object class="com.jformdesigner.model.FormLayoutManager"> 
-             <class>java.awt.BorderLayout</class> 
+             <class>javax.swing.BoxLayout</class> 
+             <void method="setProperty"> 
+              <string>axis</string> 
+              <int>0</int> 
+             </void> 
             </object> 
             <void property="name"> 
-             <string>paneWIthXMLDocument</string> 
-            </void> 
-            <void method="add"> 
-             <object class="com.jformdesigner.model.FormContainer"> 
-              <string>javax.swing.JScrollPane</string> 
-              <object class="com.jformdesigner.model.FormLayoutManager"> 
-               <class>javax.swing.JScrollPane</class> 
-              </object> 
-              <void property="name"> 
-               <string>xmlScrollPane</string> 
-              </void> 
-              <void method="add"> 
-               <object class="com.jformdesigner.model.FormContainer"> 
-                <string>javax.swing.JPanel</string> 
-                <object class="com.jformdesigner.model.FormLayoutManager"> 
-                 <class>javax.swing.BoxLayout</class> 
-                 <void method="setProperty"> 
-                  <string>axis</string> 
-                  <int>0</int> 
-                 </void> 
-                </object> 
-                <void property="name"> 
-                 <string>jXmlPane</string> 
-                </void> 
-               </object> 
-              </void> 
-             </object> 
-             <object class="com.jformdesigner.model.FormLayoutConstraints"> 
-              <class>java.lang.String</class> 
-              <void method="setProperty"> 
-               <string>value</string> 
-               <string>Center</string> 
-              </void> 
-             </object> 
+             <string>xmlDocumentPane</string> 
             </void> 
            </object> 
            <object class="com.jformdesigner.model.FormLayoutConstraints"> 
             <null/> 
             <void method="setProperty"> 
              <string>title</string> 
-             <string>XML:</string> 
+             <string>XML</string> 
             </void> 
            </object> 
           </void> 
