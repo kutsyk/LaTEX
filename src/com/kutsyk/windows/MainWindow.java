@@ -3,10 +3,17 @@ package com.kutsyk.windows;
 import com.kurpiak.styling.StyledDocument;
 import com.kutsyk.TextEditor.TextLineNumber;
 import com.kutsyk.convertors.Translator;
+import org.bounce.text.xml.XMLEditorKit;
+import org.w3c.dom.Node;
+import org.w3c.dom.bootstrap.DOMImplementationRegistry;
+import org.w3c.dom.ls.DOMImplementationLS;
+import org.w3c.dom.ls.LSSerializer;
+import org.xml.sax.InputSource;
 
 import javax.swing.*;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import javax.swing.text.*;
+import javax.xml.parsers.DocumentBuilderFactory;
 import java.awt.*;
 import java.awt.event.*;
 import java.io.*;
@@ -19,6 +26,7 @@ import java.util.HashMap;
 
 
 // TODO: Auto-generated Javadoc
+
 /**
  * The Class MainWindow.
  */
@@ -43,6 +51,8 @@ public class MainWindow extends JFrame {
      * The iso trie.
      */
     private static HashMap<String, String> isoTrie;
+
+    private static JEditorPane xmlEditor = null;
 
     /**
      * The main method.
@@ -78,7 +88,7 @@ public class MainWindow extends JFrame {
 
     }
 
-    private void initStyling(){
+    private void initStyling() {
         spliPaneWithDoc.setDividerLocation(0.5);
         progressBar.setVisible(false);
         xmlFileName.setText("Here will be your xml file name");
@@ -251,8 +261,9 @@ public class MainWindow extends JFrame {
                     wasAnyLaTEXProceeded = true;
                     File result = new File(mainPath + "/LaTEXtoXML/result.xml");
                     result.deleteOnExit();
-                    if (result.exists()){
-                        Desktop.getDesktop().open(result);
+                    if (result.exists()) {
+//                        makeXMLStructured(result);
+                        displayXMlTOPane(result);
                         progressBar.setVisible(false);
                     }
                 } catch (Exception e1) {
@@ -262,6 +273,84 @@ public class MainWindow extends JFrame {
             }
         });
         translationThread.start();
+    }
+
+    private void displayXMlTOPane(File result) {
+        try {
+//            xmlEditor = new JEditorPane();
+//            // Instantiate a XMLEditorKit
+//            XMLEditorKit kit = new XMLEditorKit();
+//            xmlEditor.setEditorKit(kit);
+//            xmlEditor.read(new FileReader(result), result);
+//            // Set the font style.
+//            xmlEditor.setFont(new Font("Calibri", Font.PLAIN, 14));
+//            // Set the tab size
+//            xmlEditor.getDocument().putProperty(PlainDocument.tabSizeAttribute,
+//                    new Integer(4));
+//            // Enable auto indentation.
+//            kit.setAutoIndentation(true);
+//            // Enable tag completion.
+//            kit.setTagCompletion(true);
+//
+//            // Enable error highlighting.
+//            xmlEditor.getDocument().putProperty(XMLEditorKit.ERROR_HIGHLIGHTING_ATTRIBUTE, new Boolean(true));
+//            // Set a style
+//            kit.setStyle(XMLStyleConstants.ATTRIBUTE_NAME, new Color(255, 0, 0),
+//                    Font.BOLD);
+//
+//            // Put the editor in a panel that will force it to resize, when a different
+//            // view is choosen.
+//            ScrollableEditorPanel editorPanel = new ScrollableEditorPanel(xmlEditor);
+//
+//            JScrollPane scroller = new JScrollPane(editorPanel);
+//
+//            // Add the number margin and folding margin as a Row Header View
+//            JPanel rowHeader = new JPanel(new BorderLayout());
+//            rowHeader.add(new XMLFoldingMargin(xmlEditor), BorderLayout.EAST);
+//            rowHeader.add(new LineNumberMargin(xmlEditor), BorderLayout.WEST);
+//            scroller.setRowHeaderView(rowHeader);
+//            xmlScrollPane.add(scroller);
+
+            xmlEditor=new JEditorPane();
+            xmlEditor.setFont(new Font("Calibri", Font.PLAIN, 14));
+            xmlEditor.setEditorKit(new XMLEditorKit());
+//            xmlEditor.read(new FileInputStream(result), result);
+//            or
+            BufferedReader reader = new BufferedReader(new FileReader(result));
+            StringBuilder xmlString = new StringBuilder();
+            String line;
+            while((line = reader.readLine())!=null)
+                xmlString.append(line);
+//            some code to init the string
+            String xml = makeXMLStructured(xmlString.toString());
+            xmlEditor.setText(xml);
+            jXmlPane.add(xmlEditor);
+        } catch (Throwable e) {
+            e.printStackTrace();
+            System.exit(1);
+        }
+    }
+
+    public static String makeXMLStructured(String xml) {
+        try {
+            final InputSource src = new InputSource(new StringReader(xml));
+            final Node document = DocumentBuilderFactory.newInstance().newDocumentBuilder().parse(src).getDocumentElement();
+            final Boolean keepDeclaration = Boolean.valueOf(xml.startsWith("<?xml"));
+
+            //May need this: System.setProperty(DOMImplementationRegistry.PROPERTY,"com.sun.org.apache.xerces.internal.dom.DOMImplementationSourceImpl");
+
+
+            final DOMImplementationRegistry registry = DOMImplementationRegistry.newInstance();
+            final DOMImplementationLS impl = (DOMImplementationLS) registry.getDOMImplementation("LS");
+            final LSSerializer writer = impl.createLSSerializer();
+
+            writer.getDomConfig().setParameter("format-pretty-print", Boolean.TRUE); // Set this to true if the output needs to be beautified.
+            writer.getDomConfig().setParameter("xml-declaration", keepDeclaration); // Set this to true if the declaration is needed to be outputted.
+
+            return writer.writeToString(document);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
 
     /**
@@ -315,7 +404,7 @@ public class MainWindow extends JFrame {
             return;
         }
         this.fileName = fileName;
-        xmlFileName.setText(fileName.substring(fileName.lastIndexOf("\\")+1,fileName.length()-4)+"result");
+        xmlFileName.setText(fileName.substring(fileName.lastIndexOf("\\") + 1, fileName.length() - 4) + "result");
         createFoldersAndFilesIfNeed();
         writeDocumentToPane(fileName);
     }
@@ -414,7 +503,7 @@ public class MainWindow extends JFrame {
             }
 
 			/*
-			 * If the figure section has started and no figures had been
+             * If the figure section has started and no figures had been
 			 * declared then we are looking for some
 			 */
             if (figureSection && !figureDeclared) {
@@ -423,7 +512,7 @@ public class MainWindow extends JFrame {
                     figureStarted = true;
 
 				/*
-				 * If the figure block ends it means that there is the right
+                 * If the figure block ends it means that there is the right
 				 * figure structure so the figure is declared
 				 */
                 if (line.contains("\\end{figure*}")
@@ -538,13 +627,13 @@ public class MainWindow extends JFrame {
             errorLogFile.close();
     }
 
-	private void exitItemActionPerformed(ActionEvent e) {
+    private void exitItemActionPerformed(ActionEvent e) {
         closeLogFile();
         clear();
         System.exit(0);
-	}
+    }
 
-	private void helpItemActionPerformed(ActionEvent e) {
+    private void helpItemActionPerformed(ActionEvent e) {
         try {
             File sourceFolder = new File(mainPath
                     + "/LaTEXbin/documentation/index.html");
@@ -552,9 +641,9 @@ public class MainWindow extends JFrame {
         } catch (IOException e1) {
             e1.printStackTrace();
         }
-	}
+    }
 
-	private void chooseFileMenuActionPerformed(ActionEvent e) {
+    private void chooseFileMenuActionPerformed(ActionEvent e) {
         wasAnyLaTEXProceeded = false;
         FileNameExtensionFilter filter = new FileNameExtensionFilter("TEX file", "tex", "tex");
         @SuppressWarnings("serial")
@@ -572,14 +661,14 @@ public class MainWindow extends JFrame {
             console.setText("");
             directoryChoosed(chooser.getSelectedFile().getAbsolutePath());
         }
-	}
+    }
 
-	private void MainWindowResized(ComponentEvent e) {
+    private void MainWindowResized(ComponentEvent e) {
         spliPaneWithDoc.setDividerLocation(0.5);
         settingsSplitPane.setDividerLocation(0.5);
-	}
+    }
 
-	private void saveDocumentButtonActionPerformed(ActionEvent e) {
+    private void saveDocumentButtonActionPerformed(ActionEvent e) {
         try {
             String content = documentText.getText();
             content = content.replaceAll("(?!\\r)\\n", "\r\n");
@@ -597,9 +686,9 @@ public class MainWindow extends JFrame {
         } catch (IOException e1) {
             e1.printStackTrace();
         }
-	}
+    }
 
-	private void saveXmlDocumentActionPerformed(ActionEvent e) {
+    private void saveXmlDocumentActionPerformed(ActionEvent e) {
         if (!wasAnyLaTEXProceeded) {
             JOptionPane.showMessageDialog(null,
                     "You have not proceeded any LaTEX file");
@@ -613,7 +702,7 @@ public class MainWindow extends JFrame {
         if (save == JOptionPane.YES_OPTION) {
             JFileChooser fileChooser = new JFileChooser();
             fileChooser.setFileSelectionMode(JFileChooser.FILES_ONLY);
-            fileChooser.setSelectedFile(new File(xmlFileName.getText()+".xml"));
+            fileChooser.setSelectedFile(new File(xmlFileName.getText() + ".xml"));
             fileChooser.showSaveDialog(this);
             File file = fileChooser.getSelectedFile();
             try {
@@ -631,7 +720,7 @@ public class MainWindow extends JFrame {
             } catch (IOException exp) {
             }
         }
-	}
+    }
 
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY
@@ -647,9 +736,9 @@ public class MainWindow extends JFrame {
 		scrollPane = new JScrollPane();
 		documentText = new JTextPane();
 		xmlPane = new JTabbedPane();
-		panel6 = new JPanel();
-		scrollPane2 = new JScrollPane();
-		xmlDocument = new JTextPane();
+		paneWIthXMLDocument = new JPanel();
+		xmlScrollPane = new JScrollPane();
+		jXmlPane = new JPanel();
 		tabbedPane1 = new JTabbedPane();
 		panel1 = new JPanel();
 		translateButton = new JButton();
@@ -748,6 +837,9 @@ public class MainWindow extends JFrame {
 
 					//======== scrollPane ========
 					{
+
+						//---- documentText ----
+						documentText.setFont(new Font("Calibri", Font.PLAIN, 14));
 						scrollPane.setViewportView(documentText);
 					}
 					panel7.add(scrollPane);
@@ -760,17 +852,22 @@ public class MainWindow extends JFrame {
 			//======== xmlPane ========
 			{
 
-				//======== panel6 ========
+				//======== paneWIthXMLDocument ========
 				{
-					panel6.setLayout(new BorderLayout());
+					paneWIthXMLDocument.setLayout(new BorderLayout());
 
-					//======== scrollPane2 ========
+					//======== xmlScrollPane ========
 					{
-						scrollPane2.setViewportView(xmlDocument);
+
+						//======== jXmlPane ========
+						{
+							jXmlPane.setLayout(new BoxLayout(jXmlPane, BoxLayout.X_AXIS));
+						}
+						xmlScrollPane.setViewportView(jXmlPane);
 					}
-					panel6.add(scrollPane2, BorderLayout.CENTER);
+					paneWIthXMLDocument.add(xmlScrollPane, BorderLayout.CENTER);
 				}
-				xmlPane.addTab("XML:", panel6);
+				xmlPane.addTab("XML:", paneWIthXMLDocument);
 
 			}
 			spliPaneWithDoc.setRightComponent(xmlPane);
@@ -970,9 +1067,9 @@ public class MainWindow extends JFrame {
 	private JScrollPane scrollPane;
 	private JTextPane documentText;
 	private JTabbedPane xmlPane;
-	private JPanel panel6;
-	private JScrollPane scrollPane2;
-	private JTextPane xmlDocument;
+	private JPanel paneWIthXMLDocument;
+	private JScrollPane xmlScrollPane;
+	private JPanel jXmlPane;
 	private JTabbedPane tabbedPane1;
 	private JPanel panel1;
 	private JButton translateButton;

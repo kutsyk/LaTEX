@@ -131,6 +131,14 @@
               <void method="add"> 
                <object class="com.jformdesigner.model.FormComponent"> 
                 <string>javax.swing.JTextPane</string> 
+                <void method="setProperty"> 
+                 <string>font</string> 
+                 <object class="java.awt.Font"> 
+                  <string>Calibri</string> 
+                  <int>0</int> 
+                  <int>14</int> 
+                 </object> 
+                </void> 
                 <void property="name"> 
                  <string>documentText</string> 
                 </void> 
@@ -172,7 +180,7 @@
              <class>java.awt.BorderLayout</class> 
             </object> 
             <void property="name"> 
-             <string>panel6</string> 
+             <string>paneWIthXMLDocument</string> 
             </void> 
             <void method="add"> 
              <object class="com.jformdesigner.model.FormContainer"> 
@@ -181,13 +189,20 @@
                <class>javax.swing.JScrollPane</class> 
               </object> 
               <void property="name"> 
-               <string>scrollPane2</string> 
+               <string>xmlScrollPane</string> 
               </void> 
               <void method="add"> 
-               <object class="com.jformdesigner.model.FormComponent"> 
-                <string>javax.swing.JTextPane</string> 
+               <object class="com.jformdesigner.model.FormContainer"> 
+                <string>javax.swing.JPanel</string> 
+                <object class="com.jformdesigner.model.FormLayoutManager"> 
+                 <class>javax.swing.BoxLayout</class> 
+                 <void method="setProperty"> 
+                  <string>axis</string> 
+                  <int>0</int> 
+                 </void> 
+                </object> 
                 <void property="name"> 
-                 <string>xmlDocument</string> 
+                 <string>jXmlPane</string> 
                 </void> 
                </object> 
               </void> 
