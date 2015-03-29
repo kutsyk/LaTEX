@@ -244,11 +244,11 @@
            <class>org.jdesktop.layout.GroupLayout</class> 
            <void method="setProperty"> 
             <string>$horizontalGroup</string> 
-            <string>par l {seq {space :::p, comp translateButton:::p::p, space :::p, comp saveDocumentButton:::p::p, space :::p, comp saveDocumentButton2:::p::p, space :::p, comp progressBar:::p:251:p, space ::55:x}}</string> 
+            <string>par l {seq {space :::p, comp translateButton:::p::p, space :::p, comp saveDocumentButton:::p::p, space :::p, comp saveXmlDocument:::p::p, space :::p, comp progressBar:::p:251:p, space ::55:x}}</string> 
            </void> 
            <void method="setProperty"> 
             <string>$verticalGroup</string> 
-            <string>par l {seq l {space :::p, par t:::p {comp progressBar::l:::x:1, comp translateButton::l:::x:1, comp saveDocumentButton::l:::x:1, comp saveDocumentButton2::l:::x:1}, space :::x}}</string> 
+            <string>par l {seq l {space :::p, par t:::p {comp progressBar::l:::x:1, comp translateButton::l:::x:1, comp saveDocumentButton::l:::x:1, comp saveXmlDocument::l:::x:1}, space :::x}}</string> 
            </void> 
           </object> 
           <void property="name"> 
@@ -279,6 +279,14 @@
             <void property="name"> 
              <string>translateButton</string> 
             </void> 
+            <void method="addEvent"> 
+             <object class="com.jformdesigner.model.FormEvent"> 
+              <string>java.awt.event.ActionListener</string> 
+              <string>actionPerformed</string> 
+              <string>translateButtonActionPerformed</string> 
+              <boolean>true</boolean> 
+             </object> 
+            </void> 
            </object> 
           </void> 
           <void method="add"> 
@@ -306,6 +314,14 @@
             <void property="name"> 
              <string>saveDocumentButton</string> 
             </void> 
+            <void method="addEvent"> 
+             <object class="com.jformdesigner.model.FormEvent"> 
+              <string>java.awt.event.ActionListener</string> 
+              <string>actionPerformed</string> 
+              <string>saveDocumentButtonActionPerformed</string> 
+              <boolean>true</boolean> 
+             </object> 
+            </void> 
            </object> 
           </void> 
           <void method="add"> 
@@ -332,7 +348,15 @@
              <object idref="SwingIcon0"/> 
             </void> 
             <void property="name"> 
-             <string>saveDocumentButton2</string> 
+             <string>saveXmlDocument</string> 
+            </void> 
+            <void method="addEvent"> 
+             <object class="com.jformdesigner.model.FormEvent"> 
+              <string>java.awt.event.ActionListener</string> 
+              <string>actionPerformed</string> 
+              <string>saveXmlDocumentActionPerformed</string> 
+              <boolean>true</boolean> 
+             </object> 
             </void> 
            </object> 
           </void> 
@@ -378,7 +402,7 @@
                <class>org.jdesktop.layout.GroupLayout</class> 
                <void method="setProperty"> 
                 <string>$horizontalGroup</string> 
-                <string>par l {seq l {space :::p, comp label1:::p::p, space :::p, comp xmlFileName:::p:191:p, space :::p, comp button1:::p::p, space :::x}}</string> 
+                <string>par l {seq l {space :::p, comp label1:::p::p, space :::p, comp xmlFileName:::p:191:p, space :::p, comp button1:::p::p, space ::58:x}}</string> 
                </void> 
                <void method="setProperty"> 
                 <string>$verticalGroup</string> 

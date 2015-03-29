@@ -81,6 +81,7 @@ public class MainWindow extends JFrame {
     private void initStyling(){
         spliPaneWithDoc.setDividerLocation(0.5);
         progressBar.setVisible(false);
+        xmlFileName.setText("Here will be your xml file name");
     }
 
     private void initProgressBar() {
@@ -250,8 +251,10 @@ public class MainWindow extends JFrame {
                     wasAnyLaTEXProceeded = true;
                     File result = new File(mainPath + "/LaTEXtoXML/result.xml");
                     result.deleteOnExit();
-                    if (result.exists())
+                    if (result.exists()){
                         Desktop.getDesktop().open(result);
+                        progressBar.setVisible(false);
+                    }
                 } catch (Exception e1) {
                     e1.printStackTrace();
                 }
@@ -299,27 +302,6 @@ public class MainWindow extends JFrame {
         reader.close();
     }
 
-    private void FileChooseButtonActionPerformed(ActionEvent e) {
-        wasAnyLaTEXProceeded = false;
-        FileNameExtensionFilter filter = new FileNameExtensionFilter("TEX file", "tex", "tex");
-        @SuppressWarnings("serial")
-//		JFileChooser chooser = new JFileChooser(new File("D:\\Charlesworth\\plos_template")) {
-                JFileChooser chooser = new JFileChooser(new File("D:\\Charlesworth\\Testing documents\\latex\\latex")) {
-            public void approveSelection() {
-                super.approveSelection();
-            }
-        };
-        chooser.setFileSelectionMode(JFileChooser.FILES_ONLY);
-        chooser.addChoosableFileFilter(filter);
-        chooser.setFileFilter(filter);
-        int returnVal = chooser.showOpenDialog(this);
-        if (returnVal == JFileChooser.APPROVE_OPTION) {
-            console.setText("");
-            directoryChoosed(chooser.getSelectedFile().getAbsolutePath());
-        }
-//		directoryChoosed(dirPath);
-    }
-
     private void directoryChoosed(String fileName) {
         boolean canBeProcced = fileName.endsWith(".tex");
         if (!canBeProcced) {
@@ -330,8 +312,10 @@ public class MainWindow extends JFrame {
                             null,
                             "You choosed directory that doesn't contain all necessary files.",
                             "Folder warning", JOptionPane.WARNING_MESSAGE);
+            return;
         }
         this.fileName = fileName;
+        xmlFileName.setText(fileName.substring(fileName.lastIndexOf("\\")+1,fileName.length()-4)+"result");
         createFoldersAndFilesIfNeed();
         writeDocumentToPane(fileName);
     }
@@ -358,52 +342,11 @@ public class MainWindow extends JFrame {
             return;
         }
         try {
+            progressBar.setVisible(true);
             translateAction();
         } catch (Exception e1) {
             e1.printStackTrace();
         }
-    }
-
-    private void ExitButtonActionPerformed(ActionEvent e) {
-        closeLogFile();
-        clear();
-        System.exit(0);
-    }
-
-    private void SaveXmlResultActionPerformed(ActionEvent e) {
-        if (!wasAnyLaTEXProceeded) {
-            JOptionPane.showMessageDialog(null,
-                    "You have not proceeded any LaTEX file");
-            return;
-        }
-
-        int save = JOptionPane.showConfirmDialog(null,
-                "Do you want to save this file?", "Close Alert",
-                JOptionPane.YES_NO_OPTION);
-
-        if (save == JOptionPane.YES_OPTION) {
-            JFileChooser fileChooser = new JFileChooser();
-            fileChooser.setFileSelectionMode(JFileChooser.FILES_ONLY);
-            fileChooser.setSelectedFile(new File(fileName
-                    + " - final.xml"));
-            fileChooser.showSaveDialog(this);
-            File file = fileChooser.getSelectedFile();
-            try {
-                PrintWriter writer = new PrintWriter(file);
-                InputStream in = new FileInputStream(mainPath
-                        + "/LaTEXtoXML/result.xml");
-                BufferedReader reader = new BufferedReader(
-                        new InputStreamReader(in));
-                String line;
-                while ((line = reader.readLine()) != null)
-                    writer.print(line);
-
-                in.close();
-                writer.close();
-            } catch (IOException exp) {
-            }
-        }
-
     }
 
     public TextLineNumber lineNumber;
@@ -418,8 +361,6 @@ public class MainWindow extends JFrame {
         documentText.setStyledDocument(StyledDocument.getInstance());
         documentText.setFont(new Font("Arial", 14, 14));
         lineNumber = new TextLineNumber(documentText);
-
-//        scrollPane = new JScrollPane(documentText);
         scrollPane.setRowHeaderView(lineNumber);
     }
 
@@ -585,36 +526,6 @@ public class MainWindow extends JFrame {
         });
     }
 
-    private void SaveButtonActionPerformed(ActionEvent e) {
-        try {
-            String content = documentText.getText();
-            content = content.replaceAll("(?!\\r)\\n", "\r\n");
-
-            File file = new File(fileName);
-            // if file doesnt exists, then create it
-            if (!file.exists()) {
-                file.createNewFile();
-            }
-            FileWriter fw = new FileWriter(file.getAbsoluteFile());
-            BufferedWriter bw = new BufferedWriter(fw);
-            bw.write(content);
-            bw.close();
-
-        } catch (IOException e1) {
-            e1.printStackTrace();
-        }
-    }
-
-    private void HowToUseButtonActionPerformed(ActionEvent e) {
-        try {
-            File sourceFolder = new File(mainPath
-                    + "/LaTEXbin/documentation/index.html");
-            Desktop.getDesktop().open(sourceFolder);
-        } catch (IOException e1) {
-            e1.printStackTrace();
-        }
-    }
-
     private void thisWindowClosing(WindowEvent e) {
         closeLogFile();
         clear();
@@ -668,6 +579,60 @@ public class MainWindow extends JFrame {
         settingsSplitPane.setDividerLocation(0.5);
 	}
 
+	private void saveDocumentButtonActionPerformed(ActionEvent e) {
+        try {
+            String content = documentText.getText();
+            content = content.replaceAll("(?!\\r)\\n", "\r\n");
+
+            File file = new File(fileName);
+            // if file doesnt exists, then create it
+            if (!file.exists()) {
+                file.createNewFile();
+            }
+            FileWriter fw = new FileWriter(file.getAbsoluteFile());
+            BufferedWriter bw = new BufferedWriter(fw);
+            bw.write(content);
+            bw.close();
+
+        } catch (IOException e1) {
+            e1.printStackTrace();
+        }
+	}
+
+	private void saveXmlDocumentActionPerformed(ActionEvent e) {
+        if (!wasAnyLaTEXProceeded) {
+            JOptionPane.showMessageDialog(null,
+                    "You have not proceeded any LaTEX file");
+            return;
+        }
+
+        int save = JOptionPane.showConfirmDialog(null,
+                "Do you want to save this file?", "Close Alert",
+                JOptionPane.YES_NO_OPTION);
+
+        if (save == JOptionPane.YES_OPTION) {
+            JFileChooser fileChooser = new JFileChooser();
+            fileChooser.setFileSelectionMode(JFileChooser.FILES_ONLY);
+            fileChooser.setSelectedFile(new File(xmlFileName.getText()+".xml"));
+            fileChooser.showSaveDialog(this);
+            File file = fileChooser.getSelectedFile();
+            try {
+                PrintWriter writer = new PrintWriter(file);
+                InputStream in = new FileInputStream(mainPath
+                        + "/LaTEXtoXML/result.xml");
+                BufferedReader reader = new BufferedReader(
+                        new InputStreamReader(in));
+                String line;
+                while ((line = reader.readLine()) != null)
+                    writer.print(line);
+
+                in.close();
+                writer.close();
+            } catch (IOException exp) {
+            }
+        }
+	}
+
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY
         // //GEN-BEGIN:initComponents
@@ -690,7 +655,7 @@ public class MainWindow extends JFrame {
 		translateButton = new JButton();
 		saveDocumentButton = new JButton();
 		progressBar = new JLabel();
-		saveDocumentButton2 = new JButton();
+		saveXmlDocument = new JButton();
 		panel2 = new JPanel();
 		settingsSplitPane = new JSplitPane();
 		panel3 = new JPanel();
@@ -822,16 +787,34 @@ public class MainWindow extends JFrame {
 				translateButton.setText("Translate");
 				translateButton.setFont(new Font("Calibri", Font.PLAIN, 14));
 				translateButton.setIcon(new ImageIcon(getClass().getResource("/images/blue-document-plus-icon.png")));
+				translateButton.addActionListener(new ActionListener() {
+					@Override
+					public void actionPerformed(ActionEvent e) {
+						translateButtonActionPerformed(e);
+					}
+				});
 
 				//---- saveDocumentButton ----
 				saveDocumentButton.setText("Save document");
 				saveDocumentButton.setFont(new Font("Calibri", Font.PLAIN, 14));
 				saveDocumentButton.setIcon(new ImageIcon(getClass().getResource("/images/blue-disk-icon.png")));
+				saveDocumentButton.addActionListener(new ActionListener() {
+					@Override
+					public void actionPerformed(ActionEvent e) {
+						saveDocumentButtonActionPerformed(e);
+					}
+				});
 
-				//---- saveDocumentButton2 ----
-				saveDocumentButton2.setText("Save xml result");
-				saveDocumentButton2.setFont(new Font("Calibri", Font.PLAIN, 14));
-				saveDocumentButton2.setIcon(new ImageIcon(getClass().getResource("/images/blue-disk-icon.png")));
+				//---- saveXmlDocument ----
+				saveXmlDocument.setText("Save xml result");
+				saveXmlDocument.setFont(new Font("Calibri", Font.PLAIN, 14));
+				saveXmlDocument.setIcon(new ImageIcon(getClass().getResource("/images/blue-disk-icon.png")));
+				saveXmlDocument.addActionListener(new ActionListener() {
+					@Override
+					public void actionPerformed(ActionEvent e) {
+						saveXmlDocumentActionPerformed(e);
+					}
+				});
 
 				GroupLayout panel1Layout = new GroupLayout(panel1);
 				panel1.setLayout(panel1Layout);
@@ -843,7 +826,7 @@ public class MainWindow extends JFrame {
 							.addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
 							.addComponent(saveDocumentButton)
 							.addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-							.addComponent(saveDocumentButton2)
+							.addComponent(saveXmlDocument)
 							.addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
 							.addComponent(progressBar, GroupLayout.PREFERRED_SIZE, 251, GroupLayout.PREFERRED_SIZE)
 							.addContainerGap(55, Short.MAX_VALUE))
@@ -856,7 +839,7 @@ public class MainWindow extends JFrame {
 								.addComponent(progressBar, GroupLayout.Alignment.LEADING, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
 								.addComponent(translateButton, GroupLayout.Alignment.LEADING, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
 								.addComponent(saveDocumentButton, GroupLayout.Alignment.LEADING, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-								.addComponent(saveDocumentButton2, GroupLayout.Alignment.LEADING, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+								.addComponent(saveXmlDocument, GroupLayout.Alignment.LEADING, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
 							.addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
 				);
 			}
@@ -894,7 +877,7 @@ public class MainWindow extends JFrame {
 									.addComponent(xmlFileName, GroupLayout.PREFERRED_SIZE, 191, GroupLayout.PREFERRED_SIZE)
 									.addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
 									.addComponent(button1)
-									.addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+									.addContainerGap(58, Short.MAX_VALUE))
 						);
 						panel3Layout.setVerticalGroup(
 							panel3Layout.createParallelGroup()
@@ -995,7 +978,7 @@ public class MainWindow extends JFrame {
 	private JButton translateButton;
 	private JButton saveDocumentButton;
 	private JLabel progressBar;
-	private JButton saveDocumentButton2;
+	private JButton saveXmlDocument;
 	private JPanel panel2;
 	private JSplitPane settingsSplitPane;
 	private JPanel panel3;
