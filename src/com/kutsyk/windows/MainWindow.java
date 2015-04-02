@@ -40,7 +40,7 @@ public class MainWindow extends JFrame {
     /**
      * The dir path.
      */
-    private static String fileName = "";
+    private static String fullPath = "";
     private static PrintWriter errorLogFile = null;
 
     /**
@@ -263,7 +263,7 @@ public class MainWindow extends JFrame {
             public void run() {
                 Translator translator;
                 try {
-                    translator = new Translator(fileName);
+                    translator = new Translator(fullPath);
                     createResult();
                     wasAnyLaTEXProceeded = true;
                     File result = new File(mainPath + "/LaTEXtoXML/result.xml");
@@ -412,7 +412,7 @@ public class MainWindow extends JFrame {
                             "Folder warning", JOptionPane.WARNING_MESSAGE);
             return;
         }
-        this.fileName = fileName;
+        this.fullPath = fileName;
         xmlFileName.setText(fileName.substring(fileName.lastIndexOf("\\") + 1, fileName.length() - 4) + "result");
         createFoldersAndFilesIfNeed();
         writeDocumentToPane(fileName);
@@ -435,7 +435,7 @@ public class MainWindow extends JFrame {
     }
 
     private void translateButtonActionPerformed(ActionEvent e) {
-        if (fileName.isEmpty()) {
+        if (fullPath.isEmpty()) {
             JOptionPane.showMessageDialog(null, "Choose neccesary files");
             return;
         }
@@ -681,7 +681,7 @@ public class MainWindow extends JFrame {
             String content = documentText.getText();
             content = content.replaceAll("(?!\\r)\\n", "\r\n");
 
-            File file = new File(fileName);
+            File file = new File(fullPath);
             // if file doesnt exists, then create it
             if (!file.exists()) {
                 file.createNewFile();
@@ -730,8 +730,8 @@ public class MainWindow extends JFrame {
         }
     }
 
-    public static String getFileName() {
-        return fileName;
+    public static String getFullPath() {
+        return fullPath;
     }
 
     public static String getMainPath() {

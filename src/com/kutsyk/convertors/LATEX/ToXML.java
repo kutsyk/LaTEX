@@ -893,7 +893,14 @@ public class ToXML extends LaTEXBaseListener {
             try {
                 Document doc = MathMLParserSupport
                         .parseString(session.buildXMLString(options));
-                String path = MainWindow.getFileName() + "-formula-" + imageId + ".png";
+                String fileName = MainWindow.getFullPath().substring(MainWindow.getFullPath().lastIndexOf("\\") + 1, MainWindow.getFullPath().length() - 4);
+                String folder = MainWindow.getFullPath().substring(0, MainWindow.getFullPath().lastIndexOf("\\")+1);
+                File f = new File(folder+fileName+"\\");
+                if(!f.exists())
+                    f.mkdir();
+                String path = folder+fileName+"\\"+fileName+"-formula-" + imageId + ".png";
+                System.out.println("Folder: "+folder);
+                System.out.println("P: "+path);
                 File file = new File(path);
                 MutableLayoutContext params = new LayoutContextImpl(
                         LayoutContextImpl.getDefaultLayoutContext());
