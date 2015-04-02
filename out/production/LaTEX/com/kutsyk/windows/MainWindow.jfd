@@ -103,6 +103,14 @@
           <object class="com.jformdesigner.model.FormLayoutManager"> 
            <class>javax.swing.JTabbedPane</class> 
           </object> 
+          <void method="setProperty"> 
+           <string>font</string> 
+           <object id="Font0" class="java.awt.Font"> 
+            <string>Calibri</string> 
+            <int>0</int> 
+            <int>14</int> 
+           </object> 
+          </void> 
           <void property="name"> 
            <string>documentTab</string> 
           </void> 
@@ -170,6 +178,10 @@
           <object class="com.jformdesigner.model.FormLayoutManager"> 
            <class>javax.swing.JTabbedPane</class> 
           </object> 
+          <void method="setProperty"> 
+           <string>font</string> 
+           <object idref="Font0"/> 
+          </void> 
           <void property="name"> 
            <string>xmlPane</string> 
           </void> 
@@ -245,7 +257,7 @@
             </void> 
             <void method="setProperty"> 
              <string>font</string> 
-             <object id="Font0" class="java.awt.Font"> 
+             <object id="Font1" class="java.awt.Font"> 
               <string>Calibri</string> 
               <int>0</int> 
               <int>14</int> 
@@ -280,7 +292,7 @@
             </void> 
             <void method="setProperty"> 
              <string>font</string> 
-             <object id="Font1" class="java.awt.Font"> 
+             <object id="Font2" class="java.awt.Font"> 
               <string>Calibri</string> 
               <int>0</int> 
               <int>14</int> 
@@ -323,7 +335,7 @@
             </void> 
             <void method="setProperty"> 
              <string>font</string> 
-             <object idref="Font1"/> 
+             <object idref="Font2"/> 
             </void> 
             <void method="setProperty"> 
              <string>icon</string> 
@@ -355,40 +367,28 @@
          <object class="com.jformdesigner.model.FormContainer"> 
           <string>javax.swing.JPanel</string> 
           <object class="com.jformdesigner.model.FormLayoutManager"> 
-           <class>org.jdesktop.layout.GroupLayout</class> 
-           <void method="setProperty"> 
-            <string>$horizontalGroup</string> 
-            <string>par l {comp settingsSplitPane::l::737:x}</string> 
-           </void> 
-           <void method="setProperty"> 
-            <string>$verticalGroup</string> 
-            <string>par l {seq l {comp settingsSplitPane:::p:50:p, space :::x}}</string> 
-           </void> 
+           <class>java.awt.BorderLayout</class> 
           </object> 
           <void property="name"> 
            <string>panel2</string> 
           </void> 
           <void method="add"> 
            <object class="com.jformdesigner.model.FormContainer"> 
-            <string>javax.swing.JSplitPane</string> 
+            <string>javax.swing.JTabbedPane</string> 
             <object class="com.jformdesigner.model.FormLayoutManager"> 
-             <class>javax.swing.JSplitPane</class> 
+             <class>javax.swing.JTabbedPane</class> 
             </object> 
             <void property="name"> 
-             <string>settingsSplitPane</string> 
+             <string>tabbedPane2</string> 
             </void> 
             <void method="add"> 
              <object class="com.jformdesigner.model.FormContainer"> 
               <string>javax.swing.JPanel</string> 
               <object class="com.jformdesigner.model.FormLayoutManager"> 
-               <class>org.jdesktop.layout.GroupLayout</class> 
+               <class>javax.swing.BoxLayout</class> 
                <void method="setProperty"> 
-                <string>$horizontalGroup</string> 
-                <string>par l {seq l {space :::p, comp label1:::p::p, space :::p, comp xmlFileName:::p:191:p, space :::p, comp button1:::p::p, space ::58:x}}</string> 
-               </void> 
-               <void method="setProperty"> 
-                <string>$verticalGroup</string> 
-                <string>par l {seq l {space :::p, par b {comp label1::b:p::p, comp xmlFileName::b::27:x, comp button1::b:p::p}, space :p:25:p}}</string> 
+                <string>axis</string> 
+                <int>0</int> 
                </void> 
               </object> 
               <void property="name"> 
@@ -396,10 +396,10 @@
               </void> 
               <void method="add"> 
                <object class="com.jformdesigner.model.FormComponent"> 
-                <string>javax.swing.JButton</string> 
+                <string>javax.swing.JCheckBox</string> 
                 <void method="setProperty"> 
                  <string>text</string> 
-                 <string>Set name</string> 
+                 <string>Replace symbol using ISO standarts</string> 
                 </void> 
                 <void method="setProperty"> 
                  <string>font</string> 
@@ -410,9 +410,41 @@
                  </object> 
                 </void> 
                 <void property="name"> 
-                 <string>button1</string> 
+                 <string>useIsoCharSymbolReplacign</string> 
+                </void> 
+                <void method="auxiliary"> 
+                 <void method="setProperty"> 
+                  <string>JavaCodeGenerator.variableModifiers</string> 
+                  <int>10</int> 
+                 </void> 
                 </void> 
                </object> 
+              </void> 
+             </object> 
+             <object class="com.jformdesigner.model.FormLayoutConstraints"> 
+              <null/> 
+              <void method="setProperty"> 
+               <string>title</string> 
+               <string>ISO</string> 
+              </void> 
+             </object> 
+            </void> 
+            <void method="add"> 
+             <object class="com.jformdesigner.model.FormContainer"> 
+              <string>javax.swing.JPanel</string> 
+              <object class="com.jformdesigner.model.FormLayoutManager"> 
+               <class>org.jdesktop.layout.GroupLayout</class> 
+               <void method="setProperty"> 
+                <string>$horizontalGroup</string> 
+                <string>par l {seq {comp xmlFileName:::p:186:p, space :::p, comp label1:::p::p, space u:::p, comp button1:::p::p, space :p:328:p}}</string> 
+               </void> 
+               <void method="setProperty"> 
+                <string>$verticalGroup</string> 
+                <string>par l {seq {par b {comp xmlFileName::b:p:26:p, comp label1::b:p::p, comp button1::b:p::p}, space :::x}}</string> 
+               </void> 
+              </object> 
+              <void property="name"> 
+               <string>panel4</string> 
               </void> 
               <void method="add"> 
                <object class="com.jformdesigner.model.FormComponent"> 
@@ -447,12 +479,28 @@
                 </void> 
                </object> 
               </void> 
+              <void method="add"> 
+               <object class="com.jformdesigner.model.FormComponent"> 
+                <string>javax.swing.JButton</string> 
+                <void method="setProperty"> 
+                 <string>text</string> 
+                 <string>Set name</string> 
+                </void> 
+                <void method="setProperty"> 
+                 <string>font</string> 
+                 <object idref="SwingDerivedFont0"/> 
+                </void> 
+                <void property="name"> 
+                 <string>button1</string> 
+                </void> 
+               </object> 
+              </void> 
              </object> 
              <object class="com.jformdesigner.model.FormLayoutConstraints"> 
-              <class>java.lang.String</class> 
+              <null/> 
               <void method="setProperty"> 
-               <string>value</string> 
-               <string>left</string> 
+               <string>title</string> 
+               <string>XML file</string> 
               </void> 
              </object> 
             </void> 
@@ -460,47 +508,110 @@
              <object class="com.jformdesigner.model.FormContainer"> 
               <string>javax.swing.JPanel</string> 
               <object class="com.jformdesigner.model.FormLayoutManager"> 
-               <class>org.jdesktop.layout.GroupLayout</class> 
+               <class>javax.swing.BoxLayout</class> 
                <void method="setProperty"> 
-                <string>$horizontalGroup</string> 
-                <string>par l {seq l {space :::p, comp checkBox1:::p::p, space ::28:x}}</string> 
-               </void> 
-               <void method="setProperty"> 
-                <string>$verticalGroup</string> 
-                <string>par l {seq l {space :::p, comp checkBox1:::p::p, space ::16:x}}</string> 
+                <string>axis</string> 
+                <int>0</int> 
                </void> 
               </object> 
               <void property="name"> 
-               <string>panel4</string> 
+               <string>panel5</string> 
               </void> 
               <void method="add"> 
                <object class="com.jformdesigner.model.FormComponent"> 
-                <string>javax.swing.JCheckBox</string> 
+                <string>javax.swing.JRadioButton</string> 
                 <void method="setProperty"> 
                  <string>text</string> 
-                 <string>Replace symbol using ISO standarts</string> 
+                 <string>LaTEX</string> 
                 </void> 
                 <void method="setProperty"> 
                  <string>font</string> 
-                 <object class="java.awt.Font"> 
+                 <object id="Font3" class="java.awt.Font"> 
                   <string>Calibri</string> 
                   <int>0</int> 
                   <int>14</int> 
                  </object> 
                 </void> 
+                <void method="setProperty"> 
+                 <string>selected</string> 
+                 <boolean>true</boolean> 
+                </void> 
                 <void property="name"> 
-                 <string>checkBox1</string> 
+                 <string>latexRadioButton</string> 
+                </void> 
+                <void method="addEvent"> 
+                 <object class="com.jformdesigner.model.FormEvent"> 
+                  <string>java.awt.event.ActionListener</string> 
+                  <string>actionPerformed</string> 
+                  <string>latexRadioButtonActionPerformed</string> 
+                  <boolean>true</boolean> 
+                 </object> 
+                </void> 
+               </object> 
+              </void> 
+              <void method="add"> 
+               <object class="com.jformdesigner.model.FormComponent"> 
+                <string>javax.swing.JRadioButton</string> 
+                <void method="setProperty"> 
+                 <string>text</string> 
+                 <string>MathML</string> 
+                </void> 
+                <void method="setProperty"> 
+                 <string>font</string> 
+                 <object idref="Font3"/> 
+                </void> 
+                <void property="name"> 
+                 <string>mathmlRadioButton</string> 
+                </void> 
+                <void method="addEvent"> 
+                 <object class="com.jformdesigner.model.FormEvent"> 
+                  <string>java.awt.event.ActionListener</string> 
+                  <string>actionPerformed</string> 
+                  <string>mathmlRadioButtonActionPerformed</string> 
+                  <boolean>true</boolean> 
+                 </object> 
+                </void> 
+               </object> 
+              </void> 
+              <void method="add"> 
+               <object class="com.jformdesigner.model.FormComponent"> 
+                <string>javax.swing.JRadioButton</string> 
+                <void method="setProperty"> 
+                 <string>text</string> 
+                 <string>Image</string> 
+                </void> 
+                <void method="setProperty"> 
+                 <string>font</string> 
+                 <object idref="Font3"/> 
+                </void> 
+                <void property="name"> 
+                 <string>imageRadioButton</string> 
+                </void> 
+                <void method="addEvent"> 
+                 <object class="com.jformdesigner.model.FormEvent"> 
+                  <string>java.awt.event.ActionListener</string> 
+                  <string>actionPerformed</string> 
+                  <string>imageRadioButtonActionPerformed</string> 
+                  <boolean>true</boolean> 
+                 </object> 
                 </void> 
                </object> 
               </void> 
              </object> 
              <object class="com.jformdesigner.model.FormLayoutConstraints"> 
-              <class>java.lang.String</class> 
+              <null/> 
               <void method="setProperty"> 
-               <string>value</string> 
-               <string>right</string> 
+               <string>title</string> 
+               <string>Formulas</string> 
               </void> 
              </object> 
+            </void> 
+           </object> 
+           <object class="com.jformdesigner.model.FormLayoutConstraints"> 
+            <class>java.lang.String</class> 
+            <void method="setProperty"> 
+             <string>value</string> 
+             <string>West</string> 
             </void> 
            </object> 
           </void> 
@@ -536,7 +647,7 @@
           </void> 
           <void method="setProperty"> 
            <string>font</string> 
-           <object idref="Font0"/> 
+           <object idref="Font1"/> 
           </void> 
           <void property="name"> 
            <string>MainMenu</string> 
@@ -550,7 +661,7 @@
             </void> 
             <void method="setProperty"> 
              <string>font</string> 
-             <object idref="Font0"/> 
+             <object idref="Font1"/> 
             </void> 
             <void property="name"> 
              <string>chooseFileMenu</string> 
@@ -582,7 +693,7 @@
             </void> 
             <void method="setProperty"> 
              <string>font</string> 
-             <object id="Font2" class="java.awt.Font"> 
+             <object id="Font4" class="java.awt.Font"> 
               <string>Calibri</string> 
               <int>0</int> 
               <int>14</int> 
@@ -618,7 +729,7 @@
             </void> 
             <void method="setProperty"> 
              <string>font</string> 
-             <object idref="Font2"/> 
+             <object idref="Font4"/> 
             </void> 
             <void property="name"> 
              <string>exitItem</string> 

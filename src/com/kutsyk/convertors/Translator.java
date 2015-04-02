@@ -49,10 +49,6 @@ public class Translator {
         if (changeMainFile(texFile))
             ToXML.writer.close();
     }
-
-
-
-
     /**
      * Gets the bib references.
      *

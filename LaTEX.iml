@@ -17,6 +17,8 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="library" name="antlr-4.2.2-complete" level="project" />
+    <orderEntry type="library" name="jlatexmath-1.0.3" level="project" />
+    <orderEntry type="library" name="batik-anim-1.7" level="project" />
   </component>
   <component name="POM File Configuration" pomFile="" />
 </module>

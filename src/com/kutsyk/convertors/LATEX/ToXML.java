@@ -3,7 +3,15 @@ package com.kutsyk.convertors.LATEX;
 import com.kutsyk.convertors.Translator;
 import com.kutsyk.grammar.LaTEX.LaTEXBaseListener;
 import com.kutsyk.grammar.LaTEX.LaTEXParser;
+import com.kutsyk.windows.MainWindow;
+import net.sourceforge.jeuclid.MathMLParserSupport;
+import net.sourceforge.jeuclid.MutableLayoutContext;
+import net.sourceforge.jeuclid.context.LayoutContextImpl;
+import net.sourceforge.jeuclid.context.Parameter;
+import net.sourceforge.jeuclid.converter.Converter;
 import org.antlr.v4.runtime.misc.NotNull;
+import org.w3c.dom.Document;
+import uk.ac.ed.ph.snuggletex.*;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -358,7 +366,7 @@ public class ToXML extends LaTEXBaseListener {
     }
 
 	/* (non-Javadoc)
-	 * @see LaTEXBaseListener#enterText(LaTEXParser.TextContext)
+     * @see LaTEXBaseListener#enterText(LaTEXParser.TextContext)
 	 */
 
     public void enterText(LaTEXParser.TextContext ctx) {
@@ -367,7 +375,7 @@ public class ToXML extends LaTEXBaseListener {
     }
 
 	/* (non-Javadoc)
-	 * @see LaTEXBaseListener#enterTitle(LaTEXParser.TitleContext)
+     * @see LaTEXBaseListener#enterTitle(LaTEXParser.TitleContext)
 	 */
 
     public void enterTitle(LaTEXParser.TitleContext ctx) {
@@ -375,7 +383,7 @@ public class ToXML extends LaTEXBaseListener {
     }
 
 	/* (non-Javadoc)
-	 * @see LaTEXBaseListener#exitTitle(LaTEXParser.TitleContext)
+     * @see LaTEXBaseListener#exitTitle(LaTEXParser.TitleContext)
 	 */
 
     public void exitTitle(LaTEXParser.TitleContext ctx) {
@@ -383,7 +391,7 @@ public class ToXML extends LaTEXBaseListener {
     }
 
 	/* (non-Javadoc)
-	 * @see LaTEXBaseListener#enterAbstractBlock(LaTEXParser.AbstractBlockContext)
+     * @see LaTEXBaseListener#enterAbstractBlock(LaTEXParser.AbstractBlockContext)
 	 */
 
     public void enterAbstractBlock(LaTEXParser.AbstractBlockContext ctx) {
@@ -824,9 +832,10 @@ public class ToXML extends LaTEXBaseListener {
         writer.print(" ");
     }
 
-	/* (non-Javadoc)
-	 * @see LaTEXBaseListener#enterDollarBlock(LaTEXParser.DollarBlockContext)
-	 */
+    /* (non-Javadoc)
+     * @see LaTEXBaseListener#enterDollarBlock(LaTEXParser.DollarBlockContext)
+     */
+    private int imageId;
 
     public void enterDollarBlock(LaTEXParser.DollarBlockContext ctx) {
         if (shouldTextBeMissed)
@@ -835,9 +844,97 @@ public class ToXML extends LaTEXBaseListener {
         if (authorReference)
             return;
         ++equationCounter;
-        writer.println("<equ id=\"equ" + equationCounter + "\" type=\"inline\">");
-        writeFormula(ctx.getText());
-        writer.println("</equ>");
+        if (MainWindow.getFormulasType().equals("latex")) {
+            writer.println("<equ id=\"equ" + equationCounter + "\" type=\"inline\">");
+            writeFormula(ctx.getText());
+            writer.println("</equ>");
+        } else if (MainWindow.getFormulasType().equals("images")) {
+            ++imageId;
+//            TeXFormula formula = new TeXFormula(ctx.getText());
+//            TeXIcon icon = formula.new TeXIconBuilder().setStyle(TeXConstants.STYLE_DISPLAY).setSize(20).build();
+//
+//            icon.setInsets(new Insets(5, 5, 5, 5));
+//
+//            BufferedImage image = new BufferedImage(icon.getIconWidth(), icon.getIconHeight(), BufferedImage.TYPE_INT_ARGB);
+//            Graphics2D g2 = image.createGraphics();
+//            g2.setColor(Color.white);
+//            g2.fillRect(0, 0, icon.getIconWidth(), icon.getIconHeight());
+//            JLabel jl = new JLabel();
+//            jl.setForeground(new Color(0, 0, 0));
+//            icon.paintIcon(jl, g2, 0, 0);
+//            String path = MainWindow.getFileName() + "-formula-" + imageId + ".png";
+//            File file = new File(path);
+//            try {
+//                ImageIO.write(image, "png", file.getAbsoluteFile());
+//            } catch (IOException ex) {
+//            }
+            SnuggleEngine engine = new SnuggleEngine();
+            SnuggleSession session = engine.createSession();
+
+            /* Parse some LaTeX input */
+            SnuggleInput input = new SnuggleInput(ctx.getText());
+            try {
+                session.parseInput(input);
+            } catch (IOException e) {
+                System.out.println("Parse error: ");
+                e.printStackTrace();
+                System.out.println("Parse error: ");
+            }
+            /* Specify how we want the resulting XML */
+            XMLStringOutputOptions options = new XMLStringOutputOptions();
+            options.setSerializationMethod(SerializationMethod.XHTML);
+            options.setIndenting(true);
+            options.setEncoding("UTF-8");
+            options.setAddingMathSourceAnnotations(true);
+            options.setUsingNamedEntities(true); /* (Only used if caller has an XSLT 2.0 processor) */
+
+            /* Convert the results to an XML String, which in this case will
+             * be a single MathML <math>...</math> element. */
+            try {
+                Document doc = MathMLParserSupport
+                        .parseString(session.buildXMLString(options));
+                String path = MainWindow.getFileName() + "-formula-" + imageId + ".png";
+                File file = new File(path);
+                MutableLayoutContext params = new LayoutContextImpl(
+                        LayoutContextImpl.getDefaultLayoutContext());
+                params.setParameter(Parameter.MATHSIZE, 25f);
+
+                Converter.getInstance().convert(doc, file, "image/" + "png",
+                        params);
+//                Assert.assertTrue(outFile.exists());
+//                Assert.assertTrue(outFile.length() > 0);
+                writer.print("<inline-graphic id=\"g" + imageId + "\" xlink:href=\"" + path + "\"/>");
+            } catch (Exception e) {
+                System.out.println("Parse error: ");
+                e.printStackTrace();
+                System.out.println("Parse error: ");
+            }
+        } else {
+            /* Create vanilla SnuggleEngine and new SnuggleSession */
+            SnuggleEngine engine = new SnuggleEngine();
+            SnuggleSession session = engine.createSession();
+
+            /* Parse some LaTeX input */
+            SnuggleInput input = new SnuggleInput(ctx.getText());
+            try {
+                session.parseInput(input);
+            } catch (IOException e) {
+                System.out.println("Parse error: ");
+                e.printStackTrace();
+                System.out.println("Parse error: ");
+            }
+            /* Specify how we want the resulting XML */
+            XMLStringOutputOptions options = new XMLStringOutputOptions();
+            options.setSerializationMethod(SerializationMethod.XHTML);
+            options.setIndenting(true);
+            options.setEncoding("UTF-8");
+            options.setAddingMathSourceAnnotations(true);
+            options.setUsingNamedEntities(true); /* (Only used if caller has an XSLT 2.0 processor) */
+
+            /* Convert the results to an XML String, which in this case will
+             * be a single MathML <math>...</math> element. */
+            writer.print(session.buildXMLString(options));
+        }
     }
 
     public void enterEquationBlock(LaTEXParser.EquationBlockContext ctx) {
@@ -977,7 +1074,8 @@ public class ToXML extends LaTEXBaseListener {
         if (shouldTextBeMissed)
             return;
 
-//        writer.print(MainWindow.getIsoTrie().get(ctx.getText().toString()));
+        if (MainWindow.getUseIsoCharSymbolReplacign())
+            writer.print(MainWindow.getIsoTrie().get(ctx.getText().toString()));
     }
 
     /* (non-Javadoc)
