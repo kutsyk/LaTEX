@@ -10,7 +10,15 @@
      <object class="com.jformdesigner.model.FormWindow"> 
       <string>javax.swing.JFrame</string> 
       <object class="com.jformdesigner.model.FormLayoutManager"> 
-       <class>java.awt.BorderLayout</class> 
+       <class>org.jdesktop.layout.GroupLayout</class> 
+       <void method="setProperty"> 
+        <string>$horizontalGroup</string> 
+        <string>par l {seq t {space :::p, par t {comp okButton::t:p:106:p, comp trialProgressBar::t::372:x}, space :::p}}</string> 
+       </void> 
+       <void method="setProperty"> 
+        <string>$verticalGroup</string> 
+        <string>par l {seq l {space :::p, comp trialProgressBar:::p:30:p, space :::p, comp okButton::::30:x, space :::p}}</string> 
+       </void> 
       </object> 
       <void method="setProperty"> 
        <string>title</string> 
@@ -24,182 +32,35 @@
         <int>14</int> 
        </object> 
       </void> 
+      <void method="setProperty"> 
+       <string>defaultCloseOperation</string> 
+       <int>3</int> 
+      </void> 
       <void method="add"> 
-       <object class="com.jformdesigner.model.FormContainer"> 
-        <string>javax.swing.JPanel</string> 
-        <object class="com.jformdesigner.model.FormLayoutManager"> 
-         <class>java.awt.BorderLayout</class> 
-        </object> 
+       <object class="com.jformdesigner.model.FormComponent"> 
+        <string>javax.swing.JProgressBar</string> 
+        <void property="name"> 
+         <string>trialProgressBar</string> 
+        </void> 
+       </object> 
+      </void> 
+      <void method="add"> 
+       <object class="com.jformdesigner.model.FormComponent"> 
+        <string>javax.swing.JButton</string> 
         <void method="setProperty"> 
-         <string>border</string> 
-         <object class="javax.swing.border.EmptyBorder"> 
-          <object class="java.awt.Insets"> 
-           <int>12</int> 
-           <int>12</int> 
-           <int>12</int> 
-           <int>12</int> 
-          </object> 
+         <string>text</string> 
+         <string>Ok</string> 
+        </void> 
+        <void method="setProperty"> 
+         <string>font</string> 
+         <object class="java.awt.Font"> 
+          <string>Times New Roman</string> 
+          <int>0</int> 
+          <int>14</int> 
          </object> 
         </void> 
         <void property="name"> 
-         <string>dialogPane</string> 
-        </void> 
-        <void method="add"> 
-         <object class="com.jformdesigner.model.FormContainer"> 
-          <string>javax.swing.JPanel</string> 
-          <object class="com.jformdesigner.model.FormLayoutManager"> 
-           <class>org.jdesktop.layout.GroupLayout</class> 
-           <void method="setProperty"> 
-            <string>$horizontalGroup</string> 
-            <string>par l {seq l {space :::p, par l {comp progressBar1::l::358:x, seq l {comp label1:::p::p, space ::302:x}}}}</string> 
-           </void> 
-           <void method="setProperty"> 
-            <string>$verticalGroup</string> 
-            <string>par l {seq l {space :::p, comp label1:::p::p, space :::p, comp progressBar1::::30:x}}</string> 
-           </void> 
-          </object> 
-          <void property="name"> 
-           <string>contentPanel</string> 
-          </void> 
-          <void method="add"> 
-           <object class="com.jformdesigner.model.FormComponent"> 
-            <string>javax.swing.JLabel</string> 
-            <void method="setProperty"> 
-             <string>text</string> 
-             <string>Left days:</string> 
-            </void> 
-            <void method="setProperty"> 
-             <string>font</string> 
-             <object class="java.awt.Font"> 
-              <string>Times New Roman</string> 
-              <int>0</int> 
-              <int>14</int> 
-             </object> 
-            </void> 
-            <void property="name"> 
-             <string>label1</string> 
-            </void> 
-           </object> 
-          </void> 
-          <void method="add"> 
-           <object class="com.jformdesigner.model.FormComponent"> 
-            <string>javax.swing.JProgressBar</string> 
-            <void method="setProperty"> 
-             <string>font</string> 
-             <object class="java.awt.Font"> 
-              <string>Times New Roman</string> 
-              <int>0</int> 
-              <int>14</int> 
-             </object> 
-            </void> 
-            <void method="setProperty"> 
-             <string>maximum</string> 
-             <int>30</int> 
-            </void> 
-            <void method="setProperty"> 
-             <string>stringPainted</string> 
-             <boolean>true</boolean> 
-            </void> 
-            <void method="setProperty"> 
-             <string>value</string> 
-             <int>2</int> 
-            </void> 
-            <void property="name"> 
-             <string>progressBar1</string> 
-            </void> 
-           </object> 
-          </void> 
-         </object> 
-         <object class="com.jformdesigner.model.FormLayoutConstraints"> 
-          <class>java.lang.String</class> 
-          <void method="setProperty"> 
-           <string>value</string> 
-           <string>Center</string> 
-          </void> 
-         </object> 
-        </void> 
-        <void method="add"> 
-         <object class="com.jformdesigner.model.FormContainer"> 
-          <string>javax.swing.JPanel</string> 
-          <object class="com.jformdesigner.model.FormLayoutManager"> 
-           <class>java.awt.GridBagLayout</class> 
-           <void method="setProperty"> 
-            <string>$columnSpecs</string> 
-            <string>0:1.0, 80</string> 
-           </void> 
-           <void method="setProperty"> 
-            <string>$rowSpecs</string> 
-            <string>0</string> 
-           </void> 
-           <void method="setProperty"> 
-            <string>$hGap</string> 
-            <int>5</int> 
-           </void> 
-           <void method="setProperty"> 
-            <string>$vGap</string> 
-            <int>5</int> 
-           </void> 
-          </object> 
-          <void method="setProperty"> 
-           <string>border</string> 
-           <object class="javax.swing.border.EmptyBorder"> 
-            <object class="java.awt.Insets"> 
-             <int>12</int> 
-             <int>0</int> 
-             <int>0</int> 
-             <int>0</int> 
-            </object> 
-           </object> 
-          </void> 
-          <void property="name"> 
-           <string>buttonBar</string> 
-          </void> 
-          <void method="add"> 
-           <object class="com.jformdesigner.model.FormComponent"> 
-            <string>javax.swing.JButton</string> 
-            <void method="setProperty"> 
-             <string>text</string> 
-             <string>OK</string> 
-            </void> 
-            <void method="setProperty"> 
-             <string>font</string> 
-             <object class="java.awt.Font"> 
-              <string>Times New Roman</string> 
-              <int>0</int> 
-              <int>14</int> 
-             </object> 
-            </void> 
-            <void property="name"> 
-             <string>okButton</string> 
-            </void> 
-           </object> 
-           <object class="com.jformdesigner.model.FormLayoutConstraints"> 
-            <class>com.jformdesigner.runtime.GridBagConstraintsEx</class> 
-            <void method="setProperty"> 
-             <string>gridx</string> 
-             <int>1</int> 
-            </void> 
-            <void method="setProperty"> 
-             <string>gridy</string> 
-             <int>0</int> 
-            </void> 
-           </object> 
-          </void> 
-         </object> 
-         <object class="com.jformdesigner.model.FormLayoutConstraints"> 
-          <class>java.lang.String</class> 
-          <void method="setProperty"> 
-           <string>value</string> 
-           <string>South</string> 
-          </void> 
-         </object> 
-        </void> 
-       </object> 
-       <object class="com.jformdesigner.model.FormLayoutConstraints"> 
-        <class>java.lang.String</class> 
-        <void method="setProperty"> 
-         <string>value</string> 
-         <string>Center</string> 
+         <string>okButton</string> 
         </void> 
        </object> 
       </void> 
@@ -220,7 +81,7 @@
        <string>size</string> 
        <object class="java.awt.Dimension"> 
         <int>400</int> 
-        <int>150</int> 
+        <int>115</int> 
        </object> 
       </void> 
      </object> 

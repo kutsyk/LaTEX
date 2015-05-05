@@ -1,6 +1,16 @@
 package com.kutsyk.windows;
 
+import com.kutsyk.security.AES;
+import net.sf.saxon.functions.Parse;
+
 import java.awt.*;
+import java.io.*;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.Locale;
 import javax.swing.*;
 import javax.swing.GroupLayout;
 import javax.swing.LayoutStyle;
@@ -10,99 +20,144 @@ import javax.swing.border.*;
  */
 
 
-
 /**
  * @author kutsyk
  */
 public class TrialWindow extends JFrame {
-	public TrialWindow() {
-		initComponents();
-	}
 
-	private void initComponents() {
-		// JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
-		dialogPane = new JPanel();
-		contentPanel = new JPanel();
-		label1 = new JLabel();
-		progressBar1 = new JProgressBar();
-		buttonBar = new JPanel();
-		okButton = new JButton();
+    private File securityDateFile;
+    private String dateFormat = "yyyy-MM-dd HH:mm:ss";
 
-		//======== this ========
-		setTitle("Trial LaTEX");
-		setFont(new Font("Times New Roman", Font.PLAIN, 14));
-		Container contentPane = getContentPane();
-		contentPane.setLayout(new BorderLayout());
+    public TrialWindow() {
+        trialVersionCheck();
+        initComponents();
+    }
 
-		//======== dialogPane ========
-		{
-			dialogPane.setBorder(new EmptyBorder(12, 12, 12, 12));
-			dialogPane.setLayout(new BorderLayout());
 
-			//======== contentPanel ========
-			{
+    private void trialVersionCheck() {
+        writeDateToFile();
+        checkSecurity();
+    }
 
-				//---- label1 ----
-				label1.setText("Left days:");
-				label1.setFont(new Font("Times New Roman", Font.PLAIN, 14));
+    private void writeDateToFile() {
+        try {
+            File appFolder = new File(System.getenv("APPDATA") + "/Charlesworth");
+            if (!appFolder.exists())
+                appFolder.mkdir();
+            securityDateFile = new File(System.getenv("APPDATA") + "/Charlesworth/.security");
+            if (!securityDateFile.exists())
+                securityDateFile.createNewFile();
+            addDateToFile(securityDateFile);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
-				//---- progressBar1 ----
-				progressBar1.setFont(new Font("Times New Roman", Font.PLAIN, 14));
-				progressBar1.setMaximum(30);
-				progressBar1.setStringPainted(true);
-				progressBar1.setValue(2);
+    private void addDateToFile(File securityDateFile) throws IOException{
+        PrintWriter writer = new PrintWriter(new BufferedWriter(new FileWriter(securityDateFile, true)));
+        writer.append("LaTEX"+encryptDate(new Date()));
+        writer.close();
+    }
 
-				GroupLayout contentPanelLayout = new GroupLayout(contentPanel);
-				contentPanel.setLayout(contentPanelLayout);
-				contentPanelLayout.setHorizontalGroup(
-					contentPanelLayout.createParallelGroup()
-						.addGroup(contentPanelLayout.createSequentialGroup()
-							.addContainerGap()
-							.addGroup(contentPanelLayout.createParallelGroup()
-								.addComponent(progressBar1, GroupLayout.DEFAULT_SIZE, 358, Short.MAX_VALUE)
-								.addGroup(contentPanelLayout.createSequentialGroup()
-									.addComponent(label1)
-									.addContainerGap(302, Short.MAX_VALUE))))
-				);
-				contentPanelLayout.setVerticalGroup(
-					contentPanelLayout.createParallelGroup()
-						.addGroup(contentPanelLayout.createSequentialGroup()
-							.addContainerGap()
-							.addComponent(label1)
-							.addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-							.addComponent(progressBar1, GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE))
-				);
-			}
-			dialogPane.add(contentPanel, BorderLayout.CENTER);
+    private String encryptDate(Date d){
+        Date today = Calendar.getInstance().getTime();
+        SimpleDateFormat sdf = new SimpleDateFormat(dateFormat);
+        String stringDate = sdf.format(today);
+        String k = "WjgJ8Td76u2Ah";
+        byte[] enc = AES.encrypt(stringDate.getBytes(), k.getBytes());
+        return new String(enc);
+    }
 
-			//======== buttonBar ========
-			{
-				buttonBar.setBorder(new EmptyBorder(12, 0, 0, 0));
-				buttonBar.setLayout(new GridBagLayout());
-				((GridBagLayout)buttonBar.getLayout()).columnWidths = new int[] {0, 80};
-				((GridBagLayout)buttonBar.getLayout()).columnWeights = new double[] {1.0, 0.0};
+    private boolean checkSecurity() {
+        try {
+            BufferedReader reader = new BufferedReader(new FileReader(securityDateFile));
+            String line;
+            StringBuilder content = new StringBuilder();
+            while ((line = reader.readLine()) != null)
+                content.append(line);
+            String datesLine = content.toString();
+            if (datesLine.isEmpty())
+                return true;
+            else
+                return checkDates(datesLine);
 
-				//---- okButton ----
-				okButton.setText("OK");
-				okButton.setFont(new Font("Times New Roman", Font.PLAIN, 14));
-				buttonBar.add(okButton, new GridBagConstraints(1, 0, 1, 1, 0.0, 0.0,
-					GridBagConstraints.CENTER, GridBagConstraints.BOTH,
-					new Insets(0, 0, 0, 0), 0, 0));
-			}
-			dialogPane.add(buttonBar, BorderLayout.SOUTH);
-		}
-		contentPane.add(dialogPane, BorderLayout.CENTER);
-		pack();
-		setLocationRelativeTo(getOwner());
-		// JFormDesigner - End of component initialization  //GEN-END:initComponents
-	}
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
 
-	// JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables
-	private JPanel dialogPane;
-	private JPanel contentPanel;
-	private JLabel label1;
-	private JProgressBar progressBar1;
-	private JPanel buttonBar;
-	private JButton okButton;
-	// JFormDesigner - End of variables declaration  //GEN-END:variables
+    private boolean checkDates(String datesLine) {
+        String[] stringDates = datesLine.split("LaTEX");
+        ArrayList<Date> dates = new ArrayList<>();
+        for (int i=1;i<stringDates.length;++i) {
+            String date = stringDates[i];
+            try {
+                dates.add(decryptDate(date.getBytes()));
+            } catch (Exception ex) {
+                ex.printStackTrace();
+            }
+        }
+        for (Date d : dates)
+            System.out.println(d.toString());
+        return false;
+    }
+
+    private Date decryptDate(byte[] enc) throws ParseException{
+        String k = "WjgJ8Td76u2Ah";
+        byte[] dec = AES.decrypt(enc, k.getBytes());
+        String decrypted = new String(dec);
+        System.out.println("D- "+decrypted);
+        return dateFromString(decrypted);
+    }
+
+    private Date dateFromString(String strDate) throws ParseException {
+        SimpleDateFormat sdf = new SimpleDateFormat(dateFormat);
+        return sdf.parse(strDate);
+    }
+
+    private void initComponents() {
+        // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
+        trialProgressBar = new JProgressBar();
+        okButton = new JButton();
+
+        //======== this ========
+        setTitle("Trial LaTEX");
+        setFont(new Font("Times New Roman", Font.PLAIN, 14));
+        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        Container contentPane = getContentPane();
+
+        //---- okButton ----
+        okButton.setText("Ok");
+        okButton.setFont(new Font("Times New Roman", Font.PLAIN, 14));
+
+        GroupLayout contentPaneLayout = new GroupLayout(contentPane);
+        contentPane.setLayout(contentPaneLayout);
+        contentPaneLayout.setHorizontalGroup(
+                contentPaneLayout.createParallelGroup()
+                        .addGroup(GroupLayout.Alignment.TRAILING, contentPaneLayout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.TRAILING)
+                                        .addComponent(okButton, GroupLayout.PREFERRED_SIZE, 106, GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(trialProgressBar, GroupLayout.DEFAULT_SIZE, 372, Short.MAX_VALUE))
+                                .addContainerGap())
+        );
+        contentPaneLayout.setVerticalGroup(
+                contentPaneLayout.createParallelGroup()
+                        .addGroup(contentPaneLayout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(trialProgressBar, GroupLayout.PREFERRED_SIZE, 30, GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(okButton, GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
+                                .addContainerGap())
+        );
+        pack();
+        setLocationRelativeTo(getOwner());
+        // JFormDesigner - End of component initialization  //GEN-END:initComponents
+    }
+
+    // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables
+    private JProgressBar trialProgressBar;
+    private JButton okButton;
+    // JFormDesigner - End of variables declaration  //GEN-END:variables
 }

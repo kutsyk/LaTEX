@@ -12,7 +12,6 @@ public class Main {
     private static File appDataFolder = new File(System.getenv("APPDATA"));
 
     public static void main(String[] args) {
-//        trialVersionCheck();
         EventQueue.invokeLater(new Runnable() {
             @Override
             public void run() {
@@ -22,7 +21,7 @@ public class Main {
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
-                new MainWindow().setVisible(true);
+                new TrialWindow().setVisible(true);
             }
         });
     }

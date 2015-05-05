@@ -81,32 +81,6 @@ public class MainWindow extends JFrame {
         initStyling();
         initXMlPane();
     }
-//
-//    private static void trialVersionCheck() {
-//        String textClar = "Algoritmul de criptare AES";
-//        String k = "1a25s8fe5dsg65ad";
-//        System.out.println("Text clar: "+textClar);
-//        byte[] enc = AES.encrypt(textClar.getBytes(), k.getBytes());
-//        System.out.println("Text criptat AES: "+new String(enc));
-//
-//        byte[] dec = AES.decrypt(enc, k.getBytes());
-//        System.out.println("Text decriptat AES: "+new String(dec));
-//        System.out.println("------------------");
-//        System.out.println(System.getenv("APPDATA"));
-//        checkSecurity();
-////        SwingProgressBarExample trialProgress = new SwingProgressBarExample();
-////        trialProgress.setVisible(true);
-////
-////        JFrame frame = new JFrame("Trial");
-////        frame.setDefaultCloseOperation(trialProgress);
-////        frame.setContentPane(trialProgress);
-////        frame.pack();
-////        frame.setVisible(true);
-//    }
-//
-//    private static void checkSecurity(){
-//
-//    }
 
     private void initStyling() {
         spliPaneWithDoc.setDividerLocation(0.5);
