@@ -62,6 +62,14 @@
         <void property="name"> 
          <string>okButton</string> 
         </void> 
+        <void method="addEvent"> 
+         <object class="com.jformdesigner.model.FormEvent"> 
+          <string>java.awt.event.ActionListener</string> 
+          <string>actionPerformed</string> 
+          <string>okButtonActionPerformed</string> 
+          <boolean>true</boolean> 
+         </object> 
+        </void> 
        </object> 
       </void> 
       <void property="name"> 
