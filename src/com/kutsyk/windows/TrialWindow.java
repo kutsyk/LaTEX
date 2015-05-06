@@ -5,6 +5,7 @@ import net.sf.saxon.functions.Parse;
 
 import java.awt.*;
 import java.io.*;
+import java.nio.charset.Charset;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -26,13 +27,16 @@ import javax.swing.border.*;
 public class TrialWindow extends JFrame {
 
     private File securityDateFile;
-    private String dateFormat = "yyyy-MM-dd HH:mm:ss";
+    private String dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ";
+    private String key = "1a25s8fe5dsg65ad";
+//    private String key = "WjgJ8Td76u2Ah42A";
+    private byte[] byte_key;
 
     public TrialWindow() {
+        byte_key = key.getBytes();
         trialVersionCheck();
         initComponents();
     }
-
 
     private void trialVersionCheck() {
         writeDateToFile();
@@ -55,17 +59,14 @@ public class TrialWindow extends JFrame {
 
     private void addDateToFile(File securityDateFile) throws IOException{
         PrintWriter writer = new PrintWriter(new BufferedWriter(new FileWriter(securityDateFile, true)));
-        writer.append("LaTEX"+encryptDate(new Date()));
+        writer.append("LaTEX"+encryptDate());
         writer.close();
     }
 
-    private String encryptDate(Date d){
+    private String encryptDate(){
         Date today = Calendar.getInstance().getTime();
         SimpleDateFormat sdf = new SimpleDateFormat(dateFormat);
-        String stringDate = sdf.format(today);
-        String k = "WjgJ8Td76u2Ah";
-        byte[] enc = AES.encrypt(stringDate.getBytes(), k.getBytes());
-        return new String(enc);
+        return sdf.format(today);
     }
 
     private boolean checkSecurity() {
@@ -75,6 +76,7 @@ public class TrialWindow extends JFrame {
             StringBuilder content = new StringBuilder();
             while ((line = reader.readLine()) != null)
                 content.append(line);
+            reader.close();
             String datesLine = content.toString();
             if (datesLine.isEmpty())
                 return true;
@@ -93,7 +95,7 @@ public class TrialWindow extends JFrame {
         for (int i=1;i<stringDates.length;++i) {
             String date = stringDates[i];
             try {
-                dates.add(decryptDate(date.getBytes()));
+                dates.add(dateFromString(date));
             } catch (Exception ex) {
                 ex.printStackTrace();
             }
@@ -103,12 +105,8 @@ public class TrialWindow extends JFrame {
         return false;
     }
 
-    private Date decryptDate(byte[] enc) throws ParseException{
-        String k = "WjgJ8Td76u2Ah";
-        byte[] dec = AES.decrypt(enc, k.getBytes());
-        String decrypted = new String(dec);
-        System.out.println("D- "+decrypted);
-        return dateFromString(decrypted);
+    private Date decryptDate(String date) throws ParseException{
+        return dateFromString(date);
     }
 
     private Date dateFromString(String strDate) throws ParseException {
