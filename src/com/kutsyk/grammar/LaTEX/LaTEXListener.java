@@ -89,16 +89,6 @@ public interface LaTEXListener extends ParseTreeListener {
 	 */
 	void exitAuthor(LaTEXParser.AuthorContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link LaTEXParser#textsuperscriptBlock}.
-	 * @param ctx the parse tree
-	 */
-	void enterTextsuperscriptBlock(LaTEXParser.TextsuperscriptBlockContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link LaTEXParser#textsuperscriptBlock}.
-	 * @param ctx the parse tree
-	 */
-	void exitTextsuperscriptBlock(LaTEXParser.TextsuperscriptBlockContext ctx);
-	/**
 	 * Enter a parse tree produced by {@link LaTEXParser#authorName}.
 	 * @param ctx the parse tree
 	 */
@@ -109,6 +99,16 @@ public interface LaTEXListener extends ParseTreeListener {
 	 */
 	void exitAuthorName(LaTEXParser.AuthorNameContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link LaTEXParser#chineseName}.
+	 * @param ctx the parse tree
+	 */
+	void enterChineseName(LaTEXParser.ChineseNameContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link LaTEXParser#chineseName}.
+	 * @param ctx the parse tree
+	 */
+	void exitChineseName(LaTEXParser.ChineseNameContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link LaTEXParser#address}.
 	 * @param ctx the parse tree
 	 */
@@ -118,6 +118,66 @@ public interface LaTEXListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitAddress(LaTEXParser.AddressContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link LaTEXParser#date}.
+	 * @param ctx the parse tree
+	 */
+	void enterDate(LaTEXParser.DateContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link LaTEXParser#date}.
+	 * @param ctx the parse tree
+	 */
+	void exitDate(LaTEXParser.DateContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link LaTEXParser#dateBlock}.
+	 * @param ctx the parse tree
+	 */
+	void enterDateBlock(LaTEXParser.DateBlockContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link LaTEXParser#dateBlock}.
+	 * @param ctx the parse tree
+	 */
+	void exitDateBlock(LaTEXParser.DateBlockContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link LaTEXParser#keywords}.
+	 * @param ctx the parse tree
+	 */
+	void enterKeywords(LaTEXParser.KeywordsContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link LaTEXParser#keywords}.
+	 * @param ctx the parse tree
+	 */
+	void exitKeywords(LaTEXParser.KeywordsContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link LaTEXParser#keyword}.
+	 * @param ctx the parse tree
+	 */
+	void enterKeyword(LaTEXParser.KeywordContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link LaTEXParser#keyword}.
+	 * @param ctx the parse tree
+	 */
+	void exitKeyword(LaTEXParser.KeywordContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link LaTEXParser#pacsdoi}.
+	 * @param ctx the parse tree
+	 */
+	void enterPacsdoi(LaTEXParser.PacsdoiContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link LaTEXParser#pacsdoi}.
+	 * @param ctx the parse tree
+	 */
+	void exitPacsdoi(LaTEXParser.PacsdoiContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link LaTEXParser#doi}.
+	 * @param ctx the parse tree
+	 */
+	void enterDoi(LaTEXParser.DoiContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link LaTEXParser#doi}.
+	 * @param ctx the parse tree
+	 */
+	void exitDoi(LaTEXParser.DoiContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link LaTEXParser#bodyPart}.
 	 * @param ctx the parse tree
@@ -1008,6 +1068,16 @@ public interface LaTEXListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitIfThenText(LaTEXParser.IfThenTextContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link LaTEXParser#words_to_skip_block}.
+	 * @param ctx the parse tree
+	 */
+	void enterWords_to_skip_block(LaTEXParser.Words_to_skip_blockContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link LaTEXParser#words_to_skip_block}.
+	 * @param ctx the parse tree
+	 */
+	void exitWords_to_skip_block(LaTEXParser.Words_to_skip_blockContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link LaTEXParser#isoEnt}.
 	 * @param ctx the parse tree

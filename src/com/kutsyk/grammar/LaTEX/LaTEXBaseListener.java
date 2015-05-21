@@ -113,18 +113,6 @@ public class LaTEXBaseListener implements LaTEXListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterTextsuperscriptBlock(LaTEXParser.TextsuperscriptBlockContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitTextsuperscriptBlock(LaTEXParser.TextsuperscriptBlockContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
 	@Override public void enterAuthorName(LaTEXParser.AuthorNameContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -137,6 +125,18 @@ public class LaTEXBaseListener implements LaTEXListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterChineseName(LaTEXParser.ChineseNameContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitChineseName(LaTEXParser.ChineseNameContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterAddress(LaTEXParser.AddressContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -144,6 +144,78 @@ public class LaTEXBaseListener implements LaTEXListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitAddress(LaTEXParser.AddressContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterDate(LaTEXParser.DateContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitDate(LaTEXParser.DateContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterDateBlock(LaTEXParser.DateBlockContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitDateBlock(LaTEXParser.DateBlockContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterKeywords(LaTEXParser.KeywordsContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitKeywords(LaTEXParser.KeywordsContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterKeyword(LaTEXParser.KeywordContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitKeyword(LaTEXParser.KeywordContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterPacsdoi(LaTEXParser.PacsdoiContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitPacsdoi(LaTEXParser.PacsdoiContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterDoi(LaTEXParser.DoiContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitDoi(LaTEXParser.DoiContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -1212,6 +1284,18 @@ public class LaTEXBaseListener implements LaTEXListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitIfThenText(LaTEXParser.IfThenTextContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterWords_to_skip_block(LaTEXParser.Words_to_skip_blockContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitWords_to_skip_block(LaTEXParser.Words_to_skip_blockContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *

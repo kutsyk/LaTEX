@@ -130,7 +130,6 @@ public class MainWindow extends JFrame {
         deleteFile("bodyAndBottom.xml");
         deleteFile("back.xml");
         deleteFile("back.tex");
-        deleteFile("newCommands.tex");
 
         clearDirectory("bibliography");
         clearDirectory("figures");
@@ -224,8 +223,7 @@ public class MainWindow extends JFrame {
      * Creates the files.
      */
     private void createFiles() {
-        String[] files = {"result.xml", "bodyAndBottom.xml", "mainFile.tex", "back.tex",
-                "newCommands.tex"};
+        String[] files = {"result.xml", "bodyAndBottom.xml", "mainFile.tex", "back.tex"};
         for (String file : files) {
             dir = new File(mainPath + "/LaTEXtoXML/" + file);
             try {

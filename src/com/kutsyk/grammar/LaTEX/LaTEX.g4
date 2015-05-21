@@ -27,7 +27,17 @@ frontBody:
     mainTitle
     ('\r' | '\n')*
     authorList
-    address+
+    ('\r' | '\n')*
+    address (('\r' | '\n')* address)*
+    ('\r' | '\n')*
+    date
+    ('\r' | '\n')*
+    abstractBlock
+    ('\r' | '\n')*
+    keywords
+    ('\r' | '\n')*
+    pacsdoi
+    ('\r' | '\n')*
 ;
 
 mainTitle:
@@ -36,23 +46,49 @@ mainTitle:
 
 authorList:
 '\\author{'
-    author (',' author)*
+    author (',' ('\\' simpleText? '\\')? author)*
     ('\r' | '\n')*
  '}'
 ;
 
 author:
-  authorName  author
+  authorName  ('\r' | '\n')* ('$^' (~('$'))+ '$') href?
 ;
 
 authorName:
-    text
+    textRules (('\r' | '\n')* textRules)* chineseName
+;
+
+chineseName:
+    '(' (~(')'))+ ')'
 ;
 
 address:
-    ('\r' | '\n')*
-    '\\bf' '{' numbers '}' text
-    '\\\\' ('\r' | '\n')*
+   '\\address' block block
+;
+
+date:
+    '\\date' dateBlock+
+;
+
+dateBlock:
+    ('{' (~('}'))+ '}')
+;
+
+keywords:
+    '\\keywords' '{' keyword (',' keyword)*'}'
+;
+
+keyword:
+    text
+;
+
+pacsdoi:
+    '\\pacsdoi' '{' doi (',' doi)*'}'
+;
+
+doi:
+    memberList*
 ;
 
 bodyPart:
@@ -111,6 +147,7 @@ member
 
 	//---to skip
 	| ifThenElse
+	| words_to_skip_block
 ;
 
 landScapeBlock:
@@ -174,7 +211,7 @@ text:
 ;
 
 textBody:
-	boxBlock | texttypeDeclarator | simpleText | textSymbols | dollarBlock | block | comma | url  | ( '\n' | '\r')
+	boxBlock | texttypeDeclarator | simpleText | textSymbols | dollarBlock | block | comma | href | url | newLine
 ;
 
 textSC:
@@ -192,10 +229,9 @@ boxBlock:
 abstractBlock:
 	('\\begin{abstract}'
 			memberList*
-	'\\end{abstract}'
-	)
+	'\\end{abstract}')
 	|
-	( '\\Abstract' block )
+	( ('\\Abstract'| '\\abstract') block )
 ;
 
 title:
@@ -342,7 +378,8 @@ boldTypeDeclaration:
 ;
 
 smallcapsDeclaration:
-	'{\\sc' text* '}'
+	('{\\sc' text* '}')
+	| ('$^' (~('$'))+ '$')
 ;
 
 italictypeDeclaration
@@ -486,7 +523,6 @@ dollarBlock:
 	('$' (~('$'))+ '$')
 ;
 
-
 inlineEquation:
 	('$$' (~('$$'))+ '$$')
 	| dollarBlock
@@ -541,7 +577,13 @@ reference:
 ;
 
 href:
-    '\\href' hrefUrl hrefName
+    ('\\href'
+    | '\\hypertarget'
+    | '\\hyperlink'
+     )
+     hrefUrl
+     ('\r' | '\n')*
+     hrefName
 ;
 
 hrefUrl:
@@ -549,7 +591,7 @@ hrefUrl:
 ;
 
 hrefName:
-    '{' (~'}')+ '}'
+    block
 ;
 
 simpleText:
@@ -708,8 +750,17 @@ Skip
 	| '\\midrule'
 	| '\\bottomrule'
 	| '\\newpage'
-	| '\\vspace' )
+	| '\\vspace'
+	| '\\hspace'
+	| '\\baselineskip'
+	| '\\hfill'
+	)
 	~[\r\n]* ('\r' | '\n') -> skip
+;
+
+words_to_skip_block:
+    '\\footnotetext'
+    block
 ;
 
 Affil

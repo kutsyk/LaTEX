@@ -227,9 +227,8 @@ public class Translator {
         String res = line;
         for (String key : commands.keySet()) {
             String replaceString = commands.get(key);
-            if (line.contains(key) || line.contains(key)
-                    || line.endsWith(key))
-                line = res = line.replace(key+"\\", replaceString);
+            if (line.contains(key))
+                line = res = line.replace(key, " "+replaceString);
         }
         return res;
     }
