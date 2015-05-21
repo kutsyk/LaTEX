@@ -16,10 +16,10 @@ documentBody:
 ;
 
 frontPart:
-    '\\begin{flushleft}'
+    '\\begin{CJK*}{GBK}{song}'
     frontBody
     memberList*
-    '\\end{flushleft}'
+    '\\end{CJK*}'
 ;
 
 frontBody:
@@ -31,30 +31,18 @@ frontBody:
 ;
 
 mainTitle:
-    '{'
-    '\\Large' ('\r' | '\n')*
-    '\\textbf' ('\r' | '\n')*
-    '\\newline'?
-    '{' text '}' ('\r' | '\n')*
-    '}'
-    ('\r' | '\n')*
-    '\\newline'?
+    '\\title{' text '}' ('\r' | '\n')*
 ;
 
 authorList:
-'\\\\'
+'\\author{'
     author (',' author)*
-    (',')?
     ('\r' | '\n')*
- '\\\\'
+ '}'
 ;
 
 author:
-  authorName  textsuperscriptBlock
-;
-
-textsuperscriptBlock:
-('\\textsuperscript' | '$^') ('{' (~('}'))+ '}') ('$')?
+  authorName  author
 ;
 
 authorName:
