@@ -48,6 +48,8 @@ public class Translator {
         getBibReferences(texFile);
         if (changeMainFile(texFile))
             ToXML.writer.close();
+
+        writer.close();
     }
     /**
      * Gets the bib references.
@@ -174,9 +176,8 @@ public class Translator {
                 continue;
             }
             if(!skip)
-                os.println(replaceCommandIfFound(line));
+                os.print(replaceCommandIfFound(line));
         }
-        os.println("\\end{document}");
         fin.close();
         os.close();
     }
@@ -203,7 +204,7 @@ public class Translator {
             if(line.contains("\\end{document}"))
                 break;
             if(!skip)
-                os.println(replaceCommandIfFound(line));
+                os.print(replaceCommandIfFound(line));
             if(line.contains("\\end{thebibliography}")
                     || line.contains("\\end{document}"))
                 break;

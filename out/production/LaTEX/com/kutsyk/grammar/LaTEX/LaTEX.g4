@@ -48,12 +48,13 @@ authorList:
     ('\r' | '\n')*
  '\\\\'
 ;
+
 author:
-  authorName  ('\\textsuperscript' | '$^') textsuperscriptBlock ('$')?
+  authorName  textsuperscriptBlock
 ;
 
 textsuperscriptBlock:
-'{' (numbers | '*' | isoEnt | ',')+ '}'
+('\\textsuperscript' | '$^') ('{' (~('}'))+ '}') ('$')?
 ;
 
 authorName:
@@ -117,6 +118,8 @@ member
 
 	| renewcommandDeclaration
 	| url
+
+	| latexTag
 
 	//---to skip
 	| ifThenElse
@@ -213,7 +216,7 @@ title:
 
 newcommandDeclaration
 :
-	'\\newcommand' '{' identificator '}' options* commandBody
+	'\\newcommand' '{' latexTag '}' options* commandBody
 ;
 
 commandBody
@@ -223,10 +226,10 @@ commandBody
 
 renewcommandDeclaration
 :
-	'\\renewcommand' '{' identificator '}' options* commandBody
+	'\\renewcommand' '{' latexTag '}' options* commandBody
 ;
 
-identificator:
+latexTag:
 	'\\' simpleText
 ;
 
@@ -277,7 +280,6 @@ captionBlock:
 	'\\caption' options? newLine* block
 ;
 
-
 table:
     '\\begin{table}' options?
     ( '\n' | '\r')*
@@ -304,8 +306,8 @@ tabular:
     '\\begin{tabular}' tableSkipBlock
     ( '\n' | '\r')*
     '\\hline'
+    (tableRow (( '\n' | '\r')* tableRow)*)
     ( '\n' | '\r')*
-    (tableRow '\\\\ \\hline' ( '\n' | '\r')?)+
     '\\end{tabular}'
 ;
 
@@ -324,11 +326,12 @@ multicolumn:
 ;
 
 tableRow:
-    tableCell ('&' tableCell)*
+    tableCell ('&' tableCell)* '\\\\ \\hline'
 ;
 
 tableCell:
-    '$'? memberList '$'?
+    memberList
+    | ('$' memberList '$')
 ;
 
 texttypeDeclarator
@@ -641,7 +644,6 @@ INC             : '++';
 DEC             : '--';
 ADD             : '+';
 MUL             : '*';
-BITAND          : '&';
 BITOR           : '|';
 CARET           : '^';
 

@@ -3,7 +3,6 @@ package com.kutsyk.windows;
 import com.kurpiak.styling.StyledDocument;
 import com.kutsyk.TextEditor.TextLineNumber;
 import com.kutsyk.convertors.Translator;
-import com.kutsyk.security.AES;
 import org.bounce.text.LineNumberMargin;
 import org.bounce.text.ScrollableEditorPanel;
 import org.bounce.text.xml.XMLEditorKit;
@@ -174,7 +173,6 @@ public class MainWindow extends JFrame {
         BufferedReader reader = null;
         try {
             isoTrie = new HashMap<String, String>();
-            System.out.println("Here: " + mainPath);
             reader = new BufferedReader(new InputStreamReader(new FileInputStream(new File(mainPath + "/LaTEXbin/ISOENT.csv"))));
             String line;
             while ((line = reader.readLine()) != null) {
@@ -218,8 +216,7 @@ public class MainWindow extends JFrame {
             ;
         for (int i = 0; i < folders.length; ++i) {
             dir = new File(mainPath + "/LaTEXtoXML/" + folders[i]);
-            if (dir.mkdir())
-                ;
+            if (dir.mkdir());
         }
     }
 
@@ -334,8 +331,6 @@ public class MainWindow extends JFrame {
             final Boolean keepDeclaration = Boolean.valueOf(xml.startsWith("<?xml"));
 
             //May need this: System.setProperty(DOMImplementationRegistry.PROPERTY,"com.sun.org.apache.xerces.internal.dom.DOMImplementationSourceImpl");
-
-
             final DOMImplementationRegistry registry = DOMImplementationRegistry.newInstance();
             final DOMImplementationLS impl = (DOMImplementationLS) registry.getDOMImplementation("LS");
             final LSSerializer writer = impl.createLSSerializer();

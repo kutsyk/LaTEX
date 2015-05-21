@@ -16,7 +16,6 @@ import uk.ac.ed.ph.snuggletex.*;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.HashMap;
 
 // TODO: Auto-generated Javadoc
 
@@ -74,52 +73,6 @@ public class ToXML extends LaTEXBaseListener {
      * The was figure first dot.
      */
     private boolean wasFigureFirstDot;
-
-    /**
-     * The figure references.
-     */
-    private static HashMap<String, Integer> figureReferences;
-
-    /**
-     * The should be inserted figures.
-     */
-    private static HashMap<String, Integer> shouldBeInsertedFigures;
-
-    /**
-     * The declared figures.
-     */
-    private static ArrayList<String> declaredFigures;
-
-    /**
-     * The table counter.
-     */
-    private int tableCounter;
-
-    /**
-     * The table references.
-     */
-    private static HashMap<String, Integer> tableReferences;
-
-    /**
-     * The should be inserted tables.
-     */
-    private static HashMap<String, Integer> shouldBeInsertedTables;
-
-    /**
-     * The declared tables.
-     */
-    private static ArrayList<String> declaredTables;
-
-    /**
-     * The id.
-     */
-    private static int ID;
-
-    /**
-     * The new commands.
-     */
-    private HashMap<String, String> newCommands;
-
     /**
      * The new command name.
      */
@@ -361,7 +314,6 @@ public class ToXML extends LaTEXBaseListener {
     public void enterTextSymbols(LaTEXParser.TextSymbolsContext ctx) {
         if (shouldTextBeMissed)
             return;
-
         wasPreviousLineWord = false;
     }
 
@@ -862,7 +814,7 @@ public class ToXML extends LaTEXBaseListener {
 //            JLabel jl = new JLabel();
 //            jl.setForeground(new Color(0, 0, 0));
 //            icon.paintIcon(jl, g2, 0, 0);
-//            String path = MainWindow.getFileName() + "-formula-" + imageId + ".png";
+//            String path = MainWindow.getFullPath() + "-formula-" + imageId + ".png";
 //            File file = new File(path);
 //            try {
 //                ImageIO.write(image, "png", file.getAbsoluteFile());
@@ -983,6 +935,8 @@ public class ToXML extends LaTEXBaseListener {
 	 */
 
     public void enterFigureBlock(LaTEXParser.FigureBlockContext ctx) {
+        sectionCloser();
+
         figureStarts();
         writer.print("<fig id=\"fig" + figureCounter + "\" num=\""
                 + figureCounter + "\"><caption>");
@@ -1006,27 +960,6 @@ public class ToXML extends LaTEXBaseListener {
         figureDeclared = false;
         wasFigureFirstDot = false;
         figureTitleDeclared = false;
-    }
-  	/* (non-Javadoc)
-	 * @see LaTEXBaseListener#enterNewcommandDeclaration(LaTEXParser.NewcommandDeclarationContext)
-	 */
-
-    public void enterNewcommandDeclaration(
-            LaTEXParser.NewcommandDeclarationContext ctx) {
-        if (ctx.identificator() == null)
-            return;
-        newCommandName = ctx.identificator().getText();
-    }
-
-	/* (non-Javadoc)
-	 * @see LaTEXBaseListener#enterCommandBody(LaTEXParser.CommandBodyContext)
-	 */
-
-    public void enterCommandBody(LaTEXParser.CommandBodyContext ctx) {
-        if (newCommandName != null) {
-            newCommands.put(newCommandName, ctx.getText());
-            newCommandName = "";
-        }
     }
 
 	/* (non-Javadoc)
@@ -1057,6 +990,8 @@ public class ToXML extends LaTEXBaseListener {
     }
 
     public void enterTable(LaTEXParser.TableContext ctx) {
+        sectionCloser();
+
         tableDeclared = true;
         writer.print("<tbl>");
     }
@@ -1085,28 +1020,18 @@ public class ToXML extends LaTEXBaseListener {
             writer.print(MainWindow.getIsoTrie().get(ctx.getText().toString()));
     }
 
-    /* (non-Javadoc)
-	 * @see LaTEXBaseListener#enterTableRow(LaTEXParser.TableRowContext)
-	 */
-
     public void enterTableRow(LaTEXParser.TableRowContext ctx) {
         writer.print("<tr>");
     }
-
-	/* (non-Javadoc)
-	 * @see LaTEXBaseListener#exitTableRow(LaTEXParser.TableRowContext)
-	 */
 
     public void exitTableRow(LaTEXParser.TableRowContext ctx) {
         writer.print("</tr>");
     }
 
-    @Override
     public void enterTableCell(LaTEXParser.TableCellContext ctx) {
         writer.print("<td>");
     }
 
-    @Override
     public void exitTableCell(LaTEXParser.TableCellContext ctx) {
         writer.print("</td>");
     }
