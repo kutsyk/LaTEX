@@ -551,7 +551,7 @@ public class MainWindow extends JFrame {
         FileNameExtensionFilter filter = new FileNameExtensionFilter("TEX file", "tex", "tex");
         @SuppressWarnings("serial")
 //		JFileChooser chooser = new JFileChooser(new File("D:\\Charlesworth\\plos_template")) {
-                JFileChooser chooser = new JFileChooser(new File("D:\\Charlesworth\\Testing documents\\latex\\latex")) {
+                JFileChooser chooser = new JFileChooser(new File("F:\\Charlesworth\\CPB-2015-4tex")) {
             public void approveSelection() {
                 super.approveSelection();
             }

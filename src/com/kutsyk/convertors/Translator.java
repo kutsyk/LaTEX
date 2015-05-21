@@ -175,6 +175,10 @@ public class Translator {
                 skip = false;
                 continue;
             }
+            if(line.contains("\\end{document}")) {
+                os.print(line);
+                break;
+            }
             if(!skip)
                 os.print(replaceCommandIfFound(line));
         }
