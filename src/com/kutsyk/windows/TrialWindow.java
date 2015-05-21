@@ -37,7 +37,7 @@ public class TrialWindow extends JFrame {
 
     public TrialWindow() {
         initComponents();
-        trialLength = 10;
+        trialLength = 2;
         trialVersionCheck();
     }
 
