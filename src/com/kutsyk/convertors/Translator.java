@@ -144,9 +144,9 @@ public class Translator {
         String line;
         while((line = reader.readLine()) != null){
             if(line.contains("\\newcommand")){
-                String lCopy = line;
+                String lCopy = line.substring(line.indexOf("}")+1);
                 String command = line.substring(line.indexOf("{")+1, line.indexOf("}"));
-                String macros = line.substring(line.indexOf("}")+2, line.lastIndexOf("}"));
+                String macros = lCopy.substring(lCopy.indexOf("{")+1, lCopy.lastIndexOf("}"));
                 commands.put(command, macros);
             }
             if(line.contains("\\begin{document}"))

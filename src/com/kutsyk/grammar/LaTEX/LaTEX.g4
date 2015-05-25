@@ -52,7 +52,7 @@ authorList:
 ;
 
 author:
-  authorName  ('\r' | '\n')* ('$^' (~('$'))+ '$') href?
+  authorName  ('\r' | '\n')* smallcapsDeclaration href?
 ;
 
 authorName:
@@ -95,13 +95,11 @@ bodyPart:
     memberList*
 ;
 
-memberList
-:
+memberList:
 	member member*
 ;
 
-member
-:
+member:
     title
 	| table
 	| abstractBlock
@@ -131,7 +129,6 @@ member
 	| ifBlock
 	| returnBlock
 
-
 	| multicolsBlock
 
 	| descriptionList
@@ -144,6 +141,7 @@ member
 	| url
 
 	| latexTag
+    | text
 
 	//---to skip
 	| ifThenElse
@@ -198,6 +196,7 @@ textSymbols:
 	| '/'
 	| '*'
 	| '@'
+	| '#'
 ;
 
 paragraph:
@@ -269,7 +268,7 @@ block
 ;
 
 multicolsBlock:
-	'\\begin{multicols}' '{'INT'}' memberList*  '\\end{multicols}'
+	'\\begin{multicols}' '{' simpleText '}' memberList*  '\\end{multicols}'
 ;
 
 list:
@@ -329,9 +328,10 @@ tableCaption:
 tabular:
     '\\begin{tabular}' tableSkipBlock
     ( '\n' | '\r')*
-    '\\hline'
+    '\\hline'*
     (tableRow (( '\n' | '\r')* tableRow)*)
     ( '\n' | '\r')*
+    '\\hline'*
     '\\end{tabular}'
 ;
 
@@ -350,7 +350,7 @@ multicolumn:
 ;
 
 tableRow:
-    tableCell ('&' tableCell)* '\\\\ \\hline'
+    tableCell ('&' tableCell)* '\\\\'? ( '\n' | '\r')* '\\hline'
 ;
 
 tableCell:
@@ -358,8 +358,7 @@ tableCell:
     | ('$' memberList '$')
 ;
 
-texttypeDeclarator
-:
+texttypeDeclarator:
 	 italictypeDeclaration
 	| smallcapsDeclaration
 	| boldTypeDeclaration
@@ -382,8 +381,7 @@ smallcapsDeclaration:
 	| ('$^' (~('$'))+ '$')
 ;
 
-italictypeDeclaration
-:
+italictypeDeclaration:
 	italicBlock
 	| italicOutBlock
 ;
@@ -398,38 +396,31 @@ italicOutBlock:
 	| ('\\emph' block)
 ;
 
-textformatingBlockFlushLeft
-:
+textformatingBlockFlushLeft:
 	'\\begin{flushleft}' memberList '\\end{flushleft}'
 ;
 
-textformatingBlockCenter
-:
+textformatingBlockCenter:
 	'\\begin{center}' memberList* '\\end{center}'
 ;
 
-sectionDeclaration
-:
+sectionDeclaration:
 	(('\\section*' | '\\section') '{' label? text '}')
 ;
 
-subsectionDeclaration
-:
+subsectionDeclaration:
 	(('\\subsection*' | '\\subsection') '{' label? text '}')
 ;
 
-subsubsectionDeclaration
-:
+subsubsectionDeclaration:
 	(('\\subsubsection*' | '\\subsubsection') '{' label? text '}')
 ;
 
-citeReferences
-:
-	'~'? ('\\cite'| '\\citep' | '\\citet' | '\\citemain') options* '{' citeReferencesList '}'
+citeReferences:
+	('~'? ('\\cite'| '\\citep' | '\\citet' | '\\citemain') options* '{' citeReferencesList '}')
 ;
 
-citeReferencesList
-:
+citeReferencesList:
 	citeReference
 	(
 		',' ( '\n' | '\r')* citeReference ( '\n' | '\r')*
@@ -437,7 +428,7 @@ citeReferencesList
 ;
 
 citeReference:
-	(simpleText | lparen | rparen)*
+	(simpleText | lparen | rparen | '#')*
 ;
 
 measures:
@@ -577,6 +568,7 @@ reference:
 ;
 
 href:
+'~'?
     ('\\href'
     | '\\hypertarget'
     | '\\hyperlink'
@@ -692,6 +684,17 @@ WS:
     ('\t' | ' ' | '\r' | '\u000C')+ -> skip
 ;
 
+ifThenElse:
+	'\\ifthenelse' 	block block block
+;
+
+ifThenText:
+	(simpleText
+	| '\\'
+	| '{'
+	| '}'
+	)*
+;
 
 WORDS_TO_SKIP:
 	 ( '\\indent'
@@ -709,18 +712,6 @@ WORDS_TO_SKIP:
 	 | '\\lorem\\'
 	 | '\\ipsum\\'
 	 ) -> skip
-;
-
-ifThenElse:
-	'\\ifthenelse' 	block block block
-;
-
-ifThenText:
-	(simpleText
-	| '\\'
-	| '{'
-	| '}'
-	)*
 ;
 
 Skip
@@ -754,6 +745,7 @@ Skip
 	| '\\hspace'
 	| '\\baselineskip'
 	| '\\hfill'
+	| '\\tabcolsep'
 	)
 	~[\r\n]* ('\r' | '\n') -> skip
 ;
@@ -817,6 +809,7 @@ isoEnt:
 '\\ding{171}' |
 '\\maltese' |
 '\\dag' |
+'\\dagger' |
 '\\ddag' |
 '\\checkmark' |
 '\\ding{55}' |
