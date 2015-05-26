@@ -1,0 +1,187 @@
+<article>
+    <front>
+        <article-meta>
+            <title-group>
+                <article-title>Article TitleSubmission to PLOS Journals</article-title>
+            </title-group>
+            <contrib-group>
+                <contrib contrib-type="author"> Name1 Surname</contrib>
+                <contrib contrib-type="author"> Name2 Surname</contrib>
+                <contrib contrib-type="author"> Name3 Surname</contrib>
+                <contrib contrib-type="author"> Name4 Surname</contrib>
+                <contrib contrib-type="author"> Name5 Surname</contrib>
+                <contrib contrib-type="author"> Name6 Surname</contrib>
+                <contrib contrib-type="author"> Name7 Surname</contrib>
+                <contrib contrib-type="author"> with the Lorem Ipsum Consortium</contrib>
+            </contrib-group>
+            <aff/> bigskip<emph
+                type="bold"> 1 </emph>Affiliation DeptProgramCenter, Institution Name, City, State, Country<emph
+                type="bold">2 </emph>Affiliation DeptProgramCenter, Institution Name, City, State, Country<emph type="bold">3 </emph>Affiliation DeptProgramCenter, Institution Name, City, State, Countrybigskip Yinyang These authors contributed equally to this work. These authors also contributed equally to this work. textcurrency a Insert current address of first author with an address updateDeceasedtextpilcrow Membership list can be found in the Acknowledgments section. CorrespondingAuthorinstitute. edu<abstract>
+                <title>Abstract</title>
+                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget porta erat. Morbi consectetur est vel gravida pretium. Suspendisse ut dui eu ante cursus gravida non sed sem. Nullam sapien tellus, commodo id velit id, eleifend volutpat quam. Phasellus mauris velit, dapibus finibus elementum vel, pulvinar non tellus. Nunc pellentesque pretium diam, quis maximus dolor faucibus id. Nunc convallis sodales ante, ut ullamcorper est egestas vitae. Nam sit amet enim ultrices, ultrices elit pulvinar, volutpat risus. </p>
+            </abstract>
+        </article-meta>
+    </front>
+    <body>
+        <section>
+            <title>Author Summary</title>
+            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget porta erat. Morbi consectetur est vel gravida pretium. Suspendisse ut dui eu ante cursus gravida non sed sem. Nullam sapien tellus, commodo id velit id, eleifend volutpat quam. Phasellus mauris velit, dapibus finibus elementum vel, pulvinar non tellus. Nunc pellentesque pretium diam, quis maximus dolor faucibus id. Nunc convallis sodales ante, ut ullamcorper est egestas vitae. Nam sit amet enim ultrices, ultrices elit pulvinar, volutpat risus. inenumbers</p>
+        </section>
+        <section>
+            <title>Introduction</title>
+            <p> Lorem ipsum dolor sit <citref
+                    rids="ref1">1</citref>amet, consectetur adipiscing elit. Curabitur eget porta erat. Morbi consectetur est vel gravida pretium. Suspendisse ut dui eu ante cursus gravida non sed sem. Nullam Eq. <xref>eqschemeP</xref> sapien tellus, commodo id velit id, eleifend volutpat quam. Phasellus mauris velit, dapibus finibus elementum vel, pulvinar non tellus. Nunc pellentesque pretium diam, quis maximus dolor faucibus id.  <citref
+                    rids="ref2">2</citref>Nunc convallis sodales ante, ut ullamcorper est egestas vitae. Nam sit amet enim ultrices, ultrices elit pulvinar, volutpat risus. <equ
+                    id="equ1" type="inline">
+                    <tex>\begin{equation}\label{eq:schemeP}D_{coll}=\frac{D_f+\frac{[S]^2}{K_DS_T}D_S}{1+\frac{[S]^2}{K_DS_T}},D_{sm}=\frac{D_f+\frac{[S]}{K_D}D_S}{1+\frac{[S]}{K_D}},\end{equation}</tex>
+                </equ>
+            </p>
+        </section>
+        <section>
+            <title>Materials and Methods</title>
+            <section id="section4" level="2">
+                <title> Etiam eget sapien nibh. </title>
+                <p>Nulla mi mi, Fig. <xref>fig1</xref> venenatis sed ipsum varius, volutpat euismod diam. Proin rutrum vel massa non gravida. Quisque tempor sem et dignissim rutrum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at justo vitae nulla elementum commodo eu id massa. In vitae diam ac augue semper tincidunt eu ut eros. Fusce fringilla erat porttitor lectus cursus, nameref S1_Videovel sagittis arcu lobortis. Aliquam in enim semper, aliquam massa id, cursus neque. Praesent faucibus semper libero. </p>
+            </section>
+        </section>
+        <fig id="fig1" num="1">
+            <caption>
+                <emph type="bold">
+                    <emph type="bold">Figure 1. Figure Title first bold sentence Nulla mi mi, venenatis sed ipsum varius, volutpat euismod diam.</emph>
+                </emph>Figure Caption Proin rutrum vel massa non gravida. Quisque tempor sem et dignissim rutrum. ALorem ipsum dolor sit amet. BConsectetur adipiscing elit. </caption>
+        </fig>
+        <item-list id="list1" type="Arabic">
+            <item num="1.">react</item>
+            <item num="2.">diffuse free particles</item>
+            <item num="3.">increment time by dt and go to 1 </item>
+        </item-list>
+        <section>
+            <title>Results</title>
+            <p> Nulla mi mi, venenatis sed ipsum varius, Table<xref>table1</xref> volutpat euismod diam. Proin rutrum vel massa non gravida. Quisque tempor sem et dignissim rutrum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at justo vitae nulla elementum commodo eu id massa. In vitae diam ac augue semper tincidunt eu ut eros. Fusce fringilla erat porttitor lectus cursus, vel sagittis arcu lobortis. Aliquam in enim semper, aliquam massa id, cursus neque. Praesent faucibus semper libero. </p>
+        </section>
+        <tbl>
+            <emph type="bold">Table caption Nulla mi mi, venenatis sed ipsum varius, volutpat euismod diam. </emph>
+            <tr>
+                <td>4 <emph type="bold">Heading1</emph>
+                </td>
+                <td>4 <emph type="bold">Heading2</emph>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <equ id="equ2" type="inline">
+                        <tex>$cell1row1$</tex>
+                    </equ>
+                </td>
+                <td>cell2 row 1 </td>
+                <td>cell3 row 1 </td>
+                <td>cell4 row 1 </td>
+                <td>cell5 row 1 </td>
+                <td>cell6 row 1 </td>
+                <td>cell7 row 1 </td>
+                <td>cell8 row 1 </td>
+            </tr>
+            <tr>
+                <td>
+                    <equ id="equ3" type="inline">
+                        <tex>$cell1row2$</tex>
+                    </equ>
+                </td>
+                <td>cell2 row 2 </td>
+                <td>cell3 row 2 </td>
+                <td>cell4 row 2 </td>
+                <td>cell5 row 2 </td>
+                <td>cell6 row 2 </td>
+                <td>cell7 row 2 </td>
+                <td>cell8 row 2 </td>
+            </tr>
+            <tr>
+                <td>
+                    <equ id="equ4" type="inline">
+                        <tex>$cell1row3$</tex>
+                    </equ>
+                </td>
+                <td>cell2 row 3 </td>
+                <td>cell3 row 3 </td>
+                <td>cell4 row 3 </td>
+                <td>cell5 row 3 </td>
+                <td>cell6 row 3 </td>
+                <td>cell7 row 3 </td>
+                <td>cell8 row 3 </td>
+            </tr>Table notes Phasellus venenatis, tortor nec vestibulum mattis, massa tortor interdum felis, nec pellentesque metus tortor nec nisl. Ut ornare mauris tellus, vel dapibus arcu suscipit sed. </tbl>
+        <section id="section6" level="2">
+            <title>
+                <emph type="bold">LOREM</emph>and<emph type="bold"> IPSUM</emph>Nunc blandit a tortor. </title>
+            <p>Maecenas convallis mauris sit amet sem ultrices gravida. Etiam eget sapien nibh. Sed ac ipsum eget enim egestas ullamcorper nec euismod ligula. Curabitur fringilla pulvinar lectus consectetur pellentesque. Quisque augue sem, tincidunt sit amet feugiat eget, ullamcorper sed velit. Sed non aliquet felis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris commodo justo ac dui pretium imperdiet. Sed suscipit iaculis mi at feugiat. </p>
+        </section>
+        <section id="section7" level="2">
+            <title>Sed ac quam id nisi malesuada congue. </title>
+            <p>Nulla mi mi, venenatis sed ipsum varius, volutpat euismod diam. Proin rutrum vel massa non gravida. Quisque tempor sem et dignissim rutrum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at justo vitae nulla elementum commodo eu id massa. In vitae diam ac augue semper tincidunt eu ut eros. Fusce fringilla erat porttitor lectus cursus, vel sagittis arcu lobortis. Aliquam in enim semper, aliquam massa id, cursus neque. Praesent faucibus semper libero. </p>
+        </section>
+        <section id="section8" level="2">
+            <title>Subsection 1 </title>
+            <p> Nulla mi mi, venenatis sed ipsum varius, volutpat euismod diam. Proin rutrum vel massa non gravida. Quisque tempor sem et dignissim rutrum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at justo vitae nulla elementum commodo eu id massa. In vitae diam ac augue semper tincidunt eu ut eros. Fusce fringilla erat porttitor lectus cursus, vel sagittis arcu lobortis. Aliquam in enim semper, aliquam massa id, cursus neque. Praesent faucibus semper libero. </p>
+        </section>
+        <section id="section9" level="2">
+            <title>Subsection 2 </title>
+            <section id="section10" level="3">
+                <title> 3  rd Level Heading. </title>
+                <p>Nulla mi mi, venenatis sed ipsum varius, volutpat euismod diam. Proin rutrum vel massa non gravida. Quisque tempor sem et dignissim rutrum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at justo vitae nulla elementum commodo eu id massa. In vitae diam ac augue semper tincidunt eu ut eros. Fusce fringilla erat porttitor lectus cursus, vel sagittis arcu lobortis. Aliquam in enim semper, aliquam massa id, cursus neque. Praesent faucibus semper libero. </p>
+                <section>
+                    <title>Discussion</title>
+                    <p> Nulla mi mi, venenatis sed ipsum varius, Table<xref>table1</xref> volutpat euismod diam. Proin rutrum vel massa non gravida. Quisque tempor sem et dignissim rutrum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at justo vitae nulla elementum commodo eu id massa. In vitae diam ac augue semper tincidunt eu ut eros. Fusce fringilla erat porttitor lectus cursus, vel sagittis arcu lobortis. Aliquam in enim semper, aliquam massa id, cursus neque. Praesent faucibus semper libero. </p>
+                </section>
+                <section id="section12" level="2">
+                    <title>
+                        <emph type="bold">LOREM</emph>and<emph type="bold"> IPSUM</emph>Nunc blandit a tortor. </title>
+                    <p>COtextsubscript 2 Maecenas convallis mauris sit amet sem ultrices gravida. Etiam eget sapien nibh. Sed ac ipsum eget enim egestas ullamcorper nec euismod ligula. Curabitur fringilla pulvinar lectus consectetur pellentesque. Quisque augue sem, tincidunt sit amet feugiat eget, ullamcorper sed velit. Sed non aliquet felis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris commodo justo ac dui pretium imperdiet. Sed suscipit iaculis mi at feugiat. Ut neque ipsum, luctus id lacus ut, laoreet scelerisque urna. Phasellus venenatis, tortor nec vestibulum mattis, massa tortor interdum felis, nec pellentesque metus tortor nec nisl. Ut ornare mauris tellus, vel dapibus arcu suscipit sed. Nam condimentum sem eget mollis euismod. Nullam dui urna, gravida venenatis dui et, tincidunt sodales ex. Nunc est dui, sodales sed mauris nec, auctor sagittis leo. Aliquam tincidunt, ex in facilisis elementum, libero lectus luctus est, non vulputate nisl augue at dolor. For more information, seenameref S1_Text. </p>
+                </section>
+            </section>
+        </section>
+        <section>
+            <title>Supporting Information</title>
+            <section id="section14" level="2">
+                <title> S1 Video</title>
+                <p>
+                    <emph type="bold"> Bold the first sentence. </emph>Maecenas convallis mauris sit amet sem ultrices gravida. Etiam eget sapien nibh. Sed ac ipsum eget enim egestas ullamcorper nec euismod ligula. Curabitur fringilla pulvinar lectus consectetur pellentesque. </p>
+            </section>
+            <section id="section15" level="2">
+                <title>S1 Text</title>
+                <p>
+                    <emph type="bold"> Lorem Ipsum. </emph>Maecenas convallis mauris sit amet sem ultrices gravida. Etiam eget sapien nibh. Sed ac ipsum eget enim egestas ullamcorper nec euismod ligula. Curabitur fringilla pulvinar lectus consectetur pellentesque. </p>
+            </section>
+            <section id="section16" level="2">
+                <title>S1 Fig</title>
+                <p>
+                    <emph type="bold"> Lorem Ipsum. </emph>Maecenas convallis mauris sit amet sem ultrices gravida. Etiam eget sapien nibh. Sed ac ipsum eget enim egestas ullamcorper nec euismod ligula. Curabitur fringilla pulvinar lectus consectetur pellentesque. </p>
+            </section>
+            <section id="section17" level="2">
+                <title>S2 Fig</title>
+                <p>
+                    <emph type="bold"> Lorem Ipsum. </emph>Maecenas convallis mauris sit amet sem ultrices gravida. Etiam eget sapien nibh. Sed ac ipsum eget enim egestas ullamcorper nec euismod ligula. Curabitur fringilla pulvinar lectus consectetur pellentesque. </p>
+            </section>
+            <section id="section18" level="2">
+                <title>S1 Table</title>
+                <p>
+                    <emph type="bold"> Lorem Ipsum. </emph>Maecenas convallis mauris sit amet sem ultrices gravida. Etiam eget sapien nibh. Sed ac ipsum eget enim egestas ullamcorper nec euismod ligula. Curabitur fringilla pulvinar lectus consectetur pellentesque. </p>
+            </section>
+        </section>
+    </body>
+    <back>
+        <ack>
+            <p>Cras egestas velit mauris, eu mollis turpis pellentesque sit amet. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam id pretium nisi. Sed ac quam id nisi malesuada congue. Sed interdum aliquet augue, at pellentesque quam rhoncus vitae. </p>
+        </ack>
+        <ref-list>
+            <ref id="bib1">bib1 <person-group person-group-type="author">
+                    <name>Devaraju P, Gulati R, Antony PT, Mithun CB, Negi VS. Susceptibility to SLE in South Indian Tamils may be influenced by genetic selection pressure on TLR2 and TLR9 genes. Mol Immunol. 2014 Nov 22. pii: S0161-5890 </name>
+                </person-group>
+                <year>14 </year>
+                <article-title>00313-7. doi: 10.1016/j.molimm.2014.11.005 </article-title>
+            </ref>
+            <ref id="bib2">bib2 <person-group person-group-type="author">
+                    <name>Huynen MMTE, Martens P, Hilderlink HBM. The health impacts of globalisation: a conceptual framework. Global Health. 2005;1: 14. Available: http://www.globalizationandhealth.com/content/1/1/14. </name>
+                </person-group>
+            </ref>
+        </ref-list>
+    </back>
+</article>

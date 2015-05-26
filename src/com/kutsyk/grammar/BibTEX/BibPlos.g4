@@ -6,7 +6,7 @@ compilationUnit:
 ;
 
 acknowledgment:
-  '\\section*{Acknowledgments}'
+  '\\section*{' ('Acknowledgments' | 'acknowledgments') '}'
     (simpleText | COMMA | DOT)+
 ;
 
@@ -18,7 +18,7 @@ refs:
 
 bibItem:
     '\\bibitem' LBRACE bibLabel RBRACE
-    authorList LPAREN bibYear RPAREN title address publishing
+    authorList '.' additionalInfo
 ;
 
 authorList:
@@ -27,6 +27,15 @@ authorList:
 
 author:
     simpleText+
+;
+
+additionalInfo:
+    (simpleText
+    | DOT
+    | COMMA
+    | LPAREN
+    | RPAREN
+    )*
 ;
 
 bibLabel:
@@ -99,6 +108,10 @@ NameStartChar
 	|   '\u3001'..'\uD7FF'
 	|   '\uF900'..'\uFDCF'
 	|   '\uFDF0'..'\uFFFD'
+	|   COLON
+	|   SEMI
+	|   SUB
+	|   '/'
 	;
 
 ASSIGN          : '=';

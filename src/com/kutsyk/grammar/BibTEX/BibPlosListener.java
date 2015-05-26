@@ -69,6 +69,16 @@ public interface BibPlosListener extends ParseTreeListener {
 	 */
 	void exitAuthor(BibPlosParser.AuthorContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link BibPlosParser#additionalInfo}.
+	 * @param ctx the parse tree
+	 */
+	void enterAdditionalInfo(BibPlosParser.AdditionalInfoContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link BibPlosParser#additionalInfo}.
+	 * @param ctx the parse tree
+	 */
+	void exitAdditionalInfo(BibPlosParser.AdditionalInfoContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link BibPlosParser#bibLabel}.
 	 * @param ctx the parse tree
 	 */

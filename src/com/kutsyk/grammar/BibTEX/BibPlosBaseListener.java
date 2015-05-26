@@ -89,6 +89,18 @@ public class BibPlosBaseListener implements BibPlosListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterAdditionalInfo(BibPlosParser.AdditionalInfoContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitAdditionalInfo(BibPlosParser.AdditionalInfoContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterBibLabel(BibPlosParser.BibLabelContext ctx) { }
 	/**
 	 * {@inheritDoc}

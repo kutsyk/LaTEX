@@ -6,7 +6,7 @@ compilationUnit:
 ;
 
 acknowledgment:
-  '\\section*{Acknowledgments}'
+  '\\section*{' ('Acknowledgments' | 'acknowledgments') '}'
     (simpleText | COMMA | DOT)+
 ;
 
@@ -99,6 +99,12 @@ NameStartChar
 	|   '\u3001'..'\uD7FF'
 	|   '\uF900'..'\uFDCF'
 	|   '\uFDF0'..'\uFFFD'
+	|   COLON
+	|   DOT
+	|   COMMA
+	|   SEMI
+	|   SUB
+	|   '/'
 	;
 
 ASSIGN          : '=';
