@@ -1,5 +1,0 @@
-d:
-cd D:\Charlesworth\LaTEX\src
-SET CLASSPATH=.;..\lib\antlr-4.5-complete.jar;%CLASSPATH%
-doskey a4=java org.antlr.v4.Tool $*
-doskey grun =java org.antlr.v4.runtime.misc.TestRig $*

@@ -18,7 +18,7 @@ refs:
 
 bibItem:
     '\\bibitem' LBRACE bibLabel RBRACE
-    authorList LPAREN bibYear RPAREN title address publishing
+    authorList '.' additionalInfo
 ;
 
 authorList:
@@ -27,6 +27,15 @@ authorList:
 
 author:
     simpleText+
+;
+
+additionalInfo:
+    (simpleText
+    | DOT
+    | COMMA
+    | LPAREN
+    | RPAREN
+    )*
 ;
 
 bibLabel:
@@ -100,8 +109,6 @@ NameStartChar
 	|   '\uF900'..'\uFDCF'
 	|   '\uFDF0'..'\uFFFD'
 	|   COLON
-	|   DOT
-	|   COMMA
 	|   SEMI
 	|   SUB
 	|   '/'

@@ -1,8 +1,7 @@
 package com.kutsyk.convertors.LATEX;
 
 import com.kutsyk.convertors.Translator;
-import com.kutsyk.grammar.LaTEX.LaTEXBaseListener;
-import com.kutsyk.grammar.LaTEX.LaTEXParser;
+import com.kutsyk.grammar.LaTEX.*;
 import com.kutsyk.windows.MainWindow;
 import net.sourceforge.jeuclid.MathMLParserSupport;
 import net.sourceforge.jeuclid.MutableLayoutContext;
@@ -342,24 +341,12 @@ public class ToXML extends LaTEXBaseListener {
         shouldTextBeMissed = false;
     }
 
-	/* (non-Javadoc)
-     * @see LaTEXBaseListener#enterAbstractBlock(LaTEXParser.AbstractBlockContext)
-	 */
-
     public void enterAbstractBlock(LaTEXParser.AbstractBlockContext ctx) {
-        shouldTextBeMissed = true;
-        ++skipLevel;
+        writer.print("<abstract>");
     }
 
-	/* (non-Javadoc)
-	 * @see LaTEXBaseListener#exitAbstractBlock(LaTEXParser.AbstractBlockContext)
-	 */
-
     public void exitAbstractBlock(LaTEXParser.AbstractBlockContext ctx) {
-        --skipLevel;
-        if (skipLevel == 0)
-            shouldTextBeMissed = false;
-        ;
+        writer.print("</abstract></article-meta></front><body>");
     }
 
 	/* (non-Javadoc)
@@ -390,40 +377,28 @@ public class ToXML extends LaTEXBaseListener {
         wasSectionDeclared = true;
     }
 
-    private static final String abstractString = "abstract";
-    private boolean abstractDone = false;
-
     public void enterSectionDeclaration(
             LaTEXParser.SectionDeclarationContext ctx) {
 
         String title = ctx.text().getText();
-
-        //If title is abstract
-        String titleCopy = title.toLowerCase();
-        wasAbstractDeclared = (titleCopy.length() == abstractString.length() ||
-                titleCopy.length() == abstractString.length() + 1) && titleCopy.contains(abstractString);
-        if (wasAbstractDeclared)
-            abstractDone = true;
-
         shouldTextBeMissed = false;
-
-        if (wasAbstractDeclared) {
-            writer.append("<abstract>");
-            writer.print("<title>");
-            wasSectionDeclared = false;
-            return;
-        }
 
         sectionCloser();
 
-        if (title.equals("Acknowledgements") || title.equals("Acknowledgement")
-                || title.equals("Acknowledgments")) {
+        String littleTitle = title.toLowerCase();
+//        if (littleTitle.contains("author") && littleTitle.contains("summary"))
+//            writer.append("<body>");
+
+
+        if (littleTitle.equals("acknowledgements") || littleTitle.equals("acknowledgement")
+                || littleTitle.equals("acknowledgments")) {
             wasAcknowledgement = true;
             wasAcknowledgement = true;
             writer.append("</body><back><acks><title>");
             wasSectionDeclared = false;
             return;
         }
+
         ++sectionId;
         ++sectionCounter;
         if (bibliographyDeclared)
@@ -544,12 +519,6 @@ public class ToXML extends LaTEXBaseListener {
         if (wasParagraphFilled)
             paragraphCloser();
 
-        if (abstractDone) {
-            writer.print("</abstract></article-meta></front><body>");
-            abstractDone = false;
-            return;
-        }
-
         if (wasAcknowledgement) {
             writer.print("</acks>");
             wasAcknowledgement = false;
@@ -643,7 +612,9 @@ public class ToXML extends LaTEXBaseListener {
         for (int i = 0; i < sortedNumbers.size(); ++i) {
             number = sortedNumbers.get(i);
             if ((beginIndex != endIndex) && i == beginIndex) {
-                writer.print(number + "&ndash;");
+                if(MainWindow.getUseIsoCharSymbolReplacign())
+                    writer.print(number + "&ndash;");
+                else writer.print(number + "-");
                 i = endIndex - 1;
                 continue;
             }

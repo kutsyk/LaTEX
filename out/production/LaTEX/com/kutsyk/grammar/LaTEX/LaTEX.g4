@@ -20,14 +20,16 @@ frontPart:
     frontBody
     memberList*
     '\\end{flushleft}'
+    ('\r' | '\n')*
+    abstractBlock
 ;
 
 frontBody:
     ('\r' | '\n')*
     mainTitle
     ('\r' | '\n')*
-    authorList
-    address+
+    authorList?
+    (address+)?
 ;
 
 mainTitle:
@@ -35,7 +37,7 @@ mainTitle:
     '\\Large' ('\r' | '\n')*
     '\\textbf' ('\r' | '\n')*
     '\\newline'?
-    '{' text '}' ('\r' | '\n')*
+    block ('\r' | '\n')*
     '}'
     ('\r' | '\n')*
     '\\newline'?
@@ -116,6 +118,7 @@ member
 	| subsectionDeclaration
 	| subsubsectionDeclaration
 
+    | newcommandDeclaration
 	| renewcommandDeclaration
 	| url
 

@@ -144,9 +144,11 @@ public class Translator {
         String line;
         while((line = reader.readLine()) != null){
             if(line.contains("\\newcommand")){
-                String lCopy = line;
-                String command = line.substring(line.indexOf("{")+1, line.indexOf("}"));
-                String macros = line.substring(line.indexOf("}")+2, line.lastIndexOf("}"));
+                String command = line = line.substring(line.indexOf("{")+1, line.indexOf("}"));
+                String macros = "";
+                if(line.contains("}"))
+                    macros = line.substring(line.indexOf("}")+2, line.lastIndexOf("}"));
+                else macros = "TODO";
                 commands.put(command, macros);
             }
             if(line.contains("\\begin{document}"))
@@ -180,7 +182,9 @@ public class Translator {
                 break;
             }
             if(!skip)
-                os.print(replaceCommandIfFound(line));
+//                if(line.endsWith("\n"))
+                    os.print(replaceCommandIfFound(line));
+//                else os.println(replaceCommandIfFound(line));
         }
         fin.close();
         os.close();

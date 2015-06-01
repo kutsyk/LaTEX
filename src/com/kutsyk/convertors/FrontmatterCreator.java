@@ -1,7 +1,6 @@
 package com.kutsyk.convertors;
 
-import com.kutsyk.grammar.LaTEX.LaTEXLexer;
-import com.kutsyk.grammar.LaTEX.LaTEXParser;
+import com.kutsyk.grammar.LaTEX.*;
 import com.kutsyk.windows.MainWindow;
 import org.antlr.v4.runtime.ANTLRInputStream;
 import org.antlr.v4.runtime.CommonTokenStream;

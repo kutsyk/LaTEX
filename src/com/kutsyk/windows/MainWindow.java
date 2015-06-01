@@ -39,7 +39,7 @@ import java.util.regex.Pattern;
 public class MainWindow extends JFrame {
 
     /**
-     *  The program path
+     * The program path
      */
     public static String mainPath = "";
     /**
@@ -47,12 +47,7 @@ public class MainWindow extends JFrame {
      */
     private static String fullPath = "";
     private static String formulasType = "latex";
-
     private PrintWriter errorLogFile = null;
-
-    /**
-     * The dir.
-     */
     private File dir = new File(mainPath + "/LaTEXtoXML");
     private boolean wasAnyLaTEXProceeded = false;
     private JTextArea console;
@@ -64,8 +59,6 @@ public class MainWindow extends JFrame {
     private static HashMap<String, String> isoTrie;
     private JEditorPane xmlEditor = null;
     private XMLEditorKit kit = null;
-
-
 
     public MainWindow() {
         initComponents();
@@ -79,6 +72,10 @@ public class MainWindow extends JFrame {
 
         initStyling();
         initXMlPane();
+
+        File result = new File(mainPath + "/LaTEXtoXML/resultCopy.xml");
+        if (result.exists())
+            displayXMlTOPane(result);
     }
 
     private void initStyling() {
@@ -216,7 +213,7 @@ public class MainWindow extends JFrame {
             ;
         for (int i = 0; i < folders.length; ++i) {
             dir = new File(mainPath + "/LaTEXtoXML/" + folders[i]);
-            if (dir.mkdir());
+            if (dir.mkdir()) ;
         }
     }
 
@@ -271,7 +268,7 @@ public class MainWindow extends JFrame {
             StringBuilder xmlString = new StringBuilder();
             String line;
             while ((line = reader.readLine()) != null)
-                xmlString.append(line);
+                xmlString.append(line + "\n");
             String xml = makeXMLStructured(xmlString.toString());
             PrintWriter writer = new PrintWriter(mainPath + "/LaTEXtoXML/remaked.xml");
             writer.append(xml);
@@ -371,7 +368,7 @@ public class MainWindow extends JFrame {
      * @throws IOException Signals that an I/O exception has occurred.
      */
     private void writePartToResult(PrintWriter resultXml,
-                                          InputStream in, String part) throws IOException {
+                                   InputStream in, String part) throws IOException {
         in = new FileInputStream(new File(mainPath + "/LaTEXtoXML/" + part
                 + ".xml"));
         BufferedReader reader = new BufferedReader(new InputStreamReader(in));
@@ -398,6 +395,11 @@ public class MainWindow extends JFrame {
         xmlFileName.setText(fileName.substring(fileName.lastIndexOf("\\") + 1, fileName.length() - 4) + "result");
         createFoldersAndFilesIfNeed();
         writeDocumentToPane(fileName);
+        clearXMLPane();
+    }
+
+    private void clearXMLPane(){
+        xmlEditor.setText("");
     }
 
     private void writeDocumentToPane(String fileName) {
@@ -417,6 +419,7 @@ public class MainWindow extends JFrame {
     }
 
     private void translateButtonActionPerformed(ActionEvent e) {
+        clearXMLPane();
         if (fullPath.isEmpty()) {
             JOptionPane.showMessageDialog(null, "Choose neccesary files");
             return;
@@ -455,14 +458,14 @@ public class MainWindow extends JFrame {
         String line;
         StringBuilder text = new StringBuilder();
         while ((line = reader.readLine()) != null)
-            text.append(line+'\n');
+            text.append(line + '\n');
         is.close();
         int references = countReferences(text);
 
         return true;
     }
 
-    private int countReferences(StringBuilder text){
+    private int countReferences(StringBuilder text) {
         Pattern p = Pattern.compile("\\ref");
         Matcher m = p.matcher(text.toString());
         while (m.find()) {
@@ -512,7 +515,6 @@ public class MainWindow extends JFrame {
                 } catch (BadLocationException e1) {
                     e1.printStackTrace();
                 }
-
             }
 
         });
@@ -550,8 +552,7 @@ public class MainWindow extends JFrame {
         wasAnyLaTEXProceeded = false;
         FileNameExtensionFilter filter = new FileNameExtensionFilter("TEX file", "tex", "tex");
         @SuppressWarnings("serial")
-//		JFileChooser chooser = new JFileChooser(new File("D:\\Charlesworth\\plos_template")) {
-                JFileChooser chooser = new JFileChooser(new File("F:\\Charlesworth\\CPB-2015-4tex")) {
+        JFileChooser chooser = new JFileChooser() {
             public void approveSelection() {
                 super.approveSelection();
             }
@@ -573,7 +574,7 @@ public class MainWindow extends JFrame {
     private void saveDocumentButtonActionPerformed(ActionEvent e) {
         try {
             String content = documentText.getText();
-            content = content.replaceAll("(?!\\r)\\n", "\r\n");
+            content = content.replaceAll("(?!\\r)\\n", "\n");
 
             File file = new File(fullPath);
             // if file doesnt exists, then create it
@@ -661,375 +662,375 @@ public class MainWindow extends JFrame {
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY
         // //GEN-BEGIN:initComponents
-		menuBar1 = new JMenuBar();
-		MainMenu = new JMenu();
-		chooseFileMenu = new JMenuItem();
-		helpItem = new JMenuItem();
-		exitItem = new JMenuItem();
-		spliPaneWithDoc = new JSplitPane();
-		documentTab = new JTabbedPane();
-		panel7 = new JPanel();
-		scrollPane = new JScrollPane();
-		documentText = new JTextPane();
-		xmlPane = new JTabbedPane();
-		xmlDocumentPane = new JPanel();
-		tabbedPane1 = new JTabbedPane();
-		panel1 = new JPanel();
-		translateButton = new JButton();
-		saveDocumentButton = new JButton();
-		saveXmlDocument = new JButton();
-		progress = new JProgressBar();
-		panel2 = new JPanel();
-		tabbedPane2 = new JTabbedPane();
-		panel3 = new JPanel();
-		useIsoCharSymbolReplacign = new JCheckBox();
-		panel4 = new JPanel();
-		xmlFileName = new JTextField();
-		label1 = new JLabel();
-		button1 = new JButton();
-		panel5 = new JPanel();
-		latexRadioButton = new JRadioButton();
-		mathmlRadioButton = new JRadioButton();
-		imageRadioButton = new JRadioButton();
+        menuBar1 = new JMenuBar();
+        MainMenu = new JMenu();
+        chooseFileMenu = new JMenuItem();
+        helpItem = new JMenuItem();
+        exitItem = new JMenuItem();
+        spliPaneWithDoc = new JSplitPane();
+        documentTab = new JTabbedPane();
+        panel7 = new JPanel();
+        scrollPane = new JScrollPane();
+        documentText = new JTextPane();
+        xmlPane = new JTabbedPane();
+        xmlDocumentPane = new JPanel();
+        tabbedPane1 = new JTabbedPane();
+        panel1 = new JPanel();
+        translateButton = new JButton();
+        saveDocumentButton = new JButton();
+        saveXmlDocument = new JButton();
+        progress = new JProgressBar();
+        panel2 = new JPanel();
+        tabbedPane2 = new JTabbedPane();
+        panel3 = new JPanel();
+        useIsoCharSymbolReplacign = new JCheckBox();
+        panel4 = new JPanel();
+        xmlFileName = new JTextField();
+        label1 = new JLabel();
+        button1 = new JButton();
+        panel5 = new JPanel();
+        latexRadioButton = new JRadioButton();
+        mathmlRadioButton = new JRadioButton();
+        imageRadioButton = new JRadioButton();
 
-		//======== this ========
-		setTitle("LaTEX > XML");
-		setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-		setFocusable(false);
-		setBackground(Color.white);
-		setIconImage(new ImageIcon(getClass().getResource("/images/blue-home-icon.png")).getImage());
-		setForeground(Color.white);
-		setFont(new Font("Calibri", Font.PLAIN, 14));
-		addWindowListener(new WindowAdapter() {
-			@Override
-			public void windowClosing(WindowEvent e) {
-				thisWindowClosing(e);
-			}
-		});
-		addComponentListener(new ComponentAdapter() {
-			@Override
-			public void componentResized(ComponentEvent e) {
-				MainWindowResized(e);
-			}
-		});
-		Container contentPane = getContentPane();
+        //======== this ========
+        setTitle("LaTEX > XML");
+        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        setFocusable(false);
+        setBackground(Color.white);
+        setIconImage(new ImageIcon(getClass().getResource("/images/blue-home-icon.png")).getImage());
+        setForeground(Color.white);
+        setFont(new Font("Calibri", Font.PLAIN, 14));
+        addWindowListener(new WindowAdapter() {
+            @Override
+            public void windowClosing(WindowEvent e) {
+                thisWindowClosing(e);
+            }
+        });
+        addComponentListener(new ComponentAdapter() {
+            @Override
+            public void componentResized(ComponentEvent e) {
+                MainWindowResized(e);
+            }
+        });
+        Container contentPane = getContentPane();
 
-		//======== menuBar1 ========
-		{
+        //======== menuBar1 ========
+        {
 
-			//======== MainMenu ========
-			{
-				MainMenu.setText("File");
-				MainMenu.setFont(new Font("Calibri", Font.PLAIN, 14));
+            //======== MainMenu ========
+            {
+                MainMenu.setText("File");
+                MainMenu.setFont(new Font("Calibri", Font.PLAIN, 14));
 
-				//---- chooseFileMenu ----
-				chooseFileMenu.setText("Choose file");
-				chooseFileMenu.setFont(new Font("Calibri", Font.PLAIN, 14));
-				chooseFileMenu.addActionListener(new ActionListener() {
-					@Override
-					public void actionPerformed(ActionEvent e) {
-						chooseFileMenuActionPerformed(e);
-					}
-				});
-				MainMenu.add(chooseFileMenu);
-				MainMenu.addSeparator();
+                //---- chooseFileMenu ----
+                chooseFileMenu.setText("Choose file");
+                chooseFileMenu.setFont(new Font("Calibri", Font.PLAIN, 14));
+                chooseFileMenu.addActionListener(new ActionListener() {
+                    @Override
+                    public void actionPerformed(ActionEvent e) {
+                        chooseFileMenuActionPerformed(e);
+                    }
+                });
+                MainMenu.add(chooseFileMenu);
+                MainMenu.addSeparator();
 
-				//---- helpItem ----
-				helpItem.setText("Help");
-				helpItem.setFont(new Font("Calibri", Font.PLAIN, 14));
-				helpItem.addActionListener(new ActionListener() {
-					@Override
-					public void actionPerformed(ActionEvent e) {
-						helpItemActionPerformed(e);
-						helpItemActionPerformed(e);
-					}
-				});
-				MainMenu.add(helpItem);
+                //---- helpItem ----
+                helpItem.setText("Help");
+                helpItem.setFont(new Font("Calibri", Font.PLAIN, 14));
+                helpItem.addActionListener(new ActionListener() {
+                    @Override
+                    public void actionPerformed(ActionEvent e) {
+                        helpItemActionPerformed(e);
+                        helpItemActionPerformed(e);
+                    }
+                });
+                MainMenu.add(helpItem);
 
-				//---- exitItem ----
-				exitItem.setText("Exit");
-				exitItem.setFont(new Font("Calibri", Font.PLAIN, 14));
-				exitItem.addActionListener(new ActionListener() {
-					@Override
-					public void actionPerformed(ActionEvent e) {
-						exitItemActionPerformed(e);
-						exitItemActionPerformed(e);
-					}
-				});
-				MainMenu.add(exitItem);
-			}
-			menuBar1.add(MainMenu);
-		}
-		setJMenuBar(menuBar1);
+                //---- exitItem ----
+                exitItem.setText("Exit");
+                exitItem.setFont(new Font("Calibri", Font.PLAIN, 14));
+                exitItem.addActionListener(new ActionListener() {
+                    @Override
+                    public void actionPerformed(ActionEvent e) {
+                        exitItemActionPerformed(e);
+                        exitItemActionPerformed(e);
+                    }
+                });
+                MainMenu.add(exitItem);
+            }
+            menuBar1.add(MainMenu);
+        }
+        setJMenuBar(menuBar1);
 
-		//======== spliPaneWithDoc ========
-		{
-			spliPaneWithDoc.setOneTouchExpandable(true);
+        //======== spliPaneWithDoc ========
+        {
+            spliPaneWithDoc.setOneTouchExpandable(true);
 
-			//======== documentTab ========
-			{
-				documentTab.setFont(new Font("Calibri", Font.PLAIN, 14));
+            //======== documentTab ========
+            {
+                documentTab.setFont(new Font("Calibri", Font.PLAIN, 14));
 
-				//======== panel7 ========
-				{
-					panel7.setLayout(new BoxLayout(panel7, BoxLayout.X_AXIS));
+                //======== panel7 ========
+                {
+                    panel7.setLayout(new BoxLayout(panel7, BoxLayout.X_AXIS));
 
-					//======== scrollPane ========
-					{
+                    //======== scrollPane ========
+                    {
 
-						//---- documentText ----
-						documentText.setFont(new Font("Calibri", Font.PLAIN, 14));
-						scrollPane.setViewportView(documentText);
-					}
-					panel7.add(scrollPane);
-				}
-				documentTab.addTab("Document:", panel7);
+                        //---- documentText ----
+                        documentText.setFont(new Font("Calibri", Font.PLAIN, 14));
+                        scrollPane.setViewportView(documentText);
+                    }
+                    panel7.add(scrollPane);
+                }
+                documentTab.addTab("Document:", panel7);
 
-			}
-			spliPaneWithDoc.setLeftComponent(documentTab);
+            }
+            spliPaneWithDoc.setLeftComponent(documentTab);
 
-			//======== xmlPane ========
-			{
-				xmlPane.setFont(new Font("Calibri", Font.PLAIN, 14));
+            //======== xmlPane ========
+            {
+                xmlPane.setFont(new Font("Calibri", Font.PLAIN, 14));
 
-				//======== xmlDocumentPane ========
-				{
-					xmlDocumentPane.setLayout(new BorderLayout());
-				}
-				xmlPane.addTab("XML:", xmlDocumentPane);
+                //======== xmlDocumentPane ========
+                {
+                    xmlDocumentPane.setLayout(new BorderLayout());
+                }
+                xmlPane.addTab("XML:", xmlDocumentPane);
 
-			}
-			spliPaneWithDoc.setRightComponent(xmlPane);
-		}
+            }
+            spliPaneWithDoc.setRightComponent(xmlPane);
+        }
 
-		//======== tabbedPane1 ========
-		{
-			tabbedPane1.setFont(new Font("Calibri", Font.PLAIN, 14));
+        //======== tabbedPane1 ========
+        {
+            tabbedPane1.setFont(new Font("Calibri", Font.PLAIN, 14));
 
-			//======== panel1 ========
-			{
+            //======== panel1 ========
+            {
 
-				//---- translateButton ----
-				translateButton.setText("Translate");
-				translateButton.setFont(new Font("Calibri", Font.PLAIN, 14));
-				translateButton.setIcon(new ImageIcon(getClass().getResource("/images/blue-document-plus-icon.png")));
-				translateButton.addActionListener(new ActionListener() {
-					@Override
-					public void actionPerformed(ActionEvent e) {
-						translateButtonActionPerformed(e);
-					}
-				});
+                //---- translateButton ----
+                translateButton.setText("Translate");
+                translateButton.setFont(new Font("Calibri", Font.PLAIN, 14));
+                translateButton.setIcon(new ImageIcon(getClass().getResource("/images/blue-document-plus-icon.png")));
+                translateButton.addActionListener(new ActionListener() {
+                    @Override
+                    public void actionPerformed(ActionEvent e) {
+                        translateButtonActionPerformed(e);
+                    }
+                });
 
-				//---- saveDocumentButton ----
-				saveDocumentButton.setText("Save document");
-				saveDocumentButton.setFont(new Font("Calibri", Font.PLAIN, 14));
-				saveDocumentButton.setIcon(new ImageIcon(getClass().getResource("/images/blue-disk-icon.png")));
-				saveDocumentButton.addActionListener(new ActionListener() {
-					@Override
-					public void actionPerformed(ActionEvent e) {
-						saveDocumentButtonActionPerformed(e);
-					}
-				});
+                //---- saveDocumentButton ----
+                saveDocumentButton.setText("Save document");
+                saveDocumentButton.setFont(new Font("Calibri", Font.PLAIN, 14));
+                saveDocumentButton.setIcon(new ImageIcon(getClass().getResource("/images/blue-disk-icon.png")));
+                saveDocumentButton.addActionListener(new ActionListener() {
+                    @Override
+                    public void actionPerformed(ActionEvent e) {
+                        saveDocumentButtonActionPerformed(e);
+                    }
+                });
 
-				//---- saveXmlDocument ----
-				saveXmlDocument.setText("Save xml result");
-				saveXmlDocument.setFont(new Font("Calibri", Font.PLAIN, 14));
-				saveXmlDocument.setIcon(new ImageIcon(getClass().getResource("/images/blue-disk-icon.png")));
-				saveXmlDocument.addActionListener(new ActionListener() {
-					@Override
-					public void actionPerformed(ActionEvent e) {
-						saveXmlDocumentActionPerformed(e);
-					}
-				});
+                //---- saveXmlDocument ----
+                saveXmlDocument.setText("Save xml result");
+                saveXmlDocument.setFont(new Font("Calibri", Font.PLAIN, 14));
+                saveXmlDocument.setIcon(new ImageIcon(getClass().getResource("/images/blue-disk-icon.png")));
+                saveXmlDocument.addActionListener(new ActionListener() {
+                    @Override
+                    public void actionPerformed(ActionEvent e) {
+                        saveXmlDocumentActionPerformed(e);
+                    }
+                });
 
-				GroupLayout panel1Layout = new GroupLayout(panel1);
-				panel1.setLayout(panel1Layout);
-				panel1Layout.setHorizontalGroup(
-					panel1Layout.createParallelGroup()
-						.addGroup(panel1Layout.createSequentialGroup()
-							.addContainerGap()
-							.addComponent(translateButton)
-							.addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-							.addComponent(saveDocumentButton)
-							.addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-							.addComponent(saveXmlDocument)
-							.addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-							.addComponent(progress, GroupLayout.DEFAULT_SIZE, 318, Short.MAX_VALUE)
-							.addContainerGap())
-				);
-				panel1Layout.setVerticalGroup(
-					panel1Layout.createParallelGroup()
-						.addGroup(panel1Layout.createSequentialGroup()
-							.addContainerGap()
-							.addGroup(panel1Layout.createParallelGroup()
-								.addComponent(progress, GroupLayout.Alignment.TRAILING, GroupLayout.DEFAULT_SIZE, 25, Short.MAX_VALUE)
-								.addGroup(panel1Layout.createParallelGroup(GroupLayout.Alignment.LEADING, false)
-									.addComponent(translateButton, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-									.addComponent(saveDocumentButton, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-									.addComponent(saveXmlDocument, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-							.addContainerGap(18, Short.MAX_VALUE))
-				);
-			}
-			tabbedPane1.addTab("Main", panel1);
-
-
-			//======== panel2 ========
-			{
-				panel2.setLayout(new BorderLayout());
-
-				//======== tabbedPane2 ========
-				{
-
-					//======== panel3 ========
-					{
-						panel3.setLayout(new BoxLayout(panel3, BoxLayout.X_AXIS));
-
-						//---- useIsoCharSymbolReplacign ----
-						useIsoCharSymbolReplacign.setText("Replace symbol using ISO standarts");
-						useIsoCharSymbolReplacign.setFont(new Font("Calibri", Font.PLAIN, 14));
-						panel3.add(useIsoCharSymbolReplacign);
-					}
-					tabbedPane2.addTab("ISO", panel3);
+                GroupLayout panel1Layout = new GroupLayout(panel1);
+                panel1.setLayout(panel1Layout);
+                panel1Layout.setHorizontalGroup(
+                        panel1Layout.createParallelGroup()
+                                .addGroup(panel1Layout.createSequentialGroup()
+                                        .addContainerGap()
+                                        .addComponent(translateButton)
+                                        .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(saveDocumentButton)
+                                        .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(saveXmlDocument)
+                                        .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(progress, GroupLayout.DEFAULT_SIZE, 318, Short.MAX_VALUE)
+                                        .addContainerGap())
+                );
+                panel1Layout.setVerticalGroup(
+                        panel1Layout.createParallelGroup()
+                                .addGroup(panel1Layout.createSequentialGroup()
+                                        .addContainerGap()
+                                        .addGroup(panel1Layout.createParallelGroup()
+                                                .addComponent(progress, GroupLayout.Alignment.TRAILING, GroupLayout.DEFAULT_SIZE, 25, Short.MAX_VALUE)
+                                                .addGroup(panel1Layout.createParallelGroup(GroupLayout.Alignment.LEADING, false)
+                                                        .addComponent(translateButton, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                        .addComponent(saveDocumentButton, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                        .addComponent(saveXmlDocument, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                                        .addContainerGap(18, Short.MAX_VALUE))
+                );
+            }
+            tabbedPane1.addTab("Main", panel1);
 
 
-					//======== panel4 ========
-					{
+            //======== panel2 ========
+            {
+                panel2.setLayout(new BorderLayout());
 
-						//---- xmlFileName ----
-						xmlFileName.setFont(new Font("Calibri", xmlFileName.getFont().getStyle(), 14));
+                //======== tabbedPane2 ========
+                {
 
-						//---- label1 ----
-						label1.setText("XML result file name:");
-						label1.setFont(new Font("Calibri", label1.getFont().getStyle(), 14));
+                    //======== panel3 ========
+                    {
+                        panel3.setLayout(new BoxLayout(panel3, BoxLayout.X_AXIS));
 
-						//---- button1 ----
-						button1.setText("Set name");
-						button1.setFont(new Font("Calibri", button1.getFont().getStyle(), 14));
-
-						GroupLayout panel4Layout = new GroupLayout(panel4);
-						panel4.setLayout(panel4Layout);
-						panel4Layout.setHorizontalGroup(
-							panel4Layout.createParallelGroup()
-								.addGroup(panel4Layout.createSequentialGroup()
-									.addComponent(xmlFileName, GroupLayout.PREFERRED_SIZE, 186, GroupLayout.PREFERRED_SIZE)
-									.addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-									.addComponent(label1)
-									.addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
-									.addComponent(button1)
-									.addGap(328, 328, 328))
-						);
-						panel4Layout.setVerticalGroup(
-							panel4Layout.createParallelGroup()
-								.addGroup(panel4Layout.createSequentialGroup()
-									.addGroup(panel4Layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
-										.addComponent(xmlFileName, GroupLayout.PREFERRED_SIZE, 26, GroupLayout.PREFERRED_SIZE)
-										.addComponent(label1)
-										.addComponent(button1))
-									.addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-						);
-					}
-					tabbedPane2.addTab("XML file", panel4);
+                        //---- useIsoCharSymbolReplacign ----
+                        useIsoCharSymbolReplacign.setText("Replace symbol using ISO standarts");
+                        useIsoCharSymbolReplacign.setFont(new Font("Calibri", Font.PLAIN, 14));
+                        panel3.add(useIsoCharSymbolReplacign);
+                    }
+                    tabbedPane2.addTab("ISO", panel3);
 
 
-					//======== panel5 ========
-					{
-						panel5.setLayout(new BoxLayout(panel5, BoxLayout.X_AXIS));
+                    //======== panel4 ========
+                    {
 
-						//---- latexRadioButton ----
-						latexRadioButton.setText("LaTEX");
-						latexRadioButton.setFont(new Font("Calibri", Font.PLAIN, 14));
-						latexRadioButton.setSelected(true);
-						latexRadioButton.addActionListener(new ActionListener() {
-							@Override
-							public void actionPerformed(ActionEvent e) {
-								latexRadioButtonActionPerformed(e);
-							}
-						});
-						panel5.add(latexRadioButton);
+                        //---- xmlFileName ----
+                        xmlFileName.setFont(new Font("Calibri", xmlFileName.getFont().getStyle(), 14));
 
-						//---- mathmlRadioButton ----
-						mathmlRadioButton.setText("MathML");
-						mathmlRadioButton.setFont(new Font("Calibri", Font.PLAIN, 14));
-						mathmlRadioButton.addActionListener(new ActionListener() {
-							@Override
-							public void actionPerformed(ActionEvent e) {
-								mathmlRadioButtonActionPerformed(e);
-							}
-						});
-						panel5.add(mathmlRadioButton);
+                        //---- label1 ----
+                        label1.setText("XML result file name:");
+                        label1.setFont(new Font("Calibri", label1.getFont().getStyle(), 14));
 
-						//---- imageRadioButton ----
-						imageRadioButton.setText("Image");
-						imageRadioButton.setFont(new Font("Calibri", Font.PLAIN, 14));
-						imageRadioButton.addActionListener(new ActionListener() {
-							@Override
-							public void actionPerformed(ActionEvent e) {
-								imageRadioButtonActionPerformed(e);
-							}
-						});
-						panel5.add(imageRadioButton);
-					}
-					tabbedPane2.addTab("Formulas", panel5);
+                        //---- button1 ----
+                        button1.setText("Set name");
+                        button1.setFont(new Font("Calibri", button1.getFont().getStyle(), 14));
 
-				}
-				panel2.add(tabbedPane2, BorderLayout.WEST);
-			}
-			tabbedPane1.addTab("Settings", panel2);
+                        GroupLayout panel4Layout = new GroupLayout(panel4);
+                        panel4.setLayout(panel4Layout);
+                        panel4Layout.setHorizontalGroup(
+                                panel4Layout.createParallelGroup()
+                                        .addGroup(panel4Layout.createSequentialGroup()
+                                                .addComponent(xmlFileName, GroupLayout.PREFERRED_SIZE, 186, GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(label1)
+                                                .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
+                                                .addComponent(button1)
+                                                .addGap(328, 328, 328))
+                        );
+                        panel4Layout.setVerticalGroup(
+                                panel4Layout.createParallelGroup()
+                                        .addGroup(panel4Layout.createSequentialGroup()
+                                                .addGroup(panel4Layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+                                                        .addComponent(xmlFileName, GroupLayout.PREFERRED_SIZE, 26, GroupLayout.PREFERRED_SIZE)
+                                                        .addComponent(label1)
+                                                        .addComponent(button1))
+                                                .addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        );
+                    }
+                    tabbedPane2.addTab("XML file", panel4);
 
-		}
 
-		GroupLayout contentPaneLayout = new GroupLayout(contentPane);
-		contentPane.setLayout(contentPaneLayout);
-		contentPaneLayout.setHorizontalGroup(
-			contentPaneLayout.createParallelGroup()
-				.addComponent(tabbedPane1, GroupLayout.DEFAULT_SIZE, 742, Short.MAX_VALUE)
-				.addGroup(contentPaneLayout.createSequentialGroup()
-					.addComponent(spliPaneWithDoc, GroupLayout.DEFAULT_SIZE, 732, Short.MAX_VALUE)
-					.addContainerGap())
-		);
-		contentPaneLayout.setVerticalGroup(
-			contentPaneLayout.createParallelGroup()
-				.addGroup(contentPaneLayout.createSequentialGroup()
-					.addComponent(tabbedPane1, GroupLayout.PREFERRED_SIZE, 85, GroupLayout.PREFERRED_SIZE)
-					.addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-					.addComponent(spliPaneWithDoc, GroupLayout.DEFAULT_SIZE, 316, Short.MAX_VALUE))
-		);
-		setSize(750, 455);
-		setLocationRelativeTo(getOwner());
+                    //======== panel5 ========
+                    {
+                        panel5.setLayout(new BoxLayout(panel5, BoxLayout.X_AXIS));
+
+                        //---- latexRadioButton ----
+                        latexRadioButton.setText("LaTEX");
+                        latexRadioButton.setFont(new Font("Calibri", Font.PLAIN, 14));
+                        latexRadioButton.setSelected(true);
+                        latexRadioButton.addActionListener(new ActionListener() {
+                            @Override
+                            public void actionPerformed(ActionEvent e) {
+                                latexRadioButtonActionPerformed(e);
+                            }
+                        });
+                        panel5.add(latexRadioButton);
+
+                        //---- mathmlRadioButton ----
+                        mathmlRadioButton.setText("MathML");
+                        mathmlRadioButton.setFont(new Font("Calibri", Font.PLAIN, 14));
+                        mathmlRadioButton.addActionListener(new ActionListener() {
+                            @Override
+                            public void actionPerformed(ActionEvent e) {
+                                mathmlRadioButtonActionPerformed(e);
+                            }
+                        });
+                        panel5.add(mathmlRadioButton);
+
+                        //---- imageRadioButton ----
+                        imageRadioButton.setText("Image");
+                        imageRadioButton.setFont(new Font("Calibri", Font.PLAIN, 14));
+                        imageRadioButton.addActionListener(new ActionListener() {
+                            @Override
+                            public void actionPerformed(ActionEvent e) {
+                                imageRadioButtonActionPerformed(e);
+                            }
+                        });
+                        panel5.add(imageRadioButton);
+                    }
+                    tabbedPane2.addTab("Formulas", panel5);
+
+                }
+                panel2.add(tabbedPane2, BorderLayout.WEST);
+            }
+            tabbedPane1.addTab("Settings", panel2);
+
+        }
+
+        GroupLayout contentPaneLayout = new GroupLayout(contentPane);
+        contentPane.setLayout(contentPaneLayout);
+        contentPaneLayout.setHorizontalGroup(
+                contentPaneLayout.createParallelGroup()
+                        .addComponent(tabbedPane1, GroupLayout.DEFAULT_SIZE, 742, Short.MAX_VALUE)
+                        .addGroup(contentPaneLayout.createSequentialGroup()
+                                .addComponent(spliPaneWithDoc, GroupLayout.DEFAULT_SIZE, 732, Short.MAX_VALUE)
+                                .addContainerGap())
+        );
+        contentPaneLayout.setVerticalGroup(
+                contentPaneLayout.createParallelGroup()
+                        .addGroup(contentPaneLayout.createSequentialGroup()
+                                .addComponent(tabbedPane1, GroupLayout.PREFERRED_SIZE, 85, GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(spliPaneWithDoc, GroupLayout.DEFAULT_SIZE, 316, Short.MAX_VALUE))
+        );
+        setSize(750, 455);
+        setLocationRelativeTo(getOwner());
         // //GEN-END:initComponents
     }
 
     // JFormDesigner - Variables declaration - DO NOT MODIFY
     // //GEN-BEGIN:variables
-	private JMenuBar menuBar1;
-	private JMenu MainMenu;
-	private JMenuItem chooseFileMenu;
-	private JMenuItem helpItem;
-	private JMenuItem exitItem;
-	private JSplitPane spliPaneWithDoc;
-	private JTabbedPane documentTab;
-	private JPanel panel7;
-	private JScrollPane scrollPane;
-	private JTextPane documentText;
-	private JTabbedPane xmlPane;
-	private JPanel xmlDocumentPane;
-	private JTabbedPane tabbedPane1;
-	private JPanel panel1;
-	private JButton translateButton;
-	private JButton saveDocumentButton;
-	private JButton saveXmlDocument;
-	private JProgressBar progress;
-	private JPanel panel2;
-	private JTabbedPane tabbedPane2;
-	private JPanel panel3;
-	private static JCheckBox useIsoCharSymbolReplacign;
-	private JPanel panel4;
-	private JTextField xmlFileName;
-	private JLabel label1;
-	private JButton button1;
-	private JPanel panel5;
-	private JRadioButton latexRadioButton;
-	private JRadioButton mathmlRadioButton;
-	private JRadioButton imageRadioButton;
+    private JMenuBar menuBar1;
+    private JMenu MainMenu;
+    private JMenuItem chooseFileMenu;
+    private JMenuItem helpItem;
+    private JMenuItem exitItem;
+    private JSplitPane spliPaneWithDoc;
+    private JTabbedPane documentTab;
+    private JPanel panel7;
+    private JScrollPane scrollPane;
+    private JTextPane documentText;
+    private JTabbedPane xmlPane;
+    private JPanel xmlDocumentPane;
+    private JTabbedPane tabbedPane1;
+    private JPanel panel1;
+    private JButton translateButton;
+    private JButton saveDocumentButton;
+    private JButton saveXmlDocument;
+    private JProgressBar progress;
+    private JPanel panel2;
+    private JTabbedPane tabbedPane2;
+    private JPanel panel3;
+    private static JCheckBox useIsoCharSymbolReplacign;
+    private JPanel panel4;
+    private JTextField xmlFileName;
+    private JLabel label1;
+    private JButton button1;
+    private JPanel panel5;
+    private JRadioButton latexRadioButton;
+    private JRadioButton mathmlRadioButton;
+    private JRadioButton imageRadioButton;
     // JFormDesigner - End of variables declaration //GEN-END:variables
 }

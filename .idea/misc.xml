@@ -1,19 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AzureSettings">
+    <option name="storageAccount" value="rO0ABXVyAExbTGNvbS5taWNyb3NvZnRvcGVudGVjaG5vbG9naWVzLmF6dXJlY29tbW9ucy5zdG9yYWdlcmVnaXN0cnkuU3RvcmFnZUFjY291bnQ7lcwAzqc4SBYCAAB4cAAAAAA=" />
+  </component>
   <component name="EntryPointsManager">
     <entry_points version="2.0" />
   </component>
-  <component name="FrameworkDetectionExcludesConfiguration">
-    <type id="Spring" />
-  </component>
-  <component name="IdProvider" IDEtalkID="188368BCA80ED5E8B33BB41471A03C0E" />
-  <component name="MavenProjectsManager">
-    <option name="originalFiles">
-      <list>
-        <option value="$USER_HOME$/Desktop/LuceneProject/LuceneProject/pom.xml" />
-      </list>
-    </option>
-  </component>
+  <component name="IdProvider" IDEtalkID="B2BE29457DE128B5EF38F443BFE493CF" />
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_7" assert-keyword="true" jdk-15="true" project-jdk-name="1.7" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>

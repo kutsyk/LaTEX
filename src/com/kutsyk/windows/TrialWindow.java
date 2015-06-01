@@ -1,22 +1,15 @@
 package com.kutsyk.windows;
 
-import java.awt.event.*;
-import com.kutsyk.security.AES;
-import net.sf.saxon.functions.Parse;
-
+import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.io.*;
-import java.nio.charset.Charset;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
-import java.util.Locale;
-import javax.swing.*;
-import javax.swing.GroupLayout;
-import javax.swing.LayoutStyle;
-import javax.swing.border.*;
 /*
  * Created by JFormDesigner on Tue May 05 16:26:31 EEST 2015
  */
@@ -90,7 +83,7 @@ public class TrialWindow extends JFrame {
 
     private boolean checkDates(String datesLine) {
         String[] stringDates = datesLine.split("LaTEX");
-        ArrayList<Date> dates = new ArrayList<>();
+        ArrayList<Date> dates = new ArrayList<Date>();
         for (int i=1;i<stringDates.length;++i) {
             String date = stringDates[i];
             try {
