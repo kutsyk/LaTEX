@@ -100,8 +100,8 @@ public class MainWindow extends JFrame {
                 errorLogFile.println(new String(b, off, len));
             }
         };
-//		System.setOut(new PrintStream(out, true));
-//		System.setErr(new PrintStream(out, true));
+		System.setOut(new PrintStream(out, true));
+		System.setErr(new PrintStream(out, true));
     }
 
     /**
@@ -611,6 +611,11 @@ public class MainWindow extends JFrame {
         return useIsoCharSymbolReplacign.isSelected();
     }
 
+	private void logSendButtonActionPerformed(ActionEvent e) {
+		LoggingSender sender = new LoggingSender();
+        sender.setVisible(true);
+	}
+
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY
         // //GEN-BEGIN:initComponents
@@ -734,7 +739,7 @@ public class MainWindow extends JFrame {
 //							"JFormDesigner Evaluation", javax.swing.border.TitledBorder.CENTER,
 //							javax.swing.border.TitledBorder.BOTTOM, new java.awt.Font("Dialog", java.awt.Font.BOLD, 12),
 //							java.awt.Color.red), panel7.getBorder())); panel7.addPropertyChangeListener(new java.beans.PropertyChangeListener(){public void propertyChange(java.beans.PropertyChangeEvent e){if("border".equals(e.getPropertyName()))throw new RuntimeException();}});
-//
+
 					panel7.setLayout(new BoxLayout(panel7, BoxLayout.X_AXIS));
 
 					//======== scrollPane ========
@@ -809,6 +814,12 @@ public class MainWindow extends JFrame {
 				logSendButton.setText("Send error log");
 				logSendButton.setFont(new Font("Calibri", Font.PLAIN, 14));
 				logSendButton.setIcon(UIManager.getIcon("OptionPane.informationIcon"));
+				logSendButton.addActionListener(new ActionListener() {
+                    @Override
+                    public void actionPerformed(ActionEvent e) {
+                        logSendButtonActionPerformed(e);
+                    }
+                });
 
 				GroupLayout panel1Layout = new GroupLayout(panel1);
 				panel1.setLayout(panel1Layout);
@@ -953,12 +964,12 @@ public class MainWindow extends JFrame {
 		GroupLayout contentPaneLayout = new GroupLayout(contentPane);
 		contentPane.setLayout(contentPaneLayout);
 		contentPaneLayout.setHorizontalGroup(
-			contentPaneLayout.createParallelGroup()
-				.addComponent(tabbedPane1)
-				.addGroup(contentPaneLayout.createSequentialGroup()
-					.addComponent(spliPaneWithDoc, GroupLayout.DEFAULT_SIZE, 732, Short.MAX_VALUE)
-					.addContainerGap())
-		);
+                contentPaneLayout.createParallelGroup()
+                        .addComponent(tabbedPane1)
+                        .addGroup(contentPaneLayout.createSequentialGroup()
+                                .addComponent(spliPaneWithDoc, GroupLayout.DEFAULT_SIZE, 732, Short.MAX_VALUE)
+                                .addContainerGap())
+        );
 		contentPaneLayout.setVerticalGroup(
 			contentPaneLayout.createParallelGroup()
 				.addGroup(contentPaneLayout.createSequentialGroup()

@@ -22,9 +22,6 @@ public class TrialWindow extends JFrame {
 
     private File securityDateFile;
     private String dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ";
-    //    private String key = "1a25s8fe5dsg65ad";
-//    private String key = "WjgJ8Td76u2Ah42A";
-//    private byte[] byte_key;
     private boolean validTrial = false;
     private int trialLength;
 

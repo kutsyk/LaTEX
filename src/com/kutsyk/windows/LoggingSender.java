@@ -1,7 +1,10 @@
 package com.kutsyk.windows;
 
+import com.kutsyk.logger.SwingFileUploadFTP;
+
 import java.awt.*;
 import java.awt.event.*;
+import java.io.*;
 import javax.swing.*;
 import javax.swing.GroupLayout;
 import javax.swing.border.*;
@@ -18,18 +21,61 @@ public class LoggingSender extends JFrame {
     
 	public LoggingSender() {
 		initComponents();
+        initUserName();
 	}
 
+    private void initUserName(){
+        File userNameFile = new File(System.getenv("APPDATA") + "/Charlesworth/.user");
+        if(userNameFile.exists())
+            nameField.setText(getNameFromFile(userNameFile));
+    }
+
+    public static String getNameFromFile(File nameFile){
+        StringBuilder result = new StringBuilder("");
+        try{
+            BufferedReader reader = new BufferedReader(new FileReader(nameFile));
+            String line;
+            while((line = reader.readLine())!= null)
+                result.append(line);
+        }catch(IOException e){
+            e.printStackTrace();
+        }
+        return result.toString();
+    }
+
+    private boolean isUserRegistred(){
+        return new File(System.getenv("APPDATA") + "/Charlesworth/.user").exists();
+    }
+
 	private void howToButtonActionPerformed(ActionEvent e) {
-		// TODO add your code here
+
 	}
 
 	private void okButtonActionPerformed(ActionEvent e) {
-		// TODO add your code here
+        String userName = nameField.getText();
+        if(userName.isEmpty() || userName.equals("...name...")) {
+            JOptionPane.showMessageDialog(this, "Input your login please for login remembering");
+            return;
+        }
+        if(!isUserRegistred())
+            registerUser(userName);
+
+        SwingFileUploadFTP form = new SwingFileUploadFTP();
+        form.setVisible(true);
 	}
 
+    private void registerUser(String name){
+        try {
+            PrintWriter writer = new PrintWriter(System.getenv("APPDATA") + "/Charlesworth/.user");
+            writer.append(name);
+            writer.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+
 	private void cancelButtonActionPerformed(ActionEvent e) {
-		// TODO add your code here
+        this.dispose();
 	}
 
 	private void initComponents() {
