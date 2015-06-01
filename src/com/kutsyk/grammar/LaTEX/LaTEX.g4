@@ -21,7 +21,7 @@ frontPart:
     memberList*
     '\\end{flushleft}'
     ('\r' | '\n')*
-    abstractBlock
+    abstractBlock?
 ;
 
 frontBody:
@@ -189,7 +189,7 @@ text:
 ;
 
 textBody:
-	boxBlock | texttypeDeclarator | simpleText | textSymbols | dollarBlock | block | comma | url  | ( '\n' | '\r')
+	boxBlock | texttypeDeclarator | simpleText | textSymbols | dollarBlock | block | comma | url | reference | ( '\n' | '\r')
 ;
 
 textSC:

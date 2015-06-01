@@ -377,6 +377,9 @@ public class ToXML extends LaTEXBaseListener {
         wasSectionDeclared = true;
     }
 
+    private static final String abstractString = "abstract";
+    private boolean abstractDone = false;
+
     public void enterSectionDeclaration(
             LaTEXParser.SectionDeclarationContext ctx) {
 
@@ -386,9 +389,19 @@ public class ToXML extends LaTEXBaseListener {
         sectionCloser();
 
         String littleTitle = title.toLowerCase();
-//        if (littleTitle.contains("author") && littleTitle.contains("summary"))
-//            writer.append("<body>");
+        wasAbstractDeclared = (littleTitle.length() == abstractString.length() ||
+                littleTitle.length() == abstractString.length() + 1) && littleTitle.contains(abstractString);
+        if (wasAbstractDeclared)
+            abstractDone = true;
 
+        shouldTextBeMissed = false;
+
+        if (wasAbstractDeclared) {
+            writer.append("<abstract>");
+            writer.print("<title>");
+            wasSectionDeclared = false;
+            return;
+        }
 
         if (littleTitle.equals("acknowledgements") || littleTitle.equals("acknowledgement")
                 || littleTitle.equals("acknowledgments")) {
@@ -518,7 +531,11 @@ public class ToXML extends LaTEXBaseListener {
     private void sectionCloser() {
         if (wasParagraphFilled)
             paragraphCloser();
-
+        if (abstractDone) {
+            writer.print("</abstract></article-meta></front><body>");
+            abstractDone = false;
+            return;
+        }
         if (wasAcknowledgement) {
             writer.print("</acks>");
             wasAcknowledgement = false;
@@ -773,24 +790,6 @@ public class ToXML extends LaTEXBaseListener {
             writer.println("</equ>");
         } else if (MainWindow.getFormulasType().equals("images")) {
             ++imageId;
-//            TeXFormula formula = new TeXFormula(ctx.getText());
-//            TeXIcon icon = formula.new TeXIconBuilder().setStyle(TeXConstants.STYLE_DISPLAY).setSize(20).build();
-//
-//            icon.setInsets(new Insets(5, 5, 5, 5));
-//
-//            BufferedImage image = new BufferedImage(icon.getIconWidth(), icon.getIconHeight(), BufferedImage.TYPE_INT_ARGB);
-//            Graphics2D g2 = image.createGraphics();
-//            g2.setColor(Color.white);
-//            g2.fillRect(0, 0, icon.getIconWidth(), icon.getIconHeight());
-//            JLabel jl = new JLabel();
-//            jl.setForeground(new Color(0, 0, 0));
-//            icon.paintIcon(jl, g2, 0, 0);
-//            String path = MainWindow.getFullPath() + "-formula-" + imageId + ".png";
-//            File file = new File(path);
-//            try {
-//                ImageIO.write(image, "png", file.getAbsoluteFile());
-//            } catch (IOException ex) {
-//            }
             SnuggleEngine engine = new SnuggleEngine();
             SnuggleSession session = engine.createSession();
 
@@ -831,13 +830,14 @@ public class ToXML extends LaTEXBaseListener {
 
                 Converter.getInstance().convert(doc, file, "image/" + "png",
                         params);
-//                Assert.assertTrue(outFile.exists());
-//                Assert.assertTrue(outFile.length() > 0);
                 writer.print("<inline-graphic id=\"g" + imageId + "\" xlink:href=\"" + path + "\"/>");
             } catch (Exception e) {
-                System.out.println("Parse error: ");
+                writer.println("<equ id=\"equ" + equationCounter + "\" type=\"inline\">");
+                writeFormula(ctx.getText());
+                writer.println("</equ>");
                 e.printStackTrace();
                 System.out.println("Parse error: ");
+
             }
         } else {
             /* Create vanilla SnuggleEngine and new SnuggleSession */
@@ -849,9 +849,12 @@ public class ToXML extends LaTEXBaseListener {
             try {
                 session.parseInput(input);
             } catch (IOException e) {
-                System.out.println("Parse error: ");
+                writer.println("<equ id=\"equ" + equationCounter + "\" type=\"inline\">");
+                writeFormula(ctx.getText());
+                writer.println("</equ>");
                 e.printStackTrace();
                 System.out.println("Parse error: ");
+                return;
             }
             /* Specify how we want the resulting XML */
             XMLStringOutputOptions options = new XMLStringOutputOptions();

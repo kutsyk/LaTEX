@@ -182,9 +182,9 @@ public class Translator {
                 break;
             }
             if(!skip)
-//                if(line.endsWith("\n"))
+                if(line.endsWith("\n"))
                     os.print(replaceCommandIfFound(line));
-//                else os.println(replaceCommandIfFound(line));
+                else os.println(replaceCommandIfFound(line));
         }
         fin.close();
         os.close();

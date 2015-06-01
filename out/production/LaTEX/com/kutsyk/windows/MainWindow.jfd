@@ -13,7 +13,7 @@
        <class>org.jdesktop.layout.GroupLayout</class> 
        <void method="setProperty"> 
         <string>$horizontalGroup</string> 
-        <string>par l {comp tabbedPane1::l::742:x, seq l {comp spliPaneWithDoc::::732:x, space :::p}}</string> 
+        <string>par l {comp tabbedPane1::l:::x, seq l {comp spliPaneWithDoc::::732:x, space :::p}}</string> 
        </void> 
        <void method="setProperty"> 
         <string>$verticalGroup</string> 
@@ -238,11 +238,11 @@
            <class>org.jdesktop.layout.GroupLayout</class> 
            <void method="setProperty"> 
             <string>$horizontalGroup</string> 
-            <string>par l {seq {space :::p, comp translateButton:::p::p, space :::p, comp saveDocumentButton:::p::p, space :::p, comp saveXmlDocument:::p::p, space :::p, comp progress::::318:x, space :::p}}</string> 
+            <string>par l {seq {space :p::p, comp translateButton:::p::p, space :p::p, comp saveDocumentButton:::p::p, space :::p, comp saveXmlDocument:::p::p, space :::p, comp logSendButton:::p:147:p, space :::p, comp progress::::165:x, space :p:10:p:1}}</string> 
            </void> 
            <void method="setProperty"> 
             <string>$verticalGroup</string> 
-            <string>par l {seq l {space :::p, par l {comp progress::t::25:x:1, par l:l::p {comp translateButton::l:::x:1, comp saveDocumentButton::l:::x:1, comp saveXmlDocument::l:::x:1}}, space ::18:x}}</string> 
+            <string>par l {seq l {space :::p, par l {comp progress::t::41:x:1, par l:l::p {comp translateButton::l:::x:1, comp saveDocumentButton::l:::x:1, par b:l {comp saveXmlDocument::b::41:x:1, comp logSendButton::b:p:41:p}}}, space :::x}}</string> 
            </void> 
           </object> 
           <void property="name"> 
@@ -351,6 +351,33 @@
             <string>javax.swing.JProgressBar</string> 
             <void property="name"> 
              <string>progress</string> 
+            </void> 
+           </object> 
+          </void> 
+          <void method="add"> 
+           <object class="com.jformdesigner.model.FormComponent"> 
+            <string>javax.swing.JButton</string> 
+            <void method="setProperty"> 
+             <string>text</string> 
+             <string>Send error log</string> 
+            </void> 
+            <void method="setProperty"> 
+             <string>font</string> 
+             <object class="java.awt.Font"> 
+              <string>Calibri</string> 
+              <int>0</int> 
+              <int>14</int> 
+             </object> 
+            </void> 
+            <void method="setProperty"> 
+             <string>icon</string> 
+             <object class="com.jformdesigner.model.SwingIcon"> 
+              <int>2</int> 
+              <string>OptionPane.informationIcon</string> 
+             </object> 
+            </void> 
+            <void property="name"> 
+             <string>logSendButton</string> 
             </void> 
            </object> 
           </void> 
