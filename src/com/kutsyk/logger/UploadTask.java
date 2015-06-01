@@ -59,9 +59,7 @@ public class UploadTask extends SwingWorker<Void, Void> {
                 percentCompleted = (int) (totalBytesRead * 100 / fileSize);
                 setProgress(percentCompleted);
             }
-
             inputStream.close();
-
             util.finish();
         } catch (FTPException ex) {
             JOptionPane.showMessageDialog(null, "Error uploading file: " + ex.getMessage(),
@@ -82,9 +80,9 @@ public class UploadTask extends SwingWorker<Void, Void> {
     @Override
     protected void done() {
         if (!isCancelled()) {
-            JOptionPane.showMessageDialog(null,
-                    "File has been uploaded successfully!", "Message",
-                    JOptionPane.INFORMATION_MESSAGE);
+//            JOptionPane.showMessageDialog(null,
+//                    "File has been uploaded successfully!", "Message",
+//                    JOptionPane.INFORMATION_MESSAGE);
         }
     }
 }

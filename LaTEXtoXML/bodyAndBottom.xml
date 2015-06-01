@@ -1,0 +1,340 @@
+<front><article-meta>
+<title-group>
+<article-title>
+A Synergism between Adaptive Effects and Evolvability Drives Whole Genome Duplication to Fixation</article-title>
+</title-group>
+<abstract>Whole genome duplication has shaped eukaryotic evolutionary history and has been associated with drastic environmental change and species radiation. While the most common fate of WGD duplicates is a return to single copy, retained duplicates have been found enriched for highly interacting genes. This pattern has been explained by a neutral process of subfunctionalization and more recently, dosage balance selection. However, much about the relationship between environmental change, WGD and adaptation remains unknown. Here, we study the duplicate retention pattern post WGD, by letting virtual cells adapt to environmental changes. The virtual cells have structured genomes that encode a regulatory network and simple metabolism. Populations are under selection for homeostasis and evolve by point mutations, small indels and WGD. After populations had initially adapted fully to fluctuating resource conditions readaptation to a broad range of novel environments was studied by tracking mutations in the line of descent. WGD was established in a minority(<equ id="equ1" type="inline">
+<tex>
+$\approx30\%$
+
+</tex></equ>
+)of lineages, yet, these were significantly more successful at readaptation. Unexpectedly, WGD lineages conserved more seemingly redundant genes, yet had higher per gene mutation rates. While WGD duplicates of all functional classes were significantly overretained compared to a model of neutral losses, duplicate retention was clearly biased towards highly connected TFs. Importantly, no subfunctionalization occurred in conserved pairs, strongly suggesting that dosage balance shaped retention. Meanwhile, singles diverged significantly. WGD, therefore, is a powerful mechanism to cope with environmental change, allowing conservation of a core machinery, while adapting the peripheral network to accommodate change. </abstract></article-meta></front><body><section><title>Author Summary</title><p> The evolution of eukaryotes is characterized by drastic changes in their genome content. Genome expansions have often occurred by duplication of the entire genome. It is generally not know whether organisms gain any adaptive advantage from these mutations. However, they appear to become fixed in response to environmental change. Many interesting whole genome duplications happened long ago in eukaryotic evolutionary history during periods of turbulent genome and species evolution. Genomic data analysis alone cannot resolve the evolutionary mechanisms and consequences of whole genome duplication. Here, we modeled evolution with whole genome duplications in a Virtual Cell model. Simulating populations that undergo a range of different environmental changes we found that next to often increasing fitness directly, whole genome duplications made lineages more evolvable and hence more able to adapt to harsh new environments. Although most duplicates are deleted in subsequent evolution, genes with many interaction partners were retained preferentially, increasing regulatory complexity. Interestingly however, we found that innovation happened most likely in the more loosely connected and less essential genes. </p></section><section><title>Introduction</title><p> Eukaryotic genomes differ up to an astonishing 200000  fold in the amount of their DNA, by far the widest range within all domains of life <citref rids="ref1">1</citref>. In eukaryotic evolution large changes in genome size have heralded major transitions, starting with the radiation from a common ancestor of the eukaryotic supergroups within a short evolutionary timespan <citref rids="ref2 ref3">2,3</citref>. Subsequent dramatic radiations of animals in the Cambrian explosion and flowering plants have also been preceded by extensive increases in genome size <citref rids="ref4 ref5">4,5</citref>. But even within narrow taxonomic bounds remarkable levels of genome size variability exist, such as the seven fold difference within the Brachionus plicatilis species complex <citref rids="ref6">6</citref>. </p><p>What are the evolutionary mechanisms underlying this flexibility in genome size and how does it affect the dynamics of eukaryotic evolutionary historyEver since Ohno first proposed that the genome of the vertebrate ancestor had undergone two rounds(2  R)of duplication <citref rids="ref7">7</citref>, evidence of the pervasiveness of WGD in eukaryotic evolution has been mounting. The 2  R hypothesis itself has been strongly backed by recent phylogenetic studies <citref rids="ref8 ref9">8,9</citref>. Similarly, species radiations of angiosperms <citref rids="ref10">10</citref>, teleost fish <citref rids="ref11">11</citref>and yeasts <citref rids="ref12">12</citref>have all been associated with rounds of WGD. Especially in plants, the transition to polyploidy appears to be remarkably frequent. Therefore, in addition to all flowering plants being of paleopolyploid descent <citref rids="ref10 ref13">10,13</citref>, it is estimated that up to a third of all extant plant species underwent polyploidization since their most recent speciation <citref rids="ref14">14</citref>. </p><p>Recognizing the ubiquity of WGD in eukaryotic evolution, it becomes crucial to understand the mechanisms that lead to their fixation in evolving populations. Data on plants suggest that changing environmental conditions can give rise to the establishment of polyploid lineages. For example, polyploid incidence is increased in harsher and newly arisen environments such as the arctic <citref rids="ref15">15</citref>and on islands created by volcanic activity <citref rids="ref16">16</citref>or at the ecological limits of nonpolyploid parent species(reviewed extensively in <citref rids="ref17">17</citref>). An extensively studied case of ancient WGD that happened in the ancestor of S. cerevisiae was shown to potentially yield a direct adaptive benefit when a novel, glucose rich environment arose <citref rids="ref18 ref19">18,19</citref>. However, direct adaptive benefits may not play a role in other historic cases of WGD which instead may be better explained by a general increase in evolvability. This may be the reason why a burst of WGDs in plants appears to coincide with the KT boundary event, explaining the success of these lineages in overcoming the drastic change in climate conditions <citref rids="ref20 ref21">20,21</citref>. </p><p>Most duplicates that arose from an ancient WGD event will have typically returned to a single copy state, thereby eroding the signal of WGD <citref rids="ref12">12</citref>. Remaining ohnolog(duplicates arising from WGD)fractions, ranging from 16 in yeast <citref rids="ref22">22</citref>to more than 50 in P. tetraurelia <citref rids="ref23">23</citref>, have been studied to gain insights in the potential adaptive benefits of WGD and evolutionary forces that play a role in post WGD genome evolution. In general, duplicate retention post WGD is not equal for all gene classes. A pattern found across species is an overretention of transcription factors(TFs)and signaling genes in duplicate <citref rids="ref-1 ref24 ref25">-1,24,25</citref>melnick_contrasting_2012, bekaert_twophase_2011, freeling_bias_2009, aury_global_2006. </p><p>Neutral loss of subfunctions in both copies, for example losing different subset of target genes for TFs could enforce this retention <citref rids="ref29">29</citref>and has indeed been observed for Arabidopsis ohnologs <citref rids="ref30 ref31">30,31</citref>. However, a characteristic reciprocal relationship between the retention of duplicates resulting from WGD and small scale duplication(SSD)can not be easily explained by subfunctionalization. For example, TFs have been overretained post WGD, while underretained post SSD <citref rids="ref-1 ref28 ref32 ref33 ref34 ref35">-1,28,32-35</citref>melnick_contrasting_2012. This pattern would, however, be predicted by the gene balance theory, because the two modes of duplication affect the balance between interacting gene products differently. Whereas a WGD should generally retain the balance between highly interacting genes, SSD most likely disrupts this balance by only increasing the dosage of a few genes <citref rids="ref-1 ref34">-1,34</citref>melnick_contrasting_2012, carreteropaulet_evolutionary_2012, freeling_bias_2009. This suggests that dosage balance selection could drive retention of duplicates post WGD <citref rids="ref28 ref37">28,37</citref>at least on short evolutionary timescales. Transient retention due to dosage balance selection can increase the chance that duplicates subfunctionalize or even neofunctionalize, further increasing the likelihood of duplicate retention <citref rids="ref-1">-1</citref>phase_2011. </p><p>How gene balance constraints affect gene divergence and loss remains, however, poorly understood. One important reason is that adaptive and neutral genome evolution post WGD can produce mixed conservation patterns <citref rids="ref-1">-1</citref>phase_2011. In short, we lack a comprehensive mechanistic understanding of the causes and consequences of WGD when populations adapt to environmental change as well as its impact on long term genome evolution. </p><p>Here we have taken an integrated modeling approach to study conditions for and consequences of fixation of WGD in populations that adapt to an environmental change. Within our Virtual Cell model, we tracked mutations and patterns of genome conservation along the line of descent. WGD was modeled as an ongoing mutation, alongside small scale duplications, deletions and rearrangements, as well as point mutations. Lineages arising from identical ancestral populations alternatively evolved with and without WGD, allowing for a direct comparison of the two modes of evolution. </p><p>Our results show that fixation of a WGD increases the likelihood that a population will readapt successfully to a novel environmental condition. Surprisingly, the ancestral gene content of WGD lineages declines more slowly than that of lineages without WGD, while per gene mutation rates were higher in WGD lineages. At the same time, we found that ohnologs were overretained relative to expectations based on random losses. This effect was strongest for TFs. In agreement with predictions from the gene balance hypothesis we found that TFs with many outgoing interactions were most likely to remain in duplicate. Because very little subfunctionalization was detected in these TFs we concluded that selection for dosage balance caused the overretention pattern. Hence, a relatively simple, biologically inspired model can explain the association between WGD and environmental change as well as the overarching pattern of biased gene retention that is found in an expanding body of phylogenetic studies of paleopolyploidy. </p></section><section><title>Results</title><p> The Virtual Cell model consists of populations of cells that have structured genomes encoding three basic classes of genesTFs, metabolic enzymes and pumps. Together, they constitute a simple metabolism that can be regulated by sensory feedback. The metabolism revolves around two simple moleculesa resource(<equ id="equ2" type="inline">
+<tex>
+$A$
+
+</tex></equ>
+)that is available extracellularly and can be transported into the cell, and an energy molecule(<equ id="equ3" type="inline">
+<tex>
+$X$
+
+</tex></equ>
+)that is produced from the resource and consumed in active transport of the resource into the cell or in an anabolic reaction that channels resource into downstream metabolism. The fitness of cells depends on their ability to keep internal<equ id="equ4" type="inline">
+<tex>
+$A$
+
+</tex></equ>
+and<equ id="equ5" type="inline">
+<tex>
+$X$
+
+</tex></equ>
+concentrations at a constant target level while environmental<equ id="equ6" type="inline">
+<tex>
+$A$
+
+</tex></equ>
+concentrations fluctuate. The performance of a cell in a particular resource condition depends on minimizing the deviation at steady state in<equ id="equ7" type="inline">
+<tex>
+$X$
+
+</tex></equ>
+and<equ id="equ8" type="inline">
+<tex>
+$A$
+
+</tex></equ>
+internal concentrations from the targets. A cells fitness is a function of the performances in up to three environments seen in the lifetime of a cell(explained in more detail in Materials and Methods). To do well under the wide range of fluctuating resource conditions, cells have to evolve tightly regulated resource import and metabolism to maintain their homeostasis. </p><p>Mutations occur both at the gene and the genomic level. At the gene level, point mutations affect binding strength and reaction rates of the molecular processes as well as changing gene regulatory interaction structures. TFs regulate genes when their binding motif matches that on a genes promoter(discrete), while the strength(continuous)and sign of the regulation are coded for by the TF. Interaction structure and the regulatory effect can be independently mutated. At the genomic level, variable stretches of adjacent genes covering up to a quarter of the genome are duplicated or deleted at a rate of 0.024  per generation or reinserted in a new position(0.048 )relative to other genes. Finally, the rate of whole genome duplications is approximately a factor 10  lower than SSD, affecting on average 0.3 percent of the population per generation. Note that the introduction of WGD mutations results in a small upward mutational bias for genome size. Nevertheless, the long term evolutionary trend in our simulations was invariably towards smaller genomes. Per gene mutation rates were identical between simulations and kept constant during evolution. </p></section><fig id="fig1" num="1"><caption><emph type="bold"><emph type="bold">Figure 1. Virtual Cell simulation protocol.</emph> </emph>A schematic overview of the Virtual Cell model shows how resource<equ id="equ9" type="inline">
+<tex>
+$A$
+
+</tex></equ>
+can diffuse and be transported into the cell, where it is converted to energy molecule<equ id="equ10" type="inline">
+<tex>
+$X$
+
+</tex></equ>
+and further catabolized into an unspecified end product. The expression of genes coding for different variants(differently evolved parameters for substrate affinities and binding motifs)of enzymes, pumps and TFs are differentially regulated depending on TF regulatory interactions with their promoters. Genes are located on a spatially explicit, circular genome. For our simulation protocol 100  populations consisting of 1024  cells each were randomly initialized and evolved under standard environmental conditions. From populations that reached high fitness(arbitrarily defined as a fitness higher than 0.85 )10  were selected for further environmental change testing. 1000  generations upon reaching high fitness these 10  selected populations were each subjected to 80  novel environmental conditions. From the 800  simulations fit runs were grouped into lineages with WGD and lineages without WGD within their line of descent. A neutral control set was formed by continuing evolution of the initially fit lineages under identical standard environmental conditions. </caption>
+</fig>
+<p>In order to study readaptation after a change in the environment, we first evolved populations of virtual cells in a standard environment with a fluctuating resource concentration and subsequently let them readapt to a large set of novel environmental conditions in parallel evolutionary simulations(Fig. <xref>protocol</xref>. Because the model does not allow for explicit changes in the environment, other than resource fluctuations, we used as a proxy for novel environmental conditions, a set of changes in the nonevolvable parameters of the model. These five parameters that are otherwise fixed aremembrane permeability, protein degradation, energy yield from resource molecules and the two homeostatic targets for<equ id="equ11" type="inline">
+<tex>
+$A$
+
+</tex></equ>
+and<equ id="equ12" type="inline">
+<tex>
+$X$
+
+</tex></equ>
+. By systematically changing three parameters at a time we created a set of 80  novel conditions that were used to challenge the preevolved populations(see Materials and Methods and Table S1 for details about the environments). The fitness criterion was always homeostasis. From a set of 100  simulations performed under standard environmental conditions, we selected 10  populations that evolved highly accurate homeostasis regulation for a broad range of external resource concentrations. Next, for the 10  seed populations environmental change was applied 1000  timesteps after high fitness was obtained. Each was subjected to the 80  novel environmental conditions and allowed to readapt. As a control, all fit lineages from the 100  initial simulations, including the 10  populations selected for environmental change testing, also continued neutral evolution, without environmental change, for a further 15000  generations. </p><fig id="fig2" num="2"><caption><emph type="bold"><emph type="bold">Figure 2. Fitness and whole genome duplication results.</emph> </emph>(A, B)Simulations binned on the time of reaching high fitness(0.85 ), when adapting for the first time to standard conditions(A)and readapting after an environmental change(B). The bars are split into a fraction that adapted with(red)and without(cyan)a WGD. The inset of B shows the differently shaped distributions of adaptation times on a logscale for WGD and nonWGD lineages, with WGD lineages showing a sharper peak at intermediate adaptation times. (C)Fractions of runs that became fit after environmental change, separated for runs with and without an ancestral WGD respectively. D, E and F show fitness evolution of three example simulations, where the initial adaption(gray background)is the same and subsequent readaptation occurs in different environments(yellow background). We show an example of readaptation with additional rounds of WGD at an intermediate time scale(D)and readaptation without WGD(E, F)on a longer timescale(E)and on very short timescale of a few tens of generations, after a sharp fitness drop(F). </caption>
+</fig>
+
+<section level="2" id="section4"><title>Readaptation with WGD</title><p> Initial adaptation times varied widely and those that reached high fitness within 15000  generations almost always involved one or more WGDs(Fig. <xref>overview</xref> A). In contrast, readaptation times for lineages after environmental change were much shorter(Fig. <xref>overview</xref> B, DE). More than<equ id="equ13" type="inline">
+<tex>
+$40\%$
+
+</tex></equ>
+reached high fitness within 1000  generations. This was surprising, because at the start of readaptation, fitnessess dropped on average below the level of randomly initialization starting populations. In addition, in successfully readapting lineages WGD events became fixed in a minority of lineages, being particularly rare in rapidly readapting lineages(Fig. <xref>overview</xref> B inset, F). The cases with rapid readaptations suggest that mutational paths to new phenotypes can be very short, requiring very little change at the genomic level. Notwithstanding the near absence of WGD in rapidly readapting lineages, fixation of WGD in the line of descent improved the overall success rate of readaptation from<equ id="equ14" type="inline">
+<tex>
+$79\%$
+
+</tex></equ>
+to<equ id="equ15" type="inline">
+<tex>
+$95\%$
+
+</tex></equ>
+(Fig. <xref>overview</xref> C). Even though WGDmutants were generated continuously in the population throughout the evolutionary experiments, very few WGDs were ultimately accepted in the line of descent of the final population. Accepted WGDs occured almost exclusively(in<equ id="equ16" type="inline">
+<tex>
+$95\%$
+
+</tex></equ>
+of cases)within 500  generations of the environmental change. The much shorter time scale of genomic expansion relative to the timescale of full readaptation is in agreement with our previous work on the Virtual Cell model, showing that early evolution of large genomes generally resulted in better long term evolvability <citref rids="ref38">38</citref>. </p></section>
+<section level="2" id="section5"><title>Evolution of gene content</title><p> To study the adaptation process following WGD in more detail we analyzed the evolution of gene content after the environmental change was applied. For all populations the environmental change took place 1000  generations after a fitness<equ id="equ17" type="inline">
+<tex>
+$>0.85$
+
+</tex></equ>
+was first recorded in the population. At that time the genome was typically several fold larger than the minimum genome size reached towards the end of the simulation as a result of long term streamlining(Fig. <xref>ortholog_conservation</xref> inset). Our previous work on the Virtual Cell model showed that streamlining reduces mutational load by the removal of redundant genes and a focussing cellular function into a small set of essential genes <citref rids="ref38">38</citref>, explaining how a relatively large proportion of ancestral gene content is lost during the readaptation to the novel environment(Fig. <xref>ortholog_conservation</xref>. </p><p>The conservation of gene content was measured as the fraction of genes in the ancestor, alive during the environmental change, that was maintained in subsequent descendants. Duplicates that arose from WGD and SSD later in evolution were not included in counts of ancestral gene content. As expected, continued neutral evolution in the control set led to drastic streamlining and turnover of the genome, resulting in the loss of approximately two thirds of the original gene content(Fig. <xref>ortholog_conservation</xref>gray shaded area). Readaptation to environmental change led to even larger changes in gene content, as expected. However, in contrast to our expectation that WGD copies are functionally redundant, a larger fraction of ancestral gene content was conserved in WGD lineages than in nonWGD lineages for more than 5000  generations after environmental change(Fig. <xref>ortholog_conservation</xref>. This was despite the fact that the per gene deletion rate remains constant with differences in genome size(see Methods). Also, on the long run, the average conserved fraction in WGD lineages, although dropping below that of non WGD lineages, always remained above half the conserved fraction in nonWGD lineages. This shows that at least some fraction of the ancestral content was selectively retained in duplicate. </p><fig id="fig3" num="3"><caption><emph type="bold"><emph type="bold">Figure 3. Fraction of conserved ancestral gene content through evolutionary time.</emph> </emph>The gene content of ancestors at the time of environmental switch was used as reference. At 1000  generation intervals, the overlap in gene content of descendants with the reference was measured. All genes inherited one to one from the ancestral reference(not counting copies from subsequent duplication events)count towards the retained fraction of the total ancestral gene content, in WGD lineages(red), nonWGD lineages(blue)and a neutral control set where the environment was kept the same(gray). Boxes and whiskers show the 50 (box)and 75 (whiskers)ranges of the data around the median(line). Triangles and the upper edge of the shaded area show the averages of the environmental change and neutral evolutionary runs, respectively. The inset shows the distribution of genome sizes. </caption>
+</fig>
+</section>
+<section level="2" id="section6"><title>Effective mutation rates</title><p> To find an explanation for the difference in gene content conservation between WGD and nonWGD lineages we analyzed the fixation of different mutation types. The frequency of accepted deletions in neutral, WGD and nonWGD lineages were very similar, although slightly lower for WGD lineages over the whole simulation interval, compared to non WGD and neutrally evolving lineages. However, the fraction deleted per event, for mutations that were accepted, was much smaller for WGD lineages than for neutrally evolving and nonWGD lineages(Fig. <xref>deletion_fractions</xref> A<equ id="equ18" type="inline">
+<tex>
+$p<10^{-190}$
+
+</tex></equ>
+)despite this fraction being equal in the background mutations for all three categories. The result was that smaller fractions of the genome were lost per generation in WGD lineages(Fig. <xref>deletion_fractions</xref> A inset<equ id="equ19" type="inline">
+<tex>
+$p<10^{-18}$
+
+</tex></equ>
+). </p><fig id="fig4" num="4"><caption><emph type="bold"><emph type="bold">Figure 4. Deletion and point mutation rates in the line of descent.</emph> </emph>(A)Rate of genes deleted per accepted deletion event as a fraction of total genome size. These fractions were averaged for all fit runs with(red)and without(cyan)a WGD as well as a control set of runs that continued without environmental change(gray), and binned in 1000  generation intervals. In the inset, accepted deletion fractions are per generation instead of per event. (B)Accepted point mutation rates per generation as a fraction of total genome size. The fractions were averaged for all fit runs with(red)and without(cyan)a WGD as well as a control set of runs that continued without environmental change(gray), and binned in 1000  generation intervals. </caption>
+</fig>
+<p>In contrast, the rate at which point mutations were accepted was significantly higher in WGD lineages compared to nonWGD lineages(Fig. <xref>deletion_fractions</xref> B<equ id="equ20" type="inline">
+<tex>
+$p<10^{-288}$
+
+</tex></equ>
+), while for the latter, this rate was again very similar to that in the neutral control set(<equ id="equ21" type="inline">
+<tex>
+$p=0.64$
+
+</tex></equ>
+). This suggested that individual genes diverged much faster in WGD lineages than nonWGD lineages. In summary, WGD appeared to promote the conservation of duplicated genes, while at the same time enabled genes to diverge more and change their function. A process that fits with these two characteristics is subfunctionalization. To investigate whether the contrast between gene content conservation and higher gene function divergence in WGD lineages could be explained by a subfunctionalization process we focused our subsequent analysis on the fates and divergence of the ohnologs. </p></section>
+<section level="2" id="section7"><title>Ohnolog retention</title><p> We performed random deletion simulation to find the expected pair retention fractions for TFs, enzymes and pumps, separately. For every evolutionary simulation in our test set a random deletion simulation was performed that had the genome configurations of the common ancestor at the time of environmental change in the evolutionary run as its starting point. In the random deletion run, equal amounts of deletions per gene class were performed to those found in the line of descent in the evolutionary run, but selection was omitted. The random deletion runs were pooled in the same way as the evolutionary runs to make comparisons. As shown in Fig. <xref>ohnologs</xref> the expected fractions of ohnologs after randomly selecting genes for deletion are much lower than in the evolutionary simulations. Overretention is highly significant in the case of TFs(<equ id="equ22" type="inline">
+<tex>
+$p<10^{-18}$
+
+</tex></equ>
+)and detectable in enzymes and pumps(<equ id="equ23" type="inline">
+<tex>
+$p<10^{-3}$
+
+</tex></equ>
+<equ id="equ24" type="inline">
+<tex>
+$p<0.05$
+
+</tex></equ>
+). Despite the difference in the strength of the bias between TFs and enzymes, the fraction of these respective gene types that is conserved as ohnologs is very similar toward the end of the simulation(<equ id="equ25" type="inline">
+<tex>
+$p>0.25$
+
+</tex></equ>
+), although the fraction has stabilized for TFs, while it is still declining for enzymes. This can be understood by the fact that the rate of deletions is much higher for TFs than for enzymes, resulting in a shift towards higher fractions of enzymes and lower fractions of TFs in the late, streamlined descendants(Fig. S1). Thus, even though TFs were on the whole more likely to be removed from the network by streamlining, the TFs that were conserved at long evolutionary timescales were much more likely to remain in the genome as ohnologs. In the next section we will test the hypothesis that TF connectivity is the determining factor for the retention of TF ohnologs. </p><fig id="fig5" num="5"><caption><emph type="bold"><emph type="bold">Figure 5. Intact ohnologs as a fraction of conserved WGD content.</emph> </emph>Of the conserved gene content from the ancestral reference genome the fraction of genes in complete WGD pairs(ohnologs)was plotted, per gene category. Solid lines show the intact ohnologs in the evolutionary data, while dashed lines represent the ohnolog fractions obtained when the same number of deletions per category were applied randomly and in the absence of selection. Shaded areas highlight the difference between evolutionary and neutral simulation results. </caption>
+</fig>
+</section>
+<section level="2" id="section8"><title>TF connectivity</title><p> In the neutral control set continuous streamlining is responsible for the pattern of increasing TF outdegree(Fig. <xref>connectivity</xref> A gray shaded). TFs with a relatively high outdegree remained in the genome at the expense of more sparsely connected TFs, which was also true for WGD and nonWGD simulations. Despite going through environmental change, the evolutionary pattern of nonWGD(cyan)lineages is very similar to the neutrally evolving controls. For the WGD lineages, the connectivity of retained genes was calculated separately for ohnologs(red)and singles(yellow), revealing a marked difference in their evolved connectivity(<equ id="equ26" type="inline">
+<tex>
+$p<10^{-136}$
+
+</tex></equ>
+). Significantly higher connectivities of ohnologs compared to those of conserved genes in nonWGD(<equ id="equ27" type="inline">
+<tex>
+$p<10^{-5}$
+
+</tex></equ>
+)and neutrally evolving lineages(<equ id="equ28" type="inline">
+<tex>
+$p<10^{-2}$
+
+</tex></equ>
+)suggests that ancestral connectivity influences duplicate retention postWGD. At the same time, singles in WGD lineages had significantly lower connectivities, both compared to the ohnologs and the conserved genes in nonWGD(<equ id="equ29" type="inline">
+<tex>
+$p<10^{-205}$
+
+</tex></equ>
+)and neutral lineages(<equ id="equ30" type="inline">
+<tex>
+$p<10^{-91}$
+
+</tex></equ>
+). </p><fig id="fig6" num="6"><caption><emph type="bold"><emph type="bold">Figure 6. Ancestral outdegree and binding site conservation of conserved TFs.</emph> </emph>At the time of WGD all TFs were identified and their outdegree and binding site motifs recorded. At 1000  generation intervals conserved TFs from the time of WGD or, if there was no WGD, from the time point when environmental change was applied for the readaptation experiments, were identified in the genomes in the line of descent. (A)The average ancestral outdegree of the retained TFs(recorded at the reference time point)was divided by the average outdegree of the all ancestral TFs, thus providing a measure of the influence of ancestral connectivity on the rate of conservation of TFs. For WGD lineages this relative outdegree of conserved TFs was measured separately for ohnologs(red)and singles(yellow). For comparison, the analysis was also done for nonWGD(cyan)lineages and a neutrally evolving control set(gray). (B)The current and ancestral binding sequences of the TFs were compared and conservation score set to 1  if they remained the same and 0  otherwise and all scores averaged per individual. </caption>
+</fig>
+<p>These results raised the possibility that the observed biased retention of TF ohnologs was a side effect of the conservation of highly interacting genes. To test this, we performed additional random deletion experiments. Now, instead of having an equal probability for each TF to be deleted, deletion probability was made dependent on the ancestral TF connectivity. The probabilities were determined by looking at the distribution of connectivities in the ancestral network and determining the fractions of conserved genes per connectivity bin, at subsequent points in evolutionary time(see Methods for details). Performing such a simulation on the ancestral networks produced connectivity changes over time that were highly comparable to the evolution of connectivity in the evolutionary runs. Importantly, however, adding connectivity bias to the random deletion experiment did not change the result that ohnologs were overretained in the evolutionary simulations(Fig. S2). We therefore concluded that conservation of highly connected TFs alone could not explain the overretention of TF ohnologs. </p></section>
+<section level="2" id="section9"><title>TF divergence</title><p> Continuing our investigation of the role that subfunctionalization may have in the conservation of gene content and high levels of divergence at the gene level in WGD lineages we investigated the functional divergence of TF ohnologs. If both ohnologs would diverge in function at the same time, they would no longer be able to fully compensate for each others loss, making the conservation of both more likely. Functional divergence of a TF could happen if its binding site(BS)changes and it starts to regulate a different gene set. </p><p>In general, BS divergence of ancestral genes was substantial on a short timescale, even in neutrally evolving lineages. Later, however the initial divergence was largely undone(Fig. <xref>connectivity</xref> B). This reversal of initial divergence can be attributed to the long term genome streamlining that is expected to remove redundant and nonfunctional genes <citref rids="ref38">38</citref>, expected to be enriched in highly diverged genes. Compared to lineages that did not undergo an environmental change, BSs of readapting lineages initially diverged much more initially, highlighting the fast pace of evolutionary change immediately after the environmental change(Fig. <xref>connectivity</xref> B). Interestingly, WGD lineages had significantly higher levels of BS divergence compared to nonWGD lineages on the shorter timescale, both in the ohnologs(<equ id="equ31" type="inline">
+<tex>
+$p<10^{-75}$
+
+</tex></equ>
+)and singles category(<equ id="equ32" type="inline">
+<tex>
+$p<10^{-87}$
+
+</tex></equ>
+). Subsequently, the remaining ohnologs showed a drastic reduction of the level of divergence, eventually reaching a BS conservation level above that of conserved genes of nonWGD lineages(<equ id="equ33" type="inline">
+<tex>
+$p<10^{-9}$
+
+</tex></equ>
+). The sharp reduction in average BS divergence indicated that fast diverging ohnologs were overwhelmingly lost, while ohnologs that, on the other hand, did not mutate away from their ancestral BS were conserved at long evolutionary timescales. When one of an ohnolog pair is deleted in the course of evolution the remaining gene is subsequently categorized as a single. It is therefore not surprising that the singles category had a final level of BS divergence that was much higher than that of ohnologs(<equ id="equ34" type="inline">
+<tex>
+$p<10^{-21}$
+
+</tex></equ>
+), receiving an influx of highly diverged genes from the ohnolog category. However, their long term conservation may in fact be best explained by their diverged role in the network. </p><p>It suggests an interesting dual character for the dynamics of post WGD genome evolution. On the one hand, selection acted to conserve highly interacting genes most strongly, both in their copy number and their interaction partners. At the same time, genes of lower connectivity may be returned to a single copy status and diverge in their role within the gene network. The latter process may be particularly important for adaptation in a new environment. Together, our results show that the conservation duplicate pairs and interaction partners of highly connected genes is compatible with the gene balance hypothesis, while subfunctionalization did not play a significant role in pair retention in our model. Instead, most functional divergence was observed in genes conserved as singles after WGD. Apparently these were more free to evolve and adapt to the new environment thansinglesin nonWGD lineages, in congruence with the overall higher rates of divergence in WGD lineages compared to nonWGD lineages(Fig. <xref>deletion_fractions</xref>. </p><section><title>Discussion</title><p> In this study we have taken an openended approach to studying the relationship between drastic changes in the environment and the occurrence of WGD in the line of descent. Evolving lineages could potentially follow many different evolutionary paths to readaption as a result of mutations at multiple scales and a complex genotype to phenotype map. WGD, despite being an ongoing mutation, was observed exclusively in lineages that were still illadapted to the prevailing environment, as was the case early during the initial adaptation phase and shortly after an environmental change(e. g. Fig. <xref>overview</xref> D). This mirrors phylogenetic studies linking WGD to environmental and other types of drastic intracellular change <citref rids="ref15 ref16 ref19 ref20 ref39">15,16,19,20,39</citref>. </p><p>One or more WGDs occurred during the initial adaptation phase in almost all lineages that would eventually obtain high fitness. In contrast, a minority of lineages(<equ id="equ35" type="inline">
+<tex>
+$\approx30\%$
+
+</tex></equ>
+)fixed a WGD following environmental change, while almost no WGDs were observed when readaptation was very rapid. This indicates that some of the imposed environmental changes were more easily met by a relatively minor recalibration of the preevolved regulatory circuits, despite causing severe initial drops in fitness. Nevertheless, successful readaptation was more prevalent in lineages with WGD, and consequently larger genomes. This corroborates our previous research, showing that large genome increases early during adaptation benefit long term adaptation <citref rids="ref38">38</citref>and is in accordance with a similar inference drawn by Van de Peer and coworkers <citref rids="ref20 ref21">20,21</citref>based on parallel paleopolyploidy events in plants and frequent species radiation in the wake of WGD <citref rids="ref5 ref33 ref40 ref41">5,33,40,41</citref>. A particular case in point of long term evolvability due to WGD is the evolution of novel signaling and developmental pathways in vertebrates <citref rids="ref24 ref42 ref43">24,42,43</citref>. </p><p>In addition to the long term benefits, in most lineages immediate positive fitness effects also played a role in establishing WGD(Fig. S3). Moreover, WGD was more frequent after particular types of environmental change, most notably when enzyme degradation rates increased(Fig. S4). This again parallels observations from the phylogenetic record and experiments. For example, there is strong evidence that the ancient WGD in yeast had an immediate benefit in the context of newly evolved fruiting plants <citref rids="ref18 ref19">18,19</citref>. Moreover, short term fitness advantages appear to play a role in establishing polyploid lineages in founder populations within newly arisen environments <citref rids="ref15 ref16 ref17 ref44">15-17,44</citref>. </p><p>Strong genome streamlining occurred in all simulations, irrespective of environmental change and the fixation of WGD, indicating that maintenance of large genomes comes at a considerable mutational cost <citref rids="ref38 ref44 ref45">38,44,45</citref>. However, WGDs createirremediable complexity <citref rids="ref28 ref46 ref47">28,46,47</citref>, enforcing the maintenance of larger genomes, which would put lineages that evolve to equal fitness without WGD at an advantage. This may explain the relatively low fraction of WGD lineages in our experiments and could be the reason that, although polyploids are widespread among current plant species, their long term survival rate tends to be lower than that of nonpolyploids <citref rids="ref14">14</citref>. </p><p>Summarizing, our simple Virtual Cell model shows a pattern of occurrence of WGD very similar to that in the expanding record of established WGD events in extant organisms. We conclude that it is a generic property of the evolutionary process irrespective of particular evolutionary contingencies and most biochemical constraints. Our results highlight the intricate interplay of short and long term adaptive evolution as well as neutrality and irremediable complexity in shaping the gene content. This is moreover apparent from the duplicate retention pattern, as discussed below. </p><p>The fractions of ancestral genes that remain in WGD pairs were higher in all functional categories compared to a neutral expectation based on random deletions. Duplicate retention post WGD was strongly biased towards highly interacting genes, a pattern that has been reported for many paleopolyploid species <citref rids="ref-1 ref23 ref28 ref30 ref43 ref48">-1,23,28,30,43,48</citref>melnick_contrasting_2012, schnable_escape_2012. However overretention of pairs, in particular in TFs, was much higher than expected from a biased retention of highly connected genes. The maintenance of duplicate pairs therefore needs another explanation and suggests a form of irremediable complexity. The two main explanations being subfunctionalization and, as recognized more recently, dosage balance selection. </p><p>We found no evidence that subfunctionalization played a role in WGD pair retention withing our model, as the duplicates remained very similar. This is in contrast to what has been reported in various cases of duplicate retention <citref rids="ref29 ref30 ref31 ref49 ref50">29-31,49,50</citref>and the hypothesis that it was the main cause of genome complexification in eukaryotes <citref rids="ref51">51</citref>. There is in fact ample evidence that suband neofunctionalization play an important role in cementing the retained duplicates in the genomes of real organisms <citref rids="ref-1 ref30">-1,30</citref>phase_2011 and promote innovation <citref rids="ref24 ref43 ref52">24,43,52</citref>, although evidence exists that competitive interference between the paralogs may impose a significant obstacle to neutral loss of subfunctions <citref rids="ref53">53</citref>. The lack of subfunctionalization in our model can be explained as follows. Subfunctionalization of regulatory interactions would require that TFs can conserve binding interactions with a subset of ancestral sites, while at the same time losing some other sites. As such fine grained alterations of binding motifs was not possible within the current model due to the discreteness of the binding motifs and hence regulatory interactions, it presented a hard case scenario for subfunctionalization. The fact that we still observed overretention, most prominently in TFs, again suggests the relevance of the dosage mediated retention mechanism. Another indication that dosage effects were important in the evolutionary dynamics was the observation that high protein degradation rates triggered fixation of adaptive WGD. </p><p>Dosage balance selection was proposed to account for the inverse relationship between retention of duplicates post WGD and post SSD <citref rids="ref-1 ref28 ref34 ref37 ref54 ref55">-1,28,34,37,54,55</citref>melnick_contrasting_2012. Originally, dosage balance selection is expected to affect proteins that are part of larger protein complexes. For complex assembly it is assumed that the relative dosage of the constituents is required to stay within narrow bounds, to prevent the accumulation of incomplete complexes <citref rids="ref28 ref32 ref37">28,32,37</citref>. Therefore single deletions of a duplicate will mostly not be tolerated after WGD, preventing the return to single copy of subunits of large complexes. Interestingly, our results show that resistance to the deletion of a member of a WGD pair was high, even in the absence of protein complex assembly or physical protein interactions, but that it was still a function of the number of its interactions. This indicates that dosage balance drove the retention. </p><p>Although weaker than TFs, enzymes pairs were also significantly overretained post WGD in our simulations. Biased retention of enzyme duplicates has also been reported for the latest of P. tetraurelias three successive WGDs <citref rids="ref23">23</citref>. Curiously however, enzymes were significantly underretained from the earlier WGD events. Initially, stoichiometric constraints likely impose dosage balance selection on enzymes in metabolic pathways <citref rids="ref56">56</citref>. However, over longer evolutionary timescales, the enzymatic pathways may acquire compensating expression level changes that free the enzyme duplicates of dosage balance constraints, allowing them to be deleted. Indeed, looking at the trend within the fraction of enzymes found in pairs in our simulations(Fig. <xref>ohnologs</xref>, the decline phase is longer than for TFs and may have continued with longer simulation times, explaining the varying levels of retention at different evolutionary timescales. </p><p>Summarizing, in our simulations dosage sometimes played an important role in establishing adaptive WGD as well as driving the retention of duplicate pairs, conserving core regulatory interactions in the absence of subfunctionalization. This raises the question how novel functions could evolve within our simulations, without significant divergence of conserved ohnologs. The answer appears to be provided by the behavior of the singles in WGD lineages. They were changing much faster than duplicates and also notably faster than genes retained in nonWGD lineages(Fig. <xref>connectivity</xref> B). This opens the possibility that the adaptive success of WGD lineages was in part due to more sparsely connected TFs(Fig. <xref>connectivity</xref> A)that were not essential for fitness and were therefore more free to evolve. These are expected to be in relative abundance immediately after a WGD. This scenario can, moreover, explain the result that even though genome conservation was higher in WGD lineages, individual genes appeared to diverge faster from the ancestral state. Thus, enhanced evolvability of WGD lineages was not primarily a consequence offreeingredundant paralogs to adopt new functions, but most importantly due to unhindered evolution of nonparalogous genes to adapt to novel conditions. </p><p>An important aspect of polyploidization that was left out of our modeling is the variety of mechanisms that can lead to polyploidization. WGD in the current model happened exclusively through autopolyploidization, causing a strict duplication of the genetic material. In contrast, hybridization between individuals from substantially diverged subpopulations can give rise to important phenomena such as biased fractionation patterns <citref rids="ref57 ref58">57,58</citref>and hybrid fitness <citref rids="ref59 ref60">59,60</citref>. We envision that incorporating these mechanisms into the current model could give insight into the adaptive consequences of hybridization events and help recognize the type of ancient polyploidization events by observing characteristic patterns of genome evolution. </p><p>Concluding, our model highlights how the interplay between short and long term adaptive and neutral processes underlies the presence of WGD and postWGD gene retention and its role in genome complexification. Although we did not set out to model this property explicitly, dosage effects and selection for retaining balanced gene expression readily emerged in the Virtual Cell model, underlining its importance as a generic property of evolution, shaping the content of genomes. In addition, WGD appears to enable the divergence of singly retained ancestral genes, which may endow WGD lineages with long term adaptive benefits. From a broader perspective, our results suggest that WGDs had a defining role in enabling the innovations in eukaryotic lineages, while preserving the hallmarks of their ancestors. </p></section></section><section><title>Material and Methods</title><p> Our Virtual Cell model is an adaptation of the work by Neyfakh<emph type="italic">et. al</emph> <citref rids="ref61">61</citref>and previously described in <citref rids="ref38">38</citref>. The source code of the model is available at<url url="ttps://bitbucket.org/thocu/virtual-cel"></url>. Virtual cell internal dynamics are governed by five basic protein types and two molecular types, <equ id="equ36" type="inline">
+<tex>
+$A$
+
+</tex></equ>
+and<equ id="equ37" type="inline">
+<tex>
+$X$
+
+</tex></equ>
+. The resource(<equ id="equ38" type="inline">
+<tex>
+$A$
+
+</tex></equ>
+)that is present in the environment can be a source of energy when it is enzymatically converted into the energy carrier molecule<equ id="equ39" type="inline">
+<tex>
+$X$
+
+</tex></equ>
+. Alternatively<equ id="equ40" type="inline">
+<tex>
+$A$
+
+</tex></equ>
+and<equ id="equ41" type="inline">
+<tex>
+$X$
+
+</tex></equ>
+can converted to building blocks in a second enzymatic reaction. The resource diffuses passively over the cell membrane, but can also be actively pumped inwards by pumps consuming<equ id="equ42" type="inline">
+<tex>
+$X$
+
+</tex></equ>
+. Two types of transcription factors are distinguished by their ligand, <equ id="equ43" type="inline">
+<tex>
+$A$
+
+</tex></equ>
+or<equ id="equ44" type="inline">
+<tex>
+$X$
+
+</tex></equ>
+, respectively. TFs bind to a gene regulatory region depending on a match between the binding sequence of the TF and the operator region of the gene. Regulatory effects can be positive or negative and the effect differs between the ligand bound and ligand free state. All enzymatic reactions are modeled by ordinary differential equations(see S Text). Ligand to TF and TF to operator binding are assumed to be fast processes that are in quasi steady state. </p><p>Cell fitness depends on their ability to maintain homeostasis in<equ id="equ45" type="inline">
+<tex>
+$X$
+
+</tex></equ>
+and<equ id="equ46" type="inline">
+<tex>
+$A$
+
+</tex></equ>
+. Because cells experience fluctuations in resource concentrations, they need to evolve regulatory circuitry feeding back on the expression of metabolic enzymes and pumps. Cell fitness is measured as follows. Deviation from the target at steady state in a particular environment is calculated as<equ id="equ47" type="inline">
+<tex>
+$\Delta[A]=\frac{|[A_{\textnormal{eq}}]-[A_{\textnormal{TARGET}}]|+[A_{\textnormal{TARGET}}]}{[A_{\textnormal{TARGET}}]}$
+
+</tex></equ>
+(and analogously for<equ id="equ48" type="inline">
+<tex>
+$X$
+
+</tex></equ>
+)and the measure of fitness in each resource condition<equ id="equ49" type="inline">
+<tex>
+$i$
+
+</tex></equ>
+experienced by a cell during its life is inversely proportional to this deviation<equ id="equ50" type="inline">
+<tex>
+$f_i=\frac{1}{\Delta[A]_i\cdot\Delta[X]_i}$
+
+</tex></equ>
+. Fitness of a cell is the nondecreasing function<equ id="equ51" type="inline">
+<tex>
+$2^{Fp}-1$
+
+</tex></equ>
+, where<equ id="equ52" type="inline">
+<tex>
+$Fp=\prod_{i}^{n}f_i$
+
+</tex></equ>
+given the set of resource conditions<equ id="equ53" type="inline">
+<tex>
+$n$
+
+</tex></equ>
+it has seen. Every generation all cells reproduce with a chance proportional to their fitness, until the offspring completely replaces the previous population. </p><p>Genotypes are subjected to three distinct types of mutations. The first type alters the parameters of individual genes and is comparable to a point mutation. Affected parameters are the rate and binding constants of enzymes and binding sequences of TFs and promoter regions as well as the ligand that TFs have. The second type of mutation are duplications, deletions and excision insertion that affect stretches of the genome of up to<equ id="equ54" type="inline">
+<tex>
+$\frac{1}{8}$
+
+</tex></equ>
+. Finally, WGD affects on average<equ id="equ55" type="inline">
+<tex>
+$0.3\%$
+
+</tex></equ>
+of the population per generation. Finally, point mutations affect genes at a rate 5  times higher than large scale events. </p>
+<section level="2" id="section12"><title>Environmental change simulations</title><p> The evolutionary simulations were run in two stages. In the first stage 100  populations were randomly initialized and independently evolved until 1000  generations after they passed the high fitness cutoff, continuing to a maximum of 15000  generations. All populations in this batch were evolved under the same standard environmental conditions(the same as those in <citref rids="ref38">38</citref>). From the populations that evolved to a high fitness 10  were randomly selected to go to the next stage. In this stage all ten populations were initially cloned 80  times and each cloned populations uniquely assigned to 1  out of 80  novel environmental conditions, per seed population. After applying the environmental change, populations evolved a further 15000  generations. As a control for the effect of environmental change, evolution was continued without environmental change for all populations from the batch of 100  simulations that evolved to high fitness, including the 10  selected seed populations. </p></section>
+<section level="2" id="section13"><title>Environmental change set</title><p> The new environments were made by changing the values of five parameters of the system relative to their standard values. These parameters separately control the degradation rate of enzymes, permeability of the resource molecule(A), the internal target concentrations for homeostasis in X and A and the metabolic conversion rate of A to X. For all 5  parameters low and high conditions were chosen by making them a factor 2  to 4  different from the standard environment, depending on the severity of the effect on populations in test simulations(see Table S1). For some parameters, too large changes resulted in nonviable conditions for most populations, constraining the change we could effectively apply in our simulations. Finally, a systematic set of 80  environmental changes was constructed by making all<equ id="equ56" type="inline">
+<tex>
+$\binom{5}{2}*2^{3}$
+
+</tex></equ>
+combinations where exactly three parameters differ from their value in the standard condition. </p></section>
+<section level="2" id="section14"><title>Ancestor tracing and effective mutation rates</title><p> Exact counts of mutations can be traced in the line of descent. To do this, one individual of the final population is selected and its ancestors traced back to the start of the simulation. Mutation events in the line of descent are converted to rates by averaging mutations over 1000  generation intervals. </p></section>
+<section level="2" id="section15"><title>Ancestral gene content conservation</title><p> The ancestral gene content conservation was measured using the ancestor trace. The gene content of the ancestor that was alive when the environment was changed is the point of reference. The genomes of individuals in the line of descent was overlapped with the reference and what remains of the ancestral gene content was expressed as a fraction. In the case of WGD or other types of duplication of ancestral genes, only one(random)copy is considered the original, while the other copy does not count towards the ancestral content. </p></section>
+<section level="2" id="section16"><title>Ohnolog retention and background expectation</title><p> After WGD the genes that originated at the WGD event were traced in the line of descent. Again, duplicates that arose subsequent to this reference point were not counted towards ancestral WGD genes. The WGD genes that had remained in the genome were then divided into singles and ohnologs. Duplicate retention fractions are the intact ohnologs divided by the total amount of ancestral WGD genes still present in the genome. </p><p>The background expectations were calculated by counting the losses per gene category of ancestral WGD genes along the line of descent and then resimulating the losses, starting from the first ancestor with the WGD. In the first variant of the random deletion simulations, the deletion counts were performed entirely randomly per gene category on the ancestral content. In the second variant, the probabilities of selecting a gene for deletion were made dependent on their connectivity. The scaling was calculated directly from the original evolutionary experiments, by assigning genes(TFs)to bins according to their relative connectivity in the ancestral WGD network and finding the likelihood of deletion in each connectivity bin. This resulted in comparable connectivity curves for the connectivity adjusted random deletion experiments and the evolutionary simulations. </p></section>
+<section level="2" id="section17"><title>Significance testing</title><p> Significance of reported differences between WGD, nonWGD and neutrally evolving lineages were all determined by MannWhitney rank sum tests, ranking the scores of individual runs within each of the subsets. In the case of mutation rates, the ranking was done over the full evolutionary time interval, while in the case of ohnolog conservation, TF connectivity, and BS divergence ranking was performed on the scores of the last time point, unless stated otherwise in the main text. </p><p>processdelayedfloats</p></section></section><fig id="fig7" num="7"><caption><emph type="bold"><emph type="bold">Figure 7. Average fractions and absolute numbers of TFs, enzymes and pumps in nonWGD, neutrally evolving and WGD lineages.</emph> </emph>In all three types of population the trend is towards larger fractions of enzymes in the genome, at the expense of TFs. This occurs irrespective of large differences in the maximum genome sizes in different types of populations. </caption>
+</fig>
+<fig id="fig8" num="8"><caption><emph type="bold"><emph type="bold">Figure 8. TF ohnologs as a fraction of total conserved WGD gene content.</emph> </emph>Results from two types of neutral deletion simulations are compared with the evolutionary data. In the first deletion simulation(dashed line), the rate of deletions is equal to that in the evolutionary data, but TFs are deleted randomly. In the second type of simulation, the probability of deleting a TF depends on the outdegree of the TF within the reference genome of the WGD ancestor(see also the Materials and Methods section). </caption>
+</fig>
+<fig id="fig9" num="9"><caption><emph type="bold"><emph type="bold">Figure 9. Fitness effects of WGDs in the line of descent.</emph> </emph>For all WGD events that were accepted in the lines of descent of the complete set of simulations the change in standard fitness was recorded. Because resource concentrations vary stochastically during the life time of a cell, the actual fitness effect experienced by the cell was different from the standardized effect(see S Text sectionFitness evaluation and reproduction)</caption>
+</fig>
+<fig id="fig10" num="10"><caption><emph type="bold"><emph type="bold">Figure 10. Fitness and adaptation speed after different types of environmental change.</emph> </emph>Data points represent averaged fitness(xaxis)and WGD count(yaxis)of the ten seed populations in each of the 80  environments. On the zaxis are the three levels of degradation rate used in the environment set. We categorize environments as fast adapting, when at least 8  out of 10  seed populations readapt to the environment within 1000  generations. The different marker styles indicate the relative scaling of the<equ id="equ57" type="inline">
+<tex>
+$A$
+
+</tex></equ>
+and<equ id="equ58" type="inline">
+<tex>
+$X$
+
+</tex></equ>
+homeostasis target values, where blue diamonds indicate that the targets are at equal height, as is the case in the standard environment, red triangles that there is a 4  fold difference and green circles indicate a 16  fold difference in target values. Several patterns can be observed. First, the low degradation rate seems to provide a hard case for adaptation, having very few fast adapting environments and being associated with low fitness values, whereas the high degradation rate has relatively many fast adaptation points and high fitness values. Secondly, the high degradation rate environment coincides with more WGDs. Thirdly, the environments with a 16 fold difference between the<equ id="equ59" type="inline">
+<tex>
+$A$
+
+</tex></equ>
+and<equ id="equ60" type="inline">
+<tex>
+$X$
+
+</tex></equ>
+targets are not in the fast adaptation set and skewed towards lower fitness values. Only when degradation rate is simultaneously high are average fitness values high and did at least some populations have a WGD, within the particular environment. </caption>
+</fig>
+<fig id="fig11" num="11"><caption><emph type="bold"><emph type="bold">Figure 11. Fraction of ancestral gene content within present genome.</emph> </emph>A reference gene content is saved at the time of WGD. At subsequent 1000  generation intervals the genomes in the ancestor trace(see Materials and Methods)are searched for conserved reference genes, without counting duplicates that have arisen after the reference point. The conserved ancestral content is expressed as a fraction of the complete gene content at every time point. </caption>
+</fig>
+<tbl></tbl><p>lrrrrr</p><p>5 parameters</p><p>cmidrule(r)  level permeability degradation conversion Xtarget Atarget</p><p>standard0.1 1 4 1  1 </p><p>high0.4 4 8 4  4 </p><p>low0.05 0.5 2 0.25  0.25 </p><p><emph type="bold">Parameter values used in standard and changed environmental conditions. </emph>For all parameters a high and a low value are defined in relation to the value used in the initial fase of the evolutionary simulations(standard). Environmental change conditions are generated by sampling from the three parameter levels. The construction of the full environmental change set used for simulations is described in the Materials and Methods section. </p>

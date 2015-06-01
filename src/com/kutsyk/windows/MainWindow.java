@@ -100,8 +100,8 @@ public class MainWindow extends JFrame {
                 errorLogFile.println(new String(b, off, len));
             }
         };
-		System.setOut(new PrintStream(out, true));
-		System.setErr(new PrintStream(out, true));
+//		System.setOut(new PrintStream(out, true));
+//		System.setErr(new PrintStream(out, true));
     }
 
     /**
@@ -234,7 +234,7 @@ public class MainWindow extends JFrame {
                     createResult();
                     wasAnyLaTEXProceeded = true;
                     File result = new File(mainPath + "/LaTEXtoXML/result.xml");
-                    result = reconstrucXmlFile(result);
+                    result = reconstructXmlFile(result);
                     result.deleteOnExit();
                     if (result.exists()) {
                         displayXMlTOPane(result);
@@ -249,7 +249,7 @@ public class MainWindow extends JFrame {
         translationThread.start();
     }
 
-    private File reconstrucXmlFile(File res){
+    private File reconstructXmlFile(File res){
         try {
             PrintWriter writer = new PrintWriter(mainPath + "/LaTEXtoXML/resultRedo.xml");
             BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream(res)));

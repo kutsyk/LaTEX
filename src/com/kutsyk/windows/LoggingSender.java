@@ -191,12 +191,12 @@ public class LoggingSender extends JFrame {
 					.addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
 					.addComponent(label3)
 					.addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-					.addComponent(scrollPane1, GroupLayout.DEFAULT_SIZE, 112, Short.MAX_VALUE)
+					.addComponent(scrollPane1, GroupLayout.DEFAULT_SIZE, 102, Short.MAX_VALUE)
 					.addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
 					.addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
-						.addComponent(cancelButton, GroupLayout.PREFERRED_SIZE, 28, GroupLayout.PREFERRED_SIZE)
-						.addComponent(okButton, GroupLayout.PREFERRED_SIZE, 28, GroupLayout.PREFERRED_SIZE)
-						.addComponent(howToButton, GroupLayout.PREFERRED_SIZE, 31, GroupLayout.PREFERRED_SIZE))
+						.addComponent(cancelButton, GroupLayout.PREFERRED_SIZE, 38, GroupLayout.PREFERRED_SIZE)
+						.addComponent(okButton, GroupLayout.PREFERRED_SIZE, 40, GroupLayout.PREFERRED_SIZE)
+						.addComponent(howToButton))
 					.addContainerGap())
 		);
 		pack();

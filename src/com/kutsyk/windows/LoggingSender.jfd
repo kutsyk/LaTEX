@@ -17,7 +17,7 @@
        </void> 
        <void method="setProperty"> 
         <string>$verticalGroup</string> 
-        <string>par l {seq t {space :::p, comp label1:::p::p, space :::p, comp label2:::p::p, space :p:4:p, comp nameField:::p::p, space :::p, comp label3:::p::p, space :::p, comp scrollPane1::::112:x, space :::p, par b {comp cancelButton::b:p:28:p:1, comp okButton::b:p:28:p:1, comp howToButton::b:p:31:p}, space :::p}}</string> 
+        <string>par l {seq t {space :::p, comp label1:::p::p, space :::p, comp label2:::p::p, space :p:4:p, comp nameField:::p::p, space :::p, comp label3:::p::p, space :::p, comp scrollPane1::::102:x, space :::p, par b {comp cancelButton::b:p:38:p:1, comp okButton::b:p:40:p:1, comp howToButton::b:p::p}, space :::p}}</string> 
        </void> 
       </object> 
       <void method="setProperty"> 

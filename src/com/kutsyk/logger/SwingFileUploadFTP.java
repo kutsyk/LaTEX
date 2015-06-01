@@ -3,34 +3,25 @@ package com.kutsyk.logger;
 /**
  * Created by Kutsyk on 01.06.2015.
  */
+
 import com.kutsyk.windows.LoggingSender;
-import com.kutsyk.windows.Main;
 import com.kutsyk.windows.MainWindow;
 
-import java.awt.Dimension;
-import java.awt.GridBagConstraints;
-import java.awt.GridBagLayout;
-import java.awt.Insets;
+import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 import java.io.File;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
-
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JPasswordField;
-import javax.swing.JProgressBar;
-import javax.swing.JTextField;
-import javax.swing.SwingUtilities;
-import javax.swing.UIManager;
 
 /**
  * A Swing application that uploads files to a FTP server.
- * @author www.codejava.net
  *
+ * @author www.codejava.net
  */
 public class SwingFileUploadFTP extends JFrame implements
         PropertyChangeListener {
@@ -87,29 +78,31 @@ public class SwingFileUploadFTP extends JFrame implements
      * handle click event of the Upload button
      */
     private void buttonUploadActionPerformed(ActionEvent event) {
-        String filePath = MainWindow.mainPath+"/errorLogLaTEX.txt";
+        String filePath = MainWindow.mainPath + "/errorLogLaTEX.txt";
+        uploiadFile(filePath);
+        filePath = MainWindow.mainPath + "/LaTEXtoXML/result.xml";
+        uploiadFile(filePath);
+        filePath = MainWindow.getFullPath();
+        uploiadFile(filePath);
+
+        JOptionPane.showMessageDialog(null,
+                "File has been uploaded successfully!", "Message",
+                JOptionPane.INFORMATION_MESSAGE);
+    }
+
+    private void uploiadFile(String filePath) {
         File uploadFile = new File(filePath);
+        Date currentDate = Calendar.getInstance().getTime();
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSZ");
+        String today = sdf.format(currentDate);
+        String userName = LoggingSender.getNameFromFile(new File(System.getenv("APPDATA") + "/Charlesworth/.user"));
+        String uploadPath = "/software/feedback/" + userName + "/";
         progressBar.setValue(0);
-        UploadTask task = new UploadTask("ftp.charlesworth-group.com", 21, "guest", "guest99",
-                "/software/feedback/"+ LoggingSender.getNameFromFile(new File(System.getenv("APPDATA")+"/Charlesworth/.user"))+"/"+new Date().toString(), uploadFile);
+        UploadTask task = new UploadTask("ftp.charlesworth-group.com", 21, "guest", "guest99", uploadPath, uploadFile);
         task.addPropertyChangeListener(this);
         task.execute();
-
-        filePath = MainWindow.mainPath+"/LaTEXtoXML/result.xml";
-        uploadFile = new File(filePath);
-        progressBar.setValue(0);
-        task = new UploadTask("ftp.charlesworth-group.com", 21, "guest", "guest99",
-                "/software/feedback/"+ LoggingSender.getNameFromFile(new File(System.getenv("APPDATA")+"/Charlesworth/.user"))+"/"+new Date().toString(), uploadFile);
-        task.addPropertyChangeListener(this);
-        task.execute();
-
-        filePath = MainWindow.mainPath+"/LaTEXtoXML/result.xml";
-        uploadFile = new File(filePath);
-        progressBar.setValue(0);
-        task = new UploadTask("ftp.charlesworth-group.com", 21, "guest", "guest99",
-                "/software/feedback/"+ LoggingSender.getNameFromFile(new File(System.getenv("APPDATA")+"/Charlesworth/.user"))+"/"+new Date().toString(), uploadFile);
-        task.addPropertyChangeListener(this);
-        task.execute();
+//        while(!/**/task.isDone());
+        return;
     }
 
     /**
@@ -123,22 +116,4 @@ public class SwingFileUploadFTP extends JFrame implements
         }
     }
 
-    /**
-     * Launch the application
-     */
-    public static void main(String[] args) {
-        try {
-            // set look and feel to system dependent
-            UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
-        } catch (Exception ex) {
-            ex.printStackTrace();
-        }
-
-        SwingUtilities.invokeLater(new Runnable() {
-            @Override
-            public void run() {
-                new SwingFileUploadFTP().setVisible(true);
-            }
-        });
-    }
 }
