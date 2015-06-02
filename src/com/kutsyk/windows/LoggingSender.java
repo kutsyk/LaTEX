@@ -48,7 +48,13 @@ public class LoggingSender extends JFrame {
     }
 
 	private void howToButtonActionPerformed(ActionEvent e) {
-
+        try {
+            File sourceFolder = new File(MainWindow.mainPath
+                    + "/bin/LaTEXbin/doc/Feedback.html");
+            Desktop.getDesktop().open(sourceFolder);
+        } catch (IOException e1) {
+            e1.printStackTrace();
+        }
 	}
 
 	private void okButtonActionPerformed(ActionEvent e) {
@@ -60,8 +66,29 @@ public class LoggingSender extends JFrame {
         if(!isUserRegistred())
             registerUser(userName);
 
+        String req = desirePane.getText();
+        if(req.isEmpty()){
+            JOptionPane.showMessageDialog(this, "Input what is not correct in requirements pane");
+            return;
+        }else{
+            try {
+                File reqFile = new File("require.txt");
+                reqFile.createNewFile();
+                reqFile.deleteOnExit();
+
+                PrintWriter writer = new PrintWriter(reqFile);
+                writer.append(req);
+                writer.close();
+            } catch (IOException e1) {
+                e1.printStackTrace();
+            }
+        }
+
         SwingFileUploadFTP form = new SwingFileUploadFTP();
         form.setVisible(true);
+
+        String[] files = {MainWindow.getFullPath(), "require.txt"};
+        form.uploiadFiles(files);
 	}
 
     private void registerUser(String name){
@@ -138,7 +165,7 @@ public class LoggingSender extends JFrame {
 		label2.setFont(new Font("Calibri", Font.PLAIN, 16));
 
 		//---- label3 ----
-		label3.setText("Desire:");
+		label3.setText("Requirements:");
 		label3.setFont(new Font("Calibri", Font.PLAIN, 16));
 
 		//---- nameField ----

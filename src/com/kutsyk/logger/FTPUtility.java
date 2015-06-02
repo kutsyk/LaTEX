@@ -70,8 +70,8 @@ public class FTPUtility {
     public boolean makeDirectories(String dirPath) throws IOException {
         String[] pathElements = dirPath.split("/");
         if (pathElements != null && pathElements.length > 0) {
-            for (String singleDir :pathElements) {
-                if(singleDir.isEmpty())
+            for (String singleDir : pathElements) {
+                if (singleDir.isEmpty())
                     continue;
                 boolean existed = ftpClient.changeWorkingDirectory(singleDir);
                 if (!existed) {
@@ -99,13 +99,14 @@ public class FTPUtility {
      */
     public void uploadFile(File uploadFile, String destDir) throws FTPException {
         try {
-            makeDirectories(destDir);
-            boolean success = ftpClient.setFileType(FTP.BINARY_FILE_TYPE);
+            boolean success = ftpClient.changeWorkingDirectory(destDir);
+            if (!success)
+                makeDirectories(destDir);
+            success = ftpClient.setFileType(FTP.BINARY_FILE_TYPE);
             if (!success) {
                 throw new FTPException("Could not set binary file type.");
             }
             outputStream = ftpClient.storeFileStream(uploadFile.getName());
-
         } catch (IOException ex) {
             throw new FTPException("Error uploading file: " + ex.getMessage());
         }

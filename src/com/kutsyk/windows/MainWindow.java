@@ -493,7 +493,7 @@ public class MainWindow extends JFrame {
     private void helpItemActionPerformed(ActionEvent e) {
         try {
             File sourceFolder = new File(mainPath
-                    + "/LaTEXbin/documentation/index.html");
+                    + "/bin/LaTEXbin/doc/LaTEXtoXML.html");
             Desktop.getDesktop().open(sourceFolder);
         } catch (IOException e1) {
             e1.printStackTrace();
@@ -700,7 +700,6 @@ public class MainWindow extends JFrame {
 				helpItem.addActionListener(new ActionListener() {
 					@Override
 					public void actionPerformed(ActionEvent e) {
-						helpItemActionPerformed(e);
 						helpItemActionPerformed(e);
 					}
 				});

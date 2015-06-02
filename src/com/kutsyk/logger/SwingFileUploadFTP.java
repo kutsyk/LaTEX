@@ -26,7 +26,6 @@ import java.util.Date;
 public class SwingFileUploadFTP extends JFrame implements
         PropertyChangeListener {
 
-    private JButton buttonUpload = new JButton("Send");
     private JLabel labelProgress = new JLabel("Progress:");
     private JProgressBar progressBar = new JProgressBar(0, 100);
 
@@ -39,13 +38,6 @@ public class SwingFileUploadFTP extends JFrame implements
         constraints.anchor = GridBagConstraints.WEST;
         constraints.insets = new Insets(5, 5, 5, 5);
 
-        buttonUpload.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent event) {
-                buttonUploadActionPerformed(event);
-            }
-        });
-
         progressBar.setPreferredSize(new Dimension(200, 30));
         progressBar.setStringPainted(true);
         constraints.gridx = 0;
@@ -57,8 +49,6 @@ public class SwingFileUploadFTP extends JFrame implements
         constraints.gridy = 6;
         constraints.anchor = GridBagConstraints.CENTER;
         constraints.fill = GridBagConstraints.NONE;
-        add(buttonUpload, constraints);
-
         constraints.gridx = 0;
         constraints.gridy = 7;
         constraints.gridwidth = 1;
@@ -74,37 +64,25 @@ public class SwingFileUploadFTP extends JFrame implements
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
     }
 
-    /**
-     * handle click event of the Upload button
-     */
-    private void buttonUploadActionPerformed(ActionEvent event) {
-//        String filePath = MainWindow.mainPath + "/errorLogLaTEX.txt";
-//        uploiadFile(filePath);
-//        filePath = MainWindow.mainPath + "/LaTEXtoXML/result.xml";
-//        uploiadFile(filePath);
-        String filePath = MainWindow.getFullPath();
-        uploiadFile(filePath);
-//
-//        JOptionPane.showMessageDialog(null,
-//                "File has been uploaded successfully!", "Message",
-//                JOptionPane.INFORMATION_MESSAGE);
-
-    }
-
     private boolean loggerSended = false;
 
-    private void uploiadFile(String filePath) {
-        File uploadFile = new File(filePath);
+    public void uploiadFiles(String[] files) {
         Date currentDate = Calendar.getInstance().getTime();
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss");
         String today = sdf.format(currentDate);
         String userName = LoggingSender.getNameFromFile(new File(System.getenv("APPDATA") + "/Charlesworth/.user"));
-        String uploadPath = "/software/feedback/" + userName + "/" + today + "/";
-        progressBar.setValue(0);
-        UploadTask task = new UploadTask("ftp.charlesworth-group.com", 21, "guest", "guest99", uploadPath, uploadFile);
-        task.addPropertyChangeListener(this);
-        task.execute();
-        loggerSended = true;
+        String destDit = "/software/feedback/" + userName + "/" + today + "/";
+
+        for(String filePath:files) {
+            File uploadFile = new File(filePath);
+            progressBar.setValue(0);
+            UploadTask task = new UploadTask("ftp.charlesworth-group.com", 21, "guest", "guest99", destDit, uploadFile);
+            task.addPropertyChangeListener(this);
+            task.execute();
+            loggerSended = true;
+            if(task.isDone());
+                continue;
+        }
     }
 
     /**

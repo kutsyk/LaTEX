@@ -3,325 +3,165 @@
 % Title must be 150 characters or less
 \begin{flushleft}
 {\Large
-\textbf{Finding Near-Optimal Groups of Epidemic Spreaders in a Complex Network}
+\textbf{Using friends as sensors to detect global-scale contagious outbreaks}
 }
 % Insert Author names, affiliations and corresponding author email.
 \\
-Geoffrey Moores$^{1,3}$, 
-Paulo Shakarian$^{1,3}$, 
-Brian Macdonald$^{2,3}$, 
-Nicholas Howard$^{2,3}$
+Manuel Garcia-Herranz$^{1,\ast}$, 
+Esteban Moro$^{2,3}$, 
+Manuel Cebrian$^{4,5,6}$,
+Nicholas A. Christakis$^{7,8,9}$,
+James H. Fowler$^{10,11}$
 \\
-\bf{1} Electrical Engineering and Computer Science Department, United States Military Academy, West Point, NY, USA
+\bf{1} Department of Computer Science, Escuela Polit\'ecnica Superior, Universidad Aut\'onoma de Madrid,  Madrid, Spain
 \\
-\bf{2} Mathematical Science Department, United States Military Academy, West Point, NY, USA
+\bf{2} Department of Mathematics \& GISC, Universidad Carlos III de Madrid, Legan\'es, Spain
 \\
-\bf{3} Network Science Center, United States Military Academy, West Point, NY, USA
+\bf{3} Instituto de Ingenier\'ia del Conocimiento, Universidad Aut\'onoma de Madrid, Madrid, Spain
+\\
+\bf{4} Computer Science \& Engineering Department, University of California, San Diego, CA, USA
+\\
+\bf{5} Media Laboratory, Massachusetts Institute of Technology, Cambridge, MA, USA
+\\
+\bf{6} National Information and Communications Technology Australia, Melbourne, Victoria, Australia
+\\
+\bf{7} Department of Sociology, Yale University, New Haven, CT, USA
+\\
+\bf{8} Department of Ecology and Evolutionary Biology, Yale University, New Haven, CT, USA
+\\
+\bf{9} Department of Medicine, Yale School of Medicine, New Haven, CT, USA
+\\
+\bf{10} Medical Genetics Division, School of Medicine, University of California, San Diego, CA, USA
+\\
+\bf{11} Political Science Department, University of California, San Diego, CA, USA
 \\
 
-\noindent E-mail: geoffrey.moores@usma.edu; paulo@shakarian.net; brian.macdonald@usma.edu, nicholas.howard@usma.edu
+$\ast$ E-mail: Corresponding manuel.garciaherranz@uam.es
 \end{flushleft}
 
 % Please keep the abstract between 250 and 300 words
 \section*{Abstract}
-In this paper we present algorithms to find near-optimal sets of epidemic spreaders in complex networks.  We extend the notion of local-centrality, a centrality measure previously shown to correspond with a node's ability to spread an epidemic, to sets of nodes by introducing combinatorial local centrality.  Though we prove that finding a set of nodes that maximizes this new measure is NP-hard, good approximations are available.  We show that a strictly greedy approach obtains the best approximation ratio unless P=NP and then formulate a modified version of this approach that leverages qualities of the network to achieve a faster runtime while maintaining this theoretical guarantee.  We perform an experimental evaluation on samples from several different network structures which demonstrate that our algorithm maximizes combinatorial local centrality and consistently chooses the most effective set of nodes to spread infection under the SIR model, relative to selecting the top nodes using many common centrality measures.  We also demonstrate that the optimized algorithm we develop scales effectively.
-% than betweenness and closeness, its closest, well known competitors in selecting a set of influential nodes.
+
+Recent research has focused on the monitoring of global--scale online data for improved detection of epidemics, mood patterns, movements in the stock market political revolutions, box-office revenues, consumer behaviour and many other important phenomena. However, privacy considerations and the sheer scale of data available online are quickly making global monitoring infeasible, and existing methods do not take full advantage of local network structure to identify key nodes for monitoring. Here, we develop a model of the contagious spread of information in a global-scale, publicly-articulated social network and show that a simple method can yield not just early detection, but advance warning of contagious outbreaks. In this method, we randomly choose a small fraction of nodes in the network and then we randomly choose a �friend� of each node to include in a group for local monitoring. Using six months of data from most of the full Twittersphere, we show that this friend group is more central in the network and it helps us to detect viral outbreaks of the use of novel hashtags about 7 days earlier than we could with an equal-sized randomly chosen group. Moreover, the method actually works better than expected due to network structure alone because highly central actors are both more active and exhibit increased diversity in the information they transmit to others. These results suggest that local monitoring is not just more efficient, but also more effective, and it may be applied to monitor contagious processes in global--scale networks.
 
 % Please keep the Author Summary between 150 and 200 words
 % Use first person. PLoS ONE authors please skip this step. 
 % Author Summary not valid for PLoS ONE submissions.   
-
-
-% ----------------------------------------------------------------------------------------INTRODUCTION----------------------------------------------------------------------------------------
+%\section*{Author Summary}
 
 \section*{Introduction}
+Modern social, informational, and transactional platforms offer a means for information to spread naturally (e.g, as in the case of the ``Arab Spring''\cite{1}), and there is increasing interest in using these systems to intentionally promote the spread of information and behavior \cite{2,3,4,5}.  In addition, they also yield a brand-new and large-scale global view of social interactions and dynamics of formerly hidden phenomena \cite{6}.  Recent work has taken advantage of such monitoring of global-scale online data for improved detection of epidemics \cite{7,8,9,10}, mood patterns \cite{11,12}, stock performance \cite{13}, political revolutions \cite{14}, box-office revenues \cite{15}, consumer behavior \cite{9,16} and many other important phenomena. However, the advent of global monitoring has recently heightened concerns about privacy \cite{17}, and anonymization is often insufficient to guarantee it \cite{18}.  Thus, future efforts to monitor global phenomena may be restricted to analysis at a local scale \cite{10,19} or to incomplete pictures of the system.  Moreover, the explosive growth of online data has made it more and more difficult to perform a complete global analysis.  As a result, scholars are beginning to develop local methods that sample small but relevant parts of the system \cite{20,21}.
 
-In this paper we look to find \textit{optimal} sets of individuals in a complex network to initiate an epidemic.  Addressing such a problem will have clear implication in seeding a social network to ensure a given phenomenon diffuses optimally and may also provide insight into mitigation strategies against an infection initiated by a group of individuals.  Further, this problem is non-trivial.  For instance, it has previously been noted in  \cite{kitsak10} that selecting a second influential node, or 'spreader,' does not always significantly increase the spread of the epidemic.  In \cite{kleinberg}, the authors show that identifying an optimal set of spreaders under a more generalized epidemic model is NP-hard.
+Here, we elaborate the theoretical framework of \cite{22} sampling technique to take advantage of the local structure inherent in large-scale online social networks, to allow monitoring of a network without relying on a complete picture of the system; and we use it to test an important hypothesis about non--biological social contagion. 
 
-The susceptible-infected-recovered (SIR) model~\cite{anderson79} is one of the most well-studied models of epidemic disease spread in a population.  In this model, individuals in a population are in one of three states: \textit{susceptible} individuals can acquire the disease from \textit{infected} individuals who after a certain amount of time become \textit{recovered} and can no longer transmit or acquire the disease.  In recent studies, there has been much interest in studying this model on populations structured as a network~\cite{easley2010,klemm12, castellano12}.  
+If a message is transmitted exogenously via {\it broadcast}, then all individuals are equally likely to receive it, regardless of their position in the network. On the other hand, if a message is transmitted endogenously from person to person to person via {\it contagion}, then individuals at the center of a network are likely to receive it sooner than randomly-chosen members of the population because central individuals are a smaller number of steps (degrees of separation) away from the average individual in the network \cite{22,23}. As a result, for contagious processes, we would expect the S-shaped cumulative ``epidemic curve'' \cite{24} to be shifted to the left (forward in time) for centrally located individuals compared to the population as a whole.
 
-Throughout this paper, we will assume a population structured as an undirected network $G=(V,E)$ where $V$ is a set of individuals (``nodes'') and $E \subseteq V \times V$ where $(v,v') \in E$ implies $(v',v) \in E$.  The size of $V$ and $E$ are denoted $n$ and $m$ respectively.  For other sets of elements, we shall use the notation $|\cdot|$ to denote the size of that set.  For a given node $v \in V$, $\eta_v$ is the set of neighbors, formally $\{ v' \in V | (v,v') \in E\}$.  We will extend this to sets: for set $V'$, $\eta_{V'} = \bigcup_{v \in V'}\eta_v$.  We will use $k_v$ to denote the degree of $v$ which is the cardinality of $\eta_v$.  The we denote the average and maximum degree of any node in the graph as $\langle k\rangle$ and $k^*$ respectively.  We note that, in most real-world social networks, $k^* << n$.  The quantity $N_v$ is the number of neighbors and next-nearest neighbors of node $v$ and is defined formally as follows:
-
-\begin{equation} 
-N_v = |\eta_v \cup \{\cup_{i \in \eta_v} \eta_i\}| 
-\end{equation}
-
-In this paper, we use a the version of the SIR model specified by Chen et al.~\cite{chen12}.   Nodes in the network under this version of the model are in one of three states: susceptible, infected, or recovered.  Once a node is infected, one of its neighbors then becomes infected at random (by a uniform probability over the neighbors of the initially infected node).  After infecting a neighbor, the node then recovers with a probability $\frac{1}{\langle k \rangle}$.
-
-Chen et al. accurately identified individual spreaders with Local Centrality.  For a given node $v$, its Local Centrality, $C_L(v)$ is defined as follows:
-
-\begin{equation}
-\label{chenEqn}
-C_L(v) = \sum_{u \in \eta_v} \sum_{w \in \eta_u} N_w
-\end{equation}
-
-We extend Local Centrality with a set centrality-based technique similar to that of \cite{bog06,arroyo08}.  We then frame an optimization problem that seeks to find $k$ of nodes in the network that together optimize our extended version of local-centrality.  For some set $V' \subseteq V$ with \textit{combinatorial local centrality}, denoted $C_{LC}(V')$, is defined as follows:
-
-\begin{equation} 
-\label{clcEqn}
-C_{LC}(V') = \sum_{u \in \eta_{V'}} \sum_{w \in \eta_u} N_w
-\end{equation}
-
-Figure 1 demonstrates $N_v$, $C_L$, and $C_{LC}$ on a small, arbitrary network. \\
-
-Using this definition, we now present the problems we wish to study in this paper which deal with finding a set of nodes (of sized $K$) that optimizes the above function.
-
-\begin{define} Max Combinatorial Local Centrality Problem (Max $C_{LC}$): \\ 
-INPUT: $K < n$; \\
-OUTPUT: $V' \subseteq$ V, s.t. $|V'| \leq$ K and $ \nexists$ $V'' \subseteq V$ s.t. $|V''| \leq K$ where $C_{LC}(V') \; < \; C_{LC}(V'')$ \end{define}
-
-\begin{define} Combinatorial Local Centrality Decision Problem (Dec $C_{LC}$) \\
-INPUT: $K < N$; $X$\\
-OUTPUT: Yes if  $\exists V' \subseteq$ V, s.t. $|V'| \leq K$ and  $C_{LC}(V') \; \geq \; X$; No otherwise. \end{define}
+If so, then the careful collection of information from a sample of central individuals within human social networks could be used to detect contagious outbreaks before they happen in the population at large \cite{22}.  We call this the {\it sensor hypothesis}.  In fact, the very discrepancy in the time to infection between central and randomly-chosen individuals could serve as a means to distinguish between exogenous and endogenous mechanisms, either {\it ex post} by comparing their mean times of infection or in real time by looking for the first day in which there is a significant divergence in their cumulative incidences.
 
 
-Unfortunately, the MAX $C_{LC}$ problem is also NP-hard and difficult to approximate as well.  However, we demonstrate certain mathematical properties of the problem (namely sub-modularity and monotonicity) that allow us to leverage the results of \cite{nemhauser78} to prove that a greedy approach achieves the best approximation ratio unless P=NP.  We then create an algorithm that selects nodes in a manner equivalent to the greedy approach but does so more efficiently, hence running faster.  This second algorithm maintains the theoretical guarantees of the greedy approach with respect to approximation and improves upon the theoretical guarantees of the greedy approach with respect to runtime.
-
-Both algorithms are then experimentally evaluated to demonstrate a significant speedup of several orders of magnitude with the improved algorithm.  We then analyze the experimental spreading potential of a set of vertices chosen with our algorithm against the top $k$ nodes based on several common centrality measures from the literature.  We found our GREEDY-$C_{LC}$ algorithm identifies sets of nodes whose corresponding $C_{LC}$ value is consistently greater than that found using centrality measures (average increase as compared to centrality measures was $7\%$).  We also compare our approach to the centrality measures based on the expected number of infectees in the aforementioned SIR model.  On average, GREEDY-$C_{LC}$ outperforms the other centrality measures (average of $1\%$).  Additionally, we also found that both in terms of optimizing $C_{LC}$ and expected number of infectees, GREEDY-$C_{LC}$ more consistently picked the well-performing sets of nodes than any single centrality measure.
-
-After we review related work, the rest of the paper is outlined as follows.  In Algorithms and Analysis, we present the complexity and approximation results for the MAX-$C_{LC}$ and DEC-$C_{LC}$ problems.  We then show that the a greedy approach obtains the best possible approximation ratio under currently-accepted theoretical assumptions.  We then refine our greedy algorithm and produce the theoretical speed-up.  Next, our data sets and experimental set-up are provided, followed by our experimental results. We conclude with a brief discussion including directions for future research.  Full proofs are contained in the supplemental information section.
-
-
-\subsection{Related Work}
-
-Identifying epidemic spreaders in a social network is a very active area of research.  For instance, identifying a single node with the ability to spread an epidemic effectively has been previously studied in \cite{kitsak10, subrah12, klemm12, castellano12, chen12}.  This paper focuses on a different problem: identifying a set of nodes that can optimally spread an epidemic.  We build on the centrality measure and epidemic model of \cite{chen12}.  In that work, the authors introduce Local Centrality as a centrality measure which is a trade off between computational complexity and influence prediction, finding a middle ground between measures such as betweenness and degree (respectively too computationally expensive and of little relevance on large networks).
-
-Identifying sets of epidemic spreaders from a combinatorial centrality measurement (similar to what is done in this paper) is discussed in \cite{bog06} where the authors elegantly discuss the issues with choosing a set of nodes which either promote or disrupt spreading (KPP-POS and KPP-NEG).  They also find that off the shelf centrality measures are not well suited to finding such sets.  They describe their own greedy algorithm to find sets of nodes using their proposed group centrality measures. \cite{arroyo08} approaches KPP-POS and KPP-NEG with an information theory entropy measure and demonstrate positive results in their simulating environment, however the authors note the entropy calculation is too computationally expensive for large networks.
-
-A more generalized epidemic-like model, the \textit{independent cascade} (IC) model was introduced in classic work of \cite{kleinberg} and later improved upon in \cite{chen10} in terms of efficiency (the original work of \cite{kleinberg} had scalability issues due to its dependence on simulation runs).  However, this framework is somewhat different from the epidemic model introduced in \cite{chen12} as under the IC model, an infected node has only one chance to spread a contagion before recovering where here the infected node recovers probabilistically.  Further, we note that \cite{chen10} uses a path-based approach where here we use a neighborhood-based approach (which in our tests outperforms the related path-based approach of closeness).  Developing a combinatorial path-based heuristic for the model of \cite{chen12} and comparing it to the algorithm presented in this paper is an important direction for future work.
-
-In \cite{borgeMoreno} they instead focus on a rumor spreading model for social contagion and information propagation, which is similar to the SIR Model but includes a dampening effect where nodes are more likely to become a stifler (similar to recovered nodes) if they are in contact with other spreaders (infectees) or stiflers.   They find that k-core index does not determine the spreading capabilities of the nodes but rather whether or not a given node prevents the diffusion of a rumor to a system-wide scale.  Additionally, \cite{gleeson07} and \cite{kleinberg} investigate spreading conditions under a linear threshold model, where the activity of neighbor nodes activates currently inactive nodes.  \cite{gleeson07} finds a formula for the average size of activated nodes given the size of the seed set and note that the existence of cascades are extremely sensitive to small initial sets of active nodes.  The dynamics of these models provide rich new testing grounds for our algorithm in future work.  We believe the linear threshold model could be particularly conducive to $\ccl$ because it tends to avoid clustering in lieu of a more even spread which may result in more areas with inactive nodes surrounded by active nodes.  The rumor dynamics model also is disadvantageous for highly clustered infected sets so we may also see positive results under that model.
-
-
-%.  In that seminal work, the authros provide approximation guarantees for greedy algorithms which approximate an optimal set of influential nodes.  They also show that their greedy approximation well outperforms node selection heuristics using common centrality measures. The authors of \cite{chen10} contribute to this problem under the Independent Cascade model with an additional heuristic for the greedy approach in Kempe et al. which allows for a tunable parameter that limits the region of influence under consideration by the greedy algorithm.  They develop their heuristic specifically for the Independent Cascade spreading model, and to our knowledge no current method applies a similar technique of limiting the region under consideration in a more general case. They demonstrate scalability to networks with millions of nodes and influence prediction performance comparable or better than existing greedy approaches.
-
-
-%that optimal epidemic spreading on networks.  Recently \cite{klemm12} studied influence which is dependent on the dynamics of spreading in addition to the topology of the network.  The authors define a measure called dynamical influence which takes into account the spreading process and then demonstrate its efficacy on the SIR model.  \cite{castellano12} highlights the importance of the network structure to all efforts of determining influence on epidemic spreading.  They demonstrate that which structures in the network most promote epidemic growth is a product of both the network itself and the particular spreading process. A related investigation occurs in \cite{macdonald12} which demonstrates that the efficacy of a centrality measure in identifying influential nodes is sensitive to the spreading parameter of the epidemic model.
-
-%The research of this paper is a direct product of the work in \cite{chen12}, where the authors introduce Local Centrality as a centrality measure which is a trade off between computational complexity and influence prediction, finding a middle ground between measures such as betweenness and degree (respectively too computational expensive and of little relevance on large networks). In \cite{kitsak10} the relevance of Shell Number Decomposition as an identifier of spreaders is discussed.  The authors make a point that choosing multiple nodes from the same K-Core does not promote growth more than choosing a single node from the core, but that choosing a new node from a separate K-Core increases spreading dramatically. In what they label the ensemble issue, the authors of \cite{bog06} elegantly discuss the issues with choosing a set of nodes which either promote or disrupt spreading (KPP-POS and KPP-NEG).  The also find that off the shelf centrality measures are not well suited to finding such sets.  They describe their own greedy algorithm to find sets of nodes using their proposed group centrality measures. \cite{arroyo08} approaches KPP-POS and KPP-NEG with an information theory entropy measure in demonstrate in their simulating environment with positive results, however the authors note the entropy calculation is too computationally expensive for large networks.
-
-%Kempe et al. in \cite{kleinberg} provide approximation guarantees for greedy algorithms which approximate an optimal set of influential nodes.  They also show that their greedy approximation well outperforms node selection heuristics using common centrality measures. The authors of \cite{chen10} contribute to this problem under the Independent Cascade model with an additional heuristic for the greedy approach in Kempe et al. which allows for a tunable parameter that limits the region of influence under consideration by the greedy algorithm.  They develop their heuristic specifically for the Independent Cascade spreading model, and to our knowledge no current method applies a similar technique of limiting the region under consideration in a more general case. They demonstrate scalability to networks with millions of nodes and influence prediction performance comparable or better than existing greedy approaches.
-
-%This paper and \cite{chen10} represent a way to reduce computational costs through limiting the network region under consideration while leveraging the greedy algorithm guarantees developed in \cite{kleinberg} to build approximate best sets of spreaders, allowing for analysis on large, real world networks.  However, our centrality measure does not correspond directly to the spreading model under consideration.  Because their Maximum Influence thresholds depend on the edge weights as probabilities under the Independent Cascade model, their algorithms are not readily applicable to networks without edge weights or under the SIR ro other models.  But $C_{LC}$ relies on a fixed local neighborhood to each vertex, rather than the variable depth of influence considered under their algorithm, so it is less flexible in this regard.  The result that our algorithm consistently outperformed closeness is also of note in this comparison. Closeness is calculated using shortest paths in the same way that activation probability in \cite{chen10} relies on Maximum Influence regions of influence, which in turn are calculated using shortest paths in the network.  Therefore an analysis of $C_{LC}$ under the Independent Cascade model as a comparison to the results of \cite{chen10} is a promising direction for further study.
-
-\section*{Materials and Methods}
-\subsection*{Algorithms and Analysis}
-
-Here, we present theoretical results on the $C_{LC}$ problems defined in the introduction as well as establish algorithms that obtain certain guarantees.  First, we examine the computational complexity of the optimization and decision problems associated with maximizing combinatorial local centrality.  Unfortunately, these problems are intractable by an embedding on the Max-K-Cover problem of \cite{feige98} which has previously been proved to be NP-hard.
-
-\begin{thm}\label{nph-thm} The Max $C_{LC}$ Problem is NP-Hard. \end{thm}
-
-\begin{thm}\label{dec-pbm} The Dec $C_{LC}$ Problem is NP-Complete \end{thm}
-
-We will use the notion of approximation introduced in~\cite{Garey79} to analyze the performance of our algorithms.  Specifically, we define an $\alpha$-approximate algorithm as follows.  Let $U$ be a universe of elements and $f$ be a function that maps subsets of $U$ to real numbers.  Let $S,S^*$ be subsets of $U$ and $f(S^*)$ obtains an optimal value and $S$ be a subset returned by approximation algorithm $A$. We say that $A$ is an $\alpha$-approximate algorithm if $f(S) \geq \alpha f(S^*)$.  Based on this notion, we are able to leverage another result of \cite{feige98} to make the following statement on the limit of our ability to approximate Max $C_{LC}$ (in polynomial time) under accepted theoretical assumptions.
-
-\begin{thm}\label{approxUBound} Max $C_{LC}$ cannot be approximated in polynomial time within $1-\frac{1}{e} + \epsilon$ for $\epsilon > 0$ unless P = NP.\end{thm}
-
-Knowing this limit, it is desirable to seek an algorithm that obtains a matching approximation ratio.  Clearly, such an algorithm would then obtain the best provable approximation unless P=NP, a currently-accepted assumption in computer science.  In order to provide such a result, we prove a few important lemmas that we shall require that deal with properties of the function $\ccl$.  First, we show that it is monotonic.  Given set $U$, a function $f$ is monotonic iff for any pair of subsets $S, S' \subseteq U$ where $S \subseteq S'$, we have $f(S) \leq f(S')$.
-
-\begin{lemma}\label{mono} $C_{LC}(V')$ is monotonic.\end{lemma} 
-
-The next important property we prove about $\ccl$ is that it is \textit{sub-modular}.  We say a function $f$ is sub-modular iff for $i \notin S'$ and $S \subseteq S'$, we have $f(S \cup\{i\}) - f(S) \geq f(S' \cup\{i\}) - f(S')$.
-
-\begin{thm}\label{submod} $C_{LC}$ is sub-modular.\end{thm} 
-
-Using the properties of monotonicity, we are able to show that a greedy algorithm for approximating $\ccl$ obtains the best approximation ratio unless P=NP.  This follows directly from the results of \cite{nemhauser78}.  We include a basic greedy algorithm (GREEDY-$C_{LC}$, show in in Table 1) and a theorem showing it can run in polynomial time below.\\
-
-\begin{thm}\label{ptime-greedy} GREEDY-$C_{LC}$ takes $O(K^2 n k^{*4})$ time.\end{thm}
-
-The following theorem leverages our two previously described lemmas as well as the construction used in the proof of Theorem~\ref{nph-thm} to show that the algorithm obtains the best approximation ratio unless P=NP.
-
-\begin{thm}\label{greedApprox} GREEDY-$C_{LC}$ obtains the best possible approximation ratio in polynomial time unless P=NP\end{thm}
-
-Though polynomial, the result of Theorem~\ref{ptime-greedy} is likely problematic for larger networks.  As such is the case we sought to improve upon this run-time with an improved algorithm - GREEDY-$C_{LC}$2 (pseudo-code provided in Table 2).  We prove the following guarantees for this algorithm.\\
-
-\begin{thm}\label{algequiv} Any solution produced by algorithm 2 could also be produced by algorithm 1. \end{thm}
-
-\begin{thm}\label{timeImp}GREEDY-$C_{LC}$2 takes $O(K^2 m)$ time.\end{thm}
-
-In this improved approach, our first intuition was to pre-compute the quantity $ \sum_{w \in \eta_v} N_w$ for each node $v$ and store it in a data-structure.  Next we decided to keep track of all the first neighbors of the set we are building, which allows the algorithm to avoid recalculating that set each loop.  This yields a provable improvement in time complexity by a factor of $k^{*3}$.  Additionally, we added a practical improvement as well.  In a related submodular problem, Leskovec ~\cite{leskovec07} obtained a $700$ percent increase by ``lazy'' evaluation of the submodular function (over the basic greedy approach, based on experiments).  We include that in this approach by altering line 7, correctly avoiding unnecessary calculations of centrality for poorly-performing nodes. We present experimental evaluations of how this modification affected our problem in the next section.
-
-\begin{Example}
-Table 3 features the improved algorithm selecting a set of three vertices from a small network of 35 primates' relationships.  Each column contains a vertex followed by how much that vertex would increase the $C_{LC}$ of the set if it were added to the set.  For example, as the algorithm runs through each vertex seeking the first to add to the set, the first vertex is automatically the first greatest increase found, until the fourth vertex is found to generate a higher $C_{LC}$ value, and last in the column is vertex 16, which is then becomes first vertex in the set.  In the second and third columns the practical improvement of GREEDY-$C_{LC}$2 is visible. Each time a $X > Y$ appears it signifies that a vertex was skipped because in the last iteration it increased $C_{LC}$ by less than whatever is the current best increase for this iteration.
-\end{Example}
-
-\subsection{Datasets}
-We examined five different networks in our analysis. They include an  a sexual interaction network~\cite{rocha10}, email network~\cite{arenas}, an academic collaboration network~\cite{snap12}, a protein interaction network~\cite{ccnr}, and a social network~\cite{abc}.  Each network is both unweighted and undirected.  Our intuition was to utilize networks from a variety of domains in our evaluations.
-
-The sexual interaction, email, academic collaboration, and protein interaction networks are denoted A, B, C, and D (respectively) in Figures 2 and 3.  We provide some details on these networks in Table 4.  The social network was primarily used for run-time analysis (Table 5).   These networks are described in more detail below.
-
-The sexual interaction network is an online sex community in Brazil in which a link represents that one of the individuals posted online about a sexual experience with the other individual, resulting in a bipartite graph. The data was extracted from September of 2002 to October of 2008 Luis E. C. Rocha \& Holme \cite{rocha10}.
-
-The email network is derived from the communications of members of the University Rovira i Virgili. It was extracted in 2003 \cite{arenas}.
-
-The academic collaboration network is derived from the arXiv pre-print server and covers scientific collaborations between authors’ papers submitted to the General Relativity and Quantum Cosmology category from Jan. 1993 - Apr. 2003 \cite{snap12}.
-
-The protein interaction network is a network consisting of protein-protein interactions in yeast \cite{ccnr}.  
-
-The social network is derived from YouTube, the video-sharing website that allows users to establish friendship links \cite{abc}. The sample was extracted in Dec. 2008. Links represent two individuals sharing one or more subscriptions to channels on YouTube.
-
-The Douban network was mined from Douban.com, launched on March 6, 2005, which is a Chinese Web 2.0 website providing user review and recommendation services for movies, books, and music. It is also the largest online Chinese language book, movie and music database and one of the largest online communities in China \cite{douban}.
-
-\subsection{Experimental Set-Up}
-The runtime experiments on the Douban social media network were conducted on a platform with an Intel X5677 Xeon Processor operating at 3.46 GHz with a 12 MB Cache and 288 GB of physical memory.  The machine was running Red Hat Enterprise Linux version 6.1.  Only one core was used for experiments.  All other experiments were run on a computer equipped with an Intel Core i7 M620 equipped with two cores at 2.67GHz with 4.00 GB of RAM (only one core was utilized). The machine was running Windows 7.  GREEDY-$C_{LC}$ and GREEDY-$C_{LC}$2 were written using Python 2.7.3 in 75 and 80 lines of code, respectively, that leveraged the NetworkX library available from http://networkx.lanl.gov/. The SciPy library from http://www.scipy.org/ was also used for the experimental setup.
-
-We compared our improved algorithm to choosing the top $K$ vertices from many common centrality measures. Top-LC refers to choosing the top $K$ vertices using Local Centrality, rather than trying to optimize Combinatorial Local Centrality.  Degree is simply the number of edges a node has.  Shell number refers to the greatest core to which a node belongs (see \cite{kitsak10} for details).  Betweenness measures how many shortest paths, of all vertex pairs in the network, run through a vertex.  Closeness is defined as the inverse of farness, where a node's farness is the sum of distances to every other node along shortest paths.  Eigenvector centrality and PageRank are recursive measures which take into account both how many neighbors a vertex has and the Eigenvector centrality/Pagerank of those neighbors.
-
+% Results and Discussion can be combined.
 \section*{Results}
-\subsection*{Runtime}
-We first examined the run time of our improved algorithm as opposed to the simple greedy algorithm.  Using small subsets of the email network, we prompted each algorithm to select $5\%$ of the subgraph. Table 5 displays the speed-up of the improved algorithm over the simple greedy algorithm even on these very small graphs.  The difference is multiple orders of magnitude, aligning with our theoretical results.
-
-Next we wanted to demonstrate that our improved algorithm also performs well with respect to computing other common centrality measures.  Taking four of the datasets, the email, sexual interaction, social network, and the Douban network, we generated initial seed sets with GREEDY-$C_{LC}$2 and compared this time to how long it took for the NetworkX built in functions for Closeness and Betweenness dictionaries to be calculated, shown in Table 6.  Our improved algorithm relies on pre-computation of the value $N_w$, the number of first and second neighbors of each vertex in the graph, so the time it takes to calculate $N_w$ is also included in Table 6. Once the dictionaries for Closeness and Betweenness are found, they must be sorted to deliver the top $K$ nodes, but that time is negligible next to the time required to build the dictionaries and therefore is not included.  The NetworkX implementations for both Closeness and Betweenness are of complexity $O(n m)$ ~\cite{networkx,brandes}. Recall that the time complexity of GREEDY-$C_{LC}$2 is $O(K^2 m)$, therefore when $K$ is relatively small compared to $n$ we should expect GREEDY-$C_{LC}$2 to outperform Closeness and Betweenness.
-
-Finally, we demonstrated that our GREEDY-$C_{LC}$2 algorithm could also deliver results on a larger datasets - which is a more typical need in practical applications dealing with social media site.  Here we used a social network extracted from the Douban social media site~\cite{douban}, which consisted of $154,907$ nodes and $654,188$ edges.  For this experiment, we evaluated the runtime of our algorithm as a function of the cardinality of the solution (Figure 4).  We found that a quadratic relationship was maintained ($R^2=0.99$) which reflects our complexity result of Theorem 8.  Finding a set of $4\%$ of the population ($6200$ nodes) took $18.25$ hours, which significantly outperformed other measures.  Currently, we are exploring means to further scale this approach, including additional heuristic approximations and parallelization.
 
 
-\subsection*{$C_{LC}$ Optimization}
-To test the efficacy of GREEDY-$C_{LC}$2, we examined five different $500$ node subgraphs of four separate networks.  On each subgraph, we chose the top $1$, $3$, $5$, and $8$ percent of vertices based on several common centrality measures and using GREEDY-$C_{LC}$2.  First we needed to demonstrate that GREEDY-$C_{LC}$2 does in fact optimize $C_{LC}$ better than other measures.  This is difficult to show definitively, because we do not have other algorithms which aim to maximize $C_{LC}$ to use as a comparison, but the contrast with common centrality measures is still helpful.  In Figure 2 we present the averages of the $C_{LC}$ value over those five subgraphs for the subsets chosen by GREEDY-$C_{LC}$2 versus each of the subsets chosen by selecting the top X percent of nodes using other centrality measures.  Figure 2 shows both that sets that have a high $C_{LC}$ are in practice very different from other measures (i.e. we did not develop a trivially new definition), and then that seeking sets with other centrality measures is not good shortcut to finding sets that have a high $C_{LC}$.  In all cases, GREEDY-$C_{LC}$2 chose the set with the highest $C_{LC}$, and was an average of $7\%$ greater than the top performer for each percent and data set pair.  On every dataset an analysis of variance (ANOVA) reveals that there is a significant difference in the performance among our algorithm and the centrality measures with respect to increase or decrease in $C_{LC}$ (p-value less than $0.04556$ calculated with R version 3.01) except academic collaboration network, which had a p-value between $0.8949$ and $0.9977$ for each percentage trial.  Some of the uncertainty in the statistical analysis is attributable to the variance between the random subgraphs, as in many cases average $C_{LC}$ values across all centrality measures differed between two subgraphs as much as $20\%$.
+Using 6 months of data from Twitter recorded in 2009~\cite{31}, we analyze a network containing 40 million users around the world who are connected by 1.5 billion directed relationships (``follows'').  Over six months, these users sent nearly half a billion messages (``tweets''), of which 67 million contained a user-supplied topic keyword called a ``hashtag''. These hashtags are prefixed by a pound sign (�\#�) and are used to denote unique people, events, or ideas, making them useful for studying the spread of information online \cite{25,26,27}.
 
-In some trials, particularly in sexual interaction and academic collaboration (A and C in Figure 2), GREEDY-$C_{LC}$2 reached a maximum $C_{LC}$ value before selecting $8\%$ of the graph, at which point the averages of other centrality measures begin to approach GREEDY-$C_{LC}$2.  However, as $C_{LC}$ has already been maximized in this case (because the first neighbors of the seed set cover the entire graph), they will never surpass the $C_{LC}$ of the smaller set.  In a real world scenario, this may be taken advantage of as a way to save advertising costs or focus on a smaller set of the population for epidemic evaluation.
+To test the sensor hypothesis, we need a sample of individuals with higher network centrality (the ``sensor'' group) to compare with a sample of randomly chosen individuals (the ``control'' group).  However, measuring centrality can be a computationally expensive task in large-scale networks like Twitter (see SI).  Therefore, we use a simplified approach that first randomly selects a set of users for the control group, and then randomly chooses ``friends'' of members of this group to put in an equally-sized sensor group.  This procedure generates a sensor group with higher degree centrality than the control group because of the ``friendship paradox'': high-degree individuals are more likely to be connected to a randomly chosen person than low-degree individuals \cite{22,28}.  In other words, ``your friends have more friends than you do''.\cite{29}
 
-\subsection*{Epidemic Evaluation} 
-Next the same sets as chosen in the previous section were the initial infectees for $1000$ simulation runs over the SIR model.  In this paper, to remain consistent with the work of \cite{chen12}, we mimicked their experimental model.  After setting our initial infectees to the infected state, we run the SIR model for ten time steps and then sum the recovered and infected vertices to determine the total number of infected vertices.  The results, again averaged over the five subgraphs from each network, are shown in Figure 3. The sets chosen by GREEDY-$C_{LC}$2 spread on average to $1\%$ more vertices than the maximum spreader from the rest of the centrality measures over each percent and dataset pair.  Furthermore, although occasionally another centrality measure will outperform GREEDY-$C_{LC}$2 on a single cardinality and dataset pair, which measure does so is highly inconsistent.  Particularly visible in the sexual interaction network (panel A of Figure 3), GREEDY-$C_{LC}$2 did not produce a set as big as $5\%$ or $8\%$ of the graph on every subgraph, so other centrality measures gained an advantage in that they began with more infectees.  Interestingly though, $C_{LC}$ still remained in the top half of the centrality measures, suggesting again a certain threshold after which it is inefficient to continue seeding a graph and a way to conserve real world resources.  An analysis of variance (ANOVA) on every dataset reveals that there is a significant difference in the performance among sets chosen by our algorithm and the other centrality measures with respect to increase or decrease in total vertices infected (p-value less than $0.0003426$ calculated with R version 3.01), except the sexual interaction which had a p-value between $0.9572$ and $0.9985$ for each percentage trial.  However, we also note that this may be a somewhat degenerate case as this particular sexual interaction network consisted of only heterosexual interactions - which leads to a bipartite structure.  This may account for the $C_{LC}$ measure covering the entire network without using all of the resources - which in turn led to inconsistent performance against the centrality measures in the simulation trials.
+In Fig.\ref{panel1}a we demonstrate that the sensor group contains more high degree individuals and fewer low degree individuals, and this is true even if we remove duplicates from the sensor group (duplicates occur when the same person is randomly chosen as a friend by multiple individuals in the control group).  However, this difference between the sensor and control groups depends on what fraction of the network is sampled.  As the fraction increases, there is increasing overlap between the two groups, reducing the difference in their degree distributions (Fig.\ref{panel1}b).  We derive closed form equations that characterize the expected degree distribution for both the sensor groups (with and without duplicates) and control groups based on the fraction of nodes sampled and an arbitrary known degree distribution for the network as a whole (see SI ``An Analytic Elaboration of the Friendship Paradox'').  Fig.\ref{panel1}c,d show that these equations fit the data well for a random sample of 1.25\% of all users (500,000 total) on Twitter, confirming our expectation that the sensor group is more central than the control group.  
 
-\section*{Discussion}
-In this paper, we explored the problem of identifying a set of nodes that will cause an epidemic to spread under the SIR model of ~\cite{chen12}.  To do so, we extended the centrality measure of ~\cite{chen12} for sets rather than individual nodes.  Though we found that finding a set of nodes that maximizes this combinatorial centrality measurement is NP-hard, we develop a polynomial-time heuristic that we prove to provide the best approximation ratio unless P=NP.  We then further improve the performance, both theoretically and practically in a modified version of the algorithm that provides the same theoretical guarantee.  We implemented our algorithms and evaluated them on real-world datasets in terms of runtime, ability to maximize the combinatorial centrality measure, and the ability to find sets of nodes that encourage spreading in the SIR model.  We found our algorithms to outperform standard approaches in all of these evaluations.  Further, we show our approach to scale to networks of $10^5$ nodes.
+To test whether sensors can provide early warning of a contagious message spreading through the network, suppose $t^\alpha_i$ denotes the time at which a sampled user $i$ first mentions hashtag $\alpha$ (i.e the infection time).  We would expect $t^\alpha_i$ to be smaller on average for users belonging to a central sensor group $S$ than for those of a random control group $C$.  If we denote $\Delta t^\alpha=\langle t \rangle_{i \in S} - \langle t \rangle_{i \in C}$ for hashtag $\alpha$, the sensor hypothesis is that $\Delta t^\alpha<0$.  
 
-Future work could include a modified version of $C_{LC}$ which produces a disease spread mitigation strategy.  In such a scenario, we would attempt to find nodes that, if ``inoculated'' would minimize the maximum value for $C_{LC}$ with respect to a given cardinality constraint.  Additionally, further evaluation of $C_{LC}$ based on different diffusion models, such as those raised in the related work section, is another important direction for further research.  In particular, an evaluation of the metric under a classic SIR Model, rather than the variant described in this paper and in \cite{chen12}, would be a good first step.
+However, note that $\Delta t^\alpha$ depends on the size of the samples in two ways.  For small samples, the number of ``infected'' users (i.e. users mentioning hashtag $\alpha$) will be scarce, leading to large statistical errors.  On the other hand, for big samples, the degree distribution of the control and sensor groups tend to overlap and consequently $\Delta t^\alpha$  approaches 0.  Therefore, it may be necessary to find an optimal ``Goldilocks'' sample size that gives statistical power while still preserving the high-centrality characteristic of the sensor group.  Fig.\ref{panel2}a shows results from a theoretical simulation of an infection \cite{30} spreading in a synthetic network (see SI ``Sensor Performance in a Simulated Infection Model'') while Fig.\ref{panel2}b shows an empirical analysis of widely used hashtags in our Twitter database (see SI ``Sensor Performance in Real Data'') .  Both theory and data suggest that there exists an optimal (and moderate) sample size that may perform best for detecting large and significant differences between the sensor and control group resulting from contagious processes. 
 
-\section*{Appendix}
+To analyze the performance of the sensor mechanism, we collected five random control samples of 50,000 users and a random set of their followees of the same size to use as sensors for each one.  Focusing on the 32 most widespread hashtags that appear at least 10 times in each control sample, Fig.\ref{panel2}c shows that $\Delta t^\alpha$  is negative (i.e., the sensor sample uses the hashtag prior to the control sample) in all but two cases, with a mean for all hashtags of �7.1 days (SEM 1.1 days).  In the SI ``Using the Sensor Method with a Small Set of Samples'', we also show this distribution for a wider range of hashtags, and these all show that $\Delta t^\alpha$  tends to be negative.  In other words, the sensor groups provide advance warning of the usage of a wide variety of hashtags.
 
-\subsection{Proof of Theorem~\ref{nph-thm}}
-The Max $C_{LC}$ Problem is NP-Hard. 
-\begin{proof}
-\begin{define} Max K-Cover ~\cite{feige98}\\ \\
-INPUT: Universe $U$, a set of subsets $C$, and natural number $K'$ \\
-OUTPUT: $C' \subseteq C$, $|C'| \leq K'$ s.t. $|\cup_iC_i|$ is maximized. \\
-\end{define}
+We also hypothesized that comparative monitoring of a sensor group and a control group may help distinguish which hashtags are spreading virally via a contagious process and which are spreading via broadcast.  We studied 24 hashtags (Fig.\ref{panel3}a) that were ``born'' during our sample period (they first appeared at least 25 days after the start date of data collection) and then became widely used (they were eventually used more than 20,000 times).  Notably, the users using these hashtags tended to be highly connected and many were connected to a giant component, a sign that the hashtags may have spread virally online from user to user (see Fig.\ref{panel3}d and Fig. S11 to S14 of the SI for more examples). 
 
-Embedding: Given Max K Cover as defined in definition 2.4, we create an instance of the Max $C_{LC}$ as follows.  Form a bipartite graph G by creating a vertex for each $c_i \in C$ and each $e_i \in U$. Create a directed edge from $c_i$ to $e_i$ if $e_i \in c_i$.  For each vertex corresponding to an element $e_i$ create two additional nodes, $e_{i,a}$ and $e_{i,b}$.  Also add a directed edge from $e_i$ to $e_{i,a}$ and from $e_{i,a}$ to $e_{i,b}$.  Each node corresponding to a subset $c_i$ now has a path length of three to some $e_{i,b}$. \\ 
+For each of these hashtag networks, we constructed a random control sample of 5\% its size and a similarly-sized sensor sample of their followees to calculate $\Delta t\alpha$ .  We then repeated this process 1,000 times to generate a statistical distribution of these observed lead times (as in Fig.\ref{panel2}c).  The sensor group led the control group ($\Delta t^\alpha < 0$  ) 79.9\% (SE 1.2\%) of the time.  However, note that there was considerable variation in lead times, from 20 days to a few hours or no advance warning.  
 
-\begin{Claim}  Embedding of Max K-Cover into Max $C_{LC}$ can be accomplished in polynomial time, as graph G has $|C| + 3|U|$ vertices and $3|U|$ edges, whose creation takes constant time.  \end{Claim}
+An alternative explanation to the sensors lead time might be that hashtags are more likely to be created by the most active users such as the ones in the sensor group, and that, being more central, they are in a better position to make them popular; or from the opposite perspective, that sensors end up being more central because they create content that end up trending. In other words, that central actors select novel topics rather than being agents of contagion. In order to evaluate this possibility, we calculated the exposure rates of sensors and controls (i.e. the number of users who used the hashtag after being exposed to it). The results (see SI ``Using the Sensor Method with Hashtag Networks'') show that the exposure rate is significantly higher in the sensor group, meaning  that sensors are better transmitters in Twitter (they are aware of what�s happening in Twitter and transmit it very soon) while controls seem to introduce more information in Twitter from other sources (or to create it), rather than transmitting what they are exposed to in Twitter. These findings therefore militate against the selection idea in favor of the contagion hypothesis. 
 
-\begin{Claim}  Given set $V'$ returned by the an instance of Max $C_{LC}$ with $K < |C|$, the set $C^* = \{ c \; | \; v_c \in V'\}$ is the solution to the Max K-Cover problem. \end{Claim}
+To see how the sensor method works for hashtags that are {\it not} spreading virally, we generated a null distribution in which we randomly shuffled the timestamp of each hashtag use within the fully observed data, and then measured the resulting difference in the sensor and control group samples,  $\Delta _R t^\alpha$.  There is a positive correlation between degree and number of tweets per day so, having higher degrees on average than controls, sensors also tend to tweet more often. Therefore, in the shuffling process sensors actually have a greater chance of getting smaller times of infection than controls because they have more tweets to be assigned a new timestamp.  By shuffling the timestamps of every tweet we are measuring the lead time sensors would get not because of their centrality in a viral process but because of their higher tweeting rates. The difference, therefore, between this lead time and the observed one corresponds to the viral component of the process. Again, we repeated the procedure 1,000 times to generate a statistical distribution (see SI ``Using the Sensor Method with Hashtag Networks'').  The results show that the observed distribution of lead times falls outside the null distribution for 65.4\% (SE 1.2\%) of the hashtags, suggesting they did, in fact, spread virally (Fig.\ref{panel3}a).
 
-Suppose by way of contradiction that there exists some set $C^{**} \subseteq C$ such that $|C^{**}| \leq K$ and the number of elements covered by $C^{**}$ is greater than the number of elements covered by $C^*$.  Let $V'' = \{v_c | c \in C^{**}\}$. \\ 
+The hashtags also generally showed a shift forward in the daily and cumulative incidence curves of the sensor group compared to the control one (Fig.\ref{panel3}c,d).  This shift forward, another sign of virality in itself, could allow for identification of an outbreak in advance, as the sensor�s deviation from the trajectory of the control group identifies a process that is spreading through the network, affecting central individuals faster than random ones. For example, estimating the models each day using all available information up to that day, for \#openwebawards users, we find two consecutive days of significant ($p<0.05$) lead time by the sensor group compared to the control group on day 13, a full 15 days before the estimated peak in daily incidence (see SI ``Using the Sensor Method with Hashtag Networks'' and Fig. S11 to S14 of the SI), and also 15 full days before the control sample reaches the same incidence as the sensor group (See Fig.\ref{panel3}c).  
 
-The number of distinct nearest neighbors for $C^{**}$ is greater than the number of distinct nearest neighbors of $C^*$.  Note that for all vertices corresponding to elements $i$, $\sum_{w \in \eta_i} N_w = 1$ by the construction, and $C_{LC}(V_1)$ is simply the count of distinct nearest neighbors of set $V_1$.  Therefore $C_{LC}(V'') > C_{LC}(V')$, which is a contradiction.  \\ 
+One can also use fixed thresholds to trigger a ``divergence alarm'' when the sensor group usage of a particular hashtag is growing faster than the control group usage.  We tested a variety of these thresholds (see SI ``Reproduction Rates of Hashtags as a Factor Affecting Early Detection'') and found that they consistently provided advance warning of the hashtags that would be most likely to yield high usage in future.  In Fig.\ref{panel4}a, we show that the false positive rate for these alarms (an alarm that was triggered by a hashtag that would not be widely used) is low.  In Fig.\ref{panel4}b, we also show that the alarms can anticipate behavior outside Twitter as well.  A survey of several Google search terms that are closely related to certain hashtags in our data shows that the peaks in Twitter usage tend to precede or coincide with Google Trends peaks, and thus increases in the Twitter sensor group and their divergence with the control group provide early warning not only on Twitter but on Google searches as well (see SI ``Twitter, Sensors in Twitter, and Google Trends'' for several examples).
 
-\begin{Claim}  Given set $C^*$ returned by Max K-Cover, the set $V' = \{ v_c | c \in C^* \}$ is a solution to Max $C_{LC}$. \end{Claim}
+Finally, while the sensor mechanism allows us to identify a more central group, in terms of degree--centrality, that can be used to detect contagious outbreaks in advance, it may also allow us to focus on users who have other characteristics that could improve monitoring.  First, in terms of network centrality, we have found sensors to have also greater betweenness. Second, in terms of activity, users in the sensor group may be more central because they are more active on twitter, and indeed we find this to be true too (Fig.\ref{panel4}c).  On average, users in the sensor group sent 154 tweets (SE 2.8) during the six months they were monitored, while users in the control group tweeted only 55 times (SE 1.0, difference of means t = 36, $p < 2.2e-16$).  However, we also find that sensor users tend to use a greater variety of hashtags, even controlling for activity levels (Fig.\ref{panel4}d) (see SI ``Differences in Sensor and Control Characteristics That Also Affect  Propagation''). In summary, the sensor mechanism, while targeting users with higher degree centrality, is able to identify users that are more central in many ways. 
 
-Suppose by way of contradiction that there exists some $V''$ where $|V''| \leq |C|$ and $C_{LC}(V'') > C_{LC}(V')$.  Let $C^{**} = \{c | v_c \in V''\}$.  \\
+The distribution of the number of users using any one hashtag is heavy tailed (see SI ``The Twitter Data'') with most hashtags being used by less than a few hundred people and very few reaching the tens of thousands.  Therefore, for most hashtags, the probability of finding sufficient users to perform a significant analysis in a random sample of Twitter is very small.  Yet, despite the relatively small size of the infected populations, the sensor mechanism we test here seems to anticipate the global spread of information in a wide variety of cases.  And, importantly, it only requires a tiny fraction of the network as a whole to be monitored, allowing us to find a sample 6 times more connected than selecting the most connected users of a sample 5 times larger (see SI ``Friends vs. Most Connected Nodes and Most Connected Friends as Sensors'').
 
-$C_{LC}(V'') = \sum_{u \in \eta_{V''} } \sum_{w \in \eta_u} N_w$, which under the construction is $| \eta_{V''} |$.  Similarly $C_{LC}(V') = | \eta_{V'} | < C_{LC}(V'')$.  This is equivalent to saying that the number of nearest neighbors covered by set $C^{**}$ is greater than that of $C^*$, which is a contradiction.  \end{proof}
+\subsection*{Discussion}
 
-% -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-\subsection{Proof of Theorem~\ref{dec-pbm}}
-The Dec $C_{LC}$ Problem is NP-Complete. \\
-\begin{proof} 
+We believe that this method could be applied in a wide variety of contexts in which scholars, policy-makers, and companies are attempting to use ``big data'' online to predict important phenomena.  For example, the sensor method could be used in conjunction with online search to improve surveillance for potential flu outbreaks \cite{8,22}.  By following the online behavior of a group known to be central in a network (for example, based on e-mail records which could be used to construct a friend sensor group), Google or other companies that monitor flu-related search terms might be able to get high-quality, real-time information about a real-world epidemic with greater lead time, giving public health officials even more time to plan a response.  Similarly, policy-makers could monitor global mood patterns \cite{12} to anticipate important changes in public sentiment that may influence economic growth, elections, opposition movements, or even political revolutions \cite{14}.  We also conjecture that investors might use these methods to better predict movements in the stock market \cite{13}. 
 
-Given an oracle that produces a solution $V'$, we can clearly check if  $C_{LC}(V') \; \geq \; X$ in polynomial time by Theorem ~\ref{nph-thm}. \end{proof}
+Just as we find variation in lead time for different hashtags, we expect that the ability of the sensor method to detect outbreaks early, and how early it might do so, will depend on a number of factors, including: the online context (e.g., whether twitter or some other data environment); the intrinsic properties of the phenomenon that is spreading and how it is measured; the size or composition of the population, including the overall prevalence of susceptible or affected individuals; the number of people in the sensor group; the topology of the network (for example, the degree distribution and its variance, or other structural attributes) \cite{23}; and other factors, such as whether the outbreak modifies the structure of the network as it spreads (for example, by affecting the tendency of any two individuals to remain connected after the information is transmitted).  Nevertheless, it seems clear that taking advantage of the topological architecture of human populations offers the prospect of detecting a wide variety of contagious informational or behavioral outbreaks in advance of their striking the general population.
 
-% -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-\subsection{Proof of Theorem~\ref{approxUBound}}
-Max $C_{LC}$ cannot be approximated within $\frac{e - 1}e + \epsilon$ for $\epsilon > 0$ unless P = NP. \\
-
-\begin{proof}
-Embedding: We use the same embedding as in Theorem 2.1 above.\\ 
-Let $x=$ the number of sets covered by some set $C^*$ of Max K-Cover.\\
-Let $y=C_{LC}(V')$ where $V'$ is the set of vertices for Max $C_{LC}$.\\ 
-
-\begin{Claim} $x \geq y$.  \end{Claim}
-
-Suppose by way of contradiction that $x < y$.  If $C^*$ covers fewer neighbors than $C_{LC}(V')$ then at least one of those neighbors $u$ must have a $Q(u) > 1$.  However under the construction all vertices $e_i$ associated with elements have $Q(i) = 1$ as they each have only one next nearest neighbor $e_{ib}$ and no neighbors to that vertex, and we have a contradiction. \\
-
-\begin{Claim} $x \leq y$.  \end{Claim}
-
-Suppose by way of contradiction that $x > y$.  If $C^*$ covers more neighbors than $C_{LC}(V')$ then at least one of those neighbors $u$ must have a $Q(u) < 1$.  However under the construction all vertices $e_i$ associated with elements have $Q(i) = 1$ as they each have only one next nearest neighbor $e_{ib}$ and no neighbors to that vertex, and we have a contradiction. \\
-
- By the embedding, Claims 1.4 and 1.5, and Thm 4.4 of ~\cite{feige98} concerning the limit of approximating set cover, the Max $C_{LC}$ cannot be approximated within $\frac{e - 1}e + \epsilon$ for $\epsilon > 0$ unless P = NP. \end{proof}
-
-% -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-\subsection{Proof of Lemma~\ref{mono}}
- $C_{LC}(V')$ is monotonic.\\ 
-\begin{proof}
-Suppose by way of contradiction there exists $S \subseteq S'$ s.t. $C_{LC}(S) > C_{LC}(S')$. Then \\
-$ \sum_{u \in \eta_S} \sum_{w \in \eta_u} N_w >  \sum_{x \in  \eta_{S'}} \sum_{y \in \eta_x} N_y$ which implies $\sum_{w \in \eta_u} N_w > \sum_{y \in \eta_x} N_y$. \\
- However, because $S \subseteq S'$ we know $\eta_S \subseteq \eta_{S'}$ and  $\eta_u \subseteq  \eta_x$. \\
-Because the total neighbors of a subset is necessarily less than the total neighbors of its superset, we have a contradiction.\end{proof}
-
-
-% -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-\subsection{Proof of Theorem~\ref{submod}}
-$C_{LC}$ is sub-modular.
-\begin{proof} 
-Setup: $S \subseteq S' \subseteq V$; $V$ is the set of vertices in graph $G$; vertex $i \notin S'$; \\
-
-Suppose by way of contradiction $C_{LC}(S \cup \{i\}) - C_{LC}(S) < C_{LC}(S' \cup \{i\}) - C_{LC}(S')$. \\
-
-Then $\sum_{a \in \eta_{(S \cup \{i\})}} \sum_{w \in \eta_a} N_w - \sum_{a \in \eta_S} \sum_{w \in \eta_a} N_w <  \sum_{b \in  \eta_{(S' \cup \{i\})}} \sum_{w \in \eta_b} N_w - \sum_{b \in \eta_{S'}} \sum_{w \in \eta_b} N_w$\\
-
-If we let $a' =  \eta_{(S \cup \{i\})} - \eta_S$ and $b' =  \eta_{(S' \cup \{i\})} - \eta_{S'}$ the inequality above becomes: \\
-
-\begin{equation}\sum_{i \in a'} \sum_{w \in \eta_i} N_w < \sum_{i \in b'} \sum_{w \in \eta_i} N_w \end{equation}
-
-Note that $a'$ and $b'$ are the sets of neighbors added to sets $S$ and $S'$, respectively, with the addition of vertex $i$.
-
-\begin{Claim} $a' \subseteq b'$ \end{Claim}
-$a' = \eta_{S \cup {i}} - \eta_{S} = \eta_{S} \cup \eta_{{i}} - (\eta_{S} \cap \eta_{{i}}) - \eta_{S} =  \eta_{{i}} - (\eta_{S} \cap \eta_{{i}})$ \\
-Similarly, $b' =   \eta_{{i}} - (\eta_{S'} \cap \eta_{{i}})$. Since $S \subseteq S'$, $(\eta_{S} \cap \eta_{{i}}) \subseteq  (\eta_{S'} \cap \eta_{{i}})$, therefore $a' \subseteq b'$.\\
-
-However, with $a' \subseteq b'$, inequality 4 cannot be true, therefore $C_{LC}$ is sub-modular. \\  \end{proof}
-
-
-% -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-\subsection{Proof of Theorem~\ref{greedApprox}}
-GREEDY-$C_{LC}$ obtains the best approximation ratio unless $P = NP$.\\
-\begin{proof}
-\begin{Claim}\label{claimGreed} GREEDY-$C_{LC}$ is a Greedy Algorithm. \end{Claim}
-
-We build set $V'$ by adding one element at each iteration of the while loop.  A new element is chosen by analyzing the increase $C_{LC}$ for each node not in $V'$ and picking the maximal node. Using a local heuristic to make each choice in a set of decisions is a greedy approach. \\
-
-\begin{Claim}\label{claimEmpty} $C_{LC}(\emptyset) = 0$: \end{Claim}
-
-$C_{LC}(\emptyset) = \sum_{u \in \eta_\emptyset} \sum_{w \in \eta_u} N_w = \sum_{\emptyset} \sum_{w \in \eta_u} N_w = 0$\\
-
-Proof of Theorem: For any monotonic, sub-modular function $f(S)$ where $f(\emptyset) = 0$, a greedy algorithm guarantees an $\alpha = (1-1/e)$ approximation ~\cite{nemhauser78}. By Theorems ~\ref{mono} and ~\ref{submod}, and Claims ~\ref{claimGreed} and ~\ref{claimEmpty}, GREEDY-$C_{LC}$ gives an $\alpha = (1-1/e)$ approximation.\\
-
-By Theorem 2.1 of ~\cite{kleinberg} and the approximation ratio $\alpha$ above, $\alpha$ is the best approximation if $P \neq NP$. \\ \\  \end{proof}
-
-
-% -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-\subsection{Proof of Theorem~\ref{ptime-greedy}}
-GREEDY-$C_{LC}$ takes $O(K^2 n k^{*4})$ time.\\
-\begin{proof}
-
-\begin{Claim} $C_{LC}$ takes $O(|V'|k^{*4})$ \end{Claim}
-
-To compute $C_{LC}(V')$, first we iterate through each vertex in $V'$.  For each vertex, we consider each neighbor, and barring repeated vertices in the set we add those neighbors to a set of first neighbors for set $V'$, which takes $|V'| k^*$. For each vertex in the first neighbor set we count the first and second neighbors, which is no worse than $k^{*4}$. Therefore the time complexity is $O(|V'| k^{*4})$.
-
-GREEDY-$C_{LC}$ utilizes two looping control structures.  The first is a while loop that runs $K$ times, and the second is a nested for loop that runs for at most $n$ times, for each vertex in the graph.  Inside that loop the $C_{LC}$ algorithm, $O(|V'|k^{*4})$,  is called twice.  The time complexity is then $O(K^2 n k^{*4})$. \end{proof}
-
-
-% -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-\subsection{Proof of Theorem~\ref{algequiv}}
-Any solution produced by algorithm 2 could also be produced by algorithm 1.\\
-\begin{proof}
-Suppose by way of contradiction the condition that lastVal[i] $>$ bestVal caused us to omit the maximal node, $j$, or that the maximal node's last recorded marginal increase in $C_{LC}$ was lower than the current best value.  As $C_{LC}$ is sub-modular by Thm 2.5, an updated marginal increase of $C_{LC}$ would have to be lower than lastVal[j].  However if the new marginal increase is lower than lastVal[j], it must also be lower than bestVal, and therefore $j$ could not be optimal.  \end{proof}
-
-% -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-\subsection{Proof of Theorem~\ref{timeImp}}
-
-\begin{proof}GREEDY-$C_{LC}$2 takes $O(K^2 m)$ time.\\
-
-Given that we store $N_w$ for all vertices and a list $N2_v$ which contains the sum of $N_w$ for all neighbors $w$ of a node $v$, and an alternate form of computing $C_{LC}(V')$ which takes the first neighbors of set $V'$, $fn(V')$: 
-
-To compute $C_{LC}(V')$, now we simply iterate through the $fn(V')$ and sum $N2_v$ for each, which takes $O(|fn(V')|)$.  Updating $fn(V')$ requires adding all new neighbors whenever a new vertex is appended to the set, which takes $O(k^*)$ ($fn(V')$ can take multiple vertices, but in the algorithm's implementation it only takes one).
-
-The improved algorithm must also loop until it reaches $K$ vertices, and considers each vertex in the graph when choosing a new vertex.  To choose a new vertex, it must update $fn(V')$ with the potential new neighbors of a possible vertex and calculate $C_{LC}(V')$, so the complexity is $K n |fn(V')|$.  But $|fn(V')|$ is bound by $K k^*$ because it is the total number of neighbors of a set of at most $K$ elements, so the complexity may be reduced to $O(K^2 n k^*)$.  Finally we simplify the factors $n k^*$ to $m$.\end{proof}
-
-
-% ----------------------------------------------------------------------------------------ACKNOWLEDGEMENTS----------------------------------------------------------------------------------------
+% You may title this section "Methods" or "Models". 
+% "Models" is not a valid title for PLoS ONE authors. However, PLoS ONE
+% authors may use "Analysis" 
+%\section*{Materials and Methods}
 
 % Do NOT remove this, even if you are not including acknowledgments
+%
+\section*{Figure Legends}
+\begin{figure}[ht]
+\begin{center}
+%\includegraphics[width=6in]{Figure1}
+\end{center}
+\caption{
+{\bf Twitter exhibits the ``friendship paradox''.} a) Expected degree distributions for a 1.25\% random sample of the Twitter network (black line), friends of this randomly chosen group (red line), and the same friends group with duplicates removed (blue line); b) Larger samples of friends show a smaller difference in degree distribution from the overall network (black = overall network, green = 25\% sample, blue = 7.5\% sample, red = 1.25\%); c) and d) Respectively, In-degree (follower) and out-degree (followee) distribution of a random sample of 500,000 users, 1.25\% of Twitter�s users (the ``control'' group, black line) and the theoretical (red line) and observed (blue line) in-degree and out-degree distributions of their friends (the ``sensor'' group) with duplicates from the friends group removed.
+}
+\label{panel1}
+\end{figure}
+
+\begin{figure}[ht]
+\begin{center}
+%\includegraphics[width=6in]{Figure2}
+\end{center}
+\caption{
+{\bf Friends as sensors yield early detection of the use of hashtags.}  a) Measures of lead times based on simulations of an infection spreading through a network with infection probability $\lambda=0.1$ and recovery probability $\gamma=0.01$ on a Barabasi-Albert random network with tail exponent $\beta>3$ show that a sensor group tends to provide earlier warning than a randomly-chosen control group in smaller samples, but decreasing sampling variation in larger sample sizes means that the statistical likelihood of providing early warning is maximized in moderately-sized samples.  b) Observed results for hashtags on Twitter used by 1\% of the individuals using a hashtag of each sample.  c) Average lead time of first usage of each hashtag in the sensor group vs. the control group for all hashtags used by at least 10 users in each of 5 random samples of 50,000 random users.
+}
+\label{panel2}
+\end{figure}
+
+\begin{figure}[ht]
+\begin{center}
+%\includegraphics[width=6in]{Figure3}
+\end{center}
+\caption{
+{\bf Signs of virality in hashtag usage.}  a) The average lead for the 24 most-used hashtags time across 1,000 trials of the sensor group (in blue) vs. the same calculated lead time when all times of hashtag usage are randomly shuffled (in red).  Vertical bars are SEM.; b) daily incidence and c) cumulative daily incidence for the hashtag \#openwebawards show a shift forward in the S-shaped epidemic curve and a burst in the sensor group relative to the control group that could be used to predict the outbreak of this hashtag on the $13^{th}$ day (the first day on which, using all available information up to that day, there is a significant difference between the sensor and control groups with p-value $<$ 0.05), 15 days before the control group reaches the same cumulative incidence and before the estimated peak in daily incidence; d) greatest connected component of the follower network of users using the \#openwebawards hashtag shows that many users are connected in a large component.
+}
+\label{panel3}
+\end{figure}
+
+\begin{figure}[ht]
+\begin{center}
+%\includegraphics[width=6in]{Figure4}
+\end{center}
+\caption{
+{\bf Early warnings of the sensor mechanism and differences between users in the sensor and control groups.} a) The Twitter sensor sample anticipates outbreaks in both Twitter hashtags and Google searches.  The purple solid line shows a normalized measure of the number of Google searches per day for ``health care''.  The green dashed line shows the a normalized measure of the number of tweets using the hashtag \#healthcare per day.  Thinner lines at the bottom show normalized daily incidence (DI) for the control (dotted red) and sensor (dashed blue) groups.  Thinner lines from the bottom left to the upper right show the empirical cumulative distribution (ECDF) of control (dotted red) and sensor (dashed blue) groups.  Vertical dotted lines show dates when an alarm was first triggered by a 2.5\% divergence (orange) and 5\% divergence (red) in the sensor and control groups. b) An early warning alarm triggered by a 0.25\% divergence in the sensor and control groups predicts overall usage with relatively few false positives (see SI ``Reproduction Rates of Hashtags as a Factor Affecting Early Detection'' for details).  c \& d) Users in the sensor group (blue) are more active (c) and also use a wider variety of hashtags (d) than those in the control group (red), even controlling for activity.  These attributes both contribute to early warning provided by the sensor group�s structural position.
+}
+\label{panel4}
+\end{figure}
+
+
+%\section*{Tables}
+%\begin{table}[!ht]
+%\caption{
+%\bf{Table title}}
+%\begin{tabular}{|c|c|c|}
+%table information
+%\end{tabular}
+%\begin{flushleft}Table caption
+%\end{flushleft}
+%\label{tab:label}
+% \end{table}
+\clearpage
+
+\section*{Supporting Information File Contents}
+
+\input{UsingFriendsAsSensors-SI.toc}
+\input{UsingFriendsAsSensors-SI.lof}
+
 \end{document}

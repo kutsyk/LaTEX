@@ -3,43 +3,100 @@
 <article-meta>
 <title-group>
 <article-title>
-Dynamic social community detection and its applications
+First constraints on the running of nonGaussianity
 </article-title>
 
 </title-group>
-Nam P. Nguyensuperscriptsuperscript, Thang N. Dinhsuperscript, Yilin ShensuperscriptandMy T. ThaisuperscriptsuperscriptDepartment of ComputerInformation Sciences, Towson University, Towson, Maryland, USA(Current affiliation). Emailnpnguyentowson. edu. superscriptDepartment of ComputerInformation Science and Engineering, University of Florida, Gainesville, Florida, USA. Emailnanguyen, tdinh, yshen, mythaicise. ufl. edu. <abstract>
+<contrib-group>
+<contrib contrib-type="author">
+Adam Becker
+</contrib>
+<contrib contrib-type="author">
+ Dragan Huterer
+</contrib>
+
+</contrib-group>
+<aff>
+  Department of Physics,  University of Michigan,  450  Church St,  Ann Arbor,  MI 48109 1040 
+</aff>
+<equ id="equ1" type="inline">
+<tex>
+$\ast$
+</tex>
+
+</equ>
+Emailbeckeramumich. edu<equ id="equ2" type="inline">
+<tex>
+$\ast\ast$
+</tex>
+
+</equ>
+Emailhutererumich. edu<abstract>
 <title>
 Abstract
 </title>
 <p>
- Community structure is one of the most commonly observed features of Online Social Networks(OSNs)in reality. 
+ We use data from the WMAP temperature maps to constrain a scaledependent
 </p>
 <p>
-The knowledge of this feature is of great advantagesit not only provides helpful insights into developing more efficient socialaware solutions but also promises a wide range of applications enabled by social and mobile networking, such as routing strategies in Mobile Ad Hoc Networks(MANETs)and worm containment in OSNs. 
+generalization of the popularlocalmodel for primordial nonGaussianity. 
 </p>
 <p>
-Unfortunately, understanding this structure is very challenging, especially in dynamic social networks where social interactions are evolving rapidly. 
+In the model where the parameter<equ id="equ3" type="inline">
+<tex>
+$f_\mathrm{NL}$
+</tex>
+
+</equ>
+is allowed to run with scale<equ id="equ4" type="inline">
+<tex>
+$k$
+</tex>
+
+</equ>
+, 
+</p>
+<equ id="equ5" type="inline">
+<tex>
+$f_\mathrm{NL}(k)=f_\mathrm{NL}^*(k/k_\mathrm{piv})^{n_{f_\mathrm{NL}}}$
+</tex>
+
+</equ>
+, <p>
+we constrain the running to be
+</p>
+<equ id="equ6" type="inline">
+<tex>
+${n_{f_\mathrm{NL}}}=0.30^{+1.9}_{-1.2}$
+</tex>
+
+</equ>
+<p>
+at 95 confidence, marginalized over the amplitude
+</p>
+<equ id="equ7" type="inline">
+<tex>
+$f_\mathrm{NL}^*$
+</tex>
+
+</equ>
+. <p>
+The constraints depend somewhat on the prior probabilities
 </p>
 <p>
-Our work focuses on the following questionsHow can we efficiently identify communities in dynamic social networksHow can we adaptively update the network community structure based on its history instead of recomputing from scratch
+assigned to the two parameters. In the near future, constraints from a
 </p>
 <p>
-To this end, we present Quick Community Adaptation(QCA), an adaptive modularitybased framework for not only discovering but also tracing the evolution of network communities in dynamic OSNs. 
+combination of Planck and largescale structure surveys are expected to
 </p>
 <p>
-QCA is very fast and efficient in the senses that its adaptively updates and discovers the new community structure based on its history together with the network changes only. 
+improve this limit by about an order of magnitude and usefully constrain
 </p>
 <p>
-This flexible approach makes QCA an ideal framework applicable for analyzing largescale dynamic social networks due to its lightweight computingresource requirement. 
+classes of inflationary models. 
 </p>
 <p>
-To illustrate the effectiveness of our framework, we extensively test QCA on both synthesized and realworld social networks including Enron, arXiv eprint citation and Facebook networks. 
-</p>
-<p>
-Finally, we demonstrate the applicability of QCA in real applications(1 )A socialaware message forwarding strategy in MANETs, and(2 )Worm propagation containment in OSNs. 
-</p>
-<p>
-Competitive results in comparison with other methods reveal that socialbased techniques employing QCA as a community detection core outperform current available methods. 
+2 
 </p>
 
 </abstract>
@@ -53,3095 +110,2239 @@ Competitive results in comparison with other methods reveal that socialbased tec
 Introduction
 </title>
 <p>
- Many social networks in practice commonly exhibit the property of containing community structure <citref rids="ref-1">
--1
+ NonGaussianity in the distribution of primordial density
+</p>
+<p>
+fluctuations provides a unique window into the physics of
+</p>
+<p>
+inflation. The magnitude of primordial nonGaussianity and its dependence on
+</p>
+<p>
+scale provide information about the dynamics of scalar field(s), their
+</p>
+<p>
+interactions, and the speed of sound during inflation. Constraints on
+</p>
+<p>
+nonGaussianity have traditionally come from the measurements of the
+</p>
+<p>
+threepoint correlation function of the cosmic microwave background(CMB)
+</p>
+<p>
+temperature anisotropies. Upper limits from COBE <citref rids="ref1">
+1
 </citref>
-community1, palla09, i. e. , they naturally divide into groups of nodes with denser connections inside each group and fewer connections crossing between groups. In general, nodes and connections in a social network typically represent network users and their social interactions(e. g. , friendships in Facebook, following in Twitter or professional connections in LinkedIn), respectively. Members in each social community typically have some certain interests in common such as photography, movies, music or travel, and hence, they tend to interact more frequently with each other than with users who are outside of their community. Community detection in a social network, as a result, is the gathering of its users into groups in such a way that nodes in each group are densely connected inside and sparser outside. 
+have been
 </p>
 <p>
-Community detection and graph clustering problem are closely related to each other due to their nature. Nevertheless, it is noteworthy to differentiate between them. While these two problems share the same objective of partitioning network nodes into groups, the number of clusters in graph clustering is often predefined(or given as a part of the input)whereas the number of communities is typically unknown in community detection. 
+improved by two orders of magnitude by the WMAP experiment
+</p>
+ <citref rids="ref2">
+2
+</citref>
+. <p>
+Moreover, clustering of galaxies and galaxy clusters has also
 </p>
 <p>
-In the visualization perspective, communities display the whole network organization as a compact and more understandable level where each community can represent a functional group or an entity in the system. At this level, community structure provides us meaningful insights into networks organizational principles, and consequently, sheds light on preventing potential vulnerability and security threats such as network corruption and computer virus and worm propagation <citref rids="ref3">
+been identified as a powerful probe of nonGaussianity <citref rids="ref3">
 3
 </citref>
-. Studies on community detection on static networks can be found in an excellent survey <citref rids="ref-1">
--1
+, already
+</p>
+<p>
+leading to interesting constraints that are complementary in their information
+</p>
+<p>
+content to the CMB measurements. 
+</p>
+<p>
+So far most attention has been devoted to thelocalmodel of primordial
+</p>
+<p>
+nonGaussianity, where the primordial Newtonian potential<equ id="equ8" type="inline">
+<tex>
+$\phi(x)$
+</tex>
+
+</equ>
+is
+</p>
+<p>
+modified with a quadratic term<equ id="equ9" type="inline">
+<tex>
+$\phi=\phi_G+f_\mathrm{NL}(\phi_G^2-\langle\phi_G^2\rangle)$
+</tex>
+
+</equ>
+, where<equ id="equ10" type="inline">
+<tex>
+$\phi_G$
+</tex>
+
+</equ>
+is a Gaussian potential
+</p>
+ <citref rids="ref4">
+4
 </citref>
-algo, as well as in the work of <citref rids="ref-1">
--1
+. <p>
+The parameter<equ id="equ11" type="inline">
+<tex>
+$f_\mathrm{NL}$
+</tex>
+
+</equ>
+is currently constrained to be
+</p>
+<equ id="equ12" type="inline">
+<tex>
+$32\pm21$
+</tex>
+
+</equ>
+<p>
+by WMAP( <citref rids="ref2">
+2
 </citref>
-fast03, Dourisboure2007www, Leskovec2010www and references therein. 
+see also
 </p>
-<p>
-Realworld social networks, however, are not always static. In fact, most popular social sites in reality(such as Facebook, Twitter and LinkedIn)evolve heavily and witness a rapid expansion in terms of size and space over time. As a result, they lend themselves naturally to the field of dynamic networks. A dynamic network is a special type of evolving complex graphs in which changes are frequently introduced over time. In the senses of OSNs, these changes are commonly introduced by users joining in or withdrawing from one or more communities, by friends and friends connecting together, or by new users making friend with one another. Although any of these social events seems to have a little effect to a local structure of the network on one handthe networks dynamics over a long duration on the other hand, may lead to a significant transformation of the entire community structure, and consequently raise a natural need of reidentification. However, the rapid and unpredictable changing topological structures of dynamic social networks makes it an extremely complicated yet challenging problem. 
-</p>
-<p>
-Although one can certainly execute one of the available static community detection methods <citref rids="ref-1">
--1
+ <citref rids="ref5 ref6">
+5,6
 </citref>
-fast03, blondel08, clauset04, Wakita2007www all over again to find the new structure whenever the network evolves, he may encounter some disadvantages that cannot be neglected(1 )the expensive execution time of the specific method on large networks, (2 )the trap of local optima, and(3 )the almost same reaction to a small change to some local parts of the network. A better, much efficient and less time consuming approach to accomplish this expensive task is to adaptively update the network communities from the previously discovered structures, which obscure the hassle of repeatedly recomputation from scratch. This adaptive approach is the main focus of our study in this paper. In Figure<xref>
-Figure1
-</xref>
-, we briefly generalize the idea of community structure adaptation in an evolving networkthe network evolves from time<equ id="equ1" type="inline">
+)<p>
+and<equ id="equ13" type="inline">
 <tex>
-$t$
+$28\pm23$
 </tex>
 
 </equ>
-to<equ id="equ2" type="inline">
-<tex>
-$t+1$
-</tex>
-
-</equ>
-under the change<equ id="equ3" type="inline">
-<tex>
-$\DeltaG_t$
-</tex>
-
-</equ>
-. The adaptive algorithm<equ id="equ4" type="inline">
-<tex>
-$\mathcal{A}$
-</tex>
-
-</equ>
-quickly finds the updated community structure<equ id="equ5" type="inline">
-<tex>
-$\mathcal{C}(G_{t+1})$
-</tex>
-
-</equ>
-based on the previous structure<equ id="equ6" type="inline">
-<tex>
-$\mathcal{C}(G_{t})$
-</tex>
-
-</equ>
-together with the changes<equ id="equ7" type="inline">
-<tex>
-$\DeltaG_t$
-</tex>
-
-</equ>
-. 
+by the
 </p>
 <p>
-In an application perspective, the detection of communities in a dynamic social network is of considerable advantages. To give a sense of its effects, let us consider the routing problem in communication network where nodes and links represent people and mobile communications, respectively. Due to nodesmobility and unstable links properties of the network, designing an efficient routing scheme is extremely challenging. However, since people have a natural tendency to form groups of communication, there exist groups of densely connected nodes in the underlying MANET as a reflection, and hence, forms community structure in that MANET. An effective routing algorithm, as soon as it discovers the network communities, can directly route or forward messages to nodes in the same or a related community as the destination. By doing in this way, we can avoid unnecessary messages forwarding through nodes in different communities, and therefore can lower down the number of duplicate messages and overhead information, which are essential factors in MANETs. 
-</p>
-<p>
-The contributions of this paper are threefold. First, we propose QCA, a fast adaptive framework for efficiently identifying the disjoint community structure of dynamic social networks. Our approach takes into account the structural history and works on network changes only, thus significantly reduces computational cost and time requirement. We also carry out theoretical results regarding communitiesbehaviors over time, which are the fundamentals of our method. Second, we extensively evaluate the proposed framework on both synthesized and real dynamic social traces. Experimental results show that QCA achieves not only competitive modularity scores but also high quality community structures in a timely manner. Finally, we apply QCA method to two practical applicationsforwarding strategies in MANETs and worm containment in OSNs. Simulation results show that strategies utilizing QCA outperform current available methods and confirm its applicability in social network problems. 
-</p>
-
-</section>
-<section>
-<title>
-Preliminaries
-</title>
-<p>
- In this section we first present the graph notations that will be used throughout the paper. We then formulate the dynamic social network, the objective function and finally the problem definition based on the defined notations. 
-</p>
-<section level="2" id="section3">
-<title>
-Notations
-</title>
-<p>
- Let<equ id="equ8" type="inline">
-<tex>
-$G=(V,E)$
-</tex>
-
-</equ>
-be an undirected and unweighted graph representing a social network with<equ id="equ9" type="inline">
-<tex>
-$N$
-</tex>
-
-</equ>
-nodes and<equ id="equ10" type="inline">
-<tex>
-$M$
-</tex>
-
-</equ>
-edges. Let<equ id="equ11" type="inline">
-<tex>
-$\mathcal{C}=\{C_1,C_2,..,C_k\}$
-</tex>
-
-</equ>
-denote a disjoint partitioning of<equ id="equ12" type="inline">
-<tex>
-$V$
-</tex>
-
-</equ>
-, where<equ id="equ13" type="inline">
-<tex>
-$C_i\in\mathcal{C}$
-</tex>
-
-</equ>
-is a community of<equ id="equ14" type="inline">
-<tex>
-$G$
-</tex>
-
-</equ>
-. For each vertex<equ id="equ15" type="inline">
-<tex>
-$u\inV$
-</tex>
-
-</equ>
-, its degree, the community containing<equ id="equ16" type="inline">
-<tex>
-$u$
-</tex>
-
-</equ>
-and the set of its adjacent communities are respectively denoted by<equ id="equ17" type="inline">
-<tex>
-$d_u$
-</tex>
-
-</equ>
-, <equ id="equ18" type="inline">
-<tex>
-$C(u)$
-</tex>
-
-</equ>
-and<equ id="equ19" type="inline">
-<tex>
-$NC(u)$
-</tex>
-
-</equ>
-. For any<equ id="equ20" type="inline">
-<tex>
-$S\subseteqV$
-</tex>
-
-</equ>
-, let<equ id="equ21" type="inline">
-<tex>
-$m_S$
-</tex>
-
-</equ>
-, <equ id="equ22" type="inline">
-<tex>
-$d_S$
-</tex>
-
-</equ>
-, and<equ id="equ23" type="inline">
-<tex>
-$e^u_S$
-</tex>
-
-</equ>
-be the number of links inside<equ id="equ24" type="inline">
-<tex>
-$S$
-</tex>
-
-</equ>
-, the total degree of vertices in<equ id="equ25" type="inline">
-<tex>
-$S$
-</tex>
-
-</equ>
-, and the number of connections from<equ id="equ26" type="inline">
-<tex>
-$u$
-</tex>
-
-</equ>
-to<equ id="equ27" type="inline">
-<tex>
-$S$
-</tex>
-
-</equ>
-, respectively. The pairs of terms<emph type="italic">
-node
-</emph>
-and<emph type="italic">
-vertex
-</emph>
-, as well as<emph type="italic">
-edge
-</emph>
-and<emph type="italic">
-link
-</emph>
-and are used interchangeably. 
-</p>
-
-</section>
-<section level="2" id="section4">
-<title>
-Dynamic networks
-</title>
-<p>
- Let<equ id="equ28" type="inline">
-<tex>
-$G^s=(V^s,E^s)$
-</tex>
-
-</equ>
-be a time dependent network snapshot recorded at time<equ id="equ29" type="inline">
-<tex>
-$s$
-</tex>
-
-</equ>
-. Denoted by<equ id="equ30" type="inline">
-<tex>
-$\DeltaV^s$
-</tex>
-
-</equ>
-and<equ id="equ31" type="inline">
-<tex>
-$\DeltaE^s$
-</tex>
-
-</equ>
-the sets of vertices and links to be introduced(or removed)at time<equ id="equ32" type="inline">
-<tex>
-$s$
-</tex>
-
-</equ>
-, and let<equ id="equ33" type="inline">
-<tex>
-$\DeltaG^s=(\DeltaV^s,\DeltaE^s)$
-</tex>
-
-</equ>
-denote the change in terms of the whole network. The next network snapshot<equ id="equ34" type="inline">
-<tex>
-$G^{s+1}$
-</tex>
-
-</equ>
-is expressed as<equ id="equ35" type="inline">
-<tex>
-$G^{s+1}=G^s\cup\DeltaG^s$
-</tex>
-
-</equ>
-. A<emph type="italic">
-dynamic social network
-</emph>
-<equ id="equ36" type="inline">
-<tex>
-$\mathcal{G}$
-</tex>
-
-</equ>
-is a sequence of network snapshots evolving over time<equ id="equ37" type="inline">
-<tex>
-$\mathcal{G}=(G^0,G^1,..,G^s,...)$
-</tex>
-
-</equ>
-. 
-</p>
-
-</section>
-<section level="2" id="section5">
-<title>
-Objective function
-</title>
-<p>
- To quantify the quality of a detected network community structure, we use the widely accepted measure called<emph type="italic">
-modularity
-</emph>
-<equ id="equ38" type="inline">
-<tex>
-$\mathcal{Q}$
-</tex>
-
-</equ>
- <citref rids="ref-1">
--1
+largescale structure <citref rids="ref7 ref8 ref9">
+7-9
 </citref>
-mod04, defined as
+. Several
 </p>
 <p>
-Generally, <equ id="equ39" type="inline">
-<tex>
-$\mathcal{Q}$
-</tex>
-
-</equ>
-is the fraction of all links within communities less the expected value of the same quantity in a graph whose nodes have the same degrees but links are distributed randomly, and the higher modularity<equ id="equ40" type="inline">
-<tex>
-$\mathcal{Q}$
-</tex>
-
-</equ>
-, the better network community structure is. Hence, our objective is to find a community assignment for network vertices so that<equ id="equ41" type="inline">
-<tex>
-$\mathcal{Q}$
-</tex>
-
-</equ>
-is maximized. 
+other nonGaussian models have been constrained as well
 </p>
-
-</section>
-<section level="2" id="section6">
-<title>
-Problem Definition
-</title>
+(<p>
+e. g.  <citref rids="ref10 ref11">
+10,11
+</citref>
+). However, therunningwith physical
+</p>
 <p>
- Given a dynamic social network<equ id="equ42" type="inline">
-<tex>
-$\mathcal{G}=(G^0,G^1,..,G^s)$
-</tex>
-
-</equ>
-where<equ id="equ43" type="inline">
-<tex>
-$G^0$
-</tex>
-
-</equ>
-is the original network and<equ id="equ44" type="inline">
-<tex>
-$G^1$
-</tex>
-
-</equ>
-, <equ id="equ45" type="inline">
-<tex>
-$G^2$
-</tex>
-
-</equ>
-, . . . , <equ id="equ46" type="inline">
-<tex>
-$G^s$
-</tex>
-
-</equ>
-are the network snapshots obtained through<equ id="equ47" type="inline">
-<tex>
-$\DeltaG^1$
-</tex>
-
-</equ>
-, <equ id="equ48" type="inline">
-<tex>
-$\DeltaG^2$
-</tex>
-
-</equ>
-, . . . , <equ id="equ49" type="inline">
-<tex>
-$\DeltaG^s$
-</tex>
-
-</equ>
-, we need to devise adaptive algorithms to efficiently identify the network community structure at any time point as well as to trace the evolution of the network communities. 
+scale of these models, which may carry important information about the
 </p>
+<p>
+number of inflationary fields and their interactions
+</p>
+ <citref rids="ref-1 ref12 ref13 ref14 ref15 ref16 ref17 ref18 ref19 ref20">
+-1,12-20
+</citref>
+<p>
+2012  tk, Kobayashi_Takahashi, has not yet been constrained
+</p>
+<p>
+with current data(except for a very rough estimate of the angularmultipole
+</p>
+<p>
+dependence of<equ id="equ14" type="inline">
+<tex>
+$f_\mathrm{NL}$
+</tex>
 
-</section>
+</equ>
+ <citref rids="ref11">
+11
+</citref>
+and implicit constraints on a
+</p>
+<p>
+braneworldmotivated model <citref rids="ref23">
+23
+</citref>
+). Such constraints have only been
+</p>
+<p>
+forecasted for future experiments
+</p>
+ <citref rids="ref24 ref25 ref26 ref27 ref28">
+24-28
+</citref>
+. <p>
+Constraining the running of nonGaussianity therefore presents a major new
+</p>
+<p>
+opportunity to probe inflationary physics, and is just becoming feasible. In
+</p>
+<p>
+this Letter, we present the first such constraints. 
+</p>
 
 </section>
 <section>
 <title>
 Methods
 </title>
-<p>
- Let us first discuss how changes introduced to the evolving network topology affect the structure of its communities. We use the term<emph type="italic">
-intracommunity links
-</emph>
-to denote edges whose two endpoints belong to the same community, and the term<emph type="italic">
-intercommunity links
-</emph>
-to denote those with endpoints connecting different communities. For each community<equ id="equ50" type="inline">
-<tex>
-$C$
-</tex>
-
-</equ>
-, the connections linking<equ id="equ51" type="inline">
-<tex>
-$C$
-</tex>
-
-</equ>
-with other communities are much fewer than those within<equ id="equ52" type="inline">
-<tex>
-$C$
-</tex>
-
-</equ>
-itself, i. e. , nodes in<equ id="equ53" type="inline">
-<tex>
-$C$
-</tex>
-
-</equ>
-are densely connected inside and sparsely connected outside. Intuitively, adding intracommunity links inside or removing intercommunity links between communities of<equ id="equ54" type="inline">
-<tex>
-$G$
-</tex>
-
-</equ>
-will strengthen those communities and make the structure of<equ id="equ55" type="inline">
-<tex>
-$G$
-</tex>
-
-</equ>
-more clear. Vice versa, removing intracommunity links and inserting intercommunity links will loosen the structure of<equ id="equ56" type="inline">
-<tex>
-$G$
-</tex>
-
-</equ>
-. However, when two communities have less distraction caused by each other, adding intra or removing intercommunity links makes them more attractive to each other and thus, leaves a possibility that they will be combined to form a new community. 
-</p>
-<p>
-The community updating process, as a result, is challenging since an insignificant change in the network topology can possibly lead to an unexpected transformation of its community structure. We will discuss in detail the possible behaviors of dynamic network communities in the following subsections. 
-</p>
-<p>
-In order to reflect changes introduced to a social network, its underlying graph is frequently updated by either inserting or removing a node or a set of nodes, or by either introducing or deleting an edge or a set of edges. In fact, the introduction or removal of a set of nodes(or edges)can be decomposed as a sequence of node(or edge)insertions(or removals), in which a single node(or a single edge)is introduced(or removed)at a time. This observation helps us to treat network changes as a collection of<emph type="italic">
-simple events
-</emph>
-where a simple event can be one of<emph type="italic">
-newNode, removeNode, newEdge, removeEdge
-</emph>
-whose details are as follow
-</p>
-<item-list type="Arabic" id="list1">
-<item num="1.">
-<emph type="italic">
-newNode<equ id="equ57" type="inline">
-<tex>
-$(V\cup\{u\})$
-</tex>
-
-</equ>
-
-</emph>
-A new node<equ id="equ58" type="inline">
-<tex>
-$u$
-</tex>
-
-</equ>
-together with its associated edges are introduced. <equ id="equ59" type="inline">
-<tex>
-$u$
-</tex>
-
-</equ>
-could come with no or more than one new edge(s). 
-</item>
-<item num="2.">
-<emph type="italic">
-removeNode<equ id="equ60" type="inline">
-<tex>
-$(V\backslash\{u\})$
-</tex>
-
-</equ>
-
-</emph>
-A node<equ id="equ61" type="inline">
-<tex>
-$u$
-</tex>
-
-</equ>
-and its adjacent edges are removed from the network. 
-</item>
-<item num="3.">
-<emph type="italic">
-newEdge<equ id="equ62" type="inline">
-<tex>
-$(E\cup\{e\})$
-</tex>
-
-</equ>
-
-</emph>
-A new edge<equ id="equ63" type="inline">
-<tex>
-$e$
-</tex>
-
-</equ>
-connecting two existing nodes is introduced. 
-</item>
-<item num="4.">
-<emph type="italic">
-removeEdge<equ id="equ64" type="inline">
-<tex>
-$(E\backslash\{e\})$
-</tex>
-
-</equ>
-
-</emph>
-An existing edge<equ id="equ65" type="inline">
-<tex>
-$e$
-</tex>
-
-</equ>
-in the network is removed. 
-</item>
-
-</item-list>
-<section level="2" id="section8">
+<section level="2" id="section3">
 <title>
-Algorithms
+ Model
 </title>
 <p>
- Our approach first requires an initial community structure<equ id="equ66" type="inline">
-<tex>
-$\mathcal{C}_0$
-</tex>
-
-</equ>
-, which we call the<emph type="italic">
-basic structure
-</emph>
-, in order to process further. Since the input model is restricted as an undirected and unweighted network, this initial community structure can be obtained by performing any of the available static community detection methods <citref rids="ref-1">
--1
-</citref>
-fast03, blondel08, clauset04. To obtain a good basic structure, we choose the method proposed by Blondel et al.  <citref rids="ref8">
-8
-</citref>
-which produces a good network community structure in a timely manner <citref rids="ref-1">
--1
-</citref>
-algo. 
-</p>
-<section level="3" id="section8">
-<title>
-New node
-</title>
-<p>
- Let us consider the first case when a new node<equ id="equ67" type="inline">
-<tex>
-$u$
-</tex>
-
-</equ>
-and its associated connections are introduced. Note that<equ id="equ68" type="inline">
-<tex>
-$u$
-</tex>
-
-</equ>
-may come with no adjacent edges or with many of them connecting one or more communities. If<equ id="equ69" type="inline">
-<tex>
-$u$
-</tex>
-
-</equ>
-has no adjacent edge, we create a new community for it and leave the current structure intact. The interesting case happens, and it usually does, when<equ id="equ70" type="inline">
-<tex>
-$u$
-</tex>
-
-</equ>
-comes with edges connecting one or more existing communities. In this latter situation, we need to determine which community<equ id="equ71" type="inline">
-<tex>
-$u$
-</tex>
-
-</equ>
-should join in, or which nodes in other communities that should together with<equ id="equ72" type="inline">
-<tex>
-$u$
-</tex>
-
-</equ>
-form a new community in order to maximize the gained modularity. In addition, the introduction of<equ id="equ73" type="inline">
-<tex>
-$u$
-</tex>
-
-</equ>
-might cause some part of an existing community to leave its current host and move to another community. To handle this case, we first determine whether any neighbor node of<equ id="equ74" type="inline">
-<tex>
-$u$
-</tex>
-
-</equ>
-should change its community membership or not. 
+ In this work we consider a physically motivated generalization
 </p>
 <p>
-There are several local methods introduced for this task, for instance the algorithms of <citref rids="ref-1">
--1
-</citref>
-fast03, clauset04. Our method is inspired by a physical approach proposed in <citref rids="ref-1">
--1
-</citref>
-adaptive08, in which each node is influenced by two forces<equ id="equ75" type="inline">
+of the local model, where the parameter<equ id="equ15" type="inline">
 <tex>
-$F_{in}^{C}$
+$f_\mathrm{NL}$
 </tex>
 
 </equ>
-(to keep<equ id="equ76" type="inline">
-<tex>
-$u$
-</tex>
-
-</equ>
-stays inside community<equ id="equ77" type="inline">
-<tex>
-$C$
-</tex>
-
-</equ>
-)and<equ id="equ78" type="inline">
-<tex>
-$F_{out}^{C}$
-</tex>
-
-</equ>
-(the force a community<equ id="equ79" type="inline">
-<tex>
-$C$
-</tex>
-
-</equ>
-makes in order to bring<equ id="equ80" type="inline">
-<tex>
-$u$
-</tex>
-
-</equ>
-to<equ id="equ81" type="inline">
-<tex>
-$C$
-</tex>
-
-</equ>
-)defined as follow
+is promoted to a function of
 </p>
 <p>
-and
-</p>
-<p>
-where<equ id="equ82" type="inline">
-<tex>
-$d_{outS}$
-</tex>
-
-</equ>
-is of opposite meaning of<equ id="equ83" type="inline">
-<tex>
-$d_S$
-</tex>
-
-</equ>
-. 
-</p>
-<p>
-Taking into account the above two forces, we first determine whether a node<equ id="equ84" type="inline">
-<tex>
-$u$
-</tex>
-
-</equ>
-should form a new community with other nodes in its neighbor communities. This is done by iteratively selecting nodes that are more attracted by<equ id="equ85" type="inline">
-<tex>
-$C(u)$
-</tex>
-
-</equ>
-rather than its current community(the outerwhileloop in Algorithm<xref>
-algnewNode
-</xref>
-<xref>
- Table algnewNode
-</xref>
-. Otherwise, node<equ id="equ86" type="inline">
-<tex>
-$u$
-</tex>
-
-</equ>
-can actively determines its best community membership by computing those forces and either lets itself join the community<equ id="equ87" type="inline">
-<tex>
-$S$
-</tex>
-
-</equ>
-having the highest<equ id="equ88" type="inline">
-<tex>
-$F^S_{out}(u)$
-</tex>
-
-</equ>
-(if<equ id="equ89" type="inline">
-<tex>
-$F^S_{out}(u)>
-F_{in}^{C(v)}(u)$
-</tex>
-
-</equ>
-)or stays in the current community<equ id="equ90" type="inline">
-<tex>
-$C(v)$
-</tex>
-
-</equ>
-otherwise. By Proposition<xref>
-theoNewNode
-</xref>
-, we bridge the connection between those forces and the objective function, i. e. , joining the new node in the community with the highest outer force will maximize the local gained modularity. The process is presented in Algorithm<xref>
-algnewNode
-</xref>
-<xref>
- Table algnewNode
-</xref>
-. 
-</p>
-<p>
-begin proposition
-</p>
-<p>
-Let<equ id="equ91" type="inline">
-<tex>
-$C$
-</tex>
-
-</equ>
-be the community having the maximum<equ id="equ92" type="inline">
-<tex>
-$F^C_{out}(u)$
-</tex>
-
-</equ>
-when a new node<equ id="equ93" type="inline">
-<tex>
-$u$
-</tex>
-
-</equ>
-with degree<equ id="equ94" type="inline">
-<tex>
-$p$
-</tex>
-
-</equ>
-is added to<equ id="equ95" type="inline">
-<tex>
-$G$
-</tex>
-
-</equ>
-, then joining<equ id="equ96" type="inline">
-<tex>
-$u$
-</tex>
-
-</equ>
-in<equ id="equ97" type="inline">
-<tex>
-$C$
-</tex>
-
-</equ>
-gives the maximal gained modularity(NoteAll proofs are included in the Appendix). 
-</p>
-<p>
-end proposition
-</p>
-<p>
-begin proof
-</p>
-<p>
-Let<equ id="equ98" type="inline">
-<tex>
-$D$
-</tex>
-
-</equ>
-be a community of<equ id="equ99" type="inline">
-<tex>
-$G$
-</tex>
-
-</equ>
-and<equ id="equ100" type="inline">
-<tex>
-$D\neqC$
-</tex>
-
-</equ>
-, we show that joining<equ id="equ101" type="inline">
-<tex>
-$u$
-</tex>
-
-</equ>
-in<equ id="equ102" type="inline">
-<tex>
-$D$
-</tex>
-
-</equ>
-contributes less modularity than joining<equ id="equ103" type="inline">
-<tex>
-$u$
-</tex>
-
-</equ>
-in<equ id="equ104" type="inline">
-<tex>
-$C$
-</tex>
-
-</equ>
-. The overall modularity<equ id="equ105" type="inline">
-<tex>
-$\mathcal{Q}$
-</tex>
-
-</equ>
-when<equ id="equ106" type="inline">
-<tex>
-$u$
-</tex>
-
-</equ>
-joins in<equ id="equ107" type="inline">
-<tex>
-$C$
-</tex>
-
-</equ>
-is
-</p>
-<p>
-where<equ id="equ108" type="inline">
-<tex>
-$A$
-</tex>
-
-</equ>
-is the summation of other modularity contributions. Similarly, joining<equ id="equ109" type="inline">
-<tex>
-$u$
-</tex>
-
-</equ>
-to<equ id="equ110" type="inline">
-<tex>
-$D$
-</tex>
-
-</equ>
-gives
-</p>
-<p>
-and
-</p>
-<p>
-Now, since<equ id="equ111" type="inline">
-<tex>
-$C$
-</tex>
-
-</equ>
-is the community that gives the maximum<equ id="equ112" type="inline">
-<tex>
-$F^C_{out}(u)$
-</tex>
-
-</equ>
-, we obtain
-</p>
-<p>
-which implies
-</p>
-<p>
-Hence, <equ id="equ113" type="inline">
-<tex>
-$\mathcal{Q}-\mathcal{Q'}>
-0$
-</tex>
-
-</equ>
-and thus the conclusion follows. 
-</p>
-<p>
-end proof
-</p>
-
-</section>
-<section level="3" id="section9">
-<title>
-New edge
-</title>
-<p>
- When a new edge<equ id="equ114" type="inline">
-<tex>
-$e=(u,v)$
-</tex>
-
-</equ>
-connecting two existing vertices<equ id="equ115" type="inline">
-<tex>
-$u,v$
-</tex>
-
-</equ>
-is introduced, we divide it further into two subcases<equ id="equ116" type="inline">
-<tex>
-$e$
-</tex>
-
-</equ>
-is an intracommunity link(totally inside a community<equ id="equ117" type="inline">
-<tex>
-$C$
-</tex>
-
-</equ>
-)or an intercommunity link(connects two communities<equ id="equ118" type="inline">
-<tex>
-$C(u)$
-</tex>
-
-</equ>
-and<equ id="equ119" type="inline">
-<tex>
-$C(v)$
-</tex>
-
-</equ>
-). If<equ id="equ120" type="inline">
-<tex>
-$e$
-</tex>
-
-</equ>
-is inside a community<equ id="equ121" type="inline">
-<tex>
-$C$
-</tex>
-
-</equ>
-, its presence will strengthen the internal modularity structure of<equ id="equ122" type="inline">
-<tex>
-$C$
-</tex>
-
-</equ>
-according to Proposition<xref>
-AddOneEdge
-</xref>
-. Furthermore, by Proposition<xref>
-AddAnEdgeNoSplit
-</xref>
-, we know that adding<equ id="equ123" type="inline">
-<tex>
-$e$
-</tex>
-
-</equ>
-should not split the current community<equ id="equ124" type="inline">
-<tex>
-$C$
-</tex>
-
-</equ>
-into smaller modules. Therefore, we leave the current network structure intact in this case. 
-</p>
-<p>
-The interesting situation occurs when<equ id="equ125" type="inline">
-<tex>
-$e$
-</tex>
-
-</equ>
-is a link connecting communities<equ id="equ126" type="inline">
-<tex>
-$C(u)$
-</tex>
-
-</equ>
-and<equ id="equ127" type="inline">
-<tex>
-$C(v)$
-</tex>
-
-</equ>
-since its presence could possibly make<equ id="equ128" type="inline">
-<tex>
-$u$
-</tex>
-
-</equ>
-(or<equ id="equ129" type="inline">
-<tex>
-$v$
-</tex>
-
-</equ>
-)leave its current module and join in the new community. Additionally, if<equ id="equ130" type="inline">
-<tex>
-$u$
-</tex>
-
-</equ>
-(or<equ id="equ131" type="inline">
-<tex>
-$v$
-</tex>
-
-</equ>
-)decides to change its membership, it can advertise its new community to all its neighbors and some of them might eventually want to change their memberships as a consequence. By Proposition<xref>
-propositionCuisbest
-</xref>
-, we show that should<equ id="equ132" type="inline">
-<tex>
-$u$
-</tex>
-
-</equ>
-(or<equ id="equ133" type="inline">
-<tex>
-$v$
-</tex>
-
-</equ>
-)ever change its community assignment, <equ id="equ134" type="inline">
-<tex>
-$C(v)$
-</tex>
-
-</equ>
-(or<equ id="equ135" type="inline">
-<tex>
-$C(u)$
-</tex>
-
-</equ>
-)is the best new community for it. But how can we quickly decide whether<equ id="equ136" type="inline">
-<tex>
-$u$
-</tex>
-
-</equ>
-(or<equ id="equ137" type="inline">
-<tex>
-$v$
-</tex>
-
-</equ>
-)should change its membership in order to form a better community structure with higher modularityTo this end, we provide a criterion to test for membership changing of<equ id="equ138" type="inline">
-<tex>
-$u$
-</tex>
-
-</equ>
-and<equ id="equ139" type="inline">
-<tex>
-$v$
-</tex>
-
-</equ>
-in Proposition<xref>
-propositionCondition
-</xref>
-. Here, if both<equ id="equ140" type="inline">
-<tex>
-$\Deltaq_{u,C,D}$
-</tex>
-
-</equ>
-and<equ id="equ141" type="inline">
-<tex>
-$\Deltaq_{v,C,D}$
-</tex>
-
-</equ>
-fail to satisfy the criteria, we can safely preserve the current network community structure(<xref>
-Corollary corolPreserve
-</xref>
-. Otherwise, we move<equ id="equ142" type="inline">
-<tex>
-$u$
-</tex>
-
-</equ>
-(or<equ id="equ143" type="inline">
-<tex>
-$v$
-</tex>
-
-</equ>
-)to its new community and consequently let its neighbors determine their best modules to join in, using local search and swapping to maximize gained modularity. <xref>
-Figure Figure2
-</xref>
- a describes the procedure for this latter case. The detailed algorithm is described in Algorithm<xref>
-newEdge
-</xref>
-<xref>
- Table newEdge
-</xref>
-. 
-</p>
-<p>
-begin proposition
-</p>
-<p>
-For any<equ id="equ144" type="inline">
-<tex>
-$C\in\mathcal{C}$
-</tex>
-
-</equ>
-, if<equ id="equ145" type="inline">
-<tex>
-$d_C\leqM-1$
-</tex>
-
-</equ>
-then adding an edge within<equ id="equ146" type="inline">
-<tex>
-$C$
-</tex>
-
-</equ>
-will increase its modularity contribution. 
-</p>
-<p>
-end proposition
-</p>
-<p>
-begin proof
-</p>
-<p>
-The portion<equ id="equ147" type="inline">
-<tex>
-$\mathcal{Q}_C$
-</tex>
-
-</equ>
-that community<equ id="equ148" type="inline">
-<tex>
-$C$
-</tex>
-
-</equ>
-contributes to the overall modularity<equ id="equ149" type="inline">
-<tex>
-$\mathcal{Q}$
-</tex>
-
-</equ>
-is
-</p>
-<p>
-When a new edge coming in, the new modularity<equ id="equ150" type="inline">
-<tex>
-$\mathcal{Q}'_C$
-</tex>
-
-</equ>
-is
-</p>
-<p>
-Taking the difference between the two expressions<equ id="equ151" type="inline">
-<tex>
-$\mathcal{Q}'_C$
-</tex>
-
-</equ>
-and<equ id="equ152" type="inline">
-<tex>
-$\mathcal{Q}_C$
-</tex>
-
-</equ>
-gives
-</p>
-<p>
-The last inequality holds since<equ id="equ153" type="inline">
-<tex>
-$d_C\leqM-1$
-</tex>
-
-</equ>
-implies<equ id="equ154" type="inline">
-<tex>
-$2M^2-2d_CM-d_C\geq0$
-</tex>
-
-</equ>
-. 
-</p>
-<p>
-end proof
-</p>
-<p>
-begin proposition
-</p>
-<p>
-If<equ id="equ155" type="inline">
-<tex>
-$C$
-</tex>
-
-</equ>
-is a community in the current snapshot of<equ id="equ156" type="inline">
-<tex>
-$G$
-</tex>
-
-</equ>
-, then adding any intracommunity link to<equ id="equ157" type="inline">
-<tex>
-$C$
-</tex>
-
-</equ>
-should not split it into smaller modules. 
-</p>
-<p>
-end proposition
-</p>
-<p>
-begin proof
-</p>
-<p>
-Assume the contradiction, i. e, <equ id="equ158" type="inline">
-<tex>
-$C$
-</tex>
-
-</equ>
-should be divided into smaller modules when an edge is added into it. Let<equ id="equ159" type="inline">
-<tex>
-$X_1,X_2,..,X_k$
-</tex>
-
-</equ>
-be disjoint subsets of<equ id="equ160" type="inline">
-<tex>
-$C$
-</tex>
-
-</equ>
-representing these modules. Let<equ id="equ161" type="inline">
-<tex>
-$d_i$
-</tex>
-
-</equ>
-and<equ id="equ162" type="inline">
-<tex>
-$e_{ij}$
-</tex>
-
-</equ>
-be the total degree of vertices inside<equ id="equ163" type="inline">
-<tex>
-$X_i$
-</tex>
-
-</equ>
-and the number of links going from<equ id="equ164" type="inline">
-<tex>
-$X_i$
-</tex>
-
-</equ>
-to<equ id="equ165" type="inline">
-<tex>
-$X_j$
-</tex>
-
-</equ>
-, respectedly. Assume that, W. L. O. G. , when an edge is added inside<equ id="equ166" type="inline">
-<tex>
-$C$
-</tex>
-
-</equ>
-, it is added to<equ id="equ167" type="inline">
-<tex>
-$X_1$
-</tex>
-
-</equ>
-. 
-</p>
-<p>
-Recall that
-</p>
-<p>
-and
-</p>
-(<p>
-where<equ id="equ168" type="inline">
-<tex>
-$m_i$
-</tex>
-
-</equ>
-is short for<equ id="equ169" type="inline">
-<tex>
-$m_{X_i}$
-</tex>
-
-</equ>
-). 
-</p>
-<p>
-Prior to adding an edge to<equ id="equ170" type="inline">
-<tex>
-$C$
-</tex>
-
-</equ>
-, we have
-</p>
-<p>
-or equivalently, 
-</p>
-<p>
-Since<equ id="equ171" type="inline">
-<tex>
-$X_1,X_2,..,X_k$
-</tex>
-
-</equ>
-are disjoint subsets of<equ id="equ172" type="inline">
-<tex>
-$C$
-</tex>
-
-</equ>
-, it follows that<equ id="equ173" type="inline">
-<tex>
-$d_C=\sum_{i=1}^kd_i$
-</tex>
-
-</equ>
-
-</p>
-<p>
-and
-</p>
-<p>
-The above inequality equals to
-</p>
-<p>
-or
-</p>
-<p>
-Now, assume that the new edge is added to<equ id="equ174" type="inline">
-<tex>
-$X_1$
-</tex>
-
-</equ>
-and<equ id="equ175" type="inline">
-<tex>
-$C$
-</tex>
-
-</equ>
-is split into<equ id="equ176" type="inline">
-<tex>
-$X_1,X_2,..,X_k$
-</tex>
-
-</equ>
-which implies that dividing<equ id="equ177" type="inline">
-<tex>
-$C$
-</tex>
-
-</equ>
-into<equ id="equ178" type="inline">
+scale<equ id="equ16" type="inline">
 <tex>
 $k$
 </tex>
 
 </equ>
-smaller communities will increase the overall modularity, i. e, <equ id="equ179" type="inline">
-<tex>
-$\mathcal{Q}'_C<\sum_{i=1}^{k}\mathcal{Q}_{X_i}$
-</tex>
-
-</equ>
-. This implies that
+. In particular, we seek to constrain the twoparameter powerlaw
 </p>
 <p>
-Since<equ id="equ180" type="inline">
+subclass of the generalized models <citref rids="ref25">
+25
+</citref>
+
+</p>
+<equ id="equ17" type="inline">
 <tex>
-$\sum_{i=1}^{k}{d_i}-2d_1<2M$
+\begin{equation}f_\mathrm{NL}(k)=f_\mathrm{NL}^*\left({k\overk_*}\right)^{n_{f_\mathrm{NL}}},\label{eq:fnlk}\end{equation}
 </tex>
 
 </equ>
-, we have
+<p>
+where<equ id="equ18" type="inline">
+<tex>
+$k_*$
+</tex>
+
+</equ>
+is an arbitrary fixed parameter, leaving<equ id="equ19" type="inline">
+<tex>
+$f_\mathrm{NL}^*$
+</tex>
+
+</equ>
+and<equ id="equ20" type="inline">
+<tex>
+${n_{f_\mathrm{NL}}}$
+</tex>
+
+</equ>
+as
 </p>
 <p>
-and thus the conclusion follows. 
+the parameters of interest in this model. Such scaling is expected in
 </p>
 <p>
-end proof
+inflation when more than one field dominates or when there is
 </p>
 <p>
-begin proposition
+selfinteraction, and its signatures in the CMB and LSS have been discussed in
 </p>
 <p>
-When a new edge<equ id="equ181" type="inline">
+the literature <citref rids="ref24 ref25 ref29">
+24,25,29
+</citref>
+. The parameter<equ id="equ21" type="inline">
 <tex>
-$(u,v)$
-</tex>
-
-</equ>
-connecting communities<equ id="equ182" type="inline">
-<tex>
-$C(u)$
-</tex>
-
-</equ>
-and<equ id="equ183" type="inline">
-<tex>
-$C(v)$
-</tex>
-
-</equ>
-is introduced, <equ id="equ184" type="inline">
-<tex>
-$C(v)$
-</tex>
-
-</equ>
-(or<equ id="equ185" type="inline">
-<tex>
-$C(u)$
-</tex>
-
-</equ>
-)is the best candidate for<equ id="equ186" type="inline">
-<tex>
-$u$
-</tex>
-
-</equ>
-(or<equ id="equ187" type="inline">
-<tex>
-$v$
-</tex>
-
-</equ>
-)if it should ever change its membership. 
-</p>
-<p>
-end proposition
-</p>
-<p>
-begin proof
-</p>
-<p>
-Let<equ id="equ188" type="inline">
-<tex>
-$C\equivC(u)$
-</tex>
-
-</equ>
-and<equ id="equ189" type="inline">
-<tex>
-$D\equivC(v)$
-</tex>
-
-</equ>
-. Recall the outer force that a community<equ id="equ190" type="inline">
-<tex>
-$S$
-</tex>
-
-</equ>
-applies to vertex<equ id="equ191" type="inline">
-<tex>
-$u$
+${n_{f_\mathrm{NL}}}$
 </tex>
 
 </equ>
 is
 </p>
 <p>
-We will show that the presence of edge<equ id="equ192" type="inline">
+often, though certainly not always, expected to be<equ id="equ22" type="inline">
 <tex>
-$(u,v)$
+$\lesssimO(1)$
 </tex>
 
 </equ>
-will strengthen<equ id="equ193" type="inline">
+in
+</p>
+<p>
+inflationary models, but in our phenomenological model it is allowed to take
+</p>
+<p>
+any value. 
+</p>
+
+</section>
+<section level="2" id="section4">
+<title>
+Bispectrum and<equ id="equ23" type="inline">
 <tex>
-$F_{out}^{D}(u)$
+$f_\mathrm{NL}^*$
 </tex>
 
 </equ>
-while weakening the other outer forces<equ id="equ194" type="inline">
+ estimator
+</title>
+<p>
+ The primordial bispectrum of the<equ id="equ24" type="inline">
 <tex>
-$F_{out}^{S}(u)$
+$f_\mathrm{NL}(k)$
 </tex>
 
 </equ>
-, i. e, we show that<equ id="equ195" type="inline">
+model from Eq. <xref>
+eqfnlk
+</xref>
+ is
+</p>
+<p>
+straightforward to calculate
+</p>
+<equ id="equ25" type="inline">
 <tex>
-$F_{out}^{D}(u)$
+\begin{equation}F(\vec{k}_1,\vec{k}_2,\vec{k}_3)=2\left[f_\mathrm{NL}(k_1)P(k_2)P(k_3)+\mathrm{perm.}\right],\end{equation}
 </tex>
 
 </equ>
-increases while<equ id="equ196" type="inline">
+<p>
+where the full bispectrum is<equ id="equ26" type="inline">
 <tex>
-$F_{out}^{S}(u)$
+$B(\vec{k}_1,\vec{k}_2,\vec{k}_3)\equiv(2\pi)^3\delta(\vec{k}_1+\vec{k}_2+\vec{k}_3)F(\vec{k}_1,\vec{k}_2,\vec{k}_3)$
 </tex>
 
 </equ>
-decreases for all<equ id="equ197" type="inline">
+. Here
+</p>
+<equ id="equ27" type="inline">
 <tex>
-$S\notin\{C,D\}$
+$P$
 </tex>
 
 </equ>
+<p>
+is the power spectrum of the primordial curvature perturbations, and<equ id="equ28" type="inline">
+<tex>
+$\delta$
+</tex>
+
+</equ>
+
+</p>
+<p>
+is the Dirac delta function. 
+</p>
+<p>
+Constraining the running parameter<equ id="equ29" type="inline">
+<tex>
+${n_{f_\mathrm{NL}}}$
+</tex>
+
+</equ>
+seems difficult because of the
+</p>
+<p>
+apparent requirement to find an estimator for a parameter in an exponent. To
+</p>
+<p>
+avoid this, we resort to an indirect approach where, for a<emph type="italic">
+fixed
+</emph>
+value
+</p>
+<p>
+of<equ id="equ30" type="inline">
+<tex>
+${n_{f_\mathrm{NL}}}$
+</tex>
+
+</equ>
+, we estimate the parameter<equ id="equ31" type="inline">
+<tex>
+$f_\mathrm{NL}^*$
+</tex>
+
+</equ>
+using modifications of the
+</p>
+<p>
+wellknown KSW estimator <citref rids="ref30">
+30
+</citref>
+, which is
+</p>
+<p>
+known to be nearly optimal
+</p>
+ <citref rids="ref31 ref32">
+31,32
+</citref>
+. <p>
+We then iterate over the
+</p>
+<p>
+values of the running<equ id="equ32" type="inline">
+<tex>
+${n_{f_\mathrm{NL}}}$
+</tex>
+
+</equ>
+to obtain the full likelihood
+</p>
+<equ id="equ33" type="inline">
+<tex>
+$\mathcal{L}(f_\mathrm{NL}^*,{n_{f_\mathrm{NL}}})$
+</tex>
+
+</equ>
+. <p>
+The theoretical expectation for the bispectrum of the temperature anisotropies
+</p>
+<p>
+in the cosmic microwave background can be explicitly evaluated, starting from
+</p>
+<p>
+the definition of the generalized nonGaussian local model in Eq. <xref>
+eqfnlk
+</xref>
+
+</p>
+<p>
+ to account for the running<equ id="equ34" type="inline">
+<tex>
+${n_{f_\mathrm{NL}}}$
+</tex>
+
+</equ>
+
+</p>
+<p>
+where<equ id="equ35" type="inline">
+<tex>
+$I_{\ell_1\ell_2\ell_3}$
+</tex>
+
+</equ>
+is the Gaunt integral and
+</p>
+<p>
+Here, <equ id="equ36" type="inline">
+<tex>
+$t_\ell$
+</tex>
+
+</equ>
+is the radiation transfer function, which can be calculated
+</p>
+<p>
+using CAMB <citref rids="ref33">
+33
+</citref>
 . 
 </p>
 <p>
-and thus<equ id="equ198" type="inline">
+Following
+</p>
+<p>
+KSW <citref rids="ref30">
+30
+</citref>
+we can
+</p>
+<p>
+define new, filtered maps<equ id="equ37" type="inline">
 <tex>
-$F_{out}^{D}(u)$
+$A(\mathbf{\hat{n}},r)$
 </tex>
 
 </equ>
-is strengthened when<equ id="equ199" type="inline">
+and<equ id="equ38" type="inline">
 <tex>
-$(u,v)$
-</tex>
-
-</equ>
-is introduced. Furthermore, for any community<equ id="equ200" type="inline">
-<tex>
-$S\in\mathcal{C}$
-</tex>
-
-</equ>
-and<equ id="equ201" type="inline">
-<tex>
-$S\notin\{C,D\}$
+$B(\mathbf{\hat{n}},r)$
 </tex>
 
 </equ>
 , 
 </p>
 <p>
-which implies<equ id="equ202" type="inline">
+Then, we write down the skewness<equ id="equ39" type="inline">
 <tex>
-$F_{out}^{S}(u)$
+$S({n_{f_\mathrm{NL}}})$
 </tex>
 
 </equ>
-is weakened when<equ id="equ203" type="inline">
+
+</p>
+<equ id="equ40" type="inline">
 <tex>
-$(u,v)$
+\begin{equation}S({n_{f_\mathrm{NL}}})\equiv\intr^2dr\intd^2\mathbf{\hat{n}}\,A(\mathbf{\hat{n}},r)B^2(\mathbf{\hat{n}},r),\label{eq:skew}\end{equation}
 </tex>
 
 </equ>
-is connected. Hence, the conclusion follows. 
+<p>
+which requires<equ id="equ41" type="inline">
+<tex>
+${n_{f_\mathrm{NL}}}$
+</tex>
+
+</equ>
+as input(through<equ id="equ42" type="inline">
+<tex>
+$A$
+</tex>
+
+</equ>
+), and does not require<emph type="italic">
+a priori
+</emph>
+
 </p>
 <p>
-end proof
-</p>
-<p>
-begin proposition
-</p>
-<p>
-Assume that a new edge<equ id="equ204" type="inline">
+knowledge of<equ id="equ43" type="inline">
 <tex>
-$(u,v)$
-</tex>
-
-</equ>
-is added to the network. Let<equ id="equ205" type="inline">
-<tex>
-$C\equivC(u)$
-</tex>
-
-</equ>
-and<equ id="equ206" type="inline">
-<tex>
-$D\equivC(v)$
-</tex>
-
-</equ>
-. If<equ id="equ207" type="inline">
-<tex>
-$\Deltaq_{u,C,D}\equiv4(M+1)(e^u_D+1-e^u_C)+e^u_C(2d_D-2d_u-e^u_C)-2(d_u+1)(d_u+1+d_D-d_C)>
-0$
-</tex>
-
-</equ>
-then joining<equ id="equ208" type="inline">
-<tex>
-$u$
-</tex>
-
-</equ>
-to D will increase the overall modularity. 
-</p>
-<p>
-end proposition
-</p>
-<p>
-begin proof
-</p>
-<p>
-Node<equ id="equ209" type="inline">
-<tex>
-$u$
-</tex>
-
-</equ>
-should leave its current community<equ id="equ210" type="inline">
-<tex>
-$C$
-</tex>
-
-</equ>
-and join in<equ id="equ211" type="inline">
-<tex>
-$D$
-</tex>
-
-</equ>
-if
-</p>
-<p>
-or equivalently, 
-</p>
-<p>
-end proof
-</p>
-<p>
-begin corollary
-</p>
-<p>
-If the condition in Proposition<xref>
-propositionCondition
-</xref>
- is not satisfied, then neither<equ id="equ212" type="inline">
-<tex>
-$u$
-</tex>
-
-</equ>
-nor its neighbors should be moved to<equ id="equ213" type="inline">
-<tex>
-$D$
+$f_\mathrm{NL}^*$
 </tex>
 
 </equ>
 . 
 </p>
 <p>
-end corollary
+The observed CMB bispectrum is defined as<equ id="equ44" type="inline">
+<tex>
+$B_{\ell_1\ell_2\ell_3}^{\mathrm{obs.}}=\langlea_{\ell_1m_1}a_{\ell_2m_2}a_{\ell_3m_3}\rangle$
+</tex>
+
+</equ>
+, and<equ id="equ45" type="inline">
+<tex>
+$S({n_{f_\mathrm{NL}}})$
+</tex>
+
+</equ>
+therefore
+</p>
+<p>
+reduces to
+</p>
+<equ id="equ46" type="inline">
+<tex>
+\begin{equation}S=\sum_{\ell_1\leq\ell_2\leq\ell_3}{B^{\mathrm{obs}}_{\ell_1\ell_2\ell_3}\tilde{B}^{\mathrm{theory}}_{\ell_1\ell_2\ell_3}(f_\mathrm{NL}=1)\over\tilde{C}_{\ell_1}\tilde{C}_{\ell_2}\tilde{C}_{\ell_3}},\label{SkewBispec}\end{equation}
+</tex>
+
+</equ>
+<p>
+where<equ id="equ47" type="inline">
+<tex>
+$\tilde{B}^{\mathrm{theory}}_{\ell_1\ell_2\ell_3}=b_{\ell_1}b_{\ell_2}b_{\ell_3}B^{\mathrm{theory}}_{\ell_1\ell_2\ell_3}$
+</tex>
+
+</equ>
+, and<equ id="equ48" type="inline">
+<tex>
+$b_\ell$
+</tex>
+
+</equ>
+is the beam transfer function. 
+</p>
+<p>
+We now define<equ id="equ49" type="inline">
+<tex>
+$F\equivF({n_{f_\mathrm{NL}}})$
+</tex>
+
+</equ>
+, the Fisher matrix for<equ id="equ50" type="inline">
+<tex>
+$f_\mathrm{NL}^*$
+</tex>
+
+</equ>
+, equivalent to the cumulative
+</p>
+<p>
+signaltonoise squared of the theoretical bispectrum for<equ id="equ51" type="inline">
+<tex>
+$f_\mathrm{NL}^*=1$
+</tex>
+
+</equ>
+
+</p>
+<equ id="equ52" type="inline">
+<tex>
+\begin{equation}F({n_{f_\mathrm{NL}}})=\sum_{\ell_1\leq\ell_2\leq\ell_3}{\left(\tilde{B}^{\mathrm{theory}}_{\ell_1\ell_2\ell_3}(f_\mathrm{NL}^*=1)\right)^2\over\tilde{C}_{\ell_1}\tilde{C}_{\ell_2}\tilde{C}_{\ell_3}}.\label{eq:Fisher}\end{equation}
+</tex>
+
+</equ>
+<p>
+The theoretical expectation for<equ id="equ53" type="inline">
+<tex>
+$B_{\ell_1\ell_2\ell_3}\proptof_\mathrm{NL}^*$
+</tex>
+
+</equ>
+, so the cubic KSW
+</p>
+<p>
+estimator for<equ id="equ54" type="inline">
+<tex>
+$f_\mathrm{NL}^*$
+</tex>
+
+</equ>
+is
+</p>
+<equ id="equ55" type="inline">
+<tex>
+\begin{equation}\hat{f}_\mathrm{NL}^*={S\overF}.\label{eq:KSW}\end{equation}
+</tex>
+
+</equ>
+<p>
+We used HEALPix, by way of HealPy, to do the forwards and backwards spherical
+</p>
+<p>
+harmonic transforms required to obtain the<equ id="equ56" type="inline">
+<tex>
+$A$
+</tex>
+
+</equ>
+and<equ id="equ57" type="inline">
+<tex>
+$B$
+</tex>
+
+</equ>
+maps. 
 </p>
 
 </section>
-<section level="3" id="section10">
+<section level="2" id="section5">
 <title>
-Node removal
+Cutsky maps
 </title>
 <p>
- When an existing node<equ id="equ214" type="inline">
-<tex>
-$u$
-</tex>
-
-</equ>
-in a community<equ id="equ215" type="inline">
-<tex>
-$C$
-</tex>
-
-</equ>
-is removed, all of its adjacent edges are disregarded as a result. This case is challenging in the sense that the resulting community is very complicatedit can be either unchanged or broken into smaller pieces and could probably be merged with other communities. Let us consider two extreme cases when a single degree node and a node with highest degree in a community is removed. If a single degree node is removed, it leaves the resulted community unchanged(<xref>
-Proposition removeSingleEdge
-</xref>
-. However, when a highest degree vertex is removed, the current community might be disconnected and broken in to smaller pieces which then are merged to other communities as depicted in Figure<xref>
-Figure2
-</xref>
- c. Therefore, identifying the leftover structure of<equ id="equ216" type="inline">
-<tex>
-$C$
-</tex>
-
-</equ>
-is a crucial part once a vertex in<equ id="equ217" type="inline">
-<tex>
-$C$
-</tex>
-
-</equ>
-is removed. 
+ Equationeqref eqKSWworks well for a fullsky map, 
 </p>
 <p>
-To quickly and efficiently handle this task, we utilize the clique percolation method presented in <citref rids="ref2">
-2
+but a sky cut introduces a spurious nonGaussian signal. To account for the
+</p>
+<p>
+masking of the CMB sky, we make the substitution<equ id="equ58" type="inline">
+<tex>
+$S\rightarrowS_{\mathrm{cut}}=S/f_\mathrm{sky}+S_{\mathrm{linear}}$
+</tex>
+
+</equ>
+ <citref rids="ref34">
+34
 </citref>
-. In particular, when a vertex<equ id="equ218" type="inline">
+. <equ id="equ59" type="inline">
 <tex>
-$u$
+$S_{\mathrm{linear}}$
 </tex>
 
 </equ>
-is removed from<equ id="equ219" type="inline">
-<tex>
-$C$
-</tex>
-
-</equ>
-, we place a 3 clique to one of its neighbors and let the clique percolate until no vertices in<equ id="equ220" type="inline">
-<tex>
-$C$
-</tex>
-
-</equ>
-are discovered(<xref>
-Figure Figure2
+is an addition to
+</p>
+<p>
+skewness from Eq. <xref>
+eqskew
 </xref>
- d). We then let the remaining communities of<equ id="equ221" type="inline">
+, calibrated to account for partialsky
+</p>
+<p>
+observations
+</p>
+<p>
+The subscripted filtered maps<equ id="equ60" type="inline">
 <tex>
-$C$
+$A_{\mathrm{sim}}$
 </tex>
 
 </equ>
-choose their best communities to merge in. The detailed algorithm is presented in Algorithm<xref>
-removeNode
-</xref>
-<xref>
- Table removeNode
-</xref>
+and<equ id="equ61" type="inline">
+<tex>
+$B_{\mathrm{sim}}$
+</tex>
+
+</equ>
+are created
+</p>
+<p>
+from PythonproducedMonte Carlo realizations of the cut CMB skythe brackets<equ id="equ62" type="inline">
+<tex>
+$\langle\rangle_{MC}$
+</tex>
+
+</equ>
+indicate an average over all 300  MontePython maps. The simulated
+</p>
+<p>
+maps were produced using the prescription laid out in Appendix A of the WMAP5
+</p>
+<p>
+paper <citref rids="ref35">
+35
+</citref>
+the only difference(aside from using the WMAP7
+</p>
+<p>
+cosmological model)is that we used a uniform weighting for the maps, 
+</p>
+<p>
+rather than the slightly more complicated weighting given there, since it only
+</p>
+<p>
+gives a marginal improvement in estimating<equ id="equ63" type="inline">
+<tex>
+$f_\mathrm{NL}$
+</tex>
+
+</equ>
 . 
 </p>
 
 </section>
-<section level="3" id="section11">
+<section level="2" id="section6">
 <title>
-Edge removal
+Likelihood Evaluation
 </title>
 <p>
- In the last case when an edge<equ id="equ222" type="inline">
+ To find the likelihood, we first find a<equ id="equ64" type="inline">
 <tex>
-$e=(u,v)$
+$\chi^2$
 </tex>
 
 </equ>
-is removed, we divide further into four subcases(1 )<equ id="equ223" type="inline">
-<tex>
-$e$
-</tex>
 
-</equ>
-is a single edge connecting only<equ id="equ224" type="inline">
-<tex>
-$u$
-</tex>
-
-</equ>
-and<equ id="equ225" type="inline">
-<tex>
-$v$
-</tex>
-
-</equ>
-, (2 )either<equ id="equ226" type="inline">
-<tex>
-$u$
-</tex>
-
-</equ>
-or<equ id="equ227" type="inline">
-<tex>
-$v$
-</tex>
-
-</equ>
-has degree one, (3 )<equ id="equ228" type="inline">
-<tex>
-$e$
-</tex>
-
-</equ>
-is an intercommunity link connecting<equ id="equ229" type="inline">
-<tex>
-$C(u)$
-</tex>
-
-</equ>
-and<equ id="equ230" type="inline">
-<tex>
-$C(v)$
-</tex>
-
-</equ>
-, and(4 )<equ id="equ231" type="inline">
-<tex>
-$e$
-</tex>
-
-</equ>
-is an intracommunity link. If<equ id="equ232" type="inline">
-<tex>
-$e$
-</tex>
-
-</equ>
-is an single edge, its removal will result in the same community structure plus two singletons of<equ id="equ233" type="inline">
-<tex>
-$u$
-</tex>
-
-</equ>
-and<equ id="equ234" type="inline">
-<tex>
-$v$
-</tex>
-
-</equ>
-themselves. The same reaction applies to the second subcase when either<equ id="equ235" type="inline">
-<tex>
-$u$
-</tex>
-
-</equ>
-or<equ id="equ236" type="inline">
-<tex>
-$v$
-</tex>
-
-</equ>
-has single degree due to Proposition<xref>
-removeSingleEdge
-</xref>
-, thus results in the prior network structure plus<equ id="equ237" type="inline">
-<tex>
-$u$
-</tex>
-
-</equ>
-(or<equ id="equ238" type="inline">
-<tex>
-$v$
-</tex>
-
-</equ>
-). When<equ id="equ239" type="inline">
-<tex>
-$e$
-</tex>
-
-</equ>
-is an intercommunity link, the removal of<equ id="equ240" type="inline">
-<tex>
-$e$
-</tex>
-
-</equ>
-will strengthen the current network communities(<xref>
-Proposition propositionRemoveEdge
-</xref>
- and hence, we just make no change to the overall network structure. 
 </p>
 <p>
-The last but most complicated case happens when an intracommunity link is deleted. As depicted in Figure<xref>
-Figure2
-</xref>
- b, removing this kind of edge often leaves the community unchanged if the community itself is densely connectedhowever, the target module will be divided if it contains substructures which are less attractive or loosely connected to each other. Therefore, the problem of identifying the structure of the remaining modules is important. <xref>
-Proposition theoTest
-</xref>
- provides us a convenient tool to test for community bidivision when an intracommunity link is removed from the host community<equ id="equ241" type="inline">
+statistic for<equ id="equ65" type="inline">
 <tex>
-$C$
+$f_\mathrm{NL}^*$
 </tex>
 
 </equ>
-. However, it requires an intensive look for all subsets of<equ id="equ242" type="inline">
+, given a value of<equ id="equ66" type="inline">
 <tex>
-$C$
+${n_{f_\mathrm{NL}}}$
 </tex>
 
 </equ>
-, which may be time consuming when<equ id="equ243" type="inline">
-<tex>
-$C$
-</tex>
-
-</equ>
-is big. Note that prior to the removal of<equ id="equ244" type="inline">
-<tex>
-$(u,v)$
-</tex>
-
-</equ>
-, the community<equ id="equ245" type="inline">
-<tex>
-$C$
-</tex>
-
-</equ>
-hosting this link should contain dense connections within itself and thus, the removal of<equ id="equ246" type="inline">
-<tex>
-$(u,v)$
-</tex>
-
-</equ>
-should leave some sort ofquasicliquestructure <citref rids="ref2">
-2
-</citref>
-inside<equ id="equ247" type="inline">
-<tex>
-$C$
-</tex>
-
-</equ>
-. Therefore, we find all maximal quasicliques within the current community and have them(as well as leftover singletons)determine their best communities to join in. The detailed procedure is described in Algorithm<xref>
-removeEdge
-</xref>
-<xref>
- Table removeEdge
-</xref>
-. 
+. Taking the angularaveraged
 </p>
 <p>
-begin proposition
-</p>
-<p>
-If<equ id="equ248" type="inline">
+bispectrum<equ id="equ67" type="inline">
 <tex>
-$C_1$
+$B_{\ell_1\ell_2\ell_3}$
 </tex>
 
 </equ>
-and<equ id="equ249" type="inline">
-<tex>
-$C_2$
-</tex>
-
-</equ>
-are two communities of<equ id="equ250" type="inline">
-<tex>
-$G$
-</tex>
-
-</equ>
-, then the removal of an intercommunity link connecting them will strengthen modularity contributions of both<equ id="equ251" type="inline">
-<tex>
-$C_1$
-</tex>
-
-</equ>
-and<equ id="equ252" type="inline">
-<tex>
-$C_2$
-</tex>
-
-</equ>
-. 
-</p>
-<p>
-end proposition
-</p>
-<p>
-begin proof
-</p>
-<p>
-Let<equ id="equ253" type="inline">
-<tex>
-$\mathcal{Q}_1$
-</tex>
-
-</equ>
-and<equ id="equ254" type="inline">
-<tex>
-$\mathcal{Q}'_1$
-</tex>
-
-</equ>
-be the modularities of<equ id="equ255" type="inline">
-<tex>
-$C_1$
-</tex>
-
-</equ>
-before and after the removal of that link. We show that<equ id="equ256" type="inline">
-<tex>
-$\mathcal{Q}'_1>
-\mathcal{Q}_1$
-</tex>
-
-</equ>
-(and similarly, <equ id="equ257" type="inline">
-<tex>
-$\mathcal{Q}'_2>
-\mathcal{Q}_2$
-</tex>
-
-</equ>
-)and thus, <equ id="equ258" type="inline">
-<tex>
-$C_1$
-</tex>
-
-</equ>
-and<equ id="equ259" type="inline">
-<tex>
-$C_2$
-</tex>
-
-</equ>
-contribute higher modularities to the network. Now, 
-</p>
-<p>
-Since all terms are all positive, <equ id="equ260" type="inline">
-<tex>
-$\mathcal{Q}'_1-\mathcal{Q}_1>
-0$
-</tex>
-
-</equ>
-. The same technique applies to show that<equ id="equ261" type="inline">
-<tex>
-$\mathcal{Q}'_2>
-\mathcal{Q}_2$
-</tex>
-
-</equ>
-. 
-</p>
-<p>
-end proof
-</p>
-<p>
-begin proposition
-</p>
-<p>
-The removal of<equ id="equ262" type="inline">
-<tex>
-$(u,v)$
-</tex>
-
-</equ>
-inside a community<equ id="equ263" type="inline">
-<tex>
-$C$
-</tex>
-
-</equ>
-where only<equ id="equ264" type="inline">
-<tex>
-$u$
-</tex>
-
-</equ>
-or<equ id="equ265" type="inline">
-<tex>
-$v$
-</tex>
-
-</equ>
-is of degree one will not separate<equ id="equ266" type="inline">
-<tex>
-$C$
-</tex>
-
-</equ>
-. 
-</p>
-<p>
-end proposition
-</p>
-<p>
-begin proof
-</p>
-<p>
-The proof of this proposition is similar to that of proposition<xref>
-AddAnEdgeNoSplit
-</xref>
-. 
-</p>
-<p>
-end proof
-</p>
-<p>
-begin proposition
+as our observables, we have
 </p>
 (<p>
-Separation of a community)Let<equ id="equ267" type="inline">
+Again, this works because the theoretical expectation for<equ id="equ68" type="inline">
 <tex>
-$C_1\subseteqC$
+$B_{\ell_1\ell_2\ell_3}\proptof_\mathrm{NL}^*$
 </tex>
 
 </equ>
-and<equ id="equ268" type="inline">
-<tex>
-$C_2=C\backslashC_1$
-</tex>
-
-</equ>
-be two disjoint subsets of<equ id="equ269" type="inline">
-<tex>
-$C$
-</tex>
-
-</equ>
-. <equ id="equ270" type="inline">
-<tex>
-$(\mathcal{C}\backslashC)\cup\{C_1,C_2\}$
-</tex>
-
-</equ>
-is a community structure with higher modularity when an edge crossing<equ id="equ271" type="inline">
-<tex>
-$C_1$
-</tex>
-
-</equ>
-and<equ id="equ272" type="inline">
-<tex>
-$C_2$
-</tex>
-
-</equ>
-is removed, i. e. , <equ id="equ273" type="inline">
-<tex>
-$C$
-</tex>
-
-</equ>
-should be separated into<equ id="equ274" type="inline">
-<tex>
-$C_1$
-</tex>
-
-</equ>
-and<equ id="equ275" type="inline">
-<tex>
-$C_2$
-</tex>
-
-</equ>
-, if and only if
+. )Using Eqs. eqref SkewBispecandeqref eqFisher, we can
 </p>
-<equ id="equ276" type="inline">
+<p>
+rewrite<equ id="equ69" type="inline">
 <tex>
-$e_{12}<\frac{d_1d_2-d_C+1}{2(M-1)}+1$
+$\chi^2$
+</tex>
+
+</equ>
+as
+</p>
+<equ id="equ70" type="inline">
+<tex>
+\begin{equation}\chi^2(f_\mathrm{NL}^*,{n_{f_\mathrm{NL}}})=F\left(f_\mathrm{NL}^*-{S\overF}\right)^2+\chi^2_0-{S^2\overF}.\label{eq:chi2}\end{equation}
+</tex>
+
+</equ>
+<p>
+where<equ id="equ71" type="inline">
+<tex>
+$\chi^2_0\equiv\sum_{\ell_1\ell_2\ell_3}\left(B^{\mathrm{obs}}_{\ell_1\ell_2\ell_3}\right)^2/(\tilde{C}_{\ell_1}\tilde{C}_{\ell_2}\tilde{C}_{\ell_3})$
+</tex>
+
+</equ>
+is the
+</p>
+<p>
+goodnessoffit parameter for the data with respect to the<equ id="equ72" type="inline">
+<tex>
+$f_\mathrm{NL}^*=0$
+</tex>
+
+</equ>
+
+</p>
+<p>
+case. Note that the numerator of<equ id="equ73" type="inline">
+<tex>
+$\chi^2_0$
+</tex>
+
+</equ>
+is an observed quantity, and the
+</p>
+<p>
+denominator is based solely on the theoretical prediction for the power
+</p>
+<p>
+spectrum(as well as a few noise and beam parameters of WMAP). Therefore, 
+</p>
+<equ id="equ74" type="inline">
+<tex>
+$\chi^2_0$
+</tex>
+
+</equ>
+<p>
+does not depend on<equ id="equ75" type="inline">
+<tex>
+$f_\mathrm{NL}^*$
+</tex>
+
+</equ>
+or<equ id="equ76" type="inline">
+<tex>
+${n_{f_\mathrm{NL}}}$
+</tex>
+
+</equ>
+at all. We can use
+</p>
+<p>
+the definition of<equ id="equ77" type="inline">
+<tex>
+$\hat{f}_\mathrm{NL}^*$
+</tex>
+
+</equ>
+in Eq. eqref eqKSWto rewrite the
+</p>
+<p>
+expression for<equ id="equ78" type="inline">
+<tex>
+$\chi^2$
+</tex>
+
+</equ>
+as follows
+</p>
+<equ id="equ79" type="inline">
+<tex>
+\begin{equation}\chi^2(f_\mathrm{NL}^*,{n_{f_\mathrm{NL}}})=F\left(f_\mathrm{NL}^*-\hat{f}^*_{\mathrm{NL}}\right)^2+\chi^2_0-(\hat{f}_\mathrm{NL}^*)^2F.\end{equation}
+</tex>
+
+</equ>
+<p>
+For a fixed value of<equ id="equ80" type="inline">
+<tex>
+${n_{f_\mathrm{NL}}}$
+</tex>
+
+</equ>
+, the<equ id="equ81" type="inline">
+<tex>
+$\chi^2$
+</tex>
+
+</equ>
+is, as expected, minimized in
+</p>
+<equ id="equ82" type="inline">
+<tex>
+$f_\mathrm{NL}^*$
+</tex>
+
+</equ>
+<p>
+when<equ id="equ83" type="inline">
+<tex>
+$f_\mathrm{NL}^*=\hat{f}_\mathrm{NL}^*$
+</tex>
+
+</equ>
+, and one obtains<equ id="equ84" type="inline">
+<tex>
+$\chi_{\mathrm{min}}^2({n_{f_\mathrm{NL}}})=\chi^2_0-(\hat{f}_\mathrm{NL}^*)^2F$
+</tex>
+
+</equ>
+. 
+</p>
+<p>
+A more interesting task is to calculate the
+</p>
+<p>
+constraints when<equ id="equ85" type="inline">
+<tex>
+${n_{f_\mathrm{NL}}}$
+</tex>
+
+</equ>
+is allowed to vary. 
+</p>
+<p>
+With an expression for<equ id="equ86" type="inline">
+<tex>
+$\chi^2(f_\mathrm{NL}^*,{n_{f_\mathrm{NL}}})$
+</tex>
+
+</equ>
+in hand, we can write an expression for the
+</p>
+<p>
+likelihood, <equ id="equ87" type="inline">
+<tex>
+$\mathcal{L}(f_\mathrm{NL}^*,{n_{f_\mathrm{NL}}})\propto\exp(-{\chi^2/2})$
+</tex>
+
+</equ>
+(dropping
+</p>
+<p>
+the constant term with<equ id="equ88" type="inline">
+<tex>
+$\chi_0^2$
+</tex>
+
+</equ>
+)
+</p>
+<p>
+To marginalize over<equ id="equ89" type="inline">
+<tex>
+$f_\mathrm{NL}^*$
+</tex>
+
+</equ>
+is also straightforward
+</p>
+<equ id="equ90" type="inline">
+<tex>
+\begin{equation}\mathcal{L}({n_{f_\mathrm{NL}}})=\int\mathcal{L}({n_{f_\mathrm{NL}}},f_\mathrm{NL}^*)\:df_\mathrm{NL}^*\propto{1\over\sqrt{F}}\exp\left[{(\hat{f}_\mathrm{NL}^*)^2F\over2}\right],\end{equation}
+</tex>
+
+</equ>
+<p>
+where, recall, <equ id="equ91" type="inline">
+<tex>
+$F({n_{f_\mathrm{NL}}})$
+</tex>
+
+</equ>
+is defined in Eq. <xref>
+eqFisher
+</xref>
+. 
+</p>
+
+</section>
+
+</section>
+<section>
+<title>
+Results
+</title>
+<section level="2" id="section8">
+<title>
+ WMAP7 constraints on<equ id="equ92" type="inline">
+<tex>
+${n_{f_\mathrm{NL}}}$
+</tex>
+
+</equ>
+
+</title>
+<xref>
+<p>
+ Figure figlikelihood
+</xref>
+ shows the
+</p>
+<p>
+likelihood<equ id="equ93" type="inline">
+<tex>
+$\mathcal{L}$
+</tex>
+
+</equ>
+in the<equ id="equ94" type="inline">
+<tex>
+${n_{f_\mathrm{NL}}}$
+</tex>
+
+</equ>
+<equ id="equ95" type="inline">
+<tex>
+$f_\mathrm{NL}^*$
+</tex>
+
+</equ>
+plane, as well as the
+</p>
+<p>
+likelihood for<equ id="equ96" type="inline">
+<tex>
+${n_{f_\mathrm{NL}}}$
+</tex>
+
+</equ>
+alone, calculated from the WMAP7 temperature maps. We
+</p>
+<p>
+used a weighted and masked combination of the WMAP V and W band maps
+</p>
+<p>
+with the monopole and dipole subtracted, as recommended by the WMAP
+</p>
+<p>
+team <citref rids="ref35">
+35
+</citref>
+. To extract full information from WMAP maps, we used
+</p>
+<p>
+multipoles out to<equ id="equ97" type="inline">
+<tex>
+$\ell_{\mathrm{max}}=800$
+</tex>
+
+</equ>
+for the sums in Eqs. <xref>
+eqA_map
+</xref>
+, 
+</p>
+<xref>
+<p>
+eqB_map
+</xref>
+<xref>
+ and eqFisher
+</xref>
+. We did not find a significant
+</p>
+<p>
+improvement between<equ id="equ98" type="inline">
+<tex>
+$\ell_{\mathrm{max}}=700$
+</tex>
+
+</equ>
+and<equ id="equ99" type="inline">
+<tex>
+$\ell_{\mathrm{max}}=800$
+</tex>
+
+</equ>
+we chose the higher
+</p>
+<p>
+value to be conservative in our analysis. 
+</p>
+<p>
+The quantity<equ id="equ100" type="inline">
+<tex>
+$\chi^2$
+</tex>
+
+</equ>
+is independent of our choice for<equ id="equ101" type="inline">
+<tex>
+$k_{\mathrm{piv}}$
+</tex>
+
+</equ>
+, 
+</p>
+<p>
+but the likelihood itself is not, since<equ id="equ102" type="inline">
+<tex>
+$F$
+</tex>
+
+</equ>
+is inversely proportional to
+</p>
+<equ id="equ103" type="inline">
+<tex>
+$k_{\mathrm{piv}}^{2{n_{f_\mathrm{NL}}}}$
 </tex>
 
 </equ>
 . <p>
-end proposition
+The true pivot scale favored by the data is the value
 </p>
 <p>
-begin proof
+of<equ id="equ104" type="inline">
+<tex>
+$k_{\mathrm{piv}}$
+</tex>
+
+</equ>
+for which the errors in<equ id="equ105" type="inline">
+<tex>
+$f_\mathrm{NL}^*$
+</tex>
+
+</equ>
+are uncorrelated with the
 </p>
 <p>
-Let<equ id="equ277" type="inline">
+errors in<equ id="equ106" type="inline">
 <tex>
-$\mathcal{Q}'_1$
+${n_{f_\mathrm{NL}}}$
 </tex>
 
 </equ>
-, <equ id="equ278" type="inline">
-<tex>
-$\mathcal{Q}'_2$
-</tex>
-
-</equ>
-and<equ id="equ279" type="inline">
-<tex>
-$\mathcal{Q}'_C$
-</tex>
-
-</equ>
-denote the modularity contribution of<equ id="equ280" type="inline">
-<tex>
-$C_1$
-</tex>
-
-</equ>
-, <equ id="equ281" type="inline">
-<tex>
-$C_2$
-</tex>
-
-</equ>
-and<equ id="equ282" type="inline">
-<tex>
-$C$
-</tex>
-
-</equ>
-after an edge crossing<equ id="equ283" type="inline">
-<tex>
-$(X_1,X_2)$
-</tex>
-
-</equ>
-has been removed. Now, 
+. We find this scale by using the likelihood to calculate the
 </p>
 <p>
-Thus, the conclusion follows. 
-</p>
-<p>
-end proof
-</p>
-<p>
-begin proposition
-</p>
-(<p>
-Community bidivision)For any community<equ id="equ284" type="inline">
+covariance matrix<equ id="equ107" type="inline">
 <tex>
-$C$
+$\mathbf{C}$
 </tex>
 
 </equ>
-, let<equ id="equ285" type="inline">
+between<equ id="equ108" type="inline">
 <tex>
-$\alpha$
+$f_\mathrm{NL}^*$
 </tex>
 
 </equ>
-and<equ id="equ286" type="inline">
+and<equ id="equ109" type="inline">
 <tex>
-$\beta$
-</tex>
-
-</equ>
-be the lowest and the second highest degree of vertices in<equ id="equ287" type="inline">
-<tex>
-$C$
-</tex>
-
-</equ>
-, respectively. Assume that an edge<equ id="equ288" type="inline">
-<tex>
-$e$
-</tex>
-
-</equ>
-is removed from<equ id="equ289" type="inline">
-<tex>
-$C$
-</tex>
-
-</equ>
-. If there do not exist subsets<equ id="equ290" type="inline">
-<tex>
-$C_1\subseteqC$
-</tex>
-
-</equ>
-and<equ id="equ291" type="inline">
-<tex>
-$C_2\equivC\backslashC_1$
-</tex>
-
-</equ>
-such that<equ id="equ292" type="inline">
-<tex>
-$e$
-</tex>
-
-</equ>
-is crossing<equ id="equ293" type="inline">
-<tex>
-$C_1$
-</tex>
-
-</equ>
-and<equ id="equ294" type="inline">
-<tex>
-$C_2$
-</tex>
-
-</equ>
-and<equ id="equ295" type="inline">
-<tex>
-$\frac{\min{\{\alpha(d_C-\alpha),\beta(d_C-\beta)\}}}{2M}<e_{12}<\frac{(d_C-2)^2}{8(M-1)}+1,$
-</tex>
-
-</equ>
-then any bidivision of<equ id="equ296" type="inline">
-<tex>
-$C$
-</tex>
-
-</equ>
-will not benefit the overall<equ id="equ297" type="inline">
-<tex>
-$\mathcal{Q}$
-</tex>
-
-</equ>
-. 
-</p>
-<p>
-end proposition
-</p>
-<p>
-begin proof
-</p>
-<p>
-From Proposition<xref>
-propositionSep
-</xref>
-, it follows that in order to really benefit the overall modularity we must have
-</p>
-<p>
-Now we find an upper bound for the RHS inequality. Since<equ id="equ298" type="inline">
-<tex>
-$d_1+d_2=d_C$
-</tex>
-
-</equ>
-, it follows that
-</p>
-<p>
-For a lower bound of the LHS inequality, we rewrite<equ id="equ299" type="inline">
-<tex>
-$d_1d_2$
-</tex>
-
-</equ>
-as<equ id="equ300" type="inline">
-<tex>
-$d_1d_2=d_1(d_C-d_1)=d_1d_C-d_1^2$
+${n_{f_\mathrm{NL}}}$
 </tex>
 
 </equ>
 
 </p>
-<p>
-and find the nonzero minimum value on the range<equ id="equ301" type="inline">
+<equ id="equ110" type="inline">
 <tex>
-$d_1\in[\alpha,\beta]$
+\begin{equation}\mathbf{C}_{p_i,p_j}=\langle(p_i-\bar{p_i})(p_j-\bar{p_j})\rangle.\end{equation}
 </tex>
 
 </equ>
-. In this interval, <equ id="equ302" type="inline">
+<p>
+We can easily find the pivot value<equ id="equ111" type="inline">
 <tex>
-$d_1d_C-d_1^2$
+$k_{\mathrm{piv}}$
 </tex>
 
 </equ>
-is minimized either at<equ id="equ303" type="inline">
+that diagonalizes the
+</p>
+<p>
+covariance matrix<equ id="equ112" type="inline">
 <tex>
-$d_1=\alpha$
+$\mathbf{C}$
 </tex>
 
 </equ>
-or<equ id="equ304" type="inline">
-<tex>
-$d_1=\beta$
-</tex>
-
-</equ>
-. Therefore, 
-</p>
-<p>
-That concludes the proof. 
-</p>
-<p>
-end proof
-</p>
-<p>
-Finally, our QCA framework is presented in Algorithm<xref>
-DyComDetection
-</xref>
-<xref>
- Table DyComDetection
-</xref>
-. 
-</p>
-
-</section>
-
-</section>
-
-</section>
-<section>
-<title>
-Results
-</title>
-<p>
- In this section, we first validate our approaches on different synthesized networks with known groundtruths, and then present our findings on real world traces including the Enron email <citref rids="ref13">
-13
-</citref>
-, arXiv eprint citation <citref rids="ref14">
-14
-</citref>
-, and Facebook social networks <citref rids="ref15">
-15
-</citref>
-. To certify the performance of our algorithms, we compare QCA to three notable adaptive methods including(1 )MIEN algorithm proposed by Thang et al.  <citref rids="ref16">
-16
-</citref>
-, (2 )FacetNet framework proposed by Lin et al.  <citref rids="ref17">
-17
-</citref>
-, and(3 )OSLOM method suggested by Lancichinetti et al.  <citref rids="ref18">
-18
-</citref>
-. 
-</p>
-<section level="2" id="section14">
-<title>
-Results on synthesized networks
-</title>
-<p>
- Of course, the best way to evaluate our approaches is to validate them on real networks with known community structures. Unfortunately, we often do not know that structures beforehand, or such structures cannot be easily mined from the network topology. Although synthesized data might not reflect all the statistical properties of real networks, they do provide us embedded groundtruths via planted communities, and the ability to vary other parameters such as sizes, densities and overlapping levels, etc. Testing community detection methods on generated data has become an common practice widely accepted in the field <citref rids="ref-1">
--1
-</citref>
-algo. Hence, a comparison between QCA and other dynamic algorithms on synthesized data not only certifies its performance but also provides us the confidence to its behaviors on real world traces. 
-</p>
-<p>
-<emph type="italic">
-Setup. 
-</emph>
-We use the wellknown LFR benchmark <citref rids="ref-1">
--1
-</citref>
-algo to generate 40  networks with 10  snapshots. Parameters arethe number of nodes<equ id="equ305" type="inline">
-<tex>
-$N=\{1000,5000\}$
-</tex>
-
-</equ>
-, the mixing parameter<equ id="equ306" type="inline">
-<tex>
-$\mu=\{0.1,0.3\}$
-</tex>
-
-</equ>
-controlling the overall sharpness of the community structure. The experiments are averaged over 1000  runs for consistency. 
-</p>
-<p>
-In order to quantify the similarity between the identified communities and the ground truth, we adopt a well known measure in Information Theory called<emph type="italic">
-Normalized Mutual Information(NMI)
-</emph>
-. NMI has been proven to be reliable and is currently used in testing community detection algorithms <citref rids="ref-1">
--1
-</citref>
-algo. <equ id="equ307" type="inline">
-<tex>
-$NMI(U,V)$
-</tex>
-
-</equ>
-equals 1  if structures<equ id="equ308" type="inline">
-<tex>
-$U$
-</tex>
-
-</equ>
-and<equ id="equ309" type="inline">
-<tex>
-$V$
-</tex>
-
-</equ>
-are identical and equals 0  if they are totally separated, and the higher NMI the better. Due to space limit, the readers are encouraged to read <citref rids="ref-1">
--1
-</citref>
-algo for NMI formulas. 
-</p>
-<p>
-<emph type="italic">
-Results. 
-</emph>
-The NMI and Modularity values are reported in Figures<xref>
-Figure3
-</xref>
-<xref>
- and Figure4
-</xref>
-. As depicted in their subfigures, the NMI values and modularities indicated by our QCA method, in general, are very high and competitive with those of OSLOM while are much better than those produced by MIEN and FacetNet methods. On these generated networks, we observe that MIEN and FacetNet perform well when the mixing parameter<equ id="equ310" type="inline">
-<tex>
-$\mu$
-</tex>
-
-</equ>
-is small, i. e. , when the network community structures are clear, however, their performances degrade dramatically when these structures become less clear as<equ id="equ311" type="inline">
-<tex>
-$\mu$
-</tex>
-
-</equ>
-gets larger. Particularly, MIENand FacetNetNMI scores and modularities in all test cases are fairly low and usually from 10 to 50 and 5 to 15 worst than those produced by QCA. This implies the network communities revealed by these methods are not as high similarity to the groundtruth as QCA algorithm. On the generated networks, OSLOM algorithm performs very well as suggested through its high NMI scores and modularity values. In particular, OSLOM tends to perform better than QCA in the first couple of network snapshots, however, its performance is taken over by QCA when the networks evolve over time, especially at the end of the evolution where OSLM reveals big gaps in similarity to the planted network communities(Note that the higher NMI score at the end of the evolution, the better the final detected community structure). This concludes that the network communities discovered by QCA are of the best similarity to ones planted in the groundtruth in comparison with other methods. 
-</p>
-
-</section>
-<section level="2" id="section15">
-<title>
-Results on realworld traces
-</title>
-<p>
- We next present the results of QCA algorithms on real world dynamic social networks including ENRON email <citref rids="ref13">
-13
-</citref>
-, arXiv eprint citation <citref rids="ref14">
-14
-</citref>
-, and Facebook networks <citref rids="ref15">
-15
-</citref>
-. Due to the lack of appropriate communities corresponding to these traces, we report the performance of the aforementioned algorithms in reference to the static method proposed by Blondel et al.  <citref rids="ref8">
-8
-</citref>
-. In particular, we will show the following quantities(1 )modularity values, (2 )the quality of the identified network communities through NMI scores, and(3 )the processing time of our QCA in comparison with other methods. The above networks possess to contain strong community structures due to their high modularities, which was the main reason for them to be chosen. 
-</p>
-<p>
-For each network, time information is first extracted and a portion of the network data(usually the first snapshot)is then collected to form the basic network community structure. Our QCA method(aslo MIEN and OSLOM)take into account that basic community structure and run on the network changes whereas the static method has to be performed on the whole network snapshot for each time point. In this experiment, FacetNet method does not appear to complete the tasks in a timely manner, and is thus excluded from the plots. 
-</p>
-<section level="3" id="section15">
-<title>
-ENRON email network
-</title>
-<p>
- The Enron email network contains email messages data from about 150  users, mostly senior management of Enron Inc. , from January 1999  to July 2002  <citref rids="ref13">
-13
-</citref>
-. Each email address is represented by an unique ID in the dataset and each link corresponds to a message between the sender and the receiver. After a data refinement process, we choose 50 of total links to form a basic community structure of the network with 7  major communities, and simulate the network evolution via a series of 21  growing snapshots. 
-</p>
-<p>
-<emph type="italic">
-Results. 
-</emph>
-We first evaluate the modularity values computed by QCA, MIEN, OSLOM, and Blondel methods. As shown in Figure<xref>
-Figure5
-</xref>
- a, our QCA algorithm archives competitively higher modularities than the static method but a little bit less than MIEN, and is far better than those obtained by OSLOM. Moreover, QCA also successes in maintaining the same numbers of communities of the other two methods MIEN and Blondel while OSLOMs are vague(<xref>
-Figure Figure5
-</xref>
- b). In particular, the modularity values produced by QCA very well approximate those found by static method with lesser variation. There are reasons for that. Recall that our QCA algorithm takes into account the basic community structures detected by the static method(at the first snapshot)and processes on network changes only. Knowing the basic network community structure is a great advantage of our QCA algorithmit can avoid the hassle of searching and computing from scratch to update the network with changes. In fact, QCA uses the basic structure for finding and quickly updating the local optimal communities to adapt with changes introduced during the network evolution. 
-</p>
-<p>
-The running time of QCA and the static method in this small network are relatively closethe static method requires one second to complete each of its tasks while our QCA does not even ask for one(<xref>
-Figure Figure5
-</xref>
- c). In this dataset, MIEN and OSLOM requires a little more time(1.5  and 2.4  seconds in average for MIEN and OSLOM)to complete their tasks. Time and computational cost are significantly reduced in QCA since our algorithms only take into account the network changes while the static method has to work on the whole network every time. 
-</p>
-<p>
-As reported in Figure<xref>
-Figure5
-</xref>
- d, both the NMI scores of ours and MIEN method are very high and relatively close to 1  while those obtained by OSLOM fall short and are far from stable. These results indicate that in this Enron email network, both QCA and MIEN algorithms are able to identify high quality community structure with high modularity and similarityhowever, only our method significantly reduces the processing time and computational requirement. 
-</p>
-
-</section>
-<section level="3" id="section16">
-<title>
-arXiv eprint citation network
-</title>
-<p>
- The arXiv eprint citation network <citref rids="ref14">
-14
-</citref>
-has become an essential mean of assessing research results in various areas including physics and computer sciences. This network contained more than 225  K articles from January 1996  to May 2003 . In our experiments, citation links of the first two years 1996  and 1997  were used to form the basic community structure of our QCA method. In order to simulate the network evolution, a total of 30  time dependent snapshots are created on a twomonth regular basis from January 1998  to January 2003 . 
-</p>
-<p>
-<emph type="italic">
-Results. 
-</emph>
-We compare modularity results obtained by QCA algorithm at each network snapshot to Blondel as well as to MIEN and OSLOM methods. It reveals from Figure<xref>
-Figure6
-</xref>
- a that the modularities returned by QCA are very close to those obtained by the static method with much more stabler and are far higher than those obtained by OSLOM and MIEN. In particular, the modularity values produced by QCA algorithm cover from 94 up to 100 that of Blondel method and from 6 to 10 higher than MIEN and at least 1.5  x better than OSLOM. In this citation networks, the numbers of communities detected by OSLOM take off with more than 1200  whereas those found by QCA, MIEN and Blondel methods are relatively small(<xref>
-Figure Figure6
-</xref>
- b). Our QCA method discovers more communities than both Blondel and MIEN as the network evolves and this can be explained based on the resolution limit of modularity <citref rids="ref-1">
--1
-</citref>
-reslimit07the static method might disregard some small communities and tend to combine them in order to maximize the overall network modularity. 
-</p>
-<p>
-A second observation on the running time shows that QCA outperforms the static method as well as its competitor MIENQCA takes at most 2  seconds to complete updating the network structure while Blondel method requires more than triple that amount of time, MIEN and OSLOM asks for more than 5  times(<xref>
-Figure Figure6
-</xref>
- c). In addition, higher NMI scores of QCA than MIENs and especially OSLOMs scores(<xref>
-Figure Figure6
-</xref>
- d)implies network communities identified by our approach are not only of high similarity to the ground truth but also more precise than that detected by MIEN, while the computational cost and the running time are significantly reduced. 
-</p>
-
-</section>
-<section level="3" id="section17">
-<title>
-Facebook social network
-</title>
-<p>
- This dataset contains friendship information among New Orleans regional network on Facebook <citref rids="ref15">
-15
-</citref>
-, spanning from September 2006  to January 2009  with more than 60  K nodes(users)connected by more than 1.5  million friendship links. In our experiments, nodes and links from September 2006  to December 2006  are used to form the basic community structure of the network, and each network snapshot is recored after every month during January 2007  to January 2009  for a total of 25  network snapshots. 
-</p>
-<p>
-<emph type="italic">
-Results. 
-</emph>
-The evaluation depicted in Figure<xref>
-Figure7
-</xref>
- a reveals that QCA algorithm achieves competitive modularities in comparison with the static method, and again far better than those obtained by MIEN and OSLOM method, especially in comparison with OSLOM whose perform was nice on synthesized networks. In the general trend, the line representing QCA results closely approximates that of the static method with much more stability. Moreover, the two final modularity values at the end of the experiment are relatively the same, which means that our adaptive method performs competitively with the static method running on the whole network. 
-</p>
-<xref>
-<p>
-Figure Figure7
-</xref>
- c describes the running time of the three methods on the Facebook data set. As one can see from this figure, QCA takes at least 3  seconds and at most 4.5  seconds to successfully compute and update every network snapshot whereas the static method, again, requires more than triple processing time. MIEN and OSLOM methods really suffer on this large scale network when requiring more than 10  x and 11  x that amounts of QCA running times. 
-</p>
-<p>
-In conclusion, high NMI and modularity scores together with decent executing times on all test cases confirm the effectiveness of our adaptive method, especially when applied to real world social networks where a centralized algorithm, or other dynamic algorithms, may not be able to detect a good network community structure in a timely manner. 
-</p>
-<p>
-However, there is a limitation of QCA algorithm we observe on this large network and want to point out hereAs the the duration of network evolution lasts longer over time(i. e. , the number of network snapshots increases), our method tends to divide the network into smaller communities to maximize the local modularity, thus results in an increasing number of communities and a decreasing of NMI scores. <xref>
-Figure Figure7
-</xref>
- b and<xref>
-Figure7
-</xref>
- d describes this observation. For instance, at snapshot 12 (a year after December 2006 ), the NMI score is approximately<equ id="equ312" type="inline">
-<tex>
-$1/2$
-</tex>
-
-</equ>
-and continues decaying after this time point. It implies a refreshment of network community structure is required at this time, after a long enough duration. This is reasonable since activities on an online social network tend to come and go rapidly and local adaptive procedures are not enough to reflect the whole network topology over a long period of time. 
-</p>
-
-</section>
-
-</section>
-
-</section>
-<section>
-<title>
-A socialaware message forwarding strategy in MANETs
-</title>
-<p>
- In this section, we present a practical application where the detection of network community structures plays an important role in routing strategies in MANETs. A MANET is a dynamic wireless network with or without the underlying infrastructure, in which each node can move freely in any direction and organize itself in an arbitrary manner. Due to nodes mobility and unstable links nature of a MANET, designing an efficient routing scheme has become one of the most important and challenging problems on MANETs. 
-</p>
-<p>
-Recent researches have shown that MANETs exhibit the properties of social networks <citref rids="ref20 ref21 ref22">
-20-22
-</citref>
-   and socialaware algorithms for network routing are of great potential. This is due to the fact that people have a natural tendency to form groups or communities in communication networks, where individuals inside each community communicate with each other more frequent than with people outside. This social property is nicely reflected to the underlying MANETs by the existence of groups of nodes where each group is densely connected inside than outside. This resembles the concept of<emph type="italic">
-community structure
-</emph>
-in Mobile Ad hoc Networks. 
-</p>
-<p>
-Multiple routing strategies <citref rids="ref21 ref23">
-21,23
-</citref>
-  based on the discovery of network community structures have provided significant enhancement over traditional methods. However, the community detection methods utilized in those strategies are not applicable for dynamic MANETs since they have to recompute the network structure whenever changes to the network topology are introduced, which results in significant computational costs and processing time. Therefore, employing an adaptive community structure detection algorithm as a core will provide a speedup as well as robust to routing strategies in MANETs. 
-</p>
-<p>
-We evaluate five routing strategies(1 )WAITthe source node waits until it meets the destination node(2 )MCPA node keeps forwarding the messages until they reach the maximum number of hops(3 )LABELA node forwards or sends the messages to all members in the destination community <citref rids="ref20">
-20
-</citref>
- (4 )QCAA Label version utilizing QCA as the dynamic community detection method and lastly, (5 )MIENA socialaware routing strategy on MANETs <citref rids="ref16">
-16
-</citref>
-. 
-</p>
-<p>
-Even though WAIT and MCP algorithms are very simple and straightforward to understand, they provide us helpful information about the lower and upper bounds on the message delivery ratio, time redundancy as well as message redundancy. The LABEL forwarding strategy works as followit first finds the community structure of the underlying MANET, assigns each community with the same label and then exclusively forwards messages to destinations, or to nexthop nodes having the same labels as the destinations. MIEN forwarding method utilizes MIEN algorithm as a subroutine. QCA routing strategy, instead of using a static community detection method, employs QCA algorithm for adaptively updating the network community structure and then uses the newly updated structure to inform the routing strategy for forwarding messages. 
-</p>
-<p>
-We choose Reality Mining data set <citref rids="ref24">
-24
-</citref>
-provided by the MIT Media Lab to test our proposed algorithm. The Reality Mining data set contains communication, proximity, location, and activity information from 100  students at MIT over the course of the 2004 2005  academic year. In particular, the data set includes call logs, Bluetooth devices in proximity, cell tower IDs, application usage, and phone status(such as charging and idle)of the participated students of over 350 , 000  hours(40  years). In this paper, we take into account the Bluetooth information to form the underlying MANET and evaluate the performance of the above five routing strategies. 
-</p>
-<p>
-For each routing method, we evaluate the followings(1 )Delivery ratioThe portion of successfully delivered over the total number of messages(2 )Average delivery timeAverage time for a message to be delivered. (3 )Average number of duplicated messages for each sent message. In particular, a total of 1000  messages are created and uniformly distributed during the experiment duration and each message can not exist longer than a threshold<emph type="italic">
-timetolive
-</emph>
-. The experimental results are shown in Figure<xref>
-Figure8
-</xref>
- a, <xref>
-Figure8
-</xref>
- b and<xref>
-Figure8
-</xref>
- c. 
-</p>
-<section level="2" id="section20">
-<title>
-Results
-</title>
-<xref>
-<p>
- Figure Figure8
-</xref>
- a describes the delivery ratio as a function of<emph type="italic">
-timetolive
-</emph>
-. As revealed by this figure, QCA achieves much better delivery ratio than MIEN as well as LABEL and far better than WAIT. This means that QCA routing strategy successfully delivers many more messages from the source nodes to the destinations than the others. Moreover, as<emph type="italic">
-timetolive
-</emph>
-increases, the delivery ratio of QCA tends to approximate the ratio ofMCP, the strategy with highest delivery ratio. 
-</p>
-<p>
-Comparison on delivery time shows that QCA requires less time and gets messages delivered successfully faster than LABEL, as depicted in Figure<xref>
-Figure8
-</xref>
- c. It even requires less delivery time in comparison with the socialaware method MIEN. This can be explained as the static community structures in LABEL can possibly get message forwarded to a wrong community when the destinations eventually change their communities during the experiment. Both QCA and MIEN, on the other hand, captures and updates the community structures onthefly as changes occur, thus achieves better results. 
-</p>
-<p>
-The numbers of duplicate messages presented in Figure<xref>
-Figure8
-</xref>
- b indicate that both QCA and MIEN achieves the best results. The numbers of duplicated messages of MCP method are substantially higher than those of the others and are not plotted. In fact, the results of QCA and MIEN are relatively close and tend to approximate each other as<emph type="italic">
-timetolive
-</emph>
-increases. 
-</p>
-<p>
-In conclusion, QCA is the best socialaware routing algorithm among five routing strategies since its delivery ratio, delivery time, and redundancy outperform those of the other methods and are only below MCP while the number of duplicate messages is much lower. QCA also shows a significant improvement over the naive LABEL method which uses a static community detection method and thus, confirms the applicability of our adaptive algorithm to routing strategies in MANETs. 
-</p>
-
-</section>
-
-</section>
-<section>
-<title>
-Worm containment in social networks
-</title>
-<p>
- In this section, we present a practical application of QCA method in Worm Containment in OSNs. Since their introduction, popular social network sites such as Facebook, Twitter, Bebo, and MySpace have attracted millions of users worldwide, many of whom have integrated those sites into their everyday lives. On the bright side, OSNs are ideal places for people to keep in touch with friends and colleagues, to share their common interests, or just simply to socialize online. However, on the other side, social networks are also fertile grounds for the rapid propagation of malicious softwares(such as viruses or worms)and false information. 
-</p>
-<p>
-Facebook, one of the most famous social sites, experienced a wide propagation of a trojan worm namedKoobfacein late 2008 . Koobface made its way not only through Facebook but also Bebo, MySpace and Friendster social networks <citref rids="ref25">
-25
-</citref>
- <citref rids="ref26">
+(see e. g. Ref.  <citref rids="ref26">
 26
 </citref>
-. Once a users machine is infected, this worm scans through the current users profile and sends out fake messages or wall posts to everyone in the users friend list with titles or comments to appeal to peoples curiosity. If one of the users friends, attracted by the comments without a shadow of doubt, clicks on the link and installs the fakeflash player, his computer will be infected and Koobfaces life will then cycle on this newly infected machine. 
+)
 </p>
-<p>
-Worm containment problem becomes more and more pressing in OSNs as this kind of networks evolves and changes rapidly over time. The dynamics of social networks thus gives worms more chances to spread out faster and wider as they can flexibly switch between existing and new users in order to propagate. Therefore, containing worm propagation on social networks is extremely challenging in the sense that a good solution at the previous time step might not be sufficient or effective at the next time step. Although one can recompute a new solution at each time the network changes, doing so would result in heavy computational costs and be time consuming as well as allowing worms spreading out wider during the recomputing process. A better solution should quickly and adaptively update the current containing strategy based on changes in network topology, and thus can avoid the hassle of recomputation. 
-</p>
-<p>
-There are many proposed methods for worm containment on computer networks by either using a multiresolution approach <citref rids="ref-1">
--1
-</citref>
-Resolution, or using a simplification of the Threshold Random Walk scan detector <citref rids="ref28">
-28
-</citref>
-, or using fast and efficient worm signature generation <citref rids="ref29">
-29
-</citref>
-. There are also several methods proposed for cellular and mobile networks <citref rids="ref30">
-30
-</citref>
- <citref rids="ref31">
-31
-</citref>
-. However, these approaches fail to take into account the community structure as well as the dynamics of social networks, and thus might not be appropriate for our problem. A recent work <citref rids="ref3">
-3
-</citref>
-proposed a socialbased patching scheme for worm containment on cellular networks. However, this method encounters the following limitations on a real social network(1 )its clustered partitions do not necessarily reflect the natural network communities, (2 )it requires the number of clusters<equ id="equ313" type="inline">
+<equ id="equ113" type="inline">
 <tex>
-$k$
+\begin{equation}k_\mathrm{piv}=k_*\exp\left(-{\mathbf{C}_{f_\mathrm{NL}^*,{n_{f_\mathrm{NL}}}}\overf_\mathrm{NL}^*\mathbf{C}_{{n_{f_\mathrm{NL}}},{n_{f_\mathrm{NL}}}}}\right).\label{eq:kpiv}\end{equation}
 </tex>
 
 </equ>
-(which is generally unknown for social networks)must be specified beforehand, and(3 )it exposes weaknesses when dealing with the networks dynamics. 
+<p>
+where<equ id="equ114" type="inline">
+<tex>
+$k_*$
+</tex>
+
+</equ>
+is the(arbitrary)pivot used initially, and<equ id="equ115" type="inline">
+<tex>
+$f_\mathrm{NL}^*$
+</tex>
+
+</equ>
+is the
 </p>
 <p>
-To overcome these limitations, our approach first utilizes QCA to identify the network community structure, and adaptively keeps this structure updated as the network evolves. Once network communities are detected, our patch distribution procedure will select the most influential users from different communities in order to send patches. These users, as soon as they receive patches, will apply them to first disinfect the worm and then redistribute them to all friends in their communities. These actions will contain worm propagation to only some communities and prevent it from spreading out to a larger population. To this end, a quick and precise community detection method will definitely help the network administrator to select a more sufficient set of critical users to send patches, thus lowering down the number of sent patches as well as overhead information over the social network. 
+corresponding value used in<equ id="equ116" type="inline">
+<tex>
+$\mathbf{C}$
+</tex>
+
+</equ>
+. Despite the fact that<equ id="equ117" type="inline">
+<tex>
+$k_*$
+</tex>
+
+</equ>
+and
+</p>
+<equ id="equ118" type="inline">
+<tex>
+$f_\mathrm{NL}^*$
+</tex>
+
+</equ>
+<p>
+show up in the expression, <equ id="equ119" type="inline">
+<tex>
+$k_\mathrm{piv}$
+</tex>
+
+</equ>
+does not depend on themit is a
 </p>
 <p>
-We next describe our patch distribution. This procedure takes into account the identified network communities and selects a set of influential users from each community in order to distribute patches. <emph type="italic">
-Influential users
-</emph>
-of a community are ones having the most relationships or connections to other communities. In an adversary point of view, these influential users are potentially vulnerable since they not only interact actively within their communities but also with people outside, and thus, they can easily fool(or be fooled by)people both inside and outside of their communities. On the other point of view, these users are also the best candidates for the network defender to distribute patches since they can easily announce and forward patches to other members and nonmembers. 
+fixed number telling us roughly where the experiment has greatest power(and
 </p>
 <p>
-In Algorithm<xref>
-algPatchDistribution
-</xref>
+where normalization and running of<equ id="equ120" type="inline">
+<tex>
+$f_\mathrm{NL}(k)$
+</tex>
+
+</equ>
+are precisely uncorrelated). We
+</p>
+<p>
+find that<equ id="equ121" type="inline">
+<tex>
+$k_\mathrm{piv}^{\mathrm{WMAP7}}\approx0.064\,h\,\mathrm{Mpc}^{-1}$
+</tex>
+
+</equ>
+. The 68 , 95 , and
+</p>
+<p>
+99 constraints on<equ id="equ122" type="inline">
+<tex>
+$f_\mathrm{NL}^*$
+</tex>
+
+</equ>
+and<equ id="equ123" type="inline">
+<tex>
+${n_{f_\mathrm{NL}}}$
+</tex>
+
+</equ>
+are shown at the left panel of Figure
+</p>
 <xref>
- Table algPatchDistribution
+<p>
+figlikelihood
 </xref>
-, we present a quick algorithm for selecting the set of most influential users in each community. This algorithm starts by picking the user whose number of social connections to outside communities is the highest, and temporarily disregards this user from the considering community. This process repeats until no connections crossing among communities exists. This set of influential users is the candidate for the network defender for distributing patches. 
+, assuming flat priors on<equ id="equ124" type="inline">
+<tex>
+$f_\mathrm{NL}^*$
+</tex>
+
+</equ>
+and<equ id="equ125" type="inline">
+<tex>
+${n_{f_\mathrm{NL}}}$
+</tex>
+
+</equ>
+
 </p>
-<section level="2" id="section22">
+<p>
+and
+</p>
+<equ id="equ126" type="inline">
+<tex>
+$k_*=k_\mathrm{piv}^{\mathrm{WMAP7}}\approx0.064\,h\,\mathrm{Mpc}^{-1}$
+</tex>
+
+</equ>
+. 
+</section>
+<section level="2" id="section9">
 <title>
-Experimental results
+Dependence on the prior
 </title>
 <p>
- We present the results of our QCA method on the Facebook network dataset <citref rids="ref15">
-15
-</citref>
-and compare the results with the social based method(Zhus method <citref rids="ref3">
-3
-</citref>
-)via a weighted version of our algorithms. One notable feature of this dataset is time information(stamped at every moment the information was recorded)representing the dynamics of the network, which nicely suits our method. 
+ As with most presentday cosmological
 </p>
 <p>
-<emph type="italic">
-Set up. 
+measurements, the precise constraints depend on the prior probability on the
+</p>
+<p>
+parameters we are constraining. Even for a simple flat prior on<equ id="equ127" type="inline">
+<tex>
+$f_\mathrm{NL}^*$
+</tex>
+
+</equ>
+and
+</p>
+<equ id="equ128" type="inline">
+<tex>
+${n_{f_\mathrm{NL}}}$
+</tex>
+
+</equ>
+, <p>
+the actual effective prior depends on the<emph type="italic">
+a priori
 </emph>
-The worm propagation model in our experiments mimics the behavior of the famousKoobfaceworm, i. e. , worms are able to explore their victims friend list and then send out fake messages containing malicious links for propagating. 
+chosen pivot
 </p>
 <p>
-The probabilities of activating the worm is proportional to communication frequency between the victim and his friends. The time taken for worms to spread out from one user to another is inversely proportional to the communication frequency between this user and his particular friend. 
-</p>
-<p>
-Finally, when a worm has successfully infected a users computer, it will start propagating as soon as this computer connects to a specific social network(Facebook in this case). 
-</p>
-<p>
-When the fraction of infected users reaches a threshold<equ id="equ314" type="inline">
+in wavenumber<equ id="equ129" type="inline">
 <tex>
-$\alpha$
+$k_*$
 </tex>
 
 </equ>
-, the detection system raises an alarm and patches will automatically be sent to most influential users selected by Algorithm<xref>
-algPatchDistribution
+. For example, a flat prior on
+</p>
+<equ id="equ130" type="inline">
+<tex>
+$(f_\mathrm{NL}^*)^{(1)}\equivf_\mathrm{NL}(k_{*,1})$
+</tex>
+
+</equ>
+<p>
+defined at some pivot<equ id="equ131" type="inline">
+<tex>
+$k_{*,1}$
+</tex>
+
+</equ>
+
+</p>
+<p>
+corresponds to a nonflat prior on some<equ id="equ132" type="inline">
+<tex>
+$(f_\mathrm{NL}^*)^{(2)}\equivf_\mathrm{NL}^*(k_{*,2})$
+</tex>
+
+</equ>
+defined at some other pivot<equ id="equ133" type="inline">
+<tex>
+$k_{*,2}$
+</tex>
+
+</equ>
+, since
+</p>
+<equ id="equ134" type="inline">
+<tex>
+$(f_\mathrm{NL}^*)^{(2)}\equiv(f_\mathrm{NL}^*)^{(1)}(k_{*,2}/k_{*,1})^{n_{f_\mathrm{NL}}}$
+</tex>
+
+</equ>
+. <p>
+If we
+</p>
+<p>
+assume some alternate pivot<equ id="equ135" type="inline">
+<tex>
+$k_{*,2}$
+</tex>
+
+</equ>
+but hold the flat prior in<equ id="equ136" type="inline">
+<tex>
+$f_\mathrm{NL}^*$
+</tex>
+
+</equ>
+, 
+</p>
+<p>
+the contours in the<equ id="equ137" type="inline">
+<tex>
+${n_{f_\mathrm{NL}}}$
+</tex>
+
+</equ>
+<equ id="equ138" type="inline">
+<tex>
+$f_\mathrm{NL}^*$
+</tex>
+
+</equ>
+plane(left panel of
+</p>
+<p>
+Fig. <xref>
+figlikelihood
 </xref>
+ are stretched vertically by a factor of
+</p>
+<equ id="equ139" type="inline">
+<tex>
+$(k_{*,2}/0.064\:h\,\mathrm{Mpc}^{-1})^{n_{f_\mathrm{NL}}}$
+</tex>
+
+</equ>
+. <p>
+We have experimented with different kpivot values for a flat prior on
+</p>
+<equ id="equ140" type="inline">
+<tex>
+$f_\mathrm{NL}^*$
+</tex>
+
+</equ>
+<p>
+and<equ id="equ141" type="inline">
+<tex>
+${n_{f_\mathrm{NL}}}$
+</tex>
+
+</equ>
+. We have also investigated other possibilities, such as
+</p>
+<p>
+the prior that assigns equal weight to each decade in<equ id="equ142" type="inline">
+<tex>
+$|f_\mathrm{NL}^*|$
+</tex>
+
+</equ>
+above 0.1 
+</p>
+(<p>
+so uniform in<equ id="equ143" type="inline">
+<tex>
+$\log(f_\mathrm{NL}^*)$
+</tex>
+
+</equ>
+, but cut off at the arguably lowestever
+</p>
+<p>
+observable value of<equ id="equ144" type="inline">
+<tex>
+$|f_\mathrm{NL}^*|=0.1$
+</tex>
+
+</equ>
+so that the total integrated likelihood is
+</p>
+<p>
+finite). We present the two aforementioned examples, showing constraints on
+</p>
+<equ id="equ145" type="inline">
+<tex>
+${n_{f_\mathrm{NL}}}$
+</tex>
+
+</equ>
+<p>
+marginalized over<equ id="equ146" type="inline">
+<tex>
+$f_\mathrm{NL}^*$
+</tex>
+
+</equ>
+, in the right panel of
+</p>
+<p>
+Fig. <xref>
+figlikelihood
+</xref>
+. In the end, we decide to quote results for the flat
+</p>
+<p>
+prior and the uncorrelated<equ id="equ147" type="inline">
+<tex>
+$k_\mathrm{piv}$
+</tex>
+
+</equ>
+value from Eq. <xref>
+eqkpiv
+</xref>
+, which most
+</p>
+<p>
+closely follows priors to both nonGaussian and other cosmological parameters
+</p>
+<p>
+applied in the literature. 
+</p>
+<p>
+Putting it all together, we can get the estimate for<equ id="equ148" type="inline">
+<tex>
+${n_{f_\mathrm{NL}}}$
+</tex>
+
+</equ>
+from the
+</p>
+<p>
+WMAP7 data for a flat prior on<equ id="equ149" type="inline">
+<tex>
+$f_\mathrm{NL}^*$
+</tex>
+
+</equ>
+at the pivot<equ id="equ150" type="inline">
+<tex>
+$k_\mathrm{piv}$
+</tex>
+
+</equ>
+from
+</p>
+<p>
+Eq. <xref>
+eqkpiv
+</xref>
+. The<equ id="equ151" type="inline">
+<tex>
+$68\%$
+</tex>
+
+</equ>
+<equ id="equ152" type="inline">
+<tex>
+$(95\%)$
+</tex>
+
+</equ>
+confidence interval is
+</p>
+<equ id="equ153" type="inline">
+<tex>
+\begin{equation}{n_{f_\mathrm{NL}}}=0.30^{+0.78\,(1.9)}_{-0.61\,(1.2)}\,.\label{eq:nfnl_result}\end{equation}
+</tex>
+
+</equ>
+<p>
+The current constraints are therefore fully consistent with no running, 
+</p>
+<p>
+as Fig. <xref>
+figlikelihood
+</xref>
+ clearly indicates. 
+</p>
+<p>
+Figure
+</p>
 <xref>
- Table algPatchDistribution
+<p>
+figerrorprop_WMAP7
 </xref>
-. Once a user receives the patch, he will first apply it to disinfect the worm and then will have an option to forward it to all friends in his community. Each experiment is seeded with 0.02 of users to be initially infected by worms. 
+ shows the constraints in the<equ id="equ154" type="inline">
+<tex>
+$f_\mathrm{NL}(k)$
+</tex>
+
+</equ>
+plane together with a
 </p>
 <p>
-We compare infection rates of the socialbased method of Zhus and ours. The infection rate is computed as the fraction of the remaining infected users over all infected ones. The number of clusters<equ id="equ315" type="inline">
-<tex>
-$k$
-</tex>
+few representative models allowed by the data. 
+</p>
 
-</equ>
-in Zhus method is set to be 150  in static and 200  in dynamic networks, and for each value of<equ id="equ316" type="inline">
-<tex>
-$k$
-</tex>
+</section>
 
-</equ>
-, the alarming threshold<equ id="equ317" type="inline">
-<tex>
-$\alpha$
-</tex>
-
-</equ>
-is set to be 2 , 10 , and 20 , respectively. Each experiment is repeated 1000  times for consistency. 
+</section>
+<section>
+<title>
+Discussion
+</title>
+<p>
+ We have presented the first constraints on the
 </p>
 <p>
-<emph type="italic">
-Result. 
-</emph>
-<xref>
-Figure Figure9
-</xref>
-, <xref>
-Figure10
-</xref>
- show the results of our experiments for three different values of<equ id="equ318" type="inline">
+scaledependence of(any form of)nonGaussianity using the WMAP7 data. The
+</p>
+<p>
+constraints are compatible with zero running, <equ id="equ155" type="inline">
 <tex>
-$k$
+${n_{f_\mathrm{NL}}}=0$
 </tex>
 
 </equ>
-and<equ id="equ319" type="inline">
+, with very mild(<equ id="equ156" type="inline">
 <tex>
-$\alpha$
+$<1$
 </tex>
 
 </equ>
-. We first observe that the longer we wait(the higher the alarm threshold is), the higher number of users we need to send patches to in order to achieve the desired infection rate. For example, with<equ id="equ320" type="inline">
+sigma)
+</p>
+<p>
+preference for a positive value of<equ id="equ157" type="inline">
 <tex>
-$k=150$
+${n_{f_\mathrm{NL}}}$
 </tex>
 
 </equ>
-clusters and an expected infection rate of 0.3 , we need to send patches to less than 10 number of users when<equ id="equ321" type="inline">
+. We will learn more soon
+</p>
+<p>
+the Planck data and the data from upcoming largescale structure surveys
+</p>
+<p>
+should be able to improve constraints on the running of nonGaussianity by about an order
+</p>
+<p>
+of magnitude <citref rids="ref24 ref27 ref28">
+24,27,28
+</citref>
+, thus
+</p>
+<p>
+shedding important new light on the physics of inflation. 
+</p>
+<p>
+begin thebibliography10 
+</p>
+<p>
+providecommand1 texttt 1 
+</p>
+<p>
+providecommand<url url="refi">
+
+</url>
+ URL
+</p>
+<p>
+expandafterfxcsname urlstyleendcsnamelax
+</p>
+<p>
+providecommand doi1 doidiscretionary 1 else
+</p>
+<p>
+ providecommand doi doidiscretionary begingroup
+</p>
+<url url="rm">
+
+</url>
+<p>
+ Url 
+</p>
+<p>
+providecommand bibAnnoteFile1 IfFileExists 1 begin quotationKey1 
+</p>
+<p>
+Annotation providecommand bibAnnote2 begin quotationKey1 
+</p>
+<p>
+Annotation2  end quotation
+</p>
+<p>
+providecommand eprint2 <url url="2">
+ 
+</url>
+
+</p>
+<p>
+bibitem COBE_fnl
+</p>
+<p>
+Komatsu E, Wandelt BD, Spergel DN, Banday AJ, Gorski KM(2002 )Measurement of
+</p>
+<p>
+the cosmic microwave background bispectrum on the COBE DMR sky maps. 
+</p>
+<p>
+newblock AstrophysJ 566   . 
+</p>
+<p>
+bibAnnoteFile COBE_fnl
+</p>
+<p>
+bibitem wmap7
+</p>
+<p>
+Komatsu E, etal. (2011 )SevenYear Wilkinson Microwave Anisotropy Probe
+</p>
+(<p>
+WMAP)ObservationsCosmological Interpretation. 
+</p>
+<p>
+newblock AstrophysJSuppl 192 18 . 
+</p>
+<p>
+bibAnnoteFile wmap7
+</p>
+<p>
+bibitem Dalal
+</p>
+<p>
+Dalal N, DorO, Huterer D, Shirokov A(2008 )The imprints of primordial
+</p>
+<p>
+nongaussianities on largescale structurescale dependent bias and
+</p>
+<p>
+abundance of virialized objects. 
+</p>
+<p>
+newblock Phys Rev D77123514 . 
+</p>
+<p>
+bibAnnoteFile Dalal
+</p>
+<p>
+bibitem Komatsu_Spergel
+</p>
+<p>
+KomatsuE, SpergelDN(2001 )Acoustic signatures in the primary microwave
+</p>
+<p>
+background bispectrum. 
+</p>
+<p>
+newblock Phys Rev D 63 063002 . 
+</p>
+<p>
+bibAnnoteFile Komatsu_Spergel
+</p>
+<p>
+bibitem Yadav_Wandelt_evidence
+</p>
+<p>
+Yadav AP, Wandelt BD(2008 )Evidence of Primordial NonGaussianity(f(NL))in
+</p>
+<p>
+the Wilkinson Microwave Anisotropy Probe 3 Year Data at 2.8  sigma. 
+</p>
+<p>
+newblock PhysRevLett 100 181301 . 
+</p>
+<p>
+bibAnnoteFile Yadav_Wandelt_evidence
+</p>
+<p>
+bibitem Smith_Sen_Zal_optimal
+</p>
+<p>
+Smith KM, Senatore L, Zaldarriaga M(2009 )Optimal limits on<equ id="equ158" type="inline">
 <tex>
-$\alpha=2\%$
+$f_{\rmNL}^{\rmlocal}$
 </tex>
 
 </equ>
-, to more than 15 number of users when<equ id="equ322" type="inline">
+from WMAP 5 year data. 
+</p>
+<p>
+newblock JCAP 0909 006 . 
+</p>
+<p>
+bibAnnoteFile Smith_Sen_Zal_optimal
+</p>
+<p>
+bibitem Slosar_etal
+</p>
+<p>
+Slosar A, Hirata C, Seljak U, Ho S, Padmanabhan N(2008 )Constraints on local
+</p>
+<p>
+primordial nonGaussianity from large scale structure. 
+</p>
+<p>
+newblock JCAP 08 031 . 
+</p>
+<p>
+bibAnnoteFile Slosar_etal
+</p>
+<p>
+bibitem Afshordi_Tolley
+</p>
+<p>
+Afshordi N, Tolley AJ(2008 )Primordial nongaussianity, statistics of
+</p>
+<p>
+collapsed objects, and the Integrated SachsWolfe effect. 
+</p>
+<p>
+newblock Phys Rev D78123507 . 
+</p>
+<p>
+bibAnnoteFile Afshordi_Tolley
+</p>
+<p>
+bibitem Xia2011
+</p>
+<p>
+Xia JQ, Baccigalupi C, Matarrese S, Verde L, Viel M(2011 )Constraints on
+</p>
+<p>
+Primordial NonGaussianity from Large Scale Structure Probes. 
+</p>
+<p>
+newblock JCAP 1108 033 . 
+</p>
+<p>
+bibAnnoteFile Xia2011
+</p>
+<p>
+bibitem Fergusson2010
+</p>
+<p>
+Fergusson JR, Liguori M, Shellard EPS(2010 )General cmb and primordial
+</p>
+<p>
+bispectrum estimationMode expansion, map making, and measures of
+</p>
+<equ id="equ159" type="inline">
 <tex>
-$\alpha=10\%$
+${F}_{\mathrm{nl}}$
 </tex>
 
 </equ>
-and to nearly 90 of total influential users when<equ id="equ323" type="inline">
+. <p>
+newblock Phys Rev D 82 023502 . 
+</p>
+<p>
+bibAnnoteFile Fergusson2010
+</p>
+<p>
+bibitem Smidt2010
+</p>
+<p>
+Smidt J, Amblard A, Byrnes CT, Cooray A, Heavens A, etal. (2010 )CMB
+</p>
+<p>
+Constraints on Primordial nonGaussianity from the Bispectrum(<equ id="equ160" type="inline">
 <tex>
-$\alpha=20\%$
+$f_{\rmNL}$
+</tex>
+
+</equ>
+)
+</p>
+<p>
+and Trispectrum(<equ id="equ161" type="inline">
+<tex>
+$g_{\rmNL}$
+</tex>
+
+</equ>
+and<equ id="equ162" type="inline">
+<tex>
+$\tau_{\rmNL}$
+</tex>
+
+</equ>
+)and a New Consistency Test
+</p>
+<p>
+of SingleField Inflation. 
+</p>
+<p>
+newblock PhysRev D81123007 . 
+</p>
+<p>
+bibAnnoteFile Smidt2010
+</p>
+<p>
+bibitem Chen2005
+</p>
+<p>
+Chen X(2005 )Running NonGaussianities in DBI Inflation. 
+</p>
+<p>
+newblock Phys Rev D 72 123518 . 
+</p>
+<p>
+bibAnnoteFile Chen2005
+</p>
+<p>
+bibitem Liguori2006
+</p>
+<p>
+LiguoriM, HansenFK, KomatsuE, MatarreseS, RiottoA(2006 )
+</p>
+<p>
+Testing primordial nonGaussianity in CMB anisotropies. 
+</p>
+<p>
+newblock Phys Rev D 73 043505 . 
+</p>
+<p>
+bibAnnoteFile Liguori2006
+</p>
+<p>
+bibitem Khoury_Piazza
+</p>
+<p>
+Khoury J, Piazza F(2009 )RapidlyVarying Speed of Sound, Scale Invariance and
+</p>
+<p>
+NonGaussian Signatures. 
+</p>
+<p>
+newblock JCAP 0907 026 . 
+</p>
+<p>
+bibAnnoteFile Khoury_Piazza
+</p>
+<p>
+bibitem Kumar2010
+</p>
+<p>
+KumarJ, LeblondL, RajaramanA(2010 )Scale dependent local
+</p>
+<p>
+nongaussianity from loops. 
+</p>
+<p>
+newblock JCAP 04 24 . 
+</p>
+<p>
+bibAnnoteFile Kumar2010
+</p>
+<p>
+bibitem bryb
+</p>
+<p>
+Byrnes CT, Choi KY(2010 )Review of local nonGaussianity from multifield
+</p>
+<p>
+inflation. 
+</p>
+<p>
+newblock Adv Astron 2010 724525 . 
+</p>
+<p>
+bibAnnoteFile bryb
+</p>
+<p>
+bibitem wandsb
+</p>
+<p>
+Wands D(2010 )Local nonGaussianity from inflation. 
+</p>
+<p>
+newblock ClassQuantGrav 27 124002 . 
+</p>
+<p>
+bibAnnoteFile wandsb
+</p>
+<p>
+bibitem Byrnes2010
+</p>
+<p>
+ByrnesCT, NurmiS, TasinatoG, WandsD(2010 )Scale dependence of
+</p>
+<p>
+local<equ id="equ163" type="inline">
+<tex>
+$f_{NL}$
 </tex>
 
 </equ>
 . 
 </p>
 <p>
-A second observation reveals that our approach achieves better infection rates than the socialbased method of Zhus in a static version of the social network as depicted in Figure<xref>
-Figure9
-</xref>
-. In particular, the infection rates obtained in our method are from 5 to 10 better than those of Zhus. When the network evolves as new users join in and new social relationships are introduced, we resize the number of cluster<equ id="equ324" type="inline">
-<tex>
-$k$
-</tex>
-
-</equ>
-and recompute the infection rates of the social based method with the number of cluster<equ id="equ325" type="inline">
-<tex>
-$k=200$
-</tex>
-
-</equ>
-, and the alarm threshold<equ id="equ326" type="inline">
-<tex>
-$\alpha=2\%$
-</tex>
-
-</equ>
-and 10 respectively. As depicted in Figures<xref>
-Figure10
-</xref>
-, our method, with the power of quickly and adaptively updating the network community structure, achieves better infection rates than Zhus method while the computational costs and running time is significantly reduced. As discussed, detecting and updating the network community is the crucial part of a social based patching schemea good and uptodate network community structure will provide the network defender a tighter set of vulnerable users, and thus, will help to achieve lower infection rates. Our adaptive algorithm, instead of recomputing the network structure every time changes are introduced, quickly and adaptively updates the network communities onthefly. Thanks to this frequently updated community structure, our patch distribution procedure is able to select a better set of influential users, and thus helps in reducing the number of infected users once patches are sent. 
+newblock JCAP 02 34 . 
 </p>
 <p>
-Finally, a comparison on running time on the two approaches shows that time taken for Zhus method is much more than our community updating procedure, and hence, may prevent this method to complete in a timely manner. In particular, our approach takes only 3  seconds for obtaining the basic community structure and at most 30  seconds to complete all the tasks whereas <citref rids="ref3">
-3
-</citref>
-requires more than 5  minutes to divide the communication network into modules and selecting the vertex separators. In that delay, worm propagation may spread out to a larger population, and thus, the solution may not be effective. These experimental results confirm the efficiency of our approach on social networks. 
-</p>
-
-</section>
-
-</section>
-<section>
-<title>
-Related work
-</title>
-<p>
- Community detection on static networks has attracted a lot of attentions and many efficient methods have been proposed for this type of networks <citref rids="ref32">
-32
-</citref>
-. Detecting community structure on dynamic networks, however, has so far been an untrodden area. In <citref rids="ref33">
-33
-</citref>
-, the authors defined time graphs that captured the link creation as a point phenomena in time of a directed evolving graph, and studied the evolution of the blogosphere in terms of changes such as indegree, outdegree, etc. Another work <citref rids="ref34">
-34
-</citref>
-studied the growth of the a wide range of realworld evolving graphs and provided a new kind of graph generator that produced networks with the discovered patterns. In <citref rids="ref35">
-35
-</citref>
-, the authors suggested a method for observing the evolution of web communities by first revealing network communities at each time point, and then quantifying changes that occurred to network communities based on community changes such as emerging, growing and shrinking. 
+bibAnnoteFile Byrnes2010
 </p>
 <p>
-One of the most seminal work <citref rids="ref2">
-2
-</citref>
-proposed an innovative method for detecting communities on dynamic networks the based on<equ id="equ327" type="inline">
-<tex>
-$k$
-</tex>
-
-</equ>
-clique percolation technique. . 
+bibitem chris5
 </p>
 <p>
-This approach can detect overlapping nodes in different network communitieshowever, its internal<equ id="equ328" type="inline">
-<tex>
-$k$
-</tex>
-
-</equ>
-clique percolation technique may require high computing resources and thus, may be time consuming especially on large OSNs. 
+Byrnes CT, Gerstenlauer M, Nurmi S, Tasinato G, Wands D(2010 )Scaledependent
 </p>
 <p>
-A work in <citref rids="ref13">
-13
-</citref>
-presented GraphScope, a parameterfree method for detecting clusters on timeevolving graphs based on mutual information and entropy functions. However, it requires a recomputation of the number of sources and destinations each time the graph segments change without utilizing its previously computed information. Thus, it might not lend itself effectively to the field of adaptive algorithms.  <citref rids="ref36">
-36
-</citref>
-attempted to track the evolving of communities over time, using a few static network snapshots. 
+nonGaussianity probes inflationary physics. 
 </p>
 <p>
-A recent work of <citref rids="ref37">
-37
-</citref>
-proposed a detection method based on contradicting the network topology and the topologybased<emph type="italic">
-propinquity
-</emph>
-the probability of a pair of nodes involved in a community. Another attempt which is closely related to our work includes <citref rids="ref38">
-38
-</citref>
-in which the authors proposed<emph type="italic">
-FacetNet
-</emph>
-, a framework to track community evolutions in a unified process. In this framework, the community structure at a given time step is found both by the observed the network data and the prior distribution given by historic community structures. A limit of this framework is that at each time step, the underlying algorithm should be executed for multiple values of<equ id="equ329" type="inline">
-<tex>
-$m$
-</tex>
-
-</equ>
-the number of communities, which might prevent this framework from being effective on real world social networks. 
+newblock JCAP 10 004 . 
 </p>
 <p>
-The authors <citref rids="ref39">
-39
-</citref>
-present a framework for detecting dynamic communities with a constant factor approximation. This property is nice, however, this method also requires some predefined costs to penalize people moving in or out of a community, which might be generally unknown in dynamic social networks. A recent work <citref rids="ref16">
-16
-</citref>
-proposes a socialaware routing strategy, named MIEN, which also makes uses of a modularitybased procedure for quickly updating the network structure. In particular, MIEN tries to compose and decompose network modules in order to keep up with the changes and uses fast modularity algorithm <citref rids="ref-1">
--1
-</citref>
-fast03 to update the network modules. However, this method may be time consuming due to the high complexity of <citref rids="ref-1">
--1
-</citref>
-fast03. 
-</p>
-
-</section>
-<section>
-<title>
-Conclusions
-</title>
-<p>
- We presented QCA, an adaptive method for detecting and tracing community structures in dynamic social networks. We show that our adaptive method is not only effective in identifying high quality network community structures, but also has the great advantage of fast running time, which is suitable for large OSNs. We prove some theoretical results which are the basic observations of our approach. Finally, via practical applications in forwarding and routing stategies in MANETs and worm containment on social networks, we show that our QCA method promises a wide range of real applications not only on mobile computing but also on OSNs as it can be deployed into many community detection modules. 
+bibAnnoteFile chris5
 </p>
 <p>
-bibliography myref
+bibitem Riotto2010
+</p>
+<p>
+Riotto A, Sloth MS(2011 )Strongly Scaledependent NonGaussianity. 
+</p>
+<p>
+newblock PhysRev D83041301 . 
+</p>
+<p>
+bibAnnoteFile Riotto2010
+</p>
+<p>
+bibitem Barnaby2012  tk
+</p>
+<p>
+Barnaby N, Namba R, Peloso MObservable nongaussianity from gauge field
+</p>
+<p>
+production in slow roll inflation, and a challenging connection with
+</p>
+<p>
+magnetogenesis. 
+</p>
+<p>
+newblock arXiv12021469 . 
+</p>
+<p>
+bibAnnoteFile Barnaby2012  tk
+</p>
+<p>
+bibitem Kobayashi_Takahashi
+</p>
+<p>
+Kobayashi T, Takahashi T(2012 )Runnings in the Curvaton. 
+</p>
+<p>
+newblock JCAP 1206 004 . 
+</p>
+<p>
+bibAnnoteFile Kobayashi_Takahashi
+</p>
+<p>
+bibitem Bean_DBI
+</p>
+<p>
+Bean R, Chen X, Peiris H, Xu J(2008 )Comparing Infrared DiracBornInfeld
+</p>
+<p>
+Brane Inflation to Observations. 
+</p>
+<p>
+newblock PhysRev D77023527 . 
+</p>
+<p>
+bibAnnoteFile Bean_DBI
+</p>
+<p>
+bibitem Sefusatti2009
+</p>
+<p>
+SefusattiE, LiguoriM, YadavAPS, JacksonMG, PajerE(2009 )
+</p>
+<p>
+Constraining running nongaussianity. 
+</p>
+<p>
+newblock JCAP 12 22 . 
+</p>
+<p>
+bibAnnoteFile Sefusatti2009
+</p>
+<p>
+bibitem Becker2011
+</p>
+<p>
+BeckerA, HutererD, KadotaK(2011 )Scaledependent nonGaussianity as
+</p>
+<p>
+a generalization of the local model. 
+</p>
+<p>
+newblock JCAP 1 6 . 
+</p>
+<p>
+bibAnnoteFile Becker2011
+</p>
+<p>
+bibitem Shandera2010
+</p>
+<p>
+Shandera S, Dalal N, Huterer D(2011 )A generalized local ansatz and its
+</p>
+<p>
+effect on halo bias. 
+</p>
+<p>
+newblock JCAP 1103 017 . 
+</p>
+<p>
+bibAnnoteFile Shandera2010
+</p>
+<p>
+bibitem Giannantonio_forecasts
+</p>
+<p>
+GiannantonioT, PorcianiC, CarronJ, AmaraA, PillepichA(2012 )
+</p>
+<p>
+Constraining primordial nonGaussianity with future galaxy surveys. 
+</p>
+<p>
+newblock MonNotRAstronSoc2888 . 
+</p>
+<p>
+bibAnnoteFile Giannantonio_forecasts
+</p>
+<p>
+bibitem Becker2012
+</p>
+<p>
+Becker A, Huterer D, Kadota KConstraining ScaleDependent NonGaussianity
+</p>
+<p>
+with Future LargeScale Structure and the CMB. 
+</p>
+<p>
+newblock arXiv12066165 . 
+</p>
+<p>
+bibAnnoteFile Becker2012
+</p>
+<p>
+bibitem LoVerde
+</p>
+<p>
+LoVerde M, Miller A, Shandera S, Verde L(2008 )Effects of ScaleDependent
+</p>
+<p>
+NonGaussianity on Cosmological Structures. 
+</p>
+<p>
+newblock JCAP 04 014 . 
+</p>
+<p>
+bibAnnoteFile LoVerde
+</p>
+<p>
+bibitem KSW
+</p>
+<p>
+Komatsu E, Spergel DN, Wandelt BD(2005 )Measuring primordial nonGaussianity
+</p>
+<p>
+in the cosmic microwave background. 
+</p>
+<p>
+newblock AstrophysJ 634   . 
+</p>
+<p>
+bibAnnoteFile KSW
+</p>
+<p>
+bibitem Smith_Zaldarriaga
+</p>
+<p>
+Smith KM, Zaldarriaga M(2011 )Algorithms for bispectraForecasting, optimal
+</p>
+<p>
+analysis, and simulation. 
+</p>
+<p>
+newblock MonNot Roy Astron Soc 417   . 
+</p>
+<p>
+bibAnnoteFile Smith_Zaldarriaga
+</p>
+<p>
+bibitem Creminelli_estimators
+</p>
+<p>
+Creminelli P, Senatore L, Zaldarriaga M(2007 )Estimators for local
+</p>
+<p>
+nongaussianities. 
+</p>
+<p>
+newblock JCAP 0703 019 . 
+</p>
+<p>
+bibAnnoteFile Creminelli_estimators
+</p>
+<p>
+bibitem CAMB
+</p>
+<p>
+Lewis A, Challinor A, Lasenby A(2000 )Efficient computation of CMB
+</p>
+<p>
+anisotropies in closed FRW models. 
+</p>
+<p>
+newblock AstrophysJ 538   . 
+</p>
+<p>
+bibAnnoteFile CAMB
+</p>
+<p>
+bibitem Yadav2008
+</p>
+<p>
+Yadav APS, Komatsu E, Wandelt BD, Liguori M, Hansen FK, etal. (2008 )Fast
+</p>
+<p>
+Estimator of Primordial NonGaussianity from Temperature and Polarization
+</p>
+<p>
+Anisotropies in the Cosmic Microwave Background. II. Partial Sky Coverage and
+</p>
+<p>
+Inhomogeneous Noise. 
+</p>
+<p>
+newblock Astrophys J 678 578 . 
+</p>
+<p>
+bibAnnoteFile Yadav2008
+</p>
+<p>
+bibitem wmap5
+</p>
+<p>
+Komatsu E, etal. (2009 )FiveYear Wilkinson Microwave Anisotropy Probe(WMAP)
+</p>
+<p>
+ObservationsCosmological Interpretation. 
+</p>
+<p>
+newblock Astrophys J Suppl 180   . 
+</p>
+<p>
+bibAnnoteFile wmap5
+</p>
+<p>
+bibitem healpix
+</p>
+<p>
+Gorski K, Hivon E, Banday A, Wandelt B, Hansen F, etal. (2005 )HEALPixA
+</p>
+<p>
+Framework for high resolution discretization, and fast analysis of data
+</p>
+<p>
+distributed on the sphere. 
+</p>
+<p>
+newblock AstrophysJ 622   . 
+</p>
+<p>
+bibAnnoteFile healpix
 </p>
 
 </section>
@@ -3149,842 +2350,141 @@ bibliography myref
 <title>
 Figure Legends
 </title>
-<p>
-<emph type="bold">
-<xref>
- Figure Figure1
-</xref>
-. The overview of our adaptive community structure detection algorithm. 
-</emph>
-
-</p>
-<p>
-<emph type="bold">
-<xref>
-Figure Figure2
-</xref>
-. Possible behaviors of the dynamic community structure. 
-</emph>
-
-</p>
-<p>
-<emph type="bold">
-<xref>
-Figure Figure3
-</xref>
-. NMI scores on synthesized networks with known communities. 
-</emph>
-
-</p>
-<p>
-<emph type="bold">
-<xref>
-Figure Figure4
-</xref>
-. Modularity values on synthesized networks with known communities. 
-</emph>
-
-</p>
-<p>
-<emph type="bold">
-<xref>
-Figure Figure5
-</xref>
-. Simulation results on Enron email network. 
-</emph>
-
-</p>
-<p>
-<emph type="bold">
-<xref>
-Figure Figure6
-</xref>
-. Simulation results on arXiv eprint citation network. 
-</emph>
-
-</p>
-<p>
-<emph type="bold">
-<xref>
-Figure Figure7
-</xref>
-. Simulation results on Facebook social network. 
-</emph>
-
-</p>
-<p>
-<emph type="bold">
-<xref>
-Figure Figure8
-</xref>
-. Experimental results on the Reality Mining data set. 
-</emph>
-
-</p>
-<p>
-<emph type="bold">
-<xref>
-Figure Figure9
-</xref>
-. Infection rates on static network with<equ id="equ330" type="inline">
-<tex>
-$k=150$
-</tex>
-
-</equ>
-clusters. 
-</emph>
-
-</p>
-<p>
-<emph type="bold">
-<xref>
-Figure Figure10
-</xref>
-. Infection rates on dynamic network with<equ id="equ331" type="inline">
-<tex>
-$k=200$
-</tex>
-
-</equ>
-clusters. 
-</emph>
-
-</p>
 
 </section>
+<fig id="fig1" num="1">
+<caption>
+<emph type="bold">
+<emph type="bold">
+Figure 1.  Likelihood in the<equ id="equ164" type="inline">
+<tex>
+${n_{f_\mathrm{NL}}}$
+</tex>
+
+</equ>
+<equ id="equ165" type="inline">
+<tex>
+$f_\mathrm{NL}^*$
+</tex>
+
+</equ>
+plane(left panel)andmarginalized over<equ id="equ166" type="inline">
+<tex>
+$f_\mathrm{NL}^*$
+</tex>
+
+</equ>
+(right panel).
+</emph>
+ 
+</emph>
+The principal constraints, shown in the left panel and with the bold blue curve on the right, correspond to the flat prior on<equ id="equ167" type="inline">
+<tex>
+$f_\mathrm{NL}^*$
+</tex>
+
+</equ>
+at the pivot value where theconstraints on<equ id="equ168" type="inline">
+<tex>
+$f_\mathrm{NL}^*$
+</tex>
+
+</equ>
+and<equ id="equ169" type="inline">
+<tex>
+${n_{f_\mathrm{NL}}}$
+</tex>
+
+</equ>
+are uncorrelated(seeEq. <xref>
+eqkpiv
+</xref>
+). In the right panel we also show the marginalizedlikelihood for<equ id="equ170" type="inline">
+<tex>
+${n_{f_\mathrm{NL}}}$
+</tex>
+
+</equ>
+with a prior on<equ id="equ171" type="inline">
+<tex>
+$f_\mathrm{NL}^*$
+</tex>
+
+</equ>
+that is uniform in<equ id="equ172" type="inline">
+<tex>
+$\log(f_\mathrm{NL}^*)$
+</tex>
+
+</equ>
+for<equ id="equ173" type="inline">
+<tex>
+$|f_\mathrm{NL}^*|>
+0.1$
+</tex>
+
+</equ>
+and zero otherwise. The dashed curvein the left panel shows the quantity<equ id="equ174" type="inline">
+<tex>
+$\hatf^*_{\mathrm{NL}}$
+</tex>
+
+</equ>
+, which is thebestfit value of the parameter<equ id="equ175" type="inline">
+<tex>
+$f_\mathrm{NL}^*$
+</tex>
+
+</equ>
+for a fixed<equ id="equ176" type="inline">
+<tex>
+${n_{f_\mathrm{NL}}}$
+</tex>
+
+</equ>
+. See text forother details. 
+</caption>
+
+</fig>
+<fig id="fig2" num="2">
+<caption>
+<emph type="bold">
+<emph type="bold">
+Figure 2. Constraints propagated to<equ id="equ177" type="inline">
+<tex>
+$f_\mathrm{NL}(k)$
+</tex>
+
+</equ>
+.
+</emph>
+ 
+</emph>
+We also show several models that are reasonable fits to the data(all within the 99 confidence limit of the left panel ofFig. <xref>
+figlikelihood
+</xref>
+ to guide the eye as to how typical models fromour ansatz behave. 
+</caption>
+
+</fig>
 <section>
 <title>
 Tables
 </title>
 
 </section>
-<tbl>
- Algorithm 1 . New_ Node<emph type="bold">
-Input
-</emph>
-New node<equ id="equ332" type="inline">
-<tex>
-$u$
-</tex>
-
-</equ>
-with associated linksCurrent structure<equ id="equ333" type="inline">
-<tex>
-$\mathcal{C}_{t}$
-</tex>
-
-</equ>
-. <emph type="bold">
-Output
-</emph>
-An updated structure<equ id="equ334" type="inline">
-<tex>
-$\mathcal{C}_{t+1}$
-</tex>
-
-</equ>
-tate<equ id="equ335" type="inline">
-<tex>
-$C(u)\leftarrow$
-</tex>
-
-</equ>
-A new community of only<equ id="equ336" type="inline">
-<tex>
-$u$
-</tex>
-
-</equ>
-tate<equ id="equ337" type="inline">
-<tex>
-$Done\leftarrowFalse$
-</tex>
-
-</equ>
-While(<equ id="equ338" type="inline">
-<tex>
-$!Done$
-</tex>
-
-</equ>
-)For<equ id="equ339" type="inline">
-<tex>
-$(v\inN(u)$
-</tex>
-
-</equ>
-and<equ id="equ340" type="inline">
-<tex>
-$v$
-</tex>
-
-</equ>
-is not visited)tate Find<equ id="equ341" type="inline">
-<tex>
-$F_{in}^{C(v)}(v)$
-</tex>
-
-</equ>
-and<equ id="equ342" type="inline">
-<tex>
-$F_{out}^{C(u)}(v)$
-</tex>
-
-</equ>
-EndFortate Sort<equ id="equ343" type="inline">
-<tex>
-$v\inNC(u)$
-</tex>
-
-</equ>
-by its<equ id="equ344" type="inline">
-<tex>
-$F_{out}^{C(u)}(v)$
-</tex>
-
-</equ>
-given<equ id="equ345" type="inline">
-<tex>
-$F_{out}^{C(u)}(v)>
-F_{in}^{C(v)}(v)$
-</tex>
-
-</equ>
-. tate Let<equ id="equ346" type="inline">
-<tex>
-$\textbf{v}$
-</tex>
-
-</equ>
-be the stack containing these sorted nodesIf<equ id="equ347" type="inline">
-<tex>
-$(\textbf{v}==\emptyset)$
-</tex>
-
-</equ>
-tate<equ id="equ348" type="inline">
-<tex>
-$Done\leftarrowTrue$
-</tex>
-
-</equ>
-EndIftate<equ id="equ349" type="inline">
-<tex>
-$C(u)\leftarrowC(u)\cup\{pop(\textbf{v})\}$
-</tex>
-
-</equ>
-tate Marked<equ id="equ350" type="inline">
-<tex>
-$v$
-</tex>
-
-</equ>
-as visitedEndWhile For<equ id="equ351" type="inline">
-<tex>
-$C\inNC(u)$
-</tex>
-
-</equ>
-tate Find<equ id="equ352" type="inline">
-<tex>
-$F_{out}^{C}(u)$
-</tex>
-
-</equ>
-EndFor If<equ id="equ353" type="inline">
-<tex>
-$\max_{C}F_{out}^{C}(u)>
-F_{in}^{C_u}(u)$
-</tex>
-
-</equ>
-tate Let<equ id="equ354" type="inline">
-<tex>
-$C_u\leftarrow\arg\max_{C}{\{F_{out}^{C}(u)\}}$
-</tex>
-
-</equ>
-tate Update<equ id="equ355" type="inline">
-<tex>
-$\mathcal{C}_{t+1}:\mathcal{C}_{t+1}\leftarrow\big(\mathcal{C}_{t}\backslashC_u\big)\cup\big(C_u\cupu\big)$
-</tex>
-
-</equ>
-EndIf
-</tbl>
-<tbl>
- Algorithm 2 . New_ Edge<emph type="bold">
-Input
-</emph>
-Edge<equ id="equ356" type="inline">
-<tex>
-$\{u,v\}$
-</tex>
-
-</equ>
-to be addedCurrent structure<equ id="equ357" type="inline">
-<tex>
-$\mathcal{C}_{t}$
-</tex>
-
-</equ>
-. <emph type="bold">
-Output
-</emph>
-An updated structure<equ id="equ358" type="inline">
-<tex>
-$\mathcal{C}_{t+1}$
-</tex>
-
-</equ>
-. If(<equ id="equ359" type="inline">
-<tex>
-$u\text{and}v\notinV$
-</tex>
-
-</equ>
-)tate<equ id="equ360" type="inline">
-<tex>
-$\mathcal{C}_{t+1}\leftarrow\mathcal{C}_{t}\cup\{u,v\}$
-</tex>
-
-</equ>
-ElsIf<equ id="equ361" type="inline">
-<tex>
-$(C(u)\neqC(v))$
-</tex>
-
-</equ>
-If<equ id="equ362" type="inline">
-<tex>
-$(\Deltaq_{u,C(u),C(v)}<0$
-</tex>
-
-</equ>
-and<equ id="equ363" type="inline">
-<tex>
-$\Deltaq_{v,C(u),C(v)}<0)$
-</tex>
-
-</equ>
-tate<emph type="bold">
-return
-</emph>
-<equ id="equ364" type="inline">
-<tex>
-$\mathcal{C}_{t+1}\leftarrow\mathcal{C}_t$
-</tex>
-
-</equ>
-Elsetate<equ id="equ365" type="inline">
-<tex>
-$w\leftarrow\arg\max\{\Deltaq_{u,C(u),C(v)},\Deltaq_{v,C(u),C(v)}\}$
-</tex>
-
-</equ>
-tate Move<equ id="equ366" type="inline">
-<tex>
-$w$
-</tex>
-
-</equ>
-to the new communityFor<equ id="equ367" type="inline">
-<tex>
-$(t\inN(w))$
-</tex>
-
-</equ>
-tate Let<equ id="equ368" type="inline">
-<tex>
-$t$
-</tex>
-
-</equ>
-determine its best communityEndFortate Update<equ id="equ369" type="inline">
-<tex>
-$C_{t+1}$
-</tex>
-
-</equ>
-EndIf EndIf
-</tbl>
-<tbl>
- Algorithm 3 . Node_ Removal<emph type="bold">
-Input
-</emph>
-Node<equ id="equ370" type="inline">
-<tex>
-$u\inC$
-</tex>
-
-</equ>
-to be removedCurrent structure<equ id="equ371" type="inline">
-<tex>
-$\mathcal{C}_{t}$
-</tex>
-
-</equ>
-. <emph type="bold">
-Output
-</emph>
-An updated structure<equ id="equ372" type="inline">
-<tex>
-$\mathcal{C}_{t+1}$
-</tex>
-
-</equ>
-. tate<equ id="equ373" type="inline">
-<tex>
-$i\leftarrow1$
-</tex>
-
-</equ>
-While<equ id="equ374" type="inline">
-<tex>
-$(N(u)\neq\emptyset)$
-</tex>
-
-</equ>
-tate<equ id="equ375" type="inline">
-<tex>
-$S_i\leftarrow$
-</tex>
-
-</equ>
-Nodes found by a 3 clique percolation on<equ id="equ376" type="inline">
-<tex>
-$v\inN(u)$
-</tex>
-
-</equ>
-If<equ id="equ377" type="inline">
-<tex>
-$(S_i==\emptyset)$
-</tex>
-
-</equ>
-tate<equ id="equ378" type="inline">
-<tex>
-$S_i\leftarrow\{v\}$
-</tex>
-
-</equ>
-EndIftate<equ id="equ379" type="inline">
-<tex>
-$N(u)\leftarrowN(u)\backslashS_i$
-</tex>
-
-</equ>
-tate<equ id="equ380" type="inline">
-<tex>
-$i\leftarrowi+1$
-</tex>
-
-</equ>
-EndWhiletate Let each singleton in<equ id="equ381" type="inline">
-<tex>
-$N(u)$
-</tex>
-
-</equ>
-consider its best communitiestate Let each<equ id="equ382" type="inline">
-<tex>
-$S_i$
-</tex>
-
-</equ>
-consider its best communities as in <citref rids="ref8">
-8
-</citref>
-tate Update<equ id="equ383" type="inline">
-<tex>
-$\mathcal{C}_t$
-</tex>
-
-</equ>
-
-</tbl>
-<tbl>
-Algorithm 4 . Edge_ Removal<emph type="bold">
-Input
-</emph>
-Edge<equ id="equ384" type="inline">
-<tex>
-$(u,v)$
-</tex>
-
-</equ>
-to be removedCurrent structure<equ id="equ385" type="inline">
-<tex>
-$\mathcal{C}_t$
-</tex>
-
-</equ>
-. <emph type="bold">
-Output
-</emph>
-An updated clustering<equ id="equ386" type="inline">
-<tex>
-$\mathcal{C}_{t+1}$
-</tex>
-
-</equ>
-. If<equ id="equ387" type="inline">
-<tex>
-$((u,v)$
-</tex>
-
-</equ>
-is a single edge)tate<equ id="equ388" type="inline">
-<tex>
-$\mathcal{C}_{t+1}\leftarrow(\mathcal{C}_t\backslash\{u,v\})\cup\{u\}\cup\{v\}$
-</tex>
-
-</equ>
-ElsIf(Either<equ id="equ389" type="inline">
-<tex>
-$u$
-</tex>
-
-</equ>
-(or<equ id="equ390" type="inline">
-<tex>
-$v$
-</tex>
-
-</equ>
-)is of degree one)tate<equ id="equ391" type="inline">
-<tex>
-$\mathcal{C}_{t+1}\leftarrow(\mathcal{C}_t\backslashC(u))\cup\{u\}\cup\{C(u)\backslashu\}$
-</tex>
-
-</equ>
-ElsIf<equ id="equ392" type="inline">
-<tex>
-$(C(u)\neqC(v))$
-</tex>
-
-</equ>
-tate<equ id="equ393" type="inline">
-<tex>
-$\mathcal{C}_{t+1}\leftarrow\mathcal{C}_t$
-</tex>
-
-</equ>
-ElsetateNow<equ id="equ394" type="inline">
-<tex>
-$(u,v)$
-</tex>
-
-</equ>
-is inside a community<equ id="equ395" type="inline">
-<tex>
-$C$
-</tex>
-
-</equ>
-tate<equ id="equ396" type="inline">
-<tex>
-$L$
-</tex>
-
-</equ>
-Maximal quasicliques in<equ id="equ397" type="inline">
-<tex>
-$C$
-</tex>
-
-</equ>
-tate Let the singletons in<equ id="equ398" type="inline">
-<tex>
-$C\backslashL$
-</tex>
-
-</equ>
-consider their best communitiesEndIftate Update<equ id="equ399" type="inline">
-<tex>
-$\mathcal{C}_{t+1}$
-</tex>
-
-</equ>
-
-</tbl>
-<tbl>
-Algorithm 5 . <emph type="bold">
-Q
-</emph>
-uick<emph type="bold">
-C
-</emph>
-ommunity<emph type="bold">
-A
-</emph>
-daptation(QCA)Framework
-</tbl>
-<p>
-<emph type="bold">
-Input
-</emph>
-<equ id="equ400" type="inline">
-<tex>
-$G\equivG_0=(V_0,E_0)$
-</tex>
-
-</equ>
-, <equ id="equ401" type="inline">
-<tex>
-$\bf{\mathcal{E}}=\{\mathcal{E}_1,\mathcal{E}_2,..,\mathcal{E}_s\}$
-</tex>
-
-</equ>
-a collection of simple events
-</p>
-<p>
-<emph type="bold">
-Output
-</emph>
-Community structure<equ id="equ402" type="inline">
-<tex>
-$\mathcal{C}_t$
-</tex>
-
-</equ>
-of<equ id="equ403" type="inline">
-<tex>
-$G^t$
-</tex>
-
-</equ>
-at time<equ id="equ404" type="inline">
-<tex>
-$t$
-</tex>
-
-</equ>
-. 
-</p>
-<p>
-tate Use <citref rids="ref8">
-8
-</citref>
-to find an initial community clustering<equ id="equ405" type="inline">
-<tex>
-$\mathcal{C}_0$
-</tex>
-
-</equ>
-of<equ id="equ406" type="inline">
-<tex>
-$G_0$
-</tex>
-
-</equ>
-
-</p>
-<p>
-For(<equ id="equ407" type="inline">
-<tex>
-$t\leftarrow1$
-</tex>
-
-</equ>
-to s)
-</p>
-<p>
-tate<equ id="equ408" type="inline">
-<tex>
-$\mathcal{C}_t\leftarrow\mathcal{C}_{t-1}$
-</tex>
-
-</equ>
-
-</p>
-<p>
-If<equ id="equ409" type="inline">
-<tex>
-$(\mathcal{E}_t==\textit{newNode(u)})$
-</tex>
-
-</equ>
-
-</p>
-<p>
-tate Handle New_ Node(<equ id="equ410" type="inline">
-<tex>
-$\mathcal{C}_t,u$
-</tex>
-
-</equ>
-)
-</p>
-<p>
-ElsIf<equ id="equ411" type="inline">
-<tex>
-$(\mathcal{E}_t==\textit{newEdge((u,v))})$
-</tex>
-
-</equ>
-
-</p>
-<p>
-tate Handle New_ Edge(<equ id="equ412" type="inline">
-<tex>
-$\mathcal{C}_t,(u,v)$
-</tex>
-
-</equ>
-)
-</p>
-<p>
-ElsIf<equ id="equ413" type="inline">
-<tex>
-$(\mathcal{E}_t==\textit{removeNode}(u))$
-</tex>
-
-</equ>
-
-</p>
-<p>
-tate Handle Remove_ Node(<equ id="equ414" type="inline">
-<tex>
-$\mathcal{C}_t,u$
-</tex>
-
-</equ>
-)Else
-</p>
-<p>
-tate Handle Remove_ Edge(<equ id="equ415" type="inline">
-<tex>
-$\mathcal{C}_t,(u,v)$
-</tex>
-
-</equ>
-)
-</p>
-<p>
-EndIf
-</p>
-<p>
- EndFor
-</p>
-<tbl>
- Algorithm 6 . Patch Distribution Algorithm
-</tbl>
-<p>
-<emph type="bold">
-Input
-</emph>
-<equ id="equ416" type="inline">
-<tex>
-$G=(V,E)$
-</tex>
-
-</equ>
-and its community structure<equ id="equ417" type="inline">
-<tex>
-$\mathcal{C}=\{C_1,C_2,..,C_p\}$
-</tex>
-
-</equ>
-
-</p>
-<p>
-<emph type="bold">
-Output
-</emph>
-The set of influential users<equ id="equ418" type="inline">
-<tex>
-$\mathcal{P}$
-</tex>
-
-</equ>
-. 
-</p>
-<p>
-tate<equ id="equ419" type="inline">
-<tex>
-$\mathcal{P}\leftarrow\emptyset$
-</tex>
-
-</equ>
-
-</p>
-<p>
-For<equ id="equ420" type="inline">
-<tex>
-$C_i\in\mathcal{C}$
-</tex>
-
-</equ>
-
-</p>
-<p>
-While(<equ id="equ421" type="inline">
-<tex>
-$\existsu\text{unvisitedin}C_i\text{satisfying}\max_{u\inC_i}\{e_{out}^{C_i}(u)\}>
-0)$
-</tex>
-
-</equ>
-
-</p>
-<p>
-tate Let<equ id="equ422" type="inline">
-<tex>
-$v\leftarrow\arg\max_{u\inC_i}\{e_{out}^{C_i}(u)\}$
-</tex>
-
-</equ>
-
-</p>
-<p>
-tate<equ id="equ423" type="inline">
-<tex>
-$\mathcal{P}\leftarrow\mathcal{P}\cupv$
-</tex>
-
-</equ>
-
-</p>
-<p>
-tate Mark<equ id="equ424" type="inline">
-<tex>
-$v$
-</tex>
-
-</equ>
-as visited in<equ id="equ425" type="inline">
-<tex>
-$C_i$
-</tex>
-
-</equ>
-
-</p>
-<p>
-EndWhile
-</p>
-<p>
- EndFor
-</p>
-<p>
-tate Send patches to users in<equ id="equ426" type="inline">
-<tex>
-$\mathcal{P}$
-</tex>
-
-</equ>
-
-</p>
+<section>
+<title>
+ Supporting Information Legends
+</title>
+
+</section>
 
 </body>
 <back>
 <ack>
 <p>
-
+We thank Kendrick Smith for initial encouragement andEiichiro Komatsu for useful communications We acknowledge the use of thepublicly available CAMB ite CAMB and HEALPix ite healpix packages Wehave been supported by DOE OJI grant under contract DE-FG02-95ER40899 NSFunder contract AST-0807564 and NASA under contract NNX09AC89G ulticols 
 </p>
 
 </ack>

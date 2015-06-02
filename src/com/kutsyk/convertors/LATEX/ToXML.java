@@ -830,14 +830,13 @@ public class ToXML extends LaTEXBaseListener {
 
                 Converter.getInstance().convert(doc, file, "image/" + "png",
                         params);
-                writer.print("<inline-graphic id=\"g" + imageId + "\" xlink:href=\"" + path + "\"/>");
+                writer.print("<inline-graphic id=\"g" + imageId + "\" href=\"" + path + "\"/>");
             } catch (Exception e) {
                 writer.println("<equ id=\"equ" + equationCounter + "\" type=\"inline\">");
                 writeFormula(ctx.getText());
                 writer.println("</equ>");
                 e.printStackTrace();
                 System.out.println("Parse error: ");
-
             }
         } else {
             /* Create vanilla SnuggleEngine and new SnuggleSession */
@@ -1235,7 +1234,8 @@ public class ToXML extends LaTEXBaseListener {
     @Override
     public void enterUrlText(LaTEXParser.UrlTextContext ctx) {
         String url = ctx.getText();
-        url = url.substring(1, url.length() - 1);
+        if(url.length()>2)
+            url = url.substring(1, url.length() - 1);
         writer.print("<url url=\"" + url + "\">");
         shouldTextBeMissed = true;
     }
