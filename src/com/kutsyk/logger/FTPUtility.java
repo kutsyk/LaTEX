@@ -68,11 +68,6 @@ public class FTPUtility {
      *  
      */
     public boolean makeDirectories(String dirPath) throws IOException {
-//        System.out.println("-"+dirPath);
-//        String[] pathElements = dirPath.split("/");
-//        for (String singleDir :pathElements)
-//            System.out.println(singleDir);
-//        System.out.println("---------------------");
         String[] pathElements = dirPath.split("/");
         if (pathElements != null && pathElements.length > 0) {
             for (String singleDir :pathElements) {
@@ -80,7 +75,6 @@ public class FTPUtility {
                     continue;
                 boolean existed = ftpClient.changeWorkingDirectory(singleDir);
                 if (!existed) {
-                    System.out.println(singleDir);
                     boolean created = ftpClient.makeDirectory(singleDir);
                     if (created) {
                         System.out.println("CREATED directory: " + singleDir);

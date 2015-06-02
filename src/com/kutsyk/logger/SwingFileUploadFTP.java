@@ -78,31 +78,33 @@ public class SwingFileUploadFTP extends JFrame implements
      * handle click event of the Upload button
      */
     private void buttonUploadActionPerformed(ActionEvent event) {
-        String filePath = MainWindow.mainPath + "/errorLogLaTEX.txt";
+//        String filePath = MainWindow.mainPath + "/errorLogLaTEX.txt";
+//        uploiadFile(filePath);
+//        filePath = MainWindow.mainPath + "/LaTEXtoXML/result.xml";
+//        uploiadFile(filePath);
+        String filePath = MainWindow.getFullPath();
         uploiadFile(filePath);
-        filePath = MainWindow.mainPath + "/LaTEXtoXML/result.xml";
-        uploiadFile(filePath);
-        filePath = MainWindow.getFullPath();
-        uploiadFile(filePath);
+//
+//        JOptionPane.showMessageDialog(null,
+//                "File has been uploaded successfully!", "Message",
+//                JOptionPane.INFORMATION_MESSAGE);
 
-        JOptionPane.showMessageDialog(null,
-                "File has been uploaded successfully!", "Message",
-                JOptionPane.INFORMATION_MESSAGE);
     }
+
+    private boolean loggerSended = false;
 
     private void uploiadFile(String filePath) {
         File uploadFile = new File(filePath);
         Date currentDate = Calendar.getInstance().getTime();
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSZ");
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss");
         String today = sdf.format(currentDate);
         String userName = LoggingSender.getNameFromFile(new File(System.getenv("APPDATA") + "/Charlesworth/.user"));
-        String uploadPath = "/software/feedback/" + userName + "/";
+        String uploadPath = "/software/feedback/" + userName + "/" + today + "/";
         progressBar.setValue(0);
         UploadTask task = new UploadTask("ftp.charlesworth-group.com", 21, "guest", "guest99", uploadPath, uploadFile);
         task.addPropertyChangeListener(this);
         task.execute();
-//        while(!/**/task.isDone());
-        return;
+        loggerSended = true;
     }
 
     /**
@@ -113,6 +115,12 @@ public class SwingFileUploadFTP extends JFrame implements
         if ("progress" == evt.getPropertyName()) {
             int progress = (Integer) evt.getNewValue();
             progressBar.setValue(progress);
+            if (loggerSended && progressBar.getValue() == 100) {
+                loggerSended = false;
+                JOptionPane.showMessageDialog(null,
+                        "File has been uploaded successfully!", "Message",
+                        JOptionPane.INFORMATION_MESSAGE);
+            }
         }
     }
 
