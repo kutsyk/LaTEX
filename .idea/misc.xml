@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AzureSettings">
-    <option name="storageAccount" value="rO0ABXVyAExbTGNvbS5taWNyb3NvZnRvcGVudGVjaG5vbG9naWVzLmF6dXJlY29tbW9ucy5zdG9yYWdlcmVnaXN0cnkuU3RvcmFnZUFjY291bnQ7lcwAzqc4SBYCAAB4cAAAAAA=" />
-  </component>
   <component name="EntryPointsManager">
     <entry_points version="2.0" />
   </component>

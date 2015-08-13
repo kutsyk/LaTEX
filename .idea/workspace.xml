@@ -7,235 +7,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8dbcac13-6015-4d42-b76b-f72d4a20fbea" name="Default" comment="">
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\ChooseFolderWithFiles.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\Choosefile.html" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\ChoseFolder.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\Document.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\Exit.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\Figuredeclarationmissing.html" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\GettingStarted.html" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\Gettinghelp.html" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\Help.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\HowTo.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\Howtouse.html" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\Introduction.html" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\LaTEX.hnd" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\MainWindow.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\SaveDocument.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\SaveXMLResult.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\Savedocument.html" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\SupportingSectionError.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\Supportingdatadeclaration.html" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\Translate.html" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\Translate.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\Welcome.html" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\base.css" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\chm\0.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\chm\1.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\chm\10.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\chm\11.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\chm\12.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\chm\13.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\chm\14.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\chm\15.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\chm\16.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\chm\17.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\chm\18.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\chm\19.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\chm\2.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\chm\20.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\chm\21.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\chm\22.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\chm\23.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\chm\24.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\chm\25.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\chm\26.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\chm\27.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\chm\28.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\chm\29.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\chm\3.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\chm\30.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\chm\31.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\chm\32.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\chm\33.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\chm\34.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\chm\35.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\chm\36.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\chm\37.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\chm\38.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\chm\39.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\chm\4.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\chm\40.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\chm\41.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\chm\5.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\chm\6.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\chm\7.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\chm\8.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\chm\9.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\chm\icons.gif" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\chm\loading.gif" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\chm\ui.dynatree.css" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\chm\vline.gif" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\folder\0.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\folder\1.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\folder\10.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\folder\11.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\folder\12.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\folder\13.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\folder\14.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\folder\15.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\folder\16.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\folder\17.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\folder\18.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\folder\19.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\folder\2.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\folder\20.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\folder\21.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\folder\22.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\folder\23.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\folder\24.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\folder\25.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\folder\26.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\folder\27.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\folder\28.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\folder\29.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\folder\3.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\folder\30.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\folder\31.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\folder\32.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\folder\33.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\folder\34.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\folder\35.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\folder\36.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\folder\37.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\folder\38.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\folder\39.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\folder\4.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\folder\40.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\folder\41.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\folder\5.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\folder\6.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\folder\7.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\folder\8.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\folder\9.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\folder\icons.gif" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\folder\loading.gif" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\folder\ui.dynatree.css" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\folder\vline.gif" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\vista\0.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\vista\1.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\vista\10.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\vista\11.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\vista\12.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\vista\13.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\vista\14.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\vista\15.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\vista\16.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\vista\17.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\vista\18.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\vista\19.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\vista\2.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\vista\20.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\vista\21.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\vista\22.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\vista\23.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\vista\24.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\vista\25.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\vista\26.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\vista\27.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\vista\28.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\vista\29.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\vista\3.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\vista\30.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\vista\31.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\vista\32.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\vista\33.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\vista\34.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\vista\35.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\vista\36.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\vista\37.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\vista\38.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\vista\39.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\vista\4.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\vista\40.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\vista\41.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\vista\5.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\vista\6.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\vista\7.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\vista\8.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\vista\9.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\vista\icons.gif" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\vista\loading.gif" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\dynatree\vista\ui.dynatree.css" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\hnd.css" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\ielte8.css" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\reset.css" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\silver-theme\images\ui-bg_flat_0_aaaaaa_40x100.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\silver-theme\images\ui-bg_flat_75_ffffff_40x100.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\silver-theme\images\ui-bg_glass_55_fbf9ee_1x400.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\silver-theme\images\ui-bg_glass_65_ffffff_1x400.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\silver-theme\images\ui-bg_glass_75_dadada_1x400.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\silver-theme\images\ui-bg_glass_75_e6e6e6_1x400.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\silver-theme\images\ui-bg_glass_95_fef1ec_1x400.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\silver-theme\images\ui-bg_highlight-soft_75_cccccc_1x100.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\silver-theme\images\ui-bg_inset-soft_95_fef1ec_1x100.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\silver-theme\images\ui-icons_222222_256x240.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\silver-theme\images\ui-icons_2e83ff_256x240.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\silver-theme\images\ui-icons_454545_256x240.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\silver-theme\images\ui-icons_888888_256x240.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\silver-theme\images\ui-icons_cd0a0a_256x240.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\silver-theme\jquery-ui-1.8.12.custom.css" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\css\toc.css" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\figureDeclarationMissing.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\img\arrow_left.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\img\arrow_right.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\img\arrow_up.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\img\book-closed.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\img\book.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\img\footer-bg.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\img\header-bg.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\img\topic.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\index.html" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\js\hnd.js" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\js\hndjsse.js" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\js\hndsd.js" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\js\jquery-ui-1.8.17.custom.min.js" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\js\jquery.cookie.js" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\js\jquery.dynatree.min.js" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\js\jquery.min.js" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\lib\ChooseFolderWithFiles.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\lib\ChoseFolder.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\lib\HowTo.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\lib\MainWindow2.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\lib\SaveDocument.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\lib\SupportingSectionError.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\lib\Translate.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\lib\figureDeclarationMissing.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\documentation\toc.html" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\images\Icon.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\images\done.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\images\green-address-book-icon.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\images\green-balloon-icon.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\images\green-cross-icon.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\images\green-disk-icon.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\images\green-document-cross-icon.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\images\green-document-download-icon.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\images\green-document-plus-icon.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\images\green-folder-icon.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\images\green-home-icon.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\images\green-notes-icon.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\images\green-ok-icon.png" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\images\loader.gif" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\images\loading-bar.gif" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\images\pleasewait.gif" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXbin\images\progressbar.gif" afterPath="" />
-      <change type="DELETED" beforePath="F:\Charlesworth\LaTEX\LaTEXtoXML\bodyAndBottom.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/kutsyk/logger/FTPUtility.java" afterPath="$PROJECT_DIR$/src/com/kutsyk/logger/FTPUtility.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/kutsyk/windows/LoggingSender.java" afterPath="$PROJECT_DIR$/src/com/kutsyk/windows/LoggingSender.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/kutsyk/windows/MainWindow.java" afterPath="$PROJECT_DIR$/src/com/kutsyk/windows/MainWindow.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/kutsyk/logger/SwingFileUploadFTP.java" afterPath="$PROJECT_DIR$/src/com/kutsyk/logger/SwingFileUploadFTP.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/kutsyk/convertors/LATEX/ToXML.java" afterPath="$PROJECT_DIR$/src/com/kutsyk/convertors/LATEX/ToXML.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LaTEXtoXML/mainmain.tex" afterPath="$PROJECT_DIR$/LaTEXtoXML/mainmain.tex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LaTEXtoXML/resultRedo.xml" afterPath="$PROJECT_DIR$/LaTEXtoXML/resultRedo.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -259,75 +33,7 @@
     <favorites_list name="LaTEX" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="MainWindow.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/kutsyk/windows/MainWindow.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.36" vertical-offset="7701" max-vertical-offset="16847">
-              <caret line="514" column="38" selection-start-line="514" selection-start-column="38" selection-end-line="514" selection-end-column="38" />
-              <folding>
-                <element signature="e#6087#6929#0" expanded="true" />
-                <element signature="e#6918#6919#0" expanded="true" />
-                <element signature="e#14411#15172#0" expanded="true" />
-                <element signature="e#15160#15161#0" expanded="true" />
-                <element signature="e#16125#16152#1" expanded="true" />
-                <element signature="e#16184#16315#0" expanded="true" />
-                <element signature="e#16304#16305#0" expanded="true" />
-                <element signature="e#21447#21562#0" expanded="true" />
-                <element signature="e#21557#21558#0" expanded="true" />
-                <element signature="e#21588#21712#0" expanded="true" />
-                <element signature="e#21707#21708#0" expanded="true" />
-                <element signature="e#22099#22239#0" expanded="true" />
-                <element signature="e#22232#22233#0" expanded="true" />
-                <element signature="e#22451#22585#0" expanded="true" />
-                <element signature="e#22578#22579#0" expanded="true" />
-                <element signature="e#22762#22930#0" expanded="true" />
-                <element signature="e#22923#22924#0" expanded="true" />
-                <element signature="e#25008#25149#0" expanded="true" />
-                <element signature="e#25142#25143#0" expanded="true" />
-                <element signature="e#25448#25592#0" expanded="true" />
-                <element signature="e#25585#25586#0" expanded="true" />
-                <element signature="e#25878#26019#0" expanded="true" />
-                <element signature="e#26012#26013#0" expanded="true" />
-                <element signature="e#26274#26488#0" expanded="true" />
-                <element signature="e#26469#26470#0" expanded="true" />
-                <element signature="e#30728#30880#0" expanded="true" />
-                <element signature="e#30871#30872#0" expanded="true" />
-                <element signature="e#31111#31264#0" expanded="true" />
-                <element signature="e#31255#31256#0" expanded="true" />
-                <element signature="e#31491#31643#0" expanded="true" />
-                <element signature="e#31634#31635#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LoggingSender.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/kutsyk/windows/LoggingSender.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="494" max-vertical-offset="3876">
-              <caret line="52" column="24" selection-start-line="52" selection-start-column="24" selection-end-line="52" selection-end-column="24" />
-              <folding>
-                <element signature="e#1142#1143#0" expanded="true" />
-                <element signature="e#1232#1233#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SwingFileUploadFTP.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/kutsyk/logger/SwingFileUploadFTP.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1001" max-vertical-offset="1870">
-              <caret line="81" column="32" selection-start-line="81" selection-start-column="32" selection-end-line="81" selection-end-column="32" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -354,11 +60,13 @@
         <option value="$PROJECT_DIR$/src/com/kutsyk/logger/UploadTask.java" />
         <option value="$PROJECT_DIR$/src/com/kutsyk/windows/FTPMakeNestedDirectoryTest.java" />
         <option value="$PROJECT_DIR$/LaTEXtoXML/result.xml" />
-        <option value="$PROJECT_DIR$/src/com/kutsyk/convertors/LATEX/ToXML.java" />
         <option value="$PROJECT_DIR$/src/com/kutsyk/logger/SwingFileUploadFTP.java" />
         <option value="$PROJECT_DIR$/src/com/kutsyk/logger/FTPUtility.java" />
-        <option value="$PROJECT_DIR$/src/com/kutsyk/windows/MainWindow.java" />
         <option value="$PROJECT_DIR$/src/com/kutsyk/windows/LoggingSender.java" />
+        <option value="$PROJECT_DIR$/src/com/kutsyk/convertors/LATEX/ToXML.java" />
+        <option value="$USER_HOME$/Desktop/epl17173result.xml" />
+        <option value="$PROJECT_DIR$/src/com/kutsyk/windows/MainWindow.java" />
+        <option value="$USER_HOME$/Desktop/plos_latex_templateresult.xml" />
       </list>
     </option>
   </component>
@@ -370,10 +78,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1358" />
+    <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1296" />
-    <option name="height" value="1000" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -423,7 +131,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -526,7 +233,37 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="logger" />
+              <option name="myItemId" value="convertors" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LaTEX" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LaTEX" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kutsyk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="convertors" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LATEX" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -550,6 +287,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -564,7 +302,7 @@
     <property name="dynamic.classpath" value="false" />
     <property name="LayoutCode.rearrangeEntriesXML" value="false" />
     <property name="LayoutCode.rearrangeEntriesJava" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/commons-net-3.3/commons-net-3.3.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="FullScreen" value="false" />
   </component>
   <component name="RunManager" selected="Application.LaTEX">
@@ -827,40 +565,46 @@
       <workItem from="1433238015442" duration="227000" />
       <workItem from="1433239913996" duration="909000" />
       <workItem from="1433240886073" duration="4477000" />
-      <workItem from="1433265205972" duration="113000" />
+      <workItem from="1433265205972" duration="634000" />
+      <workItem from="1436869617005" duration="1830000" />
+      <workItem from="1437240899810" duration="1028000" />
+      <workItem from="1438772215814" duration="701000" />
+      <workItem from="1438930773915" duration="1702000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32090000" />
+    <option name="totallyTimeSpent" value="37872000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1358" y="-8" width="1296" height="1000" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.7559727" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3270142" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Tool Output" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24959612" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3895487" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24924472" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3890785" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.7559727" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Services Explorer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32593855" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Tool Output" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Azure Activity Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -892,63 +636,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/kutsyk/windows/MainWindow.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="16473">
-          <caret line="495" column="42" selection-start-line="495" selection-start-column="42" selection-end-line="495" selection-end-column="42" />
-          <folding>
-            <element signature="e#6087#6929#0" expanded="true" />
-            <element signature="e#6918#6919#0" expanded="true" />
-            <element signature="e#14411#15172#0" expanded="true" />
-            <element signature="e#15160#15161#0" expanded="true" />
-            <element signature="e#16125#16152#1" expanded="true" />
-            <element signature="e#16184#16315#0" expanded="true" />
-            <element signature="e#16304#16305#0" expanded="true" />
-            <element signature="e#21447#21562#0" expanded="true" />
-            <element signature="e#21557#21558#0" expanded="true" />
-            <element signature="e#21588#21712#0" expanded="true" />
-            <element signature="e#21707#21708#0" expanded="true" />
-            <element signature="e#22099#22239#0" expanded="true" />
-            <element signature="e#22232#22233#0" expanded="true" />
-            <element signature="e#22451#22585#0" expanded="true" />
-            <element signature="e#22578#22579#0" expanded="true" />
-            <element signature="e#22762#22930#0" expanded="true" />
-            <element signature="e#22923#22924#0" expanded="true" />
-            <element signature="e#25008#25149#0" expanded="true" />
-            <element signature="e#25142#25143#0" expanded="true" />
-            <element signature="e#25448#25592#0" expanded="true" />
-            <element signature="e#25585#25586#0" expanded="true" />
-            <element signature="e#25878#26019#0" expanded="true" />
-            <element signature="e#26012#26013#0" expanded="true" />
-            <element signature="e#26274#26488#0" expanded="true" />
-            <element signature="e#26469#26470#0" expanded="true" />
-            <element signature="e#30728#30880#0" expanded="true" />
-            <element signature="e#30871#30872#0" expanded="true" />
-            <element signature="e#31111#31264#0" expanded="true" />
-            <element signature="e#31255#31256#0" expanded="true" />
-            <element signature="e#31491#31643#0" expanded="true" />
-            <element signature="e#31634#31635#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/kutsyk/grammar/LaTEX/LaTEX.g4">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="29087">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/kutsyk/logger/SwingFileUploadFTP.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1420" max-vertical-offset="2159">
-          <caret line="100" column="23" selection-start-line="100" selection-start-column="23" selection-end-line="100" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/kutsyk/logger/UploadTask.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="782" max-vertical-offset="1598">
@@ -967,9 +654,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1581" max-vertical-offset="2074">
           <caret line="95" column="63" selection-start-line="95" selection-start-column="63" selection-end-line="95" selection-end-column="63" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1078,13 +762,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/kutsyk/convertors/FrontmatterCreator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="260" max-vertical-offset="18666">
-          <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../testing/pcbi.1003547/1 original file/pcbi.1003547/pcompbiol_PCOMPBIOL-D-13-01817.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="7361">
@@ -1096,34 +773,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3418647" vertical-offset="0" max-vertical-offset="2618">
           <caret line="15" column="40" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/kutsyk/styling/XmlViewFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425">
-          <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/kutsyk/styling/XmlTextPane.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.53419596" vertical-offset="0" max-vertical-offset="541">
-          <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/kutsyk/styling/XmlEditorKit.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33274022" vertical-offset="0" max-vertical-offset="562">
-          <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/kutsyk/styling/XmlView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2142">
-          <caret line="30" column="13" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -1155,32 +804,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/kutsyk/convertors/Translator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.1821429" vertical-offset="2143" max-vertical-offset="4760">
-          <caret line="178" column="13" selection-start-line="178" selection-start-column="13" selection-end-line="178" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/kutsyk/windows/TrialWindow.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.6102004" vertical-offset="0" max-vertical-offset="3893">
           <caret line="61" column="31" selection-start-line="61" selection-start-column="15" selection-end-line="61" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/kutsyk/logger/FTPException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3115183" vertical-offset="0" max-vertical-offset="382">
-          <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/kutsyk/convertors/LATEX/ToXML.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5191956" vertical-offset="13231" max-vertical-offset="22236">
-          <caret line="837" column="34" selection-start-line="837" selection-start-column="34" selection-end-line="837" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1191,77 +818,185 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/kutsyk/logger/FTPUtility.java">
+    <entry file="file://$PROJECT_DIR$/src/com/kutsyk/windows/LoggingSender.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.54642856" vertical-offset="0" max-vertical-offset="2431">
-          <caret line="24" column="11" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="11" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="494" max-vertical-offset="3876">
+          <caret line="52" column="24" selection-start-line="52" selection-start-column="24" selection-end-line="52" selection-end-column="24" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/kutsyk/logger/UploadTask.java">
+    <entry file="file://$PROJECT_DIR$/src/com/kutsyk/grammar/LaTEX/LaTEXListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6357143" vertical-offset="358" max-vertical-offset="1530">
-          <caret line="46" column="47" selection-start-line="46" selection-start-column="40" selection-end-line="46" selection-end-column="47" />
+        <state vertical-scroll-proportion="-29.763346" vertical-offset="16863" max-vertical-offset="17425">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/kutsyk/grammar/LaTEX/LaTEXBaseListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3024911" vertical-offset="0" max-vertical-offset="21318">
+          <caret line="13" column="49" selection-start-line="13" selection-start-column="49" selection-end-line="13" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/kutsyk/convertors/BibTEX/BibXML.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1428">
+          <caret line="12" column="40" selection-start-line="12" selection-start-column="40" selection-end-line="12" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/kutsyk/convertors/FrontmatterCreator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.8" vertical-offset="357" max-vertical-offset="18445">
+          <caret line="46" column="7" selection-start-line="46" selection-start-column="7" selection-end-line="46" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/kutsyk/grammar/BibTEX/BibPlos.g4">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1785" max-vertical-offset="2822">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/kutsyk/grammar/BibTEX/BibPlosBaseListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="969" max-vertical-offset="3366">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/kutsyk/grammar/BibTEX/BibPlosLexer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="3331" max-vertical-offset="3893">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/kutsyk/grammar/BibTEX/BibPlosListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2482">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/kutsyk/logger/FTPException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="221">
+          <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/kutsyk/logger/FTPUtility.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1890" max-vertical-offset="2431">
+          <caret line="24" column="11" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="11" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/kutsyk/logger/SwingFileUploadFTP.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1001" max-vertical-offset="1870">
-          <caret line="81" column="32" selection-start-line="81" selection-start-column="32" selection-end-line="81" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1666">
+          <caret line="26" column="32" selection-start-line="26" selection-start-column="32" selection-end-line="26" selection-end-column="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/kutsyk/windows/LoggingSender.java">
+    <entry file="file://$PROJECT_DIR$/src/com/kutsyk/grammar/BibTEX/BibPlosParser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="494" max-vertical-offset="3876">
-          <caret line="52" column="24" selection-start-line="52" selection-start-column="24" selection-end-line="52" selection-end-column="24" />
-          <folding>
-            <element signature="e#1142#1143#0" expanded="true" />
-            <element signature="e#1232#1233#0" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="14212">
+          <caret line="29" column="17" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/kutsyk/logger/UploadTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="1530">
+          <caret line="25" column="27" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/kutsyk/security/AES.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="5817" max-vertical-offset="6358">
+          <caret line="7" column="28" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/kutsyk/styling/XmlEditorKit.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425">
+          <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/kutsyk/styling/XmlTextPane.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="391">
+          <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/kutsyk/styling/XmlView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1346" max-vertical-offset="1887">
+          <caret line="30" column="13" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/kutsyk/styling/XmlViewFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="391">
+          <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/kutsyk/TextEditor/JTextEditor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1292">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/kutsyk/TextEditor/LinePainter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2397">
+          <caret line="17" column="24" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/kutsyk/windows/MainWindow.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.36" vertical-offset="7701" max-vertical-offset="16847">
-          <caret line="514" column="38" selection-start-line="514" selection-start-column="38" selection-end-line="514" selection-end-column="38" />
+        <state vertical-scroll-proportion="0.09872029" vertical-offset="6644" max-vertical-offset="15742">
+          <caret line="419" column="5" selection-start-line="419" selection-start-column="5" selection-end-line="419" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/kutsyk/convertors/Translator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.97321427" vertical-offset="4200" max-vertical-offset="4760">
+          <caret line="228" column="7" selection-start-line="228" selection-start-column="7" selection-end-line="228" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/plos_latex_templateresult.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.77696526" vertical-offset="0" max-vertical-offset="5151">
+          <caret line="25" column="26" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/kutsyk/convertors/LATEX/ToXML.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="2.1974406" vertical-offset="9151" max-vertical-offset="22202">
+          <caret line="645" column="33" selection-start-line="645" selection-start-column="33" selection-end-line="645" selection-end-column="33" />
           <folding>
-            <element signature="e#6087#6929#0" expanded="true" />
-            <element signature="e#6918#6919#0" expanded="true" />
-            <element signature="e#14411#15172#0" expanded="true" />
-            <element signature="e#15160#15161#0" expanded="true" />
-            <element signature="e#16125#16152#1" expanded="true" />
-            <element signature="e#16184#16315#0" expanded="true" />
-            <element signature="e#16304#16305#0" expanded="true" />
-            <element signature="e#21447#21562#0" expanded="true" />
-            <element signature="e#21557#21558#0" expanded="true" />
-            <element signature="e#21588#21712#0" expanded="true" />
-            <element signature="e#21707#21708#0" expanded="true" />
-            <element signature="e#22099#22239#0" expanded="true" />
-            <element signature="e#22232#22233#0" expanded="true" />
-            <element signature="e#22451#22585#0" expanded="true" />
-            <element signature="e#22578#22579#0" expanded="true" />
-            <element signature="e#22762#22930#0" expanded="true" />
-            <element signature="e#22923#22924#0" expanded="true" />
-            <element signature="e#25008#25149#0" expanded="true" />
-            <element signature="e#25142#25143#0" expanded="true" />
-            <element signature="e#25448#25592#0" expanded="true" />
-            <element signature="e#25585#25586#0" expanded="true" />
-            <element signature="e#25878#26019#0" expanded="true" />
-            <element signature="e#26012#26013#0" expanded="true" />
-            <element signature="e#26274#26488#0" expanded="true" />
-            <element signature="e#26469#26470#0" expanded="true" />
-            <element signature="e#30728#30880#0" expanded="true" />
-            <element signature="e#30871#30872#0" expanded="true" />
-            <element signature="e#31111#31264#0" expanded="true" />
-            <element signature="e#31255#31256#0" expanded="true" />
-            <element signature="e#31491#31643#0" expanded="true" />
-            <element signature="e#31634#31635#0" expanded="true" />
+            <element signature="e#15050#15059#0" expanded="true" />
           </folding>
         </state>
       </provider>

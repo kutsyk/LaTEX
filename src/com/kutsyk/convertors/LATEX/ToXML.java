@@ -426,7 +426,8 @@ public class ToXML extends LaTEXBaseListener {
             return;
         }
 
-        writer.print("<section>");
+        ++sectionId;
+        writer.print("<section id=\""+sectionId+"\">");
 
         writer.print("<title>");
         wasSectionDeclared = false;
@@ -1052,16 +1053,13 @@ public class ToXML extends LaTEXBaseListener {
         }
     }
 
-    /**
-     * Paragraph starter.
-     */
     private void paragraphStarter() {
         if (wasAppsDeclared)
             shouldTextBeMissed = false;
 
         ++paragraphCounter;
         isParagraphActive = true;
-        writer.print("<p>");
+        writer.print("<p id=\""+paragraphCounter+"\">");
         wasSpaceBetweenLinesFilled = false;
         newLineCounter = 0;
     }

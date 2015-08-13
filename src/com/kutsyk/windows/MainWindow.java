@@ -302,6 +302,8 @@ public class MainWindow extends JFrame {
         PrintWriter resultXml = new PrintWriter(mainPath
                 + "/LaTEXtoXML/result.xml");
         InputStream in = null;
+        resultXml.append("<?xml version=\"1.0\" encoding=\"utf-8\"?>");
+        resultXml.append("<!DOCTYPE article PUBLIC \"-//NLM//DTD Journal Publishing DTD v3.0 20080202//EN\" \"http://dtd.nlm.nih.gov/publishing/3.0/journalpublishing3.dtd\">");
         resultXml.append("<article>");
         writePartToResult(resultXml, in, "bodyAndBottom");
         resultXml.append("</body><back>");

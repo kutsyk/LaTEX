@@ -1,102 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE article PUBLIC "-//NLM//DTD Journal Publishing DTD v3.0 20080202//EN" "http://dtd.nlm.nih.gov/publishing/3.0/journalpublishing3.dtd">
 <article>
 <front>
 <article-meta>
 <title-group>
 <article-title>
-First constraints on the running of nonGaussianity
+Article TitleSubmission to PLOS Journals
 </article-title>
 
 </title-group>
 <contrib-group>
 <contrib contrib-type="author">
-Adam Becker
+Name1 Surname
 </contrib>
 <contrib contrib-type="author">
- Dragan Huterer
+ Name2 Surname
+</contrib>
+<contrib contrib-type="author">
+ Name3 Surname
+</contrib>
+<contrib contrib-type="author">
+ Name4 Surname
+</contrib>
+<contrib contrib-type="author">
+ Name5 Surname
+</contrib>
+<contrib contrib-type="author">
+ Name6 Surname
+</contrib>
+<contrib contrib-type="author">
+ Name7 Surname
+</contrib>
+<contrib contrib-type="author">
+ with the Lorem Ipsum Consortium
 </contrib>
 
 </contrib-group>
-<aff>
-  Department of Physics,  University of Michigan,  450  Church St,  Ann Arbor,  MI 48109 1040 
-</aff>
-<equ id="equ1" type="inline">
-<tex>
-$\ast$
-</tex>
-
-</equ>
-Emailbeckeramumich. edu<equ id="equ2" type="inline">
-<tex>
-$\ast\ast$
-</tex>
-
-</equ>
-Emailhutererumich. edu<abstract>
+ bigskip<emph type="bold">
+ 1 
+</emph>
+Affiliation DeptProgramCenter, Institution Name, City, State, Country<emph type="bold">
+2 
+</emph>
+Affiliation DeptProgramCenter, Institution Name, City, State, Country<emph type="bold">
+3 
+</emph>
+Affiliation DeptProgramCenter, Institution Name, City, State, Countrybigskip Yinyang These authors contributed equally to this work. These authors also contributed equally to this work. textcurrency a Insert current address of first author with an address updateDeceasedtextpilcrow Membership list can be found in the Acknowledgments section. CorrespondingAuthorinstitute. edu<abstract>
 <title>
 Abstract
 </title>
-<p>
- We use data from the WMAP temperature maps to constrain a scaledependent
-</p>
-<p>
-generalization of the popularlocalmodel for primordial nonGaussianity. 
-</p>
-<p>
-In the model where the parameter<equ id="equ3" type="inline">
-<tex>
-$f_\mathrm{NL}$
-</tex>
-
-</equ>
-is allowed to run with scale<equ id="equ4" type="inline">
-<tex>
-$k$
-</tex>
-
-</equ>
-, 
-</p>
-<equ id="equ5" type="inline">
-<tex>
-$f_\mathrm{NL}(k)=f_\mathrm{NL}^*(k/k_\mathrm{piv})^{n_{f_\mathrm{NL}}}$
-</tex>
-
-</equ>
-, <p>
-we constrain the running to be
-</p>
-<equ id="equ6" type="inline">
-<tex>
-${n_{f_\mathrm{NL}}}=0.30^{+1.9}_{-1.2}$
-</tex>
-
-</equ>
-<p>
-at 95 confidence, marginalized over the amplitude
-</p>
-<equ id="equ7" type="inline">
-<tex>
-$f_\mathrm{NL}^*$
-</tex>
-
-</equ>
-. <p>
-The constraints depend somewhat on the prior probabilities
-</p>
-<p>
-assigned to the two parameters. In the near future, constraints from a
-</p>
-<p>
-combination of Planck and largescale structure surveys are expected to
-</p>
-<p>
-improve this limit by about an order of magnitude and usefully constrain
-</p>
-<p>
-classes of inflationary models. 
-</p>
-<p>
-2 
+<p id="2">
+ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget porta erat. Morbi consectetur est vel gravida pretium. Suspendisse ut dui eu ante cursus gravida non sed sem. Nullam sapien tellus, commodo id velit id, eleifend volutpat quam. Phasellus mauris velit, dapibus finibus elementum vel, pulvinar non tellus. Nunc pellentesque pretium diam, quis maximus dolor faucibus id. Nunc convallis sodales ante, ut ullamcorper est egestas vitae. Nam sit amet enim ultrices, ultrices elit pulvinar, volutpat risus. 
 </p>
 
 </abstract>
@@ -105,2378 +59,346 @@ classes of inflationary models.
 
 </front>
 <body>
-<section>
+<section id="2">
+<title>
+Author Summary
+</title>
+<p id="3">
+ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget porta erat. Morbi consectetur est vel gravida pretium. Suspendisse ut dui eu ante cursus gravida non sed sem. Nullam sapien tellus, commodo id velit id, eleifend volutpat quam. Phasellus mauris velit, dapibus finibus elementum vel, pulvinar non tellus. Nunc pellentesque pretium diam, quis maximus dolor faucibus id. Nunc convallis sodales ante, ut ullamcorper est egestas vitae. Nam sit amet enim ultrices, ultrices elit pulvinar, volutpat risus. 
+</p>
+<p id="4">
+inenumbers
+</p>
+
+</section>
+<section id="4">
 <title>
 Introduction
 </title>
-<p>
- NonGaussianity in the distribution of primordial density
-</p>
-<p>
-fluctuations provides a unique window into the physics of
-</p>
-<p>
-inflation. The magnitude of primordial nonGaussianity and its dependence on
-</p>
-<p>
-scale provide information about the dynamics of scalar field(s), their
-</p>
-<p>
-interactions, and the speed of sound during inflation. Constraints on
-</p>
-<p>
-nonGaussianity have traditionally come from the measurements of the
-</p>
-<p>
-threepoint correlation function of the cosmic microwave background(CMB)
-</p>
-<p>
-temperature anisotropies. Upper limits from COBE <citref rids="ref1">
+<p id="5">
+ Lorem ipsum dolor sit <citref rids="ref1">
 1
 </citref>
-have been
-</p>
-<p>
-improved by two orders of magnitude by the WMAP experiment
-</p>
- <citref rids="ref2">
+amet, consectetur adipiscing elit. Curabitur eget porta erat. Morbi consectetur est vel gravida pretium. Suspendisse ut dui eu ante cursus gravida non sed sem. Nullam Eq. <xref>
+eqschemeP
+</xref>
+ sapien tellus, commodo id velit id, eleifend volutpat quam. Phasellus mauris velit, dapibus finibus elementum vel, pulvinar non tellus. Nunc pellentesque pretium diam, quis maximus dolor faucibus id.  <citref rids="ref2">
 2
 </citref>
-. <p>
-Moreover, clustering of galaxies and galaxy clusters has also
+Nunc convallis sodales ante, ut ullamcorper est egestas vitae. Nam sit amet enim ultrices, ultrices elit pulvinar, volutpat risus. 
 </p>
-<p>
-been identified as a powerful probe of nonGaussianity <citref rids="ref3">
-3
-</citref>
-, already
-</p>
-<p>
-leading to interesting constraints that are complementary in their information
-</p>
-<p>
-content to the CMB measurements. 
-</p>
-<p>
-So far most attention has been devoted to thelocalmodel of primordial
-</p>
-<p>
-nonGaussianity, where the primordial Newtonian potential<equ id="equ8" type="inline">
+<equ id="equ1" type="inline">
 <tex>
-$\phi(x)$
+\begin{equation}\label{eq:schemeP}D_{coll}=\frac{D_f+\frac{[S]^2}{K_DS_T}D_S}{1+\frac{[S]^2}{K_DS_T}},D_{sm}=\frac{D_f+\frac{[S]}{K_D}D_S}{1+\frac{[S]}{K_D}},\end{equation}
 </tex>
 
 </equ>
-is
-</p>
-<p>
-modified with a quadratic term<equ id="equ9" type="inline">
-<tex>
-$\phi=\phi_G+f_\mathrm{NL}(\phi_G^2-\langle\phi_G^2\rangle)$
-</tex>
 
-</equ>
-, where<equ id="equ10" type="inline">
-<tex>
-$\phi_G$
-</tex>
-
-</equ>
-is a Gaussian potential
-</p>
- <citref rids="ref4">
-4
-</citref>
-. <p>
-The parameter<equ id="equ11" type="inline">
-<tex>
-$f_\mathrm{NL}$
-</tex>
-
-</equ>
-is currently constrained to be
-</p>
-<equ id="equ12" type="inline">
-<tex>
-$32\pm21$
-</tex>
-
-</equ>
-<p>
-by WMAP( <citref rids="ref2">
-2
-</citref>
-see also
-</p>
- <citref rids="ref5 ref6">
-5,6
-</citref>
-)<p>
-and<equ id="equ13" type="inline">
-<tex>
-$28\pm23$
-</tex>
-
-</equ>
-by the
-</p>
-<p>
-largescale structure <citref rids="ref7 ref8 ref9">
-7-9
-</citref>
-. Several
-</p>
-<p>
-other nonGaussian models have been constrained as well
-</p>
-(<p>
-e. g.  <citref rids="ref10 ref11">
-10,11
-</citref>
-). However, therunningwith physical
-</p>
-<p>
-scale of these models, which may carry important information about the
-</p>
-<p>
-number of inflationary fields and their interactions
-</p>
- <citref rids="ref-1 ref12 ref13 ref14 ref15 ref16 ref17 ref18 ref19 ref20">
--1,12-20
-</citref>
-<p>
-2012  tk, Kobayashi_Takahashi, has not yet been constrained
-</p>
-<p>
-with current data(except for a very rough estimate of the angularmultipole
-</p>
-<p>
-dependence of<equ id="equ14" type="inline">
-<tex>
-$f_\mathrm{NL}$
-</tex>
-
-</equ>
- <citref rids="ref11">
-11
-</citref>
-and implicit constraints on a
-</p>
-<p>
-braneworldmotivated model <citref rids="ref23">
-23
-</citref>
-). Such constraints have only been
-</p>
-<p>
-forecasted for future experiments
-</p>
- <citref rids="ref24 ref25 ref26 ref27 ref28">
-24-28
-</citref>
-. <p>
-Constraining the running of nonGaussianity therefore presents a major new
-</p>
-<p>
-opportunity to probe inflationary physics, and is just becoming feasible. In
-</p>
-<p>
-this Letter, we present the first such constraints. 
+</section>
+<section id="6">
+<title>
+Materials and Methods
+</title>
+<section level="2" id="section7">
+<title>
+ Etiam eget sapien nibh. 
+</title>
+<p id="6">
+Nulla mi mi, Fig. <xref>
+fig1
+</xref>
+ venenatis sed ipsum varius, volutpat euismod diam. Proin rutrum vel massa non gravida. Quisque tempor sem et dignissim rutrum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at justo vitae nulla elementum commodo eu id massa. In vitae diam ac augue semper tincidunt eu ut eros. Fusce fringilla erat porttitor lectus cursus, nameref S1_Videovel sagittis arcu lobortis. Aliquam in enim semper, aliquam massa id, cursus neque. Praesent faucibus semper libero. 
 </p>
 
 </section>
-<section>
-<title>
-Methods
-</title>
-<section level="2" id="section3">
-<title>
- Model
-</title>
-<p>
- In this work we consider a physically motivated generalization
-</p>
-<p>
-of the local model, where the parameter<equ id="equ15" type="inline">
-<tex>
-$f_\mathrm{NL}$
-</tex>
-
-</equ>
-is promoted to a function of
-</p>
-<p>
-scale<equ id="equ16" type="inline">
-<tex>
-$k$
-</tex>
-
-</equ>
-. In particular, we seek to constrain the twoparameter powerlaw
-</p>
-<p>
-subclass of the generalized models <citref rids="ref25">
-25
-</citref>
-
-</p>
-<equ id="equ17" type="inline">
-<tex>
-\begin{equation}f_\mathrm{NL}(k)=f_\mathrm{NL}^*\left({k\overk_*}\right)^{n_{f_\mathrm{NL}}},\label{eq:fnlk}\end{equation}
-</tex>
-
-</equ>
-<p>
-where<equ id="equ18" type="inline">
-<tex>
-$k_*$
-</tex>
-
-</equ>
-is an arbitrary fixed parameter, leaving<equ id="equ19" type="inline">
-<tex>
-$f_\mathrm{NL}^*$
-</tex>
-
-</equ>
-and<equ id="equ20" type="inline">
-<tex>
-${n_{f_\mathrm{NL}}}$
-</tex>
-
-</equ>
-as
-</p>
-<p>
-the parameters of interest in this model. Such scaling is expected in
-</p>
-<p>
-inflation when more than one field dominates or when there is
-</p>
-<p>
-selfinteraction, and its signatures in the CMB and LSS have been discussed in
-</p>
-<p>
-the literature <citref rids="ref24 ref25 ref29">
-24,25,29
-</citref>
-. The parameter<equ id="equ21" type="inline">
-<tex>
-${n_{f_\mathrm{NL}}}$
-</tex>
-
-</equ>
-is
-</p>
-<p>
-often, though certainly not always, expected to be<equ id="equ22" type="inline">
-<tex>
-$\lesssimO(1)$
-</tex>
-
-</equ>
-in
-</p>
-<p>
-inflationary models, but in our phenomenological model it is allowed to take
-</p>
-<p>
-any value. 
-</p>
-
-</section>
-<section level="2" id="section4">
-<title>
-Bispectrum and<equ id="equ23" type="inline">
-<tex>
-$f_\mathrm{NL}^*$
-</tex>
-
-</equ>
- estimator
-</title>
-<p>
- The primordial bispectrum of the<equ id="equ24" type="inline">
-<tex>
-$f_\mathrm{NL}(k)$
-</tex>
-
-</equ>
-model from Eq. <xref>
-eqfnlk
-</xref>
- is
-</p>
-<p>
-straightforward to calculate
-</p>
-<equ id="equ25" type="inline">
-<tex>
-\begin{equation}F(\vec{k}_1,\vec{k}_2,\vec{k}_3)=2\left[f_\mathrm{NL}(k_1)P(k_2)P(k_3)+\mathrm{perm.}\right],\end{equation}
-</tex>
-
-</equ>
-<p>
-where the full bispectrum is<equ id="equ26" type="inline">
-<tex>
-$B(\vec{k}_1,\vec{k}_2,\vec{k}_3)\equiv(2\pi)^3\delta(\vec{k}_1+\vec{k}_2+\vec{k}_3)F(\vec{k}_1,\vec{k}_2,\vec{k}_3)$
-</tex>
-
-</equ>
-. Here
-</p>
-<equ id="equ27" type="inline">
-<tex>
-$P$
-</tex>
-
-</equ>
-<p>
-is the power spectrum of the primordial curvature perturbations, and<equ id="equ28" type="inline">
-<tex>
-$\delta$
-</tex>
-
-</equ>
-
-</p>
-<p>
-is the Dirac delta function. 
-</p>
-<p>
-Constraining the running parameter<equ id="equ29" type="inline">
-<tex>
-${n_{f_\mathrm{NL}}}$
-</tex>
-
-</equ>
-seems difficult because of the
-</p>
-<p>
-apparent requirement to find an estimator for a parameter in an exponent. To
-</p>
-<p>
-avoid this, we resort to an indirect approach where, for a<emph type="italic">
-fixed
-</emph>
-value
-</p>
-<p>
-of<equ id="equ30" type="inline">
-<tex>
-${n_{f_\mathrm{NL}}}$
-</tex>
-
-</equ>
-, we estimate the parameter<equ id="equ31" type="inline">
-<tex>
-$f_\mathrm{NL}^*$
-</tex>
-
-</equ>
-using modifications of the
-</p>
-<p>
-wellknown KSW estimator <citref rids="ref30">
-30
-</citref>
-, which is
-</p>
-<p>
-known to be nearly optimal
-</p>
- <citref rids="ref31 ref32">
-31,32
-</citref>
-. <p>
-We then iterate over the
-</p>
-<p>
-values of the running<equ id="equ32" type="inline">
-<tex>
-${n_{f_\mathrm{NL}}}$
-</tex>
-
-</equ>
-to obtain the full likelihood
-</p>
-<equ id="equ33" type="inline">
-<tex>
-$\mathcal{L}(f_\mathrm{NL}^*,{n_{f_\mathrm{NL}}})$
-</tex>
-
-</equ>
-. <p>
-The theoretical expectation for the bispectrum of the temperature anisotropies
-</p>
-<p>
-in the cosmic microwave background can be explicitly evaluated, starting from
-</p>
-<p>
-the definition of the generalized nonGaussian local model in Eq. <xref>
-eqfnlk
-</xref>
-
-</p>
-<p>
- to account for the running<equ id="equ34" type="inline">
-<tex>
-${n_{f_\mathrm{NL}}}$
-</tex>
-
-</equ>
-
-</p>
-<p>
-where<equ id="equ35" type="inline">
-<tex>
-$I_{\ell_1\ell_2\ell_3}$
-</tex>
-
-</equ>
-is the Gaunt integral and
-</p>
-<p>
-Here, <equ id="equ36" type="inline">
-<tex>
-$t_\ell$
-</tex>
-
-</equ>
-is the radiation transfer function, which can be calculated
-</p>
-<p>
-using CAMB <citref rids="ref33">
-33
-</citref>
-. 
-</p>
-<p>
-Following
-</p>
-<p>
-KSW <citref rids="ref30">
-30
-</citref>
-we can
-</p>
-<p>
-define new, filtered maps<equ id="equ37" type="inline">
-<tex>
-$A(\mathbf{\hat{n}},r)$
-</tex>
-
-</equ>
-and<equ id="equ38" type="inline">
-<tex>
-$B(\mathbf{\hat{n}},r)$
-</tex>
-
-</equ>
-, 
-</p>
-<p>
-Then, we write down the skewness<equ id="equ39" type="inline">
-<tex>
-$S({n_{f_\mathrm{NL}}})$
-</tex>
-
-</equ>
-
-</p>
-<equ id="equ40" type="inline">
-<tex>
-\begin{equation}S({n_{f_\mathrm{NL}}})\equiv\intr^2dr\intd^2\mathbf{\hat{n}}\,A(\mathbf{\hat{n}},r)B^2(\mathbf{\hat{n}},r),\label{eq:skew}\end{equation}
-</tex>
-
-</equ>
-<p>
-which requires<equ id="equ41" type="inline">
-<tex>
-${n_{f_\mathrm{NL}}}$
-</tex>
-
-</equ>
-as input(through<equ id="equ42" type="inline">
-<tex>
-$A$
-</tex>
-
-</equ>
-), and does not require<emph type="italic">
-a priori
-</emph>
-
-</p>
-<p>
-knowledge of<equ id="equ43" type="inline">
-<tex>
-$f_\mathrm{NL}^*$
-</tex>
-
-</equ>
-. 
-</p>
-<p>
-The observed CMB bispectrum is defined as<equ id="equ44" type="inline">
-<tex>
-$B_{\ell_1\ell_2\ell_3}^{\mathrm{obs.}}=\langlea_{\ell_1m_1}a_{\ell_2m_2}a_{\ell_3m_3}\rangle$
-</tex>
-
-</equ>
-, and<equ id="equ45" type="inline">
-<tex>
-$S({n_{f_\mathrm{NL}}})$
-</tex>
-
-</equ>
-therefore
-</p>
-<p>
-reduces to
-</p>
-<equ id="equ46" type="inline">
-<tex>
-\begin{equation}S=\sum_{\ell_1\leq\ell_2\leq\ell_3}{B^{\mathrm{obs}}_{\ell_1\ell_2\ell_3}\tilde{B}^{\mathrm{theory}}_{\ell_1\ell_2\ell_3}(f_\mathrm{NL}=1)\over\tilde{C}_{\ell_1}\tilde{C}_{\ell_2}\tilde{C}_{\ell_3}},\label{SkewBispec}\end{equation}
-</tex>
-
-</equ>
-<p>
-where<equ id="equ47" type="inline">
-<tex>
-$\tilde{B}^{\mathrm{theory}}_{\ell_1\ell_2\ell_3}=b_{\ell_1}b_{\ell_2}b_{\ell_3}B^{\mathrm{theory}}_{\ell_1\ell_2\ell_3}$
-</tex>
-
-</equ>
-, and<equ id="equ48" type="inline">
-<tex>
-$b_\ell$
-</tex>
-
-</equ>
-is the beam transfer function. 
-</p>
-<p>
-We now define<equ id="equ49" type="inline">
-<tex>
-$F\equivF({n_{f_\mathrm{NL}}})$
-</tex>
-
-</equ>
-, the Fisher matrix for<equ id="equ50" type="inline">
-<tex>
-$f_\mathrm{NL}^*$
-</tex>
-
-</equ>
-, equivalent to the cumulative
-</p>
-<p>
-signaltonoise squared of the theoretical bispectrum for<equ id="equ51" type="inline">
-<tex>
-$f_\mathrm{NL}^*=1$
-</tex>
-
-</equ>
-
-</p>
-<equ id="equ52" type="inline">
-<tex>
-\begin{equation}F({n_{f_\mathrm{NL}}})=\sum_{\ell_1\leq\ell_2\leq\ell_3}{\left(\tilde{B}^{\mathrm{theory}}_{\ell_1\ell_2\ell_3}(f_\mathrm{NL}^*=1)\right)^2\over\tilde{C}_{\ell_1}\tilde{C}_{\ell_2}\tilde{C}_{\ell_3}}.\label{eq:Fisher}\end{equation}
-</tex>
-
-</equ>
-<p>
-The theoretical expectation for<equ id="equ53" type="inline">
-<tex>
-$B_{\ell_1\ell_2\ell_3}\proptof_\mathrm{NL}^*$
-</tex>
-
-</equ>
-, so the cubic KSW
-</p>
-<p>
-estimator for<equ id="equ54" type="inline">
-<tex>
-$f_\mathrm{NL}^*$
-</tex>
-
-</equ>
-is
-</p>
-<equ id="equ55" type="inline">
-<tex>
-\begin{equation}\hat{f}_\mathrm{NL}^*={S\overF}.\label{eq:KSW}\end{equation}
-</tex>
-
-</equ>
-<p>
-We used HEALPix, by way of HealPy, to do the forwards and backwards spherical
-</p>
-<p>
-harmonic transforms required to obtain the<equ id="equ56" type="inline">
-<tex>
-$A$
-</tex>
-
-</equ>
-and<equ id="equ57" type="inline">
-<tex>
-$B$
-</tex>
-
-</equ>
-maps. 
-</p>
-
-</section>
-<section level="2" id="section5">
-<title>
-Cutsky maps
-</title>
-<p>
- Equationeqref eqKSWworks well for a fullsky map, 
-</p>
-<p>
-but a sky cut introduces a spurious nonGaussian signal. To account for the
-</p>
-<p>
-masking of the CMB sky, we make the substitution<equ id="equ58" type="inline">
-<tex>
-$S\rightarrowS_{\mathrm{cut}}=S/f_\mathrm{sky}+S_{\mathrm{linear}}$
-</tex>
-
-</equ>
- <citref rids="ref34">
-34
-</citref>
-. <equ id="equ59" type="inline">
-<tex>
-$S_{\mathrm{linear}}$
-</tex>
-
-</equ>
-is an addition to
-</p>
-<p>
-skewness from Eq. <xref>
-eqskew
-</xref>
-, calibrated to account for partialsky
-</p>
-<p>
-observations
-</p>
-<p>
-The subscripted filtered maps<equ id="equ60" type="inline">
-<tex>
-$A_{\mathrm{sim}}$
-</tex>
-
-</equ>
-and<equ id="equ61" type="inline">
-<tex>
-$B_{\mathrm{sim}}$
-</tex>
-
-</equ>
-are created
-</p>
-<p>
-from PythonproducedMonte Carlo realizations of the cut CMB skythe brackets<equ id="equ62" type="inline">
-<tex>
-$\langle\rangle_{MC}$
-</tex>
-
-</equ>
-indicate an average over all 300  MontePython maps. The simulated
-</p>
-<p>
-maps were produced using the prescription laid out in Appendix A of the WMAP5
-</p>
-<p>
-paper <citref rids="ref35">
-35
-</citref>
-the only difference(aside from using the WMAP7
-</p>
-<p>
-cosmological model)is that we used a uniform weighting for the maps, 
-</p>
-<p>
-rather than the slightly more complicated weighting given there, since it only
-</p>
-<p>
-gives a marginal improvement in estimating<equ id="equ63" type="inline">
-<tex>
-$f_\mathrm{NL}$
-</tex>
-
-</equ>
-. 
-</p>
-
-</section>
-<section level="2" id="section6">
-<title>
-Likelihood Evaluation
-</title>
-<p>
- To find the likelihood, we first find a<equ id="equ64" type="inline">
-<tex>
-$\chi^2$
-</tex>
-
-</equ>
-
-</p>
-<p>
-statistic for<equ id="equ65" type="inline">
-<tex>
-$f_\mathrm{NL}^*$
-</tex>
-
-</equ>
-, given a value of<equ id="equ66" type="inline">
-<tex>
-${n_{f_\mathrm{NL}}}$
-</tex>
-
-</equ>
-. Taking the angularaveraged
-</p>
-<p>
-bispectrum<equ id="equ67" type="inline">
-<tex>
-$B_{\ell_1\ell_2\ell_3}$
-</tex>
-
-</equ>
-as our observables, we have
-</p>
-(<p>
-Again, this works because the theoretical expectation for<equ id="equ68" type="inline">
-<tex>
-$B_{\ell_1\ell_2\ell_3}\proptof_\mathrm{NL}^*$
-</tex>
-
-</equ>
-. )Using Eqs. eqref SkewBispecandeqref eqFisher, we can
-</p>
-<p>
-rewrite<equ id="equ69" type="inline">
-<tex>
-$\chi^2$
-</tex>
-
-</equ>
-as
-</p>
-<equ id="equ70" type="inline">
-<tex>
-\begin{equation}\chi^2(f_\mathrm{NL}^*,{n_{f_\mathrm{NL}}})=F\left(f_\mathrm{NL}^*-{S\overF}\right)^2+\chi^2_0-{S^2\overF}.\label{eq:chi2}\end{equation}
-</tex>
-
-</equ>
-<p>
-where<equ id="equ71" type="inline">
-<tex>
-$\chi^2_0\equiv\sum_{\ell_1\ell_2\ell_3}\left(B^{\mathrm{obs}}_{\ell_1\ell_2\ell_3}\right)^2/(\tilde{C}_{\ell_1}\tilde{C}_{\ell_2}\tilde{C}_{\ell_3})$
-</tex>
-
-</equ>
-is the
-</p>
-<p>
-goodnessoffit parameter for the data with respect to the<equ id="equ72" type="inline">
-<tex>
-$f_\mathrm{NL}^*=0$
-</tex>
-
-</equ>
-
-</p>
-<p>
-case. Note that the numerator of<equ id="equ73" type="inline">
-<tex>
-$\chi^2_0$
-</tex>
-
-</equ>
-is an observed quantity, and the
-</p>
-<p>
-denominator is based solely on the theoretical prediction for the power
-</p>
-<p>
-spectrum(as well as a few noise and beam parameters of WMAP). Therefore, 
-</p>
-<equ id="equ74" type="inline">
-<tex>
-$\chi^2_0$
-</tex>
-
-</equ>
-<p>
-does not depend on<equ id="equ75" type="inline">
-<tex>
-$f_\mathrm{NL}^*$
-</tex>
-
-</equ>
-or<equ id="equ76" type="inline">
-<tex>
-${n_{f_\mathrm{NL}}}$
-</tex>
-
-</equ>
-at all. We can use
-</p>
-<p>
-the definition of<equ id="equ77" type="inline">
-<tex>
-$\hat{f}_\mathrm{NL}^*$
-</tex>
-
-</equ>
-in Eq. eqref eqKSWto rewrite the
-</p>
-<p>
-expression for<equ id="equ78" type="inline">
-<tex>
-$\chi^2$
-</tex>
-
-</equ>
-as follows
-</p>
-<equ id="equ79" type="inline">
-<tex>
-\begin{equation}\chi^2(f_\mathrm{NL}^*,{n_{f_\mathrm{NL}}})=F\left(f_\mathrm{NL}^*-\hat{f}^*_{\mathrm{NL}}\right)^2+\chi^2_0-(\hat{f}_\mathrm{NL}^*)^2F.\end{equation}
-</tex>
-
-</equ>
-<p>
-For a fixed value of<equ id="equ80" type="inline">
-<tex>
-${n_{f_\mathrm{NL}}}$
-</tex>
-
-</equ>
-, the<equ id="equ81" type="inline">
-<tex>
-$\chi^2$
-</tex>
-
-</equ>
-is, as expected, minimized in
-</p>
-<equ id="equ82" type="inline">
-<tex>
-$f_\mathrm{NL}^*$
-</tex>
-
-</equ>
-<p>
-when<equ id="equ83" type="inline">
-<tex>
-$f_\mathrm{NL}^*=\hat{f}_\mathrm{NL}^*$
-</tex>
-
-</equ>
-, and one obtains<equ id="equ84" type="inline">
-<tex>
-$\chi_{\mathrm{min}}^2({n_{f_\mathrm{NL}}})=\chi^2_0-(\hat{f}_\mathrm{NL}^*)^2F$
-</tex>
-
-</equ>
-. 
-</p>
-<p>
-A more interesting task is to calculate the
-</p>
-<p>
-constraints when<equ id="equ85" type="inline">
-<tex>
-${n_{f_\mathrm{NL}}}$
-</tex>
-
-</equ>
-is allowed to vary. 
-</p>
-<p>
-With an expression for<equ id="equ86" type="inline">
-<tex>
-$\chi^2(f_\mathrm{NL}^*,{n_{f_\mathrm{NL}}})$
-</tex>
-
-</equ>
-in hand, we can write an expression for the
-</p>
-<p>
-likelihood, <equ id="equ87" type="inline">
-<tex>
-$\mathcal{L}(f_\mathrm{NL}^*,{n_{f_\mathrm{NL}}})\propto\exp(-{\chi^2/2})$
-</tex>
-
-</equ>
-(dropping
-</p>
-<p>
-the constant term with<equ id="equ88" type="inline">
-<tex>
-$\chi_0^2$
-</tex>
-
-</equ>
-)
-</p>
-<p>
-To marginalize over<equ id="equ89" type="inline">
-<tex>
-$f_\mathrm{NL}^*$
-</tex>
-
-</equ>
-is also straightforward
-</p>
-<equ id="equ90" type="inline">
-<tex>
-\begin{equation}\mathcal{L}({n_{f_\mathrm{NL}}})=\int\mathcal{L}({n_{f_\mathrm{NL}}},f_\mathrm{NL}^*)\:df_\mathrm{NL}^*\propto{1\over\sqrt{F}}\exp\left[{(\hat{f}_\mathrm{NL}^*)^2F\over2}\right],\end{equation}
-</tex>
-
-</equ>
-<p>
-where, recall, <equ id="equ91" type="inline">
-<tex>
-$F({n_{f_\mathrm{NL}}})$
-</tex>
-
-</equ>
-is defined in Eq. <xref>
-eqFisher
-</xref>
-. 
-</p>
-
-</section>
-
-</section>
-<section>
-<title>
-Results
-</title>
-<section level="2" id="section8">
-<title>
- WMAP7 constraints on<equ id="equ92" type="inline">
-<tex>
-${n_{f_\mathrm{NL}}}$
-</tex>
-
-</equ>
-
-</title>
-<xref>
-<p>
- Figure figlikelihood
-</xref>
- shows the
-</p>
-<p>
-likelihood<equ id="equ93" type="inline">
-<tex>
-$\mathcal{L}$
-</tex>
-
-</equ>
-in the<equ id="equ94" type="inline">
-<tex>
-${n_{f_\mathrm{NL}}}$
-</tex>
-
-</equ>
-<equ id="equ95" type="inline">
-<tex>
-$f_\mathrm{NL}^*$
-</tex>
-
-</equ>
-plane, as well as the
-</p>
-<p>
-likelihood for<equ id="equ96" type="inline">
-<tex>
-${n_{f_\mathrm{NL}}}$
-</tex>
-
-</equ>
-alone, calculated from the WMAP7 temperature maps. We
-</p>
-<p>
-used a weighted and masked combination of the WMAP V and W band maps
-</p>
-<p>
-with the monopole and dipole subtracted, as recommended by the WMAP
-</p>
-<p>
-team <citref rids="ref35">
-35
-</citref>
-. To extract full information from WMAP maps, we used
-</p>
-<p>
-multipoles out to<equ id="equ97" type="inline">
-<tex>
-$\ell_{\mathrm{max}}=800$
-</tex>
-
-</equ>
-for the sums in Eqs. <xref>
-eqA_map
-</xref>
-, 
-</p>
-<xref>
-<p>
-eqB_map
-</xref>
-<xref>
- and eqFisher
-</xref>
-. We did not find a significant
-</p>
-<p>
-improvement between<equ id="equ98" type="inline">
-<tex>
-$\ell_{\mathrm{max}}=700$
-</tex>
-
-</equ>
-and<equ id="equ99" type="inline">
-<tex>
-$\ell_{\mathrm{max}}=800$
-</tex>
-
-</equ>
-we chose the higher
-</p>
-<p>
-value to be conservative in our analysis. 
-</p>
-<p>
-The quantity<equ id="equ100" type="inline">
-<tex>
-$\chi^2$
-</tex>
-
-</equ>
-is independent of our choice for<equ id="equ101" type="inline">
-<tex>
-$k_{\mathrm{piv}}$
-</tex>
-
-</equ>
-, 
-</p>
-<p>
-but the likelihood itself is not, since<equ id="equ102" type="inline">
-<tex>
-$F$
-</tex>
-
-</equ>
-is inversely proportional to
-</p>
-<equ id="equ103" type="inline">
-<tex>
-$k_{\mathrm{piv}}^{2{n_{f_\mathrm{NL}}}}$
-</tex>
-
-</equ>
-. <p>
-The true pivot scale favored by the data is the value
-</p>
-<p>
-of<equ id="equ104" type="inline">
-<tex>
-$k_{\mathrm{piv}}$
-</tex>
-
-</equ>
-for which the errors in<equ id="equ105" type="inline">
-<tex>
-$f_\mathrm{NL}^*$
-</tex>
-
-</equ>
-are uncorrelated with the
-</p>
-<p>
-errors in<equ id="equ106" type="inline">
-<tex>
-${n_{f_\mathrm{NL}}}$
-</tex>
-
-</equ>
-. We find this scale by using the likelihood to calculate the
-</p>
-<p>
-covariance matrix<equ id="equ107" type="inline">
-<tex>
-$\mathbf{C}$
-</tex>
-
-</equ>
-between<equ id="equ108" type="inline">
-<tex>
-$f_\mathrm{NL}^*$
-</tex>
-
-</equ>
-and<equ id="equ109" type="inline">
-<tex>
-${n_{f_\mathrm{NL}}}$
-</tex>
-
-</equ>
-
-</p>
-<equ id="equ110" type="inline">
-<tex>
-\begin{equation}\mathbf{C}_{p_i,p_j}=\langle(p_i-\bar{p_i})(p_j-\bar{p_j})\rangle.\end{equation}
-</tex>
-
-</equ>
-<p>
-We can easily find the pivot value<equ id="equ111" type="inline">
-<tex>
-$k_{\mathrm{piv}}$
-</tex>
-
-</equ>
-that diagonalizes the
-</p>
-<p>
-covariance matrix<equ id="equ112" type="inline">
-<tex>
-$\mathbf{C}$
-</tex>
-
-</equ>
-(see e. g. Ref.  <citref rids="ref26">
-26
-</citref>
-)
-</p>
-<equ id="equ113" type="inline">
-<tex>
-\begin{equation}k_\mathrm{piv}=k_*\exp\left(-{\mathbf{C}_{f_\mathrm{NL}^*,{n_{f_\mathrm{NL}}}}\overf_\mathrm{NL}^*\mathbf{C}_{{n_{f_\mathrm{NL}}},{n_{f_\mathrm{NL}}}}}\right).\label{eq:kpiv}\end{equation}
-</tex>
-
-</equ>
-<p>
-where<equ id="equ114" type="inline">
-<tex>
-$k_*$
-</tex>
-
-</equ>
-is the(arbitrary)pivot used initially, and<equ id="equ115" type="inline">
-<tex>
-$f_\mathrm{NL}^*$
-</tex>
-
-</equ>
-is the
-</p>
-<p>
-corresponding value used in<equ id="equ116" type="inline">
-<tex>
-$\mathbf{C}$
-</tex>
-
-</equ>
-. Despite the fact that<equ id="equ117" type="inline">
-<tex>
-$k_*$
-</tex>
-
-</equ>
-and
-</p>
-<equ id="equ118" type="inline">
-<tex>
-$f_\mathrm{NL}^*$
-</tex>
-
-</equ>
-<p>
-show up in the expression, <equ id="equ119" type="inline">
-<tex>
-$k_\mathrm{piv}$
-</tex>
-
-</equ>
-does not depend on themit is a
-</p>
-<p>
-fixed number telling us roughly where the experiment has greatest power(and
-</p>
-<p>
-where normalization and running of<equ id="equ120" type="inline">
-<tex>
-$f_\mathrm{NL}(k)$
-</tex>
-
-</equ>
-are precisely uncorrelated). We
-</p>
-<p>
-find that<equ id="equ121" type="inline">
-<tex>
-$k_\mathrm{piv}^{\mathrm{WMAP7}}\approx0.064\,h\,\mathrm{Mpc}^{-1}$
-</tex>
-
-</equ>
-. The 68 , 95 , and
-</p>
-<p>
-99 constraints on<equ id="equ122" type="inline">
-<tex>
-$f_\mathrm{NL}^*$
-</tex>
-
-</equ>
-and<equ id="equ123" type="inline">
-<tex>
-${n_{f_\mathrm{NL}}}$
-</tex>
-
-</equ>
-are shown at the left panel of Figure
-</p>
-<xref>
-<p>
-figlikelihood
-</xref>
-, assuming flat priors on<equ id="equ124" type="inline">
-<tex>
-$f_\mathrm{NL}^*$
-</tex>
-
-</equ>
-and<equ id="equ125" type="inline">
-<tex>
-${n_{f_\mathrm{NL}}}$
-</tex>
-
-</equ>
-
-</p>
-<p>
-and
-</p>
-<equ id="equ126" type="inline">
-<tex>
-$k_*=k_\mathrm{piv}^{\mathrm{WMAP7}}\approx0.064\,h\,\mathrm{Mpc}^{-1}$
-</tex>
-
-</equ>
-. 
-</section>
-<section level="2" id="section9">
-<title>
-Dependence on the prior
-</title>
-<p>
- As with most presentday cosmological
-</p>
-<p>
-measurements, the precise constraints depend on the prior probability on the
-</p>
-<p>
-parameters we are constraining. Even for a simple flat prior on<equ id="equ127" type="inline">
-<tex>
-$f_\mathrm{NL}^*$
-</tex>
-
-</equ>
-and
-</p>
-<equ id="equ128" type="inline">
-<tex>
-${n_{f_\mathrm{NL}}}$
-</tex>
-
-</equ>
-, <p>
-the actual effective prior depends on the<emph type="italic">
-a priori
-</emph>
-chosen pivot
-</p>
-<p>
-in wavenumber<equ id="equ129" type="inline">
-<tex>
-$k_*$
-</tex>
-
-</equ>
-. For example, a flat prior on
-</p>
-<equ id="equ130" type="inline">
-<tex>
-$(f_\mathrm{NL}^*)^{(1)}\equivf_\mathrm{NL}(k_{*,1})$
-</tex>
-
-</equ>
-<p>
-defined at some pivot<equ id="equ131" type="inline">
-<tex>
-$k_{*,1}$
-</tex>
-
-</equ>
-
-</p>
-<p>
-corresponds to a nonflat prior on some<equ id="equ132" type="inline">
-<tex>
-$(f_\mathrm{NL}^*)^{(2)}\equivf_\mathrm{NL}^*(k_{*,2})$
-</tex>
-
-</equ>
-defined at some other pivot<equ id="equ133" type="inline">
-<tex>
-$k_{*,2}$
-</tex>
-
-</equ>
-, since
-</p>
-<equ id="equ134" type="inline">
-<tex>
-$(f_\mathrm{NL}^*)^{(2)}\equiv(f_\mathrm{NL}^*)^{(1)}(k_{*,2}/k_{*,1})^{n_{f_\mathrm{NL}}}$
-</tex>
-
-</equ>
-. <p>
-If we
-</p>
-<p>
-assume some alternate pivot<equ id="equ135" type="inline">
-<tex>
-$k_{*,2}$
-</tex>
-
-</equ>
-but hold the flat prior in<equ id="equ136" type="inline">
-<tex>
-$f_\mathrm{NL}^*$
-</tex>
-
-</equ>
-, 
-</p>
-<p>
-the contours in the<equ id="equ137" type="inline">
-<tex>
-${n_{f_\mathrm{NL}}}$
-</tex>
-
-</equ>
-<equ id="equ138" type="inline">
-<tex>
-$f_\mathrm{NL}^*$
-</tex>
-
-</equ>
-plane(left panel of
-</p>
-<p>
-Fig. <xref>
-figlikelihood
-</xref>
- are stretched vertically by a factor of
-</p>
-<equ id="equ139" type="inline">
-<tex>
-$(k_{*,2}/0.064\:h\,\mathrm{Mpc}^{-1})^{n_{f_\mathrm{NL}}}$
-</tex>
-
-</equ>
-. <p>
-We have experimented with different kpivot values for a flat prior on
-</p>
-<equ id="equ140" type="inline">
-<tex>
-$f_\mathrm{NL}^*$
-</tex>
-
-</equ>
-<p>
-and<equ id="equ141" type="inline">
-<tex>
-${n_{f_\mathrm{NL}}}$
-</tex>
-
-</equ>
-. We have also investigated other possibilities, such as
-</p>
-<p>
-the prior that assigns equal weight to each decade in<equ id="equ142" type="inline">
-<tex>
-$|f_\mathrm{NL}^*|$
-</tex>
-
-</equ>
-above 0.1 
-</p>
-(<p>
-so uniform in<equ id="equ143" type="inline">
-<tex>
-$\log(f_\mathrm{NL}^*)$
-</tex>
-
-</equ>
-, but cut off at the arguably lowestever
-</p>
-<p>
-observable value of<equ id="equ144" type="inline">
-<tex>
-$|f_\mathrm{NL}^*|=0.1$
-</tex>
-
-</equ>
-so that the total integrated likelihood is
-</p>
-<p>
-finite). We present the two aforementioned examples, showing constraints on
-</p>
-<equ id="equ145" type="inline">
-<tex>
-${n_{f_\mathrm{NL}}}$
-</tex>
-
-</equ>
-<p>
-marginalized over<equ id="equ146" type="inline">
-<tex>
-$f_\mathrm{NL}^*$
-</tex>
-
-</equ>
-, in the right panel of
-</p>
-<p>
-Fig. <xref>
-figlikelihood
-</xref>
-. In the end, we decide to quote results for the flat
-</p>
-<p>
-prior and the uncorrelated<equ id="equ147" type="inline">
-<tex>
-$k_\mathrm{piv}$
-</tex>
-
-</equ>
-value from Eq. <xref>
-eqkpiv
-</xref>
-, which most
-</p>
-<p>
-closely follows priors to both nonGaussian and other cosmological parameters
-</p>
-<p>
-applied in the literature. 
-</p>
-<p>
-Putting it all together, we can get the estimate for<equ id="equ148" type="inline">
-<tex>
-${n_{f_\mathrm{NL}}}$
-</tex>
-
-</equ>
-from the
-</p>
-<p>
-WMAP7 data for a flat prior on<equ id="equ149" type="inline">
-<tex>
-$f_\mathrm{NL}^*$
-</tex>
-
-</equ>
-at the pivot<equ id="equ150" type="inline">
-<tex>
-$k_\mathrm{piv}$
-</tex>
-
-</equ>
-from
-</p>
-<p>
-Eq. <xref>
-eqkpiv
-</xref>
-. The<equ id="equ151" type="inline">
-<tex>
-$68\%$
-</tex>
-
-</equ>
-<equ id="equ152" type="inline">
-<tex>
-$(95\%)$
-</tex>
-
-</equ>
-confidence interval is
-</p>
-<equ id="equ153" type="inline">
-<tex>
-\begin{equation}{n_{f_\mathrm{NL}}}=0.30^{+0.78\,(1.9)}_{-0.61\,(1.2)}\,.\label{eq:nfnl_result}\end{equation}
-</tex>
-
-</equ>
-<p>
-The current constraints are therefore fully consistent with no running, 
-</p>
-<p>
-as Fig. <xref>
-figlikelihood
-</xref>
- clearly indicates. 
-</p>
-<p>
-Figure
-</p>
-<xref>
-<p>
-figerrorprop_WMAP7
-</xref>
- shows the constraints in the<equ id="equ154" type="inline">
-<tex>
-$f_\mathrm{NL}(k)$
-</tex>
-
-</equ>
-plane together with a
-</p>
-<p>
-few representative models allowed by the data. 
-</p>
-
-</section>
-
-</section>
-<section>
-<title>
-Discussion
-</title>
-<p>
- We have presented the first constraints on the
-</p>
-<p>
-scaledependence of(any form of)nonGaussianity using the WMAP7 data. The
-</p>
-<p>
-constraints are compatible with zero running, <equ id="equ155" type="inline">
-<tex>
-${n_{f_\mathrm{NL}}}=0$
-</tex>
-
-</equ>
-, with very mild(<equ id="equ156" type="inline">
-<tex>
-$<1$
-</tex>
-
-</equ>
-sigma)
-</p>
-<p>
-preference for a positive value of<equ id="equ157" type="inline">
-<tex>
-${n_{f_\mathrm{NL}}}$
-</tex>
-
-</equ>
-. We will learn more soon
-</p>
-<p>
-the Planck data and the data from upcoming largescale structure surveys
-</p>
-<p>
-should be able to improve constraints on the running of nonGaussianity by about an order
-</p>
-<p>
-of magnitude <citref rids="ref24 ref27 ref28">
-24,27,28
-</citref>
-, thus
-</p>
-<p>
-shedding important new light on the physics of inflation. 
-</p>
-<p>
-begin thebibliography10 
-</p>
-<p>
-providecommand1 texttt 1 
-</p>
-<p>
-providecommand<url url="refi">
-
-</url>
- URL
-</p>
-<p>
-expandafterfxcsname urlstyleendcsnamelax
-</p>
-<p>
-providecommand doi1 doidiscretionary 1 else
-</p>
-<p>
- providecommand doi doidiscretionary begingroup
-</p>
-<url url="rm">
-
-</url>
-<p>
- Url 
-</p>
-<p>
-providecommand bibAnnoteFile1 IfFileExists 1 begin quotationKey1 
-</p>
-<p>
-Annotation providecommand bibAnnote2 begin quotationKey1 
-</p>
-<p>
-Annotation2  end quotation
-</p>
-<p>
-providecommand eprint2 <url url="2">
- 
-</url>
-
-</p>
-<p>
-bibitem COBE_fnl
-</p>
-<p>
-Komatsu E, Wandelt BD, Spergel DN, Banday AJ, Gorski KM(2002 )Measurement of
-</p>
-<p>
-the cosmic microwave background bispectrum on the COBE DMR sky maps. 
-</p>
-<p>
-newblock AstrophysJ 566   . 
-</p>
-<p>
-bibAnnoteFile COBE_fnl
-</p>
-<p>
-bibitem wmap7
-</p>
-<p>
-Komatsu E, etal. (2011 )SevenYear Wilkinson Microwave Anisotropy Probe
-</p>
-(<p>
-WMAP)ObservationsCosmological Interpretation. 
-</p>
-<p>
-newblock AstrophysJSuppl 192 18 . 
-</p>
-<p>
-bibAnnoteFile wmap7
-</p>
-<p>
-bibitem Dalal
-</p>
-<p>
-Dalal N, DorO, Huterer D, Shirokov A(2008 )The imprints of primordial
-</p>
-<p>
-nongaussianities on largescale structurescale dependent bias and
-</p>
-<p>
-abundance of virialized objects. 
-</p>
-<p>
-newblock Phys Rev D77123514 . 
-</p>
-<p>
-bibAnnoteFile Dalal
-</p>
-<p>
-bibitem Komatsu_Spergel
-</p>
-<p>
-KomatsuE, SpergelDN(2001 )Acoustic signatures in the primary microwave
-</p>
-<p>
-background bispectrum. 
-</p>
-<p>
-newblock Phys Rev D 63 063002 . 
-</p>
-<p>
-bibAnnoteFile Komatsu_Spergel
-</p>
-<p>
-bibitem Yadav_Wandelt_evidence
-</p>
-<p>
-Yadav AP, Wandelt BD(2008 )Evidence of Primordial NonGaussianity(f(NL))in
-</p>
-<p>
-the Wilkinson Microwave Anisotropy Probe 3 Year Data at 2.8  sigma. 
-</p>
-<p>
-newblock PhysRevLett 100 181301 . 
-</p>
-<p>
-bibAnnoteFile Yadav_Wandelt_evidence
-</p>
-<p>
-bibitem Smith_Sen_Zal_optimal
-</p>
-<p>
-Smith KM, Senatore L, Zaldarriaga M(2009 )Optimal limits on<equ id="equ158" type="inline">
-<tex>
-$f_{\rmNL}^{\rmlocal}$
-</tex>
-
-</equ>
-from WMAP 5 year data. 
-</p>
-<p>
-newblock JCAP 0909 006 . 
-</p>
-<p>
-bibAnnoteFile Smith_Sen_Zal_optimal
-</p>
-<p>
-bibitem Slosar_etal
-</p>
-<p>
-Slosar A, Hirata C, Seljak U, Ho S, Padmanabhan N(2008 )Constraints on local
-</p>
-<p>
-primordial nonGaussianity from large scale structure. 
-</p>
-<p>
-newblock JCAP 08 031 . 
-</p>
-<p>
-bibAnnoteFile Slosar_etal
-</p>
-<p>
-bibitem Afshordi_Tolley
-</p>
-<p>
-Afshordi N, Tolley AJ(2008 )Primordial nongaussianity, statistics of
-</p>
-<p>
-collapsed objects, and the Integrated SachsWolfe effect. 
-</p>
-<p>
-newblock Phys Rev D78123507 . 
-</p>
-<p>
-bibAnnoteFile Afshordi_Tolley
-</p>
-<p>
-bibitem Xia2011
-</p>
-<p>
-Xia JQ, Baccigalupi C, Matarrese S, Verde L, Viel M(2011 )Constraints on
-</p>
-<p>
-Primordial NonGaussianity from Large Scale Structure Probes. 
-</p>
-<p>
-newblock JCAP 1108 033 . 
-</p>
-<p>
-bibAnnoteFile Xia2011
-</p>
-<p>
-bibitem Fergusson2010
-</p>
-<p>
-Fergusson JR, Liguori M, Shellard EPS(2010 )General cmb and primordial
-</p>
-<p>
-bispectrum estimationMode expansion, map making, and measures of
-</p>
-<equ id="equ159" type="inline">
-<tex>
-${F}_{\mathrm{nl}}$
-</tex>
-
-</equ>
-. <p>
-newblock Phys Rev D 82 023502 . 
-</p>
-<p>
-bibAnnoteFile Fergusson2010
-</p>
-<p>
-bibitem Smidt2010
-</p>
-<p>
-Smidt J, Amblard A, Byrnes CT, Cooray A, Heavens A, etal. (2010 )CMB
-</p>
-<p>
-Constraints on Primordial nonGaussianity from the Bispectrum(<equ id="equ160" type="inline">
-<tex>
-$f_{\rmNL}$
-</tex>
-
-</equ>
-)
-</p>
-<p>
-and Trispectrum(<equ id="equ161" type="inline">
-<tex>
-$g_{\rmNL}$
-</tex>
-
-</equ>
-and<equ id="equ162" type="inline">
-<tex>
-$\tau_{\rmNL}$
-</tex>
-
-</equ>
-)and a New Consistency Test
-</p>
-<p>
-of SingleField Inflation. 
-</p>
-<p>
-newblock PhysRev D81123007 . 
-</p>
-<p>
-bibAnnoteFile Smidt2010
-</p>
-<p>
-bibitem Chen2005
-</p>
-<p>
-Chen X(2005 )Running NonGaussianities in DBI Inflation. 
-</p>
-<p>
-newblock Phys Rev D 72 123518 . 
-</p>
-<p>
-bibAnnoteFile Chen2005
-</p>
-<p>
-bibitem Liguori2006
-</p>
-<p>
-LiguoriM, HansenFK, KomatsuE, MatarreseS, RiottoA(2006 )
-</p>
-<p>
-Testing primordial nonGaussianity in CMB anisotropies. 
-</p>
-<p>
-newblock Phys Rev D 73 043505 . 
-</p>
-<p>
-bibAnnoteFile Liguori2006
-</p>
-<p>
-bibitem Khoury_Piazza
-</p>
-<p>
-Khoury J, Piazza F(2009 )RapidlyVarying Speed of Sound, Scale Invariance and
-</p>
-<p>
-NonGaussian Signatures. 
-</p>
-<p>
-newblock JCAP 0907 026 . 
-</p>
-<p>
-bibAnnoteFile Khoury_Piazza
-</p>
-<p>
-bibitem Kumar2010
-</p>
-<p>
-KumarJ, LeblondL, RajaramanA(2010 )Scale dependent local
-</p>
-<p>
-nongaussianity from loops. 
-</p>
-<p>
-newblock JCAP 04 24 . 
-</p>
-<p>
-bibAnnoteFile Kumar2010
-</p>
-<p>
-bibitem bryb
-</p>
-<p>
-Byrnes CT, Choi KY(2010 )Review of local nonGaussianity from multifield
-</p>
-<p>
-inflation. 
-</p>
-<p>
-newblock Adv Astron 2010 724525 . 
-</p>
-<p>
-bibAnnoteFile bryb
-</p>
-<p>
-bibitem wandsb
-</p>
-<p>
-Wands D(2010 )Local nonGaussianity from inflation. 
-</p>
-<p>
-newblock ClassQuantGrav 27 124002 . 
-</p>
-<p>
-bibAnnoteFile wandsb
-</p>
-<p>
-bibitem Byrnes2010
-</p>
-<p>
-ByrnesCT, NurmiS, TasinatoG, WandsD(2010 )Scale dependence of
-</p>
-<p>
-local<equ id="equ163" type="inline">
-<tex>
-$f_{NL}$
-</tex>
-
-</equ>
-. 
-</p>
-<p>
-newblock JCAP 02 34 . 
-</p>
-<p>
-bibAnnoteFile Byrnes2010
-</p>
-<p>
-bibitem chris5
-</p>
-<p>
-Byrnes CT, Gerstenlauer M, Nurmi S, Tasinato G, Wands D(2010 )Scaledependent
-</p>
-<p>
-nonGaussianity probes inflationary physics. 
-</p>
-<p>
-newblock JCAP 10 004 . 
-</p>
-<p>
-bibAnnoteFile chris5
-</p>
-<p>
-bibitem Riotto2010
-</p>
-<p>
-Riotto A, Sloth MS(2011 )Strongly Scaledependent NonGaussianity. 
-</p>
-<p>
-newblock PhysRev D83041301 . 
-</p>
-<p>
-bibAnnoteFile Riotto2010
-</p>
-<p>
-bibitem Barnaby2012  tk
-</p>
-<p>
-Barnaby N, Namba R, Peloso MObservable nongaussianity from gauge field
-</p>
-<p>
-production in slow roll inflation, and a challenging connection with
-</p>
-<p>
-magnetogenesis. 
-</p>
-<p>
-newblock arXiv12021469 . 
-</p>
-<p>
-bibAnnoteFile Barnaby2012  tk
-</p>
-<p>
-bibitem Kobayashi_Takahashi
-</p>
-<p>
-Kobayashi T, Takahashi T(2012 )Runnings in the Curvaton. 
-</p>
-<p>
-newblock JCAP 1206 004 . 
-</p>
-<p>
-bibAnnoteFile Kobayashi_Takahashi
-</p>
-<p>
-bibitem Bean_DBI
-</p>
-<p>
-Bean R, Chen X, Peiris H, Xu J(2008 )Comparing Infrared DiracBornInfeld
-</p>
-<p>
-Brane Inflation to Observations. 
-</p>
-<p>
-newblock PhysRev D77023527 . 
-</p>
-<p>
-bibAnnoteFile Bean_DBI
-</p>
-<p>
-bibitem Sefusatti2009
-</p>
-<p>
-SefusattiE, LiguoriM, YadavAPS, JacksonMG, PajerE(2009 )
-</p>
-<p>
-Constraining running nongaussianity. 
-</p>
-<p>
-newblock JCAP 12 22 . 
-</p>
-<p>
-bibAnnoteFile Sefusatti2009
-</p>
-<p>
-bibitem Becker2011
-</p>
-<p>
-BeckerA, HutererD, KadotaK(2011 )Scaledependent nonGaussianity as
-</p>
-<p>
-a generalization of the local model. 
-</p>
-<p>
-newblock JCAP 1 6 . 
-</p>
-<p>
-bibAnnoteFile Becker2011
-</p>
-<p>
-bibitem Shandera2010
-</p>
-<p>
-Shandera S, Dalal N, Huterer D(2011 )A generalized local ansatz and its
-</p>
-<p>
-effect on halo bias. 
-</p>
-<p>
-newblock JCAP 1103 017 . 
-</p>
-<p>
-bibAnnoteFile Shandera2010
-</p>
-<p>
-bibitem Giannantonio_forecasts
-</p>
-<p>
-GiannantonioT, PorcianiC, CarronJ, AmaraA, PillepichA(2012 )
-</p>
-<p>
-Constraining primordial nonGaussianity with future galaxy surveys. 
-</p>
-<p>
-newblock MonNotRAstronSoc2888 . 
-</p>
-<p>
-bibAnnoteFile Giannantonio_forecasts
-</p>
-<p>
-bibitem Becker2012
-</p>
-<p>
-Becker A, Huterer D, Kadota KConstraining ScaleDependent NonGaussianity
-</p>
-<p>
-with Future LargeScale Structure and the CMB. 
-</p>
-<p>
-newblock arXiv12066165 . 
-</p>
-<p>
-bibAnnoteFile Becker2012
-</p>
-<p>
-bibitem LoVerde
-</p>
-<p>
-LoVerde M, Miller A, Shandera S, Verde L(2008 )Effects of ScaleDependent
-</p>
-<p>
-NonGaussianity on Cosmological Structures. 
-</p>
-<p>
-newblock JCAP 04 014 . 
-</p>
-<p>
-bibAnnoteFile LoVerde
-</p>
-<p>
-bibitem KSW
-</p>
-<p>
-Komatsu E, Spergel DN, Wandelt BD(2005 )Measuring primordial nonGaussianity
-</p>
-<p>
-in the cosmic microwave background. 
-</p>
-<p>
-newblock AstrophysJ 634   . 
-</p>
-<p>
-bibAnnoteFile KSW
-</p>
-<p>
-bibitem Smith_Zaldarriaga
-</p>
-<p>
-Smith KM, Zaldarriaga M(2011 )Algorithms for bispectraForecasting, optimal
-</p>
-<p>
-analysis, and simulation. 
-</p>
-<p>
-newblock MonNot Roy Astron Soc 417   . 
-</p>
-<p>
-bibAnnoteFile Smith_Zaldarriaga
-</p>
-<p>
-bibitem Creminelli_estimators
-</p>
-<p>
-Creminelli P, Senatore L, Zaldarriaga M(2007 )Estimators for local
-</p>
-<p>
-nongaussianities. 
-</p>
-<p>
-newblock JCAP 0703 019 . 
-</p>
-<p>
-bibAnnoteFile Creminelli_estimators
-</p>
-<p>
-bibitem CAMB
-</p>
-<p>
-Lewis A, Challinor A, Lasenby A(2000 )Efficient computation of CMB
-</p>
-<p>
-anisotropies in closed FRW models. 
-</p>
-<p>
-newblock AstrophysJ 538   . 
-</p>
-<p>
-bibAnnoteFile CAMB
-</p>
-<p>
-bibitem Yadav2008
-</p>
-<p>
-Yadav APS, Komatsu E, Wandelt BD, Liguori M, Hansen FK, etal. (2008 )Fast
-</p>
-<p>
-Estimator of Primordial NonGaussianity from Temperature and Polarization
-</p>
-<p>
-Anisotropies in the Cosmic Microwave Background. II. Partial Sky Coverage and
-</p>
-<p>
-Inhomogeneous Noise. 
-</p>
-<p>
-newblock Astrophys J 678 578 . 
-</p>
-<p>
-bibAnnoteFile Yadav2008
-</p>
-<p>
-bibitem wmap5
-</p>
-<p>
-Komatsu E, etal. (2009 )FiveYear Wilkinson Microwave Anisotropy Probe(WMAP)
-</p>
-<p>
-ObservationsCosmological Interpretation. 
-</p>
-<p>
-newblock Astrophys J Suppl 180   . 
-</p>
-<p>
-bibAnnoteFile wmap5
-</p>
-<p>
-bibitem healpix
-</p>
-<p>
-Gorski K, Hivon E, Banday A, Wandelt B, Hansen F, etal. (2005 )HEALPixA
-</p>
-<p>
-Framework for high resolution discretization, and fast analysis of data
-</p>
-<p>
-distributed on the sphere. 
-</p>
-<p>
-newblock AstrophysJ 622   . 
-</p>
-<p>
-bibAnnoteFile healpix
-</p>
-
-</section>
-<section>
-<title>
-Figure Legends
-</title>
 
 </section>
 <fig id="fig1" num="1">
 <caption>
 <emph type="bold">
 <emph type="bold">
-Figure 1.  Likelihood in the<equ id="equ164" type="inline">
-<tex>
-${n_{f_\mathrm{NL}}}$
-</tex>
-
-</equ>
-<equ id="equ165" type="inline">
-<tex>
-$f_\mathrm{NL}^*$
-</tex>
-
-</equ>
-plane(left panel)andmarginalized over<equ id="equ166" type="inline">
-<tex>
-$f_\mathrm{NL}^*$
-</tex>
-
-</equ>
-(right panel).
+Figure 1. Figure Title first bold sentence Nulla mi mi, venenatis sed ipsum varius, volutpat euismod diam.
 </emph>
  
 </emph>
-The principal constraints, shown in the left panel and with the bold blue curve on the right, correspond to the flat prior on<equ id="equ167" type="inline">
-<tex>
-$f_\mathrm{NL}^*$
-</tex>
-
-</equ>
-at the pivot value where theconstraints on<equ id="equ168" type="inline">
-<tex>
-$f_\mathrm{NL}^*$
-</tex>
-
-</equ>
-and<equ id="equ169" type="inline">
-<tex>
-${n_{f_\mathrm{NL}}}$
-</tex>
-
-</equ>
-are uncorrelated(seeEq. <xref>
-eqkpiv
-</xref>
-). In the right panel we also show the marginalizedlikelihood for<equ id="equ170" type="inline">
-<tex>
-${n_{f_\mathrm{NL}}}$
-</tex>
-
-</equ>
-with a prior on<equ id="equ171" type="inline">
-<tex>
-$f_\mathrm{NL}^*$
-</tex>
-
-</equ>
-that is uniform in<equ id="equ172" type="inline">
-<tex>
-$\log(f_\mathrm{NL}^*)$
-</tex>
-
-</equ>
-for<equ id="equ173" type="inline">
-<tex>
-$|f_\mathrm{NL}^*|>
-0.1$
-</tex>
-
-</equ>
-and zero otherwise. The dashed curvein the left panel shows the quantity<equ id="equ174" type="inline">
-<tex>
-$\hatf^*_{\mathrm{NL}}$
-</tex>
-
-</equ>
-, which is thebestfit value of the parameter<equ id="equ175" type="inline">
-<tex>
-$f_\mathrm{NL}^*$
-</tex>
-
-</equ>
-for a fixed<equ id="equ176" type="inline">
-<tex>
-${n_{f_\mathrm{NL}}}$
-</tex>
-
-</equ>
-. See text forother details. 
+Figure Caption Proin rutrum vel massa non gravida. Quisque tempor sem et dignissim rutrum. ALorem ipsum dolor sit amet. BConsectetur adipiscing elit. 
 </caption>
 
 </fig>
-<fig id="fig2" num="2">
-<caption>
-<emph type="bold">
-<emph type="bold">
-Figure 2. Constraints propagated to<equ id="equ177" type="inline">
-<tex>
-$f_\mathrm{NL}(k)$
-</tex>
+<item-list type="Arabic" id="list1">
+<item num="1.">
+react
+</item>
+<item num="2.">
+diffuse free particles
+</item>
+<item num="3.">
+increment time by dt and go to 1 
+</item>
 
-</equ>
-.
-</emph>
- 
-</emph>
-We also show several models that are reasonable fits to the data(all within the 99 confidence limit of the left panel ofFig. <xref>
-figlikelihood
-</xref>
- to guide the eye as to how typical models fromour ansatz behave. 
-</caption>
-
-</fig>
-<section>
+</item-list>
+<section id="9">
 <title>
-Tables
+Results
 </title>
+<p id="1">
+ Nulla mi mi, venenatis sed ipsum varius, Table<xref>
+table1
+</xref>
+ volutpat euismod diam. Proin rutrum vel massa non gravida. Quisque tempor sem et dignissim rutrum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at justo vitae nulla elementum commodo eu id massa. In vitae diam ac augue semper tincidunt eu ut eros. Fusce fringilla erat porttitor lectus cursus, vel sagittis arcu lobortis. Aliquam in enim semper, aliquam massa id, cursus neque. Praesent faucibus semper libero. 
+</p>
 
 </section>
-<section>
+<tbl>
+<emph type="bold">
+Table caption Nulla mi mi, venenatis sed ipsum varius, volutpat euismod diam. 
+</emph>
+<tr>
+<td>
+4 <emph type="bold">
+Heading1
+</emph>
+
+</td>
+<td>
+4 <emph type="bold">
+Heading2
+</emph>
+
+</td>
+
+</tr>
+<tr>
+<td>
+<equ id="equ2" type="inline">
+<tex>
+$cell1row1$
+</tex>
+
+</equ>
+
+</td>
+<td>
+cell2 row 1 
+</td>
+<td>
+cell3 row 1 
+</td>
+<td>
+cell4 row 1 
+</td>
+<td>
+cell5 row 1 
+</td>
+<td>
+cell6 row 1 
+</td>
+<td>
+cell7 row 1 
+</td>
+<td>
+cell8 row 1 
+</td>
+
+</tr>
+<tr>
+<td>
+<equ id="equ3" type="inline">
+<tex>
+$cell1row2$
+</tex>
+
+</equ>
+
+</td>
+<td>
+cell2 row 2 
+</td>
+<td>
+cell3 row 2 
+</td>
+<td>
+cell4 row 2 
+</td>
+<td>
+cell5 row 2 
+</td>
+<td>
+cell6 row 2 
+</td>
+<td>
+cell7 row 2 
+</td>
+<td>
+cell8 row 2 
+</td>
+
+</tr>
+<tr>
+<td>
+<equ id="equ4" type="inline">
+<tex>
+$cell1row3$
+</tex>
+
+</equ>
+
+</td>
+<td>
+cell2 row 3 
+</td>
+<td>
+cell3 row 3 
+</td>
+<td>
+cell4 row 3 
+</td>
+<td>
+cell5 row 3 
+</td>
+<td>
+cell6 row 3 
+</td>
+<td>
+cell7 row 3 
+</td>
+<td>
+cell8 row 3 
+</td>
+
+</tr>
+Table notes Phasellus venenatis, tortor nec vestibulum mattis, massa tortor interdum felis, nec pellentesque metus tortor nec nisl. Ut ornare mauris tellus, vel dapibus arcu suscipit sed. 
+</tbl>
+<section level="2" id="section10">
 <title>
- Supporting Information Legends
+TODO and TODO Nunc blandit a tortor. 
 </title>
+<p id="1">
+Maecenas convallis mauris sit amet sem ultrices gravida. Etiam eget sapien nibh. Sed ac ipsum eget enim egestas ullamcorper nec euismod ligula. Curabitur fringilla pulvinar lectus consectetur pellentesque. Quisque augue sem, tincidunt sit amet feugiat eget, ullamcorper sed velit. Sed non aliquet felis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris commodo justo ac dui pretium imperdiet. Sed suscipit iaculis mi at feugiat. 
+</p>
+
+</section>
+<section level="2" id="section11">
+<title>
+Sed ac quam id nisi malesuada congue. 
+</title>
+<p id="2">
+Nulla mi mi, venenatis sed ipsum varius, volutpat euismod diam. Proin rutrum vel massa non gravida. Quisque tempor sem et dignissim rutrum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at justo vitae nulla elementum commodo eu id massa. In vitae diam ac augue semper tincidunt eu ut eros. Fusce fringilla erat porttitor lectus cursus, vel sagittis arcu lobortis. Aliquam in enim semper, aliquam massa id, cursus neque. Praesent faucibus semper libero. 
+</p>
+
+</section>
+<section level="2" id="section12">
+<title>
+Subsection 1 
+</title>
+<p id="3">
+ Nulla mi mi, venenatis sed ipsum varius, volutpat euismod diam. Proin rutrum vel massa non gravida. Quisque tempor sem et dignissim rutrum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at justo vitae nulla elementum commodo eu id massa. In vitae diam ac augue semper tincidunt eu ut eros. Fusce fringilla erat porttitor lectus cursus, vel sagittis arcu lobortis. Aliquam in enim semper, aliquam massa id, cursus neque. Praesent faucibus semper libero. 
+</p>
+
+</section>
+<section level="2" id="section13">
+<title>
+Subsection 2 
+</title>
+<section level="3" id="section14">
+<title>
+ 3  rd Level Heading. 
+</title>
+<p id="4">
+Nulla mi mi, venenatis sed ipsum varius, volutpat euismod diam. Proin rutrum vel massa non gravida. Quisque tempor sem et dignissim rutrum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at justo vitae nulla elementum commodo eu id massa. In vitae diam ac augue semper tincidunt eu ut eros. Fusce fringilla erat porttitor lectus cursus, vel sagittis arcu lobortis. Aliquam in enim semper, aliquam massa id, cursus neque. Praesent faucibus semper libero. 
+</p>
+<section id="16">
+<title>
+Discussion
+</title>
+<p id="5">
+ Nulla mi mi, venenatis sed ipsum varius, Table<xref>
+table1
+</xref>
+ volutpat euismod diam. Proin rutrum vel massa non gravida. Quisque tempor sem et dignissim rutrum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at justo vitae nulla elementum commodo eu id massa. In vitae diam ac augue semper tincidunt eu ut eros. Fusce fringilla erat porttitor lectus cursus, vel sagittis arcu lobortis. Aliquam in enim semper, aliquam massa id, cursus neque. Praesent faucibus semper libero. 
+</p>
+
+</section>
+<section level="2" id="section17">
+<title>
+TODO and TODO Nunc blandit a tortor. 
+</title>
+<p id="6">
+COtextsubscript 2 Maecenas convallis mauris sit amet sem ultrices gravida. Etiam eget sapien nibh. Sed ac ipsum eget enim egestas ullamcorper nec euismod ligula. Curabitur fringilla pulvinar lectus consectetur pellentesque. Quisque augue sem, tincidunt sit amet feugiat eget, ullamcorper sed velit. 
+</p>
+<p id="7">
+Sed non aliquet felis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris commodo justo ac dui pretium imperdiet. Sed suscipit iaculis mi at feugiat. Ut neque ipsum, luctus id lacus ut, laoreet scelerisque urna. Phasellus venenatis, tortor nec vestibulum mattis, massa tortor interdum felis, nec pellentesque metus tortor nec nisl. Ut ornare mauris tellus, vel dapibus arcu suscipit sed. Nam condimentum sem eget mollis euismod. Nullam dui urna, gravida venenatis dui et, tincidunt sodales ex. Nunc est dui, sodales sed mauris nec, auctor sagittis leo. Aliquam tincidunt, ex in facilisis elementum, libero lectus luctus est, non vulputate nisl augue at dolor. For more information, seenameref S1_Text. 
+</p>
+
+</section>
+
+</section>
+
+</section>
+<section id="19">
+<title>
+Supporting Information
+</title>
+<section level="2" id="section20">
+<title>
+ S1 Video
+</title>
+<p id="8">
+<emph type="bold">
+ Bold the first sentence. 
+</emph>
+Maecenas convallis mauris sit amet sem ultrices gravida. Etiam eget sapien nibh. Sed ac ipsum eget enim egestas ullamcorper nec euismod ligula. Curabitur fringilla pulvinar lectus consectetur pellentesque. 
+</p>
+
+</section>
+<section level="2" id="section21">
+<title>
+S1 Text
+</title>
+<p id="9">
+<emph type="bold">
+ Lorem Ipsum. 
+</emph>
+Maecenas convallis mauris sit amet sem ultrices gravida. Etiam eget sapien nibh. Sed ac ipsum eget enim egestas ullamcorper nec euismod ligula. Curabitur fringilla pulvinar lectus consectetur pellentesque. 
+</p>
+
+</section>
+<section level="2" id="section22">
+<title>
+S1 Fig
+</title>
+<p id="10">
+<emph type="bold">
+ Lorem Ipsum. 
+</emph>
+Maecenas convallis mauris sit amet sem ultrices gravida. Etiam eget sapien nibh. Sed ac ipsum eget enim egestas ullamcorper nec euismod ligula. Curabitur fringilla pulvinar lectus consectetur pellentesque. 
+</p>
+
+</section>
+<section level="2" id="section23">
+<title>
+S2 Fig
+</title>
+<p id="11">
+<emph type="bold">
+ Lorem Ipsum. 
+</emph>
+Maecenas convallis mauris sit amet sem ultrices gravida. Etiam eget sapien nibh. Sed ac ipsum eget enim egestas ullamcorper nec euismod ligula. Curabitur fringilla pulvinar lectus consectetur pellentesque. 
+</p>
+
+</section>
+<section level="2" id="section24">
+<title>
+S1 Table
+</title>
+<p id="12">
+<emph type="bold">
+ Lorem Ipsum. 
+</emph>
+Maecenas convallis mauris sit amet sem ultrices gravida. Etiam eget sapien nibh. Sed ac ipsum eget enim egestas ullamcorper nec euismod ligula. Curabitur fringilla pulvinar lectus consectetur pellentesque. 
+</p>
+
+</section>
 
 </section>
 
@@ -2484,11 +406,47 @@ Tables
 <back>
 <ack>
 <p>
-We thank Kendrick Smith for initial encouragement andEiichiro Komatsu for useful communications We acknowledge the use of thepublicly available CAMB ite CAMB and HEALPix ite healpix packages Wehave been supported by DOE OJI grant under contract DE-FG02-95ER40899 NSFunder contract AST-0807564 and NASA under contract NNX09AC89G ulticols 
+Cras egestas velit mauris eu mollis turpis pellentesque sit amet Interdum et malesuada fames ac ante ipsum primis in faucibus Nam id pretium nisi Sed ac quam id nisi malesuada congue Sed interdum aliquet augue at pellentesque quam rhoncus vitae 
 </p>
 
 </ack>
 <ref-list>
+<ref id="bib1">
+bib1 <person-group person-group-type="author">
+<name>
+Devaraju P 
+</name>
+<name>
+Gulati R 
+</name>
+<name>
+Antony PT 
+</name>
+<name>
+Mithun CB 
+</name>
+<name>
+Negi VS 
+</name>
+
+</person-group>
+Susceptibility to SLE in South Indian Tamils may be influenced by genetic selection pressure on TLR2 and TLR9 genes Mol Immunol 2014 Nov 22 pii: S0161-5890 14 00313-7 doi: 10.1016/j molimm 2014.11.005 
+</ref>
+<ref id="bib2">
+bib2 <person-group person-group-type="author">
+<name>
+Huynen MMTE 
+</name>
+<name>
+Martens P 
+</name>
+<name>
+Hilderlink HBM 
+</name>
+
+</person-group>
+The health impacts of globalisation: a conceptual framework Global Health 2005;1: 14 Available: http://www globalizationandhealth com/content/1/1/14 
+</ref>
 
 </ref-list>
 
