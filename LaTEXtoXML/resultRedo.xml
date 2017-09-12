@@ -5,52 +5,73 @@
 <article-meta>
 <title-group>
 <article-title>
-Article TitleSubmission to PLOS Journals
+Using friends as sensors to detect globalscale contagious outbreaks
 </article-title>
 
 </title-group>
 <contrib-group>
 <contrib contrib-type="author">
-Name1 Surname
+Manuel GarciaHerranz
 </contrib>
 <contrib contrib-type="author">
- Name2 Surname
+ Esteban Moro
 </contrib>
 <contrib contrib-type="author">
- Name3 Surname
+ Manuel Cebrian
 </contrib>
 <contrib contrib-type="author">
- Name4 Surname
+ Nicholas A. Christakis
 </contrib>
 <contrib contrib-type="author">
- Name5 Surname
-</contrib>
-<contrib contrib-type="author">
- Name6 Surname
-</contrib>
-<contrib contrib-type="author">
- Name7 Surname
-</contrib>
-<contrib contrib-type="author">
- with the Lorem Ipsum Consortium
+ James H. Fowler
 </contrib>
 
 </contrib-group>
- bigskip<emph type="bold">
- 1 
-</emph>
-Affiliation DeptProgramCenter, Institution Name, City, State, Country<emph type="bold">
-2 
-</emph>
-Affiliation DeptProgramCenter, Institution Name, City, State, Country<emph type="bold">
-3 
-</emph>
-Affiliation DeptProgramCenter, Institution Name, City, State, Countrybigskip Yinyang These authors contributed equally to this work. These authors also contributed equally to this work. textcurrency a Insert current address of first author with an address updateDeceasedtextpilcrow Membership list can be found in the Acknowledgments section. CorrespondingAuthorinstitute. edu<abstract>
+<aff>
+  Department of Computer Science,  Escuela Politecnica Superior,  Universidad Autonoma de Madrid,  Madrid,  Spain
+</aff>
+<aff>
+  Department of MathematicsGISC,  Universidad Carlos III de Madrid,  Leganes,  Spain
+</aff>
+<aff>
+  Instituto de Ingenieria del Conocimiento,  Universidad Autonoma de Madrid,  Madrid,  Spain
+</aff>
+<aff>
+  Computer ScienceEngineering Department,  University of California,  San Diego,  CA,  USA
+</aff>
+<aff>
+  Media Laboratory,  Massachusetts Institute of Technology,  Cambridge,  MA,  USA
+</aff>
+<aff>
+  National Information and Communications Technology Australia,  Melbourne,  Victoria,  Australia
+</aff>
+<aff>
+  Department of Sociology,  Yale University,  New Haven,  CT,  USA
+</aff>
+<aff>
+  Department of Ecology and Evolutionary Biology,  Yale University,  New Haven,  CT,  USA
+</aff>
+<aff>
+  Department of Medicine,  Yale School of Medicine,  New Haven,  CT,  USA
+</aff>
+<aff>
+  Medical Genetics Division,  School of Medicine,  University of California,  San Diego,  CA,  USA
+</aff>
+<aff>
+  Political Science Department,  University of California,  San Diego,  CA,  USA
+</aff>
+<equ id="equ1" type="inline">
+<tex>
+$\ast$
+</tex>
+
+</equ>
+EmailCorresponding manuel. garciaherranzuam. es<abstract>
 <title>
 Abstract
 </title>
 <p id="2">
- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget porta erat. Morbi consectetur est vel gravida pretium. Suspendisse ut dui eu ante cursus gravida non sed sem. Nullam sapien tellus, commodo id velit id, eleifend volutpat quam. Phasellus mauris velit, dapibus finibus elementum vel, pulvinar non tellus. Nunc pellentesque pretium diam, quis maximus dolor faucibus id. Nunc convallis sodales ante, ut ullamcorper est egestas vitae. Nam sit amet enim ultrices, ultrices elit pulvinar, volutpat risus. 
+ Recent research has focused on the monitoring of globalscale online data for improved detection of epidemics, mood patterns, movements in the stock market political revolutions, boxoffice revenues, consumer behaviour and many other important phenomena. However, privacy considerations and the sheer scale of data available online are quickly making global monitoring infeasible, and existing methods do not take full advantage of local network structure to identify key nodes for monitoring. Here, we develop a model of the contagious spread of information in a globalscale, publiclyarticulated social network and show that a simple method can yield not just early detection, but advance warning of contagious outbreaks. In this method, we randomly choose a small fraction of nodes in the network and then we randomly choose a �friend� of each node to include in a group for local monitoring. Using six months of data from most of the full Twittersphere, we show that this friend group is more central in the network and it helps us to detect viral outbreaks of the use of novel hashtags about 7  days earlier than we could with an equalsized randomly chosen group. Moreover, the method actually works better than expected due to network structure alone because highly central actors are both more active and exhibit increased diversity in the information they transmit to others. These results suggest that local monitoring is not just more efficient, but also more effective, and it may be applied to monitor contagious processes in globalscale networks. 
 </p>
 
 </abstract>
@@ -61,344 +82,394 @@ Abstract
 <body>
 <section id="2">
 <title>
-Author Summary
+Introduction
 </title>
 <p id="3">
- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget porta erat. Morbi consectetur est vel gravida pretium. Suspendisse ut dui eu ante cursus gravida non sed sem. Nullam sapien tellus, commodo id velit id, eleifend volutpat quam. Phasellus mauris velit, dapibus finibus elementum vel, pulvinar non tellus. Nunc pellentesque pretium diam, quis maximus dolor faucibus id. Nunc convallis sodales ante, ut ullamcorper est egestas vitae. Nam sit amet enim ultrices, ultrices elit pulvinar, volutpat risus. 
+ Modern social, informational, and transactional platforms offer a means for information to spread naturally(e. g, as in the case of theArab Spring <citref rids="ref1">
+1
+</citref>
+ ), and there is increasing interest in using these systems to intentionally promote the spread of information and behavior <citref rids="ref2 ref3 ref4 ref5">
+2-5
+</citref>
+    . In addition, they also yield a brandnew and largescale global view of social interactions and dynamics of formerly hidden phenomena <citref rids="ref6">
+6
+</citref>
+ . Recent work has taken advantage of such monitoring of globalscale online data for improved detection of epidemics <citref rids="ref7 ref8 ref9 ref10">
+7-10
+</citref>
+    , mood patterns <citref rids="ref11 ref12">
+11,12
+</citref>
+  , stock performance <citref rids="ref13">
+13
+</citref>
+ , political revolutions <citref rids="ref14">
+14
+</citref>
+ , boxoffice revenues <citref rids="ref15">
+15
+</citref>
+ , consumer behavior <citref rids="ref9 ref16">
+9,16
+</citref>
+  and many other important phenomena. However, the advent of global monitoring has recently heightened concerns about privacy <citref rids="ref17">
+17
+</citref>
+ , and anonymization is often insufficient to guarantee it <citref rids="ref18">
+18
+</citref>
+ . Thus, future efforts to monitor global phenomena may be restricted to analysis at a local scale <citref rids="ref10 ref19">
+10,19
+</citref>
+  or to incomplete pictures of the system. Moreover, the explosive growth of online data has made it more and more difficult to perform a complete global analysis. As a result, scholars are beginning to develop local methods that sample small but relevant parts of the system <citref rids="ref20 ref21">
+20,21
+</citref>
+  . 
 </p>
 <p id="4">
-inenumbers
+Here, we elaborate the theoretical framework of <citref rids="ref22">
+22
+</citref>
+ sampling technique to take advantage of the local structure inherent in largescale online social networks, to allow monitoring of a network without relying on a complete picture of the systemand we use it to test an important hypothesis about nonbiological social contagion. 
+</p>
+<p id="5">
+If a message is transmitted exogenously via<emph type="italic">
+broadcast
+</emph>
+, then all individuals are equally likely to receive it, regardless of their position in the network. On the other hand, if a message is transmitted endogenously from person to person to person via<emph type="italic">
+contagion
+</emph>
+, then individuals at the center of a network are likely to receive it sooner than randomlychosen members of the population because central individuals are a smaller number of steps(degrees of separation)away from the average individual in the network <citref rids="ref22 ref23">
+22,23
+</citref>
+  . As a result, for contagious processes, we would expect the Sshaped cumulativeepidemic curve <citref rids="ref24">
+24
+</citref>
+ to be shifted to the left(forward in time)for centrally located individuals compared to the population as a whole. 
+</p>
+<p id="6">
+If so, then the careful collection of information from a sample of central individuals within human social networks could be used to detect contagious outbreaks before they happen in the population at large <citref rids="ref22">
+22
+</citref>
+ . We call this the<emph type="italic">
+sensor hypothesis
+</emph>
+. In fact, the very discrepancy in the time to infection between central and randomlychosen individuals could serve as a means to distinguish between exogenous and endogenous mechanisms, either<emph type="italic">
+ex post
+</emph>
+by comparing their mean times of infection or in real time by looking for the first day in which there is a significant divergence in their cumulative incidences. 
 </p>
 
 </section>
 <section id="4">
 <title>
-Introduction
+Results
 </title>
-<p id="5">
- Lorem ipsum dolor sit <citref rids="ref1">
-1
+<p id="7">
+ Using 6  months of data from Twitter recorded in 2009  <citref rids="ref25">
+25
 </citref>
-amet, consectetur adipiscing elit. Curabitur eget porta erat. Morbi consectetur est vel gravida pretium. Suspendisse ut dui eu ante cursus gravida non sed sem. Nullam Eq. <xref>
-eqschemeP
-</xref>
- sapien tellus, commodo id velit id, eleifend volutpat quam. Phasellus mauris velit, dapibus finibus elementum vel, pulvinar non tellus. Nunc pellentesque pretium diam, quis maximus dolor faucibus id.  <citref rids="ref2">
-2
+ , we analyze a network containing 40  million users around the world who are connected by 1.5  billion directed relationships(follows). Over six months, these users sent nearly half a billion messages(tweets), of which 67  million contained a usersupplied topic keyword called ahashtag. These hashtags are prefixed by a pound sign(��)and are used to denote unique people, events, or ideas, making them useful for studying the spread of information online <citref rids="ref26 ref27 ref28">
+26-28
 </citref>
-Nunc convallis sodales ante, ut ullamcorper est egestas vitae. Nam sit amet enim ultrices, ultrices elit pulvinar, volutpat risus. 
+   . 
 </p>
-<equ id="equ1" type="inline">
+<p id="8">
+To test the sensor hypothesis, we need a sample of individuals with higher network centrality(thesensorgroup)to compare with a sample of randomly chosen individuals(thecontrolgroup). However, measuring centrality can be a computationally expensive task in largescale networks like Twitter(see SI). Therefore, we use a simplified approach that first randomly selects a set of users for the control group, and then randomly choosesfriendsof members of this group to put in an equallysized sensor group. This procedure generates a sensor group with higher degree centrality than the control group because of thefriendship paradoxhighdegree individuals are more likely to be connected to a randomly chosen person than lowdegree individuals <citref rids="ref22 ref29">
+22,29
+</citref>
+  . In other words, your friends have more friends than you do.  <citref rids="ref30">
+30
+</citref>
+ 
+</p>
+<p id="9">
+In Fig. <xref>
+panel1
+</xref>
+ a we demonstrate that the sensor group contains more high degree individuals and fewer low degree individuals, and this is true even if we remove duplicates from the sensor group(duplicates occur when the same person is randomly chosen as a friend by multiple individuals in the control group). However, this difference between the sensor and control groups depends on what fraction of the network is sampled. As the fraction increases, there is increasing overlap between the two groups, reducing the difference in their degree distributions(Fig. <xref>
+panel1
+</xref>
+ b). We derive closed form equations that characterize the expected degree distribution for both the sensor groups(with and without duplicates)and control groups based on the fraction of nodes sampled and an arbitrary known degree distribution for the network as a whole(see SIAn Analytic Elaboration of the Friendship Paradox). Fig. <xref>
+panel1
+</xref>
+ c, d show that these equations fit the data well for a random sample of 1.25 of all users(500 , 000  total)on Twitter, confirming our expectation that the sensor group is more central than the control group. 
+</p>
+<p id="10">
+To test whether sensors can provide early warning of a contagious message spreading through the network, suppose<equ id="equ2" type="inline">
 <tex>
-\begin{equation}\label{eq:schemeP}D_{coll}=\frac{D_f+\frac{[S]^2}{K_DS_T}D_S}{1+\frac{[S]^2}{K_DS_T}},D_{sm}=\frac{D_f+\frac{[S]}{K_D}D_S}{1+\frac{[S]}{K_D}},\end{equation}
+$t^\alpha_i$
 </tex>
 
 </equ>
+denotes the time at which a sampled user<inline-graphic id="g3" href="C:\Users\VKU3744\Desktop\LaTEX\LaTEXtoXML\mainmain\mainmain-formula-3.png"/>
+first mentions hashtag<equ id="equ4" type="inline">
+<tex>
+$\alpha$
+</tex>
 
-</section>
-<section id="6">
-<title>
-Materials and Methods
-</title>
-<section level="2" id="section7">
-<title>
- Etiam eget sapien nibh. 
-</title>
-<p id="6">
-Nulla mi mi, Fig. <xref>
-fig1
+</equ>
+(i. e the infection time). We would expect<equ id="equ5" type="inline">
+<tex>
+$t^\alpha_i$
+</tex>
+
+</equ>
+to be smaller on average for users belonging to a central sensor group<inline-graphic id="g6" href="C:\Users\VKU3744\Desktop\LaTEX\LaTEXtoXML\mainmain\mainmain-formula-6.png"/>
+than for those of a random control group<inline-graphic id="g7" href="C:\Users\VKU3744\Desktop\LaTEX\LaTEXtoXML\mainmain\mainmain-formula-7.png"/>
+. If we denote<equ id="equ8" type="inline">
+<tex>
+$\Deltat^\alpha=\langlet\rangle_{i\inS}-\langlet\rangle_{i\inC}$
+</tex>
+
+</equ>
+for hashtag<equ id="equ9" type="inline">
+<tex>
+$\alpha$
+</tex>
+
+</equ>
+, the sensor hypothesis is that<equ id="equ10" type="inline">
+<tex>
+$\Deltat^\alpha<0$
+</tex>
+
+</equ>
+. 
+</p>
+<p id="11">
+However, note that<equ id="equ11" type="inline">
+<tex>
+$\Deltat^\alpha$
+</tex>
+
+</equ>
+depends on the size of the samples in two ways. For small samples, the number ofinfectedusers(i. e. users mentioning hashtag<equ id="equ12" type="inline">
+<tex>
+$\alpha$
+</tex>
+
+</equ>
+)will be scarce, leading to large statistical errors. On the other hand, for big samples, the degree distribution of the control and sensor groups tend to overlap and consequently<equ id="equ13" type="inline">
+<tex>
+$\Deltat^\alpha$
+</tex>
+
+</equ>
+approaches 0 . Therefore, it may be necessary to find an optimalGoldilockssample size that gives statistical power while still preserving the highcentrality characteristic of the sensor group. Fig. <xref>
+panel2
 </xref>
- venenatis sed ipsum varius, volutpat euismod diam. Proin rutrum vel massa non gravida. Quisque tempor sem et dignissim rutrum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at justo vitae nulla elementum commodo eu id massa. In vitae diam ac augue semper tincidunt eu ut eros. Fusce fringilla erat porttitor lectus cursus, nameref S1_Videovel sagittis arcu lobortis. Aliquam in enim semper, aliquam massa id, cursus neque. Praesent faucibus semper libero. 
+ a shows results from a theoretical simulation of an infection <citref rids="ref31">
+31
+</citref>
+ spreading in a synthetic network(see SISensor Performance in a Simulated Infection Model)while Fig. <xref>
+panel2
+</xref>
+ b shows an empirical analysis of widely used hashtags in our Twitter database(see SISensor Performance in Real Data). Both theory and data suggest that there exists an optimal(and moderate)sample size that may perform best for detecting large and significant differences between the sensor and control group resulting from contagious processes. 
+</p>
+<p id="12">
+To analyze the performance of the sensor mechanism, we collected five random control samples of 50 , 000  users and a random set of their followees of the same size to use as sensors for each one. Focusing on the 32  most widespread hashtags that appear at least 10  times in each control sample, Fig. <xref>
+panel2
+</xref>
+ c shows that<equ id="equ14" type="inline">
+<tex>
+$\Deltat^\alpha$
+</tex>
+
+</equ>
+is negative(i. e. , the sensor sample uses the hashtag prior to the control sample)in all but two cases, with a mean for all hashtags of �7. 1  days(SEM 1.1  days). In the SIUsing the Sensor Method with a Small Set of Samples, we also show this distribution for a wider range of hashtags, and these all show that<equ id="equ15" type="inline">
+<tex>
+$\Deltat^\alpha$
+</tex>
+
+</equ>
+tends to be negative. In other words, the sensor groups provide advance warning of the usage of a wide variety of hashtags. 
+</p>
+<p id="13">
+We also hypothesized that comparative monitoring of a sensor group and a control group may help distinguish which hashtags are spreading virally via a contagious process and which are spreading via broadcast. We studied 24  hashtags(Fig. <xref>
+panel3
+</xref>
+ a)that werebornduring our sample period(they first appeared at least 25  days after the start date of data collection)and then became widely used(they were eventually used more than 20 , 000  times). Notably, the users using these hashtags tended to be highly connected and many were connected to a giant component, a sign that the hashtags may have spread virally online from user to user(see Fig. <xref>
+panel3
+</xref>
+ d and Fig. S11 to S14 of the SI for more examples). 
+</p>
+<p id="14">
+For each of these hashtag networks, we constructed a random control sample of 5 its size and a similarlysized sensor sample of their followees to calculate<equ id="equ16" type="inline">
+<tex>
+$\Deltat\alpha$
+</tex>
+
+</equ>
+. We then repeated this process 1 , 000  times to generate a statistical distribution of these observed lead times(as in Fig. <xref>
+panel2
+</xref>
+ c). The sensor group led the control group(<equ id="equ17" type="inline">
+<tex>
+$\Deltat^\alpha<0$
+</tex>
+
+</equ>
+)79.9 (SE 1.2 )of the time. However, note that there was considerable variation in lead times, from 20  days to a few hours or no advance warning. 
+</p>
+<p id="15">
+An alternative explanation to the sensors lead time might be that hashtags are more likely to be created by the most active users such as the ones in the sensor group, and that, being more central, they are in a better position to make them popularor from the opposite perspective, that sensors end up being more central because they create content that end up trending. In other words, that central actors select novel topics rather than being agents of contagion. In order to evaluate this possibility, we calculated the exposure rates of sensors and controls(i. e. the number of users who used the hashtag after being exposed to it). The results(see SIUsing the Sensor Method with Hashtag Networks)show that the exposure rate is significantly higher in the sensor group, meaning that sensors are better transmitters in Twitter(they are aware of what�s happening in Twitter and transmit it very soon)while controls seem to introduce more information in Twitter from other sources(or to create it), rather than transmitting what they are exposed to in Twitter. These findings therefore militate against the selection idea in favor of the contagion hypothesis. 
+</p>
+<p id="16">
+To see how the sensor method works for hashtags that are<emph type="italic">
+not
+</emph>
+spreading virally, we generated a null distribution in which we randomly shuffled the timestamp of each hashtag use within the fully observed data, and then measured the resulting difference in the sensor and control group samples, <equ id="equ18" type="inline">
+<tex>
+$\Delta_Rt^\alpha$
+</tex>
+
+</equ>
+. There is a positive correlation between degree and number of tweets per day so, having higher degrees on average than controls, sensors also tend to tweet more often. Therefore, in the shuffling process sensors actually have a greater chance of getting smaller times of infection than controls because they have more tweets to be assigned a new timestamp. By shuffling the timestamps of every tweet we are measuring the lead time sensors would get not because of their centrality in a viral process but because of their higher tweeting rates. The difference, therefore, between this lead time and the observed one corresponds to the viral component of the process. Again, we repeated the procedure 1 , 000  times to generate a statistical distribution(see SIUsing the Sensor Method with Hashtag Networks). The results show that the observed distribution of lead times falls outside the null distribution for 65.4 (SE 1.2 )of the hashtags, suggesting they did, in fact, spread virally(Fig. <xref>
+panel3
+</xref>
+ a). 
+</p>
+<p id="17">
+The hashtags also generally showed a shift forward in the daily and cumulative incidence curves of the sensor group compared to the control one(Fig. <xref>
+panel3
+</xref>
+ c, d). This shift forward, another sign of virality in itself, could allow for identification of an outbreak in advance, as the sensor�s deviation from the trajectory of the control group identifies a process that is spreading through the network, affecting central individuals faster than random ones. For example, estimating the models each day using all available information up to that day, foropenwebawards users, we find two consecutive days of significant(<inline-graphic id="g19" href="C:\Users\VKU3744\Desktop\LaTEX\LaTEXtoXML\mainmain\mainmain-formula-19.png"/>
+)lead time by the sensor group compared to the control group on day 13 , a full 15  days before the estimated peak in daily incidence(see SIUsing the Sensor Method with Hashtag Networksand Fig. S11 to S14 of the SI), and also 15  full days before the control sample reaches the same incidence as the sensor group(See Fig. <xref>
+panel3
+</xref>
+ c). 
+</p>
+<p id="18">
+One can also use fixed thresholds to trigger adivergence alarmwhen the sensor group usage of a particular hashtag is growing faster than the control group usage. We tested a variety of these thresholds(see SIReproduction Rates of Hashtags as a Factor Affecting Early Detection)and found that they consistently provided advance warning of the hashtags that would be most likely to yield high usage in future. In Fig. <xref>
+panel4
+</xref>
+ a, we show that the false positive rate for these alarms(an alarm that was triggered by a hashtag that would not be widely used)is low. In Fig. <xref>
+panel4
+</xref>
+ b, we also show that the alarms can anticipate behavior outside Twitter as well. A survey of several Google search terms that are closely related to certain hashtags in our data shows that the peaks in Twitter usage tend to precede or coincide with Google Trends peaks, and thus increases in the Twitter sensor group and their divergence with the control group provide early warning not only on Twitter but on Google searches as well(see SITwitter, Sensors in Twitter, and Google Trendsfor several examples). 
+</p>
+<p id="19">
+Finally, while the sensor mechanism allows us to identify a more central group, in terms of degreecentrality, that can be used to detect contagious outbreaks in advance, it may also allow us to focus on users who have other characteristics that could improve monitoring. First, in terms of network centrality, we have found sensors to have also greater betweenness. Second, in terms of activity, users in the sensor group may be more central because they are more active on twitter, and indeed we find this to be true too(Fig. <xref>
+panel4
+</xref>
+ c). On average, users in the sensor group sent 154  tweets(SE 2.8 )during the six months they were monitored, while users in the control group tweeted only 55  times(SE 1.0 , difference of means t36 , <inline-graphic id="g20" href="C:\Users\VKU3744\Desktop\LaTEX\LaTEXtoXML\mainmain\mainmain-formula-20.png"/>
+). However, we also find that sensor users tend to use a greater variety of hashtags, even controlling for activity levels(Fig. <xref>
+panel4
+</xref>
+ d)(see SIDifferences in Sensor and Control Characteristics That Also Affect Propagation). In summary, the sensor mechanism, while targeting users with higher degree centrality, is able to identify users that are more central in many ways. 
+</p>
+<p id="20">
+The distribution of the number of users using any one hashtag is heavy tailed(see SIThe Twitter Data)with most hashtags being used by less than a few hundred people and very few reaching the tens of thousands. Therefore, for most hashtags, the probability of finding sufficient users to perform a significant analysis in a random sample of Twitter is very small. Yet, despite the relatively small size of the infected populations, the sensor mechanism we test here seems to anticipate the global spread of information in a wide variety of cases. And, importantly, it only requires a tiny fraction of the network as a whole to be monitored, allowing us to find a sample 6  times more connected than selecting the most connected users of a sample 5  times larger(see SIFriends vs. Most Connected Nodes and Most Connected Friends as Sensors). 
+</p>
+<section level="2" id="section5">
+<title>
+Discussion
+</title>
+<p id="21">
+ We believe that this method could be applied in a wide variety of contexts in which scholars, policymakers, and companies are attempting to usebig dataonline to predict important phenomena. For example, the sensor method could be used in conjunction with online search to improve surveillance for potential flu outbreaks <citref rids="ref8 ref22">
+8,22
+</citref>
+  . By following the online behavior of a group known to be central in a network(for example, based on email records which could be used to construct a friend sensor group), Google or other companies that monitor flurelated search terms might be able to get highquality, realtime information about a realworld epidemic with greater lead time, giving public health officials even more time to plan a response. Similarly, policymakers could monitor global mood patterns <citref rids="ref12">
+12
+</citref>
+ to anticipate important changes in public sentiment that may influence economic growth, elections, opposition movements, or even political revolutions <citref rids="ref14">
+14
+</citref>
+ . We also conjecture that investors might use these methods to better predict movements in the stock market <citref rids="ref13">
+13
+</citref>
+ . 
+</p>
+<p id="22">
+Just as we find variation in lead time for different hashtags, we expect that the ability of the sensor method to detect outbreaks early, and how early it might do so, will depend on a number of factors, includingthe online context(e. g. , whether twitter or some other data environment)the intrinsic properties of the phenomenon that is spreading and how it is measuredthe size or composition of the population, including the overall prevalence of susceptible or affected individualsthe number of people in the sensor groupthe topology of the network(for example, the degree distribution and its variance, or other structural attributes) <citref rids="ref23">
+23
+</citref>
+ and other factors, such as whether the outbreak modifies the structure of the network as it spreads(for example, by affecting the tendency of any two individuals to remain connected after the information is transmitted). Nevertheless, it seems clear that taking advantage of the topological architecture of human populations offers the prospect of detecting a wide variety of contagious informational or behavioral outbreaks in advance of their striking the general population. 
 </p>
 
 </section>
+
+</section>
+<section id="7">
+<title>
+Figure Legends
+</title>
 
 </section>
 <fig id="fig1" num="1">
 <caption>
 <emph type="bold">
 <emph type="bold">
-Figure 1. Figure Title first bold sentence Nulla mi mi, venenatis sed ipsum varius, volutpat euismod diam.
+Figure 1. Twitter exhibits thefriendship paradox.
 </emph>
  
 </emph>
-Figure Caption Proin rutrum vel massa non gravida. Quisque tempor sem et dignissim rutrum. ALorem ipsum dolor sit amet. BConsectetur adipiscing elit. 
+a)Expected degree distributions for a 1.25 random sample of the Twitter network(black line), friends of this randomly chosen group(red line), and the same friends group with duplicates removed(blue line)b)Larger samples of friends show a smaller difference in degree distribution from the overall network(blackoverall network, green25 sample, blue7.5 sample, red1.25 )c)and d)Respectively, Indegree(follower)and outdegree(followee)distribution of a random sample of 500 , 000  users, 1.25 of Twitter�s users(thecontrolgroup, black line)and the theoretical(red line)and observed(blue line)indegree and outdegree distributions of their friends(thesensorgroup)with duplicates from the friends group removed. 
 </caption>
 
 </fig>
-<item-list type="Arabic" id="list1">
-<item num="1.">
-react
-</item>
-<item num="2.">
-diffuse free particles
-</item>
-<item num="3.">
-increment time by dt and go to 1 
-</item>
+<fig id="fig2" num="2">
+<caption>
+<emph type="bold">
+<emph type="bold">
+Figure 2. Friends as sensors yield early detection of the use of hashtags.
+</emph>
+ 
+</emph>
+a)Measures of lead times based on simulations of an infection spreading through a network with infection probability<equ id="equ21" type="inline">
+<tex>
+$\lambda=0.1$
+</tex>
 
-</item-list>
+</equ>
+and recovery probability<equ id="equ22" type="inline">
+<tex>
+$\gamma=0.01$
+</tex>
+
+</equ>
+on a BarabasiAlbert random network with tail exponent<equ id="equ23" type="inline">
+<tex>
+$\beta>
+3$
+</tex>
+
+</equ>
+show that a sensor group tends to provide earlier warning than a randomlychosen control group in smaller samples, but decreasing sampling variation in larger sample sizes means that the statistical likelihood of providing early warning is maximized in moderatelysized samples. b)Observed results for hashtags on Twitter used by 1 of the individuals using a hashtag of each sample. c)Average lead time of first usage of each hashtag in the sensor group vs. the control group for all hashtags used by at least 10  users in each of 5  random samples of 50 , 000  random users. 
+</caption>
+
+</fig>
+<fig id="fig3" num="3">
+<caption>
+<emph type="bold">
+<emph type="bold">
+Figure 3. Signs of virality in hashtag usage.
+</emph>
+ 
+</emph>
+a)The average lead for the 24  mostused hashtags time across 1 , 000  trials of the sensor group(in blue)vs. the same calculated lead time when all times of hashtag usage are randomly shuffled(in red). Vertical bars are SEM. b)daily incidence and c)cumulative daily incidence for the hashtagopenwebawards show a shift forward in the Sshaped epidemic curve and a burst in the sensor group relative to the control group that could be used to predict the outbreak of this hashtag on the<inline-graphic id="g24" href="C:\Users\VKU3744\Desktop\LaTEX\LaTEXtoXML\mainmain\mainmain-formula-24.png"/>
+day(the first day on which, using all available information up to that day, there is a significant difference between the sensor and control groups with pvalue<inline-graphic id="g25" href="C:\Users\VKU3744\Desktop\LaTEX\LaTEXtoXML\mainmain\mainmain-formula-25.png"/>
+0.05 ), 15  days before the control group reaches the same cumulative incidence and before the estimated peak in daily incidenced)greatest connected component of the follower network of users using theopenwebawards hashtag shows that many users are connected in a large component. 
+</caption>
+
+</fig>
+<fig id="fig4" num="4">
+<caption>
+<emph type="bold">
+<emph type="bold">
+Figure 4. Early warnings of the sensor mechanism and differences between users in the sensor and control groups.
+</emph>
+ 
+</emph>
+a)The Twitter sensor sample anticipates outbreaks in both Twitter hashtags and Google searches. The purple solid line shows a normalized measure of the number of Google searches per day forhealth care. The green dashed line shows the a normalized measure of the number of tweets using the hashtaghealthcare per day. Thinner lines at the bottom show normalized daily incidence(DI)for the control(dotted red)and sensor(dashed blue)groups. Thinner lines from the bottom left to the upper right show the empirical cumulative distribution(ECDF)of control(dotted red)and sensor(dashed blue)groups. Vertical dotted lines show dates when an alarm was first triggered by a 2.5 divergence(orange)and 5 divergence(red)in the sensor and control groups. b)An early warning alarm triggered by a 0.25 divergence in the sensor and control groups predicts overall usage with relatively few false positives(see SIReproduction Rates of Hashtags as a Factor Affecting Early Detectionfor details). cd)Users in the sensor group(blue)are more active(c)and also use a wider variety of hashtags(d)than those in the control group(red), even controlling for activity. These attributes both contribute to early warning provided by the sensor group�s structural position. 
+</caption>
+
+</fig>
 <section id="9">
 <title>
-Results
+Supporting Information File Contents
 </title>
-<p id="1">
- Nulla mi mi, venenatis sed ipsum varius, Table<xref>
-table1
-</xref>
- volutpat euismod diam. Proin rutrum vel massa non gravida. Quisque tempor sem et dignissim rutrum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at justo vitae nulla elementum commodo eu id massa. In vitae diam ac augue semper tincidunt eu ut eros. Fusce fringilla erat porttitor lectus cursus, vel sagittis arcu lobortis. Aliquam in enim semper, aliquam massa id, cursus neque. Praesent faucibus semper libero. 
-</p>
-
-</section>
-<tbl>
-<emph type="bold">
-Table caption Nulla mi mi, venenatis sed ipsum varius, volutpat euismod diam. 
-</emph>
-<tr>
-<td>
-4 <emph type="bold">
-Heading1
-</emph>
-
-</td>
-<td>
-4 <emph type="bold">
-Heading2
-</emph>
-
-</td>
-
-</tr>
-<tr>
-<td>
-<equ id="equ2" type="inline">
-<tex>
-$cell1row1$
-</tex>
-
-</equ>
-
-</td>
-<td>
-cell2 row 1 
-</td>
-<td>
-cell3 row 1 
-</td>
-<td>
-cell4 row 1 
-</td>
-<td>
-cell5 row 1 
-</td>
-<td>
-cell6 row 1 
-</td>
-<td>
-cell7 row 1 
-</td>
-<td>
-cell8 row 1 
-</td>
-
-</tr>
-<tr>
-<td>
-<equ id="equ3" type="inline">
-<tex>
-$cell1row2$
-</tex>
-
-</equ>
-
-</td>
-<td>
-cell2 row 2 
-</td>
-<td>
-cell3 row 2 
-</td>
-<td>
-cell4 row 2 
-</td>
-<td>
-cell5 row 2 
-</td>
-<td>
-cell6 row 2 
-</td>
-<td>
-cell7 row 2 
-</td>
-<td>
-cell8 row 2 
-</td>
-
-</tr>
-<tr>
-<td>
-<equ id="equ4" type="inline">
-<tex>
-$cell1row3$
-</tex>
-
-</equ>
-
-</td>
-<td>
-cell2 row 3 
-</td>
-<td>
-cell3 row 3 
-</td>
-<td>
-cell4 row 3 
-</td>
-<td>
-cell5 row 3 
-</td>
-<td>
-cell6 row 3 
-</td>
-<td>
-cell7 row 3 
-</td>
-<td>
-cell8 row 3 
-</td>
-
-</tr>
-Table notes Phasellus venenatis, tortor nec vestibulum mattis, massa tortor interdum felis, nec pellentesque metus tortor nec nisl. Ut ornare mauris tellus, vel dapibus arcu suscipit sed. 
-</tbl>
-<section level="2" id="section10">
-<title>
-TODO and TODO Nunc blandit a tortor. 
-</title>
-<p id="1">
-Maecenas convallis mauris sit amet sem ultrices gravida. Etiam eget sapien nibh. Sed ac ipsum eget enim egestas ullamcorper nec euismod ligula. Curabitur fringilla pulvinar lectus consectetur pellentesque. Quisque augue sem, tincidunt sit amet feugiat eget, ullamcorper sed velit. Sed non aliquet felis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris commodo justo ac dui pretium imperdiet. Sed suscipit iaculis mi at feugiat. 
-</p>
-
-</section>
-<section level="2" id="section11">
-<title>
-Sed ac quam id nisi malesuada congue. 
-</title>
-<p id="2">
-Nulla mi mi, venenatis sed ipsum varius, volutpat euismod diam. Proin rutrum vel massa non gravida. Quisque tempor sem et dignissim rutrum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at justo vitae nulla elementum commodo eu id massa. In vitae diam ac augue semper tincidunt eu ut eros. Fusce fringilla erat porttitor lectus cursus, vel sagittis arcu lobortis. Aliquam in enim semper, aliquam massa id, cursus neque. Praesent faucibus semper libero. 
-</p>
-
-</section>
-<section level="2" id="section12">
-<title>
-Subsection 1 
-</title>
-<p id="3">
- Nulla mi mi, venenatis sed ipsum varius, volutpat euismod diam. Proin rutrum vel massa non gravida. Quisque tempor sem et dignissim rutrum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at justo vitae nulla elementum commodo eu id massa. In vitae diam ac augue semper tincidunt eu ut eros. Fusce fringilla erat porttitor lectus cursus, vel sagittis arcu lobortis. Aliquam in enim semper, aliquam massa id, cursus neque. Praesent faucibus semper libero. 
-</p>
-
-</section>
-<section level="2" id="section13">
-<title>
-Subsection 2 
-</title>
-<section level="3" id="section14">
-<title>
- 3  rd Level Heading. 
-</title>
-<p id="4">
-Nulla mi mi, venenatis sed ipsum varius, volutpat euismod diam. Proin rutrum vel massa non gravida. Quisque tempor sem et dignissim rutrum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at justo vitae nulla elementum commodo eu id massa. In vitae diam ac augue semper tincidunt eu ut eros. Fusce fringilla erat porttitor lectus cursus, vel sagittis arcu lobortis. Aliquam in enim semper, aliquam massa id, cursus neque. Praesent faucibus semper libero. 
-</p>
-<section id="16">
-<title>
-Discussion
-</title>
-<p id="5">
- Nulla mi mi, venenatis sed ipsum varius, Table<xref>
-table1
-</xref>
- volutpat euismod diam. Proin rutrum vel massa non gravida. Quisque tempor sem et dignissim rutrum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at justo vitae nulla elementum commodo eu id massa. In vitae diam ac augue semper tincidunt eu ut eros. Fusce fringilla erat porttitor lectus cursus, vel sagittis arcu lobortis. Aliquam in enim semper, aliquam massa id, cursus neque. Praesent faucibus semper libero. 
-</p>
-
-</section>
-<section level="2" id="section17">
-<title>
-TODO and TODO Nunc blandit a tortor. 
-</title>
-<p id="6">
-COtextsubscript 2 Maecenas convallis mauris sit amet sem ultrices gravida. Etiam eget sapien nibh. Sed ac ipsum eget enim egestas ullamcorper nec euismod ligula. Curabitur fringilla pulvinar lectus consectetur pellentesque. Quisque augue sem, tincidunt sit amet feugiat eget, ullamcorper sed velit. 
-</p>
-<p id="7">
-Sed non aliquet felis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris commodo justo ac dui pretium imperdiet. Sed suscipit iaculis mi at feugiat. Ut neque ipsum, luctus id lacus ut, laoreet scelerisque urna. Phasellus venenatis, tortor nec vestibulum mattis, massa tortor interdum felis, nec pellentesque metus tortor nec nisl. Ut ornare mauris tellus, vel dapibus arcu suscipit sed. Nam condimentum sem eget mollis euismod. Nullam dui urna, gravida venenatis dui et, tincidunt sodales ex. Nunc est dui, sodales sed mauris nec, auctor sagittis leo. Aliquam tincidunt, ex in facilisis elementum, libero lectus luctus est, non vulputate nisl augue at dolor. For more information, seenameref S1_Text. 
-</p>
-
-</section>
-
-</section>
-
-</section>
-<section id="19">
-<title>
-Supporting Information
-</title>
-<section level="2" id="section20">
-<title>
- S1 Video
-</title>
-<p id="8">
-<emph type="bold">
- Bold the first sentence. 
-</emph>
-Maecenas convallis mauris sit amet sem ultrices gravida. Etiam eget sapien nibh. Sed ac ipsum eget enim egestas ullamcorper nec euismod ligula. Curabitur fringilla pulvinar lectus consectetur pellentesque. 
-</p>
-
-</section>
-<section level="2" id="section21">
-<title>
-S1 Text
-</title>
-<p id="9">
-<emph type="bold">
- Lorem Ipsum. 
-</emph>
-Maecenas convallis mauris sit amet sem ultrices gravida. Etiam eget sapien nibh. Sed ac ipsum eget enim egestas ullamcorper nec euismod ligula. Curabitur fringilla pulvinar lectus consectetur pellentesque. 
-</p>
-
-</section>
-<section level="2" id="section22">
-<title>
-S1 Fig
-</title>
-<p id="10">
-<emph type="bold">
- Lorem Ipsum. 
-</emph>
-Maecenas convallis mauris sit amet sem ultrices gravida. Etiam eget sapien nibh. Sed ac ipsum eget enim egestas ullamcorper nec euismod ligula. Curabitur fringilla pulvinar lectus consectetur pellentesque. 
-</p>
-
-</section>
-<section level="2" id="section23">
-<title>
-S2 Fig
-</title>
-<p id="11">
-<emph type="bold">
- Lorem Ipsum. 
-</emph>
-Maecenas convallis mauris sit amet sem ultrices gravida. Etiam eget sapien nibh. Sed ac ipsum eget enim egestas ullamcorper nec euismod ligula. Curabitur fringilla pulvinar lectus consectetur pellentesque. 
-</p>
-
-</section>
-<section level="2" id="section24">
-<title>
-S1 Table
-</title>
-<p id="12">
-<emph type="bold">
- Lorem Ipsum. 
-</emph>
-Maecenas convallis mauris sit amet sem ultrices gravida. Etiam eget sapien nibh. Sed ac ipsum eget enim egestas ullamcorper nec euismod ligula. Curabitur fringilla pulvinar lectus consectetur pellentesque. 
-</p>
-
-</section>
 
 </section>
 
@@ -406,47 +477,11 @@ Maecenas convallis mauris sit amet sem ultrices gravida. Etiam eget sapien nibh.
 <back>
 <ack>
 <p>
-Cras egestas velit mauris eu mollis turpis pellentesque sit amet Interdum et malesuada fames ac ante ipsum primis in faucibus Nam id pretium nisi Sed ac quam id nisi malesuada congue Sed interdum aliquet augue at pellentesque quam rhoncus vitae 
+
 </p>
 
 </ack>
 <ref-list>
-<ref id="bib1">
-bib1 <person-group person-group-type="author">
-<name>
-Devaraju P 
-</name>
-<name>
-Gulati R 
-</name>
-<name>
-Antony PT 
-</name>
-<name>
-Mithun CB 
-</name>
-<name>
-Negi VS 
-</name>
-
-</person-group>
-Susceptibility to SLE in South Indian Tamils may be influenced by genetic selection pressure on TLR2 and TLR9 genes Mol Immunol 2014 Nov 22 pii: S0161-5890 14 00313-7 doi: 10.1016/j molimm 2014.11.005 
-</ref>
-<ref id="bib2">
-bib2 <person-group person-group-type="author">
-<name>
-Huynen MMTE 
-</name>
-<name>
-Martens P 
-</name>
-<name>
-Hilderlink HBM 
-</name>
-
-</person-group>
-The health impacts of globalisation: a conceptual framework Global Health 2005;1: 14 Available: http://www globalizationandhealth com/content/1/1/14 
-</ref>
 
 </ref-list>
 
