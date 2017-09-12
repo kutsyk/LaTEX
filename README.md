@@ -1,12 +1,12 @@
 # LaTEX
 Desktop client to convert LaTeX files to XML. Originaly was developed for The Charlesworth Group.
-Result XML is easy converted to PDF or Word file without loss of styles.
+XML file is easy converted to PDF or Word file without loss of styles.
 
-You can upload file into the app and see LaTex tags for editing:
+You can upload file into the app and see **highlighted** LaTex tags for editing:
 ## Main window
 ![Main window with file](/git-img/main-file.png)
 
-After configuring all needed settings:
+Before running a convertion you should configure settings for you. It is not problem if you run with default settings:
 
 ## Settings
 
@@ -22,7 +22,7 @@ After configuring all needed settings:
 
 ![Math formulas](/git-img/set-form.PNG)
 
-Now, you can simply run convertion and explore the result.
+Now, you can simply run convertion and use XML file for your porpouses.
 
 ### Results
 
